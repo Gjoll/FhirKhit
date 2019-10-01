@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "NamingSystem",
@@ -384,452 +384,406 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'NamingSystem'
     /// </summary>
     // 0. NamingSystem
     public class Resource_NamingSystem : FhirKhit.Maker.Common.Resource.ResourceBase                                                        // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_NamingSystem_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 13. NamingSystem.uniqueId
-            public class Type_UniqueId : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_UniqueId_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+        // 13. NamingSystem.uniqueId
+        public class Type_UniqueId : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 14. NamingSystem.uniqueId.type
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:212
+            // 15. NamingSystem.uniqueId.value
+            public ElementDefinitionInfo Element_Value;                                                                                     // MakerGen.cs:212
+            // 16. NamingSystem.uniqueId.preferred
+            public ElementDefinitionInfo Element_Preferred;                                                                                 // MakerGen.cs:212
+            // 17. NamingSystem.uniqueId.comment
+            public ElementDefinitionInfo Element_Comment;                                                                                   // MakerGen.cs:212
+            // 18. NamingSystem.uniqueId.period
+            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "NamingSystem.uniqueId",                                                                                         // MakerGen.cs:388
+                    ElementId = "NamingSystem.uniqueId"                                                                                     // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Value.Write(sDef);                                                                                                  // MakerGen.cs:216
+                Element_Preferred.Write(sDef);                                                                                              // MakerGen.cs:216
+                Element_Comment.Write(sDef);                                                                                                // MakerGen.cs:216
+                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_UniqueId()                                                                                                          // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 14. NamingSystem.uniqueId.type
-                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:211
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:231
+                        Path= "NamingSystem.uniqueId.type",                                                                                 // MakerGen.cs:232
+                        Id = "NamingSystem.uniqueId.type",                                                                                  // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 15. NamingSystem.uniqueId.value
-                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:211
+                    this.Element_Value = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Value",                                                                                             // MakerGen.cs:231
+                        Path= "NamingSystem.uniqueId.value",                                                                                // MakerGen.cs:232
+                        Id = "NamingSystem.uniqueId.value",                                                                                 // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 16. NamingSystem.uniqueId.preferred
-                    public ElementDefinitionInfo Element_Preferred;                                                                         // MakerGen.cs:211
+                    this.Element_Preferred = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Preferred",                                                                                         // MakerGen.cs:231
+                        Path= "NamingSystem.uniqueId.preferred",                                                                            // MakerGen.cs:232
+                        Id = "NamingSystem.uniqueId.preferred",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 17. NamingSystem.uniqueId.comment
-                    public ElementDefinitionInfo Element_Comment;                                                                           // MakerGen.cs:211
+                    this.Element_Comment = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Comment",                                                                                           // MakerGen.cs:231
+                        Path= "NamingSystem.uniqueId.comment",                                                                              // MakerGen.cs:232
+                        Id = "NamingSystem.uniqueId.comment",                                                                               // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 18. NamingSystem.uniqueId.period
-                    public ElementDefinitionInfo Element_Period;                                                                            // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_UniqueId_Elements()                                                                                         // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 14. NamingSystem.uniqueId.type
-                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:230
-                                Path= "NamingSystem.uniqueId.type",                                                                         // MakerGen.cs:231
-                                Id = "NamingSystem.uniqueId.type",                                                                          // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 15. NamingSystem.uniqueId.value
-                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Value",                                                                                     // MakerGen.cs:230
-                                Path= "NamingSystem.uniqueId.value",                                                                        // MakerGen.cs:231
-                                Id = "NamingSystem.uniqueId.value",                                                                         // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 16. NamingSystem.uniqueId.preferred
-                            this.Element_Preferred = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Preferred",                                                                                 // MakerGen.cs:230
-                                Path= "NamingSystem.uniqueId.preferred",                                                                    // MakerGen.cs:231
-                                Id = "NamingSystem.uniqueId.preferred",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 17. NamingSystem.uniqueId.comment
-                            this.Element_Comment = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Comment",                                                                                   // MakerGen.cs:230
-                                Path= "NamingSystem.uniqueId.comment",                                                                      // MakerGen.cs:231
-                                Id = "NamingSystem.uniqueId.comment",                                                                       // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 18. NamingSystem.uniqueId.period
-                            this.Element_Period = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Period",                                                                                    // MakerGen.cs:230
-                                Path= "NamingSystem.uniqueId.period",                                                                       // MakerGen.cs:231
-                                Id = "NamingSystem.uniqueId.period",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Period                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:215
-                        Element_Preferred.Write(sDef);                                                                                      // MakerGen.cs:215
-                        Element_Comment.Write(sDef);                                                                                        // MakerGen.cs:215
-                        Element_Period.Write(sDef);                                                                                         // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_UniqueId_Elements Elements                                                                                      // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_UniqueId_Elements();                                                                   // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_UniqueId_Elements elements;                                                                                            // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_UniqueId()                                                                                                      // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "NamingSystem.uniqueId",                                                                                     // MakerGen.cs:420
-                        ElementId = "NamingSystem.uniqueId"                                                                                 // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. NamingSystem.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:211
-            // 2. NamingSystem.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 3. NamingSystem.kind
-            public ElementDefinitionInfo Element_Kind;                                                                                      // MakerGen.cs:211
-            // 4. NamingSystem.date
-            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:211
-            // 5. NamingSystem.publisher
-            public ElementDefinitionInfo Element_Publisher;                                                                                 // MakerGen.cs:211
-            // 6. NamingSystem.contact
-            public ElementDefinitionInfo Element_Contact;                                                                                   // MakerGen.cs:211
-            // 7. NamingSystem.responsible
-            public ElementDefinitionInfo Element_Responsible;                                                                               // MakerGen.cs:211
-            // 8. NamingSystem.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:211
-            // 9. NamingSystem.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:211
-            // 10. NamingSystem.useContext
-            public ElementDefinitionInfo Element_UseContext;                                                                                // MakerGen.cs:211
-            // 11. NamingSystem.jurisdiction
-            public ElementDefinitionInfo Element_Jurisdiction;                                                                              // MakerGen.cs:211
-            // 12. NamingSystem.usage
-            public ElementDefinitionInfo Element_Usage;                                                                                     // MakerGen.cs:211
-            // 13. NamingSystem.uniqueId
-            public ElementDefinitionInfo Element_UniqueId;                                                                                  // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_NamingSystem_Elements()                                                                                         // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. NamingSystem.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:230
-                        Path= "NamingSystem.name",                                                                                          // MakerGen.cs:231
-                        Id = "NamingSystem.name",                                                                                           // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. NamingSystem.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "NamingSystem.status",                                                                                        // MakerGen.cs:231
-                        Id = "NamingSystem.status",                                                                                         // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. NamingSystem.kind
-                    this.Element_Kind = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Kind",                                                                                              // MakerGen.cs:230
-                        Path= "NamingSystem.kind",                                                                                          // MakerGen.cs:231
-                        Id = "NamingSystem.kind",                                                                                           // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. NamingSystem.date
-                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Date",                                                                                              // MakerGen.cs:230
-                        Path= "NamingSystem.date",                                                                                          // MakerGen.cs:231
-                        Id = "NamingSystem.date",                                                                                           // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. NamingSystem.publisher
-                    this.Element_Publisher = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Publisher",                                                                                         // MakerGen.cs:230
-                        Path= "NamingSystem.publisher",                                                                                     // MakerGen.cs:231
-                        Id = "NamingSystem.publisher",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. NamingSystem.contact
-                    this.Element_Contact = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Contact",                                                                                           // MakerGen.cs:230
-                        Path= "NamingSystem.contact",                                                                                       // MakerGen.cs:231
-                        Id = "NamingSystem.contact",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. NamingSystem.responsible
-                    this.Element_Responsible = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Responsible",                                                                                       // MakerGen.cs:230
-                        Path= "NamingSystem.responsible",                                                                                   // MakerGen.cs:231
-                        Id = "NamingSystem.responsible",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. NamingSystem.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:230
-                        Path= "NamingSystem.type",                                                                                          // MakerGen.cs:231
-                        Id = "NamingSystem.type",                                                                                           // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. NamingSystem.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:230
-                        Path= "NamingSystem.description",                                                                                   // MakerGen.cs:231
-                        Id = "NamingSystem.description",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. NamingSystem.useContext
-                    this.Element_UseContext = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_UseContext",                                                                                        // MakerGen.cs:230
-                        Path= "NamingSystem.useContext",                                                                                    // MakerGen.cs:231
-                        Id = "NamingSystem.useContext",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                             // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. NamingSystem.jurisdiction
-                    this.Element_Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Jurisdiction",                                                                                      // MakerGen.cs:230
-                        Path= "NamingSystem.jurisdiction",                                                                                  // MakerGen.cs:231
-                        Id = "NamingSystem.jurisdiction",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 12. NamingSystem.usage
-                    this.Element_Usage = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Usage",                                                                                             // MakerGen.cs:230
-                        Path= "NamingSystem.usage",                                                                                         // MakerGen.cs:231
-                        Id = "NamingSystem.usage",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 13. NamingSystem.uniqueId
-                    this.Element_UniqueId = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_UniqueId",                                                                                          // MakerGen.cs:230
-                        Path= "NamingSystem.uniqueId",                                                                                      // MakerGen.cs:231
-                        Id = "NamingSystem.uniqueId",                                                                                       // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_UniqueId                                                                                               // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Kind.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Publisher.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Contact.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Responsible.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_UseContext.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Usage.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_UniqueId.Write(sDef);                                                                                               // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_NamingSystem_Elements Elements                                                                                      // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_NamingSystem_Elements();                                                                   // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_NamingSystem_Elements elements;                                                                                            // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_NamingSystem()                                                                                                      // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "NamingSystem";                                                                                                     // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/NamingSystem";                                                              // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "NamingSystem",                                                                                                      // MakerGen.cs:420
-                ElementId = "NamingSystem"                                                                                                  // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Period",                                                                                            // MakerGen.cs:231
+                        Path= "NamingSystem.uniqueId.period",                                                                               // MakerGen.cs:232
+                        Id = "NamingSystem.uniqueId.period",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. NamingSystem.name
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:212
+        // 2. NamingSystem.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 3. NamingSystem.kind
+        public ElementDefinitionInfo Element_Kind;                                                                                          // MakerGen.cs:212
+        // 4. NamingSystem.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
+        // 5. NamingSystem.publisher
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:212
+        // 6. NamingSystem.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
+        // 7. NamingSystem.responsible
+        public ElementDefinitionInfo Element_Responsible;                                                                                   // MakerGen.cs:212
+        // 8. NamingSystem.type
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:212
+        // 9. NamingSystem.description
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:212
+        // 10. NamingSystem.useContext
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:212
+        // 11. NamingSystem.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
+        // 12. NamingSystem.usage
+        public ElementDefinitionInfo Element_Usage;                                                                                         // MakerGen.cs:212
+        // 13. NamingSystem.uniqueId
+        public ElementDefinitionInfo Element_UniqueId;                                                                                      // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "NamingSystem",                                                                                                      // MakerGen.cs:388
+                ElementId = "NamingSystem"                                                                                                  // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Kind.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Responsible.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Usage.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_UniqueId.Write(sDef);                                                                                                   // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_NamingSystem()                                                                                                      // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. NamingSystem.name
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:231
+                    Path= "NamingSystem.name",                                                                                              // MakerGen.cs:232
+                    Id = "NamingSystem.name",                                                                                               // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. NamingSystem.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "NamingSystem.status",                                                                                            // MakerGen.cs:232
+                    Id = "NamingSystem.status",                                                                                             // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. NamingSystem.kind
+                this.Element_Kind = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Kind",                                                                                                  // MakerGen.cs:231
+                    Path= "NamingSystem.kind",                                                                                              // MakerGen.cs:232
+                    Id = "NamingSystem.kind",                                                                                               // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. NamingSystem.date
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
+                    Path= "NamingSystem.date",                                                                                              // MakerGen.cs:232
+                    Id = "NamingSystem.date",                                                                                               // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. NamingSystem.publisher
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:231
+                    Path= "NamingSystem.publisher",                                                                                         // MakerGen.cs:232
+                    Id = "NamingSystem.publisher",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. NamingSystem.contact
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
+                    Path= "NamingSystem.contact",                                                                                           // MakerGen.cs:232
+                    Id = "NamingSystem.contact",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. NamingSystem.responsible
+                this.Element_Responsible = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Responsible",                                                                                           // MakerGen.cs:231
+                    Path= "NamingSystem.responsible",                                                                                       // MakerGen.cs:232
+                    Id = "NamingSystem.responsible",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. NamingSystem.type
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:231
+                    Path= "NamingSystem.type",                                                                                              // MakerGen.cs:232
+                    Id = "NamingSystem.type",                                                                                               // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. NamingSystem.description
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:231
+                    Path= "NamingSystem.description",                                                                                       // MakerGen.cs:232
+                    Id = "NamingSystem.description",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. NamingSystem.useContext
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:231
+                    Path= "NamingSystem.useContext",                                                                                        // MakerGen.cs:232
+                    Id = "NamingSystem.useContext",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. NamingSystem.jurisdiction
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
+                    Path= "NamingSystem.jurisdiction",                                                                                      // MakerGen.cs:232
+                    Id = "NamingSystem.jurisdiction",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 12. NamingSystem.usage
+                this.Element_Usage = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Usage",                                                                                                 // MakerGen.cs:231
+                    Path= "NamingSystem.usage",                                                                                             // MakerGen.cs:232
+                    Id = "NamingSystem.usage",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 13. NamingSystem.uniqueId
+                this.Element_UniqueId = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_UniqueId",                                                                                              // MakerGen.cs:231
+                    Path= "NamingSystem.uniqueId",                                                                                          // MakerGen.cs:232
+                    Id = "NamingSystem.uniqueId",                                                                                           // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_UniqueId                                                                                                   // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "NamingSystem";                                                                                                     // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/NamingSystem";                                                              // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

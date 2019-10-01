@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "ServiceRequest",
@@ -777,800 +777,777 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'ServiceRequest'
     /// </summary>
     // 0. ServiceRequest
     public class Resource_ServiceRequest : FhirKhit.Maker.Common.Resource.ResourceBase                                                      // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_ServiceRequest_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 1. ServiceRequest.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 2. ServiceRequest.instantiatesCanonical
-            public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                     // MakerGen.cs:211
-            // 3. ServiceRequest.instantiatesUri
-            public ElementDefinitionInfo Element_InstantiatesUri;                                                                           // MakerGen.cs:211
-            // 4. ServiceRequest.basedOn
-            public ElementDefinitionInfo Element_BasedOn;                                                                                   // MakerGen.cs:211
-            // 5. ServiceRequest.replaces
-            public ElementDefinitionInfo Element_Replaces;                                                                                  // MakerGen.cs:211
-            // 6. ServiceRequest.requisition
-            public ElementDefinitionInfo Element_Requisition;                                                                               // MakerGen.cs:211
-            // 7. ServiceRequest.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 8. ServiceRequest.intent
-            public ElementDefinitionInfo Element_Intent;                                                                                    // MakerGen.cs:211
-            // 9. ServiceRequest.category
-            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:211
-            // 10. ServiceRequest.priority
-            public ElementDefinitionInfo Element_Priority;                                                                                  // MakerGen.cs:211
-            // 11. ServiceRequest.doNotPerform
-            public ElementDefinitionInfo Element_DoNotPerform;                                                                              // MakerGen.cs:211
-            // 12. ServiceRequest.code
-            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:211
-            // 13. ServiceRequest.orderDetail
-            public ElementDefinitionInfo Element_OrderDetail;                                                                               // MakerGen.cs:211
-            // 14. ServiceRequest.quantity[x]
-            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:211
-            // 15. ServiceRequest.subject
-            public ElementDefinitionInfo Element_Subject;                                                                                   // MakerGen.cs:211
-            // 16. ServiceRequest.encounter
-            public ElementDefinitionInfo Element_Encounter;                                                                                 // MakerGen.cs:211
-            // 17. ServiceRequest.occurrence[x]
-            public ElementDefinitionInfo Element_Occurrence;                                                                                // MakerGen.cs:211
-            // 18. ServiceRequest.asNeeded[x]
-            public ElementDefinitionInfo Element_AsNeeded;                                                                                  // MakerGen.cs:211
-            // 19. ServiceRequest.authoredOn
-            public ElementDefinitionInfo Element_AuthoredOn;                                                                                // MakerGen.cs:211
-            // 20. ServiceRequest.requester
-            public ElementDefinitionInfo Element_Requester;                                                                                 // MakerGen.cs:211
-            // 21. ServiceRequest.performerType
-            public ElementDefinitionInfo Element_PerformerType;                                                                             // MakerGen.cs:211
-            // 22. ServiceRequest.performer
-            public ElementDefinitionInfo Element_Performer;                                                                                 // MakerGen.cs:211
-            // 23. ServiceRequest.locationCode
-            public ElementDefinitionInfo Element_LocationCode;                                                                              // MakerGen.cs:211
-            // 24. ServiceRequest.locationReference
-            public ElementDefinitionInfo Element_LocationReference;                                                                         // MakerGen.cs:211
-            // 25. ServiceRequest.reasonCode
-            public ElementDefinitionInfo Element_ReasonCode;                                                                                // MakerGen.cs:211
-            // 26. ServiceRequest.reasonReference
-            public ElementDefinitionInfo Element_ReasonReference;                                                                           // MakerGen.cs:211
-            // 27. ServiceRequest.insurance
-            public ElementDefinitionInfo Element_Insurance;                                                                                 // MakerGen.cs:211
-            // 28. ServiceRequest.supportingInfo
-            public ElementDefinitionInfo Element_SupportingInfo;                                                                            // MakerGen.cs:211
-            // 29. ServiceRequest.specimen
-            public ElementDefinitionInfo Element_Specimen;                                                                                  // MakerGen.cs:211
-            // 30. ServiceRequest.bodySite
-            public ElementDefinitionInfo Element_BodySite;                                                                                  // MakerGen.cs:211
-            // 31. ServiceRequest.note
-            public ElementDefinitionInfo Element_Note;                                                                                      // MakerGen.cs:211
-            // 32. ServiceRequest.patientInstruction
-            public ElementDefinitionInfo Element_PatientInstruction;                                                                        // MakerGen.cs:211
-            // 33. ServiceRequest.relevantHistory
-            public ElementDefinitionInfo Element_RelevantHistory;                                                                           // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_ServiceRequest_Elements()                                                                                       // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. ServiceRequest.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "ServiceRequest.identifier",                                                                                  // MakerGen.cs:231
-                        Id = "ServiceRequest.identifier",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. ServiceRequest.instantiatesCanonical
-                    this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_InstantiatesCanonical",                                                                             // MakerGen.cs:230
-                        Path= "ServiceRequest.instantiatesCanonical",                                                                       // MakerGen.cs:231
-                        Id = "ServiceRequest.instantiatesCanonical",                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:298
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                           // MakerGen.cs:298
-                                    "http://hl7.org/fhir/StructureDefinition/PlanDefinition"                                                // MakerGen.cs:298
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. ServiceRequest.instantiatesUri
-                    this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_InstantiatesUri",                                                                                   // MakerGen.cs:230
-                        Path= "ServiceRequest.instantiatesUri",                                                                             // MakerGen.cs:231
-                        Id = "ServiceRequest.instantiatesUri",                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. ServiceRequest.basedOn
-                    this.Element_BasedOn = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_BasedOn",                                                                                           // MakerGen.cs:230
-                        Path= "ServiceRequest.basedOn",                                                                                     // MakerGen.cs:231
-                        Id = "ServiceRequest.basedOn",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                     // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/ServiceRequest",                                               // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/MedicationRequest"                                             // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. ServiceRequest.replaces
-                    this.Element_Replaces = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Replaces",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.replaces",                                                                                    // MakerGen.cs:231
-                        Id = "ServiceRequest.replaces",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. ServiceRequest.requisition
-                    this.Element_Requisition = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Requisition",                                                                                       // MakerGen.cs:230
-                        Path= "ServiceRequest.requisition",                                                                                 // MakerGen.cs:231
-                        Id = "ServiceRequest.requisition",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. ServiceRequest.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "ServiceRequest.status",                                                                                      // MakerGen.cs:231
-                        Id = "ServiceRequest.status",                                                                                       // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. ServiceRequest.intent
-                    this.Element_Intent = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Intent",                                                                                            // MakerGen.cs:230
-                        Path= "ServiceRequest.intent",                                                                                      // MakerGen.cs:231
-                        Id = "ServiceRequest.intent",                                                                                       // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. ServiceRequest.category
-                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Category",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.category",                                                                                    // MakerGen.cs:231
-                        Id = "ServiceRequest.category",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. ServiceRequest.priority
-                    this.Element_Priority = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Priority",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.priority",                                                                                    // MakerGen.cs:231
-                        Id = "ServiceRequest.priority",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. ServiceRequest.doNotPerform
-                    this.Element_DoNotPerform = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_DoNotPerform",                                                                                      // MakerGen.cs:230
-                        Path= "ServiceRequest.doNotPerform",                                                                                // MakerGen.cs:231
-                        Id = "ServiceRequest.doNotPerform",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 12. ServiceRequest.code
-                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Code",                                                                                              // MakerGen.cs:230
-                        Path= "ServiceRequest.code",                                                                                        // MakerGen.cs:231
-                        Id = "ServiceRequest.code",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 13. ServiceRequest.orderDetail
-                    this.Element_OrderDetail = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_OrderDetail",                                                                                       // MakerGen.cs:230
-                        Path= "ServiceRequest.orderDetail",                                                                                 // MakerGen.cs:231
-                        Id = "ServiceRequest.orderDetail",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 14. ServiceRequest.quantity[x]
-                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.quantity[x]",                                                                                 // MakerGen.cs:231
-                        Id = "ServiceRequest.quantity[x]",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            },                                                                                                              // MakerGen.cs:352
-                            new FhirKhit.Maker.Common.Complex.Type_Ratio                                                                    // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            },                                                                                                              // MakerGen.cs:352
-                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 15. ServiceRequest.subject
-                    this.Element_Subject = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Subject",                                                                                           // MakerGen.cs:230
-                        Path= "ServiceRequest.subject",                                                                                     // MakerGen.cs:231
-                        Id = "ServiceRequest.subject",                                                                                      // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Group",                                                        // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Location",                                                     // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 16. ServiceRequest.encounter
-                    this.Element_Encounter = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Encounter",                                                                                         // MakerGen.cs:230
-                        Path= "ServiceRequest.encounter",                                                                                   // MakerGen.cs:231
-                        Id = "ServiceRequest.encounter",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 17. ServiceRequest.occurrence[x]
-                    this.Element_Occurrence = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Occurrence",                                                                                        // MakerGen.cs:230
-                        Path= "ServiceRequest.occurrence[x]",                                                                               // MakerGen.cs:231
-                        Id = "ServiceRequest.occurrence[x]",                                                                                // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            },                                                                                                              // MakerGen.cs:299
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            },                                                                                                              // MakerGen.cs:352
-                            new FhirKhit.Maker.Common.Complex.Type_Timing                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 18. ServiceRequest.asNeeded[x]
-                    this.Element_AsNeeded = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_AsNeeded",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.asNeeded[x]",                                                                                 // MakerGen.cs:231
-                        Id = "ServiceRequest.asNeeded[x]",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            },                                                                                                              // MakerGen.cs:299
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 19. ServiceRequest.authoredOn
-                    this.Element_AuthoredOn = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_AuthoredOn",                                                                                        // MakerGen.cs:230
-                        Path= "ServiceRequest.authoredOn",                                                                                  // MakerGen.cs:231
-                        Id = "ServiceRequest.authoredOn",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 20. ServiceRequest.requester
-                    this.Element_Requester = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Requester",                                                                                         // MakerGen.cs:230
-                        Path= "ServiceRequest.requester",                                                                                   // MakerGen.cs:231
-                        Id = "ServiceRequest.requester",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 21. ServiceRequest.performerType
-                    this.Element_PerformerType = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_PerformerType",                                                                                     // MakerGen.cs:230
-                        Path= "ServiceRequest.performerType",                                                                               // MakerGen.cs:231
-                        Id = "ServiceRequest.performerType",                                                                                // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 22. ServiceRequest.performer
-                    this.Element_Performer = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Performer",                                                                                         // MakerGen.cs:230
-                        Path= "ServiceRequest.performer",                                                                                   // MakerGen.cs:231
-                        Id = "ServiceRequest.performer",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/CareTeam",                                                     // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                            // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                 // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 23. ServiceRequest.locationCode
-                    this.Element_LocationCode = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_LocationCode",                                                                                      // MakerGen.cs:230
-                        Path= "ServiceRequest.locationCode",                                                                                // MakerGen.cs:231
-                        Id = "ServiceRequest.locationCode",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 24. ServiceRequest.locationReference
-                    this.Element_LocationReference = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_LocationReference",                                                                                 // MakerGen.cs:230
-                        Path= "ServiceRequest.locationReference",                                                                           // MakerGen.cs:231
-                        Id = "ServiceRequest.locationReference",                                                                            // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 25. ServiceRequest.reasonCode
-                    this.Element_ReasonCode = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ReasonCode",                                                                                        // MakerGen.cs:230
-                        Path= "ServiceRequest.reasonCode",                                                                                  // MakerGen.cs:231
-                        Id = "ServiceRequest.reasonCode",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 26. ServiceRequest.reasonReference
-                    this.Element_ReasonReference = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ReasonReference",                                                                                   // MakerGen.cs:230
-                        Path= "ServiceRequest.reasonReference",                                                                             // MakerGen.cs:231
-                        Id = "ServiceRequest.reasonReference",                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                             // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                             // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 27. ServiceRequest.insurance
-                    this.Element_Insurance = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Insurance",                                                                                         // MakerGen.cs:230
-                        Path= "ServiceRequest.insurance",                                                                                   // MakerGen.cs:231
-                        Id = "ServiceRequest.insurance",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Coverage",                                                     // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/ClaimResponse"                                                 // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 28. ServiceRequest.supportingInfo
-                    this.Element_SupportingInfo = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_SupportingInfo",                                                                                    // MakerGen.cs:230
-                        Path= "ServiceRequest.supportingInfo",                                                                              // MakerGen.cs:231
-                        Id = "ServiceRequest.supportingInfo",                                                                               // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 29. ServiceRequest.specimen
-                    this.Element_Specimen = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Specimen",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.specimen",                                                                                    // MakerGen.cs:231
-                        Id = "ServiceRequest.specimen",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Specimen"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 30. ServiceRequest.bodySite
-                    this.Element_BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_BodySite",                                                                                          // MakerGen.cs:230
-                        Path= "ServiceRequest.bodySite",                                                                                    // MakerGen.cs:231
-                        Id = "ServiceRequest.bodySite",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 31. ServiceRequest.note
-                    this.Element_Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Note",                                                                                              // MakerGen.cs:230
-                        Path= "ServiceRequest.note",                                                                                        // MakerGen.cs:231
-                        Id = "ServiceRequest.note",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Annotation                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 32. ServiceRequest.patientInstruction
-                    this.Element_PatientInstruction = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_PatientInstruction",                                                                                // MakerGen.cs:230
-                        Path= "ServiceRequest.patientInstruction",                                                                          // MakerGen.cs:231
-                        Id = "ServiceRequest.patientInstruction",                                                                           // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 33. ServiceRequest.relevantHistory
-                    this.Element_RelevantHistory = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_RelevantHistory",                                                                                   // MakerGen.cs:230
-                        Path= "ServiceRequest.relevantHistory",                                                                             // MakerGen.cs:231
-                        Id = "ServiceRequest.relevantHistory",                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Provenance"                                                    // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_InstantiatesCanonical.Write(sDef);                                                                                  // MakerGen.cs:215
-                Element_InstantiatesUri.Write(sDef);                                                                                        // MakerGen.cs:215
-                Element_BasedOn.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Replaces.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Requisition.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Intent.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Priority.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_DoNotPerform.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_OrderDetail.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Subject.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Encounter.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Occurrence.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_AsNeeded.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_AuthoredOn.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Requester.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_PerformerType.Write(sDef);                                                                                          // MakerGen.cs:215
-                Element_Performer.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_LocationCode.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_LocationReference.Write(sDef);                                                                                      // MakerGen.cs:215
-                Element_ReasonCode.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_ReasonReference.Write(sDef);                                                                                        // MakerGen.cs:215
-                Element_Insurance.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_SupportingInfo.Write(sDef);                                                                                         // MakerGen.cs:215
-                Element_Specimen.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_BodySite.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Note.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_PatientInstruction.Write(sDef);                                                                                     // MakerGen.cs:215
-                Element_RelevantHistory.Write(sDef);                                                                                        // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_ServiceRequest_Elements Elements                                                                                    // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_ServiceRequest_Elements();                                                                 // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_ServiceRequest_Elements elements;                                                                                          // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_ServiceRequest()                                                                                                    // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "ServiceRequest";                                                                                                   // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";                                                            // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "ServiceRequest",                                                                                                    // MakerGen.cs:420
-                ElementId = "ServiceRequest"                                                                                                // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+        // 1. ServiceRequest.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 2. ServiceRequest.instantiatesCanonical
+        public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                         // MakerGen.cs:212
+        // 3. ServiceRequest.instantiatesUri
+        public ElementDefinitionInfo Element_InstantiatesUri;                                                                               // MakerGen.cs:212
+        // 4. ServiceRequest.basedOn
+        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:212
+        // 5. ServiceRequest.replaces
+        public ElementDefinitionInfo Element_Replaces;                                                                                      // MakerGen.cs:212
+        // 6. ServiceRequest.requisition
+        public ElementDefinitionInfo Element_Requisition;                                                                                   // MakerGen.cs:212
+        // 7. ServiceRequest.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 8. ServiceRequest.intent
+        public ElementDefinitionInfo Element_Intent;                                                                                        // MakerGen.cs:212
+        // 9. ServiceRequest.category
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:212
+        // 10. ServiceRequest.priority
+        public ElementDefinitionInfo Element_Priority;                                                                                      // MakerGen.cs:212
+        // 11. ServiceRequest.doNotPerform
+        public ElementDefinitionInfo Element_DoNotPerform;                                                                                  // MakerGen.cs:212
+        // 12. ServiceRequest.code
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:212
+        // 13. ServiceRequest.orderDetail
+        public ElementDefinitionInfo Element_OrderDetail;                                                                                   // MakerGen.cs:212
+        // 14. ServiceRequest.quantity[x]
+        public ElementDefinitionInfo Element_Quantity;                                                                                      // MakerGen.cs:212
+        // 15. ServiceRequest.subject
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:212
+        // 16. ServiceRequest.encounter
+        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:212
+        // 17. ServiceRequest.occurrence[x]
+        public ElementDefinitionInfo Element_Occurrence;                                                                                    // MakerGen.cs:212
+        // 18. ServiceRequest.asNeeded[x]
+        public ElementDefinitionInfo Element_AsNeeded;                                                                                      // MakerGen.cs:212
+        // 19. ServiceRequest.authoredOn
+        public ElementDefinitionInfo Element_AuthoredOn;                                                                                    // MakerGen.cs:212
+        // 20. ServiceRequest.requester
+        public ElementDefinitionInfo Element_Requester;                                                                                     // MakerGen.cs:212
+        // 21. ServiceRequest.performerType
+        public ElementDefinitionInfo Element_PerformerType;                                                                                 // MakerGen.cs:212
+        // 22. ServiceRequest.performer
+        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:212
+        // 23. ServiceRequest.locationCode
+        public ElementDefinitionInfo Element_LocationCode;                                                                                  // MakerGen.cs:212
+        // 24. ServiceRequest.locationReference
+        public ElementDefinitionInfo Element_LocationReference;                                                                             // MakerGen.cs:212
+        // 25. ServiceRequest.reasonCode
+        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:212
+        // 26. ServiceRequest.reasonReference
+        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:212
+        // 27. ServiceRequest.insurance
+        public ElementDefinitionInfo Element_Insurance;                                                                                     // MakerGen.cs:212
+        // 28. ServiceRequest.supportingInfo
+        public ElementDefinitionInfo Element_SupportingInfo;                                                                                // MakerGen.cs:212
+        // 29. ServiceRequest.specimen
+        public ElementDefinitionInfo Element_Specimen;                                                                                      // MakerGen.cs:212
+        // 30. ServiceRequest.bodySite
+        public ElementDefinitionInfo Element_BodySite;                                                                                      // MakerGen.cs:212
+        // 31. ServiceRequest.note
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:212
+        // 32. ServiceRequest.patientInstruction
+        public ElementDefinitionInfo Element_PatientInstruction;                                                                            // MakerGen.cs:212
+        // 33. ServiceRequest.relevantHistory
+        public ElementDefinitionInfo Element_RelevantHistory;                                                                               // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "ServiceRequest",                                                                                                    // MakerGen.cs:388
+                ElementId = "ServiceRequest"                                                                                                // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_InstantiatesCanonical.Write(sDef);                                                                                      // MakerGen.cs:216
+            Element_InstantiatesUri.Write(sDef);                                                                                            // MakerGen.cs:216
+            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Replaces.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Requisition.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Intent.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Priority.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_DoNotPerform.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_OrderDetail.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_Quantity.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Occurrence.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_AsNeeded.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_AuthoredOn.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Requester.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_PerformerType.Write(sDef);                                                                                              // MakerGen.cs:216
+            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_LocationCode.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_LocationReference.Write(sDef);                                                                                          // MakerGen.cs:216
+            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:216
+            Element_Insurance.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_SupportingInfo.Write(sDef);                                                                                             // MakerGen.cs:216
+            Element_Specimen.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_BodySite.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_PatientInstruction.Write(sDef);                                                                                         // MakerGen.cs:216
+            Element_RelevantHistory.Write(sDef);                                                                                            // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_ServiceRequest()                                                                                                    // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. ServiceRequest.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "ServiceRequest.identifier",                                                                                      // MakerGen.cs:232
+                    Id = "ServiceRequest.identifier",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. ServiceRequest.instantiatesCanonical
+                this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_InstantiatesCanonical",                                                                                 // MakerGen.cs:231
+                    Path= "ServiceRequest.instantiatesCanonical",                                                                           // MakerGen.cs:232
+                    Id = "ServiceRequest.instantiatesCanonical",                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                               // MakerGen.cs:299
+                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition"                                                    // MakerGen.cs:299
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. ServiceRequest.instantiatesUri
+                this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_InstantiatesUri",                                                                                       // MakerGen.cs:231
+                    Path= "ServiceRequest.instantiatesUri",                                                                                 // MakerGen.cs:232
+                    Id = "ServiceRequest.instantiatesUri",                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. ServiceRequest.basedOn
+                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:231
+                    Path= "ServiceRequest.basedOn",                                                                                         // MakerGen.cs:232
+                    Id = "ServiceRequest.basedOn",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                         // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",                                                   // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/MedicationRequest"                                                 // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. ServiceRequest.replaces
+                this.Element_Replaces = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Replaces",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.replaces",                                                                                        // MakerGen.cs:232
+                    Id = "ServiceRequest.replaces",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. ServiceRequest.requisition
+                this.Element_Requisition = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Requisition",                                                                                           // MakerGen.cs:231
+                    Path= "ServiceRequest.requisition",                                                                                     // MakerGen.cs:232
+                    Id = "ServiceRequest.requisition",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. ServiceRequest.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "ServiceRequest.status",                                                                                          // MakerGen.cs:232
+                    Id = "ServiceRequest.status",                                                                                           // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. ServiceRequest.intent
+                this.Element_Intent = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Intent",                                                                                                // MakerGen.cs:231
+                    Path= "ServiceRequest.intent",                                                                                          // MakerGen.cs:232
+                    Id = "ServiceRequest.intent",                                                                                           // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. ServiceRequest.category
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.category",                                                                                        // MakerGen.cs:232
+                    Id = "ServiceRequest.category",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. ServiceRequest.priority
+                this.Element_Priority = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Priority",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.priority",                                                                                        // MakerGen.cs:232
+                    Id = "ServiceRequest.priority",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. ServiceRequest.doNotPerform
+                this.Element_DoNotPerform = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_DoNotPerform",                                                                                          // MakerGen.cs:231
+                    Path= "ServiceRequest.doNotPerform",                                                                                    // MakerGen.cs:232
+                    Id = "ServiceRequest.doNotPerform",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 12. ServiceRequest.code
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:231
+                    Path= "ServiceRequest.code",                                                                                            // MakerGen.cs:232
+                    Id = "ServiceRequest.code",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 13. ServiceRequest.orderDetail
+                this.Element_OrderDetail = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_OrderDetail",                                                                                           // MakerGen.cs:231
+                    Path= "ServiceRequest.orderDetail",                                                                                     // MakerGen.cs:232
+                    Id = "ServiceRequest.orderDetail",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 14. ServiceRequest.quantity[x]
+                this.Element_Quantity = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Quantity",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.quantity[x]",                                                                                     // MakerGen.cs:232
+                    Id = "ServiceRequest.quantity[x]",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        },                                                                                                                  // MakerGen.cs:353
+                        new FhirKhit.Maker.Common.Complex.Type_Ratio                                                                        // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        },                                                                                                                  // MakerGen.cs:353
+                        new FhirKhit.Maker.Common.Complex.Type_Range                                                                        // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 15. ServiceRequest.subject
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:231
+                    Path= "ServiceRequest.subject",                                                                                         // MakerGen.cs:232
+                    Id = "ServiceRequest.subject",                                                                                          // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Group",                                                            // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Location",                                                         // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 16. ServiceRequest.encounter
+                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:231
+                    Path= "ServiceRequest.encounter",                                                                                       // MakerGen.cs:232
+                    Id = "ServiceRequest.encounter",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 17. ServiceRequest.occurrence[x]
+                this.Element_Occurrence = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Occurrence",                                                                                            // MakerGen.cs:231
+                    Path= "ServiceRequest.occurrence[x]",                                                                                   // MakerGen.cs:232
+                    Id = "ServiceRequest.occurrence[x]",                                                                                    // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        },                                                                                                                  // MakerGen.cs:300
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        },                                                                                                                  // MakerGen.cs:353
+                        new FhirKhit.Maker.Common.Complex.Type_Timing                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 18. ServiceRequest.asNeeded[x]
+                this.Element_AsNeeded = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_AsNeeded",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.asNeeded[x]",                                                                                     // MakerGen.cs:232
+                    Id = "ServiceRequest.asNeeded[x]",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        },                                                                                                                  // MakerGen.cs:300
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 19. ServiceRequest.authoredOn
+                this.Element_AuthoredOn = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_AuthoredOn",                                                                                            // MakerGen.cs:231
+                    Path= "ServiceRequest.authoredOn",                                                                                      // MakerGen.cs:232
+                    Id = "ServiceRequest.authoredOn",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 20. ServiceRequest.requester
+                this.Element_Requester = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Requester",                                                                                             // MakerGen.cs:231
+                    Path= "ServiceRequest.requester",                                                                                       // MakerGen.cs:232
+                    Id = "ServiceRequest.requester",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 21. ServiceRequest.performerType
+                this.Element_PerformerType = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_PerformerType",                                                                                         // MakerGen.cs:231
+                    Path= "ServiceRequest.performerType",                                                                                   // MakerGen.cs:232
+                    Id = "ServiceRequest.performerType",                                                                                    // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 22. ServiceRequest.performer
+                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Performer",                                                                                             // MakerGen.cs:231
+                    Path= "ServiceRequest.performer",                                                                                       // MakerGen.cs:232
+                    Id = "ServiceRequest.performer",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/CareTeam",                                                         // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                                // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                                     // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 23. ServiceRequest.locationCode
+                this.Element_LocationCode = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_LocationCode",                                                                                          // MakerGen.cs:231
+                    Path= "ServiceRequest.locationCode",                                                                                    // MakerGen.cs:232
+                    Id = "ServiceRequest.locationCode",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 24. ServiceRequest.locationReference
+                this.Element_LocationReference = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_LocationReference",                                                                                     // MakerGen.cs:231
+                    Path= "ServiceRequest.locationReference",                                                                               // MakerGen.cs:232
+                    Id = "ServiceRequest.locationReference",                                                                                // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 25. ServiceRequest.reasonCode
+                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:231
+                    Path= "ServiceRequest.reasonCode",                                                                                      // MakerGen.cs:232
+                    Id = "ServiceRequest.reasonCode",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 26. ServiceRequest.reasonReference
+                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:231
+                    Path= "ServiceRequest.reasonReference",                                                                                 // MakerGen.cs:232
+                    Id = "ServiceRequest.reasonReference",                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                                 // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                                 // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 27. ServiceRequest.insurance
+                this.Element_Insurance = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Insurance",                                                                                             // MakerGen.cs:231
+                    Path= "ServiceRequest.insurance",                                                                                       // MakerGen.cs:232
+                    Id = "ServiceRequest.insurance",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Coverage",                                                         // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/ClaimResponse"                                                     // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 28. ServiceRequest.supportingInfo
+                this.Element_SupportingInfo = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_SupportingInfo",                                                                                        // MakerGen.cs:231
+                    Path= "ServiceRequest.supportingInfo",                                                                                  // MakerGen.cs:232
+                    Id = "ServiceRequest.supportingInfo",                                                                                   // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 29. ServiceRequest.specimen
+                this.Element_Specimen = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Specimen",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.specimen",                                                                                        // MakerGen.cs:232
+                    Id = "ServiceRequest.specimen",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Specimen"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 30. ServiceRequest.bodySite
+                this.Element_BodySite = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_BodySite",                                                                                              // MakerGen.cs:231
+                    Path= "ServiceRequest.bodySite",                                                                                        // MakerGen.cs:232
+                    Id = "ServiceRequest.bodySite",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 31. ServiceRequest.note
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:231
+                    Path= "ServiceRequest.note",                                                                                            // MakerGen.cs:232
+                    Id = "ServiceRequest.note",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 32. ServiceRequest.patientInstruction
+                this.Element_PatientInstruction = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_PatientInstruction",                                                                                    // MakerGen.cs:231
+                    Path= "ServiceRequest.patientInstruction",                                                                              // MakerGen.cs:232
+                    Id = "ServiceRequest.patientInstruction",                                                                               // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 33. ServiceRequest.relevantHistory
+                this.Element_RelevantHistory = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_RelevantHistory",                                                                                       // MakerGen.cs:231
+                    Path= "ServiceRequest.relevantHistory",                                                                                 // MakerGen.cs:232
+                    Id = "ServiceRequest.relevantHistory",                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Provenance"                                                        // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "ServiceRequest";                                                                                                   // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ServiceRequest";                                                            // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

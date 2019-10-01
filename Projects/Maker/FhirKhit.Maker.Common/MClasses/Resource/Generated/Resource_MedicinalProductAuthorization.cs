@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "MedicinalProductAuthorization",
@@ -396,646 +396,577 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'MedicinalProductAuthorization'
     /// </summary>
     // 0. MedicinalProductAuthorization
     public class Resource_MedicinalProductAuthorization : FhirKhit.Maker.Common.Resource.ResourceBase                                       // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_MedicinalProductAuthorization_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                          // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
-            public class Type_JurisdictionalAuthorization : FhirKhit.Maker.Common.Complex.ComplexBase                                       // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_JurisdictionalAuthorization_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                        // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+        // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
+        public class Type_JurisdictionalAuthorization : FhirKhit.Maker.Common.Complex.ComplexBase                                           // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 14. MedicinalProductAuthorization.jurisdictionalAuthorization.identifier
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:212
+            // 15. MedicinalProductAuthorization.jurisdictionalAuthorization.country
+            public ElementDefinitionInfo Element_Country;                                                                                   // MakerGen.cs:212
+            // 16. MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction
+            public ElementDefinitionInfo Element_Jurisdiction;                                                                              // MakerGen.cs:212
+            // 17. MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply
+            public ElementDefinitionInfo Element_LegalStatusOfSupply;                                                                       // MakerGen.cs:212
+            // 18. MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod
+            public ElementDefinitionInfo Element_ValidityPeriod;                                                                            // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "MedicinalProductAuthorization.jurisdictionalAuthorization",                                                     // MakerGen.cs:388
+                    ElementId = "MedicinalProductAuthorization.jurisdictionalAuthorization"                                                 // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:216
+                Element_Country.Write(sDef);                                                                                                // MakerGen.cs:216
+                Element_Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:216
+                Element_LegalStatusOfSupply.Write(sDef);                                                                                    // MakerGen.cs:216
+                Element_ValidityPeriod.Write(sDef);                                                                                         // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_JurisdictionalAuthorization()                                                                                       // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 14. MedicinalProductAuthorization.jurisdictionalAuthorization.identifier
-                    public ElementDefinitionInfo Element_Identifier;                                                                        // MakerGen.cs:211
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.identifier",                                       // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.identifier",                                        // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 15. MedicinalProductAuthorization.jurisdictionalAuthorization.country
-                    public ElementDefinitionInfo Element_Country;                                                                           // MakerGen.cs:211
+                    this.Element_Country = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Country",                                                                                           // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.country",                                          // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.country",                                           // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 16. MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction
-                    public ElementDefinitionInfo Element_Jurisdiction;                                                                      // MakerGen.cs:211
+                    this.Element_Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Jurisdiction",                                                                                      // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction",                                     // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction",                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 17. MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply
-                    public ElementDefinitionInfo Element_LegalStatusOfSupply;                                                               // MakerGen.cs:211
+                    this.Element_LegalStatusOfSupply = new ElementDefinitionInfo                                                            // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_LegalStatusOfSupply",                                                                               // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply",                              // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply",                               // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 18. MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod
-                    public ElementDefinitionInfo Element_ValidityPeriod;                                                                    // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_JurisdictionalAuthorization_Elements()                                                                      // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 14. MedicinalProductAuthorization.jurisdictionalAuthorization.identifier
-                            this.Element_Identifier = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Identifier",                                                                                // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.identifier",                               // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.identifier",                                // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Identifier                                                       // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 15. MedicinalProductAuthorization.jurisdictionalAuthorization.country
-                            this.Element_Country = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Country",                                                                                   // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.country",                                  // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.country",                                   // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 16. MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction
-                            this.Element_Jurisdiction = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Jurisdiction",                                                                              // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction",                             // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.jurisdiction",                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 17. MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply
-                            this.Element_LegalStatusOfSupply = new ElementDefinitionInfo                                                    // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_LegalStatusOfSupply",                                                                       // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply",                      // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.legalStatusOfSupply",                       // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 18. MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod
-                            this.Element_ValidityPeriod = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_ValidityPeriod",                                                                            // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod",                           // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod",                            // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Period                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Identifier.Write(sDef);                                                                                     // MakerGen.cs:215
-                        Element_Country.Write(sDef);                                                                                        // MakerGen.cs:215
-                        Element_Jurisdiction.Write(sDef);                                                                                   // MakerGen.cs:215
-                        Element_LegalStatusOfSupply.Write(sDef);                                                                            // MakerGen.cs:215
-                        Element_ValidityPeriod.Write(sDef);                                                                                 // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_JurisdictionalAuthorization_Elements Elements                                                                   // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_JurisdictionalAuthorization_Elements();                                                // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_JurisdictionalAuthorization_Elements elements;                                                                         // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_JurisdictionalAuthorization()                                                                                   // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "MedicinalProductAuthorization.jurisdictionalAuthorization",                                                 // MakerGen.cs:420
-                        ElementId = "MedicinalProductAuthorization.jurisdictionalAuthorization"                                             // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 21. MedicinalProductAuthorization.procedure
-            public class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_Procedure_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_ValidityPeriod = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_ValidityPeriod",                                                                                    // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod",                                   // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.jurisdictionalAuthorization.validityPeriod",                                    // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 21. MedicinalProductAuthorization.procedure
+        public class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 22. MedicinalProductAuthorization.procedure.identifier
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:212
+            // 23. MedicinalProductAuthorization.procedure.type
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:212
+            // 24. MedicinalProductAuthorization.procedure.date[x]
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:212
+            // 25. MedicinalProductAuthorization.procedure.application
+            public ElementDefinitionInfo Element_Application;                                                                               // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "MedicinalProductAuthorization.procedure",                                                                       // MakerGen.cs:388
+                    ElementId = "MedicinalProductAuthorization.procedure"                                                                   // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:216
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Application.Write(sDef);                                                                                            // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Procedure()                                                                                                         // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 22. MedicinalProductAuthorization.procedure.identifier
-                    public ElementDefinitionInfo Element_Identifier;                                                                        // MakerGen.cs:211
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.procedure.identifier",                                                         // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.procedure.identifier",                                                          // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 23. MedicinalProductAuthorization.procedure.type
-                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:211
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.procedure.type",                                                               // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.procedure.type",                                                                // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 24. MedicinalProductAuthorization.procedure.date[x]
-                    public ElementDefinitionInfo Element_Date;                                                                              // MakerGen.cs:211
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.procedure.date[x]",                                                            // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.procedure.date[x]",                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            },                                                                                                              // MakerGen.cs:353
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 25. MedicinalProductAuthorization.procedure.application
-                    public ElementDefinitionInfo Element_Application;                                                                       // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Procedure_Elements()                                                                                        // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 22. MedicinalProductAuthorization.procedure.identifier
-                            this.Element_Identifier = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Identifier",                                                                                // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.procedure.identifier",                                                 // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.procedure.identifier",                                                  // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Identifier                                                       // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 23. MedicinalProductAuthorization.procedure.type
-                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.procedure.type",                                                       // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.procedure.type",                                                        // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 24. MedicinalProductAuthorization.procedure.date[x]
-                            this.Element_Date = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Date",                                                                                      // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.procedure.date[x]",                                                    // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.procedure.date[x]",                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Period                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    },                                                                                                      // MakerGen.cs:352
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 25. MedicinalProductAuthorization.procedure.application
-                            this.Element_Application = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Application",                                                                               // MakerGen.cs:230
-                                Path= "MedicinalProductAuthorization.procedure.application",                                                // MakerGen.cs:231
-                                Id = "MedicinalProductAuthorization.procedure.application",                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Identifier.Write(sDef);                                                                                     // MakerGen.cs:215
-                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Date.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Application.Write(sDef);                                                                                    // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Procedure_Elements Elements                                                                                     // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Procedure_Elements();                                                                  // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Procedure_Elements elements;                                                                                           // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Procedure()                                                                                                     // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "MedicinalProductAuthorization.procedure",                                                                   // MakerGen.cs:420
-                        ElementId = "MedicinalProductAuthorization.procedure"                                                               // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. MedicinalProductAuthorization.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 2. MedicinalProductAuthorization.subject
-            public ElementDefinitionInfo Element_Subject;                                                                                   // MakerGen.cs:211
-            // 3. MedicinalProductAuthorization.country
-            public ElementDefinitionInfo Element_Country;                                                                                   // MakerGen.cs:211
-            // 4. MedicinalProductAuthorization.jurisdiction
-            public ElementDefinitionInfo Element_Jurisdiction;                                                                              // MakerGen.cs:211
-            // 5. MedicinalProductAuthorization.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 6. MedicinalProductAuthorization.statusDate
-            public ElementDefinitionInfo Element_StatusDate;                                                                                // MakerGen.cs:211
-            // 7. MedicinalProductAuthorization.restoreDate
-            public ElementDefinitionInfo Element_RestoreDate;                                                                               // MakerGen.cs:211
-            // 8. MedicinalProductAuthorization.validityPeriod
-            public ElementDefinitionInfo Element_ValidityPeriod;                                                                            // MakerGen.cs:211
-            // 9. MedicinalProductAuthorization.dataExclusivityPeriod
-            public ElementDefinitionInfo Element_DataExclusivityPeriod;                                                                     // MakerGen.cs:211
-            // 10. MedicinalProductAuthorization.dateOfFirstAuthorization
-            public ElementDefinitionInfo Element_DateOfFirstAuthorization;                                                                  // MakerGen.cs:211
-            // 11. MedicinalProductAuthorization.internationalBirthDate
-            public ElementDefinitionInfo Element_InternationalBirthDate;                                                                    // MakerGen.cs:211
-            // 12. MedicinalProductAuthorization.legalBasis
-            public ElementDefinitionInfo Element_LegalBasis;                                                                                // MakerGen.cs:211
-            // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
-            public ElementDefinitionInfo Element_JurisdictionalAuthorization;                                                               // MakerGen.cs:211
-            // 19. MedicinalProductAuthorization.holder
-            public ElementDefinitionInfo Element_Holder;                                                                                    // MakerGen.cs:211
-            // 20. MedicinalProductAuthorization.regulator
-            public ElementDefinitionInfo Element_Regulator;                                                                                 // MakerGen.cs:211
-            // 21. MedicinalProductAuthorization.procedure
-            public ElementDefinitionInfo Element_Procedure;                                                                                 // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_MedicinalProductAuthorization_Elements()                                                                        // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. MedicinalProductAuthorization.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.identifier",                                                                   // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.identifier",                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. MedicinalProductAuthorization.subject
-                    this.Element_Subject = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Subject",                                                                                           // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.subject",                                                                      // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.subject",                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/MedicinalProduct",                                             // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged"                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. MedicinalProductAuthorization.country
-                    this.Element_Country = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Country",                                                                                           // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.country",                                                                      // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.country",                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. MedicinalProductAuthorization.jurisdiction
-                    this.Element_Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Jurisdiction",                                                                                      // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.jurisdiction",                                                                 // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.jurisdiction",                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. MedicinalProductAuthorization.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.status",                                                                       // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.status",                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. MedicinalProductAuthorization.statusDate
-                    this.Element_StatusDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_StatusDate",                                                                                        // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.statusDate",                                                                   // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.statusDate",                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. MedicinalProductAuthorization.restoreDate
-                    this.Element_RestoreDate = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_RestoreDate",                                                                                       // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.restoreDate",                                                                  // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.restoreDate",                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. MedicinalProductAuthorization.validityPeriod
-                    this.Element_ValidityPeriod = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ValidityPeriod",                                                                                    // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.validityPeriod",                                                               // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.validityPeriod",                                                                // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. MedicinalProductAuthorization.dataExclusivityPeriod
-                    this.Element_DataExclusivityPeriod = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_DataExclusivityPeriod",                                                                             // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.dataExclusivityPeriod",                                                        // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.dataExclusivityPeriod",                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. MedicinalProductAuthorization.dateOfFirstAuthorization
-                    this.Element_DateOfFirstAuthorization = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_DateOfFirstAuthorization",                                                                          // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.dateOfFirstAuthorization",                                                     // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.dateOfFirstAuthorization",                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. MedicinalProductAuthorization.internationalBirthDate
-                    this.Element_InternationalBirthDate = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_InternationalBirthDate",                                                                            // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.internationalBirthDate",                                                       // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.internationalBirthDate",                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 12. MedicinalProductAuthorization.legalBasis
-                    this.Element_LegalBasis = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_LegalBasis",                                                                                        // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.legalBasis",                                                                   // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.legalBasis",                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
-                    this.Element_JurisdictionalAuthorization = new ElementDefinitionInfo                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_JurisdictionalAuthorization",                                                                       // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.jurisdictionalAuthorization",                                                  // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.jurisdictionalAuthorization",                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_JurisdictionalAuthorization                                                                            // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 19. MedicinalProductAuthorization.holder
-                    this.Element_Holder = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Holder",                                                                                            // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.holder",                                                                       // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.holder",                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 20. MedicinalProductAuthorization.regulator
-                    this.Element_Regulator = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Regulator",                                                                                         // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.regulator",                                                                    // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.regulator",                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 21. MedicinalProductAuthorization.procedure
-                    this.Element_Procedure = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Procedure",                                                                                         // MakerGen.cs:230
-                        Path= "MedicinalProductAuthorization.procedure",                                                                    // MakerGen.cs:231
-                        Id = "MedicinalProductAuthorization.procedure",                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Procedure                                                                                              // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Subject.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Country.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_StatusDate.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_RestoreDate.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_ValidityPeriod.Write(sDef);                                                                                         // MakerGen.cs:215
-                Element_DataExclusivityPeriod.Write(sDef);                                                                                  // MakerGen.cs:215
-                Element_DateOfFirstAuthorization.Write(sDef);                                                                               // MakerGen.cs:215
-                Element_InternationalBirthDate.Write(sDef);                                                                                 // MakerGen.cs:215
-                Element_LegalBasis.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_JurisdictionalAuthorization.Write(sDef);                                                                            // MakerGen.cs:215
-                Element_Holder.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Regulator.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Procedure.Write(sDef);                                                                                              // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_MedicinalProductAuthorization_Elements Elements                                                                     // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_MedicinalProductAuthorization_Elements();                                                  // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_MedicinalProductAuthorization_Elements elements;                                                                           // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_MedicinalProductAuthorization()                                                                                     // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "MedicinalProductAuthorization";                                                                                    // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicinalProductAuthorization";                                             // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "MedicinalProductAuthorization",                                                                                     // MakerGen.cs:420
-                ElementId = "MedicinalProductAuthorization"                                                                                 // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_Application = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Application",                                                                                       // MakerGen.cs:231
+                        Path= "MedicinalProductAuthorization.procedure.application",                                                        // MakerGen.cs:232
+                        Id = "MedicinalProductAuthorization.procedure.application",                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. MedicinalProductAuthorization.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 2. MedicinalProductAuthorization.subject
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:212
+        // 3. MedicinalProductAuthorization.country
+        public ElementDefinitionInfo Element_Country;                                                                                       // MakerGen.cs:212
+        // 4. MedicinalProductAuthorization.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
+        // 5. MedicinalProductAuthorization.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 6. MedicinalProductAuthorization.statusDate
+        public ElementDefinitionInfo Element_StatusDate;                                                                                    // MakerGen.cs:212
+        // 7. MedicinalProductAuthorization.restoreDate
+        public ElementDefinitionInfo Element_RestoreDate;                                                                                   // MakerGen.cs:212
+        // 8. MedicinalProductAuthorization.validityPeriod
+        public ElementDefinitionInfo Element_ValidityPeriod;                                                                                // MakerGen.cs:212
+        // 9. MedicinalProductAuthorization.dataExclusivityPeriod
+        public ElementDefinitionInfo Element_DataExclusivityPeriod;                                                                         // MakerGen.cs:212
+        // 10. MedicinalProductAuthorization.dateOfFirstAuthorization
+        public ElementDefinitionInfo Element_DateOfFirstAuthorization;                                                                      // MakerGen.cs:212
+        // 11. MedicinalProductAuthorization.internationalBirthDate
+        public ElementDefinitionInfo Element_InternationalBirthDate;                                                                        // MakerGen.cs:212
+        // 12. MedicinalProductAuthorization.legalBasis
+        public ElementDefinitionInfo Element_LegalBasis;                                                                                    // MakerGen.cs:212
+        // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
+        public ElementDefinitionInfo Element_JurisdictionalAuthorization;                                                                   // MakerGen.cs:212
+        // 19. MedicinalProductAuthorization.holder
+        public ElementDefinitionInfo Element_Holder;                                                                                        // MakerGen.cs:212
+        // 20. MedicinalProductAuthorization.regulator
+        public ElementDefinitionInfo Element_Regulator;                                                                                     // MakerGen.cs:212
+        // 21. MedicinalProductAuthorization.procedure
+        public ElementDefinitionInfo Element_Procedure;                                                                                     // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "MedicinalProductAuthorization",                                                                                     // MakerGen.cs:388
+                ElementId = "MedicinalProductAuthorization"                                                                                 // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Country.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_StatusDate.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_RestoreDate.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_ValidityPeriod.Write(sDef);                                                                                             // MakerGen.cs:216
+            Element_DataExclusivityPeriod.Write(sDef);                                                                                      // MakerGen.cs:216
+            Element_DateOfFirstAuthorization.Write(sDef);                                                                                   // MakerGen.cs:216
+            Element_InternationalBirthDate.Write(sDef);                                                                                     // MakerGen.cs:216
+            Element_LegalBasis.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_JurisdictionalAuthorization.Write(sDef);                                                                                // MakerGen.cs:216
+            Element_Holder.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Regulator.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Procedure.Write(sDef);                                                                                                  // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_MedicinalProductAuthorization()                                                                                     // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. MedicinalProductAuthorization.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.identifier",                                                                       // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.identifier",                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. MedicinalProductAuthorization.subject
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.subject",                                                                          // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.subject",                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/MedicinalProduct",                                                 // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/MedicinalProductPackaged"                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. MedicinalProductAuthorization.country
+                this.Element_Country = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Country",                                                                                               // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.country",                                                                          // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.country",                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. MedicinalProductAuthorization.jurisdiction
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.jurisdiction",                                                                     // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.jurisdiction",                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. MedicinalProductAuthorization.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.status",                                                                           // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.status",                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. MedicinalProductAuthorization.statusDate
+                this.Element_StatusDate = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_StatusDate",                                                                                            // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.statusDate",                                                                       // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.statusDate",                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. MedicinalProductAuthorization.restoreDate
+                this.Element_RestoreDate = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_RestoreDate",                                                                                           // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.restoreDate",                                                                      // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.restoreDate",                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. MedicinalProductAuthorization.validityPeriod
+                this.Element_ValidityPeriod = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ValidityPeriod",                                                                                        // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.validityPeriod",                                                                   // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.validityPeriod",                                                                    // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. MedicinalProductAuthorization.dataExclusivityPeriod
+                this.Element_DataExclusivityPeriod = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_DataExclusivityPeriod",                                                                                 // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.dataExclusivityPeriod",                                                            // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.dataExclusivityPeriod",                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. MedicinalProductAuthorization.dateOfFirstAuthorization
+                this.Element_DateOfFirstAuthorization = new ElementDefinitionInfo                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_DateOfFirstAuthorization",                                                                              // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.dateOfFirstAuthorization",                                                         // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.dateOfFirstAuthorization",                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. MedicinalProductAuthorization.internationalBirthDate
+                this.Element_InternationalBirthDate = new ElementDefinitionInfo                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_InternationalBirthDate",                                                                                // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.internationalBirthDate",                                                           // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.internationalBirthDate",                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 12. MedicinalProductAuthorization.legalBasis
+                this.Element_LegalBasis = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_LegalBasis",                                                                                            // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.legalBasis",                                                                       // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.legalBasis",                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
+                this.Element_JurisdictionalAuthorization = new ElementDefinitionInfo                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_JurisdictionalAuthorization",                                                                           // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.jurisdictionalAuthorization",                                                      // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.jurisdictionalAuthorization",                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_JurisdictionalAuthorization                                                                                // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 19. MedicinalProductAuthorization.holder
+                this.Element_Holder = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Holder",                                                                                                // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.holder",                                                                           // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.holder",                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 20. MedicinalProductAuthorization.regulator
+                this.Element_Regulator = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Regulator",                                                                                             // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.regulator",                                                                        // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.regulator",                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 21. MedicinalProductAuthorization.procedure
+                this.Element_Procedure = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Procedure",                                                                                             // MakerGen.cs:231
+                    Path= "MedicinalProductAuthorization.procedure",                                                                        // MakerGen.cs:232
+                    Id = "MedicinalProductAuthorization.procedure",                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Procedure                                                                                                  // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "MedicinalProductAuthorization";                                                                                    // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MedicinalProductAuthorization";                                             // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

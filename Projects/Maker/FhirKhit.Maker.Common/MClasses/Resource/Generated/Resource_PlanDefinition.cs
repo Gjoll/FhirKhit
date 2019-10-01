@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "PlanDefinition",
@@ -1426,1930 +1426,1746 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'PlanDefinition'
     /// </summary>
     // 0. PlanDefinition
     public class Resource_PlanDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                                      // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_PlanDefinition_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 30. PlanDefinition.goal
-            public class Type_Goal : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
+        // 30. PlanDefinition.goal
+        public class Type_Goal : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 37. PlanDefinition.goal.target
+            public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
             {                                                                                                                               // MakerGen.cs:377
-                public class Type_Goal_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                               // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
-                    // 37. PlanDefinition.goal.target
-                    public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Target_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                     // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 38. PlanDefinition.goal.target.measure
-                            public ElementDefinitionInfo Element_Measure;                                                                   // MakerGen.cs:211
-                            // 39. PlanDefinition.goal.target.detail[x]
-                            public ElementDefinitionInfo Element_Detail;                                                                    // MakerGen.cs:211
-                            // 40. PlanDefinition.goal.target.due
-                            public ElementDefinitionInfo Element_Due;                                                                       // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Target_Elements()                                                                                   // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 38. PlanDefinition.goal.target.measure
-                                    this.Element_Measure = new ElementDefinitionInfo                                                        // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Measure",                                                                           // MakerGen.cs:230
-                                        Path= "PlanDefinition.goal.target.measure",                                                         // MakerGen.cs:231
-                                        Id = "PlanDefinition.goal.target.measure",                                                          // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                          // MakerGen.cs:310
-                                            {                                                                                               // MakerGen.cs:311
-                                            }                                                                                               // MakerGen.cs:314
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 39. PlanDefinition.goal.target.detail[x]
-                                    this.Element_Detail = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Detail",                                                                            // MakerGen.cs:230
-                                        Path= "PlanDefinition.goal.target.detail[x]",                                                       // MakerGen.cs:231
-                                        Id = "PlanDefinition.goal.target.detail[x]",                                                        // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                 // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            },                                                                                              // MakerGen.cs:352
-                                            new FhirKhit.Maker.Common.Complex.Type_Range                                                    // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            },                                                                                              // MakerGen.cs:352
-                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                          // MakerGen.cs:310
-                                            {                                                                                               // MakerGen.cs:311
-                                            }                                                                                               // MakerGen.cs:314
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 40. PlanDefinition.goal.target.due
-                                    this.Element_Due = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Due",                                                                               // MakerGen.cs:230
-                                        Path= "PlanDefinition.goal.target.due",                                                             // MakerGen.cs:231
-                                        Id = "PlanDefinition.goal.target.due",                                                              // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                 // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            }                                                                                               // MakerGen.cs:352
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Measure.Write(sDef);                                                                                // MakerGen.cs:215
-                                Element_Detail.Write(sDef);                                                                                 // MakerGen.cs:215
-                                Element_Due.Write(sDef);                                                                                    // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Target_Elements Elements                                                                                // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Target_Elements();                                                             // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Target_Elements elements;                                                                                      // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Target()                                                                                                // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "PlanDefinition.goal.target",                                                                        // MakerGen.cs:420
-                                ElementId = "PlanDefinition.goal.target"                                                                    // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
+                // 38. PlanDefinition.goal.target.measure
+                public ElementDefinitionInfo Element_Measure;                                                                               // MakerGen.cs:212
+                // 39. PlanDefinition.goal.target.detail[x]
+                public ElementDefinitionInfo Element_Detail;                                                                                // MakerGen.cs:212
+                // 40. PlanDefinition.goal.target.due
+                public ElementDefinitionInfo Element_Due;                                                                                   // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "PlanDefinition.goal.target",                                                                                // MakerGen.cs:388
+                        ElementId = "PlanDefinition.goal.target"                                                                            // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Measure.Write(sDef);                                                                                            // MakerGen.cs:216
+                    Element_Detail.Write(sDef);                                                                                             // MakerGen.cs:216
+                    Element_Due.Write(sDef);                                                                                                // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Target()                                                                                                        // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 38. PlanDefinition.goal.target.measure
+                        this.Element_Measure = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Measure",                                                                                       // MakerGen.cs:231
+                            Path= "PlanDefinition.goal.target.measure",                                                                     // MakerGen.cs:232
+                            Id = "PlanDefinition.goal.target.measure",                                                                      // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
+                                {                                                                                                           // MakerGen.cs:312
+                                }                                                                                                           // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 39. PlanDefinition.goal.target.detail[x]
+                        this.Element_Detail = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Detail",                                                                                        // MakerGen.cs:231
+                            Path= "PlanDefinition.goal.target.detail[x]",                                                                   // MakerGen.cs:232
+                            Id = "PlanDefinition.goal.target.detail[x]",                                                                    // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                },                                                                                                          // MakerGen.cs:353
+                                new FhirKhit.Maker.Common.Complex.Type_Range                                                                // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                },                                                                                                          // MakerGen.cs:353
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
+                                {                                                                                                           // MakerGen.cs:312
+                                }                                                                                                           // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 40. PlanDefinition.goal.target.due
+                        this.Element_Due = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Due",                                                                                           // MakerGen.cs:231
+                            Path= "PlanDefinition.goal.target.due",                                                                         // MakerGen.cs:232
+                            Id = "PlanDefinition.goal.target.due",                                                                          // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_Duration                                                             // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                }                                                                                                           // MakerGen.cs:353
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 31. PlanDefinition.goal.category
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:212
+            // 32. PlanDefinition.goal.description
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:212
+            // 33. PlanDefinition.goal.priority
+            public ElementDefinitionInfo Element_Priority;                                                                                  // MakerGen.cs:212
+            // 34. PlanDefinition.goal.start
+            public ElementDefinitionInfo Element_Start;                                                                                     // MakerGen.cs:212
+            // 35. PlanDefinition.goal.addresses
+            public ElementDefinitionInfo Element_Addresses;                                                                                 // MakerGen.cs:212
+            // 36. PlanDefinition.goal.documentation
+            public ElementDefinitionInfo Element_Documentation;                                                                             // MakerGen.cs:212
+            // 37. PlanDefinition.goal.target
+            public ElementDefinitionInfo Element_Target;                                                                                    // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "PlanDefinition.goal",                                                                                           // MakerGen.cs:388
+                    ElementId = "PlanDefinition.goal"                                                                                       // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:216
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:216
+                Element_Priority.Write(sDef);                                                                                               // MakerGen.cs:216
+                Element_Start.Write(sDef);                                                                                                  // MakerGen.cs:216
+                Element_Addresses.Write(sDef);                                                                                              // MakerGen.cs:216
+                Element_Documentation.Write(sDef);                                                                                          // MakerGen.cs:216
+                Element_Target.Write(sDef);                                                                                                 // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Goal()                                                                                                              // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 31. PlanDefinition.goal.category
-                    public ElementDefinitionInfo Element_Category;                                                                          // MakerGen.cs:211
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.category",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.category",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 32. PlanDefinition.goal.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:211
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.description",                                                                            // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.description",                                                                             // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 33. PlanDefinition.goal.priority
-                    public ElementDefinitionInfo Element_Priority;                                                                          // MakerGen.cs:211
+                    this.Element_Priority = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Priority",                                                                                          // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.priority",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.priority",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 34. PlanDefinition.goal.start
-                    public ElementDefinitionInfo Element_Start;                                                                             // MakerGen.cs:211
+                    this.Element_Start = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Start",                                                                                             // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.start",                                                                                  // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.start",                                                                                   // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 35. PlanDefinition.goal.addresses
-                    public ElementDefinitionInfo Element_Addresses;                                                                         // MakerGen.cs:211
+                    this.Element_Addresses = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Addresses",                                                                                         // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.addresses",                                                                              // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.addresses",                                                                               // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 36. PlanDefinition.goal.documentation
-                    public ElementDefinitionInfo Element_Documentation;                                                                     // MakerGen.cs:211
+                    this.Element_Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.documentation",                                                                          // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.documentation",                                                                           // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                          // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 37. PlanDefinition.goal.target
-                    public ElementDefinitionInfo Element_Target;                                                                            // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Goal_Elements()                                                                                             // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 31. PlanDefinition.goal.category
-                            this.Element_Category = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Category",                                                                                  // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.category",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.category",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 32. PlanDefinition.goal.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Description",                                                                               // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.description",                                                                    // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.description",                                                                     // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 33. PlanDefinition.goal.priority
-                            this.Element_Priority = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Priority",                                                                                  // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.priority",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.priority",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 34. PlanDefinition.goal.start
-                            this.Element_Start = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Start",                                                                                     // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.start",                                                                          // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.start",                                                                           // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 35. PlanDefinition.goal.addresses
-                            this.Element_Addresses = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Addresses",                                                                                 // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.addresses",                                                                      // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.addresses",                                                                       // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 36. PlanDefinition.goal.documentation
-                            this.Element_Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Documentation",                                                                             // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.documentation",                                                                  // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.documentation",                                                                   // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                  // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 37. PlanDefinition.goal.target
-                            this.Element_Target = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Target",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.goal.target",                                                                         // MakerGen.cs:231
-                                Id = "PlanDefinition.goal.target",                                                                          // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Target                                                                                         // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Category.Write(sDef);                                                                                       // MakerGen.cs:215
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:215
-                        Element_Priority.Write(sDef);                                                                                       // MakerGen.cs:215
-                        Element_Start.Write(sDef);                                                                                          // MakerGen.cs:215
-                        Element_Addresses.Write(sDef);                                                                                      // MakerGen.cs:215
-                        Element_Documentation.Write(sDef);                                                                                  // MakerGen.cs:215
-                        Element_Target.Write(sDef);                                                                                         // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Goal_Elements Elements                                                                                          // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Goal_Elements();                                                                       // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Goal_Elements elements;                                                                                                // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Goal()                                                                                                          // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "PlanDefinition.goal",                                                                                       // MakerGen.cs:420
-                        ElementId = "PlanDefinition.goal"                                                                                   // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 41. PlanDefinition.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
+                    this.Element_Target = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Target",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.goal.target",                                                                                 // MakerGen.cs:232
+                        Id = "PlanDefinition.goal.target",                                                                                  // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Target                                                                                                 // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 41. PlanDefinition.action
+        public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 53. PlanDefinition.action.condition
+            public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
             {                                                                                                                               // MakerGen.cs:377
-                public class Type_Action_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
-                    // 53. PlanDefinition.action.condition
-                    public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Condition_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                  // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 54. PlanDefinition.action.condition.kind
-                            public ElementDefinitionInfo Element_Kind;                                                                      // MakerGen.cs:211
-                            // 55. PlanDefinition.action.condition.expression
-                            public ElementDefinitionInfo Element_Expression;                                                                // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Condition_Elements()                                                                                // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 54. PlanDefinition.action.condition.kind
-                                    this.Element_Kind = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Kind",                                                                              // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.condition.kind",                                                       // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.condition.kind",                                                        // MakerGen.cs:232
-                                        Min = 1,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 55. PlanDefinition.action.condition.expression
-                                    this.Element_Expression = new ElementDefinitionInfo                                                     // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Expression",                                                                        // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.condition.expression",                                                 // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.condition.expression",                                                  // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_Expression                                               // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            }                                                                                               // MakerGen.cs:352
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Kind.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Expression.Write(sDef);                                                                             // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Condition_Elements Elements                                                                             // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Condition_Elements();                                                          // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Condition_Elements elements;                                                                                   // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Condition()                                                                                             // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "PlanDefinition.action.condition",                                                                   // MakerGen.cs:420
-                                ElementId = "PlanDefinition.action.condition"                                                               // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
-                    // 58. PlanDefinition.action.relatedAction
-                    public class Type_RelatedAction : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_RelatedAction_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                              // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 59. PlanDefinition.action.relatedAction.actionId
-                            public ElementDefinitionInfo Element_ActionId;                                                                  // MakerGen.cs:211
-                            // 60. PlanDefinition.action.relatedAction.relationship
-                            public ElementDefinitionInfo Element_Relationship;                                                              // MakerGen.cs:211
-                            // 61. PlanDefinition.action.relatedAction.offset[x]
-                            public ElementDefinitionInfo Element_Offset;                                                                    // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_RelatedAction_Elements()                                                                            // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 59. PlanDefinition.action.relatedAction.actionId
-                                    this.Element_ActionId = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_ActionId",                                                                          // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.relatedAction.actionId",                                               // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.relatedAction.actionId",                                                // MakerGen.cs:232
-                                        Min = 1,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Id                                                          // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 60. PlanDefinition.action.relatedAction.relationship
-                                    this.Element_Relationship = new ElementDefinitionInfo                                                   // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Relationship",                                                                      // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.relatedAction.relationship",                                           // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.relatedAction.relationship",                                            // MakerGen.cs:232
-                                        Min = 1,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 61. PlanDefinition.action.relatedAction.offset[x]
-                                    this.Element_Offset = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Offset",                                                                            // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.relatedAction.offset[x]",                                              // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.relatedAction.offset[x]",                                               // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                 // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            },                                                                                              // MakerGen.cs:352
-                                            new FhirKhit.Maker.Common.Complex.Type_Range                                                    // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            }                                                                                               // MakerGen.cs:352
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_ActionId.Write(sDef);                                                                               // MakerGen.cs:215
-                                Element_Relationship.Write(sDef);                                                                           // MakerGen.cs:215
-                                Element_Offset.Write(sDef);                                                                                 // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_RelatedAction_Elements Elements                                                                         // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_RelatedAction_Elements();                                                      // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_RelatedAction_Elements elements;                                                                               // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_RelatedAction()                                                                                         // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "PlanDefinition.action.relatedAction",                                                               // MakerGen.cs:420
-                                ElementId = "PlanDefinition.action.relatedAction"                                                           // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
-                    // 63. PlanDefinition.action.participant
-                    public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Participant_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 64. PlanDefinition.action.participant.type
-                            public ElementDefinitionInfo Element_Type;                                                                      // MakerGen.cs:211
-                            // 65. PlanDefinition.action.participant.role
-                            public ElementDefinitionInfo Element_Role;                                                                      // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Participant_Elements()                                                                              // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 64. PlanDefinition.action.participant.type
-                                    this.Element_Type = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Type",                                                                              // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.participant.type",                                                     // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.participant.type",                                                      // MakerGen.cs:232
-                                        Min = 1,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 65. PlanDefinition.action.participant.role
-                                    this.Element_Role = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Role",                                                                              // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.participant.role",                                                     // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.participant.role",                                                      // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                          // MakerGen.cs:310
-                                            {                                                                                               // MakerGen.cs:311
-                                            }                                                                                               // MakerGen.cs:314
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Type.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Role.Write(sDef);                                                                                   // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Participant_Elements Elements                                                                           // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Participant_Elements();                                                        // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Participant_Elements elements;                                                                                 // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Participant()                                                                                           // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "PlanDefinition.action.participant",                                                                 // MakerGen.cs:420
-                                ElementId = "PlanDefinition.action.participant"                                                             // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
-                    // 74. PlanDefinition.action.dynamicValue
-                    public class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase                                              // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_DynamicValue_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                               // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 75. PlanDefinition.action.dynamicValue.path
-                            public ElementDefinitionInfo Element_Path;                                                                      // MakerGen.cs:211
-                            // 76. PlanDefinition.action.dynamicValue.expression
-                            public ElementDefinitionInfo Element_Expression;                                                                // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_DynamicValue_Elements()                                                                             // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 75. PlanDefinition.action.dynamicValue.path
-                                    this.Element_Path = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Path",                                                                              // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.dynamicValue.path",                                                    // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.dynamicValue.path",                                                     // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 76. PlanDefinition.action.dynamicValue.expression
-                                    this.Element_Expression = new ElementDefinitionInfo                                                     // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Expression",                                                                        // MakerGen.cs:230
-                                        Path= "PlanDefinition.action.dynamicValue.expression",                                              // MakerGen.cs:231
-                                        Id = "PlanDefinition.action.dynamicValue.expression",                                               // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_Expression                                               // MakerGen.cs:350
-                                            {                                                                                               // MakerGen.cs:351
-                                            }                                                                                               // MakerGen.cs:352
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Path.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Expression.Write(sDef);                                                                             // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_DynamicValue_Elements Elements                                                                          // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_DynamicValue_Elements();                                                       // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_DynamicValue_Elements elements;                                                                                // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_DynamicValue()                                                                                          // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "PlanDefinition.action.dynamicValue",                                                                // MakerGen.cs:420
-                                ElementId = "PlanDefinition.action.dynamicValue"                                                            // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
+                // 54. PlanDefinition.action.condition.kind
+                public ElementDefinitionInfo Element_Kind;                                                                                  // MakerGen.cs:212
+                // 55. PlanDefinition.action.condition.expression
+                public ElementDefinitionInfo Element_Expression;                                                                            // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "PlanDefinition.action.condition",                                                                           // MakerGen.cs:388
+                        ElementId = "PlanDefinition.action.condition"                                                                       // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Kind.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Expression.Write(sDef);                                                                                         // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Condition()                                                                                                     // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 54. PlanDefinition.action.condition.kind
+                        this.Element_Kind = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Kind",                                                                                          // MakerGen.cs:231
+                            Path= "PlanDefinition.action.condition.kind",                                                                   // MakerGen.cs:232
+                            Id = "PlanDefinition.action.condition.kind",                                                                    // MakerGen.cs:233
+                            Min = 1,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 55. PlanDefinition.action.condition.expression
+                        this.Element_Expression = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Expression",                                                                                    // MakerGen.cs:231
+                            Path= "PlanDefinition.action.condition.expression",                                                             // MakerGen.cs:232
+                            Id = "PlanDefinition.action.condition.expression",                                                              // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_Expression                                                           // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                }                                                                                                           // MakerGen.cs:353
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 58. PlanDefinition.action.relatedAction
+            public class Type_RelatedAction : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:376
+            {                                                                                                                               // MakerGen.cs:377
+                // 59. PlanDefinition.action.relatedAction.actionId
+                public ElementDefinitionInfo Element_ActionId;                                                                              // MakerGen.cs:212
+                // 60. PlanDefinition.action.relatedAction.relationship
+                public ElementDefinitionInfo Element_Relationship;                                                                          // MakerGen.cs:212
+                // 61. PlanDefinition.action.relatedAction.offset[x]
+                public ElementDefinitionInfo Element_Offset;                                                                                // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "PlanDefinition.action.relatedAction",                                                                       // MakerGen.cs:388
+                        ElementId = "PlanDefinition.action.relatedAction"                                                                   // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_ActionId.Write(sDef);                                                                                           // MakerGen.cs:216
+                    Element_Relationship.Write(sDef);                                                                                       // MakerGen.cs:216
+                    Element_Offset.Write(sDef);                                                                                             // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_RelatedAction()                                                                                                 // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 59. PlanDefinition.action.relatedAction.actionId
+                        this.Element_ActionId = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_ActionId",                                                                                      // MakerGen.cs:231
+                            Path= "PlanDefinition.action.relatedAction.actionId",                                                           // MakerGen.cs:232
+                            Id = "PlanDefinition.action.relatedAction.actionId",                                                            // MakerGen.cs:233
+                            Min = 1,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                            // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 60. PlanDefinition.action.relatedAction.relationship
+                        this.Element_Relationship = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Relationship",                                                                                  // MakerGen.cs:231
+                            Path= "PlanDefinition.action.relatedAction.relationship",                                                       // MakerGen.cs:232
+                            Id = "PlanDefinition.action.relatedAction.relationship",                                                        // MakerGen.cs:233
+                            Min = 1,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 61. PlanDefinition.action.relatedAction.offset[x]
+                        this.Element_Offset = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Offset",                                                                                        // MakerGen.cs:231
+                            Path= "PlanDefinition.action.relatedAction.offset[x]",                                                          // MakerGen.cs:232
+                            Id = "PlanDefinition.action.relatedAction.offset[x]",                                                           // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_Duration                                                             // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                },                                                                                                          // MakerGen.cs:353
+                                new FhirKhit.Maker.Common.Complex.Type_Range                                                                // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                }                                                                                                           // MakerGen.cs:353
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 63. PlanDefinition.action.participant
+            public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:376
+            {                                                                                                                               // MakerGen.cs:377
+                // 64. PlanDefinition.action.participant.type
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:212
+                // 65. PlanDefinition.action.participant.role
+                public ElementDefinitionInfo Element_Role;                                                                                  // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "PlanDefinition.action.participant",                                                                         // MakerGen.cs:388
+                        ElementId = "PlanDefinition.action.participant"                                                                     // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Role.Write(sDef);                                                                                               // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Participant()                                                                                                   // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 64. PlanDefinition.action.participant.type
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:231
+                            Path= "PlanDefinition.action.participant.type",                                                                 // MakerGen.cs:232
+                            Id = "PlanDefinition.action.participant.type",                                                                  // MakerGen.cs:233
+                            Min = 1,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 65. PlanDefinition.action.participant.role
+                        this.Element_Role = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Role",                                                                                          // MakerGen.cs:231
+                            Path= "PlanDefinition.action.participant.role",                                                                 // MakerGen.cs:232
+                            Id = "PlanDefinition.action.participant.role",                                                                  // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
+                                {                                                                                                           // MakerGen.cs:312
+                                }                                                                                                           // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 74. PlanDefinition.action.dynamicValue
+            public class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:376
+            {                                                                                                                               // MakerGen.cs:377
+                // 75. PlanDefinition.action.dynamicValue.path
+                public ElementDefinitionInfo Element_Path;                                                                                  // MakerGen.cs:212
+                // 76. PlanDefinition.action.dynamicValue.expression
+                public ElementDefinitionInfo Element_Expression;                                                                            // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "PlanDefinition.action.dynamicValue",                                                                        // MakerGen.cs:388
+                        ElementId = "PlanDefinition.action.dynamicValue"                                                                    // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Path.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Expression.Write(sDef);                                                                                         // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_DynamicValue()                                                                                                  // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 75. PlanDefinition.action.dynamicValue.path
+                        this.Element_Path = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Path",                                                                                          // MakerGen.cs:231
+                            Path= "PlanDefinition.action.dynamicValue.path",                                                                // MakerGen.cs:232
+                            Id = "PlanDefinition.action.dynamicValue.path",                                                                 // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 76. PlanDefinition.action.dynamicValue.expression
+                        this.Element_Expression = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Expression",                                                                                    // MakerGen.cs:231
+                            Path= "PlanDefinition.action.dynamicValue.expression",                                                          // MakerGen.cs:232
+                            Id = "PlanDefinition.action.dynamicValue.expression",                                                           // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_Expression                                                           // MakerGen.cs:351
+                                {                                                                                                           // MakerGen.cs:352
+                                }                                                                                                           // MakerGen.cs:353
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 42. PlanDefinition.action.prefix
+            public ElementDefinitionInfo Element_Prefix;                                                                                    // MakerGen.cs:212
+            // 43. PlanDefinition.action.title
+            public ElementDefinitionInfo Element_Title;                                                                                     // MakerGen.cs:212
+            // 44. PlanDefinition.action.description
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:212
+            // 45. PlanDefinition.action.textEquivalent
+            public ElementDefinitionInfo Element_TextEquivalent;                                                                            // MakerGen.cs:212
+            // 46. PlanDefinition.action.priority
+            public ElementDefinitionInfo Element_Priority;                                                                                  // MakerGen.cs:212
+            // 47. PlanDefinition.action.code
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:212
+            // 48. PlanDefinition.action.reason
+            public ElementDefinitionInfo Element_Reason;                                                                                    // MakerGen.cs:212
+            // 49. PlanDefinition.action.documentation
+            public ElementDefinitionInfo Element_Documentation;                                                                             // MakerGen.cs:212
+            // 50. PlanDefinition.action.goalId
+            public ElementDefinitionInfo Element_GoalId;                                                                                    // MakerGen.cs:212
+            // 51. PlanDefinition.action.subject[x]
+            public ElementDefinitionInfo Element_Subject;                                                                                   // MakerGen.cs:212
+            // 52. PlanDefinition.action.trigger
+            public ElementDefinitionInfo Element_Trigger;                                                                                   // MakerGen.cs:212
+            // 53. PlanDefinition.action.condition
+            public ElementDefinitionInfo Element_Condition;                                                                                 // MakerGen.cs:212
+            // 56. PlanDefinition.action.input
+            public ElementDefinitionInfo Element_Input;                                                                                     // MakerGen.cs:212
+            // 57. PlanDefinition.action.output
+            public ElementDefinitionInfo Element_Output;                                                                                    // MakerGen.cs:212
+            // 58. PlanDefinition.action.relatedAction
+            public ElementDefinitionInfo Element_RelatedAction;                                                                             // MakerGen.cs:212
+            // 62. PlanDefinition.action.timing[x]
+            public ElementDefinitionInfo Element_Timing;                                                                                    // MakerGen.cs:212
+            // 63. PlanDefinition.action.participant
+            public ElementDefinitionInfo Element_Participant;                                                                               // MakerGen.cs:212
+            // 66. PlanDefinition.action.type
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:212
+            // 67. PlanDefinition.action.groupingBehavior
+            public ElementDefinitionInfo Element_GroupingBehavior;                                                                          // MakerGen.cs:212
+            // 68. PlanDefinition.action.selectionBehavior
+            public ElementDefinitionInfo Element_SelectionBehavior;                                                                         // MakerGen.cs:212
+            // 69. PlanDefinition.action.requiredBehavior
+            public ElementDefinitionInfo Element_RequiredBehavior;                                                                          // MakerGen.cs:212
+            // 70. PlanDefinition.action.precheckBehavior
+            public ElementDefinitionInfo Element_PrecheckBehavior;                                                                          // MakerGen.cs:212
+            // 71. PlanDefinition.action.cardinalityBehavior
+            public ElementDefinitionInfo Element_CardinalityBehavior;                                                                       // MakerGen.cs:212
+            // 72. PlanDefinition.action.definition[x]
+            public ElementDefinitionInfo Element_Definition;                                                                                // MakerGen.cs:212
+            // 73. PlanDefinition.action.transform
+            public ElementDefinitionInfo Element_Transform;                                                                                 // MakerGen.cs:212
+            // 74. PlanDefinition.action.dynamicValue
+            public ElementDefinitionInfo Element_DynamicValue;                                                                              // MakerGen.cs:212
+            // 77. PlanDefinition.action.action
+            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "PlanDefinition.action",                                                                                         // MakerGen.cs:388
+                    ElementId = "PlanDefinition.action"                                                                                     // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Prefix.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_Title.Write(sDef);                                                                                                  // MakerGen.cs:216
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:216
+                Element_TextEquivalent.Write(sDef);                                                                                         // MakerGen.cs:216
+                Element_Priority.Write(sDef);                                                                                               // MakerGen.cs:216
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Reason.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_Documentation.Write(sDef);                                                                                          // MakerGen.cs:216
+                Element_GoalId.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_Subject.Write(sDef);                                                                                                // MakerGen.cs:216
+                Element_Trigger.Write(sDef);                                                                                                // MakerGen.cs:216
+                Element_Condition.Write(sDef);                                                                                              // MakerGen.cs:216
+                Element_Input.Write(sDef);                                                                                                  // MakerGen.cs:216
+                Element_Output.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_RelatedAction.Write(sDef);                                                                                          // MakerGen.cs:216
+                Element_Timing.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_Participant.Write(sDef);                                                                                            // MakerGen.cs:216
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_GroupingBehavior.Write(sDef);                                                                                       // MakerGen.cs:216
+                Element_SelectionBehavior.Write(sDef);                                                                                      // MakerGen.cs:216
+                Element_RequiredBehavior.Write(sDef);                                                                                       // MakerGen.cs:216
+                Element_PrecheckBehavior.Write(sDef);                                                                                       // MakerGen.cs:216
+                Element_CardinalityBehavior.Write(sDef);                                                                                    // MakerGen.cs:216
+                Element_Definition.Write(sDef);                                                                                             // MakerGen.cs:216
+                Element_Transform.Write(sDef);                                                                                              // MakerGen.cs:216
+                Element_DynamicValue.Write(sDef);                                                                                           // MakerGen.cs:216
+                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Action()                                                                                                            // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 42. PlanDefinition.action.prefix
-                    public ElementDefinitionInfo Element_Prefix;                                                                            // MakerGen.cs:211
+                    this.Element_Prefix = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Prefix",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.action.prefix",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.action.prefix",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 43. PlanDefinition.action.title
-                    public ElementDefinitionInfo Element_Title;                                                                             // MakerGen.cs:211
+                    this.Element_Title = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Title",                                                                                             // MakerGen.cs:231
+                        Path= "PlanDefinition.action.title",                                                                                // MakerGen.cs:232
+                        Id = "PlanDefinition.action.title",                                                                                 // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 44. PlanDefinition.action.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:211
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:231
+                        Path= "PlanDefinition.action.description",                                                                          // MakerGen.cs:232
+                        Id = "PlanDefinition.action.description",                                                                           // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 45. PlanDefinition.action.textEquivalent
-                    public ElementDefinitionInfo Element_TextEquivalent;                                                                    // MakerGen.cs:211
+                    this.Element_TextEquivalent = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_TextEquivalent",                                                                                    // MakerGen.cs:231
+                        Path= "PlanDefinition.action.textEquivalent",                                                                       // MakerGen.cs:232
+                        Id = "PlanDefinition.action.textEquivalent",                                                                        // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 46. PlanDefinition.action.priority
-                    public ElementDefinitionInfo Element_Priority;                                                                          // MakerGen.cs:211
+                    this.Element_Priority = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Priority",                                                                                          // MakerGen.cs:231
+                        Path= "PlanDefinition.action.priority",                                                                             // MakerGen.cs:232
+                        Id = "PlanDefinition.action.priority",                                                                              // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 47. PlanDefinition.action.code
-                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:211
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:231
+                        Path= "PlanDefinition.action.code",                                                                                 // MakerGen.cs:232
+                        Id = "PlanDefinition.action.code",                                                                                  // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 48. PlanDefinition.action.reason
-                    public ElementDefinitionInfo Element_Reason;                                                                            // MakerGen.cs:211
+                    this.Element_Reason = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Reason",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.action.reason",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.action.reason",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 49. PlanDefinition.action.documentation
-                    public ElementDefinitionInfo Element_Documentation;                                                                     // MakerGen.cs:211
+                    this.Element_Documentation = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Documentation",                                                                                     // MakerGen.cs:231
+                        Path= "PlanDefinition.action.documentation",                                                                        // MakerGen.cs:232
+                        Id = "PlanDefinition.action.documentation",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                          // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 50. PlanDefinition.action.goalId
-                    public ElementDefinitionInfo Element_GoalId;                                                                            // MakerGen.cs:211
+                    this.Element_GoalId = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_GoalId",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.action.goalId",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.action.goalId",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 51. PlanDefinition.action.subject[x]
-                    public ElementDefinitionInfo Element_Subject;                                                                           // MakerGen.cs:211
+                    this.Element_Subject = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Subject",                                                                                           // MakerGen.cs:231
+                        Path= "PlanDefinition.action.subject[x]",                                                                           // MakerGen.cs:232
+                        Id = "PlanDefinition.action.subject[x]",                                                                            // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            },                                                                                                              // MakerGen.cs:315
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
+                            {                                                                                                               // MakerGen.cs:340
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Group"                                                         // MakerGen.cs:342
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:343
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 52. PlanDefinition.action.trigger
-                    public ElementDefinitionInfo Element_Trigger;                                                                           // MakerGen.cs:211
+                    this.Element_Trigger = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Trigger",                                                                                           // MakerGen.cs:231
+                        Path= "PlanDefinition.action.trigger",                                                                              // MakerGen.cs:232
+                        Id = "PlanDefinition.action.trigger",                                                                               // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_TriggerDefinition                                                        // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 53. PlanDefinition.action.condition
-                    public ElementDefinitionInfo Element_Condition;                                                                         // MakerGen.cs:211
+                    this.Element_Condition = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Condition",                                                                                         // MakerGen.cs:231
+                        Path= "PlanDefinition.action.condition",                                                                            // MakerGen.cs:232
+                        Id = "PlanDefinition.action.condition",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Condition                                                                                              // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 56. PlanDefinition.action.input
-                    public ElementDefinitionInfo Element_Input;                                                                             // MakerGen.cs:211
+                    this.Element_Input = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Input",                                                                                             // MakerGen.cs:231
+                        Path= "PlanDefinition.action.input",                                                                                // MakerGen.cs:232
+                        Id = "PlanDefinition.action.input",                                                                                 // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_DataRequirement                                                          // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 57. PlanDefinition.action.output
-                    public ElementDefinitionInfo Element_Output;                                                                            // MakerGen.cs:211
+                    this.Element_Output = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Output",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.action.output",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.action.output",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_DataRequirement                                                          // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 58. PlanDefinition.action.relatedAction
-                    public ElementDefinitionInfo Element_RelatedAction;                                                                     // MakerGen.cs:211
+                    this.Element_RelatedAction = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_RelatedAction",                                                                                     // MakerGen.cs:231
+                        Path= "PlanDefinition.action.relatedAction",                                                                        // MakerGen.cs:232
+                        Id = "PlanDefinition.action.relatedAction",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_RelatedAction                                                                                          // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 62. PlanDefinition.action.timing[x]
-                    public ElementDefinitionInfo Element_Timing;                                                                            // MakerGen.cs:211
+                    this.Element_Timing = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Timing",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.action.timing[x]",                                                                            // MakerGen.cs:232
+                        Id = "PlanDefinition.action.timing[x]",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            },                                                                                                              // MakerGen.cs:300
+                            new FhirKhit.Maker.Common.Complex.Type_Age                                                                      // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            },                                                                                                              // MakerGen.cs:353
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            },                                                                                                              // MakerGen.cs:353
+                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                                 // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            },                                                                                                              // MakerGen.cs:353
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            },                                                                                                              // MakerGen.cs:353
+                            new FhirKhit.Maker.Common.Complex.Type_Timing                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 63. PlanDefinition.action.participant
-                    public ElementDefinitionInfo Element_Participant;                                                                       // MakerGen.cs:211
+                    this.Element_Participant = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Participant",                                                                                       // MakerGen.cs:231
+                        Path= "PlanDefinition.action.participant",                                                                          // MakerGen.cs:232
+                        Id = "PlanDefinition.action.participant",                                                                           // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Participant                                                                                            // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 66. PlanDefinition.action.type
-                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:211
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:231
+                        Path= "PlanDefinition.action.type",                                                                                 // MakerGen.cs:232
+                        Id = "PlanDefinition.action.type",                                                                                  // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 67. PlanDefinition.action.groupingBehavior
-                    public ElementDefinitionInfo Element_GroupingBehavior;                                                                  // MakerGen.cs:211
+                    this.Element_GroupingBehavior = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_GroupingBehavior",                                                                                  // MakerGen.cs:231
+                        Path= "PlanDefinition.action.groupingBehavior",                                                                     // MakerGen.cs:232
+                        Id = "PlanDefinition.action.groupingBehavior",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 68. PlanDefinition.action.selectionBehavior
-                    public ElementDefinitionInfo Element_SelectionBehavior;                                                                 // MakerGen.cs:211
+                    this.Element_SelectionBehavior = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_SelectionBehavior",                                                                                 // MakerGen.cs:231
+                        Path= "PlanDefinition.action.selectionBehavior",                                                                    // MakerGen.cs:232
+                        Id = "PlanDefinition.action.selectionBehavior",                                                                     // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 69. PlanDefinition.action.requiredBehavior
-                    public ElementDefinitionInfo Element_RequiredBehavior;                                                                  // MakerGen.cs:211
+                    this.Element_RequiredBehavior = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_RequiredBehavior",                                                                                  // MakerGen.cs:231
+                        Path= "PlanDefinition.action.requiredBehavior",                                                                     // MakerGen.cs:232
+                        Id = "PlanDefinition.action.requiredBehavior",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 70. PlanDefinition.action.precheckBehavior
-                    public ElementDefinitionInfo Element_PrecheckBehavior;                                                                  // MakerGen.cs:211
+                    this.Element_PrecheckBehavior = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_PrecheckBehavior",                                                                                  // MakerGen.cs:231
+                        Path= "PlanDefinition.action.precheckBehavior",                                                                     // MakerGen.cs:232
+                        Id = "PlanDefinition.action.precheckBehavior",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 71. PlanDefinition.action.cardinalityBehavior
-                    public ElementDefinitionInfo Element_CardinalityBehavior;                                                               // MakerGen.cs:211
+                    this.Element_CardinalityBehavior = new ElementDefinitionInfo                                                            // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_CardinalityBehavior",                                                                               // MakerGen.cs:231
+                        Path= "PlanDefinition.action.cardinalityBehavior",                                                                  // MakerGen.cs:232
+                        Id = "PlanDefinition.action.cardinalityBehavior",                                                                   // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 72. PlanDefinition.action.definition[x]
-                    public ElementDefinitionInfo Element_Definition;                                                                        // MakerGen.cs:211
+                    this.Element_Definition = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Definition",                                                                                        // MakerGen.cs:231
+                        Path= "PlanDefinition.action.definition[x]",                                                                        // MakerGen.cs:232
+                        Id = "PlanDefinition.action.definition[x]",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:299
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                           // MakerGen.cs:299
+                                    "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                               // MakerGen.cs:299
+                                    "http://hl7.org/fhir/StructureDefinition/Questionnaire"                                                 // MakerGen.cs:299
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            },                                                                                                              // MakerGen.cs:300
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 73. PlanDefinition.action.transform
-                    public ElementDefinitionInfo Element_Transform;                                                                         // MakerGen.cs:211
+                    this.Element_Transform = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Transform",                                                                                         // MakerGen.cs:231
+                        Path= "PlanDefinition.action.transform",                                                                            // MakerGen.cs:232
+                        Id = "PlanDefinition.action.transform",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:299
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/StructureMap"                                                  // MakerGen.cs:299
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 74. PlanDefinition.action.dynamicValue
-                    public ElementDefinitionInfo Element_DynamicValue;                                                                      // MakerGen.cs:211
+                    this.Element_DynamicValue = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_DynamicValue",                                                                                      // MakerGen.cs:231
+                        Path= "PlanDefinition.action.dynamicValue",                                                                         // MakerGen.cs:232
+                        Id = "PlanDefinition.action.dynamicValue",                                                                          // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_DynamicValue                                                                                           // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 77. PlanDefinition.action.action
-                    public ElementDefinitionInfo Element_Action;                                                                            // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Action_Elements()                                                                                           // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 42. PlanDefinition.action.prefix
-                            this.Element_Prefix = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Prefix",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.action.prefix",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.action.prefix",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 43. PlanDefinition.action.title
-                            this.Element_Title = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Title",                                                                                     // MakerGen.cs:230
-                                Path= "PlanDefinition.action.title",                                                                        // MakerGen.cs:231
-                                Id = "PlanDefinition.action.title",                                                                         // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 44. PlanDefinition.action.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Description",                                                                               // MakerGen.cs:230
-                                Path= "PlanDefinition.action.description",                                                                  // MakerGen.cs:231
-                                Id = "PlanDefinition.action.description",                                                                   // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 45. PlanDefinition.action.textEquivalent
-                            this.Element_TextEquivalent = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_TextEquivalent",                                                                            // MakerGen.cs:230
-                                Path= "PlanDefinition.action.textEquivalent",                                                               // MakerGen.cs:231
-                                Id = "PlanDefinition.action.textEquivalent",                                                                // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 46. PlanDefinition.action.priority
-                            this.Element_Priority = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Priority",                                                                                  // MakerGen.cs:230
-                                Path= "PlanDefinition.action.priority",                                                                     // MakerGen.cs:231
-                                Id = "PlanDefinition.action.priority",                                                                      // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 47. PlanDefinition.action.code
-                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Code",                                                                                      // MakerGen.cs:230
-                                Path= "PlanDefinition.action.code",                                                                         // MakerGen.cs:231
-                                Id = "PlanDefinition.action.code",                                                                          // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 48. PlanDefinition.action.reason
-                            this.Element_Reason = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Reason",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.action.reason",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.action.reason",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 49. PlanDefinition.action.documentation
-                            this.Element_Documentation = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Documentation",                                                                             // MakerGen.cs:230
-                                Path= "PlanDefinition.action.documentation",                                                                // MakerGen.cs:231
-                                Id = "PlanDefinition.action.documentation",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                  // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 50. PlanDefinition.action.goalId
-                            this.Element_GoalId = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_GoalId",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.action.goalId",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.action.goalId",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Id                                                                  // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 51. PlanDefinition.action.subject[x]
-                            this.Element_Subject = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Subject",                                                                                   // MakerGen.cs:230
-                                Path= "PlanDefinition.action.subject[x]",                                                                   // MakerGen.cs:231
-                                Id = "PlanDefinition.action.subject[x]",                                                                    // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    },                                                                                                      // MakerGen.cs:314
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:338
-                                    {                                                                                                       // MakerGen.cs:339
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:341
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Group"                                                 // MakerGen.cs:341
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:342
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 52. PlanDefinition.action.trigger
-                            this.Element_Trigger = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Trigger",                                                                                   // MakerGen.cs:230
-                                Path= "PlanDefinition.action.trigger",                                                                      // MakerGen.cs:231
-                                Id = "PlanDefinition.action.trigger",                                                                       // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_TriggerDefinition                                                // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 53. PlanDefinition.action.condition
-                            this.Element_Condition = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Condition",                                                                                 // MakerGen.cs:230
-                                Path= "PlanDefinition.action.condition",                                                                    // MakerGen.cs:231
-                                Id = "PlanDefinition.action.condition",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Condition                                                                                      // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 56. PlanDefinition.action.input
-                            this.Element_Input = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Input",                                                                                     // MakerGen.cs:230
-                                Path= "PlanDefinition.action.input",                                                                        // MakerGen.cs:231
-                                Id = "PlanDefinition.action.input",                                                                         // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_DataRequirement                                                  // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 57. PlanDefinition.action.output
-                            this.Element_Output = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Output",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.action.output",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.action.output",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_DataRequirement                                                  // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 58. PlanDefinition.action.relatedAction
-                            this.Element_RelatedAction = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_RelatedAction",                                                                             // MakerGen.cs:230
-                                Path= "PlanDefinition.action.relatedAction",                                                                // MakerGen.cs:231
-                                Id = "PlanDefinition.action.relatedAction",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_RelatedAction                                                                                  // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 62. PlanDefinition.action.timing[x]
-                            this.Element_Timing = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Timing",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.action.timing[x]",                                                                    // MakerGen.cs:231
-                                Id = "PlanDefinition.action.timing[x]",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    },                                                                                                      // MakerGen.cs:299
-                                    new FhirKhit.Maker.Common.Complex.Type_Age                                                              // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    },                                                                                                      // MakerGen.cs:352
-                                    new FhirKhit.Maker.Common.Complex.Type_Period                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    },                                                                                                      // MakerGen.cs:352
-                                    new FhirKhit.Maker.Common.Complex.Type_Duration                                                         // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    },                                                                                                      // MakerGen.cs:352
-                                    new FhirKhit.Maker.Common.Complex.Type_Range                                                            // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    },                                                                                                      // MakerGen.cs:352
-                                    new FhirKhit.Maker.Common.Complex.Type_Timing                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 63. PlanDefinition.action.participant
-                            this.Element_Participant = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Participant",                                                                               // MakerGen.cs:230
-                                Path= "PlanDefinition.action.participant",                                                                  // MakerGen.cs:231
-                                Id = "PlanDefinition.action.participant",                                                                   // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Participant                                                                                    // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 66. PlanDefinition.action.type
-                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:230
-                                Path= "PlanDefinition.action.type",                                                                         // MakerGen.cs:231
-                                Id = "PlanDefinition.action.type",                                                                          // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 67. PlanDefinition.action.groupingBehavior
-                            this.Element_GroupingBehavior = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_GroupingBehavior",                                                                          // MakerGen.cs:230
-                                Path= "PlanDefinition.action.groupingBehavior",                                                             // MakerGen.cs:231
-                                Id = "PlanDefinition.action.groupingBehavior",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 68. PlanDefinition.action.selectionBehavior
-                            this.Element_SelectionBehavior = new ElementDefinitionInfo                                                      // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_SelectionBehavior",                                                                         // MakerGen.cs:230
-                                Path= "PlanDefinition.action.selectionBehavior",                                                            // MakerGen.cs:231
-                                Id = "PlanDefinition.action.selectionBehavior",                                                             // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 69. PlanDefinition.action.requiredBehavior
-                            this.Element_RequiredBehavior = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_RequiredBehavior",                                                                          // MakerGen.cs:230
-                                Path= "PlanDefinition.action.requiredBehavior",                                                             // MakerGen.cs:231
-                                Id = "PlanDefinition.action.requiredBehavior",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 70. PlanDefinition.action.precheckBehavior
-                            this.Element_PrecheckBehavior = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_PrecheckBehavior",                                                                          // MakerGen.cs:230
-                                Path= "PlanDefinition.action.precheckBehavior",                                                             // MakerGen.cs:231
-                                Id = "PlanDefinition.action.precheckBehavior",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 71. PlanDefinition.action.cardinalityBehavior
-                            this.Element_CardinalityBehavior = new ElementDefinitionInfo                                                    // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_CardinalityBehavior",                                                                       // MakerGen.cs:230
-                                Path= "PlanDefinition.action.cardinalityBehavior",                                                          // MakerGen.cs:231
-                                Id = "PlanDefinition.action.cardinalityBehavior",                                                           // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 72. PlanDefinition.action.definition[x]
-                            this.Element_Definition = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Definition",                                                                                // MakerGen.cs:230
-                                Path= "PlanDefinition.action.definition[x]",                                                                // MakerGen.cs:231
-                                Id = "PlanDefinition.action.definition[x]",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:298
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                   // MakerGen.cs:298
-                                            "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                       // MakerGen.cs:298
-                                            "http://hl7.org/fhir/StructureDefinition/Questionnaire"                                         // MakerGen.cs:298
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    },                                                                                                      // MakerGen.cs:299
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 73. PlanDefinition.action.transform
-                            this.Element_Transform = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Transform",                                                                                 // MakerGen.cs:230
-                                Path= "PlanDefinition.action.transform",                                                                    // MakerGen.cs:231
-                                Id = "PlanDefinition.action.transform",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:298
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/StructureMap"                                          // MakerGen.cs:298
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 74. PlanDefinition.action.dynamicValue
-                            this.Element_DynamicValue = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_DynamicValue",                                                                              // MakerGen.cs:230
-                                Path= "PlanDefinition.action.dynamicValue",                                                                 // MakerGen.cs:231
-                                Id = "PlanDefinition.action.dynamicValue",                                                                  // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_DynamicValue                                                                                   // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 77. PlanDefinition.action.action
-                            this.Element_Action = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Action",                                                                                    // MakerGen.cs:230
-                                Path= "PlanDefinition.action.action",                                                                       // MakerGen.cs:231
-                                Id = "PlanDefinition.action.action",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Prefix.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_Title.Write(sDef);                                                                                          // MakerGen.cs:215
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:215
-                        Element_TextEquivalent.Write(sDef);                                                                                 // MakerGen.cs:215
-                        Element_Priority.Write(sDef);                                                                                       // MakerGen.cs:215
-                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Reason.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_Documentation.Write(sDef);                                                                                  // MakerGen.cs:215
-                        Element_GoalId.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_Subject.Write(sDef);                                                                                        // MakerGen.cs:215
-                        Element_Trigger.Write(sDef);                                                                                        // MakerGen.cs:215
-                        Element_Condition.Write(sDef);                                                                                      // MakerGen.cs:215
-                        Element_Input.Write(sDef);                                                                                          // MakerGen.cs:215
-                        Element_Output.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_RelatedAction.Write(sDef);                                                                                  // MakerGen.cs:215
-                        Element_Timing.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_Participant.Write(sDef);                                                                                    // MakerGen.cs:215
-                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_GroupingBehavior.Write(sDef);                                                                               // MakerGen.cs:215
-                        Element_SelectionBehavior.Write(sDef);                                                                              // MakerGen.cs:215
-                        Element_RequiredBehavior.Write(sDef);                                                                               // MakerGen.cs:215
-                        Element_PrecheckBehavior.Write(sDef);                                                                               // MakerGen.cs:215
-                        Element_CardinalityBehavior.Write(sDef);                                                                            // MakerGen.cs:215
-                        Element_Definition.Write(sDef);                                                                                     // MakerGen.cs:215
-                        Element_Transform.Write(sDef);                                                                                      // MakerGen.cs:215
-                        Element_DynamicValue.Write(sDef);                                                                                   // MakerGen.cs:215
-                        Element_Action.Write(sDef);                                                                                         // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Action_Elements Elements                                                                                        // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Action_Elements();                                                                     // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Action_Elements elements;                                                                                              // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Action()                                                                                                        // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "PlanDefinition.action",                                                                                     // MakerGen.cs:420
-                        ElementId = "PlanDefinition.action"                                                                                 // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. PlanDefinition.url
-            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:211
-            // 2. PlanDefinition.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 3. PlanDefinition.version
-            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:211
-            // 4. PlanDefinition.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:211
-            // 5. PlanDefinition.title
-            public ElementDefinitionInfo Element_Title;                                                                                     // MakerGen.cs:211
-            // 6. PlanDefinition.subtitle
-            public ElementDefinitionInfo Element_Subtitle;                                                                                  // MakerGen.cs:211
-            // 7. PlanDefinition.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:211
-            // 8. PlanDefinition.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 9. PlanDefinition.experimental
-            public ElementDefinitionInfo Element_Experimental;                                                                              // MakerGen.cs:211
-            // 10. PlanDefinition.subject[x]
-            public ElementDefinitionInfo Element_Subject;                                                                                   // MakerGen.cs:211
-            // 11. PlanDefinition.date
-            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:211
-            // 12. PlanDefinition.publisher
-            public ElementDefinitionInfo Element_Publisher;                                                                                 // MakerGen.cs:211
-            // 13. PlanDefinition.contact
-            public ElementDefinitionInfo Element_Contact;                                                                                   // MakerGen.cs:211
-            // 14. PlanDefinition.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:211
-            // 15. PlanDefinition.useContext
-            public ElementDefinitionInfo Element_UseContext;                                                                                // MakerGen.cs:211
-            // 16. PlanDefinition.jurisdiction
-            public ElementDefinitionInfo Element_Jurisdiction;                                                                              // MakerGen.cs:211
-            // 17. PlanDefinition.purpose
-            public ElementDefinitionInfo Element_Purpose;                                                                                   // MakerGen.cs:211
-            // 18. PlanDefinition.usage
-            public ElementDefinitionInfo Element_Usage;                                                                                     // MakerGen.cs:211
-            // 19. PlanDefinition.copyright
-            public ElementDefinitionInfo Element_Copyright;                                                                                 // MakerGen.cs:211
-            // 20. PlanDefinition.approvalDate
-            public ElementDefinitionInfo Element_ApprovalDate;                                                                              // MakerGen.cs:211
-            // 21. PlanDefinition.lastReviewDate
-            public ElementDefinitionInfo Element_LastReviewDate;                                                                            // MakerGen.cs:211
-            // 22. PlanDefinition.effectivePeriod
-            public ElementDefinitionInfo Element_EffectivePeriod;                                                                           // MakerGen.cs:211
-            // 23. PlanDefinition.topic
-            public ElementDefinitionInfo Element_Topic;                                                                                     // MakerGen.cs:211
-            // 24. PlanDefinition.author
-            public ElementDefinitionInfo Element_Author;                                                                                    // MakerGen.cs:211
-            // 25. PlanDefinition.editor
-            public ElementDefinitionInfo Element_Editor;                                                                                    // MakerGen.cs:211
-            // 26. PlanDefinition.reviewer
-            public ElementDefinitionInfo Element_Reviewer;                                                                                  // MakerGen.cs:211
-            // 27. PlanDefinition.endorser
-            public ElementDefinitionInfo Element_Endorser;                                                                                  // MakerGen.cs:211
-            // 28. PlanDefinition.relatedArtifact
-            public ElementDefinitionInfo Element_RelatedArtifact;                                                                           // MakerGen.cs:211
-            // 29. PlanDefinition.library
-            public ElementDefinitionInfo Element_Library;                                                                                   // MakerGen.cs:211
-            // 30. PlanDefinition.goal
-            public ElementDefinitionInfo Element_Goal;                                                                                      // MakerGen.cs:211
-            // 41. PlanDefinition.action
-            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_PlanDefinition_Elements()                                                                                       // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. PlanDefinition.url
-                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Url",                                                                                               // MakerGen.cs:230
-                        Path= "PlanDefinition.url",                                                                                         // MakerGen.cs:231
-                        Id = "PlanDefinition.url",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. PlanDefinition.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "PlanDefinition.identifier",                                                                                  // MakerGen.cs:231
-                        Id = "PlanDefinition.identifier",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. PlanDefinition.version
-                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Version",                                                                                           // MakerGen.cs:230
-                        Path= "PlanDefinition.version",                                                                                     // MakerGen.cs:231
-                        Id = "PlanDefinition.version",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. PlanDefinition.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:230
-                        Path= "PlanDefinition.name",                                                                                        // MakerGen.cs:231
-                        Id = "PlanDefinition.name",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. PlanDefinition.title
-                    this.Element_Title = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Title",                                                                                             // MakerGen.cs:230
-                        Path= "PlanDefinition.title",                                                                                       // MakerGen.cs:231
-                        Id = "PlanDefinition.title",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. PlanDefinition.subtitle
-                    this.Element_Subtitle = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Subtitle",                                                                                          // MakerGen.cs:230
-                        Path= "PlanDefinition.subtitle",                                                                                    // MakerGen.cs:231
-                        Id = "PlanDefinition.subtitle",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. PlanDefinition.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:230
-                        Path= "PlanDefinition.type",                                                                                        // MakerGen.cs:231
-                        Id = "PlanDefinition.type",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. PlanDefinition.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "PlanDefinition.status",                                                                                      // MakerGen.cs:231
-                        Id = "PlanDefinition.status",                                                                                       // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. PlanDefinition.experimental
-                    this.Element_Experimental = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Experimental",                                                                                      // MakerGen.cs:230
-                        Path= "PlanDefinition.experimental",                                                                                // MakerGen.cs:231
-                        Id = "PlanDefinition.experimental",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. PlanDefinition.subject[x]
-                    this.Element_Subject = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Subject",                                                                                           // MakerGen.cs:230
-                        Path= "PlanDefinition.subject[x]",                                                                                  // MakerGen.cs:231
-                        Id = "PlanDefinition.subject[x]",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            },                                                                                                              // MakerGen.cs:314
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Group"                                                         // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. PlanDefinition.date
-                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Date",                                                                                              // MakerGen.cs:230
-                        Path= "PlanDefinition.date",                                                                                        // MakerGen.cs:231
-                        Id = "PlanDefinition.date",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 12. PlanDefinition.publisher
-                    this.Element_Publisher = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Publisher",                                                                                         // MakerGen.cs:230
-                        Path= "PlanDefinition.publisher",                                                                                   // MakerGen.cs:231
-                        Id = "PlanDefinition.publisher",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 13. PlanDefinition.contact
-                    this.Element_Contact = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Contact",                                                                                           // MakerGen.cs:230
-                        Path= "PlanDefinition.contact",                                                                                     // MakerGen.cs:231
-                        Id = "PlanDefinition.contact",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 14. PlanDefinition.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:230
-                        Path= "PlanDefinition.description",                                                                                 // MakerGen.cs:231
-                        Id = "PlanDefinition.description",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 15. PlanDefinition.useContext
-                    this.Element_UseContext = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_UseContext",                                                                                        // MakerGen.cs:230
-                        Path= "PlanDefinition.useContext",                                                                                  // MakerGen.cs:231
-                        Id = "PlanDefinition.useContext",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                             // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 16. PlanDefinition.jurisdiction
-                    this.Element_Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Jurisdiction",                                                                                      // MakerGen.cs:230
-                        Path= "PlanDefinition.jurisdiction",                                                                                // MakerGen.cs:231
-                        Id = "PlanDefinition.jurisdiction",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 17. PlanDefinition.purpose
-                    this.Element_Purpose = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Purpose",                                                                                           // MakerGen.cs:230
-                        Path= "PlanDefinition.purpose",                                                                                     // MakerGen.cs:231
-                        Id = "PlanDefinition.purpose",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 18. PlanDefinition.usage
-                    this.Element_Usage = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Usage",                                                                                             // MakerGen.cs:230
-                        Path= "PlanDefinition.usage",                                                                                       // MakerGen.cs:231
-                        Id = "PlanDefinition.usage",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 19. PlanDefinition.copyright
-                    this.Element_Copyright = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Copyright",                                                                                         // MakerGen.cs:230
-                        Path= "PlanDefinition.copyright",                                                                                   // MakerGen.cs:231
-                        Id = "PlanDefinition.copyright",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 20. PlanDefinition.approvalDate
-                    this.Element_ApprovalDate = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ApprovalDate",                                                                                      // MakerGen.cs:230
-                        Path= "PlanDefinition.approvalDate",                                                                                // MakerGen.cs:231
-                        Id = "PlanDefinition.approvalDate",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 21. PlanDefinition.lastReviewDate
-                    this.Element_LastReviewDate = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_LastReviewDate",                                                                                    // MakerGen.cs:230
-                        Path= "PlanDefinition.lastReviewDate",                                                                              // MakerGen.cs:231
-                        Id = "PlanDefinition.lastReviewDate",                                                                               // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 22. PlanDefinition.effectivePeriod
-                    this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_EffectivePeriod",                                                                                   // MakerGen.cs:230
-                        Path= "PlanDefinition.effectivePeriod",                                                                             // MakerGen.cs:231
-                        Id = "PlanDefinition.effectivePeriod",                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 23. PlanDefinition.topic
-                    this.Element_Topic = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Topic",                                                                                             // MakerGen.cs:230
-                        Path= "PlanDefinition.topic",                                                                                       // MakerGen.cs:231
-                        Id = "PlanDefinition.topic",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 24. PlanDefinition.author
-                    this.Element_Author = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Author",                                                                                            // MakerGen.cs:230
-                        Path= "PlanDefinition.author",                                                                                      // MakerGen.cs:231
-                        Id = "PlanDefinition.author",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 25. PlanDefinition.editor
-                    this.Element_Editor = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Editor",                                                                                            // MakerGen.cs:230
-                        Path= "PlanDefinition.editor",                                                                                      // MakerGen.cs:231
-                        Id = "PlanDefinition.editor",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 26. PlanDefinition.reviewer
-                    this.Element_Reviewer = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Reviewer",                                                                                          // MakerGen.cs:230
-                        Path= "PlanDefinition.reviewer",                                                                                    // MakerGen.cs:231
-                        Id = "PlanDefinition.reviewer",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 27. PlanDefinition.endorser
-                    this.Element_Endorser = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Endorser",                                                                                          // MakerGen.cs:230
-                        Path= "PlanDefinition.endorser",                                                                                    // MakerGen.cs:231
-                        Id = "PlanDefinition.endorser",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 28. PlanDefinition.relatedArtifact
-                    this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_RelatedArtifact",                                                                                   // MakerGen.cs:230
-                        Path= "PlanDefinition.relatedArtifact",                                                                             // MakerGen.cs:231
-                        Id = "PlanDefinition.relatedArtifact",                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                          // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 29. PlanDefinition.library
-                    this.Element_Library = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Library",                                                                                           // MakerGen.cs:230
-                        Path= "PlanDefinition.library",                                                                                     // MakerGen.cs:231
-                        Id = "PlanDefinition.library",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:298
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Library"                                                       // MakerGen.cs:298
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 30. PlanDefinition.goal
-                    this.Element_Goal = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Goal",                                                                                              // MakerGen.cs:230
-                        Path= "PlanDefinition.goal",                                                                                        // MakerGen.cs:231
-                        Id = "PlanDefinition.goal",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Goal                                                                                                   // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 41. PlanDefinition.action
-                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Action",                                                                                            // MakerGen.cs:230
-                        Path= "PlanDefinition.action",                                                                                      // MakerGen.cs:231
-                        Id = "PlanDefinition.action",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Action                                                                                                 // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:215
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Title.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_Subtitle.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Experimental.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Subject.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Publisher.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Contact.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_UseContext.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Purpose.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Usage.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_Copyright.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_ApprovalDate.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_LastReviewDate.Write(sDef);                                                                                         // MakerGen.cs:215
-                Element_EffectivePeriod.Write(sDef);                                                                                        // MakerGen.cs:215
-                Element_Topic.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_Author.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Editor.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Reviewer.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Endorser.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_RelatedArtifact.Write(sDef);                                                                                        // MakerGen.cs:215
-                Element_Library.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Goal.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_PlanDefinition_Elements Elements                                                                                    // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_PlanDefinition_Elements();                                                                 // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_PlanDefinition_Elements elements;                                                                                          // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_PlanDefinition()                                                                                                    // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "PlanDefinition";                                                                                                   // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/PlanDefinition";                                                            // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "PlanDefinition",                                                                                                    // MakerGen.cs:420
-                ElementId = "PlanDefinition"                                                                                                // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Action",                                                                                            // MakerGen.cs:231
+                        Path= "PlanDefinition.action.action",                                                                               // MakerGen.cs:232
+                        Id = "PlanDefinition.action.action",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. PlanDefinition.url
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:212
+        // 2. PlanDefinition.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 3. PlanDefinition.version
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:212
+        // 4. PlanDefinition.name
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:212
+        // 5. PlanDefinition.title
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:212
+        // 6. PlanDefinition.subtitle
+        public ElementDefinitionInfo Element_Subtitle;                                                                                      // MakerGen.cs:212
+        // 7. PlanDefinition.type
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:212
+        // 8. PlanDefinition.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 9. PlanDefinition.experimental
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:212
+        // 10. PlanDefinition.subject[x]
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:212
+        // 11. PlanDefinition.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
+        // 12. PlanDefinition.publisher
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:212
+        // 13. PlanDefinition.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
+        // 14. PlanDefinition.description
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:212
+        // 15. PlanDefinition.useContext
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:212
+        // 16. PlanDefinition.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
+        // 17. PlanDefinition.purpose
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:212
+        // 18. PlanDefinition.usage
+        public ElementDefinitionInfo Element_Usage;                                                                                         // MakerGen.cs:212
+        // 19. PlanDefinition.copyright
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:212
+        // 20. PlanDefinition.approvalDate
+        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:212
+        // 21. PlanDefinition.lastReviewDate
+        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:212
+        // 22. PlanDefinition.effectivePeriod
+        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:212
+        // 23. PlanDefinition.topic
+        public ElementDefinitionInfo Element_Topic;                                                                                         // MakerGen.cs:212
+        // 24. PlanDefinition.author
+        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:212
+        // 25. PlanDefinition.editor
+        public ElementDefinitionInfo Element_Editor;                                                                                        // MakerGen.cs:212
+        // 26. PlanDefinition.reviewer
+        public ElementDefinitionInfo Element_Reviewer;                                                                                      // MakerGen.cs:212
+        // 27. PlanDefinition.endorser
+        public ElementDefinitionInfo Element_Endorser;                                                                                      // MakerGen.cs:212
+        // 28. PlanDefinition.relatedArtifact
+        public ElementDefinitionInfo Element_RelatedArtifact;                                                                               // MakerGen.cs:212
+        // 29. PlanDefinition.library
+        public ElementDefinitionInfo Element_Library;                                                                                       // MakerGen.cs:212
+        // 30. PlanDefinition.goal
+        public ElementDefinitionInfo Element_Goal;                                                                                          // MakerGen.cs:212
+        // 41. PlanDefinition.action
+        public ElementDefinitionInfo Element_Action;                                                                                        // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "PlanDefinition",                                                                                                    // MakerGen.cs:388
+                ElementId = "PlanDefinition"                                                                                                // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:216
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_Subtitle.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Usage.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:216
+            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:216
+            Element_Topic.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Editor.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Reviewer.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Endorser.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_RelatedArtifact.Write(sDef);                                                                                            // MakerGen.cs:216
+            Element_Library.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Goal.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Action.Write(sDef);                                                                                                     // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_PlanDefinition()                                                                                                    // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. PlanDefinition.url
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:231
+                    Path= "PlanDefinition.url",                                                                                             // MakerGen.cs:232
+                    Id = "PlanDefinition.url",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. PlanDefinition.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "PlanDefinition.identifier",                                                                                      // MakerGen.cs:232
+                    Id = "PlanDefinition.identifier",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. PlanDefinition.version
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:231
+                    Path= "PlanDefinition.version",                                                                                         // MakerGen.cs:232
+                    Id = "PlanDefinition.version",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. PlanDefinition.name
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:231
+                    Path= "PlanDefinition.name",                                                                                            // MakerGen.cs:232
+                    Id = "PlanDefinition.name",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. PlanDefinition.title
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:231
+                    Path= "PlanDefinition.title",                                                                                           // MakerGen.cs:232
+                    Id = "PlanDefinition.title",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. PlanDefinition.subtitle
+                this.Element_Subtitle = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Subtitle",                                                                                              // MakerGen.cs:231
+                    Path= "PlanDefinition.subtitle",                                                                                        // MakerGen.cs:232
+                    Id = "PlanDefinition.subtitle",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. PlanDefinition.type
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:231
+                    Path= "PlanDefinition.type",                                                                                            // MakerGen.cs:232
+                    Id = "PlanDefinition.type",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. PlanDefinition.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "PlanDefinition.status",                                                                                          // MakerGen.cs:232
+                    Id = "PlanDefinition.status",                                                                                           // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. PlanDefinition.experimental
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:231
+                    Path= "PlanDefinition.experimental",                                                                                    // MakerGen.cs:232
+                    Id = "PlanDefinition.experimental",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. PlanDefinition.subject[x]
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:231
+                    Path= "PlanDefinition.subject[x]",                                                                                      // MakerGen.cs:232
+                    Id = "PlanDefinition.subject[x]",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        },                                                                                                                  // MakerGen.cs:315
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. PlanDefinition.date
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
+                    Path= "PlanDefinition.date",                                                                                            // MakerGen.cs:232
+                    Id = "PlanDefinition.date",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 12. PlanDefinition.publisher
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:231
+                    Path= "PlanDefinition.publisher",                                                                                       // MakerGen.cs:232
+                    Id = "PlanDefinition.publisher",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 13. PlanDefinition.contact
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
+                    Path= "PlanDefinition.contact",                                                                                         // MakerGen.cs:232
+                    Id = "PlanDefinition.contact",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 14. PlanDefinition.description
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:231
+                    Path= "PlanDefinition.description",                                                                                     // MakerGen.cs:232
+                    Id = "PlanDefinition.description",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 15. PlanDefinition.useContext
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:231
+                    Path= "PlanDefinition.useContext",                                                                                      // MakerGen.cs:232
+                    Id = "PlanDefinition.useContext",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 16. PlanDefinition.jurisdiction
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
+                    Path= "PlanDefinition.jurisdiction",                                                                                    // MakerGen.cs:232
+                    Id = "PlanDefinition.jurisdiction",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 17. PlanDefinition.purpose
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:231
+                    Path= "PlanDefinition.purpose",                                                                                         // MakerGen.cs:232
+                    Id = "PlanDefinition.purpose",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 18. PlanDefinition.usage
+                this.Element_Usage = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Usage",                                                                                                 // MakerGen.cs:231
+                    Path= "PlanDefinition.usage",                                                                                           // MakerGen.cs:232
+                    Id = "PlanDefinition.usage",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 19. PlanDefinition.copyright
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:231
+                    Path= "PlanDefinition.copyright",                                                                                       // MakerGen.cs:232
+                    Id = "PlanDefinition.copyright",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 20. PlanDefinition.approvalDate
+                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:231
+                    Path= "PlanDefinition.approvalDate",                                                                                    // MakerGen.cs:232
+                    Id = "PlanDefinition.approvalDate",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 21. PlanDefinition.lastReviewDate
+                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:231
+                    Path= "PlanDefinition.lastReviewDate",                                                                                  // MakerGen.cs:232
+                    Id = "PlanDefinition.lastReviewDate",                                                                                   // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 22. PlanDefinition.effectivePeriod
+                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:231
+                    Path= "PlanDefinition.effectivePeriod",                                                                                 // MakerGen.cs:232
+                    Id = "PlanDefinition.effectivePeriod",                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 23. PlanDefinition.topic
+                this.Element_Topic = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Topic",                                                                                                 // MakerGen.cs:231
+                    Path= "PlanDefinition.topic",                                                                                           // MakerGen.cs:232
+                    Id = "PlanDefinition.topic",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 24. PlanDefinition.author
+                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Author",                                                                                                // MakerGen.cs:231
+                    Path= "PlanDefinition.author",                                                                                          // MakerGen.cs:232
+                    Id = "PlanDefinition.author",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 25. PlanDefinition.editor
+                this.Element_Editor = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Editor",                                                                                                // MakerGen.cs:231
+                    Path= "PlanDefinition.editor",                                                                                          // MakerGen.cs:232
+                    Id = "PlanDefinition.editor",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 26. PlanDefinition.reviewer
+                this.Element_Reviewer = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Reviewer",                                                                                              // MakerGen.cs:231
+                    Path= "PlanDefinition.reviewer",                                                                                        // MakerGen.cs:232
+                    Id = "PlanDefinition.reviewer",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 27. PlanDefinition.endorser
+                this.Element_Endorser = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Endorser",                                                                                              // MakerGen.cs:231
+                    Path= "PlanDefinition.endorser",                                                                                        // MakerGen.cs:232
+                    Id = "PlanDefinition.endorser",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 28. PlanDefinition.relatedArtifact
+                this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_RelatedArtifact",                                                                                       // MakerGen.cs:231
+                    Path= "PlanDefinition.relatedArtifact",                                                                                 // MakerGen.cs:232
+                    Id = "PlanDefinition.relatedArtifact",                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                              // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 29. PlanDefinition.library
+                this.Element_Library = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Library",                                                                                               // MakerGen.cs:231
+                    Path= "PlanDefinition.library",                                                                                         // MakerGen.cs:232
+                    Id = "PlanDefinition.library",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Library"                                                           // MakerGen.cs:299
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 30. PlanDefinition.goal
+                this.Element_Goal = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Goal",                                                                                                  // MakerGen.cs:231
+                    Path= "PlanDefinition.goal",                                                                                            // MakerGen.cs:232
+                    Id = "PlanDefinition.goal",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Goal                                                                                                       // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 41. PlanDefinition.action
+                this.Element_Action = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Action",                                                                                                // MakerGen.cs:231
+                    Path= "PlanDefinition.action",                                                                                          // MakerGen.cs:232
+                    Id = "PlanDefinition.action",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Action                                                                                                     // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "PlanDefinition";                                                                                                   // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/PlanDefinition";                                                            // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

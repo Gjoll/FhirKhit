@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:508
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:509
-using System.IO;                                                                                                                            // MakerGen.cs:510
-using System.Linq;                                                                                                                          // MakerGen.cs:511
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:512
-                                                                                                                                            // MakerGen.cs:513
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:514
-{                                                                                                                                           // MakerGen.cs:515
-    #region Json                                                                                                                            // MakerGen.cs:516
+using System;                                                                                                                               // MakerGen.cs:482
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:483
+using System.IO;                                                                                                                            // MakerGen.cs:484
+using System.Linq;                                                                                                                          // MakerGen.cs:485
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:486
+                                                                                                                                            // MakerGen.cs:487
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:488
+{                                                                                                                                           // MakerGen.cs:489
+    #region Json                                                                                                                            // MakerGen.cs:490
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -338,533 +338,441 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:520
+    #endregion                                                                                                                              // MakerGen.cs:494
     /// <summary>
     /// Fhir complex 'DataRequirement'
     /// </summary>
     // 0. DataRequirement
     public class Type_DataRequirement : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Type_DataRequirement_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                            // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 5. DataRequirement.codeFilter
-            public class Type_CodeFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_CodeFilter_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+        // 5. DataRequirement.codeFilter
+        public class Type_CodeFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 6. DataRequirement.codeFilter.path
+            public ElementDefinitionInfo Element_Path;                                                                                      // MakerGen.cs:212
+            // 7. DataRequirement.codeFilter.searchParam
+            public ElementDefinitionInfo Element_SearchParam;                                                                               // MakerGen.cs:212
+            // 8. DataRequirement.codeFilter.valueSet
+            public ElementDefinitionInfo Element_ValueSet;                                                                                  // MakerGen.cs:212
+            // 9. DataRequirement.codeFilter.code
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "DataRequirement.codeFilter",                                                                                    // MakerGen.cs:388
+                    ElementId = "DataRequirement.codeFilter"                                                                                // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Path.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_SearchParam.Write(sDef);                                                                                            // MakerGen.cs:216
+                Element_ValueSet.Write(sDef);                                                                                               // MakerGen.cs:216
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_CodeFilter()                                                                                                        // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 6. DataRequirement.codeFilter.path
-                    public ElementDefinitionInfo Element_Path;                                                                              // MakerGen.cs:211
+                    this.Element_Path = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Path",                                                                                              // MakerGen.cs:231
+                        Path= "DataRequirement.codeFilter.path",                                                                            // MakerGen.cs:232
+                        Id = "DataRequirement.codeFilter.path",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 7. DataRequirement.codeFilter.searchParam
-                    public ElementDefinitionInfo Element_SearchParam;                                                                       // MakerGen.cs:211
+                    this.Element_SearchParam = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_SearchParam",                                                                                       // MakerGen.cs:231
+                        Path= "DataRequirement.codeFilter.searchParam",                                                                     // MakerGen.cs:232
+                        Id = "DataRequirement.codeFilter.searchParam",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 8. DataRequirement.codeFilter.valueSet
-                    public ElementDefinitionInfo Element_ValueSet;                                                                          // MakerGen.cs:211
+                    this.Element_ValueSet = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_ValueSet",                                                                                          // MakerGen.cs:231
+                        Path= "DataRequirement.codeFilter.valueSet",                                                                        // MakerGen.cs:232
+                        Id = "DataRequirement.codeFilter.valueSet",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:299
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                      // MakerGen.cs:299
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 9. DataRequirement.codeFilter.code
-                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_CodeFilter_Elements()                                                                                       // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 6. DataRequirement.codeFilter.path
-                            this.Element_Path = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Path",                                                                                      // MakerGen.cs:230
-                                Path= "DataRequirement.codeFilter.path",                                                                    // MakerGen.cs:231
-                                Id = "DataRequirement.codeFilter.path",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 7. DataRequirement.codeFilter.searchParam
-                            this.Element_SearchParam = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_SearchParam",                                                                               // MakerGen.cs:230
-                                Path= "DataRequirement.codeFilter.searchParam",                                                             // MakerGen.cs:231
-                                Id = "DataRequirement.codeFilter.searchParam",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 8. DataRequirement.codeFilter.valueSet
-                            this.Element_ValueSet = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_ValueSet",                                                                                  // MakerGen.cs:230
-                                Path= "DataRequirement.codeFilter.valueSet",                                                                // MakerGen.cs:231
-                                Id = "DataRequirement.codeFilter.valueSet",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Canonical                                                           // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:298
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/ValueSet"                                              // MakerGen.cs:298
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 9. DataRequirement.codeFilter.code
-                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Code",                                                                                      // MakerGen.cs:230
-                                Path= "DataRequirement.codeFilter.code",                                                                    // MakerGen.cs:231
-                                Id = "DataRequirement.codeFilter.code",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Coding                                                           // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Path.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_SearchParam.Write(sDef);                                                                                    // MakerGen.cs:215
-                        Element_ValueSet.Write(sDef);                                                                                       // MakerGen.cs:215
-                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_CodeFilter_Elements Elements                                                                                    // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_CodeFilter_Elements();                                                                 // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_CodeFilter_Elements elements;                                                                                          // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_CodeFilter()                                                                                                    // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "DataRequirement.codeFilter",                                                                                // MakerGen.cs:420
-                        ElementId = "DataRequirement.codeFilter"                                                                            // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 10. DataRequirement.dateFilter
-            public class Type_DateFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_DateFilter_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                         // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:231
+                        Path= "DataRequirement.codeFilter.code",                                                                            // MakerGen.cs:232
+                        Id = "DataRequirement.codeFilter.code",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 10. DataRequirement.dateFilter
+        public class Type_DateFilter : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 11. DataRequirement.dateFilter.path
+            public ElementDefinitionInfo Element_Path;                                                                                      // MakerGen.cs:212
+            // 12. DataRequirement.dateFilter.searchParam
+            public ElementDefinitionInfo Element_SearchParam;                                                                               // MakerGen.cs:212
+            // 13. DataRequirement.dateFilter.value[x]
+            public ElementDefinitionInfo Element_Value;                                                                                     // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "DataRequirement.dateFilter",                                                                                    // MakerGen.cs:388
+                    ElementId = "DataRequirement.dateFilter"                                                                                // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Path.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_SearchParam.Write(sDef);                                                                                            // MakerGen.cs:216
+                Element_Value.Write(sDef);                                                                                                  // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_DateFilter()                                                                                                        // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 11. DataRequirement.dateFilter.path
-                    public ElementDefinitionInfo Element_Path;                                                                              // MakerGen.cs:211
+                    this.Element_Path = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Path",                                                                                              // MakerGen.cs:231
+                        Path= "DataRequirement.dateFilter.path",                                                                            // MakerGen.cs:232
+                        Id = "DataRequirement.dateFilter.path",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 12. DataRequirement.dateFilter.searchParam
-                    public ElementDefinitionInfo Element_SearchParam;                                                                       // MakerGen.cs:211
+                    this.Element_SearchParam = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_SearchParam",                                                                                       // MakerGen.cs:231
+                        Path= "DataRequirement.dateFilter.searchParam",                                                                     // MakerGen.cs:232
+                        Id = "DataRequirement.dateFilter.searchParam",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 13. DataRequirement.dateFilter.value[x]
-                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_DateFilter_Elements()                                                                                       // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 11. DataRequirement.dateFilter.path
-                            this.Element_Path = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Path",                                                                                      // MakerGen.cs:230
-                                Path= "DataRequirement.dateFilter.path",                                                                    // MakerGen.cs:231
-                                Id = "DataRequirement.dateFilter.path",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 12. DataRequirement.dateFilter.searchParam
-                            this.Element_SearchParam = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_SearchParam",                                                                               // MakerGen.cs:230
-                                Path= "DataRequirement.dateFilter.searchParam",                                                             // MakerGen.cs:231
-                                Id = "DataRequirement.dateFilter.searchParam",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 13. DataRequirement.dateFilter.value[x]
-                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Value",                                                                                     // MakerGen.cs:230
-                                Path= "DataRequirement.dateFilter.value[x]",                                                                // MakerGen.cs:231
-                                Id = "DataRequirement.dateFilter.value[x]",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    },                                                                                                      // MakerGen.cs:299
-                                    new FhirKhit.Maker.Common.Complex.Type_Period                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    },                                                                                                      // MakerGen.cs:352
-                                    new FhirKhit.Maker.Common.Complex.Type_Duration                                                         // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Path.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_SearchParam.Write(sDef);                                                                                    // MakerGen.cs:215
-                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_DateFilter_Elements Elements                                                                                    // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_DateFilter_Elements();                                                                 // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_DateFilter_Elements elements;                                                                                          // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_DateFilter()                                                                                                    // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "DataRequirement.dateFilter",                                                                                // MakerGen.cs:420
-                        ElementId = "DataRequirement.dateFilter"                                                                            // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 15. DataRequirement.sort
-            public class Type_Sort : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_Sort_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                               // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_Value = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Value",                                                                                             // MakerGen.cs:231
+                        Path= "DataRequirement.dateFilter.value[x]",                                                                        // MakerGen.cs:232
+                        Id = "DataRequirement.dateFilter.value[x]",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            },                                                                                                              // MakerGen.cs:300
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            },                                                                                                              // MakerGen.cs:353
+                            new FhirKhit.Maker.Common.Complex.Type_Duration                                                                 // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 15. DataRequirement.sort
+        public class Type_Sort : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 16. DataRequirement.sort.path
+            public ElementDefinitionInfo Element_Path;                                                                                      // MakerGen.cs:212
+            // 17. DataRequirement.sort.direction
+            public ElementDefinitionInfo Element_Direction;                                                                                 // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "DataRequirement.sort",                                                                                          // MakerGen.cs:388
+                    ElementId = "DataRequirement.sort"                                                                                      // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Path.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Direction.Write(sDef);                                                                                              // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Sort()                                                                                                              // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 16. DataRequirement.sort.path
-                    public ElementDefinitionInfo Element_Path;                                                                              // MakerGen.cs:211
+                    this.Element_Path = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Path",                                                                                              // MakerGen.cs:231
+                        Path= "DataRequirement.sort.path",                                                                                  // MakerGen.cs:232
+                        Id = "DataRequirement.sort.path",                                                                                   // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 17. DataRequirement.sort.direction
-                    public ElementDefinitionInfo Element_Direction;                                                                         // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Sort_Elements()                                                                                             // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 16. DataRequirement.sort.path
-                            this.Element_Path = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Path",                                                                                      // MakerGen.cs:230
-                                Path= "DataRequirement.sort.path",                                                                          // MakerGen.cs:231
-                                Id = "DataRequirement.sort.path",                                                                           // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 17. DataRequirement.sort.direction
-                            this.Element_Direction = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Direction",                                                                                 // MakerGen.cs:230
-                                Path= "DataRequirement.sort.direction",                                                                     // MakerGen.cs:231
-                                Id = "DataRequirement.sort.direction",                                                                      // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Path.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Direction.Write(sDef);                                                                                      // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Sort_Elements Elements                                                                                          // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Sort_Elements();                                                                       // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Sort_Elements elements;                                                                                                // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Sort()                                                                                                          // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "DataRequirement.sort",                                                                                      // MakerGen.cs:420
-                        ElementId = "DataRequirement.sort"                                                                                  // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. DataRequirement.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:211
-            // 2. DataRequirement.profile
-            public ElementDefinitionInfo Element_Profile;                                                                                   // MakerGen.cs:211
-            // 3. DataRequirement.subject[x]
-            public ElementDefinitionInfo Element_Subject;                                                                                   // MakerGen.cs:211
-            // 4. DataRequirement.mustSupport
-            public ElementDefinitionInfo Element_MustSupport;                                                                               // MakerGen.cs:211
-            // 5. DataRequirement.codeFilter
-            public ElementDefinitionInfo Element_CodeFilter;                                                                                // MakerGen.cs:211
-            // 10. DataRequirement.dateFilter
-            public ElementDefinitionInfo Element_DateFilter;                                                                                // MakerGen.cs:211
-            // 14. DataRequirement.limit
-            public ElementDefinitionInfo Element_Limit;                                                                                     // MakerGen.cs:211
-            // 15. DataRequirement.sort
-            public ElementDefinitionInfo Element_Sort;                                                                                      // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Type_DataRequirement_Elements()                                                                                          // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. DataRequirement.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:230
-                        Path= "DataRequirement.type",                                                                                       // MakerGen.cs:231
-                        Id = "DataRequirement.type",                                                                                        // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. DataRequirement.profile
-                    this.Element_Profile = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Profile",                                                                                           // MakerGen.cs:230
-                        Path= "DataRequirement.profile",                                                                                    // MakerGen.cs:231
-                        Id = "DataRequirement.profile",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:298
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                           // MakerGen.cs:298
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. DataRequirement.subject[x]
-                    this.Element_Subject = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Subject",                                                                                           // MakerGen.cs:230
-                        Path= "DataRequirement.subject[x]",                                                                                 // MakerGen.cs:231
-                        Id = "DataRequirement.subject[x]",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            },                                                                                                              // MakerGen.cs:314
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Group"                                                         // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. DataRequirement.mustSupport
-                    this.Element_MustSupport = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_MustSupport",                                                                                       // MakerGen.cs:230
-                        Path= "DataRequirement.mustSupport",                                                                                // MakerGen.cs:231
-                        Id = "DataRequirement.mustSupport",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. DataRequirement.codeFilter
-                    this.Element_CodeFilter = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_CodeFilter",                                                                                        // MakerGen.cs:230
-                        Path= "DataRequirement.codeFilter",                                                                                 // MakerGen.cs:231
-                        Id = "DataRequirement.codeFilter",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_CodeFilter                                                                                             // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. DataRequirement.dateFilter
-                    this.Element_DateFilter = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_DateFilter",                                                                                        // MakerGen.cs:230
-                        Path= "DataRequirement.dateFilter",                                                                                 // MakerGen.cs:231
-                        Id = "DataRequirement.dateFilter",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_DateFilter                                                                                             // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 14. DataRequirement.limit
-                    this.Element_Limit = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Limit",                                                                                             // MakerGen.cs:230
-                        Path= "DataRequirement.limit",                                                                                      // MakerGen.cs:231
-                        Id = "DataRequirement.limit",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.PositiveInt                                                                 // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 15. DataRequirement.sort
-                    this.Element_Sort = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Sort",                                                                                              // MakerGen.cs:230
-                        Path= "DataRequirement.sort",                                                                                       // MakerGen.cs:231
-                        Id = "DataRequirement.sort",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Sort                                                                                                   // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Profile.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Subject.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_MustSupport.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_CodeFilter.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_DateFilter.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Limit.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_Sort.Write(sDef);                                                                                                   // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Type_DataRequirement_Elements Elements                                                                                       // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Type_DataRequirement_Elements();                                                                    // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Type_DataRequirement_Elements elements;                                                                                             // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Type_DataRequirement()                                                                                                       // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "DataRequirement",                                                                                                   // MakerGen.cs:420
-                ElementId = "DataRequirement"                                                                                               // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:525
+                    this.Element_Direction = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Direction",                                                                                         // MakerGen.cs:231
+                        Path= "DataRequirement.sort.direction",                                                                             // MakerGen.cs:232
+                        Id = "DataRequirement.sort.direction",                                                                              // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. DataRequirement.type
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:212
+        // 2. DataRequirement.profile
+        public ElementDefinitionInfo Element_Profile;                                                                                       // MakerGen.cs:212
+        // 3. DataRequirement.subject[x]
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:212
+        // 4. DataRequirement.mustSupport
+        public ElementDefinitionInfo Element_MustSupport;                                                                                   // MakerGen.cs:212
+        // 5. DataRequirement.codeFilter
+        public ElementDefinitionInfo Element_CodeFilter;                                                                                    // MakerGen.cs:212
+        // 10. DataRequirement.dateFilter
+        public ElementDefinitionInfo Element_DateFilter;                                                                                    // MakerGen.cs:212
+        // 14. DataRequirement.limit
+        public ElementDefinitionInfo Element_Limit;                                                                                         // MakerGen.cs:212
+        // 15. DataRequirement.sort
+        public ElementDefinitionInfo Element_Sort;                                                                                          // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "DataRequirement",                                                                                                   // MakerGen.cs:388
+                ElementId = "DataRequirement"                                                                                               // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Profile.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_MustSupport.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_CodeFilter.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_DateFilter.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Limit.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_Sort.Write(sDef);                                                                                                       // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Type_DataRequirement()                                                                                                       // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. DataRequirement.type
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:231
+                    Path= "DataRequirement.type",                                                                                           // MakerGen.cs:232
+                    Id = "DataRequirement.type",                                                                                            // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. DataRequirement.profile
+                this.Element_Profile = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Profile",                                                                                               // MakerGen.cs:231
+                    Path= "DataRequirement.profile",                                                                                        // MakerGen.cs:232
+                    Id = "DataRequirement.profile",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                               // MakerGen.cs:299
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. DataRequirement.subject[x]
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:231
+                    Path= "DataRequirement.subject[x]",                                                                                     // MakerGen.cs:232
+                    Id = "DataRequirement.subject[x]",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        },                                                                                                                  // MakerGen.cs:315
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. DataRequirement.mustSupport
+                this.Element_MustSupport = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_MustSupport",                                                                                           // MakerGen.cs:231
+                    Path= "DataRequirement.mustSupport",                                                                                    // MakerGen.cs:232
+                    Id = "DataRequirement.mustSupport",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. DataRequirement.codeFilter
+                this.Element_CodeFilter = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_CodeFilter",                                                                                            // MakerGen.cs:231
+                    Path= "DataRequirement.codeFilter",                                                                                     // MakerGen.cs:232
+                    Id = "DataRequirement.codeFilter",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_CodeFilter                                                                                                 // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. DataRequirement.dateFilter
+                this.Element_DateFilter = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_DateFilter",                                                                                            // MakerGen.cs:231
+                    Path= "DataRequirement.dateFilter",                                                                                     // MakerGen.cs:232
+                    Id = "DataRequirement.dateFilter",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_DateFilter                                                                                                 // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 14. DataRequirement.limit
+                this.Element_Limit = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Limit",                                                                                                 // MakerGen.cs:231
+                    Path= "DataRequirement.limit",                                                                                          // MakerGen.cs:232
+                    Id = "DataRequirement.limit",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                           // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 15. DataRequirement.sort
+                this.Element_Sort = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Sort",                                                                                                  // MakerGen.cs:231
+                    Path= "DataRequirement.sort",                                                                                           // MakerGen.cs:232
+                    Id = "DataRequirement.sort",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Sort                                                                                                       // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:499

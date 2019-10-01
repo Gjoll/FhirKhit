@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "MeasureReport",
@@ -523,910 +523,749 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'MeasureReport'
     /// </summary>
     // 0. MeasureReport
     public class Resource_MeasureReport : FhirKhit.Maker.Common.Resource.ResourceBase                                                       // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_MeasureReport_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 10. MeasureReport.group
-            public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
+        // 10. MeasureReport.group
+        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 12. MeasureReport.group.population
+            public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
             {                                                                                                                               // MakerGen.cs:377
-                public class Type_Group_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
-                    // 12. MeasureReport.group.population
+                // 13. MeasureReport.group.population.code
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:212
+                // 14. MeasureReport.group.population.count
+                public ElementDefinitionInfo Element_Count;                                                                                 // MakerGen.cs:212
+                // 15. MeasureReport.group.population.subjectResults
+                public ElementDefinitionInfo Element_SubjectResults;                                                                        // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "MeasureReport.group.population",                                                                            // MakerGen.cs:388
+                        ElementId = "MeasureReport.group.population"                                                                        // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Count.Write(sDef);                                                                                              // MakerGen.cs:216
+                    Element_SubjectResults.Write(sDef);                                                                                     // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Population()                                                                                                    // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 13. MeasureReport.group.population.code
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:231
+                            Path= "MeasureReport.group.population.code",                                                                    // MakerGen.cs:232
+                            Id = "MeasureReport.group.population.code",                                                                     // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
+                                {                                                                                                           // MakerGen.cs:312
+                                }                                                                                                           // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 14. MeasureReport.group.population.count
+                        this.Element_Count = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Count",                                                                                         // MakerGen.cs:231
+                            Path= "MeasureReport.group.population.count",                                                                   // MakerGen.cs:232
+                            Id = "MeasureReport.group.population.count",                                                                    // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 15. MeasureReport.group.population.subjectResults
+                        this.Element_SubjectResults = new ElementDefinitionInfo                                                             // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_SubjectResults",                                                                                // MakerGen.cs:231
+                            Path= "MeasureReport.group.population.subjectResults",                                                          // MakerGen.cs:232
+                            Id = "MeasureReport.group.population.subjectResults",                                                           // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:339
+                                {                                                                                                           // MakerGen.cs:340
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:342
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/List"                                                      // MakerGen.cs:342
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:343
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 17. MeasureReport.group.stratifier
+            public class Type_Stratifier : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
+            {                                                                                                                               // MakerGen.cs:377
+                // 19. MeasureReport.group.stratifier.stratum
+                public class Type_Stratum : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:376
+                {                                                                                                                           // MakerGen.cs:377
+                    // 21. MeasureReport.group.stratifier.stratum.component
+                    public class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:376
+                    {                                                                                                                       // MakerGen.cs:377
+                        // 22. MeasureReport.group.stratifier.stratum.component.code
+                        public ElementDefinitionInfo Element_Code;                                                                          // MakerGen.cs:212
+                        // 23. MeasureReport.group.stratifier.stratum.component.value
+                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:383
+                        {                                                                                                                   // MakerGen.cs:384
+                            base.Write(sDef);                                                                                               // MakerGen.cs:385
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:386
+                            {                                                                                                               // MakerGen.cs:387
+                                Path = "MeasureReport.group.stratifier.stratum.component",                                                  // MakerGen.cs:388
+                                ElementId = "MeasureReport.group.stratifier.stratum.component"                                              // MakerGen.cs:389
+                            });                                                                                                             // MakerGen.cs:390
+                            Element_Code.Write(sDef);                                                                                       // MakerGen.cs:216
+                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:216
+                        }                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                        public Type_Component()                                                                                             // MakerGen.cs:395
+                        {                                                                                                                   // MakerGen.cs:396
+                            {                                                                                                               // MakerGen.cs:227
+                                // 22. MeasureReport.group.stratifier.stratum.component.code
+                                this.Element_Code = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Code",                                                                                  // MakerGen.cs:231
+                                    Path= "MeasureReport.group.stratifier.stratum.component.code",                                          // MakerGen.cs:232
+                                    Id = "MeasureReport.group.stratifier.stratum.component.code",                                           // MakerGen.cs:233
+                                    Min = 1,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:311
+                                        {                                                                                                   // MakerGen.cs:312
+                                        }                                                                                                   // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:227
+                                // 23. MeasureReport.group.stratifier.stratum.component.value
+                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Value",                                                                                 // MakerGen.cs:231
+                                    Path= "MeasureReport.group.stratifier.stratum.component.value",                                         // MakerGen.cs:232
+                                    Id = "MeasureReport.group.stratifier.stratum.component.value",                                          // MakerGen.cs:233
+                                    Min = 1,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:311
+                                        {                                                                                                   // MakerGen.cs:312
+                                        }                                                                                                   // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                        }                                                                                                                   // MakerGen.cs:398
+                    }                                                                                                                       // MakerGen.cs:400
+                    // 24. MeasureReport.group.stratifier.stratum.population
                     public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:376
                     {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Population_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                 // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 13. MeasureReport.group.population.code
-                            public ElementDefinitionInfo Element_Code;                                                                      // MakerGen.cs:211
-                            // 14. MeasureReport.group.population.count
-                            public ElementDefinitionInfo Element_Count;                                                                     // MakerGen.cs:211
-                            // 15. MeasureReport.group.population.subjectResults
-                            public ElementDefinitionInfo Element_SubjectResults;                                                            // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Population_Elements()                                                                               // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 13. MeasureReport.group.population.code
-                                    this.Element_Code = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Code",                                                                              // MakerGen.cs:230
-                                        Path= "MeasureReport.group.population.code",                                                        // MakerGen.cs:231
-                                        Id = "MeasureReport.group.population.code",                                                         // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                          // MakerGen.cs:310
-                                            {                                                                                               // MakerGen.cs:311
-                                            }                                                                                               // MakerGen.cs:314
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 14. MeasureReport.group.population.count
-                                    this.Element_Count = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Count",                                                                             // MakerGen.cs:230
-                                        Path= "MeasureReport.group.population.count",                                                       // MakerGen.cs:231
-                                        Id = "MeasureReport.group.population.count",                                                        // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Integer                                                     // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 15. MeasureReport.group.population.subjectResults
-                                    this.Element_SubjectResults = new ElementDefinitionInfo                                                 // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_SubjectResults",                                                                    // MakerGen.cs:230
-                                        Path= "MeasureReport.group.population.subjectResults",                                              // MakerGen.cs:231
-                                        Id = "MeasureReport.group.population.subjectResults",                                               // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                // MakerGen.cs:338
-                                            {                                                                                               // MakerGen.cs:339
-                                                TargetProfile = new String[]                                                                // MakerGen.cs:341
-                                                {                                                                                           // CodeEditorExtensions.cs:28
-                                                    "http://hl7.org/fhir/StructureDefinition/List"                                          // MakerGen.cs:341
-                                                }                                                                                           // CodeEditorExtensions.cs:34
-                                            }                                                                                               // MakerGen.cs:342
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Code.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Count.Write(sDef);                                                                                  // MakerGen.cs:215
-                                Element_SubjectResults.Write(sDef);                                                                         // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Population_Elements Elements                                                                            // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Population_Elements();                                                         // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Population_Elements elements;                                                                                  // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Population()                                                                                            // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "MeasureReport.group.population",                                                                    // MakerGen.cs:420
-                                ElementId = "MeasureReport.group.population"                                                                // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
-                    // 17. MeasureReport.group.stratifier
-                    public class Type_Stratifier : FhirKhit.Maker.Common.Complex.ComplexBase                                                // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Stratifier_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                 // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 19. MeasureReport.group.stratifier.stratum
-                            public class Type_Stratum : FhirKhit.Maker.Common.Complex.ComplexBase                                           // MakerGen.cs:376
-                            {                                                                                                               // MakerGen.cs:377
-                                public class Type_Stratum_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                            // MakerGen.cs:378
-                                {                                                                                                           // MakerGen.cs:379
-                                    // 21. MeasureReport.group.stratifier.stratum.component
-                                    public class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase                                 // MakerGen.cs:376
-                                    {                                                                                                       // MakerGen.cs:377
-                                        public class Type_Component_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                  // MakerGen.cs:378
-                                        {                                                                                                   // MakerGen.cs:379
-                                            // 22. MeasureReport.group.stratifier.stratum.component.code
-                                            public ElementDefinitionInfo Element_Code;                                                      // MakerGen.cs:211
-                                            // 23. MeasureReport.group.stratifier.stratum.component.value
-                                            public ElementDefinitionInfo Element_Value;                                                     // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                                            public Type_Component_Elements()                                                                // MakerGen.cs:384
-                                            {                                                                                               // MakerGen.cs:385
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 22. MeasureReport.group.stratifier.stratum.component.code
-                                                    this.Element_Code = new ElementDefinitionInfo                                           // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Code",                                                              // MakerGen.cs:230
-                                                        Path= "MeasureReport.group.stratifier.stratum.component.code",                      // MakerGen.cs:231
-                                                        Id = "MeasureReport.group.stratifier.stratum.component.code",                       // MakerGen.cs:232
-                                                        Min = 1,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                          // MakerGen.cs:310
-                                                            {                                                                               // MakerGen.cs:311
-                                                            }                                                                               // MakerGen.cs:314
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 23. MeasureReport.group.stratifier.stratum.component.value
-                                                    this.Element_Value = new ElementDefinitionInfo                                          // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Value",                                                             // MakerGen.cs:230
-                                                        Path= "MeasureReport.group.stratifier.stratum.component.value",                     // MakerGen.cs:231
-                                                        Id = "MeasureReport.group.stratifier.stratum.component.value",                      // MakerGen.cs:232
-                                                        Min = 1,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                          // MakerGen.cs:310
-                                                            {                                                                               // MakerGen.cs:311
-                                                            }                                                                               // MakerGen.cs:314
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                            }                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                             // MakerGen.cs:390
-                                            {                                                                                               // MakerGen.cs:391
-                                                base.Write(sDef);                                                                           // MakerGen.cs:392
-                                                Element_Code.Write(sDef);                                                                   // MakerGen.cs:215
-                                                Element_Value.Write(sDef);                                                                  // MakerGen.cs:215
-                                            }                                                                                               // MakerGen.cs:394
-                                        }                                                                                                   // MakerGen.cs:396
-                                        public Type_Component_Elements Elements                                                             // MakerGen.cs:398
-                                        {                                                                                                   // MakerGen.cs:399
-                                            get                                                                                             // MakerGen.cs:400
-                                            {                                                                                               // MakerGen.cs:401
-                                                if (this.elements == null)                                                                  // MakerGen.cs:402
-                                                    this.elements = new Type_Component_Elements();                                          // MakerGen.cs:403
-                                                return this.elements;                                                                       // MakerGen.cs:404
-                                            }                                                                                               // MakerGen.cs:405
-                                        }                                                                                                   // MakerGen.cs:406
-                                        Type_Component_Elements elements;                                                                   // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                                        public Type_Component()                                                                             // MakerGen.cs:410
-                                        {                                                                                                   // MakerGen.cs:411
-                                        }                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                 // MakerGen.cs:416
-                                        {                                                                                                   // MakerGen.cs:417
-                                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                              // MakerGen.cs:418
-                                            {                                                                                               // MakerGen.cs:419
-                                                Path = "MeasureReport.group.stratifier.stratum.component",                                  // MakerGen.cs:420
-                                                ElementId = "MeasureReport.group.stratifier.stratum.component"                              // MakerGen.cs:421
-                                            });                                                                                             // MakerGen.cs:422
-                                            if (this.elements != null)                                                                      // MakerGen.cs:423
-                                                this.elements.Write(sDef);                                                                  // MakerGen.cs:424
-                                        }                                                                                                   // MakerGen.cs:425
-                                    }                                                                                                       // MakerGen.cs:426
-                                    // 24. MeasureReport.group.stratifier.stratum.population
-                                    public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase                                // MakerGen.cs:376
-                                    {                                                                                                       // MakerGen.cs:377
-                                        public class Type_Population_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                 // MakerGen.cs:378
-                                        {                                                                                                   // MakerGen.cs:379
-                                            // 25. MeasureReport.group.stratifier.stratum.population.code
-                                            public ElementDefinitionInfo Element_Code;                                                      // MakerGen.cs:211
-                                            // 26. MeasureReport.group.stratifier.stratum.population.count
-                                            public ElementDefinitionInfo Element_Count;                                                     // MakerGen.cs:211
-                                            // 27. MeasureReport.group.stratifier.stratum.population.subjectResults
-                                            public ElementDefinitionInfo Element_SubjectResults;                                            // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                                            public Type_Population_Elements()                                                               // MakerGen.cs:384
-                                            {                                                                                               // MakerGen.cs:385
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 25. MeasureReport.group.stratifier.stratum.population.code
-                                                    this.Element_Code = new ElementDefinitionInfo                                           // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Code",                                                              // MakerGen.cs:230
-                                                        Path= "MeasureReport.group.stratifier.stratum.population.code",                     // MakerGen.cs:231
-                                                        Id = "MeasureReport.group.stratifier.stratum.population.code",                      // MakerGen.cs:232
-                                                        Min = 0,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                          // MakerGen.cs:310
-                                                            {                                                                               // MakerGen.cs:311
-                                                            }                                                                               // MakerGen.cs:314
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 26. MeasureReport.group.stratifier.stratum.population.count
-                                                    this.Element_Count = new ElementDefinitionInfo                                          // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Count",                                                             // MakerGen.cs:230
-                                                        Path= "MeasureReport.group.stratifier.stratum.population.count",                    // MakerGen.cs:231
-                                                        Id = "MeasureReport.group.stratifier.stratum.population.count",                     // MakerGen.cs:232
-                                                        Min = 0,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Primitive.Integer                                     // MakerGen.cs:295
-                                                            {                                                                               // MakerGen.cs:296
-                                                            }                                                                               // MakerGen.cs:299
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 27. MeasureReport.group.stratifier.stratum.population.subjectResults
-                                                    this.Element_SubjectResults = new ElementDefinitionInfo                                 // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_SubjectResults",                                                    // MakerGen.cs:230
-                                                        Path= "MeasureReport.group.stratifier.stratum.population.subjectResults",           // MakerGen.cs:231
-                                                        Id = "MeasureReport.group.stratifier.stratum.population.subjectResults",            // MakerGen.cs:232
-                                                        Min = 0,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Complex.Type_Reference                                // MakerGen.cs:338
-                                                            {                                                                               // MakerGen.cs:339
-                                                                TargetProfile = new String[]                                                // MakerGen.cs:341
-                                                                {                                                                           // CodeEditorExtensions.cs:28
-                                                                    "http://hl7.org/fhir/StructureDefinition/List"                          // MakerGen.cs:341
-                                                                }                                                                           // CodeEditorExtensions.cs:34
-                                                            }                                                                               // MakerGen.cs:342
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                            }                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                             // MakerGen.cs:390
-                                            {                                                                                               // MakerGen.cs:391
-                                                base.Write(sDef);                                                                           // MakerGen.cs:392
-                                                Element_Code.Write(sDef);                                                                   // MakerGen.cs:215
-                                                Element_Count.Write(sDef);                                                                  // MakerGen.cs:215
-                                                Element_SubjectResults.Write(sDef);                                                         // MakerGen.cs:215
-                                            }                                                                                               // MakerGen.cs:394
-                                        }                                                                                                   // MakerGen.cs:396
-                                        public Type_Population_Elements Elements                                                            // MakerGen.cs:398
-                                        {                                                                                                   // MakerGen.cs:399
-                                            get                                                                                             // MakerGen.cs:400
-                                            {                                                                                               // MakerGen.cs:401
-                                                if (this.elements == null)                                                                  // MakerGen.cs:402
-                                                    this.elements = new Type_Population_Elements();                                         // MakerGen.cs:403
-                                                return this.elements;                                                                       // MakerGen.cs:404
-                                            }                                                                                               // MakerGen.cs:405
-                                        }                                                                                                   // MakerGen.cs:406
-                                        Type_Population_Elements elements;                                                                  // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                                        public Type_Population()                                                                            // MakerGen.cs:410
-                                        {                                                                                                   // MakerGen.cs:411
-                                        }                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                 // MakerGen.cs:416
-                                        {                                                                                                   // MakerGen.cs:417
-                                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                              // MakerGen.cs:418
-                                            {                                                                                               // MakerGen.cs:419
-                                                Path = "MeasureReport.group.stratifier.stratum.population",                                 // MakerGen.cs:420
-                                                ElementId = "MeasureReport.group.stratifier.stratum.population"                             // MakerGen.cs:421
-                                            });                                                                                             // MakerGen.cs:422
-                                            if (this.elements != null)                                                                      // MakerGen.cs:423
-                                                this.elements.Write(sDef);                                                                  // MakerGen.cs:424
-                                        }                                                                                                   // MakerGen.cs:425
-                                    }                                                                                                       // MakerGen.cs:426
-                                    // 20. MeasureReport.group.stratifier.stratum.value
-                                    public ElementDefinitionInfo Element_Value;                                                             // MakerGen.cs:211
-                                    // 21. MeasureReport.group.stratifier.stratum.component
-                                    public ElementDefinitionInfo Element_Component;                                                         // MakerGen.cs:211
-                                    // 24. MeasureReport.group.stratifier.stratum.population
-                                    public ElementDefinitionInfo Element_Population;                                                        // MakerGen.cs:211
-                                    // 28. MeasureReport.group.stratifier.stratum.measureScore
-                                    public ElementDefinitionInfo Element_MeasureScore;                                                      // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                                    public Type_Stratum_Elements()                                                                          // MakerGen.cs:384
-                                    {                                                                                                       // MakerGen.cs:385
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 20. MeasureReport.group.stratifier.stratum.value
-                                            this.Element_Value = new ElementDefinitionInfo                                                  // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Value",                                                                     // MakerGen.cs:230
-                                                Path= "MeasureReport.group.stratifier.stratum.value",                                       // MakerGen.cs:231
-                                                Id = "MeasureReport.group.stratifier.stratum.value",                                        // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = 1,                                                                                    // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                  // MakerGen.cs:310
-                                                    {                                                                                       // MakerGen.cs:311
-                                                    }                                                                                       // MakerGen.cs:314
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 21. MeasureReport.group.stratifier.stratum.component
-                                            this.Element_Component = new ElementDefinitionInfo                                              // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Component",                                                                 // MakerGen.cs:230
-                                                Path= "MeasureReport.group.stratifier.stratum.component",                                   // MakerGen.cs:231
-                                                Id = "MeasureReport.group.stratifier.stratum.component",                                    // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = -1,                                                                                   // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new Type_Component                                                                      // MakerGen.cs:254
-                                                    {                                                                                       // MakerGen.cs:255
-                                                    }                                                                                       // MakerGen.cs:256
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 24. MeasureReport.group.stratifier.stratum.population
-                                            this.Element_Population = new ElementDefinitionInfo                                             // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Population",                                                                // MakerGen.cs:230
-                                                Path= "MeasureReport.group.stratifier.stratum.population",                                  // MakerGen.cs:231
-                                                Id = "MeasureReport.group.stratifier.stratum.population",                                   // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = -1,                                                                                   // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new Type_Population                                                                     // MakerGen.cs:254
-                                                    {                                                                                       // MakerGen.cs:255
-                                                    }                                                                                       // MakerGen.cs:256
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 28. MeasureReport.group.stratifier.stratum.measureScore
-                                            this.Element_MeasureScore = new ElementDefinitionInfo                                           // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_MeasureScore",                                                              // MakerGen.cs:230
-                                                Path= "MeasureReport.group.stratifier.stratum.measureScore",                                // MakerGen.cs:231
-                                                Id = "MeasureReport.group.stratifier.stratum.measureScore",                                 // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = 1,                                                                                    // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                         // MakerGen.cs:350
-                                                    {                                                                                       // MakerGen.cs:351
-                                                    }                                                                                       // MakerGen.cs:352
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                    }                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:390
-                                    {                                                                                                       // MakerGen.cs:391
-                                        base.Write(sDef);                                                                                   // MakerGen.cs:392
-                                        Element_Value.Write(sDef);                                                                          // MakerGen.cs:215
-                                        Element_Component.Write(sDef);                                                                      // MakerGen.cs:215
-                                        Element_Population.Write(sDef);                                                                     // MakerGen.cs:215
-                                        Element_MeasureScore.Write(sDef);                                                                   // MakerGen.cs:215
-                                    }                                                                                                       // MakerGen.cs:394
-                                }                                                                                                           // MakerGen.cs:396
-                                public Type_Stratum_Elements Elements                                                                       // MakerGen.cs:398
-                                {                                                                                                           // MakerGen.cs:399
-                                    get                                                                                                     // MakerGen.cs:400
-                                    {                                                                                                       // MakerGen.cs:401
-                                        if (this.elements == null)                                                                          // MakerGen.cs:402
-                                            this.elements = new Type_Stratum_Elements();                                                    // MakerGen.cs:403
-                                        return this.elements;                                                                               // MakerGen.cs:404
-                                    }                                                                                                       // MakerGen.cs:405
-                                }                                                                                                           // MakerGen.cs:406
-                                Type_Stratum_Elements elements;                                                                             // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                                public Type_Stratum()                                                                                       // MakerGen.cs:410
-                                {                                                                                                           // MakerGen.cs:411
-                                }                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:416
-                                {                                                                                                           // MakerGen.cs:417
-                                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                      // MakerGen.cs:418
-                                    {                                                                                                       // MakerGen.cs:419
-                                        Path = "MeasureReport.group.stratifier.stratum",                                                    // MakerGen.cs:420
-                                        ElementId = "MeasureReport.group.stratifier.stratum"                                                // MakerGen.cs:421
-                                    });                                                                                                     // MakerGen.cs:422
-                                    if (this.elements != null)                                                                              // MakerGen.cs:423
-                                        this.elements.Write(sDef);                                                                          // MakerGen.cs:424
-                                }                                                                                                           // MakerGen.cs:425
-                            }                                                                                                               // MakerGen.cs:426
-                            // 18. MeasureReport.group.stratifier.code
-                            public ElementDefinitionInfo Element_Code;                                                                      // MakerGen.cs:211
-                            // 19. MeasureReport.group.stratifier.stratum
-                            public ElementDefinitionInfo Element_Stratum;                                                                   // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Stratifier_Elements()                                                                               // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 18. MeasureReport.group.stratifier.code
-                                    this.Element_Code = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Code",                                                                              // MakerGen.cs:230
-                                        Path= "MeasureReport.group.stratifier.code",                                                        // MakerGen.cs:231
-                                        Id = "MeasureReport.group.stratifier.code",                                                         // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = -1,                                                                                           // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                          // MakerGen.cs:310
-                                            {                                                                                               // MakerGen.cs:311
-                                            }                                                                                               // MakerGen.cs:314
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 19. MeasureReport.group.stratifier.stratum
-                                    this.Element_Stratum = new ElementDefinitionInfo                                                        // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Stratum",                                                                           // MakerGen.cs:230
-                                        Path= "MeasureReport.group.stratifier.stratum",                                                     // MakerGen.cs:231
-                                        Id = "MeasureReport.group.stratifier.stratum",                                                      // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = -1,                                                                                           // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new Type_Stratum                                                                                // MakerGen.cs:254
-                                            {                                                                                               // MakerGen.cs:255
-                                            }                                                                                               // MakerGen.cs:256
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Code.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Stratum.Write(sDef);                                                                                // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Stratifier_Elements Elements                                                                            // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Stratifier_Elements();                                                         // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Stratifier_Elements elements;                                                                                  // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Stratifier()                                                                                            // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "MeasureReport.group.stratifier",                                                                    // MakerGen.cs:420
-                                ElementId = "MeasureReport.group.stratifier"                                                                // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
+                        // 25. MeasureReport.group.stratifier.stratum.population.code
+                        public ElementDefinitionInfo Element_Code;                                                                          // MakerGen.cs:212
+                        // 26. MeasureReport.group.stratifier.stratum.population.count
+                        public ElementDefinitionInfo Element_Count;                                                                         // MakerGen.cs:212
+                        // 27. MeasureReport.group.stratifier.stratum.population.subjectResults
+                        public ElementDefinitionInfo Element_SubjectResults;                                                                // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:383
+                        {                                                                                                                   // MakerGen.cs:384
+                            base.Write(sDef);                                                                                               // MakerGen.cs:385
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:386
+                            {                                                                                                               // MakerGen.cs:387
+                                Path = "MeasureReport.group.stratifier.stratum.population",                                                 // MakerGen.cs:388
+                                ElementId = "MeasureReport.group.stratifier.stratum.population"                                             // MakerGen.cs:389
+                            });                                                                                                             // MakerGen.cs:390
+                            Element_Code.Write(sDef);                                                                                       // MakerGen.cs:216
+                            Element_Count.Write(sDef);                                                                                      // MakerGen.cs:216
+                            Element_SubjectResults.Write(sDef);                                                                             // MakerGen.cs:216
+                        }                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                        public Type_Population()                                                                                            // MakerGen.cs:395
+                        {                                                                                                                   // MakerGen.cs:396
+                            {                                                                                                               // MakerGen.cs:227
+                                // 25. MeasureReport.group.stratifier.stratum.population.code
+                                this.Element_Code = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Code",                                                                                  // MakerGen.cs:231
+                                    Path= "MeasureReport.group.stratifier.stratum.population.code",                                         // MakerGen.cs:232
+                                    Id = "MeasureReport.group.stratifier.stratum.population.code",                                          // MakerGen.cs:233
+                                    Min = 0,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:311
+                                        {                                                                                                   // MakerGen.cs:312
+                                        }                                                                                                   // MakerGen.cs:315
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:227
+                                // 26. MeasureReport.group.stratifier.stratum.population.count
+                                this.Element_Count = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Count",                                                                                 // MakerGen.cs:231
+                                    Path= "MeasureReport.group.stratifier.stratum.population.count",                                        // MakerGen.cs:232
+                                    Id = "MeasureReport.group.stratifier.stratum.population.count",                                         // MakerGen.cs:233
+                                    Min = 0,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                               // MakerGen.cs:296
+                                        {                                                                                                   // MakerGen.cs:297
+                                        }                                                                                                   // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:227
+                                // 27. MeasureReport.group.stratifier.stratum.population.subjectResults
+                                this.Element_SubjectResults = new ElementDefinitionInfo                                                     // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_SubjectResults",                                                                        // MakerGen.cs:231
+                                    Path= "MeasureReport.group.stratifier.stratum.population.subjectResults",                               // MakerGen.cs:232
+                                    Id = "MeasureReport.group.stratifier.stratum.population.subjectResults",                                // MakerGen.cs:233
+                                    Min = 0,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                    // MakerGen.cs:339
+                                        {                                                                                                   // MakerGen.cs:340
+                                            TargetProfile = new String[]                                                                    // MakerGen.cs:342
+                                            {                                                                                               // CodeEditorExtensions.cs:28
+                                                "http://hl7.org/fhir/StructureDefinition/List"                                              // MakerGen.cs:342
+                                            }                                                                                               // CodeEditorExtensions.cs:34
+                                        }                                                                                                   // MakerGen.cs:343
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                        }                                                                                                                   // MakerGen.cs:398
+                    }                                                                                                                       // MakerGen.cs:400
+                    // 20. MeasureReport.group.stratifier.stratum.value
+                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:212
+                    // 21. MeasureReport.group.stratifier.stratum.component
+                    public ElementDefinitionInfo Element_Component;                                                                         // MakerGen.cs:212
+                    // 24. MeasureReport.group.stratifier.stratum.population
+                    public ElementDefinitionInfo Element_Population;                                                                        // MakerGen.cs:212
+                    // 28. MeasureReport.group.stratifier.stratum.measureScore
+                    public ElementDefinitionInfo Element_MeasureScore;                                                                      // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
+                            Path = "MeasureReport.group.stratifier.stratum",                                                                // MakerGen.cs:388
+                            ElementId = "MeasureReport.group.stratifier.stratum"                                                            // MakerGen.cs:389
+                        });                                                                                                                 // MakerGen.cs:390
+                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:216
+                        Element_Component.Write(sDef);                                                                                      // MakerGen.cs:216
+                        Element_Population.Write(sDef);                                                                                     // MakerGen.cs:216
+                        Element_MeasureScore.Write(sDef);                                                                                   // MakerGen.cs:216
+                    }                                                                                                                       // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                    public Type_Stratum()                                                                                                   // MakerGen.cs:395
+                    {                                                                                                                       // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 20. MeasureReport.group.stratifier.stratum.value
+                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Value",                                                                                     // MakerGen.cs:231
+                                Path= "MeasureReport.group.stratifier.stratum.value",                                                       // MakerGen.cs:232
+                                Id = "MeasureReport.group.stratifier.stratum.value",                                                        // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = 1,                                                                                                    // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:311
+                                    {                                                                                                       // MakerGen.cs:312
+                                    }                                                                                                       // MakerGen.cs:315
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 21. MeasureReport.group.stratifier.stratum.component
+                            this.Element_Component = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Component",                                                                                 // MakerGen.cs:231
+                                Path= "MeasureReport.group.stratifier.stratum.component",                                                   // MakerGen.cs:232
+                                Id = "MeasureReport.group.stratifier.stratum.component",                                                    // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = -1,                                                                                                   // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new Type_Component                                                                                      // MakerGen.cs:255
+                                    {                                                                                                       // MakerGen.cs:256
+                                    }                                                                                                       // MakerGen.cs:257
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 24. MeasureReport.group.stratifier.stratum.population
+                            this.Element_Population = new ElementDefinitionInfo                                                             // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Population",                                                                                // MakerGen.cs:231
+                                Path= "MeasureReport.group.stratifier.stratum.population",                                                  // MakerGen.cs:232
+                                Id = "MeasureReport.group.stratifier.stratum.population",                                                   // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = -1,                                                                                                   // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new Type_Population                                                                                     // MakerGen.cs:255
+                                    {                                                                                                       // MakerGen.cs:256
+                                    }                                                                                                       // MakerGen.cs:257
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 28. MeasureReport.group.stratifier.stratum.measureScore
+                            this.Element_MeasureScore = new ElementDefinitionInfo                                                           // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_MeasureScore",                                                                              // MakerGen.cs:231
+                                Path= "MeasureReport.group.stratifier.stratum.measureScore",                                                // MakerGen.cs:232
+                                Id = "MeasureReport.group.stratifier.stratum.measureScore",                                                 // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = 1,                                                                                                    // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:351
+                                    {                                                                                                       // MakerGen.cs:352
+                                    }                                                                                                       // MakerGen.cs:353
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                    }                                                                                                                       // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:400
+                // 18. MeasureReport.group.stratifier.code
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:212
+                // 19. MeasureReport.group.stratifier.stratum
+                public ElementDefinitionInfo Element_Stratum;                                                                               // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "MeasureReport.group.stratifier",                                                                            // MakerGen.cs:388
+                        ElementId = "MeasureReport.group.stratifier"                                                                        // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Stratum.Write(sDef);                                                                                            // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Stratifier()                                                                                                    // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 18. MeasureReport.group.stratifier.code
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:231
+                            Path= "MeasureReport.group.stratifier.code",                                                                    // MakerGen.cs:232
+                            Id = "MeasureReport.group.stratifier.code",                                                                     // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = -1,                                                                                                       // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
+                                {                                                                                                           // MakerGen.cs:312
+                                }                                                                                                           // MakerGen.cs:315
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 19. MeasureReport.group.stratifier.stratum
+                        this.Element_Stratum = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Stratum",                                                                                       // MakerGen.cs:231
+                            Path= "MeasureReport.group.stratifier.stratum",                                                                 // MakerGen.cs:232
+                            Id = "MeasureReport.group.stratifier.stratum",                                                                  // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = -1,                                                                                                       // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new Type_Stratum                                                                                            // MakerGen.cs:255
+                                {                                                                                                           // MakerGen.cs:256
+                                }                                                                                                           // MakerGen.cs:257
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 11. MeasureReport.group.code
+            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:212
+            // 12. MeasureReport.group.population
+            public ElementDefinitionInfo Element_Population;                                                                                // MakerGen.cs:212
+            // 16. MeasureReport.group.measureScore
+            public ElementDefinitionInfo Element_MeasureScore;                                                                              // MakerGen.cs:212
+            // 17. MeasureReport.group.stratifier
+            public ElementDefinitionInfo Element_Stratifier;                                                                                // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "MeasureReport.group",                                                                                           // MakerGen.cs:388
+                    ElementId = "MeasureReport.group"                                                                                       // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Population.Write(sDef);                                                                                             // MakerGen.cs:216
+                Element_MeasureScore.Write(sDef);                                                                                           // MakerGen.cs:216
+                Element_Stratifier.Write(sDef);                                                                                             // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Group()                                                                                                             // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 11. MeasureReport.group.code
-                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:211
+                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Code",                                                                                              // MakerGen.cs:231
+                        Path= "MeasureReport.group.code",                                                                                   // MakerGen.cs:232
+                        Id = "MeasureReport.group.code",                                                                                    // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 12. MeasureReport.group.population
-                    public ElementDefinitionInfo Element_Population;                                                                        // MakerGen.cs:211
+                    this.Element_Population = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Population",                                                                                        // MakerGen.cs:231
+                        Path= "MeasureReport.group.population",                                                                             // MakerGen.cs:232
+                        Id = "MeasureReport.group.population",                                                                              // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Population                                                                                             // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 16. MeasureReport.group.measureScore
-                    public ElementDefinitionInfo Element_MeasureScore;                                                                      // MakerGen.cs:211
+                    this.Element_MeasureScore = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_MeasureScore",                                                                                      // MakerGen.cs:231
+                        Path= "MeasureReport.group.measureScore",                                                                           // MakerGen.cs:232
+                        Id = "MeasureReport.group.measureScore",                                                                            // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 17. MeasureReport.group.stratifier
-                    public ElementDefinitionInfo Element_Stratifier;                                                                        // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Group_Elements()                                                                                            // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 11. MeasureReport.group.code
-                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Code",                                                                                      // MakerGen.cs:230
-                                Path= "MeasureReport.group.code",                                                                           // MakerGen.cs:231
-                                Id = "MeasureReport.group.code",                                                                            // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 12. MeasureReport.group.population
-                            this.Element_Population = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Population",                                                                                // MakerGen.cs:230
-                                Path= "MeasureReport.group.population",                                                                     // MakerGen.cs:231
-                                Id = "MeasureReport.group.population",                                                                      // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Population                                                                                     // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 16. MeasureReport.group.measureScore
-                            this.Element_MeasureScore = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_MeasureScore",                                                                              // MakerGen.cs:230
-                                Path= "MeasureReport.group.measureScore",                                                                   // MakerGen.cs:231
-                                Id = "MeasureReport.group.measureScore",                                                                    // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 17. MeasureReport.group.stratifier
-                            this.Element_Stratifier = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Stratifier",                                                                                // MakerGen.cs:230
-                                Path= "MeasureReport.group.stratifier",                                                                     // MakerGen.cs:231
-                                Id = "MeasureReport.group.stratifier",                                                                      // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Stratifier                                                                                     // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Population.Write(sDef);                                                                                     // MakerGen.cs:215
-                        Element_MeasureScore.Write(sDef);                                                                                   // MakerGen.cs:215
-                        Element_Stratifier.Write(sDef);                                                                                     // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Group_Elements Elements                                                                                         // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Group_Elements();                                                                      // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Group_Elements elements;                                                                                               // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Group()                                                                                                         // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "MeasureReport.group",                                                                                       // MakerGen.cs:420
-                        ElementId = "MeasureReport.group"                                                                                   // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. MeasureReport.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 2. MeasureReport.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 3. MeasureReport.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:211
-            // 4. MeasureReport.measure
-            public ElementDefinitionInfo Element_Measure;                                                                                   // MakerGen.cs:211
-            // 5. MeasureReport.subject
-            public ElementDefinitionInfo Element_Subject;                                                                                   // MakerGen.cs:211
-            // 6. MeasureReport.date
-            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:211
-            // 7. MeasureReport.reporter
-            public ElementDefinitionInfo Element_Reporter;                                                                                  // MakerGen.cs:211
-            // 8. MeasureReport.period
-            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:211
-            // 9. MeasureReport.improvementNotation
-            public ElementDefinitionInfo Element_ImprovementNotation;                                                                       // MakerGen.cs:211
-            // 10. MeasureReport.group
-            public ElementDefinitionInfo Element_Group;                                                                                     // MakerGen.cs:211
-            // 29. MeasureReport.evaluatedResource
-            public ElementDefinitionInfo Element_EvaluatedResource;                                                                         // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_MeasureReport_Elements()                                                                                        // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. MeasureReport.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "MeasureReport.identifier",                                                                                   // MakerGen.cs:231
-                        Id = "MeasureReport.identifier",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. MeasureReport.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "MeasureReport.status",                                                                                       // MakerGen.cs:231
-                        Id = "MeasureReport.status",                                                                                        // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. MeasureReport.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:230
-                        Path= "MeasureReport.type",                                                                                         // MakerGen.cs:231
-                        Id = "MeasureReport.type",                                                                                          // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. MeasureReport.measure
-                    this.Element_Measure = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Measure",                                                                                           // MakerGen.cs:230
-                        Path= "MeasureReport.measure",                                                                                      // MakerGen.cs:231
-                        Id = "MeasureReport.measure",                                                                                       // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:298
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Measure"                                                       // MakerGen.cs:298
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. MeasureReport.subject
-                    this.Element_Subject = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Subject",                                                                                           // MakerGen.cs:230
-                        Path= "MeasureReport.subject",                                                                                      // MakerGen.cs:231
-                        Id = "MeasureReport.subject",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Location",                                                     // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Device",                                                       // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Group"                                                         // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. MeasureReport.date
-                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Date",                                                                                              // MakerGen.cs:230
-                        Path= "MeasureReport.date",                                                                                         // MakerGen.cs:231
-                        Id = "MeasureReport.date",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. MeasureReport.reporter
-                    this.Element_Reporter = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Reporter",                                                                                          // MakerGen.cs:230
-                        Path= "MeasureReport.reporter",                                                                                     // MakerGen.cs:231
-                        Id = "MeasureReport.reporter",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Location",                                                     // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. MeasureReport.period
-                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Period",                                                                                            // MakerGen.cs:230
-                        Path= "MeasureReport.period",                                                                                       // MakerGen.cs:231
-                        Id = "MeasureReport.period",                                                                                        // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. MeasureReport.improvementNotation
-                    this.Element_ImprovementNotation = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ImprovementNotation",                                                                               // MakerGen.cs:230
-                        Path= "MeasureReport.improvementNotation",                                                                          // MakerGen.cs:231
-                        Id = "MeasureReport.improvementNotation",                                                                           // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. MeasureReport.group
-                    this.Element_Group = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Group",                                                                                             // MakerGen.cs:230
-                        Path= "MeasureReport.group",                                                                                        // MakerGen.cs:231
-                        Id = "MeasureReport.group",                                                                                         // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Group                                                                                                  // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 29. MeasureReport.evaluatedResource
-                    this.Element_EvaluatedResource = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_EvaluatedResource",                                                                                 // MakerGen.cs:230
-                        Path= "MeasureReport.evaluatedResource",                                                                            // MakerGen.cs:231
-                        Id = "MeasureReport.evaluatedResource",                                                                             // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Measure.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Subject.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Reporter.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_ImprovementNotation.Write(sDef);                                                                                    // MakerGen.cs:215
-                Element_Group.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_EvaluatedResource.Write(sDef);                                                                                      // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_MeasureReport_Elements Elements                                                                                     // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_MeasureReport_Elements();                                                                  // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_MeasureReport_Elements elements;                                                                                           // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_MeasureReport()                                                                                                     // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "MeasureReport";                                                                                                    // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MeasureReport";                                                             // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "MeasureReport",                                                                                                     // MakerGen.cs:420
-                ElementId = "MeasureReport"                                                                                                 // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_Stratifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Stratifier",                                                                                        // MakerGen.cs:231
+                        Path= "MeasureReport.group.stratifier",                                                                             // MakerGen.cs:232
+                        Id = "MeasureReport.group.stratifier",                                                                              // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Stratifier                                                                                             // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. MeasureReport.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 2. MeasureReport.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 3. MeasureReport.type
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:212
+        // 4. MeasureReport.measure
+        public ElementDefinitionInfo Element_Measure;                                                                                       // MakerGen.cs:212
+        // 5. MeasureReport.subject
+        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:212
+        // 6. MeasureReport.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
+        // 7. MeasureReport.reporter
+        public ElementDefinitionInfo Element_Reporter;                                                                                      // MakerGen.cs:212
+        // 8. MeasureReport.period
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:212
+        // 9. MeasureReport.improvementNotation
+        public ElementDefinitionInfo Element_ImprovementNotation;                                                                           // MakerGen.cs:212
+        // 10. MeasureReport.group
+        public ElementDefinitionInfo Element_Group;                                                                                         // MakerGen.cs:212
+        // 29. MeasureReport.evaluatedResource
+        public ElementDefinitionInfo Element_EvaluatedResource;                                                                             // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "MeasureReport",                                                                                                     // MakerGen.cs:388
+                ElementId = "MeasureReport"                                                                                                 // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Measure.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Reporter.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_ImprovementNotation.Write(sDef);                                                                                        // MakerGen.cs:216
+            Element_Group.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_EvaluatedResource.Write(sDef);                                                                                          // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_MeasureReport()                                                                                                     // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. MeasureReport.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "MeasureReport.identifier",                                                                                       // MakerGen.cs:232
+                    Id = "MeasureReport.identifier",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. MeasureReport.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "MeasureReport.status",                                                                                           // MakerGen.cs:232
+                    Id = "MeasureReport.status",                                                                                            // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. MeasureReport.type
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:231
+                    Path= "MeasureReport.type",                                                                                             // MakerGen.cs:232
+                    Id = "MeasureReport.type",                                                                                              // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. MeasureReport.measure
+                this.Element_Measure = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Measure",                                                                                               // MakerGen.cs:231
+                    Path= "MeasureReport.measure",                                                                                          // MakerGen.cs:232
+                    Id = "MeasureReport.measure",                                                                                           // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Measure"                                                           // MakerGen.cs:299
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. MeasureReport.subject
+                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Subject",                                                                                               // MakerGen.cs:231
+                    Path= "MeasureReport.subject",                                                                                          // MakerGen.cs:232
+                    Id = "MeasureReport.subject",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Location",                                                         // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. MeasureReport.date
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
+                    Path= "MeasureReport.date",                                                                                             // MakerGen.cs:232
+                    Id = "MeasureReport.date",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. MeasureReport.reporter
+                this.Element_Reporter = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Reporter",                                                                                              // MakerGen.cs:231
+                    Path= "MeasureReport.reporter",                                                                                         // MakerGen.cs:232
+                    Id = "MeasureReport.reporter",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Location",                                                         // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. MeasureReport.period
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:231
+                    Path= "MeasureReport.period",                                                                                           // MakerGen.cs:232
+                    Id = "MeasureReport.period",                                                                                            // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. MeasureReport.improvementNotation
+                this.Element_ImprovementNotation = new ElementDefinitionInfo                                                                // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ImprovementNotation",                                                                                   // MakerGen.cs:231
+                    Path= "MeasureReport.improvementNotation",                                                                              // MakerGen.cs:232
+                    Id = "MeasureReport.improvementNotation",                                                                               // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. MeasureReport.group
+                this.Element_Group = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Group",                                                                                                 // MakerGen.cs:231
+                    Path= "MeasureReport.group",                                                                                            // MakerGen.cs:232
+                    Id = "MeasureReport.group",                                                                                             // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Group                                                                                                      // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 29. MeasureReport.evaluatedResource
+                this.Element_EvaluatedResource = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_EvaluatedResource",                                                                                     // MakerGen.cs:231
+                    Path= "MeasureReport.evaluatedResource",                                                                                // MakerGen.cs:232
+                    Id = "MeasureReport.evaluatedResource",                                                                                 // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "MeasureReport";                                                                                                    // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MeasureReport";                                                             // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

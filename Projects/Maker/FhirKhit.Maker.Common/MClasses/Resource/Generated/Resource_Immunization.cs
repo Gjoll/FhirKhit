@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "Immunization",
@@ -781,1100 +781,985 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'Immunization'
     /// </summary>
     // 0. Immunization
     public class Resource_Immunization : FhirKhit.Maker.Common.Resource.ResourceBase                                                        // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_Immunization_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 18. Immunization.performer
-            public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_Performer_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+        // 18. Immunization.performer
+        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 19. Immunization.performer.function
+            public ElementDefinitionInfo Element_Function;                                                                                  // MakerGen.cs:212
+            // 20. Immunization.performer.actor
+            public ElementDefinitionInfo Element_Actor;                                                                                     // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "Immunization.performer",                                                                                        // MakerGen.cs:388
+                    ElementId = "Immunization.performer"                                                                                    // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Function.Write(sDef);                                                                                               // MakerGen.cs:216
+                Element_Actor.Write(sDef);                                                                                                  // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Performer()                                                                                                         // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 19. Immunization.performer.function
-                    public ElementDefinitionInfo Element_Function;                                                                          // MakerGen.cs:211
+                    this.Element_Function = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Function",                                                                                          // MakerGen.cs:231
+                        Path= "Immunization.performer.function",                                                                            // MakerGen.cs:232
+                        Id = "Immunization.performer.function",                                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 20. Immunization.performer.actor
-                    public ElementDefinitionInfo Element_Actor;                                                                             // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Performer_Elements()                                                                                        // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 19. Immunization.performer.function
-                            this.Element_Function = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Function",                                                                                  // MakerGen.cs:230
-                                Path= "Immunization.performer.function",                                                                    // MakerGen.cs:231
-                                Id = "Immunization.performer.function",                                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 20. Immunization.performer.actor
-                            this.Element_Actor = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Actor",                                                                                     // MakerGen.cs:230
-                                Path= "Immunization.performer.actor",                                                                       // MakerGen.cs:231
-                                Id = "Immunization.performer.actor",                                                                        // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:338
-                                    {                                                                                                       // MakerGen.cs:339
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:341
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Practitioner",                                         // MakerGen.cs:341
-                                            "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                     // MakerGen.cs:341
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:341
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:342
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Function.Write(sDef);                                                                                       // MakerGen.cs:215
-                        Element_Actor.Write(sDef);                                                                                          // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Performer_Elements Elements                                                                                     // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Performer_Elements();                                                                  // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Performer_Elements elements;                                                                                           // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Performer()                                                                                                     // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "Immunization.performer",                                                                                    // MakerGen.cs:420
-                        ElementId = "Immunization.performer"                                                                                // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 26. Immunization.education
-            public class Type_Education : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_Education_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                          // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_Actor = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Actor",                                                                                             // MakerGen.cs:231
+                        Path= "Immunization.performer.actor",                                                                               // MakerGen.cs:232
+                        Id = "Immunization.performer.actor",                                                                                // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
+                            {                                                                                                               // MakerGen.cs:340
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:342
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:342
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:342
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:343
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 26. Immunization.education
+        public class Type_Education : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 27. Immunization.education.documentType
+            public ElementDefinitionInfo Element_DocumentType;                                                                              // MakerGen.cs:212
+            // 28. Immunization.education.reference
+            public ElementDefinitionInfo Element_Reference;                                                                                 // MakerGen.cs:212
+            // 29. Immunization.education.publicationDate
+            public ElementDefinitionInfo Element_PublicationDate;                                                                           // MakerGen.cs:212
+            // 30. Immunization.education.presentationDate
+            public ElementDefinitionInfo Element_PresentationDate;                                                                          // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "Immunization.education",                                                                                        // MakerGen.cs:388
+                    ElementId = "Immunization.education"                                                                                    // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_DocumentType.Write(sDef);                                                                                           // MakerGen.cs:216
+                Element_Reference.Write(sDef);                                                                                              // MakerGen.cs:216
+                Element_PublicationDate.Write(sDef);                                                                                        // MakerGen.cs:216
+                Element_PresentationDate.Write(sDef);                                                                                       // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Education()                                                                                                         // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 27. Immunization.education.documentType
-                    public ElementDefinitionInfo Element_DocumentType;                                                                      // MakerGen.cs:211
+                    this.Element_DocumentType = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_DocumentType",                                                                                      // MakerGen.cs:231
+                        Path= "Immunization.education.documentType",                                                                        // MakerGen.cs:232
+                        Id = "Immunization.education.documentType",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 28. Immunization.education.reference
-                    public ElementDefinitionInfo Element_Reference;                                                                         // MakerGen.cs:211
+                    this.Element_Reference = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Reference",                                                                                         // MakerGen.cs:231
+                        Path= "Immunization.education.reference",                                                                           // MakerGen.cs:232
+                        Id = "Immunization.education.reference",                                                                            // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 29. Immunization.education.publicationDate
-                    public ElementDefinitionInfo Element_PublicationDate;                                                                   // MakerGen.cs:211
+                    this.Element_PublicationDate = new ElementDefinitionInfo                                                                // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_PublicationDate",                                                                                   // MakerGen.cs:231
+                        Path= "Immunization.education.publicationDate",                                                                     // MakerGen.cs:232
+                        Id = "Immunization.education.publicationDate",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 30. Immunization.education.presentationDate
-                    public ElementDefinitionInfo Element_PresentationDate;                                                                  // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Education_Elements()                                                                                        // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 27. Immunization.education.documentType
-                            this.Element_DocumentType = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_DocumentType",                                                                              // MakerGen.cs:230
-                                Path= "Immunization.education.documentType",                                                                // MakerGen.cs:231
-                                Id = "Immunization.education.documentType",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 28. Immunization.education.reference
-                            this.Element_Reference = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Reference",                                                                                 // MakerGen.cs:230
-                                Path= "Immunization.education.reference",                                                                   // MakerGen.cs:231
-                                Id = "Immunization.education.reference",                                                                    // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 29. Immunization.education.publicationDate
-                            this.Element_PublicationDate = new ElementDefinitionInfo                                                        // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_PublicationDate",                                                                           // MakerGen.cs:230
-                                Path= "Immunization.education.publicationDate",                                                             // MakerGen.cs:231
-                                Id = "Immunization.education.publicationDate",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 30. Immunization.education.presentationDate
-                            this.Element_PresentationDate = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_PresentationDate",                                                                          // MakerGen.cs:230
-                                Path= "Immunization.education.presentationDate",                                                            // MakerGen.cs:231
-                                Id = "Immunization.education.presentationDate",                                                             // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_DocumentType.Write(sDef);                                                                                   // MakerGen.cs:215
-                        Element_Reference.Write(sDef);                                                                                      // MakerGen.cs:215
-                        Element_PublicationDate.Write(sDef);                                                                                // MakerGen.cs:215
-                        Element_PresentationDate.Write(sDef);                                                                               // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Education_Elements Elements                                                                                     // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Education_Elements();                                                                  // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Education_Elements elements;                                                                                           // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Education()                                                                                                     // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "Immunization.education",                                                                                    // MakerGen.cs:420
-                        ElementId = "Immunization.education"                                                                                // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 33. Immunization.reaction
-            public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_Reaction_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                           // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_PresentationDate = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_PresentationDate",                                                                                  // MakerGen.cs:231
+                        Path= "Immunization.education.presentationDate",                                                                    // MakerGen.cs:232
+                        Id = "Immunization.education.presentationDate",                                                                     // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 33. Immunization.reaction
+        public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 34. Immunization.reaction.date
+            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:212
+            // 35. Immunization.reaction.detail
+            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:212
+            // 36. Immunization.reaction.reported
+            public ElementDefinitionInfo Element_Reported;                                                                                  // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "Immunization.reaction",                                                                                         // MakerGen.cs:388
+                    ElementId = "Immunization.reaction"                                                                                     // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:216
+                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_Reported.Write(sDef);                                                                                               // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Reaction()                                                                                                          // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 34. Immunization.reaction.date
-                    public ElementDefinitionInfo Element_Date;                                                                              // MakerGen.cs:211
+                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Date",                                                                                              // MakerGen.cs:231
+                        Path= "Immunization.reaction.date",                                                                                 // MakerGen.cs:232
+                        Id = "Immunization.reaction.date",                                                                                  // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 35. Immunization.reaction.detail
-                    public ElementDefinitionInfo Element_Detail;                                                                            // MakerGen.cs:211
+                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Detail",                                                                                            // MakerGen.cs:231
+                        Path= "Immunization.reaction.detail",                                                                               // MakerGen.cs:232
+                        Id = "Immunization.reaction.detail",                                                                                // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
+                            {                                                                                                               // MakerGen.cs:340
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Observation"                                                   // MakerGen.cs:342
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:343
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 36. Immunization.reaction.reported
-                    public ElementDefinitionInfo Element_Reported;                                                                          // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Reaction_Elements()                                                                                         // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 34. Immunization.reaction.date
-                            this.Element_Date = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Date",                                                                                      // MakerGen.cs:230
-                                Path= "Immunization.reaction.date",                                                                         // MakerGen.cs:231
-                                Id = "Immunization.reaction.date",                                                                          // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.DateTime                                                            // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 35. Immunization.reaction.detail
-                            this.Element_Detail = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Detail",                                                                                    // MakerGen.cs:230
-                                Path= "Immunization.reaction.detail",                                                                       // MakerGen.cs:231
-                                Id = "Immunization.reaction.detail",                                                                        // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:338
-                                    {                                                                                                       // MakerGen.cs:339
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:341
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Observation"                                           // MakerGen.cs:341
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:342
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 36. Immunization.reaction.reported
-                            this.Element_Reported = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Reported",                                                                                  // MakerGen.cs:230
-                                Path= "Immunization.reaction.reported",                                                                     // MakerGen.cs:231
-                                Id = "Immunization.reaction.reported",                                                                      // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Date.Write(sDef);                                                                                           // MakerGen.cs:215
-                        Element_Detail.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_Reported.Write(sDef);                                                                                       // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Reaction_Elements Elements                                                                                      // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Reaction_Elements();                                                                   // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Reaction_Elements elements;                                                                                            // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Reaction()                                                                                                      // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "Immunization.reaction",                                                                                     // MakerGen.cs:420
-                        ElementId = "Immunization.reaction"                                                                                 // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 37. Immunization.protocolApplied
-            public class Type_ProtocolApplied : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_ProtocolApplied_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                    // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_Reported = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Reported",                                                                                          // MakerGen.cs:231
+                        Path= "Immunization.reaction.reported",                                                                             // MakerGen.cs:232
+                        Id = "Immunization.reaction.reported",                                                                              // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 37. Immunization.protocolApplied
+        public class Type_ProtocolApplied : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 38. Immunization.protocolApplied.series
+            public ElementDefinitionInfo Element_Series;                                                                                    // MakerGen.cs:212
+            // 39. Immunization.protocolApplied.authority
+            public ElementDefinitionInfo Element_Authority;                                                                                 // MakerGen.cs:212
+            // 40. Immunization.protocolApplied.targetDisease
+            public ElementDefinitionInfo Element_TargetDisease;                                                                             // MakerGen.cs:212
+            // 41. Immunization.protocolApplied.doseNumber[x]
+            public ElementDefinitionInfo Element_DoseNumber;                                                                                // MakerGen.cs:212
+            // 42. Immunization.protocolApplied.seriesDoses[x]
+            public ElementDefinitionInfo Element_SeriesDoses;                                                                               // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "Immunization.protocolApplied",                                                                                  // MakerGen.cs:388
+                    ElementId = "Immunization.protocolApplied"                                                                              // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Series.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_Authority.Write(sDef);                                                                                              // MakerGen.cs:216
+                Element_TargetDisease.Write(sDef);                                                                                          // MakerGen.cs:216
+                Element_DoseNumber.Write(sDef);                                                                                             // MakerGen.cs:216
+                Element_SeriesDoses.Write(sDef);                                                                                            // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_ProtocolApplied()                                                                                                   // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 38. Immunization.protocolApplied.series
-                    public ElementDefinitionInfo Element_Series;                                                                            // MakerGen.cs:211
+                    this.Element_Series = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Series",                                                                                            // MakerGen.cs:231
+                        Path= "Immunization.protocolApplied.series",                                                                        // MakerGen.cs:232
+                        Id = "Immunization.protocolApplied.series",                                                                         // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 39. Immunization.protocolApplied.authority
-                    public ElementDefinitionInfo Element_Authority;                                                                         // MakerGen.cs:211
+                    this.Element_Authority = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Authority",                                                                                         // MakerGen.cs:231
+                        Path= "Immunization.protocolApplied.authority",                                                                     // MakerGen.cs:232
+                        Id = "Immunization.protocolApplied.authority",                                                                      // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
+                            {                                                                                                               // MakerGen.cs:340
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:342
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:343
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 40. Immunization.protocolApplied.targetDisease
-                    public ElementDefinitionInfo Element_TargetDisease;                                                                     // MakerGen.cs:211
+                    this.Element_TargetDisease = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_TargetDisease",                                                                                     // MakerGen.cs:231
+                        Path= "Immunization.protocolApplied.targetDisease",                                                                 // MakerGen.cs:232
+                        Id = "Immunization.protocolApplied.targetDisease",                                                                  // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
+                            {                                                                                                               // MakerGen.cs:312
+                            }                                                                                                               // MakerGen.cs:315
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 41. Immunization.protocolApplied.doseNumber[x]
-                    public ElementDefinitionInfo Element_DoseNumber;                                                                        // MakerGen.cs:211
+                    this.Element_DoseNumber = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_DoseNumber",                                                                                        // MakerGen.cs:231
+                        Path= "Immunization.protocolApplied.doseNumber[x]",                                                                 // MakerGen.cs:232
+                        Id = "Immunization.protocolApplied.doseNumber[x]",                                                                  // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            },                                                                                                              // MakerGen.cs:300
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 42. Immunization.protocolApplied.seriesDoses[x]
-                    public ElementDefinitionInfo Element_SeriesDoses;                                                                       // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_ProtocolApplied_Elements()                                                                                  // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 38. Immunization.protocolApplied.series
-                            this.Element_Series = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Series",                                                                                    // MakerGen.cs:230
-                                Path= "Immunization.protocolApplied.series",                                                                // MakerGen.cs:231
-                                Id = "Immunization.protocolApplied.series",                                                                 // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 39. Immunization.protocolApplied.authority
-                            this.Element_Authority = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Authority",                                                                                 // MakerGen.cs:230
-                                Path= "Immunization.protocolApplied.authority",                                                             // MakerGen.cs:231
-                                Id = "Immunization.protocolApplied.authority",                                                              // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Reference                                                        // MakerGen.cs:338
-                                    {                                                                                                       // MakerGen.cs:339
-                                        TargetProfile = new String[]                                                                        // MakerGen.cs:341
-                                        {                                                                                                   // CodeEditorExtensions.cs:28
-                                            "http://hl7.org/fhir/StructureDefinition/Organization"                                          // MakerGen.cs:341
-                                        }                                                                                                   // CodeEditorExtensions.cs:34
-                                    }                                                                                                       // MakerGen.cs:342
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 40. Immunization.protocolApplied.targetDisease
-                            this.Element_TargetDisease = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_TargetDisease",                                                                             // MakerGen.cs:230
-                                Path= "Immunization.protocolApplied.targetDisease",                                                         // MakerGen.cs:231
-                                Id = "Immunization.protocolApplied.targetDisease",                                                          // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:310
-                                    {                                                                                                       // MakerGen.cs:311
-                                    }                                                                                                       // MakerGen.cs:314
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 41. Immunization.protocolApplied.doseNumber[x]
-                            this.Element_DoseNumber = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_DoseNumber",                                                                                // MakerGen.cs:230
-                                Path= "Immunization.protocolApplied.doseNumber[x]",                                                         // MakerGen.cs:231
-                                Id = "Immunization.protocolApplied.doseNumber[x]",                                                          // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    },                                                                                                      // MakerGen.cs:299
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 42. Immunization.protocolApplied.seriesDoses[x]
-                            this.Element_SeriesDoses = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_SeriesDoses",                                                                               // MakerGen.cs:230
-                                Path= "Immunization.protocolApplied.seriesDoses[x]",                                                        // MakerGen.cs:231
-                                Id = "Immunization.protocolApplied.seriesDoses[x]",                                                         // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.PositiveInt                                                         // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    },                                                                                                      // MakerGen.cs:299
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Series.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_Authority.Write(sDef);                                                                                      // MakerGen.cs:215
-                        Element_TargetDisease.Write(sDef);                                                                                  // MakerGen.cs:215
-                        Element_DoseNumber.Write(sDef);                                                                                     // MakerGen.cs:215
-                        Element_SeriesDoses.Write(sDef);                                                                                    // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_ProtocolApplied_Elements Elements                                                                               // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_ProtocolApplied_Elements();                                                            // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_ProtocolApplied_Elements elements;                                                                                     // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_ProtocolApplied()                                                                                               // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "Immunization.protocolApplied",                                                                              // MakerGen.cs:420
-                        ElementId = "Immunization.protocolApplied"                                                                          // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. Immunization.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 2. Immunization.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 3. Immunization.statusReason
-            public ElementDefinitionInfo Element_StatusReason;                                                                              // MakerGen.cs:211
-            // 4. Immunization.vaccineCode
-            public ElementDefinitionInfo Element_VaccineCode;                                                                               // MakerGen.cs:211
-            // 5. Immunization.patient
-            public ElementDefinitionInfo Element_Patient;                                                                                   // MakerGen.cs:211
-            // 6. Immunization.encounter
-            public ElementDefinitionInfo Element_Encounter;                                                                                 // MakerGen.cs:211
-            // 7. Immunization.occurrence[x]
-            public ElementDefinitionInfo Element_Occurrence;                                                                                // MakerGen.cs:211
-            // 8. Immunization.recorded
-            public ElementDefinitionInfo Element_Recorded;                                                                                  // MakerGen.cs:211
-            // 9. Immunization.primarySource
-            public ElementDefinitionInfo Element_PrimarySource;                                                                             // MakerGen.cs:211
-            // 10. Immunization.reportOrigin
-            public ElementDefinitionInfo Element_ReportOrigin;                                                                              // MakerGen.cs:211
-            // 11. Immunization.location
-            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:211
-            // 12. Immunization.manufacturer
-            public ElementDefinitionInfo Element_Manufacturer;                                                                              // MakerGen.cs:211
-            // 13. Immunization.lotNumber
-            public ElementDefinitionInfo Element_LotNumber;                                                                                 // MakerGen.cs:211
-            // 14. Immunization.expirationDate
-            public ElementDefinitionInfo Element_ExpirationDate;                                                                            // MakerGen.cs:211
-            // 15. Immunization.site
-            public ElementDefinitionInfo Element_Site;                                                                                      // MakerGen.cs:211
-            // 16. Immunization.route
-            public ElementDefinitionInfo Element_Route;                                                                                     // MakerGen.cs:211
-            // 17. Immunization.doseQuantity
-            public ElementDefinitionInfo Element_DoseQuantity;                                                                              // MakerGen.cs:211
-            // 18. Immunization.performer
-            public ElementDefinitionInfo Element_Performer;                                                                                 // MakerGen.cs:211
-            // 21. Immunization.note
-            public ElementDefinitionInfo Element_Note;                                                                                      // MakerGen.cs:211
-            // 22. Immunization.reasonCode
-            public ElementDefinitionInfo Element_ReasonCode;                                                                                // MakerGen.cs:211
-            // 23. Immunization.reasonReference
-            public ElementDefinitionInfo Element_ReasonReference;                                                                           // MakerGen.cs:211
-            // 24. Immunization.isSubpotent
-            public ElementDefinitionInfo Element_IsSubpotent;                                                                               // MakerGen.cs:211
-            // 25. Immunization.subpotentReason
-            public ElementDefinitionInfo Element_SubpotentReason;                                                                           // MakerGen.cs:211
-            // 26. Immunization.education
-            public ElementDefinitionInfo Element_Education;                                                                                 // MakerGen.cs:211
-            // 31. Immunization.programEligibility
-            public ElementDefinitionInfo Element_ProgramEligibility;                                                                        // MakerGen.cs:211
-            // 32. Immunization.fundingSource
-            public ElementDefinitionInfo Element_FundingSource;                                                                             // MakerGen.cs:211
-            // 33. Immunization.reaction
-            public ElementDefinitionInfo Element_Reaction;                                                                                  // MakerGen.cs:211
-            // 37. Immunization.protocolApplied
-            public ElementDefinitionInfo Element_ProtocolApplied;                                                                           // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_Immunization_Elements()                                                                                         // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. Immunization.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "Immunization.identifier",                                                                                    // MakerGen.cs:231
-                        Id = "Immunization.identifier",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. Immunization.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "Immunization.status",                                                                                        // MakerGen.cs:231
-                        Id = "Immunization.status",                                                                                         // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. Immunization.statusReason
-                    this.Element_StatusReason = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_StatusReason",                                                                                      // MakerGen.cs:230
-                        Path= "Immunization.statusReason",                                                                                  // MakerGen.cs:231
-                        Id = "Immunization.statusReason",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. Immunization.vaccineCode
-                    this.Element_VaccineCode = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_VaccineCode",                                                                                       // MakerGen.cs:230
-                        Path= "Immunization.vaccineCode",                                                                                   // MakerGen.cs:231
-                        Id = "Immunization.vaccineCode",                                                                                    // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. Immunization.patient
-                    this.Element_Patient = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Patient",                                                                                           // MakerGen.cs:230
-                        Path= "Immunization.patient",                                                                                       // MakerGen.cs:231
-                        Id = "Immunization.patient",                                                                                        // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Patient"                                                       // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. Immunization.encounter
-                    this.Element_Encounter = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Encounter",                                                                                         // MakerGen.cs:230
-                        Path= "Immunization.encounter",                                                                                     // MakerGen.cs:231
-                        Id = "Immunization.encounter",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Encounter"                                                     // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. Immunization.occurrence[x]
-                    this.Element_Occurrence = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Occurrence",                                                                                        // MakerGen.cs:230
-                        Path= "Immunization.occurrence[x]",                                                                                 // MakerGen.cs:231
-                        Id = "Immunization.occurrence[x]",                                                                                  // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            },                                                                                                              // MakerGen.cs:299
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. Immunization.recorded
-                    this.Element_Recorded = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Recorded",                                                                                          // MakerGen.cs:230
-                        Path= "Immunization.recorded",                                                                                      // MakerGen.cs:231
-                        Id = "Immunization.recorded",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. Immunization.primarySource
-                    this.Element_PrimarySource = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_PrimarySource",                                                                                     // MakerGen.cs:230
-                        Path= "Immunization.primarySource",                                                                                 // MakerGen.cs:231
-                        Id = "Immunization.primarySource",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. Immunization.reportOrigin
-                    this.Element_ReportOrigin = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ReportOrigin",                                                                                      // MakerGen.cs:230
-                        Path= "Immunization.reportOrigin",                                                                                  // MakerGen.cs:231
-                        Id = "Immunization.reportOrigin",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. Immunization.location
-                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Location",                                                                                          // MakerGen.cs:230
-                        Path= "Immunization.location",                                                                                      // MakerGen.cs:231
-                        Id = "Immunization.location",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 12. Immunization.manufacturer
-                    this.Element_Manufacturer = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Manufacturer",                                                                                      // MakerGen.cs:230
-                        Path= "Immunization.manufacturer",                                                                                  // MakerGen.cs:231
-                        Id = "Immunization.manufacturer",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 13. Immunization.lotNumber
-                    this.Element_LotNumber = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_LotNumber",                                                                                         // MakerGen.cs:230
-                        Path= "Immunization.lotNumber",                                                                                     // MakerGen.cs:231
-                        Id = "Immunization.lotNumber",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 14. Immunization.expirationDate
-                    this.Element_ExpirationDate = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ExpirationDate",                                                                                    // MakerGen.cs:230
-                        Path= "Immunization.expirationDate",                                                                                // MakerGen.cs:231
-                        Id = "Immunization.expirationDate",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Date                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 15. Immunization.site
-                    this.Element_Site = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Site",                                                                                              // MakerGen.cs:230
-                        Path= "Immunization.site",                                                                                          // MakerGen.cs:231
-                        Id = "Immunization.site",                                                                                           // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 16. Immunization.route
-                    this.Element_Route = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Route",                                                                                             // MakerGen.cs:230
-                        Path= "Immunization.route",                                                                                         // MakerGen.cs:231
-                        Id = "Immunization.route",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 17. Immunization.doseQuantity
-                    this.Element_DoseQuantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_DoseQuantity",                                                                                      // MakerGen.cs:230
-                        Path= "Immunization.doseQuantity",                                                                                  // MakerGen.cs:231
-                        Id = "Immunization.doseQuantity",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 18. Immunization.performer
-                    this.Element_Performer = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Performer",                                                                                         // MakerGen.cs:230
-                        Path= "Immunization.performer",                                                                                     // MakerGen.cs:231
-                        Id = "Immunization.performer",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Performer                                                                                              // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 21. Immunization.note
-                    this.Element_Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Note",                                                                                              // MakerGen.cs:230
-                        Path= "Immunization.note",                                                                                          // MakerGen.cs:231
-                        Id = "Immunization.note",                                                                                           // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Annotation                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 22. Immunization.reasonCode
-                    this.Element_ReasonCode = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ReasonCode",                                                                                        // MakerGen.cs:230
-                        Path= "Immunization.reasonCode",                                                                                    // MakerGen.cs:231
-                        Id = "Immunization.reasonCode",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 23. Immunization.reasonReference
-                    this.Element_ReasonReference = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ReasonReference",                                                                                   // MakerGen.cs:230
-                        Path= "Immunization.reasonReference",                                                                               // MakerGen.cs:231
-                        Id = "Immunization.reasonReference",                                                                                // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:341
-                                    "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"                                              // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 24. Immunization.isSubpotent
-                    this.Element_IsSubpotent = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_IsSubpotent",                                                                                       // MakerGen.cs:230
-                        Path= "Immunization.isSubpotent",                                                                                   // MakerGen.cs:231
-                        Id = "Immunization.isSubpotent",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 25. Immunization.subpotentReason
-                    this.Element_SubpotentReason = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_SubpotentReason",                                                                                   // MakerGen.cs:230
-                        Path= "Immunization.subpotentReason",                                                                               // MakerGen.cs:231
-                        Id = "Immunization.subpotentReason",                                                                                // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 26. Immunization.education
-                    this.Element_Education = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Education",                                                                                         // MakerGen.cs:230
-                        Path= "Immunization.education",                                                                                     // MakerGen.cs:231
-                        Id = "Immunization.education",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Education                                                                                              // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 31. Immunization.programEligibility
-                    this.Element_ProgramEligibility = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ProgramEligibility",                                                                                // MakerGen.cs:230
-                        Path= "Immunization.programEligibility",                                                                            // MakerGen.cs:231
-                        Id = "Immunization.programEligibility",                                                                             // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 32. Immunization.fundingSource
-                    this.Element_FundingSource = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_FundingSource",                                                                                     // MakerGen.cs:230
-                        Path= "Immunization.fundingSource",                                                                                 // MakerGen.cs:231
-                        Id = "Immunization.fundingSource",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 33. Immunization.reaction
-                    this.Element_Reaction = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Reaction",                                                                                          // MakerGen.cs:230
-                        Path= "Immunization.reaction",                                                                                      // MakerGen.cs:231
-                        Id = "Immunization.reaction",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Reaction                                                                                               // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 37. Immunization.protocolApplied
-                    this.Element_ProtocolApplied = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_ProtocolApplied",                                                                                   // MakerGen.cs:230
-                        Path= "Immunization.protocolApplied",                                                                               // MakerGen.cs:231
-                        Id = "Immunization.protocolApplied",                                                                                // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_ProtocolApplied                                                                                        // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_StatusReason.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_VaccineCode.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_Patient.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Encounter.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Occurrence.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Recorded.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_PrimarySource.Write(sDef);                                                                                          // MakerGen.cs:215
-                Element_ReportOrigin.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_Manufacturer.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_LotNumber.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_ExpirationDate.Write(sDef);                                                                                         // MakerGen.cs:215
-                Element_Site.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Route.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_DoseQuantity.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Performer.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Note.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_ReasonCode.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_ReasonReference.Write(sDef);                                                                                        // MakerGen.cs:215
-                Element_IsSubpotent.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_SubpotentReason.Write(sDef);                                                                                        // MakerGen.cs:215
-                Element_Education.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_ProgramEligibility.Write(sDef);                                                                                     // MakerGen.cs:215
-                Element_FundingSource.Write(sDef);                                                                                          // MakerGen.cs:215
-                Element_Reaction.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_ProtocolApplied.Write(sDef);                                                                                        // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_Immunization_Elements Elements                                                                                      // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_Immunization_Elements();                                                                   // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_Immunization_Elements elements;                                                                                            // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_Immunization()                                                                                                      // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "Immunization";                                                                                                     // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Immunization";                                                              // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "Immunization",                                                                                                      // MakerGen.cs:420
-                ElementId = "Immunization"                                                                                                  // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_SeriesDoses = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_SeriesDoses",                                                                                       // MakerGen.cs:231
+                        Path= "Immunization.protocolApplied.seriesDoses[x]",                                                                // MakerGen.cs:232
+                        Id = "Immunization.protocolApplied.seriesDoses[x]",                                                                 // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            },                                                                                                              // MakerGen.cs:300
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. Immunization.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 2. Immunization.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 3. Immunization.statusReason
+        public ElementDefinitionInfo Element_StatusReason;                                                                                  // MakerGen.cs:212
+        // 4. Immunization.vaccineCode
+        public ElementDefinitionInfo Element_VaccineCode;                                                                                   // MakerGen.cs:212
+        // 5. Immunization.patient
+        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:212
+        // 6. Immunization.encounter
+        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:212
+        // 7. Immunization.occurrence[x]
+        public ElementDefinitionInfo Element_Occurrence;                                                                                    // MakerGen.cs:212
+        // 8. Immunization.recorded
+        public ElementDefinitionInfo Element_Recorded;                                                                                      // MakerGen.cs:212
+        // 9. Immunization.primarySource
+        public ElementDefinitionInfo Element_PrimarySource;                                                                                 // MakerGen.cs:212
+        // 10. Immunization.reportOrigin
+        public ElementDefinitionInfo Element_ReportOrigin;                                                                                  // MakerGen.cs:212
+        // 11. Immunization.location
+        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:212
+        // 12. Immunization.manufacturer
+        public ElementDefinitionInfo Element_Manufacturer;                                                                                  // MakerGen.cs:212
+        // 13. Immunization.lotNumber
+        public ElementDefinitionInfo Element_LotNumber;                                                                                     // MakerGen.cs:212
+        // 14. Immunization.expirationDate
+        public ElementDefinitionInfo Element_ExpirationDate;                                                                                // MakerGen.cs:212
+        // 15. Immunization.site
+        public ElementDefinitionInfo Element_Site;                                                                                          // MakerGen.cs:212
+        // 16. Immunization.route
+        public ElementDefinitionInfo Element_Route;                                                                                         // MakerGen.cs:212
+        // 17. Immunization.doseQuantity
+        public ElementDefinitionInfo Element_DoseQuantity;                                                                                  // MakerGen.cs:212
+        // 18. Immunization.performer
+        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:212
+        // 21. Immunization.note
+        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:212
+        // 22. Immunization.reasonCode
+        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:212
+        // 23. Immunization.reasonReference
+        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:212
+        // 24. Immunization.isSubpotent
+        public ElementDefinitionInfo Element_IsSubpotent;                                                                                   // MakerGen.cs:212
+        // 25. Immunization.subpotentReason
+        public ElementDefinitionInfo Element_SubpotentReason;                                                                               // MakerGen.cs:212
+        // 26. Immunization.education
+        public ElementDefinitionInfo Element_Education;                                                                                     // MakerGen.cs:212
+        // 31. Immunization.programEligibility
+        public ElementDefinitionInfo Element_ProgramEligibility;                                                                            // MakerGen.cs:212
+        // 32. Immunization.fundingSource
+        public ElementDefinitionInfo Element_FundingSource;                                                                                 // MakerGen.cs:212
+        // 33. Immunization.reaction
+        public ElementDefinitionInfo Element_Reaction;                                                                                      // MakerGen.cs:212
+        // 37. Immunization.protocolApplied
+        public ElementDefinitionInfo Element_ProtocolApplied;                                                                               // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "Immunization",                                                                                                      // MakerGen.cs:388
+                ElementId = "Immunization"                                                                                                  // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_StatusReason.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_VaccineCode.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Occurrence.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Recorded.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_PrimarySource.Write(sDef);                                                                                              // MakerGen.cs:216
+            Element_ReportOrigin.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_Manufacturer.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_LotNumber.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_ExpirationDate.Write(sDef);                                                                                             // MakerGen.cs:216
+            Element_Site.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Route.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_DoseQuantity.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:216
+            Element_IsSubpotent.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_SubpotentReason.Write(sDef);                                                                                            // MakerGen.cs:216
+            Element_Education.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_ProgramEligibility.Write(sDef);                                                                                         // MakerGen.cs:216
+            Element_FundingSource.Write(sDef);                                                                                              // MakerGen.cs:216
+            Element_Reaction.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_ProtocolApplied.Write(sDef);                                                                                            // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_Immunization()                                                                                                      // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. Immunization.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "Immunization.identifier",                                                                                        // MakerGen.cs:232
+                    Id = "Immunization.identifier",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. Immunization.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "Immunization.status",                                                                                            // MakerGen.cs:232
+                    Id = "Immunization.status",                                                                                             // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. Immunization.statusReason
+                this.Element_StatusReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_StatusReason",                                                                                          // MakerGen.cs:231
+                    Path= "Immunization.statusReason",                                                                                      // MakerGen.cs:232
+                    Id = "Immunization.statusReason",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. Immunization.vaccineCode
+                this.Element_VaccineCode = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_VaccineCode",                                                                                           // MakerGen.cs:231
+                    Path= "Immunization.vaccineCode",                                                                                       // MakerGen.cs:232
+                    Id = "Immunization.vaccineCode",                                                                                        // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. Immunization.patient
+                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Patient",                                                                                               // MakerGen.cs:231
+                    Path= "Immunization.patient",                                                                                           // MakerGen.cs:232
+                    Id = "Immunization.patient",                                                                                            // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. Immunization.encounter
+                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:231
+                    Path= "Immunization.encounter",                                                                                         // MakerGen.cs:232
+                    Id = "Immunization.encounter",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. Immunization.occurrence[x]
+                this.Element_Occurrence = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Occurrence",                                                                                            // MakerGen.cs:231
+                    Path= "Immunization.occurrence[x]",                                                                                     // MakerGen.cs:232
+                    Id = "Immunization.occurrence[x]",                                                                                      // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        },                                                                                                                  // MakerGen.cs:300
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. Immunization.recorded
+                this.Element_Recorded = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Recorded",                                                                                              // MakerGen.cs:231
+                    Path= "Immunization.recorded",                                                                                          // MakerGen.cs:232
+                    Id = "Immunization.recorded",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. Immunization.primarySource
+                this.Element_PrimarySource = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_PrimarySource",                                                                                         // MakerGen.cs:231
+                    Path= "Immunization.primarySource",                                                                                     // MakerGen.cs:232
+                    Id = "Immunization.primarySource",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. Immunization.reportOrigin
+                this.Element_ReportOrigin = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ReportOrigin",                                                                                          // MakerGen.cs:231
+                    Path= "Immunization.reportOrigin",                                                                                      // MakerGen.cs:232
+                    Id = "Immunization.reportOrigin",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. Immunization.location
+                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Location",                                                                                              // MakerGen.cs:231
+                    Path= "Immunization.location",                                                                                          // MakerGen.cs:232
+                    Id = "Immunization.location",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 12. Immunization.manufacturer
+                this.Element_Manufacturer = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Manufacturer",                                                                                          // MakerGen.cs:231
+                    Path= "Immunization.manufacturer",                                                                                      // MakerGen.cs:232
+                    Id = "Immunization.manufacturer",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 13. Immunization.lotNumber
+                this.Element_LotNumber = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_LotNumber",                                                                                             // MakerGen.cs:231
+                    Path= "Immunization.lotNumber",                                                                                         // MakerGen.cs:232
+                    Id = "Immunization.lotNumber",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 14. Immunization.expirationDate
+                this.Element_ExpirationDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ExpirationDate",                                                                                        // MakerGen.cs:231
+                    Path= "Immunization.expirationDate",                                                                                    // MakerGen.cs:232
+                    Id = "Immunization.expirationDate",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 15. Immunization.site
+                this.Element_Site = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Site",                                                                                                  // MakerGen.cs:231
+                    Path= "Immunization.site",                                                                                              // MakerGen.cs:232
+                    Id = "Immunization.site",                                                                                               // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 16. Immunization.route
+                this.Element_Route = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Route",                                                                                                 // MakerGen.cs:231
+                    Path= "Immunization.route",                                                                                             // MakerGen.cs:232
+                    Id = "Immunization.route",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 17. Immunization.doseQuantity
+                this.Element_DoseQuantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_DoseQuantity",                                                                                          // MakerGen.cs:231
+                    Path= "Immunization.doseQuantity",                                                                                      // MakerGen.cs:232
+                    Id = "Immunization.doseQuantity",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 18. Immunization.performer
+                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Performer",                                                                                             // MakerGen.cs:231
+                    Path= "Immunization.performer",                                                                                         // MakerGen.cs:232
+                    Id = "Immunization.performer",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Performer                                                                                                  // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 21. Immunization.note
+                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Note",                                                                                                  // MakerGen.cs:231
+                    Path= "Immunization.note",                                                                                              // MakerGen.cs:232
+                    Id = "Immunization.note",                                                                                               // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 22. Immunization.reasonCode
+                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:231
+                    Path= "Immunization.reasonCode",                                                                                        // MakerGen.cs:232
+                    Id = "Immunization.reasonCode",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 23. Immunization.reasonReference
+                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:231
+                    Path= "Immunization.reasonReference",                                                                                   // MakerGen.cs:232
+                    Id = "Immunization.reasonReference",                                                                                    // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport"                                                  // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 24. Immunization.isSubpotent
+                this.Element_IsSubpotent = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_IsSubpotent",                                                                                           // MakerGen.cs:231
+                    Path= "Immunization.isSubpotent",                                                                                       // MakerGen.cs:232
+                    Id = "Immunization.isSubpotent",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 25. Immunization.subpotentReason
+                this.Element_SubpotentReason = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_SubpotentReason",                                                                                       // MakerGen.cs:231
+                    Path= "Immunization.subpotentReason",                                                                                   // MakerGen.cs:232
+                    Id = "Immunization.subpotentReason",                                                                                    // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 26. Immunization.education
+                this.Element_Education = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Education",                                                                                             // MakerGen.cs:231
+                    Path= "Immunization.education",                                                                                         // MakerGen.cs:232
+                    Id = "Immunization.education",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Education                                                                                                  // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 31. Immunization.programEligibility
+                this.Element_ProgramEligibility = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ProgramEligibility",                                                                                    // MakerGen.cs:231
+                    Path= "Immunization.programEligibility",                                                                                // MakerGen.cs:232
+                    Id = "Immunization.programEligibility",                                                                                 // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 32. Immunization.fundingSource
+                this.Element_FundingSource = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_FundingSource",                                                                                         // MakerGen.cs:231
+                    Path= "Immunization.fundingSource",                                                                                     // MakerGen.cs:232
+                    Id = "Immunization.fundingSource",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 33. Immunization.reaction
+                this.Element_Reaction = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Reaction",                                                                                              // MakerGen.cs:231
+                    Path= "Immunization.reaction",                                                                                          // MakerGen.cs:232
+                    Id = "Immunization.reaction",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Reaction                                                                                                   // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 37. Immunization.protocolApplied
+                this.Element_ProtocolApplied = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_ProtocolApplied",                                                                                       // MakerGen.cs:231
+                    Path= "Immunization.protocolApplied",                                                                                   // MakerGen.cs:232
+                    Id = "Immunization.protocolApplied",                                                                                    // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_ProtocolApplied                                                                                            // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "Immunization";                                                                                                     // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Immunization";                                                              // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

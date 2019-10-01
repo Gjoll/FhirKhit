@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "PractitionerRole",
@@ -367,553 +367,484 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'PractitionerRole'
     /// </summary>
     // 0. PractitionerRole
     public class Resource_PractitionerRole : FhirKhit.Maker.Common.Resource.ResourceBase                                                    // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_PractitionerRole_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 11. PractitionerRole.availableTime
-            public class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_AvailableTime_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                      // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+        // 11. PractitionerRole.availableTime
+        public class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 12. PractitionerRole.availableTime.daysOfWeek
+            public ElementDefinitionInfo Element_DaysOfWeek;                                                                                // MakerGen.cs:212
+            // 13. PractitionerRole.availableTime.allDay
+            public ElementDefinitionInfo Element_AllDay;                                                                                    // MakerGen.cs:212
+            // 14. PractitionerRole.availableTime.availableStartTime
+            public ElementDefinitionInfo Element_AvailableStartTime;                                                                        // MakerGen.cs:212
+            // 15. PractitionerRole.availableTime.availableEndTime
+            public ElementDefinitionInfo Element_AvailableEndTime;                                                                          // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "PractitionerRole.availableTime",                                                                                // MakerGen.cs:388
+                    ElementId = "PractitionerRole.availableTime"                                                                            // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_DaysOfWeek.Write(sDef);                                                                                             // MakerGen.cs:216
+                Element_AllDay.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_AvailableStartTime.Write(sDef);                                                                                     // MakerGen.cs:216
+                Element_AvailableEndTime.Write(sDef);                                                                                       // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_AvailableTime()                                                                                                     // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 12. PractitionerRole.availableTime.daysOfWeek
-                    public ElementDefinitionInfo Element_DaysOfWeek;                                                                        // MakerGen.cs:211
+                    this.Element_DaysOfWeek = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_DaysOfWeek",                                                                                        // MakerGen.cs:231
+                        Path= "PractitionerRole.availableTime.daysOfWeek",                                                                  // MakerGen.cs:232
+                        Id = "PractitionerRole.availableTime.daysOfWeek",                                                                   // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 13. PractitionerRole.availableTime.allDay
-                    public ElementDefinitionInfo Element_AllDay;                                                                            // MakerGen.cs:211
+                    this.Element_AllDay = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_AllDay",                                                                                            // MakerGen.cs:231
+                        Path= "PractitionerRole.availableTime.allDay",                                                                      // MakerGen.cs:232
+                        Id = "PractitionerRole.availableTime.allDay",                                                                       // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 14. PractitionerRole.availableTime.availableStartTime
-                    public ElementDefinitionInfo Element_AvailableStartTime;                                                                // MakerGen.cs:211
+                    this.Element_AvailableStartTime = new ElementDefinitionInfo                                                             // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_AvailableStartTime",                                                                                // MakerGen.cs:231
+                        Path= "PractitionerRole.availableTime.availableStartTime",                                                          // MakerGen.cs:232
+                        Id = "PractitionerRole.availableTime.availableStartTime",                                                           // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Time                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 15. PractitionerRole.availableTime.availableEndTime
-                    public ElementDefinitionInfo Element_AvailableEndTime;                                                                  // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_AvailableTime_Elements()                                                                                    // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 12. PractitionerRole.availableTime.daysOfWeek
-                            this.Element_DaysOfWeek = new ElementDefinitionInfo                                                             // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_DaysOfWeek",                                                                                // MakerGen.cs:230
-                                Path= "PractitionerRole.availableTime.daysOfWeek",                                                          // MakerGen.cs:231
-                                Id = "PractitionerRole.availableTime.daysOfWeek",                                                           // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Code                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 13. PractitionerRole.availableTime.allDay
-                            this.Element_AllDay = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_AllDay",                                                                                    // MakerGen.cs:230
-                                Path= "PractitionerRole.availableTime.allDay",                                                              // MakerGen.cs:231
-                                Id = "PractitionerRole.availableTime.allDay",                                                               // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Boolean                                                             // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 14. PractitionerRole.availableTime.availableStartTime
-                            this.Element_AvailableStartTime = new ElementDefinitionInfo                                                     // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_AvailableStartTime",                                                                        // MakerGen.cs:230
-                                Path= "PractitionerRole.availableTime.availableStartTime",                                                  // MakerGen.cs:231
-                                Id = "PractitionerRole.availableTime.availableStartTime",                                                   // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Time                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 15. PractitionerRole.availableTime.availableEndTime
-                            this.Element_AvailableEndTime = new ElementDefinitionInfo                                                       // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_AvailableEndTime",                                                                          // MakerGen.cs:230
-                                Path= "PractitionerRole.availableTime.availableEndTime",                                                    // MakerGen.cs:231
-                                Id = "PractitionerRole.availableTime.availableEndTime",                                                     // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Time                                                                // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_DaysOfWeek.Write(sDef);                                                                                     // MakerGen.cs:215
-                        Element_AllDay.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_AvailableStartTime.Write(sDef);                                                                             // MakerGen.cs:215
-                        Element_AvailableEndTime.Write(sDef);                                                                               // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_AvailableTime_Elements Elements                                                                                 // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_AvailableTime_Elements();                                                              // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_AvailableTime_Elements elements;                                                                                       // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_AvailableTime()                                                                                                 // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "PractitionerRole.availableTime",                                                                            // MakerGen.cs:420
-                        ElementId = "PractitionerRole.availableTime"                                                                        // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 16. PractitionerRole.notAvailable
-            public class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                public class Type_NotAvailable_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                       // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
+                    this.Element_AvailableEndTime = new ElementDefinitionInfo                                                               // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_AvailableEndTime",                                                                                  // MakerGen.cs:231
+                        Path= "PractitionerRole.availableTime.availableEndTime",                                                            // MakerGen.cs:232
+                        Id = "PractitionerRole.availableTime.availableEndTime",                                                             // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Time                                                              // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 16. PractitionerRole.notAvailable
+        public class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 17. PractitionerRole.notAvailable.description
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:212
+            // 18. PractitionerRole.notAvailable.during
+            public ElementDefinitionInfo Element_During;                                                                                    // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "PractitionerRole.notAvailable",                                                                                 // MakerGen.cs:388
+                    ElementId = "PractitionerRole.notAvailable"                                                                             // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:216
+                Element_During.Write(sDef);                                                                                                 // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_NotAvailable()                                                                                                      // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 17. PractitionerRole.notAvailable.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:211
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:231
+                        Path= "PractitionerRole.notAvailable.description",                                                                  // MakerGen.cs:232
+                        Id = "PractitionerRole.notAvailable.description",                                                                   // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 18. PractitionerRole.notAvailable.during
-                    public ElementDefinitionInfo Element_During;                                                                            // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_NotAvailable_Elements()                                                                                     // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 17. PractitionerRole.notAvailable.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Description",                                                                               // MakerGen.cs:230
-                                Path= "PractitionerRole.notAvailable.description",                                                          // MakerGen.cs:231
-                                Id = "PractitionerRole.notAvailable.description",                                                           // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 18. PractitionerRole.notAvailable.during
-                            this.Element_During = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_During",                                                                                    // MakerGen.cs:230
-                                Path= "PractitionerRole.notAvailable.during",                                                               // MakerGen.cs:231
-                                Id = "PractitionerRole.notAvailable.during",                                                                // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Complex.Type_Period                                                           // MakerGen.cs:350
-                                    {                                                                                                       // MakerGen.cs:351
-                                    }                                                                                                       // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:215
-                        Element_During.Write(sDef);                                                                                         // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_NotAvailable_Elements Elements                                                                                  // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_NotAvailable_Elements();                                                               // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_NotAvailable_Elements elements;                                                                                        // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_NotAvailable()                                                                                                  // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "PractitionerRole.notAvailable",                                                                             // MakerGen.cs:420
-                        ElementId = "PractitionerRole.notAvailable"                                                                         // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. PractitionerRole.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 2. PractitionerRole.active
-            public ElementDefinitionInfo Element_Active;                                                                                    // MakerGen.cs:211
-            // 3. PractitionerRole.period
-            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:211
-            // 4. PractitionerRole.practitioner
-            public ElementDefinitionInfo Element_Practitioner;                                                                              // MakerGen.cs:211
-            // 5. PractitionerRole.organization
-            public ElementDefinitionInfo Element_Organization;                                                                              // MakerGen.cs:211
-            // 6. PractitionerRole.code
-            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:211
-            // 7. PractitionerRole.specialty
-            public ElementDefinitionInfo Element_Specialty;                                                                                 // MakerGen.cs:211
-            // 8. PractitionerRole.location
-            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:211
-            // 9. PractitionerRole.healthcareService
-            public ElementDefinitionInfo Element_HealthcareService;                                                                         // MakerGen.cs:211
-            // 10. PractitionerRole.telecom
-            public ElementDefinitionInfo Element_Telecom;                                                                                   // MakerGen.cs:211
-            // 11. PractitionerRole.availableTime
-            public ElementDefinitionInfo Element_AvailableTime;                                                                             // MakerGen.cs:211
-            // 16. PractitionerRole.notAvailable
-            public ElementDefinitionInfo Element_NotAvailable;                                                                              // MakerGen.cs:211
-            // 19. PractitionerRole.availabilityExceptions
-            public ElementDefinitionInfo Element_AvailabilityExceptions;                                                                    // MakerGen.cs:211
-            // 20. PractitionerRole.endpoint
-            public ElementDefinitionInfo Element_Endpoint;                                                                                  // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_PractitionerRole_Elements()                                                                                     // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. PractitionerRole.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "PractitionerRole.identifier",                                                                                // MakerGen.cs:231
-                        Id = "PractitionerRole.identifier",                                                                                 // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. PractitionerRole.active
-                    this.Element_Active = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Active",                                                                                            // MakerGen.cs:230
-                        Path= "PractitionerRole.active",                                                                                    // MakerGen.cs:231
-                        Id = "PractitionerRole.active",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. PractitionerRole.period
-                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Period",                                                                                            // MakerGen.cs:230
-                        Path= "PractitionerRole.period",                                                                                    // MakerGen.cs:231
-                        Id = "PractitionerRole.period",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. PractitionerRole.practitioner
-                    this.Element_Practitioner = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Practitioner",                                                                                      // MakerGen.cs:230
-                        Path= "PractitionerRole.practitioner",                                                                              // MakerGen.cs:231
-                        Id = "PractitionerRole.practitioner",                                                                               // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner"                                                  // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. PractitionerRole.organization
-                    this.Element_Organization = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Organization",                                                                                      // MakerGen.cs:230
-                        Path= "PractitionerRole.organization",                                                                              // MakerGen.cs:231
-                        Id = "PractitionerRole.organization",                                                                               // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. PractitionerRole.code
-                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Code",                                                                                              // MakerGen.cs:230
-                        Path= "PractitionerRole.code",                                                                                      // MakerGen.cs:231
-                        Id = "PractitionerRole.code",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. PractitionerRole.specialty
-                    this.Element_Specialty = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Specialty",                                                                                         // MakerGen.cs:230
-                        Path= "PractitionerRole.specialty",                                                                                 // MakerGen.cs:231
-                        Id = "PractitionerRole.specialty",                                                                                  // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. PractitionerRole.location
-                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Location",                                                                                          // MakerGen.cs:230
-                        Path= "PractitionerRole.location",                                                                                  // MakerGen.cs:231
-                        Id = "PractitionerRole.location",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. PractitionerRole.healthcareService
-                    this.Element_HealthcareService = new ElementDefinitionInfo                                                              // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_HealthcareService",                                                                                 // MakerGen.cs:230
-                        Path= "PractitionerRole.healthcareService",                                                                         // MakerGen.cs:231
-                        Id = "PractitionerRole.healthcareService",                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/HealthcareService"                                             // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. PractitionerRole.telecom
-                    this.Element_Telecom = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Telecom",                                                                                           // MakerGen.cs:230
-                        Path= "PractitionerRole.telecom",                                                                                   // MakerGen.cs:231
-                        Id = "PractitionerRole.telecom",                                                                                    // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                             // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. PractitionerRole.availableTime
-                    this.Element_AvailableTime = new ElementDefinitionInfo                                                                  // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_AvailableTime",                                                                                     // MakerGen.cs:230
-                        Path= "PractitionerRole.availableTime",                                                                             // MakerGen.cs:231
-                        Id = "PractitionerRole.availableTime",                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_AvailableTime                                                                                          // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 16. PractitionerRole.notAvailable
-                    this.Element_NotAvailable = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_NotAvailable",                                                                                      // MakerGen.cs:230
-                        Path= "PractitionerRole.notAvailable",                                                                              // MakerGen.cs:231
-                        Id = "PractitionerRole.notAvailable",                                                                               // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_NotAvailable                                                                                           // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 19. PractitionerRole.availabilityExceptions
-                    this.Element_AvailabilityExceptions = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_AvailabilityExceptions",                                                                            // MakerGen.cs:230
-                        Path= "PractitionerRole.availabilityExceptions",                                                                    // MakerGen.cs:231
-                        Id = "PractitionerRole.availabilityExceptions",                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 20. PractitionerRole.endpoint
-                    this.Element_Endpoint = new ElementDefinitionInfo                                                                       // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Endpoint",                                                                                          // MakerGen.cs:230
-                        Path= "PractitionerRole.endpoint",                                                                                  // MakerGen.cs:231
-                        Id = "PractitionerRole.endpoint",                                                                                   // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:338
-                            {                                                                                                               // MakerGen.cs:339
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:341
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                      // MakerGen.cs:341
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:342
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Active.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Practitioner.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Organization.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Specialty.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:215
-                Element_HealthcareService.Write(sDef);                                                                                      // MakerGen.cs:215
-                Element_Telecom.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_AvailableTime.Write(sDef);                                                                                          // MakerGen.cs:215
-                Element_NotAvailable.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_AvailabilityExceptions.Write(sDef);                                                                                 // MakerGen.cs:215
-                Element_Endpoint.Write(sDef);                                                                                               // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_PractitionerRole_Elements Elements                                                                                  // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_PractitionerRole_Elements();                                                               // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_PractitionerRole_Elements elements;                                                                                        // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_PractitionerRole()                                                                                                  // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "PractitionerRole";                                                                                                 // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/PractitionerRole";                                                          // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "PractitionerRole",                                                                                                  // MakerGen.cs:420
-                ElementId = "PractitionerRole"                                                                                              // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_During = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_During",                                                                                            // MakerGen.cs:231
+                        Path= "PractitionerRole.notAvailable.during",                                                                       // MakerGen.cs:232
+                        Id = "PractitionerRole.notAvailable.during",                                                                        // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:351
+                            {                                                                                                               // MakerGen.cs:352
+                            }                                                                                                               // MakerGen.cs:353
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. PractitionerRole.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 2. PractitionerRole.active
+        public ElementDefinitionInfo Element_Active;                                                                                        // MakerGen.cs:212
+        // 3. PractitionerRole.period
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:212
+        // 4. PractitionerRole.practitioner
+        public ElementDefinitionInfo Element_Practitioner;                                                                                  // MakerGen.cs:212
+        // 5. PractitionerRole.organization
+        public ElementDefinitionInfo Element_Organization;                                                                                  // MakerGen.cs:212
+        // 6. PractitionerRole.code
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:212
+        // 7. PractitionerRole.specialty
+        public ElementDefinitionInfo Element_Specialty;                                                                                     // MakerGen.cs:212
+        // 8. PractitionerRole.location
+        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:212
+        // 9. PractitionerRole.healthcareService
+        public ElementDefinitionInfo Element_HealthcareService;                                                                             // MakerGen.cs:212
+        // 10. PractitionerRole.telecom
+        public ElementDefinitionInfo Element_Telecom;                                                                                       // MakerGen.cs:212
+        // 11. PractitionerRole.availableTime
+        public ElementDefinitionInfo Element_AvailableTime;                                                                                 // MakerGen.cs:212
+        // 16. PractitionerRole.notAvailable
+        public ElementDefinitionInfo Element_NotAvailable;                                                                                  // MakerGen.cs:212
+        // 19. PractitionerRole.availabilityExceptions
+        public ElementDefinitionInfo Element_AvailabilityExceptions;                                                                        // MakerGen.cs:212
+        // 20. PractitionerRole.endpoint
+        public ElementDefinitionInfo Element_Endpoint;                                                                                      // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "PractitionerRole",                                                                                                  // MakerGen.cs:388
+                ElementId = "PractitionerRole"                                                                                              // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Active.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Practitioner.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Organization.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Specialty.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:216
+            Element_HealthcareService.Write(sDef);                                                                                          // MakerGen.cs:216
+            Element_Telecom.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_AvailableTime.Write(sDef);                                                                                              // MakerGen.cs:216
+            Element_NotAvailable.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_AvailabilityExceptions.Write(sDef);                                                                                     // MakerGen.cs:216
+            Element_Endpoint.Write(sDef);                                                                                                   // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_PractitionerRole()                                                                                                  // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. PractitionerRole.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "PractitionerRole.identifier",                                                                                    // MakerGen.cs:232
+                    Id = "PractitionerRole.identifier",                                                                                     // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. PractitionerRole.active
+                this.Element_Active = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Active",                                                                                                // MakerGen.cs:231
+                    Path= "PractitionerRole.active",                                                                                        // MakerGen.cs:232
+                    Id = "PractitionerRole.active",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. PractitionerRole.period
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:231
+                    Path= "PractitionerRole.period",                                                                                        // MakerGen.cs:232
+                    Id = "PractitionerRole.period",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. PractitionerRole.practitioner
+                this.Element_Practitioner = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Practitioner",                                                                                          // MakerGen.cs:231
+                    Path= "PractitionerRole.practitioner",                                                                                  // MakerGen.cs:232
+                    Id = "PractitionerRole.practitioner",                                                                                   // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner"                                                      // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. PractitionerRole.organization
+                this.Element_Organization = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Organization",                                                                                          // MakerGen.cs:231
+                    Path= "PractitionerRole.organization",                                                                                  // MakerGen.cs:232
+                    Id = "PractitionerRole.organization",                                                                                   // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. PractitionerRole.code
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:231
+                    Path= "PractitionerRole.code",                                                                                          // MakerGen.cs:232
+                    Id = "PractitionerRole.code",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. PractitionerRole.specialty
+                this.Element_Specialty = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Specialty",                                                                                             // MakerGen.cs:231
+                    Path= "PractitionerRole.specialty",                                                                                     // MakerGen.cs:232
+                    Id = "PractitionerRole.specialty",                                                                                      // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. PractitionerRole.location
+                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Location",                                                                                              // MakerGen.cs:231
+                    Path= "PractitionerRole.location",                                                                                      // MakerGen.cs:232
+                    Id = "PractitionerRole.location",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. PractitionerRole.healthcareService
+                this.Element_HealthcareService = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_HealthcareService",                                                                                     // MakerGen.cs:231
+                    Path= "PractitionerRole.healthcareService",                                                                             // MakerGen.cs:232
+                    Id = "PractitionerRole.healthcareService",                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/HealthcareService"                                                 // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. PractitionerRole.telecom
+                this.Element_Telecom = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Telecom",                                                                                               // MakerGen.cs:231
+                    Path= "PractitionerRole.telecom",                                                                                       // MakerGen.cs:232
+                    Id = "PractitionerRole.telecom",                                                                                        // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                                 // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. PractitionerRole.availableTime
+                this.Element_AvailableTime = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_AvailableTime",                                                                                         // MakerGen.cs:231
+                    Path= "PractitionerRole.availableTime",                                                                                 // MakerGen.cs:232
+                    Id = "PractitionerRole.availableTime",                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_AvailableTime                                                                                              // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 16. PractitionerRole.notAvailable
+                this.Element_NotAvailable = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_NotAvailable",                                                                                          // MakerGen.cs:231
+                    Path= "PractitionerRole.notAvailable",                                                                                  // MakerGen.cs:232
+                    Id = "PractitionerRole.notAvailable",                                                                                   // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_NotAvailable                                                                                               // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 19. PractitionerRole.availabilityExceptions
+                this.Element_AvailabilityExceptions = new ElementDefinitionInfo                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_AvailabilityExceptions",                                                                                // MakerGen.cs:231
+                    Path= "PractitionerRole.availabilityExceptions",                                                                        // MakerGen.cs:232
+                    Id = "PractitionerRole.availabilityExceptions",                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 20. PractitionerRole.endpoint
+                this.Element_Endpoint = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Endpoint",                                                                                              // MakerGen.cs:231
+                    Path= "PractitionerRole.endpoint",                                                                                      // MakerGen.cs:232
+                    Id = "PractitionerRole.endpoint",                                                                                       // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
+                        {                                                                                                                   // MakerGen.cs:340
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                          // MakerGen.cs:342
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:343
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "PractitionerRole";                                                                                                 // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/PractitionerRole";                                                          // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

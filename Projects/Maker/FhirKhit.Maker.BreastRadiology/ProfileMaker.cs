@@ -30,11 +30,11 @@ namespace FhirKhit.Maker.BreastRadiology
                     "Breast Radiology Observation linked to by the 'result' field."
             };
 
-            r.Elements.Element_Code.Pattern(new CodeableConcept(Loinc, "10193-1"));
-            r.Elements.Element_Category.Pattern(new CodeableConcept(DiagSvcSects, "RAD"));
-            r.Elements.Element_Specimen.Unused();
-            r.Elements.Element_Conclusion.Card(1, 1);
-            r.Elements.Element_ConclusionCode.Card(1, 1);
+            r.Element_Code.Pattern(new CodeableConcept(Loinc, "10193-1"));
+            r.Element_Category.Pattern(new CodeableConcept(DiagSvcSects, "RAD"));
+            r.Element_Specimen.Unused();
+            r.Element_Conclusion.Card(1, 1);
+            r.Element_ConclusionCode.Card(1, 1);
             r.Write(Path.Combine(outputDir, $"StructureDefinition.BreastRadiologyReport.json"));
         }
         public void CreateProfiles()

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:454
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:455
-using System.IO;                                                                                                                            // MakerGen.cs:456
-using System.Linq;                                                                                                                          // MakerGen.cs:457
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:458
-                                                                                                                                            // MakerGen.cs:459
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:460
-{                                                                                                                                           // MakerGen.cs:461
-    #region Json                                                                                                                            // MakerGen.cs:462
-    #if NEVER                                                                                                                               // MakerGen.cs:463
+using System;                                                                                                                               // MakerGen.cs:428
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
+using System.IO;                                                                                                                            // MakerGen.cs:430
+using System.Linq;                                                                                                                          // MakerGen.cs:431
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
+                                                                                                                                            // MakerGen.cs:433
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
+{                                                                                                                                           // MakerGen.cs:435
+    #region Json                                                                                                                            // MakerGen.cs:436
+    #if NEVER                                                                                                                               // MakerGen.cs:437
     {
       "resourceType": "StructureDefinition",
       "id": "ConceptMap",
@@ -721,1095 +721,957 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:466
+    #endregion                                                                                                                              // MakerGen.cs:440
     /// <summary>
     /// Fhir resource 'ConceptMap'
     /// </summary>
     // 0. ConceptMap
     public class Resource_ConceptMap : FhirKhit.Maker.Common.Resource.ResourceBase                                                          // MakerGen.cs:376
     {                                                                                                                                       // MakerGen.cs:377
-        public class Resource_ConceptMap_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                             // MakerGen.cs:378
-        {                                                                                                                                   // MakerGen.cs:379
-            // 18. ConceptMap.group
-            public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
+        // 18. ConceptMap.group
+        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:376
+        {                                                                                                                                   // MakerGen.cs:377
+            // 23. ConceptMap.group.element
+            public class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
             {                                                                                                                               // MakerGen.cs:377
-                public class Type_Group_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                              // MakerGen.cs:378
-                {                                                                                                                           // MakerGen.cs:379
-                    // 23. ConceptMap.group.element
-                    public class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:376
+                // 26. ConceptMap.group.element.target
+                public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
+                {                                                                                                                           // MakerGen.cs:377
+                    // 31. ConceptMap.group.element.target.dependsOn
+                    public class Type_DependsOn : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:376
                     {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Element_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                    // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 26. ConceptMap.group.element.target
-                            public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase                                            // MakerGen.cs:376
-                            {                                                                                                               // MakerGen.cs:377
-                                public class Type_Target_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                             // MakerGen.cs:378
-                                {                                                                                                           // MakerGen.cs:379
-                                    // 31. ConceptMap.group.element.target.dependsOn
-                                    public class Type_DependsOn : FhirKhit.Maker.Common.Complex.ComplexBase                                 // MakerGen.cs:376
-                                    {                                                                                                       // MakerGen.cs:377
-                                        public class Type_DependsOn_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                  // MakerGen.cs:378
-                                        {                                                                                                   // MakerGen.cs:379
-                                            // 32. ConceptMap.group.element.target.dependsOn.property
-                                            public ElementDefinitionInfo Element_Property;                                                  // MakerGen.cs:211
-                                            // 33. ConceptMap.group.element.target.dependsOn.system
-                                            public ElementDefinitionInfo Element_System;                                                    // MakerGen.cs:211
-                                            // 34. ConceptMap.group.element.target.dependsOn.value
-                                            public ElementDefinitionInfo Element_Value;                                                     // MakerGen.cs:211
-                                            // 35. ConceptMap.group.element.target.dependsOn.display
-                                            public ElementDefinitionInfo Element_Display;                                                   // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                                            public Type_DependsOn_Elements()                                                                // MakerGen.cs:384
-                                            {                                                                                               // MakerGen.cs:385
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 32. ConceptMap.group.element.target.dependsOn.property
-                                                    this.Element_Property = new ElementDefinitionInfo                                       // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Property",                                                          // MakerGen.cs:230
-                                                        Path= "ConceptMap.group.element.target.dependsOn.property",                         // MakerGen.cs:231
-                                                        Id = "ConceptMap.group.element.target.dependsOn.property",                          // MakerGen.cs:232
-                                                        Min = 1,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Primitive.Uri                                         // MakerGen.cs:295
-                                                            {                                                                               // MakerGen.cs:296
-                                                            }                                                                               // MakerGen.cs:299
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 33. ConceptMap.group.element.target.dependsOn.system
-                                                    this.Element_System = new ElementDefinitionInfo                                         // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_System",                                                            // MakerGen.cs:230
-                                                        Path= "ConceptMap.group.element.target.dependsOn.system",                           // MakerGen.cs:231
-                                                        Id = "ConceptMap.group.element.target.dependsOn.system",                            // MakerGen.cs:232
-                                                        Min = 0,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Primitive.Canonical                                   // MakerGen.cs:295
-                                                            {                                                                               // MakerGen.cs:296
-                                                                TargetProfile = new String[]                                                // MakerGen.cs:298
-                                                                {                                                                           // CodeEditorExtensions.cs:28
-                                                                    "http://hl7.org/fhir/StructureDefinition/CodeSystem"                    // MakerGen.cs:298
-                                                                }                                                                           // CodeEditorExtensions.cs:34
-                                                            }                                                                               // MakerGen.cs:299
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 34. ConceptMap.group.element.target.dependsOn.value
-                                                    this.Element_Value = new ElementDefinitionInfo                                          // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Value",                                                             // MakerGen.cs:230
-                                                        Path= "ConceptMap.group.element.target.dependsOn.value",                            // MakerGen.cs:231
-                                                        Id = "ConceptMap.group.element.target.dependsOn.value",                             // MakerGen.cs:232
-                                                        Min = 1,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Primitive.String                                      // MakerGen.cs:295
-                                                            {                                                                               // MakerGen.cs:296
-                                                            }                                                                               // MakerGen.cs:299
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                                {                                                                                           // MakerGen.cs:226
-                                                    // 35. ConceptMap.group.element.target.dependsOn.display
-                                                    this.Element_Display = new ElementDefinitionInfo                                        // MakerGen.cs:228
-                                                    {                                                                                       // MakerGen.cs:229
-                                                        Name = "Element_Display",                                                           // MakerGen.cs:230
-                                                        Path= "ConceptMap.group.element.target.dependsOn.display",                          // MakerGen.cs:231
-                                                        Id = "ConceptMap.group.element.target.dependsOn.display",                           // MakerGen.cs:232
-                                                        Min = 0,                                                                            // MakerGen.cs:233
-                                                        Max = 1,                                                                            // MakerGen.cs:234
-                                                        Types = new BaseType[]                                                              // MakerGen.cs:235
-                                                        {                                                                                   // MakerGen.cs:236
-                                                            new FhirKhit.Maker.Common.Primitive.String                                      // MakerGen.cs:295
-                                                            {                                                                               // MakerGen.cs:296
-                                                            }                                                                               // MakerGen.cs:299
-                                                        }                                                                                   // MakerGen.cs:238
-                                                    };                                                                                      // MakerGen.cs:239
-                                                }                                                                                           // MakerGen.cs:240
-                                            }                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                             // MakerGen.cs:390
-                                            {                                                                                               // MakerGen.cs:391
-                                                base.Write(sDef);                                                                           // MakerGen.cs:392
-                                                Element_Property.Write(sDef);                                                               // MakerGen.cs:215
-                                                Element_System.Write(sDef);                                                                 // MakerGen.cs:215
-                                                Element_Value.Write(sDef);                                                                  // MakerGen.cs:215
-                                                Element_Display.Write(sDef);                                                                // MakerGen.cs:215
-                                            }                                                                                               // MakerGen.cs:394
-                                        }                                                                                                   // MakerGen.cs:396
-                                        public Type_DependsOn_Elements Elements                                                             // MakerGen.cs:398
-                                        {                                                                                                   // MakerGen.cs:399
-                                            get                                                                                             // MakerGen.cs:400
-                                            {                                                                                               // MakerGen.cs:401
-                                                if (this.elements == null)                                                                  // MakerGen.cs:402
-                                                    this.elements = new Type_DependsOn_Elements();                                          // MakerGen.cs:403
-                                                return this.elements;                                                                       // MakerGen.cs:404
-                                            }                                                                                               // MakerGen.cs:405
-                                        }                                                                                                   // MakerGen.cs:406
-                                        Type_DependsOn_Elements elements;                                                                   // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                                        public Type_DependsOn()                                                                             // MakerGen.cs:410
-                                        {                                                                                                   // MakerGen.cs:411
-                                        }                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                 // MakerGen.cs:416
-                                        {                                                                                                   // MakerGen.cs:417
-                                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                              // MakerGen.cs:418
-                                            {                                                                                               // MakerGen.cs:419
-                                                Path = "ConceptMap.group.element.target.dependsOn",                                         // MakerGen.cs:420
-                                                ElementId = "ConceptMap.group.element.target.dependsOn"                                     // MakerGen.cs:421
-                                            });                                                                                             // MakerGen.cs:422
-                                            if (this.elements != null)                                                                      // MakerGen.cs:423
-                                                this.elements.Write(sDef);                                                                  // MakerGen.cs:424
-                                        }                                                                                                   // MakerGen.cs:425
-                                    }                                                                                                       // MakerGen.cs:426
-                                    // 27. ConceptMap.group.element.target.code
-                                    public ElementDefinitionInfo Element_Code;                                                              // MakerGen.cs:211
-                                    // 28. ConceptMap.group.element.target.display
-                                    public ElementDefinitionInfo Element_Display;                                                           // MakerGen.cs:211
-                                    // 29. ConceptMap.group.element.target.equivalence
-                                    public ElementDefinitionInfo Element_Equivalence;                                                       // MakerGen.cs:211
-                                    // 30. ConceptMap.group.element.target.comment
-                                    public ElementDefinitionInfo Element_Comment;                                                           // MakerGen.cs:211
-                                    // 31. ConceptMap.group.element.target.dependsOn
-                                    public ElementDefinitionInfo Element_DependsOn;                                                         // MakerGen.cs:211
-                                    // 36. ConceptMap.group.element.target.product
-                                    public ElementDefinitionInfo Element_Product;                                                           // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                                    public Type_Target_Elements()                                                                           // MakerGen.cs:384
-                                    {                                                                                                       // MakerGen.cs:385
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 27. ConceptMap.group.element.target.code
-                                            this.Element_Code = new ElementDefinitionInfo                                                   // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Code",                                                                      // MakerGen.cs:230
-                                                Path= "ConceptMap.group.element.target.code",                                               // MakerGen.cs:231
-                                                Id = "ConceptMap.group.element.target.code",                                                // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = 1,                                                                                    // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:295
-                                                    {                                                                                       // MakerGen.cs:296
-                                                    }                                                                                       // MakerGen.cs:299
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 28. ConceptMap.group.element.target.display
-                                            this.Element_Display = new ElementDefinitionInfo                                                // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Display",                                                                   // MakerGen.cs:230
-                                                Path= "ConceptMap.group.element.target.display",                                            // MakerGen.cs:231
-                                                Id = "ConceptMap.group.element.target.display",                                             // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = 1,                                                                                    // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:295
-                                                    {                                                                                       // MakerGen.cs:296
-                                                    }                                                                                       // MakerGen.cs:299
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 29. ConceptMap.group.element.target.equivalence
-                                            this.Element_Equivalence = new ElementDefinitionInfo                                            // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Equivalence",                                                               // MakerGen.cs:230
-                                                Path= "ConceptMap.group.element.target.equivalence",                                        // MakerGen.cs:231
-                                                Id = "ConceptMap.group.element.target.equivalence",                                         // MakerGen.cs:232
-                                                Min = 1,                                                                                    // MakerGen.cs:233
-                                                Max = 1,                                                                                    // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new FhirKhit.Maker.Common.Primitive.Code                                                // MakerGen.cs:295
-                                                    {                                                                                       // MakerGen.cs:296
-                                                    }                                                                                       // MakerGen.cs:299
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 30. ConceptMap.group.element.target.comment
-                                            this.Element_Comment = new ElementDefinitionInfo                                                // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Comment",                                                                   // MakerGen.cs:230
-                                                Path= "ConceptMap.group.element.target.comment",                                            // MakerGen.cs:231
-                                                Id = "ConceptMap.group.element.target.comment",                                             // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = 1,                                                                                    // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new FhirKhit.Maker.Common.Primitive.String                                              // MakerGen.cs:295
-                                                    {                                                                                       // MakerGen.cs:296
-                                                    }                                                                                       // MakerGen.cs:299
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 31. ConceptMap.group.element.target.dependsOn
-                                            this.Element_DependsOn = new ElementDefinitionInfo                                              // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_DependsOn",                                                                 // MakerGen.cs:230
-                                                Path= "ConceptMap.group.element.target.dependsOn",                                          // MakerGen.cs:231
-                                                Id = "ConceptMap.group.element.target.dependsOn",                                           // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = -1,                                                                                   // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                    new Type_DependsOn                                                                      // MakerGen.cs:254
-                                                    {                                                                                       // MakerGen.cs:255
-                                                    }                                                                                       // MakerGen.cs:256
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                        {                                                                                                   // MakerGen.cs:226
-                                            // 36. ConceptMap.group.element.target.product
-                                            this.Element_Product = new ElementDefinitionInfo                                                // MakerGen.cs:228
-                                            {                                                                                               // MakerGen.cs:229
-                                                Name = "Element_Product",                                                                   // MakerGen.cs:230
-                                                Path= "ConceptMap.group.element.target.product",                                            // MakerGen.cs:231
-                                                Id = "ConceptMap.group.element.target.product",                                             // MakerGen.cs:232
-                                                Min = 0,                                                                                    // MakerGen.cs:233
-                                                Max = -1,                                                                                   // MakerGen.cs:234
-                                                Types = new BaseType[]                                                                      // MakerGen.cs:235
-                                                {                                                                                           // MakerGen.cs:236
-                                                }                                                                                           // MakerGen.cs:238
-                                            };                                                                                              // MakerGen.cs:239
-                                        }                                                                                                   // MakerGen.cs:240
-                                    }                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                     // MakerGen.cs:390
-                                    {                                                                                                       // MakerGen.cs:391
-                                        base.Write(sDef);                                                                                   // MakerGen.cs:392
-                                        Element_Code.Write(sDef);                                                                           // MakerGen.cs:215
-                                        Element_Display.Write(sDef);                                                                        // MakerGen.cs:215
-                                        Element_Equivalence.Write(sDef);                                                                    // MakerGen.cs:215
-                                        Element_Comment.Write(sDef);                                                                        // MakerGen.cs:215
-                                        Element_DependsOn.Write(sDef);                                                                      // MakerGen.cs:215
-                                        Element_Product.Write(sDef);                                                                        // MakerGen.cs:215
-                                    }                                                                                                       // MakerGen.cs:394
-                                }                                                                                                           // MakerGen.cs:396
-                                public Type_Target_Elements Elements                                                                        // MakerGen.cs:398
-                                {                                                                                                           // MakerGen.cs:399
-                                    get                                                                                                     // MakerGen.cs:400
-                                    {                                                                                                       // MakerGen.cs:401
-                                        if (this.elements == null)                                                                          // MakerGen.cs:402
-                                            this.elements = new Type_Target_Elements();                                                     // MakerGen.cs:403
-                                        return this.elements;                                                                               // MakerGen.cs:404
-                                    }                                                                                                       // MakerGen.cs:405
-                                }                                                                                                           // MakerGen.cs:406
-                                Type_Target_Elements elements;                                                                              // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                                public Type_Target()                                                                                        // MakerGen.cs:410
-                                {                                                                                                           // MakerGen.cs:411
-                                }                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                         // MakerGen.cs:416
-                                {                                                                                                           // MakerGen.cs:417
-                                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                      // MakerGen.cs:418
-                                    {                                                                                                       // MakerGen.cs:419
-                                        Path = "ConceptMap.group.element.target",                                                           // MakerGen.cs:420
-                                        ElementId = "ConceptMap.group.element.target"                                                       // MakerGen.cs:421
-                                    });                                                                                                     // MakerGen.cs:422
-                                    if (this.elements != null)                                                                              // MakerGen.cs:423
-                                        this.elements.Write(sDef);                                                                          // MakerGen.cs:424
-                                }                                                                                                           // MakerGen.cs:425
-                            }                                                                                                               // MakerGen.cs:426
-                            // 24. ConceptMap.group.element.code
-                            public ElementDefinitionInfo Element_Code;                                                                      // MakerGen.cs:211
-                            // 25. ConceptMap.group.element.display
-                            public ElementDefinitionInfo Element_Display;                                                                   // MakerGen.cs:211
-                            // 26. ConceptMap.group.element.target
-                            public ElementDefinitionInfo Element_Target;                                                                    // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Element_Elements()                                                                                  // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 24. ConceptMap.group.element.code
-                                    this.Element_Code = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Code",                                                                              // MakerGen.cs:230
-                                        Path= "ConceptMap.group.element.code",                                                              // MakerGen.cs:231
-                                        Id = "ConceptMap.group.element.code",                                                               // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 25. ConceptMap.group.element.display
-                                    this.Element_Display = new ElementDefinitionInfo                                                        // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Display",                                                                           // MakerGen.cs:230
-                                        Path= "ConceptMap.group.element.display",                                                           // MakerGen.cs:231
-                                        Id = "ConceptMap.group.element.display",                                                            // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 26. ConceptMap.group.element.target
-                                    this.Element_Target = new ElementDefinitionInfo                                                         // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Target",                                                                            // MakerGen.cs:230
-                                        Path= "ConceptMap.group.element.target",                                                            // MakerGen.cs:231
-                                        Id = "ConceptMap.group.element.target",                                                             // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = -1,                                                                                           // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new Type_Target                                                                                 // MakerGen.cs:254
-                                            {                                                                                               // MakerGen.cs:255
-                                            }                                                                                               // MakerGen.cs:256
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Code.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Display.Write(sDef);                                                                                // MakerGen.cs:215
-                                Element_Target.Write(sDef);                                                                                 // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Element_Elements Elements                                                                               // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Element_Elements();                                                            // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Element_Elements elements;                                                                                     // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Element()                                                                                               // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "ConceptMap.group.element",                                                                          // MakerGen.cs:420
-                                ElementId = "ConceptMap.group.element"                                                                      // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
-                    // 37. ConceptMap.group.unmapped
-                    public class Type_Unmapped : FhirKhit.Maker.Common.Complex.ComplexBase                                                  // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        public class Type_Unmapped_Elements : FhirKhit.Maker.Common.Resource.ElementsBase                                   // MakerGen.cs:378
-                        {                                                                                                                   // MakerGen.cs:379
-                            // 38. ConceptMap.group.unmapped.mode
-                            public ElementDefinitionInfo Element_Mode;                                                                      // MakerGen.cs:211
-                            // 39. ConceptMap.group.unmapped.code
-                            public ElementDefinitionInfo Element_Code;                                                                      // MakerGen.cs:211
-                            // 40. ConceptMap.group.unmapped.display
-                            public ElementDefinitionInfo Element_Display;                                                                   // MakerGen.cs:211
-                            // 41. ConceptMap.group.unmapped.url
-                            public ElementDefinitionInfo Element_Url;                                                                       // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                            public Type_Unmapped_Elements()                                                                                 // MakerGen.cs:384
-                            {                                                                                                               // MakerGen.cs:385
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 38. ConceptMap.group.unmapped.mode
-                                    this.Element_Mode = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Mode",                                                                              // MakerGen.cs:230
-                                        Path= "ConceptMap.group.unmapped.mode",                                                             // MakerGen.cs:231
-                                        Id = "ConceptMap.group.unmapped.mode",                                                              // MakerGen.cs:232
-                                        Min = 1,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 39. ConceptMap.group.unmapped.code
-                                    this.Element_Code = new ElementDefinitionInfo                                                           // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Code",                                                                              // MakerGen.cs:230
-                                        Path= "ConceptMap.group.unmapped.code",                                                             // MakerGen.cs:231
-                                        Id = "ConceptMap.group.unmapped.code",                                                              // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Code                                                        // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 40. ConceptMap.group.unmapped.display
-                                    this.Element_Display = new ElementDefinitionInfo                                                        // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Display",                                                                           // MakerGen.cs:230
-                                        Path= "ConceptMap.group.unmapped.display",                                                          // MakerGen.cs:231
-                                        Id = "ConceptMap.group.unmapped.display",                                                           // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.String                                                      // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                                {                                                                                                           // MakerGen.cs:226
-                                    // 41. ConceptMap.group.unmapped.url
-                                    this.Element_Url = new ElementDefinitionInfo                                                            // MakerGen.cs:228
-                                    {                                                                                                       // MakerGen.cs:229
-                                        Name = "Element_Url",                                                                               // MakerGen.cs:230
-                                        Path= "ConceptMap.group.unmapped.url",                                                              // MakerGen.cs:231
-                                        Id = "ConceptMap.group.unmapped.url",                                                               // MakerGen.cs:232
-                                        Min = 0,                                                                                            // MakerGen.cs:233
-                                        Max = 1,                                                                                            // MakerGen.cs:234
-                                        Types = new BaseType[]                                                                              // MakerGen.cs:235
-                                        {                                                                                                   // MakerGen.cs:236
-                                            new FhirKhit.Maker.Common.Primitive.Canonical                                                   // MakerGen.cs:295
-                                            {                                                                                               // MakerGen.cs:296
-                                                TargetProfile = new String[]                                                                // MakerGen.cs:298
-                                                {                                                                                           // CodeEditorExtensions.cs:28
-                                                    "http://hl7.org/fhir/StructureDefinition/ConceptMap"                                    // MakerGen.cs:298
-                                                }                                                                                           // CodeEditorExtensions.cs:34
-                                            }                                                                                               // MakerGen.cs:299
-                                        }                                                                                                   // MakerGen.cs:238
-                                    };                                                                                                      // MakerGen.cs:239
-                                }                                                                                                           // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                             // MakerGen.cs:390
-                            {                                                                                                               // MakerGen.cs:391
-                                base.Write(sDef);                                                                                           // MakerGen.cs:392
-                                Element_Mode.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Code.Write(sDef);                                                                                   // MakerGen.cs:215
-                                Element_Display.Write(sDef);                                                                                // MakerGen.cs:215
-                                Element_Url.Write(sDef);                                                                                    // MakerGen.cs:215
-                            }                                                                                                               // MakerGen.cs:394
-                        }                                                                                                                   // MakerGen.cs:396
-                        public Type_Unmapped_Elements Elements                                                                              // MakerGen.cs:398
-                        {                                                                                                                   // MakerGen.cs:399
-                            get                                                                                                             // MakerGen.cs:400
-                            {                                                                                                               // MakerGen.cs:401
-                                if (this.elements == null)                                                                                  // MakerGen.cs:402
-                                    this.elements = new Type_Unmapped_Elements();                                                           // MakerGen.cs:403
-                                return this.elements;                                                                                       // MakerGen.cs:404
-                            }                                                                                                               // MakerGen.cs:405
-                        }                                                                                                                   // MakerGen.cs:406
-                        Type_Unmapped_Elements elements;                                                                                    // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                        public Type_Unmapped()                                                                                              // MakerGen.cs:410
-                        {                                                                                                                   // MakerGen.cs:411
-                        }                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:416
-                        {                                                                                                                   // MakerGen.cs:417
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:418
-                            {                                                                                                               // MakerGen.cs:419
-                                Path = "ConceptMap.group.unmapped",                                                                         // MakerGen.cs:420
-                                ElementId = "ConceptMap.group.unmapped"                                                                     // MakerGen.cs:421
-                            });                                                                                                             // MakerGen.cs:422
-                            if (this.elements != null)                                                                                      // MakerGen.cs:423
-                                this.elements.Write(sDef);                                                                                  // MakerGen.cs:424
-                        }                                                                                                                   // MakerGen.cs:425
-                    }                                                                                                                       // MakerGen.cs:426
+                        // 32. ConceptMap.group.element.target.dependsOn.property
+                        public ElementDefinitionInfo Element_Property;                                                                      // MakerGen.cs:212
+                        // 33. ConceptMap.group.element.target.dependsOn.system
+                        public ElementDefinitionInfo Element_System;                                                                        // MakerGen.cs:212
+                        // 34. ConceptMap.group.element.target.dependsOn.value
+                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:212
+                        // 35. ConceptMap.group.element.target.dependsOn.display
+                        public ElementDefinitionInfo Element_Display;                                                                       // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:383
+                        {                                                                                                                   // MakerGen.cs:384
+                            base.Write(sDef);                                                                                               // MakerGen.cs:385
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:386
+                            {                                                                                                               // MakerGen.cs:387
+                                Path = "ConceptMap.group.element.target.dependsOn",                                                         // MakerGen.cs:388
+                                ElementId = "ConceptMap.group.element.target.dependsOn"                                                     // MakerGen.cs:389
+                            });                                                                                                             // MakerGen.cs:390
+                            Element_Property.Write(sDef);                                                                                   // MakerGen.cs:216
+                            Element_System.Write(sDef);                                                                                     // MakerGen.cs:216
+                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:216
+                            Element_Display.Write(sDef);                                                                                    // MakerGen.cs:216
+                        }                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                        public Type_DependsOn()                                                                                             // MakerGen.cs:395
+                        {                                                                                                                   // MakerGen.cs:396
+                            {                                                                                                               // MakerGen.cs:227
+                                // 32. ConceptMap.group.element.target.dependsOn.property
+                                this.Element_Property = new ElementDefinitionInfo                                                           // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Property",                                                                              // MakerGen.cs:231
+                                    Path= "ConceptMap.group.element.target.dependsOn.property",                                             // MakerGen.cs:232
+                                    Id = "ConceptMap.group.element.target.dependsOn.property",                                              // MakerGen.cs:233
+                                    Min = 1,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                   // MakerGen.cs:296
+                                        {                                                                                                   // MakerGen.cs:297
+                                        }                                                                                                   // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:227
+                                // 33. ConceptMap.group.element.target.dependsOn.system
+                                this.Element_System = new ElementDefinitionInfo                                                             // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_System",                                                                                // MakerGen.cs:231
+                                    Path= "ConceptMap.group.element.target.dependsOn.system",                                               // MakerGen.cs:232
+                                    Id = "ConceptMap.group.element.target.dependsOn.system",                                                // MakerGen.cs:233
+                                    Min = 0,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                             // MakerGen.cs:296
+                                        {                                                                                                   // MakerGen.cs:297
+                                            TargetProfile = new String[]                                                                    // MakerGen.cs:299
+                                            {                                                                                               // CodeEditorExtensions.cs:28
+                                                "http://hl7.org/fhir/StructureDefinition/CodeSystem"                                        // MakerGen.cs:299
+                                            }                                                                                               // CodeEditorExtensions.cs:34
+                                        }                                                                                                   // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:227
+                                // 34. ConceptMap.group.element.target.dependsOn.value
+                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Value",                                                                                 // MakerGen.cs:231
+                                    Path= "ConceptMap.group.element.target.dependsOn.value",                                                // MakerGen.cs:232
+                                    Id = "ConceptMap.group.element.target.dependsOn.value",                                                 // MakerGen.cs:233
+                                    Min = 1,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:296
+                                        {                                                                                                   // MakerGen.cs:297
+                                        }                                                                                                   // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                            {                                                                                                               // MakerGen.cs:227
+                                // 35. ConceptMap.group.element.target.dependsOn.display
+                                this.Element_Display = new ElementDefinitionInfo                                                            // MakerGen.cs:229
+                                {                                                                                                           // MakerGen.cs:230
+                                    Name = "Element_Display",                                                                               // MakerGen.cs:231
+                                    Path= "ConceptMap.group.element.target.dependsOn.display",                                              // MakerGen.cs:232
+                                    Id = "ConceptMap.group.element.target.dependsOn.display",                                               // MakerGen.cs:233
+                                    Min = 0,                                                                                                // MakerGen.cs:234
+                                    Max = 1,                                                                                                // MakerGen.cs:235
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
+                                    {                                                                                                       // MakerGen.cs:237
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:296
+                                        {                                                                                                   // MakerGen.cs:297
+                                        }                                                                                                   // MakerGen.cs:300
+                                    }                                                                                                       // MakerGen.cs:239
+                                };                                                                                                          // MakerGen.cs:240
+                            }                                                                                                               // MakerGen.cs:241
+                        }                                                                                                                   // MakerGen.cs:398
+                    }                                                                                                                       // MakerGen.cs:400
+                    // 27. ConceptMap.group.element.target.code
+                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:212
+                    // 28. ConceptMap.group.element.target.display
+                    public ElementDefinitionInfo Element_Display;                                                                           // MakerGen.cs:212
+                    // 29. ConceptMap.group.element.target.equivalence
+                    public ElementDefinitionInfo Element_Equivalence;                                                                       // MakerGen.cs:212
+                    // 30. ConceptMap.group.element.target.comment
+                    public ElementDefinitionInfo Element_Comment;                                                                           // MakerGen.cs:212
+                    // 31. ConceptMap.group.element.target.dependsOn
+                    public ElementDefinitionInfo Element_DependsOn;                                                                         // MakerGen.cs:212
+                    // 36. ConceptMap.group.element.target.product
+                    public ElementDefinitionInfo Element_Product;                                                                           // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
+                        {                                                                                                                   // MakerGen.cs:387
+                            Path = "ConceptMap.group.element.target",                                                                       // MakerGen.cs:388
+                            ElementId = "ConceptMap.group.element.target"                                                                   // MakerGen.cs:389
+                        });                                                                                                                 // MakerGen.cs:390
+                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:216
+                        Element_Display.Write(sDef);                                                                                        // MakerGen.cs:216
+                        Element_Equivalence.Write(sDef);                                                                                    // MakerGen.cs:216
+                        Element_Comment.Write(sDef);                                                                                        // MakerGen.cs:216
+                        Element_DependsOn.Write(sDef);                                                                                      // MakerGen.cs:216
+                        Element_Product.Write(sDef);                                                                                        // MakerGen.cs:216
+                    }                                                                                                                       // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                    public Type_Target()                                                                                                    // MakerGen.cs:395
+                    {                                                                                                                       // MakerGen.cs:396
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 27. ConceptMap.group.element.target.code
+                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Code",                                                                                      // MakerGen.cs:231
+                                Path= "ConceptMap.group.element.target.code",                                                               // MakerGen.cs:232
+                                Id = "ConceptMap.group.element.target.code",                                                                // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = 1,                                                                                                    // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
+                                    {                                                                                                       // MakerGen.cs:297
+                                    }                                                                                                       // MakerGen.cs:300
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 28. ConceptMap.group.element.target.display
+                            this.Element_Display = new ElementDefinitionInfo                                                                // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Display",                                                                                   // MakerGen.cs:231
+                                Path= "ConceptMap.group.element.target.display",                                                            // MakerGen.cs:232
+                                Id = "ConceptMap.group.element.target.display",                                                             // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = 1,                                                                                                    // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
+                                    {                                                                                                       // MakerGen.cs:297
+                                    }                                                                                                       // MakerGen.cs:300
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 29. ConceptMap.group.element.target.equivalence
+                            this.Element_Equivalence = new ElementDefinitionInfo                                                            // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Equivalence",                                                                               // MakerGen.cs:231
+                                Path= "ConceptMap.group.element.target.equivalence",                                                        // MakerGen.cs:232
+                                Id = "ConceptMap.group.element.target.equivalence",                                                         // MakerGen.cs:233
+                                Min = 1,                                                                                                    // MakerGen.cs:234
+                                Max = 1,                                                                                                    // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
+                                    {                                                                                                       // MakerGen.cs:297
+                                    }                                                                                                       // MakerGen.cs:300
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 30. ConceptMap.group.element.target.comment
+                            this.Element_Comment = new ElementDefinitionInfo                                                                // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Comment",                                                                                   // MakerGen.cs:231
+                                Path= "ConceptMap.group.element.target.comment",                                                            // MakerGen.cs:232
+                                Id = "ConceptMap.group.element.target.comment",                                                             // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = 1,                                                                                                    // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
+                                    {                                                                                                       // MakerGen.cs:297
+                                    }                                                                                                       // MakerGen.cs:300
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 31. ConceptMap.group.element.target.dependsOn
+                            this.Element_DependsOn = new ElementDefinitionInfo                                                              // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_DependsOn",                                                                                 // MakerGen.cs:231
+                                Path= "ConceptMap.group.element.target.dependsOn",                                                          // MakerGen.cs:232
+                                Id = "ConceptMap.group.element.target.dependsOn",                                                           // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = -1,                                                                                                   // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    new Type_DependsOn                                                                                      // MakerGen.cs:255
+                                    {                                                                                                       // MakerGen.cs:256
+                                    }                                                                                                       // MakerGen.cs:257
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                        {                                                                                                                   // MakerGen.cs:227
+                            // 36. ConceptMap.group.element.target.product
+                            this.Element_Product = new ElementDefinitionInfo                                                                // MakerGen.cs:229
+                            {                                                                                                               // MakerGen.cs:230
+                                Name = "Element_Product",                                                                                   // MakerGen.cs:231
+                                Path= "ConceptMap.group.element.target.product",                                                            // MakerGen.cs:232
+                                Id = "ConceptMap.group.element.target.product",                                                             // MakerGen.cs:233
+                                Min = 0,                                                                                                    // MakerGen.cs:234
+                                Max = -1,                                                                                                   // MakerGen.cs:235
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                }                                                                                                           // MakerGen.cs:239
+                            };                                                                                                              // MakerGen.cs:240
+                        }                                                                                                                   // MakerGen.cs:241
+                    }                                                                                                                       // MakerGen.cs:398
+                }                                                                                                                           // MakerGen.cs:400
+                // 24. ConceptMap.group.element.code
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:212
+                // 25. ConceptMap.group.element.display
+                public ElementDefinitionInfo Element_Display;                                                                               // MakerGen.cs:212
+                // 26. ConceptMap.group.element.target
+                public ElementDefinitionInfo Element_Target;                                                                                // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "ConceptMap.group.element",                                                                                  // MakerGen.cs:388
+                        ElementId = "ConceptMap.group.element"                                                                              // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Display.Write(sDef);                                                                                            // MakerGen.cs:216
+                    Element_Target.Write(sDef);                                                                                             // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Element()                                                                                                       // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 24. ConceptMap.group.element.code
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:231
+                            Path= "ConceptMap.group.element.code",                                                                          // MakerGen.cs:232
+                            Id = "ConceptMap.group.element.code",                                                                           // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 25. ConceptMap.group.element.display
+                        this.Element_Display = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Display",                                                                                       // MakerGen.cs:231
+                            Path= "ConceptMap.group.element.display",                                                                       // MakerGen.cs:232
+                            Id = "ConceptMap.group.element.display",                                                                        // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 26. ConceptMap.group.element.target
+                        this.Element_Target = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Target",                                                                                        // MakerGen.cs:231
+                            Path= "ConceptMap.group.element.target",                                                                        // MakerGen.cs:232
+                            Id = "ConceptMap.group.element.target",                                                                         // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = -1,                                                                                                       // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new Type_Target                                                                                             // MakerGen.cs:255
+                                {                                                                                                           // MakerGen.cs:256
+                                }                                                                                                           // MakerGen.cs:257
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 37. ConceptMap.group.unmapped
+            public class Type_Unmapped : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:376
+            {                                                                                                                               // MakerGen.cs:377
+                // 38. ConceptMap.group.unmapped.mode
+                public ElementDefinitionInfo Element_Mode;                                                                                  // MakerGen.cs:212
+                // 39. ConceptMap.group.unmapped.code
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:212
+                // 40. ConceptMap.group.unmapped.display
+                public ElementDefinitionInfo Element_Display;                                                                               // MakerGen.cs:212
+                // 41. ConceptMap.group.unmapped.url
+                public ElementDefinitionInfo Element_Url;                                                                                   // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
+                    {                                                                                                                       // MakerGen.cs:387
+                        Path = "ConceptMap.group.unmapped",                                                                                 // MakerGen.cs:388
+                        ElementId = "ConceptMap.group.unmapped"                                                                             // MakerGen.cs:389
+                    });                                                                                                                     // MakerGen.cs:390
+                    Element_Mode.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:216
+                    Element_Display.Write(sDef);                                                                                            // MakerGen.cs:216
+                    Element_Url.Write(sDef);                                                                                                // MakerGen.cs:216
+                }                                                                                                                           // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+                public Type_Unmapped()                                                                                                      // MakerGen.cs:395
+                {                                                                                                                           // MakerGen.cs:396
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 38. ConceptMap.group.unmapped.mode
+                        this.Element_Mode = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Mode",                                                                                          // MakerGen.cs:231
+                            Path= "ConceptMap.group.unmapped.mode",                                                                         // MakerGen.cs:232
+                            Id = "ConceptMap.group.unmapped.mode",                                                                          // MakerGen.cs:233
+                            Min = 1,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 39. ConceptMap.group.unmapped.code
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:231
+                            Path= "ConceptMap.group.unmapped.code",                                                                         // MakerGen.cs:232
+                            Id = "ConceptMap.group.unmapped.code",                                                                          // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 40. ConceptMap.group.unmapped.display
+                        this.Element_Display = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Display",                                                                                       // MakerGen.cs:231
+                            Path= "ConceptMap.group.unmapped.display",                                                                      // MakerGen.cs:232
+                            Id = "ConceptMap.group.unmapped.display",                                                                       // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                    {                                                                                                                       // MakerGen.cs:227
+                        // 41. ConceptMap.group.unmapped.url
+                        this.Element_Url = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                        {                                                                                                                   // MakerGen.cs:230
+                            Name = "Element_Url",                                                                                           // MakerGen.cs:231
+                            Path= "ConceptMap.group.unmapped.url",                                                                          // MakerGen.cs:232
+                            Id = "ConceptMap.group.unmapped.url",                                                                           // MakerGen.cs:233
+                            Min = 0,                                                                                                        // MakerGen.cs:234
+                            Max = 1,                                                                                                        // MakerGen.cs:235
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:296
+                                {                                                                                                           // MakerGen.cs:297
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:299
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/ConceptMap"                                                // MakerGen.cs:299
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:300
+                            }                                                                                                               // MakerGen.cs:239
+                        };                                                                                                                  // MakerGen.cs:240
+                    }                                                                                                                       // MakerGen.cs:241
+                }                                                                                                                           // MakerGen.cs:398
+            }                                                                                                                               // MakerGen.cs:400
+            // 19. ConceptMap.group.source
+            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:212
+            // 20. ConceptMap.group.sourceVersion
+            public ElementDefinitionInfo Element_SourceVersion;                                                                             // MakerGen.cs:212
+            // 21. ConceptMap.group.target
+            public ElementDefinitionInfo Element_Target;                                                                                    // MakerGen.cs:212
+            // 22. ConceptMap.group.targetVersion
+            public ElementDefinitionInfo Element_TargetVersion;                                                                             // MakerGen.cs:212
+            // 23. ConceptMap.group.element
+            public ElementDefinitionInfo Element_Element;                                                                                   // MakerGen.cs:212
+            // 37. ConceptMap.group.unmapped
+            public ElementDefinitionInfo Element_Unmapped;                                                                                  // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                base.Write(sDef);                                                                                                           // MakerGen.cs:385
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
+                {                                                                                                                           // MakerGen.cs:387
+                    Path = "ConceptMap.group",                                                                                              // MakerGen.cs:388
+                    ElementId = "ConceptMap.group"                                                                                          // MakerGen.cs:389
+                });                                                                                                                         // MakerGen.cs:390
+                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_SourceVersion.Write(sDef);                                                                                          // MakerGen.cs:216
+                Element_Target.Write(sDef);                                                                                                 // MakerGen.cs:216
+                Element_TargetVersion.Write(sDef);                                                                                          // MakerGen.cs:216
+                Element_Element.Write(sDef);                                                                                                // MakerGen.cs:216
+                Element_Unmapped.Write(sDef);                                                                                               // MakerGen.cs:216
+            }                                                                                                                               // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+            public Type_Group()                                                                                                             // MakerGen.cs:395
+            {                                                                                                                               // MakerGen.cs:396
+                {                                                                                                                           // MakerGen.cs:227
                     // 19. ConceptMap.group.source
-                    public ElementDefinitionInfo Element_Source;                                                                            // MakerGen.cs:211
+                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Source",                                                                                            // MakerGen.cs:231
+                        Path= "ConceptMap.group.source",                                                                                    // MakerGen.cs:232
+                        Id = "ConceptMap.group.source",                                                                                     // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 20. ConceptMap.group.sourceVersion
-                    public ElementDefinitionInfo Element_SourceVersion;                                                                     // MakerGen.cs:211
+                    this.Element_SourceVersion = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_SourceVersion",                                                                                     // MakerGen.cs:231
+                        Path= "ConceptMap.group.sourceVersion",                                                                             // MakerGen.cs:232
+                        Id = "ConceptMap.group.sourceVersion",                                                                              // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 21. ConceptMap.group.target
-                    public ElementDefinitionInfo Element_Target;                                                                            // MakerGen.cs:211
+                    this.Element_Target = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Target",                                                                                            // MakerGen.cs:231
+                        Path= "ConceptMap.group.target",                                                                                    // MakerGen.cs:232
+                        Id = "ConceptMap.group.target",                                                                                     // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 22. ConceptMap.group.targetVersion
-                    public ElementDefinitionInfo Element_TargetVersion;                                                                     // MakerGen.cs:211
+                    this.Element_TargetVersion = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_TargetVersion",                                                                                     // MakerGen.cs:231
+                        Path= "ConceptMap.group.targetVersion",                                                                             // MakerGen.cs:232
+                        Id = "ConceptMap.group.targetVersion",                                                                              // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
+                            {                                                                                                               // MakerGen.cs:297
+                            }                                                                                                               // MakerGen.cs:300
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 23. ConceptMap.group.element
-                    public ElementDefinitionInfo Element_Element;                                                                           // MakerGen.cs:211
+                    this.Element_Element = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Element",                                                                                           // MakerGen.cs:231
+                        Path= "ConceptMap.group.element",                                                                                   // MakerGen.cs:232
+                        Id = "ConceptMap.group.element",                                                                                    // MakerGen.cs:233
+                        Min = 1,                                                                                                            // MakerGen.cs:234
+                        Max = -1,                                                                                                           // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Element                                                                                                // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+                {                                                                                                                           // MakerGen.cs:227
                     // 37. ConceptMap.group.unmapped
-                    public ElementDefinitionInfo Element_Unmapped;                                                                          // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-                    public Type_Group_Elements()                                                                                            // MakerGen.cs:384
-                    {                                                                                                                       // MakerGen.cs:385
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 19. ConceptMap.group.source
-                            this.Element_Source = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Source",                                                                                    // MakerGen.cs:230
-                                Path= "ConceptMap.group.source",                                                                            // MakerGen.cs:231
-                                Id = "ConceptMap.group.source",                                                                             // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 20. ConceptMap.group.sourceVersion
-                            this.Element_SourceVersion = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_SourceVersion",                                                                             // MakerGen.cs:230
-                                Path= "ConceptMap.group.sourceVersion",                                                                     // MakerGen.cs:231
-                                Id = "ConceptMap.group.sourceVersion",                                                                      // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 21. ConceptMap.group.target
-                            this.Element_Target = new ElementDefinitionInfo                                                                 // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Target",                                                                                    // MakerGen.cs:230
-                                Path= "ConceptMap.group.target",                                                                            // MakerGen.cs:231
-                                Id = "ConceptMap.group.target",                                                                             // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.Uri                                                                 // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 22. ConceptMap.group.targetVersion
-                            this.Element_TargetVersion = new ElementDefinitionInfo                                                          // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_TargetVersion",                                                                             // MakerGen.cs:230
-                                Path= "ConceptMap.group.targetVersion",                                                                     // MakerGen.cs:231
-                                Id = "ConceptMap.group.targetVersion",                                                                      // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new FhirKhit.Maker.Common.Primitive.String                                                              // MakerGen.cs:295
-                                    {                                                                                                       // MakerGen.cs:296
-                                    }                                                                                                       // MakerGen.cs:299
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 23. ConceptMap.group.element
-                            this.Element_Element = new ElementDefinitionInfo                                                                // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Element",                                                                                   // MakerGen.cs:230
-                                Path= "ConceptMap.group.element",                                                                           // MakerGen.cs:231
-                                Id = "ConceptMap.group.element",                                                                            // MakerGen.cs:232
-                                Min = 1,                                                                                                    // MakerGen.cs:233
-                                Max = -1,                                                                                                   // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Element                                                                                        // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                        {                                                                                                                   // MakerGen.cs:226
-                            // 37. ConceptMap.group.unmapped
-                            this.Element_Unmapped = new ElementDefinitionInfo                                                               // MakerGen.cs:228
-                            {                                                                                                               // MakerGen.cs:229
-                                Name = "Element_Unmapped",                                                                                  // MakerGen.cs:230
-                                Path= "ConceptMap.group.unmapped",                                                                          // MakerGen.cs:231
-                                Id = "ConceptMap.group.unmapped",                                                                           // MakerGen.cs:232
-                                Min = 0,                                                                                                    // MakerGen.cs:233
-                                Max = 1,                                                                                                    // MakerGen.cs:234
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:235
-                                {                                                                                                           // MakerGen.cs:236
-                                    new Type_Unmapped                                                                                       // MakerGen.cs:254
-                                    {                                                                                                       // MakerGen.cs:255
-                                    }                                                                                                       // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:238
-                            };                                                                                                              // MakerGen.cs:239
-                        }                                                                                                                   // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        Element_Source.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_SourceVersion.Write(sDef);                                                                                  // MakerGen.cs:215
-                        Element_Target.Write(sDef);                                                                                         // MakerGen.cs:215
-                        Element_TargetVersion.Write(sDef);                                                                                  // MakerGen.cs:215
-                        Element_Element.Write(sDef);                                                                                        // MakerGen.cs:215
-                        Element_Unmapped.Write(sDef);                                                                                       // MakerGen.cs:215
-                    }                                                                                                                       // MakerGen.cs:394
-                }                                                                                                                           // MakerGen.cs:396
-                public Type_Group_Elements Elements                                                                                         // MakerGen.cs:398
-                {                                                                                                                           // MakerGen.cs:399
-                    get                                                                                                                     // MakerGen.cs:400
-                    {                                                                                                                       // MakerGen.cs:401
-                        if (this.elements == null)                                                                                          // MakerGen.cs:402
-                            this.elements = new Type_Group_Elements();                                                                      // MakerGen.cs:403
-                        return this.elements;                                                                                               // MakerGen.cs:404
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:406
-                Type_Group_Elements elements;                                                                                               // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-                public Type_Group()                                                                                                         // MakerGen.cs:410
-                {                                                                                                                           // MakerGen.cs:411
-                }                                                                                                                           // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:416
-                {                                                                                                                           // MakerGen.cs:417
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:418
-                    {                                                                                                                       // MakerGen.cs:419
-                        Path = "ConceptMap.group",                                                                                          // MakerGen.cs:420
-                        ElementId = "ConceptMap.group"                                                                                      // MakerGen.cs:421
-                    });                                                                                                                     // MakerGen.cs:422
-                    if (this.elements != null)                                                                                              // MakerGen.cs:423
-                        this.elements.Write(sDef);                                                                                          // MakerGen.cs:424
-                }                                                                                                                           // MakerGen.cs:425
-            }                                                                                                                               // MakerGen.cs:426
-            // 1. ConceptMap.url
-            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:211
-            // 2. ConceptMap.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:211
-            // 3. ConceptMap.version
-            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:211
-            // 4. ConceptMap.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:211
-            // 5. ConceptMap.title
-            public ElementDefinitionInfo Element_Title;                                                                                     // MakerGen.cs:211
-            // 6. ConceptMap.status
-            public ElementDefinitionInfo Element_Status;                                                                                    // MakerGen.cs:211
-            // 7. ConceptMap.experimental
-            public ElementDefinitionInfo Element_Experimental;                                                                              // MakerGen.cs:211
-            // 8. ConceptMap.date
-            public ElementDefinitionInfo Element_Date;                                                                                      // MakerGen.cs:211
-            // 9. ConceptMap.publisher
-            public ElementDefinitionInfo Element_Publisher;                                                                                 // MakerGen.cs:211
-            // 10. ConceptMap.contact
-            public ElementDefinitionInfo Element_Contact;                                                                                   // MakerGen.cs:211
-            // 11. ConceptMap.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:211
-            // 12. ConceptMap.useContext
-            public ElementDefinitionInfo Element_UseContext;                                                                                // MakerGen.cs:211
-            // 13. ConceptMap.jurisdiction
-            public ElementDefinitionInfo Element_Jurisdiction;                                                                              // MakerGen.cs:211
-            // 14. ConceptMap.purpose
-            public ElementDefinitionInfo Element_Purpose;                                                                                   // MakerGen.cs:211
-            // 15. ConceptMap.copyright
-            public ElementDefinitionInfo Element_Copyright;                                                                                 // MakerGen.cs:211
-            // 16. ConceptMap.source[x]
-            public ElementDefinitionInfo Element_Source;                                                                                    // MakerGen.cs:211
-            // 17. ConceptMap.target[x]
-            public ElementDefinitionInfo Element_Target;                                                                                    // MakerGen.cs:211
-            // 18. ConceptMap.group
-            public ElementDefinitionInfo Element_Group;                                                                                     // MakerGen.cs:211
-                                                                                                                                            // MakerGen.cs:383
-            public Resource_ConceptMap_Elements()                                                                                           // MakerGen.cs:384
-            {                                                                                                                               // MakerGen.cs:385
-                {                                                                                                                           // MakerGen.cs:226
-                    // 1. ConceptMap.url
-                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Url",                                                                                               // MakerGen.cs:230
-                        Path= "ConceptMap.url",                                                                                             // MakerGen.cs:231
-                        Id = "ConceptMap.url",                                                                                              // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 2. ConceptMap.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:230
-                        Path= "ConceptMap.identifier",                                                                                      // MakerGen.cs:231
-                        Id = "ConceptMap.identifier",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 3. ConceptMap.version
-                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Version",                                                                                           // MakerGen.cs:230
-                        Path= "ConceptMap.version",                                                                                         // MakerGen.cs:231
-                        Id = "ConceptMap.version",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 4. ConceptMap.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:230
-                        Path= "ConceptMap.name",                                                                                            // MakerGen.cs:231
-                        Id = "ConceptMap.name",                                                                                             // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 5. ConceptMap.title
-                    this.Element_Title = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Title",                                                                                             // MakerGen.cs:230
-                        Path= "ConceptMap.title",                                                                                           // MakerGen.cs:231
-                        Id = "ConceptMap.title",                                                                                            // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 6. ConceptMap.status
-                    this.Element_Status = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Status",                                                                                            // MakerGen.cs:230
-                        Path= "ConceptMap.status",                                                                                          // MakerGen.cs:231
-                        Id = "ConceptMap.status",                                                                                           // MakerGen.cs:232
-                        Min = 1,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Code                                                                        // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 7. ConceptMap.experimental
-                    this.Element_Experimental = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Experimental",                                                                                      // MakerGen.cs:230
-                        Path= "ConceptMap.experimental",                                                                                    // MakerGen.cs:231
-                        Id = "ConceptMap.experimental",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Boolean                                                                     // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 8. ConceptMap.date
-                    this.Element_Date = new ElementDefinitionInfo                                                                           // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Date",                                                                                              // MakerGen.cs:230
-                        Path= "ConceptMap.date",                                                                                            // MakerGen.cs:231
-                        Id = "ConceptMap.date",                                                                                             // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.DateTime                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 9. ConceptMap.publisher
-                    this.Element_Publisher = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Publisher",                                                                                         // MakerGen.cs:230
-                        Path= "ConceptMap.publisher",                                                                                       // MakerGen.cs:231
-                        Id = "ConceptMap.publisher",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.String                                                                      // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 10. ConceptMap.contact
-                    this.Element_Contact = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Contact",                                                                                           // MakerGen.cs:230
-                        Path= "ConceptMap.contact",                                                                                         // MakerGen.cs:231
-                        Id = "ConceptMap.contact",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                            // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 11. ConceptMap.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:230
-                        Path= "ConceptMap.description",                                                                                     // MakerGen.cs:231
-                        Id = "ConceptMap.description",                                                                                      // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 12. ConceptMap.useContext
-                    this.Element_UseContext = new ElementDefinitionInfo                                                                     // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_UseContext",                                                                                        // MakerGen.cs:230
-                        Path= "ConceptMap.useContext",                                                                                      // MakerGen.cs:231
-                        Id = "ConceptMap.useContext",                                                                                       // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                             // MakerGen.cs:350
-                            {                                                                                                               // MakerGen.cs:351
-                            }                                                                                                               // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 13. ConceptMap.jurisdiction
-                    this.Element_Jurisdiction = new ElementDefinitionInfo                                                                   // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Jurisdiction",                                                                                      // MakerGen.cs:230
-                        Path= "ConceptMap.jurisdiction",                                                                                    // MakerGen.cs:231
-                        Id = "ConceptMap.jurisdiction",                                                                                     // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:310
-                            {                                                                                                               // MakerGen.cs:311
-                            }                                                                                                               // MakerGen.cs:314
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 14. ConceptMap.purpose
-                    this.Element_Purpose = new ElementDefinitionInfo                                                                        // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Purpose",                                                                                           // MakerGen.cs:230
-                        Path= "ConceptMap.purpose",                                                                                         // MakerGen.cs:231
-                        Id = "ConceptMap.purpose",                                                                                          // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 15. ConceptMap.copyright
-                    this.Element_Copyright = new ElementDefinitionInfo                                                                      // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Copyright",                                                                                         // MakerGen.cs:230
-                        Path= "ConceptMap.copyright",                                                                                       // MakerGen.cs:231
-                        Id = "ConceptMap.copyright",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Markdown                                                                    // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 16. ConceptMap.source[x]
-                    this.Element_Source = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Source",                                                                                            // MakerGen.cs:230
-                        Path= "ConceptMap.source[x]",                                                                                       // MakerGen.cs:231
-                        Id = "ConceptMap.source[x]",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            },                                                                                                              // MakerGen.cs:299
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:298
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                      // MakerGen.cs:298
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 17. ConceptMap.target[x]
-                    this.Element_Target = new ElementDefinitionInfo                                                                         // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Target",                                                                                            // MakerGen.cs:230
-                        Path= "ConceptMap.target[x]",                                                                                       // MakerGen.cs:231
-                        Id = "ConceptMap.target[x]",                                                                                        // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = 1,                                                                                                            // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new FhirKhit.Maker.Common.Primitive.Uri                                                                         // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                            },                                                                                                              // MakerGen.cs:299
-                            new FhirKhit.Maker.Common.Primitive.Canonical                                                                   // MakerGen.cs:295
-                            {                                                                                                               // MakerGen.cs:296
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:298
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                      // MakerGen.cs:298
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:299
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-                {                                                                                                                           // MakerGen.cs:226
-                    // 18. ConceptMap.group
-                    this.Element_Group = new ElementDefinitionInfo                                                                          // MakerGen.cs:228
-                    {                                                                                                                       // MakerGen.cs:229
-                        Name = "Element_Group",                                                                                             // MakerGen.cs:230
-                        Path= "ConceptMap.group",                                                                                           // MakerGen.cs:231
-                        Id = "ConceptMap.group",                                                                                            // MakerGen.cs:232
-                        Min = 0,                                                                                                            // MakerGen.cs:233
-                        Max = -1,                                                                                                           // MakerGen.cs:234
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:235
-                        {                                                                                                                   // MakerGen.cs:236
-                            new Type_Group                                                                                                  // MakerGen.cs:254
-                            {                                                                                                               // MakerGen.cs:255
-                            }                                                                                                               // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:238
-                    };                                                                                                                      // MakerGen.cs:239
-                }                                                                                                                           // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:387
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:215
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Title.Write(sDef);                                                                                                  // MakerGen.cs:215
-                Element_Status.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Experimental.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Date.Write(sDef);                                                                                                   // MakerGen.cs:215
-                Element_Publisher.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Contact.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:215
-                Element_UseContext.Write(sDef);                                                                                             // MakerGen.cs:215
-                Element_Jurisdiction.Write(sDef);                                                                                           // MakerGen.cs:215
-                Element_Purpose.Write(sDef);                                                                                                // MakerGen.cs:215
-                Element_Copyright.Write(sDef);                                                                                              // MakerGen.cs:215
-                Element_Source.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Target.Write(sDef);                                                                                                 // MakerGen.cs:215
-                Element_Group.Write(sDef);                                                                                                  // MakerGen.cs:215
-            }                                                                                                                               // MakerGen.cs:394
-        }                                                                                                                                   // MakerGen.cs:396
-        public Resource_ConceptMap_Elements Elements                                                                                        // MakerGen.cs:398
-        {                                                                                                                                   // MakerGen.cs:399
-            get                                                                                                                             // MakerGen.cs:400
-            {                                                                                                                               // MakerGen.cs:401
-                if (this.elements == null)                                                                                                  // MakerGen.cs:402
-                    this.elements = new Resource_ConceptMap_Elements();                                                                     // MakerGen.cs:403
-                return this.elements;                                                                                                       // MakerGen.cs:404
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:406
-        Resource_ConceptMap_Elements elements;                                                                                              // MakerGen.cs:407
-                                                                                                                                            // MakerGen.cs:409
-        public Resource_ConceptMap()                                                                                                        // MakerGen.cs:410
-        {                                                                                                                                   // MakerGen.cs:411
-            this.Name = "ConceptMap";                                                                                                       // MakerGen.cs:484
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ConceptMap";                                                                // MakerGen.cs:485
-        }                                                                                                                                   // MakerGen.cs:413
-                                                                                                                                            // MakerGen.cs:415
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:416
-        {                                                                                                                                   // MakerGen.cs:417
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:418
-            {                                                                                                                               // MakerGen.cs:419
-                Path = "ConceptMap",                                                                                                        // MakerGen.cs:420
-                ElementId = "ConceptMap"                                                                                                    // MakerGen.cs:421
-            });                                                                                                                             // MakerGen.cs:422
-            if (this.elements != null)                                                                                                      // MakerGen.cs:423
-                this.elements.Write(sDef);                                                                                                  // MakerGen.cs:424
-        }                                                                                                                                   // MakerGen.cs:425
-    }                                                                                                                                       // MakerGen.cs:426
-}                                                                                                                                           // MakerGen.cs:471
+                    this.Element_Unmapped = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                    {                                                                                                                       // MakerGen.cs:230
+                        Name = "Element_Unmapped",                                                                                          // MakerGen.cs:231
+                        Path= "ConceptMap.group.unmapped",                                                                                  // MakerGen.cs:232
+                        Id = "ConceptMap.group.unmapped",                                                                                   // MakerGen.cs:233
+                        Min = 0,                                                                                                            // MakerGen.cs:234
+                        Max = 1,                                                                                                            // MakerGen.cs:235
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            new Type_Unmapped                                                                                               // MakerGen.cs:255
+                            {                                                                                                               // MakerGen.cs:256
+                            }                                                                                                               // MakerGen.cs:257
+                        }                                                                                                                   // MakerGen.cs:239
+                    };                                                                                                                      // MakerGen.cs:240
+                }                                                                                                                           // MakerGen.cs:241
+            }                                                                                                                               // MakerGen.cs:398
+        }                                                                                                                                   // MakerGen.cs:400
+        // 1. ConceptMap.url
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:212
+        // 2. ConceptMap.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
+        // 3. ConceptMap.version
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:212
+        // 4. ConceptMap.name
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:212
+        // 5. ConceptMap.title
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:212
+        // 6. ConceptMap.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        // 7. ConceptMap.experimental
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:212
+        // 8. ConceptMap.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
+        // 9. ConceptMap.publisher
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:212
+        // 10. ConceptMap.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
+        // 11. ConceptMap.description
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:212
+        // 12. ConceptMap.useContext
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:212
+        // 13. ConceptMap.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
+        // 14. ConceptMap.purpose
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:212
+        // 15. ConceptMap.copyright
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:212
+        // 16. ConceptMap.source[x]
+        public ElementDefinitionInfo Element_Source;                                                                                        // MakerGen.cs:212
+        // 17. ConceptMap.target[x]
+        public ElementDefinitionInfo Element_Target;                                                                                        // MakerGen.cs:212
+        // 18. ConceptMap.group
+        public ElementDefinitionInfo Element_Group;                                                                                         // MakerGen.cs:212
+                                                                                                                                            // MakerGen.cs:382
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            base.Write(sDef);                                                                                                               // MakerGen.cs:385
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
+            {                                                                                                                               // MakerGen.cs:387
+                Path = "ConceptMap",                                                                                                        // MakerGen.cs:388
+                ElementId = "ConceptMap"                                                                                                    // MakerGen.cs:389
+            });                                                                                                                             // MakerGen.cs:390
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:216
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:216
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:216
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:216
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:216
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:216
+            Element_Source.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Target.Write(sDef);                                                                                                     // MakerGen.cs:216
+            Element_Group.Write(sDef);                                                                                                      // MakerGen.cs:216
+        }                                                                                                                                   // MakerGen.cs:392
+                                                                                                                                            // MakerGen.cs:394
+        public Resource_ConceptMap()                                                                                                        // MakerGen.cs:395
+        {                                                                                                                                   // MakerGen.cs:396
+            {                                                                                                                               // MakerGen.cs:227
+                // 1. ConceptMap.url
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:231
+                    Path= "ConceptMap.url",                                                                                                 // MakerGen.cs:232
+                    Id = "ConceptMap.url",                                                                                                  // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 2. ConceptMap.identifier
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
+                    Path= "ConceptMap.identifier",                                                                                          // MakerGen.cs:232
+                    Id = "ConceptMap.identifier",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 3. ConceptMap.version
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:231
+                    Path= "ConceptMap.version",                                                                                             // MakerGen.cs:232
+                    Id = "ConceptMap.version",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 4. ConceptMap.name
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:231
+                    Path= "ConceptMap.name",                                                                                                // MakerGen.cs:232
+                    Id = "ConceptMap.name",                                                                                                 // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 5. ConceptMap.title
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:231
+                    Path= "ConceptMap.title",                                                                                               // MakerGen.cs:232
+                    Id = "ConceptMap.title",                                                                                                // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 6. ConceptMap.status
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
+                    Path= "ConceptMap.status",                                                                                              // MakerGen.cs:232
+                    Id = "ConceptMap.status",                                                                                               // MakerGen.cs:233
+                    Min = 1,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 7. ConceptMap.experimental
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:231
+                    Path= "ConceptMap.experimental",                                                                                        // MakerGen.cs:232
+                    Id = "ConceptMap.experimental",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 8. ConceptMap.date
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
+                    Path= "ConceptMap.date",                                                                                                // MakerGen.cs:232
+                    Id = "ConceptMap.date",                                                                                                 // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 9. ConceptMap.publisher
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:231
+                    Path= "ConceptMap.publisher",                                                                                           // MakerGen.cs:232
+                    Id = "ConceptMap.publisher",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 10. ConceptMap.contact
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
+                    Path= "ConceptMap.contact",                                                                                             // MakerGen.cs:232
+                    Id = "ConceptMap.contact",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 11. ConceptMap.description
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:231
+                    Path= "ConceptMap.description",                                                                                         // MakerGen.cs:232
+                    Id = "ConceptMap.description",                                                                                          // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 12. ConceptMap.useContext
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:231
+                    Path= "ConceptMap.useContext",                                                                                          // MakerGen.cs:232
+                    Id = "ConceptMap.useContext",                                                                                           // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:351
+                        {                                                                                                                   // MakerGen.cs:352
+                        }                                                                                                                   // MakerGen.cs:353
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 13. ConceptMap.jurisdiction
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
+                    Path= "ConceptMap.jurisdiction",                                                                                        // MakerGen.cs:232
+                    Id = "ConceptMap.jurisdiction",                                                                                         // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
+                        {                                                                                                                   // MakerGen.cs:312
+                        }                                                                                                                   // MakerGen.cs:315
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 14. ConceptMap.purpose
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:231
+                    Path= "ConceptMap.purpose",                                                                                             // MakerGen.cs:232
+                    Id = "ConceptMap.purpose",                                                                                              // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 15. ConceptMap.copyright
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:231
+                    Path= "ConceptMap.copyright",                                                                                           // MakerGen.cs:232
+                    Id = "ConceptMap.copyright",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 16. ConceptMap.source[x]
+                this.Element_Source = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Source",                                                                                                // MakerGen.cs:231
+                    Path= "ConceptMap.source[x]",                                                                                           // MakerGen.cs:232
+                    Id = "ConceptMap.source[x]",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        },                                                                                                                  // MakerGen.cs:300
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:299
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 17. ConceptMap.target[x]
+                this.Element_Target = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Target",                                                                                                // MakerGen.cs:231
+                    Path= "ConceptMap.target[x]",                                                                                           // MakerGen.cs:232
+                    Id = "ConceptMap.target[x]",                                                                                            // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = 1,                                                                                                                // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                        },                                                                                                                  // MakerGen.cs:300
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
+                        {                                                                                                                   // MakerGen.cs:297
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                            {                                                                                                               // CodeEditorExtensions.cs:28
+                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:299
+                            }                                                                                                               // CodeEditorExtensions.cs:34
+                        }                                                                                                                   // MakerGen.cs:300
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            {                                                                                                                               // MakerGen.cs:227
+                // 18. ConceptMap.group
+                this.Element_Group = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
+                {                                                                                                                           // MakerGen.cs:230
+                    Name = "Element_Group",                                                                                                 // MakerGen.cs:231
+                    Path= "ConceptMap.group",                                                                                               // MakerGen.cs:232
+                    Id = "ConceptMap.group",                                                                                                // MakerGen.cs:233
+                    Min = 0,                                                                                                                // MakerGen.cs:234
+                    Max = -1,                                                                                                               // MakerGen.cs:235
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        new Type_Group                                                                                                      // MakerGen.cs:255
+                        {                                                                                                                   // MakerGen.cs:256
+                        }                                                                                                                   // MakerGen.cs:257
+                    }                                                                                                                       // MakerGen.cs:239
+                };                                                                                                                          // MakerGen.cs:240
+            }                                                                                                                               // MakerGen.cs:241
+            this.Name = "ConceptMap";                                                                                                       // MakerGen.cs:458
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ConceptMap";                                                                // MakerGen.cs:459
+        }                                                                                                                                   // MakerGen.cs:398
+    }                                                                                                                                       // MakerGen.cs:400
+}                                                                                                                                           // MakerGen.cs:445

@@ -55,6 +55,7 @@ namespace FhirKhit.Maker
         String ResourceName(String s) => $"Resource_{CleanName(s)}";
         String TypeName(String s) => $"Type_{CleanName(s)}";
         String ElementName(String s) => $"Element_{CleanName(s)}";
+        String PrimitiveName(String s) => $"Primitive_{CleanName(s)}";
 
         public MakerGen(String outputDir)
         {
@@ -154,7 +155,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = CleanName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = PrimitiveName(sDef.Differential.Element[0].Path.LastPathPart());
 
             instanceBlock
                 .AppendCode("using System;")
@@ -292,7 +293,7 @@ namespace FhirKhit.Maker
                                 {
                                     String sep1 = "";
                                     typesBlock
-                                        .AppendCode($"new {PrimitiveNameSpace}.{CleanName(type.Code)}")
+                                        .AppendCode($"new {PrimitiveNameSpace}.{PrimitiveName(type.Code)}")
                                         .OpenBrace()
                                         .AppendProfiles(type.Profile, ref sep1)
                                         .AppendTargetProfiles(type.TargetProfile, ref sep1)
@@ -370,41 +371,25 @@ namespace FhirKhit.Maker
         {
             basePath += '.';
 
-            String elementClassName = $"{className}_Elements";
             block
                 .AppendComment($"{index}. {elements[index].Path}")
                 .AppendCode($"public class {className} : {parentMakerClassName}")
                 .OpenBrace()
-                .AppendCode($"public class {elementClassName} : {ResourceNameSpace}.ElementsBase")
-                .OpenBrace()
-                .DefineBlock(out CodeBlockNested elementSubClassBlock)
-                .DefineBlock(out CodeBlockNested elementFieldsBlock)
 
-                .BlankLine()
-                .AppendCode($"public {elementClassName}()")
-                .OpenBrace()
-                .DefineBlock(out CodeBlockNested elementConstructorBlock)
-                .CloseBrace()
+                .DefineBlock(out CodeBlockNested subClassBlock)
+                .DefineBlock(out CodeBlockNested fieldsBlock)
 
                 .BlankLine()
                 .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
                 .OpenBrace()
                 .AppendCode($"base.Write(sDef);")
-                .DefineBlock(out CodeBlockNested elementWriteBlock)
-                .CloseBrace()
-
-                .CloseBrace()
-
-                .AppendCode($"public {elementClassName} Elements")
+                .AppendCode($"sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition")
                 .OpenBrace()
-                .AppendCode($"get")
-                .OpenBrace()
-                .AppendCode($"if (this.elements == null)")
-                .AppendCode($"    this.elements = new {elementClassName}();")
-                .AppendCode($"return this.elements;")
+                .AppendCode($"Path = \"{elements[index].Path}\",")
+                .AppendCode($"ElementId = \"{elements[index].ElementId}\"")
+                .CloseBrace(");")
+                .DefineBlock(out CodeBlockNested writeBlock)
                 .CloseBrace()
-                .CloseBrace()
-                .AppendCode($"{elementClassName} elements;")
 
                 .BlankLine()
                 .AppendCode($"public {className}()")
@@ -412,25 +397,14 @@ namespace FhirKhit.Maker
                 .DefineBlock(out constructorBlock)
                 .CloseBrace()
 
-                .BlankLine()
-                .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
-                .OpenBrace()
-                .AppendCode($"sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition")
-                .OpenBrace()
-                .AppendCode($"Path = \"{elements[index].Path}\",")
-                .AppendCode($"ElementId = \"{elements[index].ElementId}\"")
-                .CloseBrace(");")
-                .AppendCode($"if (this.elements != null)")
-                .AppendCode($"    this.elements.Write(sDef);")
-                .CloseBrace()
                 .CloseBrace()
                 ;
 
             index += 1;
-            DefineClassFields(elementSubClassBlock,
-                elementFieldsBlock,
-                elementConstructorBlock,
-                elementWriteBlock,
+            DefineClassFields(subClassBlock,
+                fieldsBlock,
+                constructorBlock,
+                writeBlock,
                 elements,
                 basePath,
                 className,
