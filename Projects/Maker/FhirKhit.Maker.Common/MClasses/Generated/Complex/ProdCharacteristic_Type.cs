@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'ProdCharacteristic'
     /// {
@@ -192,32 +192,168 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. ProdCharacteristic
-    public class ProdCharacteristic_Type : Complex_Type                                                                                     // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class ProdCharacteristic_Type : MakerComplex_Type                                                                                // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. ProdCharacteristic.height
-        public ElementInstance Height;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Height;                                                                                                 // MakerGen.cs:217
         // 2. ProdCharacteristic.width
-        public ElementInstance Width;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Width;                                                                                                  // MakerGen.cs:217
         // 3. ProdCharacteristic.depth
-        public ElementInstance Depth;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Depth;                                                                                                  // MakerGen.cs:217
         // 4. ProdCharacteristic.weight
-        public ElementInstance Weight;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Weight;                                                                                                 // MakerGen.cs:217
         // 5. ProdCharacteristic.nominalVolume
-        public ElementInstance NominalVolume;                                                                                               // MakerGen.cs:208
+        public MakerElementInstance NominalVolume;                                                                                          // MakerGen.cs:217
         // 6. ProdCharacteristic.externalDiameter
-        public ElementInstance ExternalDiameter;                                                                                            // MakerGen.cs:208
+        public MakerElementInstance ExternalDiameter;                                                                                       // MakerGen.cs:217
         // 7. ProdCharacteristic.shape
-        public ElementInstance Shape;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Shape;                                                                                                  // MakerGen.cs:217
         // 8. ProdCharacteristic.color
-        public ElementInstance Color;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Color;                                                                                                  // MakerGen.cs:217
         // 9. ProdCharacteristic.imprint
-        public ElementInstance Imprint;                                                                                                     // MakerGen.cs:208
+        public MakerElementInstance Imprint;                                                                                                // MakerGen.cs:217
         // 10. ProdCharacteristic.image
-        public ElementInstance Image;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Image;                                                                                                  // MakerGen.cs:217
         // 11. ProdCharacteristic.scoring
-        public ElementInstance Scoring;                                                                                                     // MakerGen.cs:208
-        public ProdCharacteristic_Type()                                                                                                    // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Scoring;                                                                                                // MakerGen.cs:217
+        public ProdCharacteristic_Type()                                                                                                    // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. ProdCharacteristic.height
+                this.Height = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Height",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. ProdCharacteristic.width
+                this.Width = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Width",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. ProdCharacteristic.depth
+                this.Depth = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Depth",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. ProdCharacteristic.weight
+                this.Weight = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Weight",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. ProdCharacteristic.nominalVolume
+                this.NominalVolume = new MakerElementInstance                                                                               // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "NominalVolume",                                                                                                 // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. ProdCharacteristic.externalDiameter
+                this.ExternalDiameter = new MakerElementInstance                                                                            // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "ExternalDiameter",                                                                                              // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. ProdCharacteristic.shape
+                this.Shape = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Shape",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 8. ProdCharacteristic.color
+                this.Color = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Color",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 9. ProdCharacteristic.imprint
+                this.Imprint = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Imprint",                                                                                                       // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 10. ProdCharacteristic.image
+                this.Image = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Image",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 11. ProdCharacteristic.scoring
+                this.Scoring = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Scoring",                                                                                                       // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

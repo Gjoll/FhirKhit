@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'MarketingStatus'
     /// {
@@ -108,20 +108,84 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. MarketingStatus
-    public class MarketingStatus_Type : Complex_Type                                                                                        // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class MarketingStatus_Type : MakerComplex_Type                                                                                   // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. MarketingStatus.country
-        public ElementInstance Country;                                                                                                     // MakerGen.cs:208
+        public MakerElementInstance Country;                                                                                                // MakerGen.cs:217
         // 2. MarketingStatus.jurisdiction
-        public ElementInstance Jurisdiction;                                                                                                // MakerGen.cs:208
+        public MakerElementInstance Jurisdiction;                                                                                           // MakerGen.cs:217
         // 3. MarketingStatus.status
-        public ElementInstance Status;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Status;                                                                                                 // MakerGen.cs:217
         // 4. MarketingStatus.dateRange
-        public ElementInstance DateRange;                                                                                                   // MakerGen.cs:208
+        public MakerElementInstance DateRange;                                                                                              // MakerGen.cs:217
         // 5. MarketingStatus.restoreDate
-        public ElementInstance RestoreDate;                                                                                                 // MakerGen.cs:208
-        public MarketingStatus_Type()                                                                                                       // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance RestoreDate;                                                                                            // MakerGen.cs:217
+        public MarketingStatus_Type()                                                                                                       // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. MarketingStatus.country
+                this.Country = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Country",                                                                                                       // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. MarketingStatus.jurisdiction
+                this.Jurisdiction = new MakerElementInstance                                                                                // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Jurisdiction",                                                                                                  // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. MarketingStatus.status
+                this.Status = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Status",                                                                                                        // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. MarketingStatus.dateRange
+                this.DateRange = new MakerElementInstance                                                                                   // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "DateRange",                                                                                                     // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. MarketingStatus.restoreDate
+                this.RestoreDate = new MakerElementInstance                                                                                 // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "RestoreDate",                                                                                                   // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new DateTime_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

@@ -37,7 +37,16 @@ namespace FhirKhit.Maker
 
         FhirStructureDefinitions sDefs;
 
-        String TypeName(String s) => $"{s.ToMachineName()}_Type";
+        String CleanName(String s)
+        {
+            if (s.EndsWith("[x]"))
+                s = s.Substring(0, s.Length - 3);
+            return s.ToMachineName();
+        }
+
+        String TypeName(String s) => $"{CleanName(s)}_Type";
+        String ElementName(String s) => $"{CleanName(s)}";
+
         public MakerGen(String outputDir)
         {
             this.outputDir = outputDir;
@@ -155,7 +164,7 @@ namespace FhirKhit.Maker
                 .Summary($"Fhir primitive '{sDef.Name}'")
                 .SummaryLines(sDef.ToFormatedJson())
                 .SummaryClose()
-                .AppendCode($"public class {instanceName} : Primitive_Type")
+                .AppendCode($"public class {instanceName} : MakerPrimitive_Type")
                 .OpenBrace()
                 .CloseBrace()
                 .CloseBrace()
@@ -189,7 +198,7 @@ namespace FhirKhit.Maker
                 // subelement, so start creating sub class.
                 if (
                     (index < elements.Length - 1) &&
-                    (elements[index+1].Path.StartsWith($"{ed.Path}."))
+                    (elements[index + 1].Path.StartsWith($"{ed.Path}."))
                     )
                 {
                     String subClassName = TypeName(path.LastPathPart());
@@ -202,10 +211,113 @@ namespace FhirKhit.Maker
                 }
                 else
                 {
-                    String elementName = ed.Path.LastPathPart().ToMachineName();
+                    String elementName = ElementName(ed.Path.LastPathPart());
                     fieldsBlock
                         .AppendComment($"{index}. {elements[index].Path}")
-                        .AppendCode($"public ElementInstance {elementName};")
+                        .AppendCode($"public MakerElementInstance {elementName};")
+                        ;
+
+                    Int32 min = 0;
+                    Int32 max = -1;
+                    if (ed.Min.HasValue)
+                        min = ed.Min.Value;
+                    if ((String.IsNullOrEmpty(ed.Max) == false) && (ed.Max != "*"))
+                        max = Int32.Parse(ed.Max);
+
+                    constructorBlock
+                        .OpenBrace()
+                        .AppendComment($"{index}. {elements[index].Path}")
+                        .AppendCode($"this.{elementName} = new MakerElementInstance")
+                        .OpenBrace()
+                        .AppendCode($"Name = \"{elementName}\",")
+                        .AppendCode($"Min = {min},")
+                        .AppendCode($"Max = {max},")
+                        .AppendCode($"Types = new MakerBase_Type[]")
+                        .OpenBrace()
+                        .DefineBlock(out CodeBlockNested typesBlock)
+                        .CloseBrace("")
+                        .CloseBrace(";")
+                        ;
+
+                    List<String> typeList = new List<string>();
+                    foreach (ElementDefinition.TypeRefComponent type in ed.Type)
+                    {
+                        switch (type.Code)
+                        {
+                            case null:
+                                break;
+
+                            case "boolean":
+                            case "integer":
+                            case "decimal":
+                            case "uri":
+                            case "string":
+                            case "base64Binary":
+                            case "instant":
+                            case "date":
+                            case "dateTime":
+                            case "time":
+                            case "oid":
+                            case "id":
+                            case "markdown":
+                            case "unsignedInt":
+                            case "positiveInt":
+                            case "xhtml":
+                            case "CodeableConcept":
+                            case "Coding":
+                            case "code":
+                            case "uuid":
+                            case "url":
+                            case "canonical":
+                                typeList.Add($"new {this.TypeName(type.Code)}()");
+                                break;
+
+                            case "Reference":
+                                //if (type.Profile.Any())
+                                //    throw new ConvertErrorException(this.GetType().Name, fcn, $"Unexpected profile in type {ed.Path}:{type.Code}.");
+                                //if (type.TargetProfile.Count() == 0)
+                                //{
+                                //    this.gen.AddAbbreviatedResource(ResourceStr);
+                                //    OutputType($"Resource");
+                                //}
+                                //else
+                                //{
+                                //    foreach (string target in type.TargetProfile)
+                                //    {
+                                //        this.gen.AddAbbreviatedResource(target);
+                                //        String targetEntryName = target.LastUriPart().ToMachineName();
+                                //        OutputType($"{targetEntryName}");
+                                //    }
+                                //}
+                                break;
+
+                            default:
+                                //if (type.Profile.Count() == 0)
+                                //{
+                                //    this.gen.AddAbbreviatedResource(type.Code);
+                                //    OutputType($"{type.Code.ToMachineName()}");
+                                //}
+                                //else
+                                //{
+                                //    foreach (string profile in type.Profile)
+                                //    {
+                                //        this.gen.AddAbbreviatedResource(profile);
+                                //        String profileName = profile.LastUriPart().ToMachineName();
+                                //        OutputType($"{profileName}");
+                                //    }
+                                //}
+                                break;
+                        }
+                    }
+                    for (Int32 i = 0; i < typeList.Count; i++)
+                    {
+                        String sep = "";
+                        if (i < typeList.Count - 1)
+                            sep = ",";
+                        typesBlock.AppendLine($"{typeList[i]}{sep}");
+                    }
+                    constructorBlock
+                        .CloseBrace()
                         ;
                     index += 1;
                 }
@@ -222,7 +334,7 @@ namespace FhirKhit.Maker
 
             block
                 .AppendComment($"{index}. {elements[index].Path}")
-                .AppendCode($"public class {className} : Complex_Type")
+                .AppendCode($"public class {className} : MakerComplex_Type")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested subClassBlock)
                 .DefineBlock(out CodeBlockNested fieldsBlock)

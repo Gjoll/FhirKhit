@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'RelatedArtifact'
     /// {
@@ -155,24 +155,114 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. RelatedArtifact
-    public class RelatedArtifact_Type : Complex_Type                                                                                        // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class RelatedArtifact_Type : MakerComplex_Type                                                                                   // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. RelatedArtifact.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Type;                                                                                                   // MakerGen.cs:217
         // 2. RelatedArtifact.label
-        public ElementInstance Label;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Label;                                                                                                  // MakerGen.cs:217
         // 3. RelatedArtifact.display
-        public ElementInstance Display;                                                                                                     // MakerGen.cs:208
+        public MakerElementInstance Display;                                                                                                // MakerGen.cs:217
         // 4. RelatedArtifact.citation
-        public ElementInstance Citation;                                                                                                    // MakerGen.cs:208
+        public MakerElementInstance Citation;                                                                                               // MakerGen.cs:217
         // 5. RelatedArtifact.url
-        public ElementInstance Url;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Url;                                                                                                    // MakerGen.cs:217
         // 6. RelatedArtifact.document
-        public ElementInstance Document;                                                                                                    // MakerGen.cs:208
+        public MakerElementInstance Document;                                                                                               // MakerGen.cs:217
         // 7. RelatedArtifact.resource
-        public ElementInstance Resource;                                                                                                    // MakerGen.cs:208
-        public RelatedArtifact_Type()                                                                                                       // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Resource;                                                                                               // MakerGen.cs:217
+        public RelatedArtifact_Type()                                                                                                       // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. RelatedArtifact.type
+                this.Type = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Type",                                                                                                          // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. RelatedArtifact.label
+                this.Label = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Label",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. RelatedArtifact.display
+                this.Display = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Display",                                                                                                       // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. RelatedArtifact.citation
+                this.Citation = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Citation",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Markdown_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. RelatedArtifact.url
+                this.Url = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Url",                                                                                                           // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Url_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. RelatedArtifact.document
+                this.Document = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Document",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. RelatedArtifact.resource
+                this.Resource = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Resource",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Canonical_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

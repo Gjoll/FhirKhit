@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'Identifier'
     /// {
@@ -174,22 +174,98 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Identifier
-    public class Identifier_Type : Complex_Type                                                                                             // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class Identifier_Type : MakerComplex_Type                                                                                        // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. Identifier.use
-        public ElementInstance Use;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Use;                                                                                                    // MakerGen.cs:217
         // 2. Identifier.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Type;                                                                                                   // MakerGen.cs:217
         // 3. Identifier.system
-        public ElementInstance System;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance System;                                                                                                 // MakerGen.cs:217
         // 4. Identifier.value
-        public ElementInstance Value;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Value;                                                                                                  // MakerGen.cs:217
         // 5. Identifier.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Period;                                                                                                 // MakerGen.cs:217
         // 6. Identifier.assigner
-        public ElementInstance Assigner;                                                                                                    // MakerGen.cs:208
-        public Identifier_Type()                                                                                                            // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Assigner;                                                                                               // MakerGen.cs:217
+        public Identifier_Type()                                                                                                            // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. Identifier.use
+                this.Use = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Use",                                                                                                           // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. Identifier.type
+                this.Type = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Type",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. Identifier.system
+                this.System = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "System",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Uri_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. Identifier.value
+                this.Value = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Value",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. Identifier.period
+                this.Period = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Period",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. Identifier.assigner
+                this.Assigner = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Assigner",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

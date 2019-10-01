@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'ParameterDefinition'
     /// {
@@ -165,24 +165,115 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. ParameterDefinition
-    public class ParameterDefinition_Type : Complex_Type                                                                                    // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class ParameterDefinition_Type : MakerComplex_Type                                                                               // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. ParameterDefinition.name
-        public ElementInstance Name;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Name;                                                                                                   // MakerGen.cs:217
         // 2. ParameterDefinition.use
-        public ElementInstance Use;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Use;                                                                                                    // MakerGen.cs:217
         // 3. ParameterDefinition.min
-        public ElementInstance Min;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Min;                                                                                                    // MakerGen.cs:217
         // 4. ParameterDefinition.max
-        public ElementInstance Max;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Max;                                                                                                    // MakerGen.cs:217
         // 5. ParameterDefinition.documentation
-        public ElementInstance Documentation;                                                                                               // MakerGen.cs:208
+        public MakerElementInstance Documentation;                                                                                          // MakerGen.cs:217
         // 6. ParameterDefinition.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Type;                                                                                                   // MakerGen.cs:217
         // 7. ParameterDefinition.profile
-        public ElementInstance Profile;                                                                                                     // MakerGen.cs:208
-        public ParameterDefinition_Type()                                                                                                   // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Profile;                                                                                                // MakerGen.cs:217
+        public ParameterDefinition_Type()                                                                                                   // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. ParameterDefinition.name
+                this.Name = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Name",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. ParameterDefinition.use
+                this.Use = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Use",                                                                                                           // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. ParameterDefinition.min
+                this.Min = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Min",                                                                                                           // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Integer_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. ParameterDefinition.max
+                this.Max = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Max",                                                                                                           // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. ParameterDefinition.documentation
+                this.Documentation = new MakerElementInstance                                                                               // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Documentation",                                                                                                 // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. ParameterDefinition.type
+                this.Type = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Type",                                                                                                          // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. ParameterDefinition.profile
+                this.Profile = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Profile",                                                                                                       // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Canonical_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

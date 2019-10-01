@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'SubstanceAmount'
     /// {
@@ -128,27 +128,90 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. SubstanceAmount
-    public class SubstanceAmount_Type : Complex_Type                                                                                        // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class SubstanceAmount_Type : MakerComplex_Type                                                                                   // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 4. SubstanceAmount.referenceRange
-        public class ReferenceRange_Type : Complex_Type                                                                                     // MakerGen.cs:225
-        {                                                                                                                                   // MakerGen.cs:226
+        public class ReferenceRange_Type : MakerComplex_Type                                                                                // MakerGen.cs:337
+        {                                                                                                                                   // MakerGen.cs:338
             // 5. SubstanceAmount.referenceRange.lowLimit
-            public ElementInstance LowLimit;                                                                                                // MakerGen.cs:208
+            public MakerElementInstance LowLimit;                                                                                           // MakerGen.cs:217
             // 6. SubstanceAmount.referenceRange.highLimit
-            public ElementInstance HighLimit;                                                                                               // MakerGen.cs:208
-            public ReferenceRange_Type()                                                                                                    // MakerGen.cs:234
-            {                                                                                                                               // MakerGen.cs:235
-            }                                                                                                                               // MakerGen.cs:246
-        }                                                                                                                                   // MakerGen.cs:230
+            public MakerElementInstance HighLimit;                                                                                          // MakerGen.cs:217
+            public ReferenceRange_Type()                                                                                                    // MakerGen.cs:346
+            {                                                                                                                               // MakerGen.cs:347
+                {                                                                                                                           // MakerGen.cs:228
+                    // 5. SubstanceAmount.referenceRange.lowLimit
+                    this.LowLimit = new MakerElementInstance                                                                                // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "LowLimit",                                                                                                  // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 6. SubstanceAmount.referenceRange.highLimit
+                    this.HighLimit = new MakerElementInstance                                                                               // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "HighLimit",                                                                                                 // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+            }                                                                                                                               // MakerGen.cs:358
+        }                                                                                                                                   // MakerGen.cs:342
         // 1. SubstanceAmount.amount[x]
-        public ElementInstance AmountX;                                                                                                     // MakerGen.cs:208
+        public MakerElementInstance Amount;                                                                                                 // MakerGen.cs:217
         // 2. SubstanceAmount.amountType
-        public ElementInstance AmountType;                                                                                                  // MakerGen.cs:208
+        public MakerElementInstance AmountType;                                                                                             // MakerGen.cs:217
         // 3. SubstanceAmount.amountText
-        public ElementInstance AmountText;                                                                                                  // MakerGen.cs:208
-        public SubstanceAmount_Type()                                                                                                       // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance AmountText;                                                                                             // MakerGen.cs:217
+        public SubstanceAmount_Type()                                                                                                       // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. SubstanceAmount.amount[x]
+                this.Amount = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Amount",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. SubstanceAmount.amountType
+                this.AmountType = new MakerElementInstance                                                                                  // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "AmountType",                                                                                                    // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. SubstanceAmount.amountText
+                this.AmountText = new MakerElementInstance                                                                                  // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "AmountText",                                                                                                    // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

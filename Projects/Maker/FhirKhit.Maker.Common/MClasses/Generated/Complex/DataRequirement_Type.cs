@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'DataRequirement'
     /// {
@@ -339,59 +339,241 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. DataRequirement
-    public class DataRequirement_Type : Complex_Type                                                                                        // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class DataRequirement_Type : MakerComplex_Type                                                                                   // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 5. DataRequirement.codeFilter
-        public class CodeFilter_Type : Complex_Type                                                                                         // MakerGen.cs:225
-        {                                                                                                                                   // MakerGen.cs:226
+        public class CodeFilter_Type : MakerComplex_Type                                                                                    // MakerGen.cs:337
+        {                                                                                                                                   // MakerGen.cs:338
             // 6. DataRequirement.codeFilter.path
-            public ElementInstance Path;                                                                                                    // MakerGen.cs:208
+            public MakerElementInstance Path;                                                                                               // MakerGen.cs:217
             // 7. DataRequirement.codeFilter.searchParam
-            public ElementInstance SearchParam;                                                                                             // MakerGen.cs:208
+            public MakerElementInstance SearchParam;                                                                                        // MakerGen.cs:217
             // 8. DataRequirement.codeFilter.valueSet
-            public ElementInstance ValueSet;                                                                                                // MakerGen.cs:208
+            public MakerElementInstance ValueSet;                                                                                           // MakerGen.cs:217
             // 9. DataRequirement.codeFilter.code
-            public ElementInstance Code;                                                                                                    // MakerGen.cs:208
-            public CodeFilter_Type()                                                                                                        // MakerGen.cs:234
-            {                                                                                                                               // MakerGen.cs:235
-            }                                                                                                                               // MakerGen.cs:246
-        }                                                                                                                                   // MakerGen.cs:230
+            public MakerElementInstance Code;                                                                                               // MakerGen.cs:217
+            public CodeFilter_Type()                                                                                                        // MakerGen.cs:346
+            {                                                                                                                               // MakerGen.cs:347
+                {                                                                                                                           // MakerGen.cs:228
+                    // 6. DataRequirement.codeFilter.path
+                    this.Path = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Path",                                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new String_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 7. DataRequirement.codeFilter.searchParam
+                    this.SearchParam = new MakerElementInstance                                                                             // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "SearchParam",                                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new String_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 8. DataRequirement.codeFilter.valueSet
+                    this.ValueSet = new MakerElementInstance                                                                                // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "ValueSet",                                                                                                  // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Canonical_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 9. DataRequirement.codeFilter.code
+                    this.Code = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Code",                                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = -1,                                                                                                           // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Coding_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+            }                                                                                                                               // MakerGen.cs:358
+        }                                                                                                                                   // MakerGen.cs:342
         // 10. DataRequirement.dateFilter
-        public class DateFilter_Type : Complex_Type                                                                                         // MakerGen.cs:225
-        {                                                                                                                                   // MakerGen.cs:226
+        public class DateFilter_Type : MakerComplex_Type                                                                                    // MakerGen.cs:337
+        {                                                                                                                                   // MakerGen.cs:338
             // 11. DataRequirement.dateFilter.path
-            public ElementInstance Path;                                                                                                    // MakerGen.cs:208
+            public MakerElementInstance Path;                                                                                               // MakerGen.cs:217
             // 12. DataRequirement.dateFilter.searchParam
-            public ElementInstance SearchParam;                                                                                             // MakerGen.cs:208
+            public MakerElementInstance SearchParam;                                                                                        // MakerGen.cs:217
             // 13. DataRequirement.dateFilter.value[x]
-            public ElementInstance ValueX;                                                                                                  // MakerGen.cs:208
-            public DateFilter_Type()                                                                                                        // MakerGen.cs:234
-            {                                                                                                                               // MakerGen.cs:235
-            }                                                                                                                               // MakerGen.cs:246
-        }                                                                                                                                   // MakerGen.cs:230
+            public MakerElementInstance Value;                                                                                              // MakerGen.cs:217
+            public DateFilter_Type()                                                                                                        // MakerGen.cs:346
+            {                                                                                                                               // MakerGen.cs:347
+                {                                                                                                                           // MakerGen.cs:228
+                    // 11. DataRequirement.dateFilter.path
+                    this.Path = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Path",                                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new String_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 12. DataRequirement.dateFilter.searchParam
+                    this.SearchParam = new MakerElementInstance                                                                             // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "SearchParam",                                                                                               // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new String_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 13. DataRequirement.dateFilter.value[x]
+                    this.Value = new MakerElementInstance                                                                                   // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Value",                                                                                                     // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new DateTime_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+            }                                                                                                                               // MakerGen.cs:358
+        }                                                                                                                                   // MakerGen.cs:342
         // 15. DataRequirement.sort
-        public class Sort_Type : Complex_Type                                                                                               // MakerGen.cs:225
-        {                                                                                                                                   // MakerGen.cs:226
+        public class Sort_Type : MakerComplex_Type                                                                                          // MakerGen.cs:337
+        {                                                                                                                                   // MakerGen.cs:338
             // 16. DataRequirement.sort.path
-            public ElementInstance Path;                                                                                                    // MakerGen.cs:208
+            public MakerElementInstance Path;                                                                                               // MakerGen.cs:217
             // 17. DataRequirement.sort.direction
-            public ElementInstance Direction;                                                                                               // MakerGen.cs:208
-            public Sort_Type()                                                                                                              // MakerGen.cs:234
-            {                                                                                                                               // MakerGen.cs:235
-            }                                                                                                                               // MakerGen.cs:246
-        }                                                                                                                                   // MakerGen.cs:230
+            public MakerElementInstance Direction;                                                                                          // MakerGen.cs:217
+            public Sort_Type()                                                                                                              // MakerGen.cs:346
+            {                                                                                                                               // MakerGen.cs:347
+                {                                                                                                                           // MakerGen.cs:228
+                    // 16. DataRequirement.sort.path
+                    this.Path = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Path",                                                                                                      // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new String_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 17. DataRequirement.sort.direction
+                    this.Direction = new MakerElementInstance                                                                               // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Direction",                                                                                                 // MakerGen.cs:232
+                        Min = 1,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new Code_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+            }                                                                                                                               // MakerGen.cs:358
+        }                                                                                                                                   // MakerGen.cs:342
         // 1. DataRequirement.type
-        public ElementInstance Type;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Type;                                                                                                   // MakerGen.cs:217
         // 2. DataRequirement.profile
-        public ElementInstance Profile;                                                                                                     // MakerGen.cs:208
+        public MakerElementInstance Profile;                                                                                                // MakerGen.cs:217
         // 3. DataRequirement.subject[x]
-        public ElementInstance SubjectX;                                                                                                    // MakerGen.cs:208
+        public MakerElementInstance Subject;                                                                                                // MakerGen.cs:217
         // 4. DataRequirement.mustSupport
-        public ElementInstance MustSupport;                                                                                                 // MakerGen.cs:208
+        public MakerElementInstance MustSupport;                                                                                            // MakerGen.cs:217
         // 14. DataRequirement.limit
-        public ElementInstance Limit;                                                                                                       // MakerGen.cs:208
-        public DataRequirement_Type()                                                                                                       // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Limit;                                                                                                  // MakerGen.cs:217
+        public DataRequirement_Type()                                                                                                       // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. DataRequirement.type
+                this.Type = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Type",                                                                                                          // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. DataRequirement.profile
+                this.Profile = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Profile",                                                                                                       // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Canonical_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. DataRequirement.subject[x]
+                this.Subject = new MakerElementInstance                                                                                     // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Subject",                                                                                                       // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. DataRequirement.mustSupport
+                this.MustSupport = new MakerElementInstance                                                                                 // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "MustSupport",                                                                                                   // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 14. DataRequirement.limit
+                this.Limit = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Limit",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new PositiveInt_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

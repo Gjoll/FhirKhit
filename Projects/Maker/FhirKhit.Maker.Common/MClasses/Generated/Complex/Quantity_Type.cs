@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'SimpleQuantity'
     /// {
@@ -45,12 +45,24 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Quantity
-    public class SimpleQuantity_Type : Complex_Type                                                                                         // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class SimpleQuantity_Type : MakerComplex_Type                                                                                    // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. Quantity.comparator
-        public ElementInstance Comparator;                                                                                                  // MakerGen.cs:208
-        public SimpleQuantity_Type()                                                                                                        // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Comparator;                                                                                             // MakerGen.cs:217
+        public SimpleQuantity_Type()                                                                                                        // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. Quantity.comparator
+                this.Comparator = new MakerElementInstance                                                                                  // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Comparator",                                                                                                    // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 0,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

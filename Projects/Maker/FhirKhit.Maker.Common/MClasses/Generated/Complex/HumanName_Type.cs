@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'HumanName'
     /// {
@@ -168,24 +168,114 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. HumanName
-    public class HumanName_Type : Complex_Type                                                                                              // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class HumanName_Type : MakerComplex_Type                                                                                         // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. HumanName.use
-        public ElementInstance Use;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Use;                                                                                                    // MakerGen.cs:217
         // 2. HumanName.text
-        public ElementInstance Text;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Text;                                                                                                   // MakerGen.cs:217
         // 3. HumanName.family
-        public ElementInstance Family;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Family;                                                                                                 // MakerGen.cs:217
         // 4. HumanName.given
-        public ElementInstance Given;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Given;                                                                                                  // MakerGen.cs:217
         // 5. HumanName.prefix
-        public ElementInstance Prefix;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Prefix;                                                                                                 // MakerGen.cs:217
         // 6. HumanName.suffix
-        public ElementInstance Suffix;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Suffix;                                                                                                 // MakerGen.cs:217
         // 7. HumanName.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
-        public HumanName_Type()                                                                                                             // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Period;                                                                                                 // MakerGen.cs:217
+        public HumanName_Type()                                                                                                             // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. HumanName.use
+                this.Use = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Use",                                                                                                           // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. HumanName.text
+                this.Text = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Text",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. HumanName.family
+                this.Family = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Family",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. HumanName.given
+                this.Given = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Given",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. HumanName.prefix
+                this.Prefix = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Prefix",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. HumanName.suffix
+                this.Suffix = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Suffix",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. HumanName.period
+                this.Period = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Period",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'Attachment'
     /// {
@@ -221,26 +221,130 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Attachment
-    public class Attachment_Type : Complex_Type                                                                                             // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class Attachment_Type : MakerComplex_Type                                                                                        // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. Attachment.contentType
-        public ElementInstance ContentType;                                                                                                 // MakerGen.cs:208
+        public MakerElementInstance ContentType;                                                                                            // MakerGen.cs:217
         // 2. Attachment.language
-        public ElementInstance Language;                                                                                                    // MakerGen.cs:208
+        public MakerElementInstance Language;                                                                                               // MakerGen.cs:217
         // 3. Attachment.data
-        public ElementInstance Data;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Data;                                                                                                   // MakerGen.cs:217
         // 4. Attachment.url
-        public ElementInstance Url;                                                                                                         // MakerGen.cs:208
+        public MakerElementInstance Url;                                                                                                    // MakerGen.cs:217
         // 5. Attachment.size
-        public ElementInstance Size;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Size;                                                                                                   // MakerGen.cs:217
         // 6. Attachment.hash
-        public ElementInstance Hash;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Hash;                                                                                                   // MakerGen.cs:217
         // 7. Attachment.title
-        public ElementInstance Title;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Title;                                                                                                  // MakerGen.cs:217
         // 8. Attachment.creation
-        public ElementInstance Creation;                                                                                                    // MakerGen.cs:208
-        public Attachment_Type()                                                                                                            // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Creation;                                                                                               // MakerGen.cs:217
+        public Attachment_Type()                                                                                                            // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. Attachment.contentType
+                this.ContentType = new MakerElementInstance                                                                                 // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "ContentType",                                                                                                   // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. Attachment.language
+                this.Language = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Language",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Code_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. Attachment.data
+                this.Data = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Data",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Base64Binary_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. Attachment.url
+                this.Url = new MakerElementInstance                                                                                         // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Url",                                                                                                           // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Url_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. Attachment.size
+                this.Size = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Size",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new UnsignedInt_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. Attachment.hash
+                this.Hash = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Hash",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Base64Binary_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. Attachment.title
+                this.Title = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Title",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 8. Attachment.creation
+                this.Creation = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Creation",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new DateTime_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

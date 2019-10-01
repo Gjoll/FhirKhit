@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'Duration'
     /// {
@@ -53,10 +53,10 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Duration
-    public class Duration_Type : Complex_Type                                                                                               // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
-        public Duration_Type()                                                                                                              // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+    public class Duration_Type : MakerComplex_Type                                                                                          // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
+        public Duration_Type()                                                                                                              // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

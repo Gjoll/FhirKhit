@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'Dosage'
     /// {
@@ -374,47 +374,237 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Dosage
-    public class Dosage_Type : Complex_Type                                                                                                 // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class Dosage_Type : MakerComplex_Type                                                                                            // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 10. Dosage.doseAndRate
-        public class DoseAndRate_Type : Complex_Type                                                                                        // MakerGen.cs:225
-        {                                                                                                                                   // MakerGen.cs:226
+        public class DoseAndRate_Type : MakerComplex_Type                                                                                   // MakerGen.cs:337
+        {                                                                                                                                   // MakerGen.cs:338
             // 11. Dosage.doseAndRate.type
-            public ElementInstance Type;                                                                                                    // MakerGen.cs:208
+            public MakerElementInstance Type;                                                                                               // MakerGen.cs:217
             // 12. Dosage.doseAndRate.dose[x]
-            public ElementInstance DoseX;                                                                                                   // MakerGen.cs:208
+            public MakerElementInstance Dose;                                                                                               // MakerGen.cs:217
             // 13. Dosage.doseAndRate.rate[x]
-            public ElementInstance RateX;                                                                                                   // MakerGen.cs:208
-            public DoseAndRate_Type()                                                                                                       // MakerGen.cs:234
-            {                                                                                                                               // MakerGen.cs:235
-            }                                                                                                                               // MakerGen.cs:246
-        }                                                                                                                                   // MakerGen.cs:230
+            public MakerElementInstance Rate;                                                                                               // MakerGen.cs:217
+            public DoseAndRate_Type()                                                                                                       // MakerGen.cs:346
+            {                                                                                                                               // MakerGen.cs:347
+                {                                                                                                                           // MakerGen.cs:228
+                    // 11. Dosage.doseAndRate.type
+                    this.Type = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Type",                                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                            new CodeableConcept_Type()
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 12. Dosage.doseAndRate.dose[x]
+                    this.Dose = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Dose",                                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+                {                                                                                                                           // MakerGen.cs:228
+                    // 13. Dosage.doseAndRate.rate[x]
+                    this.Rate = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                    {                                                                                                                       // MakerGen.cs:231
+                        Name = "Rate",                                                                                                      // MakerGen.cs:232
+                        Min = 0,                                                                                                            // MakerGen.cs:233
+                        Max = 1,                                                                                                            // MakerGen.cs:234
+                        Types = new MakerBase_Type[]                                                                                        // MakerGen.cs:235
+                        {                                                                                                                   // MakerGen.cs:236
+                        }                                                                                                                   // MakerGen.cs:238
+                    };                                                                                                                      // MakerGen.cs:239
+                }                                                                                                                           // MakerGen.cs:320
+            }                                                                                                                               // MakerGen.cs:358
+        }                                                                                                                                   // MakerGen.cs:342
         // 1. Dosage.sequence
-        public ElementInstance Sequence;                                                                                                    // MakerGen.cs:208
+        public MakerElementInstance Sequence;                                                                                               // MakerGen.cs:217
         // 2. Dosage.text
-        public ElementInstance Text;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Text;                                                                                                   // MakerGen.cs:217
         // 3. Dosage.additionalInstruction
-        public ElementInstance AdditionalInstruction;                                                                                       // MakerGen.cs:208
+        public MakerElementInstance AdditionalInstruction;                                                                                  // MakerGen.cs:217
         // 4. Dosage.patientInstruction
-        public ElementInstance PatientInstruction;                                                                                          // MakerGen.cs:208
+        public MakerElementInstance PatientInstruction;                                                                                     // MakerGen.cs:217
         // 5. Dosage.timing
-        public ElementInstance Timing;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Timing;                                                                                                 // MakerGen.cs:217
         // 6. Dosage.asNeeded[x]
-        public ElementInstance AsNeededX;                                                                                                   // MakerGen.cs:208
+        public MakerElementInstance AsNeeded;                                                                                               // MakerGen.cs:217
         // 7. Dosage.site
-        public ElementInstance Site;                                                                                                        // MakerGen.cs:208
+        public MakerElementInstance Site;                                                                                                   // MakerGen.cs:217
         // 8. Dosage.route
-        public ElementInstance Route;                                                                                                       // MakerGen.cs:208
+        public MakerElementInstance Route;                                                                                                  // MakerGen.cs:217
         // 9. Dosage.method
-        public ElementInstance Method;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Method;                                                                                                 // MakerGen.cs:217
         // 14. Dosage.maxDosePerPeriod
-        public ElementInstance MaxDosePerPeriod;                                                                                            // MakerGen.cs:208
+        public MakerElementInstance MaxDosePerPeriod;                                                                                       // MakerGen.cs:217
         // 15. Dosage.maxDosePerAdministration
-        public ElementInstance MaxDosePerAdministration;                                                                                    // MakerGen.cs:208
+        public MakerElementInstance MaxDosePerAdministration;                                                                               // MakerGen.cs:217
         // 16. Dosage.maxDosePerLifetime
-        public ElementInstance MaxDosePerLifetime;                                                                                          // MakerGen.cs:208
-        public Dosage_Type()                                                                                                                // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance MaxDosePerLifetime;                                                                                     // MakerGen.cs:217
+        public Dosage_Type()                                                                                                                // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. Dosage.sequence
+                this.Sequence = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Sequence",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Integer_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. Dosage.text
+                this.Text = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Text",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. Dosage.additionalInstruction
+                this.AdditionalInstruction = new MakerElementInstance                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "AdditionalInstruction",                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = -1,                                                                                                               // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. Dosage.patientInstruction
+                this.PatientInstruction = new MakerElementInstance                                                                          // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "PatientInstruction",                                                                                            // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. Dosage.timing
+                this.Timing = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Timing",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. Dosage.asNeeded[x]
+                this.AsNeeded = new MakerElementInstance                                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "AsNeeded",                                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Boolean_Type(),
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. Dosage.site
+                this.Site = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Site",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 8. Dosage.route
+                this.Route = new MakerElementInstance                                                                                       // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Route",                                                                                                         // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 9. Dosage.method
+                this.Method = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Method",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new CodeableConcept_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 14. Dosage.maxDosePerPeriod
+                this.MaxDosePerPeriod = new MakerElementInstance                                                                            // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "MaxDosePerPeriod",                                                                                              // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 15. Dosage.maxDosePerAdministration
+                this.MaxDosePerAdministration = new MakerElementInstance                                                                    // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "MaxDosePerAdministration",                                                                                      // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 16. Dosage.maxDosePerLifetime
+                this.MaxDosePerLifetime = new MakerElementInstance                                                                          // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "MaxDosePerLifetime",                                                                                            // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

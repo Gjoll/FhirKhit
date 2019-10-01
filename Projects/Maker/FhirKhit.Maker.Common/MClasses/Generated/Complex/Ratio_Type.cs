@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'Ratio'
     /// {
@@ -68,14 +68,38 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. Ratio
-    public class Ratio_Type : Complex_Type                                                                                                  // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class Ratio_Type : MakerComplex_Type                                                                                             // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. Ratio.numerator
-        public ElementInstance Numerator;                                                                                                   // MakerGen.cs:208
+        public MakerElementInstance Numerator;                                                                                              // MakerGen.cs:217
         // 2. Ratio.denominator
-        public ElementInstance Denominator;                                                                                                 // MakerGen.cs:208
-        public Ratio_Type()                                                                                                                 // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Denominator;                                                                                            // MakerGen.cs:217
+        public Ratio_Type()                                                                                                                 // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. Ratio.numerator
+                this.Numerator = new MakerElementInstance                                                                                   // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Numerator",                                                                                                     // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. Ratio.denominator
+                this.Denominator = new MakerElementInstance                                                                                 // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Denominator",                                                                                                   // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

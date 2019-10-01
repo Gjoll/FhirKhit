@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:269
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:270
-{                                                                                                                                           // MakerGen.cs:271
+                                                                                                                                            // MakerGen.cs:381
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:382
+{                                                                                                                                           // MakerGen.cs:383
     /// <summary>
     /// Fhir primitive 'SampledData'
     /// {
@@ -144,24 +144,114 @@ namespace FhirKhit.Maker.Common                                                 
     /// }
     /// </summary>
     // 0. SampledData
-    public class SampledData_Type : Complex_Type                                                                                            // MakerGen.cs:225
-    {                                                                                                                                       // MakerGen.cs:226
+    public class SampledData_Type : MakerComplex_Type                                                                                       // MakerGen.cs:337
+    {                                                                                                                                       // MakerGen.cs:338
         // 1. SampledData.origin
-        public ElementInstance Origin;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Origin;                                                                                                 // MakerGen.cs:217
         // 2. SampledData.period
-        public ElementInstance Period;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Period;                                                                                                 // MakerGen.cs:217
         // 3. SampledData.factor
-        public ElementInstance Factor;                                                                                                      // MakerGen.cs:208
+        public MakerElementInstance Factor;                                                                                                 // MakerGen.cs:217
         // 4. SampledData.lowerLimit
-        public ElementInstance LowerLimit;                                                                                                  // MakerGen.cs:208
+        public MakerElementInstance LowerLimit;                                                                                             // MakerGen.cs:217
         // 5. SampledData.upperLimit
-        public ElementInstance UpperLimit;                                                                                                  // MakerGen.cs:208
+        public MakerElementInstance UpperLimit;                                                                                             // MakerGen.cs:217
         // 6. SampledData.dimensions
-        public ElementInstance Dimensions;                                                                                                  // MakerGen.cs:208
+        public MakerElementInstance Dimensions;                                                                                             // MakerGen.cs:217
         // 7. SampledData.data
-        public ElementInstance Data;                                                                                                        // MakerGen.cs:208
-        public SampledData_Type()                                                                                                           // MakerGen.cs:234
-        {                                                                                                                                   // MakerGen.cs:235
-        }                                                                                                                                   // MakerGen.cs:246
-    }                                                                                                                                       // MakerGen.cs:230
-}                                                                                                                                           // MakerGen.cs:277
+        public MakerElementInstance Data;                                                                                                   // MakerGen.cs:217
+        public SampledData_Type()                                                                                                           // MakerGen.cs:346
+        {                                                                                                                                   // MakerGen.cs:347
+            {                                                                                                                               // MakerGen.cs:228
+                // 1. SampledData.origin
+                this.Origin = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Origin",                                                                                                        // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 2. SampledData.period
+                this.Period = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Period",                                                                                                        // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Decimal_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 3. SampledData.factor
+                this.Factor = new MakerElementInstance                                                                                      // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Factor",                                                                                                        // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Decimal_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 4. SampledData.lowerLimit
+                this.LowerLimit = new MakerElementInstance                                                                                  // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "LowerLimit",                                                                                                    // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Decimal_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 5. SampledData.upperLimit
+                this.UpperLimit = new MakerElementInstance                                                                                  // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "UpperLimit",                                                                                                    // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new Decimal_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 6. SampledData.dimensions
+                this.Dimensions = new MakerElementInstance                                                                                  // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Dimensions",                                                                                                    // MakerGen.cs:232
+                    Min = 1,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new PositiveInt_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+            {                                                                                                                               // MakerGen.cs:228
+                // 7. SampledData.data
+                this.Data = new MakerElementInstance                                                                                        // MakerGen.cs:230
+                {                                                                                                                           // MakerGen.cs:231
+                    Name = "Data",                                                                                                          // MakerGen.cs:232
+                    Min = 0,                                                                                                                // MakerGen.cs:233
+                    Max = 1,                                                                                                                // MakerGen.cs:234
+                    Types = new MakerBase_Type[]                                                                                            // MakerGen.cs:235
+                    {                                                                                                                       // MakerGen.cs:236
+                        new String_Type()
+                    }                                                                                                                       // MakerGen.cs:238
+                };                                                                                                                          // MakerGen.cs:239
+            }                                                                                                                               // MakerGen.cs:320
+        }                                                                                                                                   // MakerGen.cs:358
+    }                                                                                                                                       // MakerGen.cs:342
+}                                                                                                                                           // MakerGen.cs:389

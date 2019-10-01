@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using Hl7.Fhir.Model;
-                                                                                                                                            // MakerGen.cs:151
-namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:152
-{                                                                                                                                           // MakerGen.cs:153
+                                                                                                                                            // MakerGen.cs:160
+namespace FhirKhit.Maker.Common                                                                                                             // MakerGen.cs:161
+{                                                                                                                                           // MakerGen.cs:162
     /// <summary>
     /// Fhir primitive 'code'
     /// {
@@ -74,7 +74,7 @@ namespace FhirKhit.Maker.Common                                                 
     ///   }
     /// }
     /// </summary>
-    public class Code_Type : Primitive_Type                                                                                                 // MakerGen.cs:158
-    {                                                                                                                                       // MakerGen.cs:159
-    }                                                                                                                                       // MakerGen.cs:160
-}                                                                                                                                           // MakerGen.cs:161
+    public class Code_Type : MakerPrimitive_Type                                                                                            // MakerGen.cs:167
+    {                                                                                                                                       // MakerGen.cs:168
+    }                                                                                                                                       // MakerGen.cs:169
+}                                                                                                                                           // MakerGen.cs:170
