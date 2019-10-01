@@ -29,10 +29,19 @@ namespace FhirKhit.Maker
 
             public StructureDefinition SDef;
         };
+
+        const String ComplexNameSpace = "FhirKhit.Maker.Common.Complex";
+        const String ResourceNameSpace = "FhirKhit.Maker.Common.Resource";
+        const String PrimitiveNameSpace = "FhirKhit.Maker.Common.Primitive";
+
+        String ComplexBase = $"{ComplexNameSpace}.ComplexBase";
+        String PrimitiveBase = $"{PrimitiveNameSpace}.PrimitiveBase";
+        String ResourceBase = $"{ResourceNameSpace}.ResourceBase";
+
         Dictionary<String, SDefInfo> items = new Dictionary<string, SDefInfo>();
-        String PrimitiveGenPath => Path.Combine(this.outputDir, "Generated", "Primitive");
-        String ComplexGenPath => Path.Combine(this.outputDir, "Generated", "Complex");
-        String ResourceGenPath => Path.Combine(this.outputDir, "Generated", "Resource");
+        String PrimitiveGenPath => Path.Combine(this.outputDir, "Primitive", "Generated");
+        String ComplexGenPath => Path.Combine(this.outputDir, "Complex", "Generated");
+        String ResourceGenPath => Path.Combine(this.outputDir, "Resource", "Generated");
         String outputDir;
 
         FhirStructureDefinitions sDefs;
@@ -44,8 +53,9 @@ namespace FhirKhit.Maker
             return s.ToMachineName();
         }
 
-        String TypeName(String s) => $"{CleanName(s)}_Type";
-        String ElementName(String s) => $"{CleanName(s)}";
+        String ResourceName(String s) => $"Resource_{CleanName(s)}";
+        String TypeName(String s) => $"Type_{CleanName(s)}";
+        String ElementName(String s) => $"Element_{CleanName(s)}";
 
         public MakerGen(String outputDir)
         {
@@ -149,22 +159,26 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = TypeName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = CleanName(sDef.Differential.Element[0].Path.LastPathPart());
 
             instanceBlock
-                .AppendLine("using System;")
-                .AppendLine("using System.Diagnostics;")
-                .AppendLine("using System.IO;")
-                .AppendLine("using System.Linq;")
-                .AppendLine("using Hl7.Fhir.Model;")
+                .AppendCode("using System;")
+                .AppendCode("using System.Diagnostics;")
+                .AppendCode("using System.IO;")
+                .AppendCode("using System.Linq;")
+                .AppendCode("using Hl7.Fhir.Model;")
                 .BlankLine()
-                .AppendCode("namespace FhirKhit.Maker.Common")
+                .AppendCode($"namespace {PrimitiveNameSpace}")
                 .OpenBrace()
+                .AppendCode("#region Json")
+                .AppendLine("#if NEVER")
+                .AppendLines("", sDef.ToFormatedJson().ToLines())
+                .AppendLine("#endif")
+                .AppendCode("#endregion")
                 .SummaryOpen()
                 .Summary($"Fhir primitive '{sDef.Name}'")
-                .SummaryLines(sDef.ToFormatedJson())
                 .SummaryClose()
-                .AppendCode($"public class {instanceName} : MakerPrimitive_Type")
+                .AppendCode($"public class {instanceName} : {PrimitiveBase}")
                 .OpenBrace()
                 .CloseBrace()
                 .CloseBrace()
@@ -207,7 +221,8 @@ namespace FhirKhit.Maker
                         elements,
                         ref index,
                         ed.Path,
-                        subClassName);
+                        subClassName,
+                        ComplexBase);
                 }
                 else
                 {
@@ -239,9 +254,10 @@ namespace FhirKhit.Maker
                         .CloseBrace(";")
                         ;
 
-                    List<String> typeList = new List<string>();
-                    foreach (ElementDefinition.TypeRefComponent type in ed.Type)
+                    for (Int32 typeIndex = 0; typeIndex < ed.Type.Count; typeIndex += 1)
                     {
+                        String sep = typeIndex == (ed.Type.Count - 1) ? "" : ",";
+                        ElementDefinition.TypeRefComponent type = ed.Type[typeIndex];
                         switch (type.Code)
                         {
                             case null:
@@ -263,13 +279,18 @@ namespace FhirKhit.Maker
                             case "unsignedInt":
                             case "positiveInt":
                             case "xhtml":
-                            case "CodeableConcept":
-                            case "Coding":
                             case "code":
                             case "uuid":
                             case "url":
                             case "canonical":
-                                typeList.Add($"new {this.TypeName(type.Code)}()");
+                                typesBlock.AppendCode($"new {PrimitiveNameSpace}.{CleanName(type.Code)}(){sep}");
+                                sep = ", ";
+                                break;
+
+                            case "CodeableConcept":
+                            case "Coding":
+                                typesBlock.AppendCode($"new {ComplexNameSpace}.{CleanName(type.Code)}(){sep}");
+                                sep = ", ";
                                 break;
 
                             case "Reference":
@@ -309,13 +330,6 @@ namespace FhirKhit.Maker
                                 break;
                         }
                     }
-                    for (Int32 i = 0; i < typeList.Count; i++)
-                    {
-                        String sep = "";
-                        if (i < typeList.Count - 1)
-                            sep = ",";
-                        typesBlock.AppendLine($"{typeList[i]}{sep}");
-                    }
                     constructorBlock
                         .CloseBrace()
                         ;
@@ -328,13 +342,14 @@ namespace FhirKhit.Maker
             ElementDefinition[] elements,
             ref Int32 index,
             String basePath,
-            String className)
+            String className,
+            String parentMakerClassName)
         {
             basePath += '.';
 
             block
                 .AppendComment($"{index}. {elements[index].Path}")
-                .AppendCode($"public class {className} : MakerComplex_Type")
+                .AppendCode($"public class {className} : {parentMakerClassName}")
                 .OpenBrace()
                 .DefineBlock(out CodeBlockNested subClassBlock)
                 .DefineBlock(out CodeBlockNested fieldsBlock)
@@ -358,6 +373,54 @@ namespace FhirKhit.Maker
                 .CloseBrace()
                 ;
         }
+        
+        void ProcessFhirResource(SDefInfo sDefInfo)
+        {
+            const String fcn = "ProcessFhirResource";
+
+            StructureDefinition sDef = sDefInfo.SDef;
+            ClearSDef(sDef);
+
+            this.ConversionInfo(this.GetType().Name, fcn, $"Processing Resource {sDef.Name} {sDefInfo.TFlag}");
+
+            CodeEditor instanceEditor = new CodeEditor();
+            CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
+
+            String instanceName = CleanName(sDef.Differential.Element[0].Path.LastPathPart());
+            instanceBlock
+                .AppendCode("using System;")
+                .AppendCode("using System.Diagnostics;")
+                .AppendCode("using System.IO;")
+                .AppendCode("using System.Linq;")
+                .AppendCode("using Hl7.Fhir.Model;")
+                .BlankLine()
+                .AppendCode($"namespace {ResourceNameSpace}")
+                .OpenBrace()
+                .AppendCode("#region Json")
+                .AppendCode("#if NEVER")
+                .AppendLines("", sDef.ToFormatedJson().ToLines())
+                .AppendLine("#endif")
+                .AppendCode("#endregion")
+                .SummaryOpen()
+                .Summary($"Fhir resource '{sDef.Name}'")
+                .SummaryClose()
+                .DefineBlock(out CodeBlockNested classBlock)
+                .CloseBrace()
+                ;
+
+            Int32 i = 0;
+            DefineClass(classBlock,
+                sDef.Differential.Element.ToArray(),
+                ref i,
+                sDef.Differential.Element[0].Path,
+                instanceName,
+                ResourceBase);
+
+            if (i != sDef.Differential.Element.Count)
+                throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
+
+            instanceEditor.Save(Path.Combine(this.ResourceGenPath, $"{instanceName}.cs"));
+        }
 
         void ProcessFhirComplex(SDefInfo sDefInfo)
         {
@@ -371,19 +434,23 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = TypeName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = CleanName(sDef.Differential.Element[0].Path.LastPathPart());
             instanceBlock
-                .AppendLine("using System;")
-                .AppendLine("using System.Diagnostics;")
-                .AppendLine("using System.IO;")
-                .AppendLine("using System.Linq;")
-                .AppendLine("using Hl7.Fhir.Model;")
+                .AppendCode("using System;")
+                .AppendCode("using System.Diagnostics;")
+                .AppendCode("using System.IO;")
+                .AppendCode("using System.Linq;")
+                .AppendCode("using Hl7.Fhir.Model;")
                 .BlankLine()
-                .AppendCode("namespace FhirKhit.Maker.Common")
+                .AppendCode($"namespace {ComplexNameSpace}")
                 .OpenBrace()
+                .AppendCode("#region Json")
+                .AppendLine("#if NEVER")
+                .AppendLines("", sDef.ToFormatedJson().ToLines())
+                .AppendLine("#endif")
+                .AppendCode("#endregion")
                 .SummaryOpen()
-                .Summary($"Fhir primitive '{sDef.Name}'")
-                .SummaryLines(sDef.ToFormatedJson())
+                .Summary($"Fhir complex '{sDef.Name}'")
                 .SummaryClose()
                 .DefineBlock(out CodeBlockNested classBlock)
                 .CloseBrace()
@@ -394,7 +461,8 @@ namespace FhirKhit.Maker
                 sDef.Differential.Element.ToArray(),
                 ref i,
                 sDef.Differential.Element[0].Path,
-                TypeName(sDef.Name));
+                instanceName,
+                ComplexBase);
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
 
@@ -434,7 +502,7 @@ namespace FhirKhit.Maker
                         break;
 
                     case StructureDefinition.StructureDefinitionKind.Resource:
-                        //this.ConversionInfo(this.GetType().Name, fcn, $"Processing resource {sDef.Name} {sDefInfo.TFlag}");
+                        ProcessFhirResource(sDefInfo);
                         break;
 
                     default:

@@ -21,9 +21,4 @@
     </Content>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="MClasses\Generated\" />
-    <Folder Include="MClasses\Generated\Complex\" />
-  </ItemGroup>
-
 </Project>
