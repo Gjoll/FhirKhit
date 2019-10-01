@@ -571,7 +571,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             };                                                                                                              // MakerGen.cs:264
                         }                                                                                                                   // MakerGen.cs:366
                     }                                                                                                                       // MakerGen.cs:429
-                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
                     {                                                                                                                       // MakerGen.cs:415
                         base.Write(sDef);                                                                                                   // MakerGen.cs:416
                         Name.Write(sDef);                                                                                                   // MakerGen.cs:240
@@ -695,7 +695,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             };                                                                                                              // MakerGen.cs:264
                         }                                                                                                                   // MakerGen.cs:366
                     }                                                                                                                       // MakerGen.cs:429
-                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
                     {                                                                                                                       // MakerGen.cs:415
                         base.Write(sDef);                                                                                                   // MakerGen.cs:416
                         Name.Write(sDef);                                                                                                   // MakerGen.cs:240
@@ -786,7 +786,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                             };                                                                                                              // MakerGen.cs:264
                         }                                                                                                                   // MakerGen.cs:366
                     }                                                                                                                       // MakerGen.cs:429
-                    public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:414
                     {                                                                                                                       // MakerGen.cs:415
                         base.Write(sDef);                                                                                                   // MakerGen.cs:416
                         Identifier.Write(sDef);                                                                                             // MakerGen.cs:240
@@ -994,7 +994,7 @@ namespace FhirKhit.Maker.Common.Resource                                        
                     };                                                                                                                      // MakerGen.cs:264
                 }                                                                                                                           // MakerGen.cs:366
             }                                                                                                                               // MakerGen.cs:429
-            public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:414
             {                                                                                                                               // MakerGen.cs:415
                 base.Write(sDef);                                                                                                           // MakerGen.cs:416
                 Event.Write(sDef);                                                                                                          // MakerGen.cs:240

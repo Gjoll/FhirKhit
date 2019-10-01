@@ -411,7 +411,7 @@ namespace FhirKhit.Maker
                 ;
 
             writeBlock
-                .AppendCode($"public void override Write(Hl7.Fhir.Model.StructureDefinition sDef)")
+                .AppendCode($"public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)")
                 .OpenBrace()
                 .AppendCode($"base.Write(sDef);")
                 ;
