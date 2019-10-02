@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "EnrollmentRequest",
@@ -158,186 +158,186 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'EnrollmentRequest'
     /// </summary>
     // 0. EnrollmentRequest
-    public class Resource_EnrollmentRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                        // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_EnrollmentRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 1. EnrollmentRequest.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. EnrollmentRequest.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 3. EnrollmentRequest.created
-        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Created;
         // 4. EnrollmentRequest.insurer
-        public ElementDefinitionInfo Element_Insurer;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Insurer;
         // 5. EnrollmentRequest.provider
-        public ElementDefinitionInfo Element_Provider;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Provider;
         // 6. EnrollmentRequest.candidate
-        public ElementDefinitionInfo Element_Candidate;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Candidate;
         // 7. EnrollmentRequest.coverage
-        public ElementDefinitionInfo Element_Coverage;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "EnrollmentRequest",                                                                                                 // MakerGen.cs:395
-                ElementId = "EnrollmentRequest"                                                                                             // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Insurer.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Provider.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Candidate.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Coverage.Write(sDef);                                                                                                   // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_EnrollmentRequest()                                                                                                 // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Coverage;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "EnrollmentRequest",
+                ElementId = "EnrollmentRequest"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Created.Write(sDef);
+            Element_Insurer.Write(sDef);
+            Element_Provider.Write(sDef);
+            Element_Candidate.Write(sDef);
+            Element_Coverage.Write(sDef);
+        }
+        
+        public Resource_EnrollmentRequest()
+        {
+            {
                 // 1. EnrollmentRequest.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "EnrollmentRequest.identifier",                                                                                   // MakerGen.cs:239
-                    Id = "EnrollmentRequest.identifier",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "EnrollmentRequest.identifier",
+                    Id = "EnrollmentRequest.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. EnrollmentRequest.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "EnrollmentRequest.status",                                                                                       // MakerGen.cs:239
-                    Id = "EnrollmentRequest.status",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "EnrollmentRequest.status",
+                    Id = "EnrollmentRequest.status",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. EnrollmentRequest.created
-                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Created",                                                                                               // MakerGen.cs:238
-                    Path= "EnrollmentRequest.created",                                                                                      // MakerGen.cs:239
-                    Id = "EnrollmentRequest.created",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Created = new ElementDefinitionInfo
+                {
+                    Name = "Element_Created",
+                    Path= "EnrollmentRequest.created",
+                    Id = "EnrollmentRequest.created",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. EnrollmentRequest.insurer
-                this.Element_Insurer = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Insurer",                                                                                               // MakerGen.cs:238
-                    Path= "EnrollmentRequest.insurer",                                                                                      // MakerGen.cs:239
-                    Id = "EnrollmentRequest.insurer",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Insurer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Insurer",
+                    Path= "EnrollmentRequest.insurer",
+                    Id = "EnrollmentRequest.insurer",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 5. EnrollmentRequest.provider
-                this.Element_Provider = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Provider",                                                                                              // MakerGen.cs:238
-                    Path= "EnrollmentRequest.provider",                                                                                     // MakerGen.cs:239
-                    Id = "EnrollmentRequest.provider",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Provider = new ElementDefinitionInfo
+                {
+                    Name = "Element_Provider",
+                    Path= "EnrollmentRequest.provider",
+                    Id = "EnrollmentRequest.provider",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. EnrollmentRequest.candidate
-                this.Element_Candidate = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Candidate",                                                                                             // MakerGen.cs:238
-                    Path= "EnrollmentRequest.candidate",                                                                                    // MakerGen.cs:239
-                    Id = "EnrollmentRequest.candidate",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Candidate = new ElementDefinitionInfo
+                {
+                    Name = "Element_Candidate",
+                    Path= "EnrollmentRequest.candidate",
+                    Id = "EnrollmentRequest.candidate",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 7. EnrollmentRequest.coverage
-                this.Element_Coverage = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Coverage",                                                                                              // MakerGen.cs:238
-                    Path= "EnrollmentRequest.coverage",                                                                                     // MakerGen.cs:239
-                    Id = "EnrollmentRequest.coverage",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Coverage"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "EnrollmentRequest";                                                                                                // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest";                                                         // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Coverage = new ElementDefinitionInfo
+                {
+                    Name = "Element_Coverage",
+                    Path= "EnrollmentRequest.coverage",
+                    Id = "EnrollmentRequest.coverage",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Coverage"
+                            }
+                        }
+                    }
+                };
+            }
+            this.Name = "EnrollmentRequest";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/EnrollmentRequest";
+        }
+    }
+}

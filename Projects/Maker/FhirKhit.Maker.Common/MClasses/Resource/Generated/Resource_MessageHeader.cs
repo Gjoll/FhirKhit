@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "MessageHeader",
@@ -468,589 +468,589 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'MessageHeader'
     /// </summary>
     // 0. MessageHeader
-    public class Resource_MessageHeader : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                            // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_MessageHeader : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 2. MessageHeader.destination
-        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 3. MessageHeader.destination.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Name;
             // 4. MessageHeader.destination.target
-            public ElementDefinitionInfo Element_Target;                                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Target;
             // 5. MessageHeader.destination.endpoint
-            public ElementDefinitionInfo Element_Endpoint;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Endpoint;
             // 6. MessageHeader.destination.receiver
-            public ElementDefinitionInfo Element_Receiver;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "MessageHeader.destination",                                                                                     // MakerGen.cs:395
-                    ElementId = "MessageHeader.destination"                                                                                 // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Target.Write(sDef);                                                                                                 // MakerGen.cs:223
-                Element_Endpoint.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Receiver.Write(sDef);                                                                                               // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Destination()                                                                                                       // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Receiver;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "MessageHeader.destination",
+                    ElementId = "MessageHeader.destination"
+                });
+                Element_Name.Write(sDef);
+                Element_Target.Write(sDef);
+                Element_Endpoint.Write(sDef);
+                Element_Receiver.Write(sDef);
+            }
+            
+            public Type_Destination()
+            {
+                {
                     // 3. MessageHeader.destination.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
-                        Path= "MessageHeader.destination.name",                                                                             // MakerGen.cs:239
-                        Id = "MessageHeader.destination.name",                                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Name = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Name",
+                        Path= "MessageHeader.destination.name",
+                        Id = "MessageHeader.destination.name",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 4. MessageHeader.destination.target
-                    this.Element_Target = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Target",                                                                                            // MakerGen.cs:238
-                        Path= "MessageHeader.destination.target",                                                                           // MakerGen.cs:239
-                        Id = "MessageHeader.destination.target",                                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Target = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Target",
+                        Path= "MessageHeader.destination.target",
+                        Id = "MessageHeader.destination.target",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Device"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 5. MessageHeader.destination.endpoint
-                    this.Element_Endpoint = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Endpoint",                                                                                          // MakerGen.cs:238
-                        Path= "MessageHeader.destination.endpoint",                                                                         // MakerGen.cs:239
-                        Id = "MessageHeader.destination.endpoint",                                                                          // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Url                                                               // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Endpoint = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Endpoint",
+                        Path= "MessageHeader.destination.endpoint",
+                        Id = "MessageHeader.destination.endpoint",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Url
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 6. MessageHeader.destination.receiver
-                    this.Element_Receiver = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Receiver",                                                                                          // MakerGen.cs:238
-                        Path= "MessageHeader.destination.receiver",                                                                         // MakerGen.cs:239
-                        Id = "MessageHeader.destination.receiver",                                                                          // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Receiver = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Receiver",
+                        Path= "MessageHeader.destination.receiver",
+                        Id = "MessageHeader.destination.receiver",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 10. MessageHeader.source
-        public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 11. MessageHeader.source.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Name;
             // 12. MessageHeader.source.software
-            public ElementDefinitionInfo Element_Software;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Software;
             // 13. MessageHeader.source.version
-            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Version;
             // 14. MessageHeader.source.contact
-            public ElementDefinitionInfo Element_Contact;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Contact;
             // 15. MessageHeader.source.endpoint
-            public ElementDefinitionInfo Element_Endpoint;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "MessageHeader.source",                                                                                          // MakerGen.cs:395
-                    ElementId = "MessageHeader.source"                                                                                      // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Software.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Contact.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Endpoint.Write(sDef);                                                                                               // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Source()                                                                                                            // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Endpoint;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "MessageHeader.source",
+                    ElementId = "MessageHeader.source"
+                });
+                Element_Name.Write(sDef);
+                Element_Software.Write(sDef);
+                Element_Version.Write(sDef);
+                Element_Contact.Write(sDef);
+                Element_Endpoint.Write(sDef);
+            }
+            
+            public Type_Source()
+            {
+                {
                     // 11. MessageHeader.source.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
-                        Path= "MessageHeader.source.name",                                                                                  // MakerGen.cs:239
-                        Id = "MessageHeader.source.name",                                                                                   // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Name = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Name",
+                        Path= "MessageHeader.source.name",
+                        Id = "MessageHeader.source.name",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 12. MessageHeader.source.software
-                    this.Element_Software = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Software",                                                                                          // MakerGen.cs:238
-                        Path= "MessageHeader.source.software",                                                                              // MakerGen.cs:239
-                        Id = "MessageHeader.source.software",                                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Software = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Software",
+                        Path= "MessageHeader.source.software",
+                        Id = "MessageHeader.source.software",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 13. MessageHeader.source.version
-                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Version",                                                                                           // MakerGen.cs:238
-                        Path= "MessageHeader.source.version",                                                                               // MakerGen.cs:239
-                        Id = "MessageHeader.source.version",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Version = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Version",
+                        Path= "MessageHeader.source.version",
+                        Id = "MessageHeader.source.version",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 14. MessageHeader.source.contact
-                    this.Element_Contact = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Contact",                                                                                           // MakerGen.cs:238
-                        Path= "MessageHeader.source.contact",                                                                               // MakerGen.cs:239
-                        Id = "MessageHeader.source.contact",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                             // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Contact = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Contact",
+                        Path= "MessageHeader.source.contact",
+                        Id = "MessageHeader.source.contact",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_ContactPoint
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 15. MessageHeader.source.endpoint
-                    this.Element_Endpoint = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Endpoint",                                                                                          // MakerGen.cs:238
-                        Path= "MessageHeader.source.endpoint",                                                                              // MakerGen.cs:239
-                        Id = "MessageHeader.source.endpoint",                                                                               // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Url                                                               // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Endpoint = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Endpoint",
+                        Path= "MessageHeader.source.endpoint",
+                        Id = "MessageHeader.source.endpoint",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Url
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 18. MessageHeader.response
-        public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 19. MessageHeader.response.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Identifier;
             // 20. MessageHeader.response.code
-            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Code;
             // 21. MessageHeader.response.details
-            public ElementDefinitionInfo Element_Details;                                                                                   // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "MessageHeader.response",                                                                                        // MakerGen.cs:395
-                    ElementId = "MessageHeader.response"                                                                                    // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:223
-                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Details.Write(sDef);                                                                                                // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Response()                                                                                                          // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Details;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "MessageHeader.response",
+                    ElementId = "MessageHeader.response"
+                });
+                Element_Identifier.Write(sDef);
+                Element_Code.Write(sDef);
+                Element_Details.Write(sDef);
+            }
+            
+            public Type_Response()
+            {
+                {
                     // 19. MessageHeader.response.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:238
-                        Path= "MessageHeader.response.identifier",                                                                          // MakerGen.cs:239
-                        Id = "MessageHeader.response.identifier",                                                                           // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Identifier = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Identifier",
+                        Path= "MessageHeader.response.identifier",
+                        Id = "MessageHeader.response.identifier",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Id
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 20. MessageHeader.response.code
-                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Code",                                                                                              // MakerGen.cs:238
-                        Path= "MessageHeader.response.code",                                                                                // MakerGen.cs:239
-                        Id = "MessageHeader.response.code",                                                                                 // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Code = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Code",
+                        Path= "MessageHeader.response.code",
+                        Id = "MessageHeader.response.code",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 21. MessageHeader.response.details
-                    this.Element_Details = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Details",                                                                                           // MakerGen.cs:238
-                        Path= "MessageHeader.response.details",                                                                             // MakerGen.cs:239
-                        Id = "MessageHeader.response.details",                                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/OperationOutcome"                                              // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Details = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Details",
+                        Path= "MessageHeader.response.details",
+                        Id = "MessageHeader.response.details",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/OperationOutcome"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. MessageHeader.event[x]
-        public ElementDefinitionInfo Element_Event;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Event;
         // 2. MessageHeader.destination
-        public ElementDefinitionInfo Element_Destination;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Destination;
         // 7. MessageHeader.sender
-        public ElementDefinitionInfo Element_Sender;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Sender;
         // 8. MessageHeader.enterer
-        public ElementDefinitionInfo Element_Enterer;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Enterer;
         // 9. MessageHeader.author
-        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Author;
         // 10. MessageHeader.source
-        public ElementDefinitionInfo Element_Source;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Source;
         // 16. MessageHeader.responsible
-        public ElementDefinitionInfo Element_Responsible;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Responsible;
         // 17. MessageHeader.reason
-        public ElementDefinitionInfo Element_Reason;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Reason;
         // 18. MessageHeader.response
-        public ElementDefinitionInfo Element_Response;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Response;
         // 22. MessageHeader.focus
-        public ElementDefinitionInfo Element_Focus;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Focus;
         // 23. MessageHeader.definition
-        public ElementDefinitionInfo Element_Definition;                                                                                    // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "MessageHeader",                                                                                                     // MakerGen.cs:395
-                ElementId = "MessageHeader"                                                                                                 // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Event.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Destination.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Sender.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Enterer.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Source.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Responsible.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Reason.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Response.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Focus.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Definition.Write(sDef);                                                                                                 // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_MessageHeader()                                                                                                     // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Definition;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "MessageHeader",
+                ElementId = "MessageHeader"
+            });
+            Element_Event.Write(sDef);
+            Element_Destination.Write(sDef);
+            Element_Sender.Write(sDef);
+            Element_Enterer.Write(sDef);
+            Element_Author.Write(sDef);
+            Element_Source.Write(sDef);
+            Element_Responsible.Write(sDef);
+            Element_Reason.Write(sDef);
+            Element_Response.Write(sDef);
+            Element_Focus.Write(sDef);
+            Element_Definition.Write(sDef);
+        }
+        
+        public Resource_MessageHeader()
+        {
+            {
                 // 1. MessageHeader.event[x]
-                this.Element_Event = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Event",                                                                                                 // MakerGen.cs:238
-                    Path= "MessageHeader.event[x]",                                                                                         // MakerGen.cs:239
-                    Id = "MessageHeader.event[x]",                                                                                          // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                                       // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        },                                                                                                                  // MakerGen.cs:322
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Event = new ElementDefinitionInfo
+                {
+                    Name = "Element_Event",
+                    Path= "MessageHeader.event[x]",
+                    Id = "MessageHeader.event[x]",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Coding
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. MessageHeader.destination
-                this.Element_Destination = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Destination",                                                                                           // MakerGen.cs:238
-                    Path= "MessageHeader.destination",                                                                                      // MakerGen.cs:239
-                    Id = "MessageHeader.destination",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Destination                                                                                                // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Destination = new ElementDefinitionInfo
+                {
+                    Name = "Element_Destination",
+                    Path= "MessageHeader.destination",
+                    Id = "MessageHeader.destination",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Destination
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. MessageHeader.sender
-                this.Element_Sender = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Sender",                                                                                                // MakerGen.cs:238
-                    Path= "MessageHeader.sender",                                                                                           // MakerGen.cs:239
-                    Id = "MessageHeader.sender",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Sender = new ElementDefinitionInfo
+                {
+                    Name = "Element_Sender",
+                    Path= "MessageHeader.sender",
+                    Id = "MessageHeader.sender",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 8. MessageHeader.enterer
-                this.Element_Enterer = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Enterer",                                                                                               // MakerGen.cs:238
-                    Path= "MessageHeader.enterer",                                                                                          // MakerGen.cs:239
-                    Id = "MessageHeader.enterer",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Enterer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Enterer",
+                    Path= "MessageHeader.enterer",
+                    Id = "MessageHeader.enterer",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 9. MessageHeader.author
-                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Author",                                                                                                // MakerGen.cs:238
-                    Path= "MessageHeader.author",                                                                                           // MakerGen.cs:239
-                    Id = "MessageHeader.author",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Author = new ElementDefinitionInfo
+                {
+                    Name = "Element_Author",
+                    Path= "MessageHeader.author",
+                    Id = "MessageHeader.author",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 10. MessageHeader.source
-                this.Element_Source = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Source",                                                                                                // MakerGen.cs:238
-                    Path= "MessageHeader.source",                                                                                           // MakerGen.cs:239
-                    Id = "MessageHeader.source",                                                                                            // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Source                                                                                                     // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Source = new ElementDefinitionInfo
+                {
+                    Name = "Element_Source",
+                    Path= "MessageHeader.source",
+                    Id = "MessageHeader.source",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Source
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 16. MessageHeader.responsible
-                this.Element_Responsible = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Responsible",                                                                                           // MakerGen.cs:238
-                    Path= "MessageHeader.responsible",                                                                                      // MakerGen.cs:239
-                    Id = "MessageHeader.responsible",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Responsible = new ElementDefinitionInfo
+                {
+                    Name = "Element_Responsible",
+                    Path= "MessageHeader.responsible",
+                    Id = "MessageHeader.responsible",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 17. MessageHeader.reason
-                this.Element_Reason = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Reason",                                                                                                // MakerGen.cs:238
-                    Path= "MessageHeader.reason",                                                                                           // MakerGen.cs:239
-                    Id = "MessageHeader.reason",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Reason = new ElementDefinitionInfo
+                {
+                    Name = "Element_Reason",
+                    Path= "MessageHeader.reason",
+                    Id = "MessageHeader.reason",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 18. MessageHeader.response
-                this.Element_Response = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Response",                                                                                              // MakerGen.cs:238
-                    Path= "MessageHeader.response",                                                                                         // MakerGen.cs:239
-                    Id = "MessageHeader.response",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Response                                                                                                   // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Response = new ElementDefinitionInfo
+                {
+                    Name = "Element_Response",
+                    Path= "MessageHeader.response",
+                    Id = "MessageHeader.response",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Response
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 22. MessageHeader.focus
-                this.Element_Focus = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Focus",                                                                                                 // MakerGen.cs:238
-                    Path= "MessageHeader.focus",                                                                                            // MakerGen.cs:239
-                    Id = "MessageHeader.focus",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Focus = new ElementDefinitionInfo
+                {
+                    Name = "Element_Focus",
+                    Path= "MessageHeader.focus",
+                    Id = "MessageHeader.focus",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Resource"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 23. MessageHeader.definition
-                this.Element_Definition = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Definition",                                                                                            // MakerGen.cs:238
-                    Path= "MessageHeader.definition",                                                                                       // MakerGen.cs:239
-                    Id = "MessageHeader.definition",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/MessageDefinition"                                                 // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "MessageHeader";                                                                                                    // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/MessageHeader";                                                             // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Definition = new ElementDefinitionInfo
+                {
+                    Name = "Element_Definition",
+                    Path= "MessageHeader.definition",
+                    Id = "MessageHeader.definition",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/MessageDefinition"
+                            }
+                        }
+                    }
+                };
+            }
+            this.Name = "MessageHeader";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/MessageHeader";
+        }
+    }
+}

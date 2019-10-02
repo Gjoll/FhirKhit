@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "GuidanceResponse",
@@ -284,367 +284,367 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'GuidanceResponse'
     /// </summary>
     // 0. GuidanceResponse
-    public class Resource_GuidanceResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                         // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_GuidanceResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 1. GuidanceResponse.requestIdentifier
-        public ElementDefinitionInfo Element_RequestIdentifier;                                                                             // MakerGen.cs:219
+        public ElementDefinitionInfo Element_RequestIdentifier;
         // 2. GuidanceResponse.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 3. GuidanceResponse.module[x]
-        public ElementDefinitionInfo Element_Module;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Module;
         // 4. GuidanceResponse.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 5. GuidanceResponse.subject
-        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Subject;
         // 6. GuidanceResponse.encounter
-        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Encounter;
         // 7. GuidanceResponse.occurrenceDateTime
-        public ElementDefinitionInfo Element_OccurrenceDateTime;                                                                            // MakerGen.cs:219
+        public ElementDefinitionInfo Element_OccurrenceDateTime;
         // 8. GuidanceResponse.performer
-        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Performer;
         // 9. GuidanceResponse.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReasonCode;
         // 10. GuidanceResponse.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReasonReference;
         // 11. GuidanceResponse.note
-        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Note;
         // 12. GuidanceResponse.evaluationMessage
-        public ElementDefinitionInfo Element_EvaluationMessage;                                                                             // MakerGen.cs:219
+        public ElementDefinitionInfo Element_EvaluationMessage;
         // 13. GuidanceResponse.outputParameters
-        public ElementDefinitionInfo Element_OutputParameters;                                                                              // MakerGen.cs:219
+        public ElementDefinitionInfo Element_OutputParameters;
         // 14. GuidanceResponse.result
-        public ElementDefinitionInfo Element_Result;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Result;
         // 15. GuidanceResponse.dataRequirement
-        public ElementDefinitionInfo Element_DataRequirement;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "GuidanceResponse",                                                                                                  // MakerGen.cs:395
-                ElementId = "GuidanceResponse"                                                                                              // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_RequestIdentifier.Write(sDef);                                                                                          // MakerGen.cs:223
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Module.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_OccurrenceDateTime.Write(sDef);                                                                                         // MakerGen.cs:223
-            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_EvaluationMessage.Write(sDef);                                                                                          // MakerGen.cs:223
-            Element_OutputParameters.Write(sDef);                                                                                           // MakerGen.cs:223
-            Element_Result.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_DataRequirement.Write(sDef);                                                                                            // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_GuidanceResponse()                                                                                                  // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_DataRequirement;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "GuidanceResponse",
+                ElementId = "GuidanceResponse"
+            });
+            Element_RequestIdentifier.Write(sDef);
+            Element_Identifier.Write(sDef);
+            Element_Module.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Subject.Write(sDef);
+            Element_Encounter.Write(sDef);
+            Element_OccurrenceDateTime.Write(sDef);
+            Element_Performer.Write(sDef);
+            Element_ReasonCode.Write(sDef);
+            Element_ReasonReference.Write(sDef);
+            Element_Note.Write(sDef);
+            Element_EvaluationMessage.Write(sDef);
+            Element_OutputParameters.Write(sDef);
+            Element_Result.Write(sDef);
+            Element_DataRequirement.Write(sDef);
+        }
+        
+        public Resource_GuidanceResponse()
+        {
+            {
                 // 1. GuidanceResponse.requestIdentifier
-                this.Element_RequestIdentifier = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_RequestIdentifier",                                                                                     // MakerGen.cs:238
-                    Path= "GuidanceResponse.requestIdentifier",                                                                             // MakerGen.cs:239
-                    Id = "GuidanceResponse.requestIdentifier",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_RequestIdentifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_RequestIdentifier",
+                    Path= "GuidanceResponse.requestIdentifier",
+                    Id = "GuidanceResponse.requestIdentifier",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. GuidanceResponse.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "GuidanceResponse.identifier",                                                                                    // MakerGen.cs:239
-                    Id = "GuidanceResponse.identifier",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "GuidanceResponse.identifier",
+                    Id = "GuidanceResponse.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. GuidanceResponse.module[x]
-                this.Element_Module = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Module",                                                                                                // MakerGen.cs:238
-                    Path= "GuidanceResponse.module[x]",                                                                                     // MakerGen.cs:239
-                    Id = "GuidanceResponse.module[x]",                                                                                      // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Module = new ElementDefinitionInfo
+                {
+                    Name = "Element_Module",
+                    Path= "GuidanceResponse.module[x]",
+                    Id = "GuidanceResponse.module[x]",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. GuidanceResponse.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "GuidanceResponse.status",                                                                                        // MakerGen.cs:239
-                    Id = "GuidanceResponse.status",                                                                                         // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "GuidanceResponse.status",
+                    Id = "GuidanceResponse.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. GuidanceResponse.subject
-                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Subject",                                                                                               // MakerGen.cs:238
-                    Path= "GuidanceResponse.subject",                                                                                       // MakerGen.cs:239
-                    Id = "GuidanceResponse.subject",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Subject = new ElementDefinitionInfo
+                {
+                    Name = "Element_Subject",
+                    Path= "GuidanceResponse.subject",
+                    Id = "GuidanceResponse.subject",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient",
+                                "http://hl7.org/fhir/StructureDefinition/Group"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. GuidanceResponse.encounter
-                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:238
-                    Path= "GuidanceResponse.encounter",                                                                                     // MakerGen.cs:239
-                    Id = "GuidanceResponse.encounter",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Encounter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Encounter",
+                    Path= "GuidanceResponse.encounter",
+                    Id = "GuidanceResponse.encounter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 7. GuidanceResponse.occurrenceDateTime
-                this.Element_OccurrenceDateTime = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_OccurrenceDateTime",                                                                                    // MakerGen.cs:238
-                    Path= "GuidanceResponse.occurrenceDateTime",                                                                            // MakerGen.cs:239
-                    Id = "GuidanceResponse.occurrenceDateTime",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_OccurrenceDateTime = new ElementDefinitionInfo
+                {
+                    Name = "Element_OccurrenceDateTime",
+                    Path= "GuidanceResponse.occurrenceDateTime",
+                    Id = "GuidanceResponse.occurrenceDateTime",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. GuidanceResponse.performer
-                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Performer",                                                                                             // MakerGen.cs:238
-                    Path= "GuidanceResponse.performer",                                                                                     // MakerGen.cs:239
-                    Id = "GuidanceResponse.performer",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Performer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Performer",
+                    Path= "GuidanceResponse.performer",
+                    Id = "GuidanceResponse.performer",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Device"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 9. GuidanceResponse.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:238
-                    Path= "GuidanceResponse.reasonCode",                                                                                    // MakerGen.cs:239
-                    Id = "GuidanceResponse.reasonCode",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReasonCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReasonCode",
+                    Path= "GuidanceResponse.reasonCode",
+                    Id = "GuidanceResponse.reasonCode",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. GuidanceResponse.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:238
-                    Path= "GuidanceResponse.reasonReference",                                                                               // MakerGen.cs:239
-                    Id = "GuidanceResponse.reasonReference",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                                 // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReasonReference = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReasonReference",
+                    Path= "GuidanceResponse.reasonReference",
+                    Id = "GuidanceResponse.reasonReference",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Condition",
+                                "http://hl7.org/fhir/StructureDefinition/Observation",
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. GuidanceResponse.note
-                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Note",                                                                                                  // MakerGen.cs:238
-                    Path= "GuidanceResponse.note",                                                                                          // MakerGen.cs:239
-                    Id = "GuidanceResponse.note",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Note = new ElementDefinitionInfo
+                {
+                    Name = "Element_Note",
+                    Path= "GuidanceResponse.note",
+                    Id = "GuidanceResponse.note",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. GuidanceResponse.evaluationMessage
-                this.Element_EvaluationMessage = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_EvaluationMessage",                                                                                     // MakerGen.cs:238
-                    Path= "GuidanceResponse.evaluationMessage",                                                                             // MakerGen.cs:239
-                    Id = "GuidanceResponse.evaluationMessage",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/OperationOutcome"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_EvaluationMessage = new ElementDefinitionInfo
+                {
+                    Name = "Element_EvaluationMessage",
+                    Path= "GuidanceResponse.evaluationMessage",
+                    Id = "GuidanceResponse.evaluationMessage",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/OperationOutcome"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 13. GuidanceResponse.outputParameters
-                this.Element_OutputParameters = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_OutputParameters",                                                                                      // MakerGen.cs:238
-                    Path= "GuidanceResponse.outputParameters",                                                                              // MakerGen.cs:239
-                    Id = "GuidanceResponse.outputParameters",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Parameters"                                                        // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_OutputParameters = new ElementDefinitionInfo
+                {
+                    Name = "Element_OutputParameters",
+                    Path= "GuidanceResponse.outputParameters",
+                    Id = "GuidanceResponse.outputParameters",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Parameters"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 14. GuidanceResponse.result
-                this.Element_Result = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Result",                                                                                                // MakerGen.cs:238
-                    Path= "GuidanceResponse.result",                                                                                        // MakerGen.cs:239
-                    Id = "GuidanceResponse.result",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                         // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/RequestGroup"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Result = new ElementDefinitionInfo
+                {
+                    Name = "Element_Result",
+                    Path= "GuidanceResponse.result",
+                    Id = "GuidanceResponse.result",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan",
+                                "http://hl7.org/fhir/StructureDefinition/RequestGroup"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 15. GuidanceResponse.dataRequirement
-                this.Element_DataRequirement = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_DataRequirement",                                                                                       // MakerGen.cs:238
-                    Path= "GuidanceResponse.dataRequirement",                                                                               // MakerGen.cs:239
-                    Id = "GuidanceResponse.dataRequirement",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_DataRequirement                                                              // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "GuidanceResponse";                                                                                                 // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/GuidanceResponse";                                                          // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_DataRequirement = new ElementDefinitionInfo
+                {
+                    Name = "Element_DataRequirement",
+                    Path= "GuidanceResponse.dataRequirement",
+                    Id = "GuidanceResponse.dataRequirement",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_DataRequirement
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "GuidanceResponse";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/GuidanceResponse";
+        }
+    }
+}

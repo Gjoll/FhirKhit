@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "OrganizationAffiliation",
@@ -250,292 +250,292 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'OrganizationAffiliation'
     /// </summary>
     // 0. OrganizationAffiliation
-    public class Resource_OrganizationAffiliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                  // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_OrganizationAffiliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 1. OrganizationAffiliation.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. OrganizationAffiliation.active
-        public ElementDefinitionInfo Element_Active;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Active;
         // 3. OrganizationAffiliation.period
-        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Period;
         // 4. OrganizationAffiliation.organization
-        public ElementDefinitionInfo Element_Organization;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Organization;
         // 5. OrganizationAffiliation.participatingOrganization
-        public ElementDefinitionInfo Element_ParticipatingOrganization;                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ParticipatingOrganization;
         // 6. OrganizationAffiliation.network
-        public ElementDefinitionInfo Element_Network;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Network;
         // 7. OrganizationAffiliation.code
-        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Code;
         // 8. OrganizationAffiliation.specialty
-        public ElementDefinitionInfo Element_Specialty;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Specialty;
         // 9. OrganizationAffiliation.location
-        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Location;
         // 10. OrganizationAffiliation.healthcareService
-        public ElementDefinitionInfo Element_HealthcareService;                                                                             // MakerGen.cs:219
+        public ElementDefinitionInfo Element_HealthcareService;
         // 11. OrganizationAffiliation.telecom
-        public ElementDefinitionInfo Element_Telecom;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Telecom;
         // 12. OrganizationAffiliation.endpoint
-        public ElementDefinitionInfo Element_Endpoint;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "OrganizationAffiliation",                                                                                           // MakerGen.cs:395
-                ElementId = "OrganizationAffiliation"                                                                                       // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Active.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Organization.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_ParticipatingOrganization.Write(sDef);                                                                                  // MakerGen.cs:223
-            Element_Network.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Specialty.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_HealthcareService.Write(sDef);                                                                                          // MakerGen.cs:223
-            Element_Telecom.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Endpoint.Write(sDef);                                                                                                   // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_OrganizationAffiliation()                                                                                           // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Endpoint;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "OrganizationAffiliation",
+                ElementId = "OrganizationAffiliation"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Active.Write(sDef);
+            Element_Period.Write(sDef);
+            Element_Organization.Write(sDef);
+            Element_ParticipatingOrganization.Write(sDef);
+            Element_Network.Write(sDef);
+            Element_Code.Write(sDef);
+            Element_Specialty.Write(sDef);
+            Element_Location.Write(sDef);
+            Element_HealthcareService.Write(sDef);
+            Element_Telecom.Write(sDef);
+            Element_Endpoint.Write(sDef);
+        }
+        
+        public Resource_OrganizationAffiliation()
+        {
+            {
                 // 1. OrganizationAffiliation.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.identifier",                                                                             // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.identifier",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "OrganizationAffiliation.identifier",
+                    Id = "OrganizationAffiliation.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. OrganizationAffiliation.active
-                this.Element_Active = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Active",                                                                                                // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.active",                                                                                 // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.active",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Active = new ElementDefinitionInfo
+                {
+                    Name = "Element_Active",
+                    Path= "OrganizationAffiliation.active",
+                    Id = "OrganizationAffiliation.active",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. OrganizationAffiliation.period
-                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Period",                                                                                                // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.period",                                                                                 // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.period",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Period = new ElementDefinitionInfo
+                {
+                    Name = "Element_Period",
+                    Path= "OrganizationAffiliation.period",
+                    Id = "OrganizationAffiliation.period",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. OrganizationAffiliation.organization
-                this.Element_Organization = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Organization",                                                                                          // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.organization",                                                                           // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.organization",                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Organization = new ElementDefinitionInfo
+                {
+                    Name = "Element_Organization",
+                    Path= "OrganizationAffiliation.organization",
+                    Id = "OrganizationAffiliation.organization",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 5. OrganizationAffiliation.participatingOrganization
-                this.Element_ParticipatingOrganization = new ElementDefinitionInfo                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ParticipatingOrganization",                                                                             // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.participatingOrganization",                                                              // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.participatingOrganization",                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ParticipatingOrganization = new ElementDefinitionInfo
+                {
+                    Name = "Element_ParticipatingOrganization",
+                    Path= "OrganizationAffiliation.participatingOrganization",
+                    Id = "OrganizationAffiliation.participatingOrganization",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. OrganizationAffiliation.network
-                this.Element_Network = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Network",                                                                                               // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.network",                                                                                // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.network",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Network = new ElementDefinitionInfo
+                {
+                    Name = "Element_Network",
+                    Path= "OrganizationAffiliation.network",
+                    Id = "OrganizationAffiliation.network",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 7. OrganizationAffiliation.code
-                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Code",                                                                                                  // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.code",                                                                                   // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.code",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Code = new ElementDefinitionInfo
+                {
+                    Name = "Element_Code",
+                    Path= "OrganizationAffiliation.code",
+                    Id = "OrganizationAffiliation.code",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. OrganizationAffiliation.specialty
-                this.Element_Specialty = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Specialty",                                                                                             // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.specialty",                                                                              // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.specialty",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Specialty = new ElementDefinitionInfo
+                {
+                    Name = "Element_Specialty",
+                    Path= "OrganizationAffiliation.specialty",
+                    Id = "OrganizationAffiliation.specialty",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. OrganizationAffiliation.location
-                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Location",                                                                                              // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.location",                                                                               // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.location",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Location = new ElementDefinitionInfo
+                {
+                    Name = "Element_Location",
+                    Path= "OrganizationAffiliation.location",
+                    Id = "OrganizationAffiliation.location",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Location"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 10. OrganizationAffiliation.healthcareService
-                this.Element_HealthcareService = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_HealthcareService",                                                                                     // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.healthcareService",                                                                      // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.healthcareService",                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/HealthcareService"                                                 // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_HealthcareService = new ElementDefinitionInfo
+                {
+                    Name = "Element_HealthcareService",
+                    Path= "OrganizationAffiliation.healthcareService",
+                    Id = "OrganizationAffiliation.healthcareService",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/HealthcareService"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. OrganizationAffiliation.telecom
-                this.Element_Telecom = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Telecom",                                                                                               // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.telecom",                                                                                // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.telecom",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                                 // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Telecom = new ElementDefinitionInfo
+                {
+                    Name = "Element_Telecom",
+                    Path= "OrganizationAffiliation.telecom",
+                    Id = "OrganizationAffiliation.telecom",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. OrganizationAffiliation.endpoint
-                this.Element_Endpoint = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Endpoint",                                                                                              // MakerGen.cs:238
-                    Path= "OrganizationAffiliation.endpoint",                                                                               // MakerGen.cs:239
-                    Id = "OrganizationAffiliation.endpoint",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "OrganizationAffiliation";                                                                                          // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation";                                                   // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Endpoint = new ElementDefinitionInfo
+                {
+                    Name = "Element_Endpoint",
+                    Path= "OrganizationAffiliation.endpoint",
+                    Id = "OrganizationAffiliation.endpoint",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Endpoint"
+                            }
+                        }
+                    }
+                };
+            }
+            this.Name = "OrganizationAffiliation";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/OrganizationAffiliation";
+        }
+    }
+}

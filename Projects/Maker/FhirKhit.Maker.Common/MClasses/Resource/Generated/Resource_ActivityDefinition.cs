@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "ActivityDefinition",
@@ -971,1122 +971,1122 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'ActivityDefinition'
     /// </summary>
     // 0. ActivityDefinition
-    public class Resource_ActivityDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                       // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_ActivityDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 37. ActivityDefinition.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 38. ActivityDefinition.participant.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Type;
             // 39. ActivityDefinition.participant.role
-            public ElementDefinitionInfo Element_Role;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ActivityDefinition.participant",                                                                                // MakerGen.cs:395
-                    ElementId = "ActivityDefinition.participant"                                                                            // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Role.Write(sDef);                                                                                                   // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Participant()                                                                                                       // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Role;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ActivityDefinition.participant",
+                    ElementId = "ActivityDefinition.participant"
+                });
+                Element_Type.Write(sDef);
+                Element_Role.Write(sDef);
+            }
+            
+            public Type_Participant()
+            {
+                {
                     // 38. ActivityDefinition.participant.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:238
-                        Path= "ActivityDefinition.participant.type",                                                                        // MakerGen.cs:239
-                        Id = "ActivityDefinition.participant.type",                                                                         // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Type = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Type",
+                        Path= "ActivityDefinition.participant.type",
+                        Id = "ActivityDefinition.participant.type",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 39. ActivityDefinition.participant.role
-                    this.Element_Role = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Role",                                                                                              // MakerGen.cs:238
-                        Path= "ActivityDefinition.participant.role",                                                                        // MakerGen.cs:239
-                        Id = "ActivityDefinition.participant.role",                                                                         // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Role = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Role",
+                        Path= "ActivityDefinition.participant.role",
+                        Id = "ActivityDefinition.participant.role",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 48. ActivityDefinition.dynamicValue
-        public class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 49. ActivityDefinition.dynamicValue.path
-            public ElementDefinitionInfo Element_Path;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Path;
             // 50. ActivityDefinition.dynamicValue.expression
-            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ActivityDefinition.dynamicValue",                                                                               // MakerGen.cs:395
-                    ElementId = "ActivityDefinition.dynamicValue"                                                                           // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Path.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_DynamicValue()                                                                                                      // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Expression;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ActivityDefinition.dynamicValue",
+                    ElementId = "ActivityDefinition.dynamicValue"
+                });
+                Element_Path.Write(sDef);
+                Element_Expression.Write(sDef);
+            }
+            
+            public Type_DynamicValue()
+            {
+                {
                     // 49. ActivityDefinition.dynamicValue.path
-                    this.Element_Path = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Path",                                                                                              // MakerGen.cs:238
-                        Path= "ActivityDefinition.dynamicValue.path",                                                                       // MakerGen.cs:239
-                        Id = "ActivityDefinition.dynamicValue.path",                                                                        // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Path = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Path",
+                        Path= "ActivityDefinition.dynamicValue.path",
+                        Id = "ActivityDefinition.dynamicValue.path",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 50. ActivityDefinition.dynamicValue.expression
-                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Expression",                                                                                        // MakerGen.cs:238
-                        Path= "ActivityDefinition.dynamicValue.expression",                                                                 // MakerGen.cs:239
-                        Id = "ActivityDefinition.dynamicValue.expression",                                                                  // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Expression                                                               // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Expression = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Expression",
+                        Path= "ActivityDefinition.dynamicValue.expression",
+                        Id = "ActivityDefinition.dynamicValue.expression",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Expression
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. ActivityDefinition.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Url;
         // 2. ActivityDefinition.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 3. ActivityDefinition.version
-        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Version;
         // 4. ActivityDefinition.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Name;
         // 5. ActivityDefinition.title
-        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Title;
         // 6. ActivityDefinition.subtitle
-        public ElementDefinitionInfo Element_Subtitle;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Subtitle;
         // 7. ActivityDefinition.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 8. ActivityDefinition.experimental
-        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Experimental;
         // 9. ActivityDefinition.subject[x]
-        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Subject;
         // 10. ActivityDefinition.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Date;
         // 11. ActivityDefinition.publisher
-        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Publisher;
         // 12. ActivityDefinition.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Contact;
         // 13. ActivityDefinition.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Description;
         // 14. ActivityDefinition.useContext
-        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_UseContext;
         // 15. ActivityDefinition.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Jurisdiction;
         // 16. ActivityDefinition.purpose
-        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Purpose;
         // 17. ActivityDefinition.usage
-        public ElementDefinitionInfo Element_Usage;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Usage;
         // 18. ActivityDefinition.copyright
-        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Copyright;
         // 19. ActivityDefinition.approvalDate
-        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ApprovalDate;
         // 20. ActivityDefinition.lastReviewDate
-        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_LastReviewDate;
         // 21. ActivityDefinition.effectivePeriod
-        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_EffectivePeriod;
         // 22. ActivityDefinition.topic
-        public ElementDefinitionInfo Element_Topic;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Topic;
         // 23. ActivityDefinition.author
-        public ElementDefinitionInfo Element_Author;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Author;
         // 24. ActivityDefinition.editor
-        public ElementDefinitionInfo Element_Editor;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Editor;
         // 25. ActivityDefinition.reviewer
-        public ElementDefinitionInfo Element_Reviewer;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Reviewer;
         // 26. ActivityDefinition.endorser
-        public ElementDefinitionInfo Element_Endorser;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Endorser;
         // 27. ActivityDefinition.relatedArtifact
-        public ElementDefinitionInfo Element_RelatedArtifact;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_RelatedArtifact;
         // 28. ActivityDefinition.library
-        public ElementDefinitionInfo Element_Library;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Library;
         // 29. ActivityDefinition.kind
-        public ElementDefinitionInfo Element_Kind;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Kind;
         // 30. ActivityDefinition.profile
-        public ElementDefinitionInfo Element_Profile;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Profile;
         // 31. ActivityDefinition.code
-        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Code;
         // 32. ActivityDefinition.intent
-        public ElementDefinitionInfo Element_Intent;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Intent;
         // 33. ActivityDefinition.priority
-        public ElementDefinitionInfo Element_Priority;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Priority;
         // 34. ActivityDefinition.doNotPerform
-        public ElementDefinitionInfo Element_DoNotPerform;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_DoNotPerform;
         // 35. ActivityDefinition.timing[x]
-        public ElementDefinitionInfo Element_Timing;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Timing;
         // 36. ActivityDefinition.location
-        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Location;
         // 37. ActivityDefinition.participant
-        public ElementDefinitionInfo Element_Participant;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Participant;
         // 40. ActivityDefinition.product[x]
-        public ElementDefinitionInfo Element_Product;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Product;
         // 41. ActivityDefinition.quantity
-        public ElementDefinitionInfo Element_Quantity;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Quantity;
         // 42. ActivityDefinition.dosage
-        public ElementDefinitionInfo Element_Dosage;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Dosage;
         // 43. ActivityDefinition.bodySite
-        public ElementDefinitionInfo Element_BodySite;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_BodySite;
         // 44. ActivityDefinition.specimenRequirement
-        public ElementDefinitionInfo Element_SpecimenRequirement;                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_SpecimenRequirement;
         // 45. ActivityDefinition.observationRequirement
-        public ElementDefinitionInfo Element_ObservationRequirement;                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ObservationRequirement;
         // 46. ActivityDefinition.observationResultRequirement
-        public ElementDefinitionInfo Element_ObservationResultRequirement;                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ObservationResultRequirement;
         // 47. ActivityDefinition.transform
-        public ElementDefinitionInfo Element_Transform;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Transform;
         // 48. ActivityDefinition.dynamicValue
-        public ElementDefinitionInfo Element_DynamicValue;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "ActivityDefinition",                                                                                                // MakerGen.cs:395
-                ElementId = "ActivityDefinition"                                                                                            // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Subtitle.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Usage.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_Topic.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Author.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Editor.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Reviewer.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Endorser.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_RelatedArtifact.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_Library.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Kind.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Profile.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Intent.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Priority.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_DoNotPerform.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Timing.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Participant.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Product.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Quantity.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Dosage.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_BodySite.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_SpecimenRequirement.Write(sDef);                                                                                        // MakerGen.cs:223
-            Element_ObservationRequirement.Write(sDef);                                                                                     // MakerGen.cs:223
-            Element_ObservationResultRequirement.Write(sDef);                                                                               // MakerGen.cs:223
-            Element_Transform.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_DynamicValue.Write(sDef);                                                                                               // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_ActivityDefinition()                                                                                                // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_DynamicValue;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "ActivityDefinition",
+                ElementId = "ActivityDefinition"
+            });
+            Element_Url.Write(sDef);
+            Element_Identifier.Write(sDef);
+            Element_Version.Write(sDef);
+            Element_Name.Write(sDef);
+            Element_Title.Write(sDef);
+            Element_Subtitle.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Experimental.Write(sDef);
+            Element_Subject.Write(sDef);
+            Element_Date.Write(sDef);
+            Element_Publisher.Write(sDef);
+            Element_Contact.Write(sDef);
+            Element_Description.Write(sDef);
+            Element_UseContext.Write(sDef);
+            Element_Jurisdiction.Write(sDef);
+            Element_Purpose.Write(sDef);
+            Element_Usage.Write(sDef);
+            Element_Copyright.Write(sDef);
+            Element_ApprovalDate.Write(sDef);
+            Element_LastReviewDate.Write(sDef);
+            Element_EffectivePeriod.Write(sDef);
+            Element_Topic.Write(sDef);
+            Element_Author.Write(sDef);
+            Element_Editor.Write(sDef);
+            Element_Reviewer.Write(sDef);
+            Element_Endorser.Write(sDef);
+            Element_RelatedArtifact.Write(sDef);
+            Element_Library.Write(sDef);
+            Element_Kind.Write(sDef);
+            Element_Profile.Write(sDef);
+            Element_Code.Write(sDef);
+            Element_Intent.Write(sDef);
+            Element_Priority.Write(sDef);
+            Element_DoNotPerform.Write(sDef);
+            Element_Timing.Write(sDef);
+            Element_Location.Write(sDef);
+            Element_Participant.Write(sDef);
+            Element_Product.Write(sDef);
+            Element_Quantity.Write(sDef);
+            Element_Dosage.Write(sDef);
+            Element_BodySite.Write(sDef);
+            Element_SpecimenRequirement.Write(sDef);
+            Element_ObservationRequirement.Write(sDef);
+            Element_ObservationResultRequirement.Write(sDef);
+            Element_Transform.Write(sDef);
+            Element_DynamicValue.Write(sDef);
+        }
+        
+        public Resource_ActivityDefinition()
+        {
+            {
                 // 1. ActivityDefinition.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
-                    Path= "ActivityDefinition.url",                                                                                         // MakerGen.cs:239
-                    Id = "ActivityDefinition.url",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Url = new ElementDefinitionInfo
+                {
+                    Name = "Element_Url",
+                    Path= "ActivityDefinition.url",
+                    Id = "ActivityDefinition.url",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. ActivityDefinition.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "ActivityDefinition.identifier",                                                                                  // MakerGen.cs:239
-                    Id = "ActivityDefinition.identifier",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "ActivityDefinition.identifier",
+                    Id = "ActivityDefinition.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. ActivityDefinition.version
-                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.version",                                                                                     // MakerGen.cs:239
-                    Id = "ActivityDefinition.version",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Version = new ElementDefinitionInfo
+                {
+                    Name = "Element_Version",
+                    Path= "ActivityDefinition.version",
+                    Id = "ActivityDefinition.version",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. ActivityDefinition.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
-                    Path= "ActivityDefinition.name",                                                                                        // MakerGen.cs:239
-                    Id = "ActivityDefinition.name",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Name = new ElementDefinitionInfo
+                {
+                    Name = "Element_Name",
+                    Path= "ActivityDefinition.name",
+                    Id = "ActivityDefinition.name",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. ActivityDefinition.title
-                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:238
-                    Path= "ActivityDefinition.title",                                                                                       // MakerGen.cs:239
-                    Id = "ActivityDefinition.title",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Title = new ElementDefinitionInfo
+                {
+                    Name = "Element_Title",
+                    Path= "ActivityDefinition.title",
+                    Id = "ActivityDefinition.title",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. ActivityDefinition.subtitle
-                this.Element_Subtitle = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Subtitle",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.subtitle",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.subtitle",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Subtitle = new ElementDefinitionInfo
+                {
+                    Name = "Element_Subtitle",
+                    Path= "ActivityDefinition.subtitle",
+                    Id = "ActivityDefinition.subtitle",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. ActivityDefinition.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.status",                                                                                      // MakerGen.cs:239
-                    Id = "ActivityDefinition.status",                                                                                       // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "ActivityDefinition.status",
+                    Id = "ActivityDefinition.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. ActivityDefinition.experimental
-                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:238
-                    Path= "ActivityDefinition.experimental",                                                                                // MakerGen.cs:239
-                    Id = "ActivityDefinition.experimental",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Experimental = new ElementDefinitionInfo
+                {
+                    Name = "Element_Experimental",
+                    Path= "ActivityDefinition.experimental",
+                    Id = "ActivityDefinition.experimental",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. ActivityDefinition.subject[x]
-                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Subject",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.subject[x]",                                                                                  // MakerGen.cs:239
-                    Id = "ActivityDefinition.subject[x]",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        },                                                                                                                  // MakerGen.cs:322
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Subject = new ElementDefinitionInfo
+                {
+                    Name = "Element_Subject",
+                    Path= "ActivityDefinition.subject[x]",
+                    Id = "ActivityDefinition.subject[x]",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Group"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 10. ActivityDefinition.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
-                    Path= "ActivityDefinition.date",                                                                                        // MakerGen.cs:239
-                    Id = "ActivityDefinition.date",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Date = new ElementDefinitionInfo
+                {
+                    Name = "Element_Date",
+                    Path= "ActivityDefinition.date",
+                    Id = "ActivityDefinition.date",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 11. ActivityDefinition.publisher
-                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:238
-                    Path= "ActivityDefinition.publisher",                                                                                   // MakerGen.cs:239
-                    Id = "ActivityDefinition.publisher",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Publisher = new ElementDefinitionInfo
+                {
+                    Name = "Element_Publisher",
+                    Path= "ActivityDefinition.publisher",
+                    Id = "ActivityDefinition.publisher",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. ActivityDefinition.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.contact",                                                                                     // MakerGen.cs:239
-                    Id = "ActivityDefinition.contact",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Contact = new ElementDefinitionInfo
+                {
+                    Name = "Element_Contact",
+                    Path= "ActivityDefinition.contact",
+                    Id = "ActivityDefinition.contact",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. ActivityDefinition.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
-                    Path= "ActivityDefinition.description",                                                                                 // MakerGen.cs:239
-                    Id = "ActivityDefinition.description",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Description = new ElementDefinitionInfo
+                {
+                    Name = "Element_Description",
+                    Path= "ActivityDefinition.description",
+                    Id = "ActivityDefinition.description",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 14. ActivityDefinition.useContext
-                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:238
-                    Path= "ActivityDefinition.useContext",                                                                                  // MakerGen.cs:239
-                    Id = "ActivityDefinition.useContext",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_UseContext = new ElementDefinitionInfo
+                {
+                    Name = "Element_UseContext",
+                    Path= "ActivityDefinition.useContext",
+                    Id = "ActivityDefinition.useContext",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 15. ActivityDefinition.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
-                    Path= "ActivityDefinition.jurisdiction",                                                                                // MakerGen.cs:239
-                    Id = "ActivityDefinition.jurisdiction",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Jurisdiction = new ElementDefinitionInfo
+                {
+                    Name = "Element_Jurisdiction",
+                    Path= "ActivityDefinition.jurisdiction",
+                    Id = "ActivityDefinition.jurisdiction",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 16. ActivityDefinition.purpose
-                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.purpose",                                                                                     // MakerGen.cs:239
-                    Id = "ActivityDefinition.purpose",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Purpose = new ElementDefinitionInfo
+                {
+                    Name = "Element_Purpose",
+                    Path= "ActivityDefinition.purpose",
+                    Id = "ActivityDefinition.purpose",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 17. ActivityDefinition.usage
-                this.Element_Usage = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Usage",                                                                                                 // MakerGen.cs:238
-                    Path= "ActivityDefinition.usage",                                                                                       // MakerGen.cs:239
-                    Id = "ActivityDefinition.usage",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Usage = new ElementDefinitionInfo
+                {
+                    Name = "Element_Usage",
+                    Path= "ActivityDefinition.usage",
+                    Id = "ActivityDefinition.usage",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 18. ActivityDefinition.copyright
-                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:238
-                    Path= "ActivityDefinition.copyright",                                                                                   // MakerGen.cs:239
-                    Id = "ActivityDefinition.copyright",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Copyright = new ElementDefinitionInfo
+                {
+                    Name = "Element_Copyright",
+                    Path= "ActivityDefinition.copyright",
+                    Id = "ActivityDefinition.copyright",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 19. ActivityDefinition.approvalDate
-                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:238
-                    Path= "ActivityDefinition.approvalDate",                                                                                // MakerGen.cs:239
-                    Id = "ActivityDefinition.approvalDate",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ApprovalDate = new ElementDefinitionInfo
+                {
+                    Name = "Element_ApprovalDate",
+                    Path= "ActivityDefinition.approvalDate",
+                    Id = "ActivityDefinition.approvalDate",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 20. ActivityDefinition.lastReviewDate
-                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:238
-                    Path= "ActivityDefinition.lastReviewDate",                                                                              // MakerGen.cs:239
-                    Id = "ActivityDefinition.lastReviewDate",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_LastReviewDate = new ElementDefinitionInfo
+                {
+                    Name = "Element_LastReviewDate",
+                    Path= "ActivityDefinition.lastReviewDate",
+                    Id = "ActivityDefinition.lastReviewDate",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 21. ActivityDefinition.effectivePeriod
-                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:238
-                    Path= "ActivityDefinition.effectivePeriod",                                                                             // MakerGen.cs:239
-                    Id = "ActivityDefinition.effectivePeriod",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_EffectivePeriod = new ElementDefinitionInfo
+                {
+                    Name = "Element_EffectivePeriod",
+                    Path= "ActivityDefinition.effectivePeriod",
+                    Id = "ActivityDefinition.effectivePeriod",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 22. ActivityDefinition.topic
-                this.Element_Topic = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Topic",                                                                                                 // MakerGen.cs:238
-                    Path= "ActivityDefinition.topic",                                                                                       // MakerGen.cs:239
-                    Id = "ActivityDefinition.topic",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Topic = new ElementDefinitionInfo
+                {
+                    Name = "Element_Topic",
+                    Path= "ActivityDefinition.topic",
+                    Id = "ActivityDefinition.topic",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 23. ActivityDefinition.author
-                this.Element_Author = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Author",                                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.author",                                                                                      // MakerGen.cs:239
-                    Id = "ActivityDefinition.author",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Author = new ElementDefinitionInfo
+                {
+                    Name = "Element_Author",
+                    Path= "ActivityDefinition.author",
+                    Id = "ActivityDefinition.author",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 24. ActivityDefinition.editor
-                this.Element_Editor = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Editor",                                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.editor",                                                                                      // MakerGen.cs:239
-                    Id = "ActivityDefinition.editor",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Editor = new ElementDefinitionInfo
+                {
+                    Name = "Element_Editor",
+                    Path= "ActivityDefinition.editor",
+                    Id = "ActivityDefinition.editor",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 25. ActivityDefinition.reviewer
-                this.Element_Reviewer = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Reviewer",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.reviewer",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.reviewer",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Reviewer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Reviewer",
+                    Path= "ActivityDefinition.reviewer",
+                    Id = "ActivityDefinition.reviewer",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 26. ActivityDefinition.endorser
-                this.Element_Endorser = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Endorser",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.endorser",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.endorser",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Endorser = new ElementDefinitionInfo
+                {
+                    Name = "Element_Endorser",
+                    Path= "ActivityDefinition.endorser",
+                    Id = "ActivityDefinition.endorser",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 27. ActivityDefinition.relatedArtifact
-                this.Element_RelatedArtifact = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_RelatedArtifact",                                                                                       // MakerGen.cs:238
-                    Path= "ActivityDefinition.relatedArtifact",                                                                             // MakerGen.cs:239
-                    Id = "ActivityDefinition.relatedArtifact",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact                                                              // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_RelatedArtifact = new ElementDefinitionInfo
+                {
+                    Name = "Element_RelatedArtifact",
+                    Path= "ActivityDefinition.relatedArtifact",
+                    Id = "ActivityDefinition.relatedArtifact",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_RelatedArtifact
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 28. ActivityDefinition.library
-                this.Element_Library = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Library",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.library",                                                                                     // MakerGen.cs:239
-                    Id = "ActivityDefinition.library",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Library"                                                           // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Library = new ElementDefinitionInfo
+                {
+                    Name = "Element_Library",
+                    Path= "ActivityDefinition.library",
+                    Id = "ActivityDefinition.library",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Library"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 29. ActivityDefinition.kind
-                this.Element_Kind = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Kind",                                                                                                  // MakerGen.cs:238
-                    Path= "ActivityDefinition.kind",                                                                                        // MakerGen.cs:239
-                    Id = "ActivityDefinition.kind",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Kind = new ElementDefinitionInfo
+                {
+                    Name = "Element_Kind",
+                    Path= "ActivityDefinition.kind",
+                    Id = "ActivityDefinition.kind",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 30. ActivityDefinition.profile
-                this.Element_Profile = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Profile",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.profile",                                                                                     // MakerGen.cs:239
-                    Id = "ActivityDefinition.profile",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"                                               // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Profile = new ElementDefinitionInfo
+                {
+                    Name = "Element_Profile",
+                    Path= "ActivityDefinition.profile",
+                    Id = "ActivityDefinition.profile",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 31. ActivityDefinition.code
-                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Code",                                                                                                  // MakerGen.cs:238
-                    Path= "ActivityDefinition.code",                                                                                        // MakerGen.cs:239
-                    Id = "ActivityDefinition.code",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Code = new ElementDefinitionInfo
+                {
+                    Name = "Element_Code",
+                    Path= "ActivityDefinition.code",
+                    Id = "ActivityDefinition.code",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 32. ActivityDefinition.intent
-                this.Element_Intent = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Intent",                                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.intent",                                                                                      // MakerGen.cs:239
-                    Id = "ActivityDefinition.intent",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Intent = new ElementDefinitionInfo
+                {
+                    Name = "Element_Intent",
+                    Path= "ActivityDefinition.intent",
+                    Id = "ActivityDefinition.intent",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 33. ActivityDefinition.priority
-                this.Element_Priority = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Priority",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.priority",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.priority",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Priority = new ElementDefinitionInfo
+                {
+                    Name = "Element_Priority",
+                    Path= "ActivityDefinition.priority",
+                    Id = "ActivityDefinition.priority",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 34. ActivityDefinition.doNotPerform
-                this.Element_DoNotPerform = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_DoNotPerform",                                                                                          // MakerGen.cs:238
-                    Path= "ActivityDefinition.doNotPerform",                                                                                // MakerGen.cs:239
-                    Id = "ActivityDefinition.doNotPerform",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_DoNotPerform = new ElementDefinitionInfo
+                {
+                    Name = "Element_DoNotPerform",
+                    Path= "ActivityDefinition.doNotPerform",
+                    Id = "ActivityDefinition.doNotPerform",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 35. ActivityDefinition.timing[x]
-                this.Element_Timing = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Timing",                                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.timing[x]",                                                                                   // MakerGen.cs:239
-                    Id = "ActivityDefinition.timing[x]",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Timing                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        },                                                                                                                  // MakerGen.cs:360
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Complex.Type_Age                                                                          // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        },                                                                                                                  // MakerGen.cs:360
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        },                                                                                                                  // MakerGen.cs:360
-                        new FhirKhit.Maker.Common.Complex.Type_Range                                                                        // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        },                                                                                                                  // MakerGen.cs:360
-                        new FhirKhit.Maker.Common.Complex.Type_Duration                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Timing = new ElementDefinitionInfo
+                {
+                    Name = "Element_Timing",
+                    Path= "ActivityDefinition.timing[x]",
+                    Id = "ActivityDefinition.timing[x]",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Timing
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Age
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Range
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Duration
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 36. ActivityDefinition.location
-                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Location",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.location",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.location",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Location = new ElementDefinitionInfo
+                {
+                    Name = "Element_Location",
+                    Path= "ActivityDefinition.location",
+                    Id = "ActivityDefinition.location",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Location"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 37. ActivityDefinition.participant
-                this.Element_Participant = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Participant",                                                                                           // MakerGen.cs:238
-                    Path= "ActivityDefinition.participant",                                                                                 // MakerGen.cs:239
-                    Id = "ActivityDefinition.participant",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Participant                                                                                                // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Participant = new ElementDefinitionInfo
+                {
+                    Name = "Element_Participant",
+                    Path= "ActivityDefinition.participant",
+                    Id = "ActivityDefinition.participant",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Participant
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 40. ActivityDefinition.product[x]
-                this.Element_Product = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Product",                                                                                               // MakerGen.cs:238
-                    Path= "ActivityDefinition.product[x]",                                                                                  // MakerGen.cs:239
-                    Id = "ActivityDefinition.product[x]",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Medication",                                                       // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Substance"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        },                                                                                                                  // MakerGen.cs:350
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Product = new ElementDefinitionInfo
+                {
+                    Name = "Element_Product",
+                    Path= "ActivityDefinition.product[x]",
+                    Id = "ActivityDefinition.product[x]",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Medication",
+                                "http://hl7.org/fhir/StructureDefinition/Substance"
+                            }
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 41. ActivityDefinition.quantity
-                this.Element_Quantity = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Quantity",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.quantity",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.quantity",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Quantity = new ElementDefinitionInfo
+                {
+                    Name = "Element_Quantity",
+                    Path= "ActivityDefinition.quantity",
+                    Id = "ActivityDefinition.quantity",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 42. ActivityDefinition.dosage
-                this.Element_Dosage = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Dosage",                                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.dosage",                                                                                      // MakerGen.cs:239
-                    Id = "ActivityDefinition.dosage",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Dosage                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Dosage = new ElementDefinitionInfo
+                {
+                    Name = "Element_Dosage",
+                    Path= "ActivityDefinition.dosage",
+                    Id = "ActivityDefinition.dosage",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Dosage
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 43. ActivityDefinition.bodySite
-                this.Element_BodySite = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_BodySite",                                                                                              // MakerGen.cs:238
-                    Path= "ActivityDefinition.bodySite",                                                                                    // MakerGen.cs:239
-                    Id = "ActivityDefinition.bodySite",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_BodySite = new ElementDefinitionInfo
+                {
+                    Name = "Element_BodySite",
+                    Path= "ActivityDefinition.bodySite",
+                    Id = "ActivityDefinition.bodySite",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 44. ActivityDefinition.specimenRequirement
-                this.Element_SpecimenRequirement = new ElementDefinitionInfo                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_SpecimenRequirement",                                                                                   // MakerGen.cs:238
-                    Path= "ActivityDefinition.specimenRequirement",                                                                         // MakerGen.cs:239
-                    Id = "ActivityDefinition.specimenRequirement",                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"                                                // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_SpecimenRequirement = new ElementDefinitionInfo
+                {
+                    Name = "Element_SpecimenRequirement",
+                    Path= "ActivityDefinition.specimenRequirement",
+                    Id = "ActivityDefinition.specimenRequirement",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 45. ActivityDefinition.observationRequirement
-                this.Element_ObservationRequirement = new ElementDefinitionInfo                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ObservationRequirement",                                                                                // MakerGen.cs:238
-                    Path= "ActivityDefinition.observationRequirement",                                                                      // MakerGen.cs:239
-                    Id = "ActivityDefinition.observationRequirement",                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ObservationRequirement = new ElementDefinitionInfo
+                {
+                    Name = "Element_ObservationRequirement",
+                    Path= "ActivityDefinition.observationRequirement",
+                    Id = "ActivityDefinition.observationRequirement",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 46. ActivityDefinition.observationResultRequirement
-                this.Element_ObservationResultRequirement = new ElementDefinitionInfo                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ObservationResultRequirement",                                                                          // MakerGen.cs:238
-                    Path= "ActivityDefinition.observationResultRequirement",                                                                // MakerGen.cs:239
-                    Id = "ActivityDefinition.observationResultRequirement",                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ObservationResultRequirement = new ElementDefinitionInfo
+                {
+                    Name = "Element_ObservationResultRequirement",
+                    Path= "ActivityDefinition.observationResultRequirement",
+                    Id = "ActivityDefinition.observationResultRequirement",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/ObservationDefinition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 47. ActivityDefinition.transform
-                this.Element_Transform = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Transform",                                                                                             // MakerGen.cs:238
-                    Path= "ActivityDefinition.transform",                                                                                   // MakerGen.cs:239
-                    Id = "ActivityDefinition.transform",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/StructureMap"                                                      // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Transform = new ElementDefinitionInfo
+                {
+                    Name = "Element_Transform",
+                    Path= "ActivityDefinition.transform",
+                    Id = "ActivityDefinition.transform",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/StructureMap"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 48. ActivityDefinition.dynamicValue
-                this.Element_DynamicValue = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_DynamicValue",                                                                                          // MakerGen.cs:238
-                    Path= "ActivityDefinition.dynamicValue",                                                                                // MakerGen.cs:239
-                    Id = "ActivityDefinition.dynamicValue",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_DynamicValue                                                                                               // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "ActivityDefinition";                                                                                               // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ActivityDefinition";                                                        // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_DynamicValue = new ElementDefinitionInfo
+                {
+                    Name = "Element_DynamicValue",
+                    Path= "ActivityDefinition.dynamicValue",
+                    Id = "ActivityDefinition.dynamicValue",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_DynamicValue
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "ActivityDefinition";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ActivityDefinition";
+        }
+    }
+}

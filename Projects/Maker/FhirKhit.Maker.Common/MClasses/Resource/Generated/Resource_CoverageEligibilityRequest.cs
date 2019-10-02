@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "CoverageEligibilityRequest",
@@ -612,775 +612,775 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'CoverageEligibilityRequest'
     /// </summary>
     // 0. CoverageEligibilityRequest
-    public class Resource_CoverageEligibilityRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource                               // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_CoverageEligibilityRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 12. CoverageEligibilityRequest.supportingInfo
-        public class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 13. CoverageEligibilityRequest.supportingInfo.sequence
-            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Sequence;
             // 14. CoverageEligibilityRequest.supportingInfo.information
-            public ElementDefinitionInfo Element_Information;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Information;
             // 15. CoverageEligibilityRequest.supportingInfo.appliesToAll
-            public ElementDefinitionInfo Element_AppliesToAll;                                                                              // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "CoverageEligibilityRequest.supportingInfo",                                                                     // MakerGen.cs:395
-                    ElementId = "CoverageEligibilityRequest.supportingInfo"                                                                 // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Information.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_AppliesToAll.Write(sDef);                                                                                           // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_SupportingInfo()                                                                                                    // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_AppliesToAll;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "CoverageEligibilityRequest.supportingInfo",
+                    ElementId = "CoverageEligibilityRequest.supportingInfo"
+                });
+                Element_Sequence.Write(sDef);
+                Element_Information.Write(sDef);
+                Element_AppliesToAll.Write(sDef);
+            }
+            
+            public Type_SupportingInfo()
+            {
+                {
                     // 13. CoverageEligibilityRequest.supportingInfo.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.supportingInfo.sequence",                                                         // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.supportingInfo.sequence",                                                          // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Sequence = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Sequence",
+                        Path= "CoverageEligibilityRequest.supportingInfo.sequence",
+                        Id = "CoverageEligibilityRequest.supportingInfo.sequence",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 14. CoverageEligibilityRequest.supportingInfo.information
-                    this.Element_Information = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Information",                                                                                       // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.supportingInfo.information",                                                      // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.supportingInfo.information",                                                       // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Information = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Information",
+                        Path= "CoverageEligibilityRequest.supportingInfo.information",
+                        Id = "CoverageEligibilityRequest.supportingInfo.information",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 15. CoverageEligibilityRequest.supportingInfo.appliesToAll
-                    this.Element_AppliesToAll = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_AppliesToAll",                                                                                      // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.supportingInfo.appliesToAll",                                                     // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.supportingInfo.appliesToAll",                                                      // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_AppliesToAll = new ElementDefinitionInfo
+                    {
+                        Name = "Element_AppliesToAll",
+                        Path= "CoverageEligibilityRequest.supportingInfo.appliesToAll",
+                        Id = "CoverageEligibilityRequest.supportingInfo.appliesToAll",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 16. CoverageEligibilityRequest.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 17. CoverageEligibilityRequest.insurance.focal
-            public ElementDefinitionInfo Element_Focal;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Focal;
             // 18. CoverageEligibilityRequest.insurance.coverage
-            public ElementDefinitionInfo Element_Coverage;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Coverage;
             // 19. CoverageEligibilityRequest.insurance.businessArrangement
-            public ElementDefinitionInfo Element_BusinessArrangement;                                                                       // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "CoverageEligibilityRequest.insurance",                                                                          // MakerGen.cs:395
-                    ElementId = "CoverageEligibilityRequest.insurance"                                                                      // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Focal.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_Coverage.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_BusinessArrangement.Write(sDef);                                                                                    // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Insurance()                                                                                                         // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_BusinessArrangement;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "CoverageEligibilityRequest.insurance",
+                    ElementId = "CoverageEligibilityRequest.insurance"
+                });
+                Element_Focal.Write(sDef);
+                Element_Coverage.Write(sDef);
+                Element_BusinessArrangement.Write(sDef);
+            }
+            
+            public Type_Insurance()
+            {
+                {
                     // 17. CoverageEligibilityRequest.insurance.focal
-                    this.Element_Focal = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Focal",                                                                                             // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.insurance.focal",                                                                 // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.insurance.focal",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Focal = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Focal",
+                        Path= "CoverageEligibilityRequest.insurance.focal",
+                        Id = "CoverageEligibilityRequest.insurance.focal",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 18. CoverageEligibilityRequest.insurance.coverage
-                    this.Element_Coverage = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Coverage",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.insurance.coverage",                                                              // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.insurance.coverage",                                                               // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Coverage"                                                      // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Coverage = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Coverage",
+                        Path= "CoverageEligibilityRequest.insurance.coverage",
+                        Id = "CoverageEligibilityRequest.insurance.coverage",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Coverage"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 19. CoverageEligibilityRequest.insurance.businessArrangement
-                    this.Element_BusinessArrangement = new ElementDefinitionInfo                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_BusinessArrangement",                                                                               // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.insurance.businessArrangement",                                                   // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.insurance.businessArrangement",                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_BusinessArrangement = new ElementDefinitionInfo
+                    {
+                        Name = "Element_BusinessArrangement",
+                        Path= "CoverageEligibilityRequest.insurance.businessArrangement",
+                        Id = "CoverageEligibilityRequest.insurance.businessArrangement",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 20. CoverageEligibilityRequest.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 29. CoverageEligibilityRequest.item.diagnosis
-            public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 30. CoverageEligibilityRequest.item.diagnosis.diagnosis[x]
-                public ElementDefinitionInfo Element_Diagnosis;                                                                             // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "CoverageEligibilityRequest.item.diagnosis",                                                                 // MakerGen.cs:395
-                        ElementId = "CoverageEligibilityRequest.item.diagnosis"                                                             // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Diagnosis.Write(sDef);                                                                                          // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Diagnosis()                                                                                                     // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Diagnosis;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "CoverageEligibilityRequest.item.diagnosis",
+                        ElementId = "CoverageEligibilityRequest.item.diagnosis"
+                    });
+                    Element_Diagnosis.Write(sDef);
+                }
+                
+                public Type_Diagnosis()
+                {
+                    {
                         // 30. CoverageEligibilityRequest.item.diagnosis.diagnosis[x]
-                        this.Element_Diagnosis = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Diagnosis",                                                                                     // MakerGen.cs:238
-                            Path= "CoverageEligibilityRequest.item.diagnosis.diagnosis[x]",                                                 // MakerGen.cs:239
-                            Id = "CoverageEligibilityRequest.item.diagnosis.diagnosis[x]",                                                  // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
-                                {                                                                                                           // MakerGen.cs:319
-                                },                                                                                                          // MakerGen.cs:322
-                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:346
-                                {                                                                                                           // MakerGen.cs:347
-                                    TargetProfile = new String[]                                                                            // MakerGen.cs:349
-                                    {                                                                                                       // CodeEditorExtensions.cs:28
-                                        "http://hl7.org/fhir/StructureDefinition/Condition"                                                 // MakerGen.cs:349
-                                    }                                                                                                       // CodeEditorExtensions.cs:34
-                                }                                                                                                           // MakerGen.cs:350
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Diagnosis = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Diagnosis",
+                            Path= "CoverageEligibilityRequest.item.diagnosis.diagnosis[x]",
+                            Id = "CoverageEligibilityRequest.item.diagnosis.diagnosis[x]",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                                {
+                                },
+                                new FhirKhit.Maker.Common.Complex.Type_Reference
+                                {
+                                    TargetProfile = new String[]
+                                    {
+                                        "http://hl7.org/fhir/StructureDefinition/Condition"
+                                    }
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 21. CoverageEligibilityRequest.item.supportingInfoSequence
-            public ElementDefinitionInfo Element_SupportingInfoSequence;                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_SupportingInfoSequence;
             // 22. CoverageEligibilityRequest.item.category
-            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Category;
             // 23. CoverageEligibilityRequest.item.productOrService
-            public ElementDefinitionInfo Element_ProductOrService;                                                                          // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ProductOrService;
             // 24. CoverageEligibilityRequest.item.modifier
-            public ElementDefinitionInfo Element_Modifier;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Modifier;
             // 25. CoverageEligibilityRequest.item.provider
-            public ElementDefinitionInfo Element_Provider;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Provider;
             // 26. CoverageEligibilityRequest.item.quantity
-            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Quantity;
             // 27. CoverageEligibilityRequest.item.unitPrice
-            public ElementDefinitionInfo Element_UnitPrice;                                                                                 // MakerGen.cs:219
+            public ElementDefinitionInfo Element_UnitPrice;
             // 28. CoverageEligibilityRequest.item.facility
-            public ElementDefinitionInfo Element_Facility;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Facility;
             // 29. CoverageEligibilityRequest.item.diagnosis
-            public ElementDefinitionInfo Element_Diagnosis;                                                                                 // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Diagnosis;
             // 31. CoverageEligibilityRequest.item.detail
-            public ElementDefinitionInfo Element_Detail;                                                                                    // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "CoverageEligibilityRequest.item",                                                                               // MakerGen.cs:395
-                    ElementId = "CoverageEligibilityRequest.item"                                                                           // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_SupportingInfoSequence.Write(sDef);                                                                                 // MakerGen.cs:223
-                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_ProductOrService.Write(sDef);                                                                                       // MakerGen.cs:223
-                Element_Modifier.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Provider.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_UnitPrice.Write(sDef);                                                                                              // MakerGen.cs:223
-                Element_Facility.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Diagnosis.Write(sDef);                                                                                              // MakerGen.cs:223
-                Element_Detail.Write(sDef);                                                                                                 // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Item()                                                                                                              // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Detail;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "CoverageEligibilityRequest.item",
+                    ElementId = "CoverageEligibilityRequest.item"
+                });
+                Element_SupportingInfoSequence.Write(sDef);
+                Element_Category.Write(sDef);
+                Element_ProductOrService.Write(sDef);
+                Element_Modifier.Write(sDef);
+                Element_Provider.Write(sDef);
+                Element_Quantity.Write(sDef);
+                Element_UnitPrice.Write(sDef);
+                Element_Facility.Write(sDef);
+                Element_Diagnosis.Write(sDef);
+                Element_Detail.Write(sDef);
+            }
+            
+            public Type_Item()
+            {
+                {
                     // 21. CoverageEligibilityRequest.item.supportingInfoSequence
-                    this.Element_SupportingInfoSequence = new ElementDefinitionInfo                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_SupportingInfoSequence",                                                                            // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.supportingInfoSequence",                                                     // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.supportingInfoSequence",                                                      // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                       // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_SupportingInfoSequence = new ElementDefinitionInfo
+                    {
+                        Name = "Element_SupportingInfoSequence",
+                        Path= "CoverageEligibilityRequest.item.supportingInfoSequence",
+                        Id = "CoverageEligibilityRequest.item.supportingInfoSequence",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 22. CoverageEligibilityRequest.item.category
-                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Category",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.category",                                                                   // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.category",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Category = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Category",
+                        Path= "CoverageEligibilityRequest.item.category",
+                        Id = "CoverageEligibilityRequest.item.category",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 23. CoverageEligibilityRequest.item.productOrService
-                    this.Element_ProductOrService = new ElementDefinitionInfo                                                               // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ProductOrService",                                                                                  // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.productOrService",                                                           // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.productOrService",                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ProductOrService = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ProductOrService",
+                        Path= "CoverageEligibilityRequest.item.productOrService",
+                        Id = "CoverageEligibilityRequest.item.productOrService",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 24. CoverageEligibilityRequest.item.modifier
-                    this.Element_Modifier = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Modifier",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.modifier",                                                                   // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.modifier",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Modifier = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Modifier",
+                        Path= "CoverageEligibilityRequest.item.modifier",
+                        Id = "CoverageEligibilityRequest.item.modifier",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 25. CoverageEligibilityRequest.item.provider
-                    this.Element_Provider = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Provider",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.provider",                                                                   // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.provider",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                              // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Provider = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Provider",
+                        Path= "CoverageEligibilityRequest.item.provider",
+                        Id = "CoverageEligibilityRequest.item.provider",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 26. CoverageEligibilityRequest.item.quantity
-                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.quantity",                                                                   // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.quantity",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Quantity = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Quantity",
+                        Path= "CoverageEligibilityRequest.item.quantity",
+                        Id = "CoverageEligibilityRequest.item.quantity",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 27. CoverageEligibilityRequest.item.unitPrice
-                    this.Element_UnitPrice = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_UnitPrice",                                                                                         // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.unitPrice",                                                                  // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.unitPrice",                                                                   // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Money                                                                    // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_UnitPrice = new ElementDefinitionInfo
+                    {
+                        Name = "Element_UnitPrice",
+                        Path= "CoverageEligibilityRequest.item.unitPrice",
+                        Id = "CoverageEligibilityRequest.item.unitPrice",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Money
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 28. CoverageEligibilityRequest.item.facility
-                    this.Element_Facility = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Facility",                                                                                          // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.facility",                                                                   // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.facility",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location",                                                     // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Facility = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Facility",
+                        Path= "CoverageEligibilityRequest.item.facility",
+                        Id = "CoverageEligibilityRequest.item.facility",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Location",
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 29. CoverageEligibilityRequest.item.diagnosis
-                    this.Element_Diagnosis = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Diagnosis",                                                                                         // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.diagnosis",                                                                  // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.diagnosis",                                                                   // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Diagnosis                                                                                              // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Diagnosis = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Diagnosis",
+                        Path= "CoverageEligibilityRequest.item.diagnosis",
+                        Id = "CoverageEligibilityRequest.item.diagnosis",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Diagnosis
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 31. CoverageEligibilityRequest.item.detail
-                    this.Element_Detail = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Detail",                                                                                            // MakerGen.cs:238
-                        Path= "CoverageEligibilityRequest.item.detail",                                                                     // MakerGen.cs:239
-                        Id = "CoverageEligibilityRequest.item.detail",                                                                      // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Detail = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Detail",
+                        Path= "CoverageEligibilityRequest.item.detail",
+                        Id = "CoverageEligibilityRequest.item.detail",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. CoverageEligibilityRequest.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. CoverageEligibilityRequest.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 3. CoverageEligibilityRequest.priority
-        public ElementDefinitionInfo Element_Priority;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Priority;
         // 4. CoverageEligibilityRequest.purpose
-        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Purpose;
         // 5. CoverageEligibilityRequest.patient
-        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Patient;
         // 6. CoverageEligibilityRequest.serviced[x]
-        public ElementDefinitionInfo Element_Serviced;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Serviced;
         // 7. CoverageEligibilityRequest.created
-        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Created;
         // 8. CoverageEligibilityRequest.enterer
-        public ElementDefinitionInfo Element_Enterer;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Enterer;
         // 9. CoverageEligibilityRequest.provider
-        public ElementDefinitionInfo Element_Provider;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Provider;
         // 10. CoverageEligibilityRequest.insurer
-        public ElementDefinitionInfo Element_Insurer;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Insurer;
         // 11. CoverageEligibilityRequest.facility
-        public ElementDefinitionInfo Element_Facility;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Facility;
         // 12. CoverageEligibilityRequest.supportingInfo
-        public ElementDefinitionInfo Element_SupportingInfo;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_SupportingInfo;
         // 16. CoverageEligibilityRequest.insurance
-        public ElementDefinitionInfo Element_Insurance;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Insurance;
         // 20. CoverageEligibilityRequest.item
-        public ElementDefinitionInfo Element_Item;                                                                                          // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "CoverageEligibilityRequest",                                                                                        // MakerGen.cs:395
-                ElementId = "CoverageEligibilityRequest"                                                                                    // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Priority.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Serviced.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Enterer.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Provider.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Insurer.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Facility.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_SupportingInfo.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_Insurance.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Item.Write(sDef);                                                                                                       // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_CoverageEligibilityRequest()                                                                                        // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Item;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "CoverageEligibilityRequest",
+                ElementId = "CoverageEligibilityRequest"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Priority.Write(sDef);
+            Element_Purpose.Write(sDef);
+            Element_Patient.Write(sDef);
+            Element_Serviced.Write(sDef);
+            Element_Created.Write(sDef);
+            Element_Enterer.Write(sDef);
+            Element_Provider.Write(sDef);
+            Element_Insurer.Write(sDef);
+            Element_Facility.Write(sDef);
+            Element_SupportingInfo.Write(sDef);
+            Element_Insurance.Write(sDef);
+            Element_Item.Write(sDef);
+        }
+        
+        public Resource_CoverageEligibilityRequest()
+        {
+            {
                 // 1. CoverageEligibilityRequest.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.identifier",                                                                          // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.identifier",                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "CoverageEligibilityRequest.identifier",
+                    Id = "CoverageEligibilityRequest.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. CoverageEligibilityRequest.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.status",                                                                              // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.status",                                                                               // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "CoverageEligibilityRequest.status",
+                    Id = "CoverageEligibilityRequest.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. CoverageEligibilityRequest.priority
-                this.Element_Priority = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Priority",                                                                                              // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.priority",                                                                            // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.priority",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Priority = new ElementDefinitionInfo
+                {
+                    Name = "Element_Priority",
+                    Path= "CoverageEligibilityRequest.priority",
+                    Id = "CoverageEligibilityRequest.priority",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. CoverageEligibilityRequest.purpose
-                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.purpose",                                                                             // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.purpose",                                                                              // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Purpose = new ElementDefinitionInfo
+                {
+                    Name = "Element_Purpose",
+                    Path= "CoverageEligibilityRequest.purpose",
+                    Id = "CoverageEligibilityRequest.purpose",
+                    Min = 1,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. CoverageEligibilityRequest.patient
-                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Patient",                                                                                               // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.patient",                                                                             // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.patient",                                                                              // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Patient = new ElementDefinitionInfo
+                {
+                    Name = "Element_Patient",
+                    Path= "CoverageEligibilityRequest.patient",
+                    Id = "CoverageEligibilityRequest.patient",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. CoverageEligibilityRequest.serviced[x]
-                this.Element_Serviced = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Serviced",                                                                                              // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.serviced[x]",                                                                         // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.serviced[x]",                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Serviced = new ElementDefinitionInfo
+                {
+                    Name = "Element_Serviced",
+                    Path= "CoverageEligibilityRequest.serviced[x]",
+                    Id = "CoverageEligibilityRequest.serviced[x]",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. CoverageEligibilityRequest.created
-                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Created",                                                                                               // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.created",                                                                             // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.created",                                                                              // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Created = new ElementDefinitionInfo
+                {
+                    Name = "Element_Created",
+                    Path= "CoverageEligibilityRequest.created",
+                    Id = "CoverageEligibilityRequest.created",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. CoverageEligibilityRequest.enterer
-                this.Element_Enterer = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Enterer",                                                                                               // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.enterer",                                                                             // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.enterer",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Enterer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Enterer",
+                    Path= "CoverageEligibilityRequest.enterer",
+                    Id = "CoverageEligibilityRequest.enterer",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 9. CoverageEligibilityRequest.provider
-                this.Element_Provider = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Provider",                                                                                              // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.provider",                                                                            // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.provider",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Provider = new ElementDefinitionInfo
+                {
+                    Name = "Element_Provider",
+                    Path= "CoverageEligibilityRequest.provider",
+                    Id = "CoverageEligibilityRequest.provider",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 10. CoverageEligibilityRequest.insurer
-                this.Element_Insurer = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Insurer",                                                                                               // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.insurer",                                                                             // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.insurer",                                                                              // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Insurer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Insurer",
+                    Path= "CoverageEligibilityRequest.insurer",
+                    Id = "CoverageEligibilityRequest.insurer",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Organization"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. CoverageEligibilityRequest.facility
-                this.Element_Facility = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Facility",                                                                                              // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.facility",                                                                            // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.facility",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Facility = new ElementDefinitionInfo
+                {
+                    Name = "Element_Facility",
+                    Path= "CoverageEligibilityRequest.facility",
+                    Id = "CoverageEligibilityRequest.facility",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Location"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 12. CoverageEligibilityRequest.supportingInfo
-                this.Element_SupportingInfo = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_SupportingInfo",                                                                                        // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.supportingInfo",                                                                      // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.supportingInfo",                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_SupportingInfo                                                                                             // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_SupportingInfo = new ElementDefinitionInfo
+                {
+                    Name = "Element_SupportingInfo",
+                    Path= "CoverageEligibilityRequest.supportingInfo",
+                    Id = "CoverageEligibilityRequest.supportingInfo",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_SupportingInfo
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 16. CoverageEligibilityRequest.insurance
-                this.Element_Insurance = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Insurance",                                                                                             // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.insurance",                                                                           // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.insurance",                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Insurance                                                                                                  // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Insurance = new ElementDefinitionInfo
+                {
+                    Name = "Element_Insurance",
+                    Path= "CoverageEligibilityRequest.insurance",
+                    Id = "CoverageEligibilityRequest.insurance",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Insurance
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 20. CoverageEligibilityRequest.item
-                this.Element_Item = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Item",                                                                                                  // MakerGen.cs:238
-                    Path= "CoverageEligibilityRequest.item",                                                                                // MakerGen.cs:239
-                    Id = "CoverageEligibilityRequest.item",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Item                                                                                                       // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "CoverageEligibilityRequest";                                                                                       // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest";                                                // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Item = new ElementDefinitionInfo
+                {
+                    Name = "Element_Item",
+                    Path= "CoverageEligibilityRequest.item",
+                    Id = "CoverageEligibilityRequest.item",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Item
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "CoverageEligibilityRequest";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityRequest";
+        }
+    }
+}

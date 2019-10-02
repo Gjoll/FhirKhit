@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:498
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:499
-using System.IO;                                                                                                                            // MakerGen.cs:500
-using System.Linq;                                                                                                                          // MakerGen.cs:501
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:502
-                                                                                                                                            // MakerGen.cs:503
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:504
-{                                                                                                                                           // MakerGen.cs:505
-    #region Json                                                                                                                            // MakerGen.cs:506
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Complex
+{
+    #region Json
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -276,226 +276,226 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:510
+    #endregion
     /// <summary>
     /// Fhir complex 'Address'
     /// </summary>
     // 0. Address
-    public class Type_Address : FhirKhit.Maker.Common.Complex.ComplexBase                                                                   // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Type_Address : FhirKhit.Maker.Common.Complex.ComplexBase
+    {
         // 1. Address.use
-        public ElementDefinitionInfo Element_Use;                                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Use;
         // 2. Address.type
-        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Type;
         // 3. Address.text
-        public ElementDefinitionInfo Element_Text;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Text;
         // 4. Address.line
-        public ElementDefinitionInfo Element_Line;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Line;
         // 5. Address.city
-        public ElementDefinitionInfo Element_City;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_City;
         // 6. Address.district
-        public ElementDefinitionInfo Element_District;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_District;
         // 7. Address.state
-        public ElementDefinitionInfo Element_State;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_State;
         // 8. Address.postalCode
-        public ElementDefinitionInfo Element_PostalCode;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_PostalCode;
         // 9. Address.country
-        public ElementDefinitionInfo Element_Country;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Country;
         // 10. Address.period
-        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "Address",                                                                                                           // MakerGen.cs:395
-                ElementId = "Address"                                                                                                       // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Use.Write(sDef);                                                                                                        // MakerGen.cs:223
-            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Text.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Line.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_City.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_District.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_State.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_PostalCode.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Country.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Type_Address()                                                                                                               // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Period;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "Address",
+                ElementId = "Address"
+            });
+            Element_Use.Write(sDef);
+            Element_Type.Write(sDef);
+            Element_Text.Write(sDef);
+            Element_Line.Write(sDef);
+            Element_City.Write(sDef);
+            Element_District.Write(sDef);
+            Element_State.Write(sDef);
+            Element_PostalCode.Write(sDef);
+            Element_Country.Write(sDef);
+            Element_Period.Write(sDef);
+        }
+        
+        public Type_Address()
+        {
+            {
                 // 1. Address.use
-                this.Element_Use = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Use",                                                                                                   // MakerGen.cs:238
-                    Path= "Address.use",                                                                                                    // MakerGen.cs:239
-                    Id = "Address.use",                                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Use = new ElementDefinitionInfo
+                {
+                    Name = "Element_Use",
+                    Path= "Address.use",
+                    Id = "Address.use",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. Address.type
-                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Type",                                                                                                  // MakerGen.cs:238
-                    Path= "Address.type",                                                                                                   // MakerGen.cs:239
-                    Id = "Address.type",                                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Type = new ElementDefinitionInfo
+                {
+                    Name = "Element_Type",
+                    Path= "Address.type",
+                    Id = "Address.type",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. Address.text
-                this.Element_Text = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Text",                                                                                                  // MakerGen.cs:238
-                    Path= "Address.text",                                                                                                   // MakerGen.cs:239
-                    Id = "Address.text",                                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Text = new ElementDefinitionInfo
+                {
+                    Name = "Element_Text",
+                    Path= "Address.text",
+                    Id = "Address.text",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. Address.line
-                this.Element_Line = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Line",                                                                                                  // MakerGen.cs:238
-                    Path= "Address.line",                                                                                                   // MakerGen.cs:239
-                    Id = "Address.line",                                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Line = new ElementDefinitionInfo
+                {
+                    Name = "Element_Line",
+                    Path= "Address.line",
+                    Id = "Address.line",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. Address.city
-                this.Element_City = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_City",                                                                                                  // MakerGen.cs:238
-                    Path= "Address.city",                                                                                                   // MakerGen.cs:239
-                    Id = "Address.city",                                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_City = new ElementDefinitionInfo
+                {
+                    Name = "Element_City",
+                    Path= "Address.city",
+                    Id = "Address.city",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. Address.district
-                this.Element_District = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_District",                                                                                              // MakerGen.cs:238
-                    Path= "Address.district",                                                                                               // MakerGen.cs:239
-                    Id = "Address.district",                                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_District = new ElementDefinitionInfo
+                {
+                    Name = "Element_District",
+                    Path= "Address.district",
+                    Id = "Address.district",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. Address.state
-                this.Element_State = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_State",                                                                                                 // MakerGen.cs:238
-                    Path= "Address.state",                                                                                                  // MakerGen.cs:239
-                    Id = "Address.state",                                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_State = new ElementDefinitionInfo
+                {
+                    Name = "Element_State",
+                    Path= "Address.state",
+                    Id = "Address.state",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. Address.postalCode
-                this.Element_PostalCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_PostalCode",                                                                                            // MakerGen.cs:238
-                    Path= "Address.postalCode",                                                                                             // MakerGen.cs:239
-                    Id = "Address.postalCode",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_PostalCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_PostalCode",
+                    Path= "Address.postalCode",
+                    Id = "Address.postalCode",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. Address.country
-                this.Element_Country = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Country",                                                                                               // MakerGen.cs:238
-                    Path= "Address.country",                                                                                                // MakerGen.cs:239
-                    Id = "Address.country",                                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Country = new ElementDefinitionInfo
+                {
+                    Name = "Element_Country",
+                    Path= "Address.country",
+                    Id = "Address.country",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. Address.period
-                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Period",                                                                                                // MakerGen.cs:238
-                    Path= "Address.period",                                                                                                 // MakerGen.cs:239
-                    Id = "Address.period",                                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:515
+                this.Element_Period = new ElementDefinitionInfo
+                {
+                    Name = "Element_Period",
+                    Path= "Address.period",
+                    Id = "Address.period",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        }
+                    }
+                };
+            }
+        }
+    }
+}

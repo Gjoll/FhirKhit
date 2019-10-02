@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "Practitioner",
@@ -292,330 +292,330 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'Practitioner'
     /// </summary>
     // 0. Practitioner
-    public class Resource_Practitioner : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                             // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_Practitioner : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 9. Practitioner.qualification
-        public class Type_Qualification : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Qualification : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 10. Practitioner.qualification.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Identifier;
             // 11. Practitioner.qualification.code
-            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Code;
             // 12. Practitioner.qualification.period
-            public ElementDefinitionInfo Element_Period;                                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Period;
             // 13. Practitioner.qualification.issuer
-            public ElementDefinitionInfo Element_Issuer;                                                                                    // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "Practitioner.qualification",                                                                                    // MakerGen.cs:395
-                    ElementId = "Practitioner.qualification"                                                                                // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:223
-                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Period.Write(sDef);                                                                                                 // MakerGen.cs:223
-                Element_Issuer.Write(sDef);                                                                                                 // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Qualification()                                                                                                     // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Issuer;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "Practitioner.qualification",
+                    ElementId = "Practitioner.qualification"
+                });
+                Element_Identifier.Write(sDef);
+                Element_Code.Write(sDef);
+                Element_Period.Write(sDef);
+                Element_Issuer.Write(sDef);
+            }
+            
+            public Type_Qualification()
+            {
+                {
                     // 10. Practitioner.qualification.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:238
-                        Path= "Practitioner.qualification.identifier",                                                                      // MakerGen.cs:239
-                        Id = "Practitioner.qualification.identifier",                                                                       // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Identifier = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Identifier",
+                        Path= "Practitioner.qualification.identifier",
+                        Id = "Practitioner.qualification.identifier",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 11. Practitioner.qualification.code
-                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Code",                                                                                              // MakerGen.cs:238
-                        Path= "Practitioner.qualification.code",                                                                            // MakerGen.cs:239
-                        Id = "Practitioner.qualification.code",                                                                             // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Code = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Code",
+                        Path= "Practitioner.qualification.code",
+                        Id = "Practitioner.qualification.code",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 12. Practitioner.qualification.period
-                    this.Element_Period = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Period",                                                                                            // MakerGen.cs:238
-                        Path= "Practitioner.qualification.period",                                                                          // MakerGen.cs:239
-                        Id = "Practitioner.qualification.period",                                                                           // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Period                                                                   // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Period = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Period",
+                        Path= "Practitioner.qualification.period",
+                        Id = "Practitioner.qualification.period",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Period
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 13. Practitioner.qualification.issuer
-                    this.Element_Issuer = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Issuer",                                                                                            // MakerGen.cs:238
-                        Path= "Practitioner.qualification.issuer",                                                                          // MakerGen.cs:239
-                        Id = "Practitioner.qualification.issuer",                                                                           // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Issuer = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Issuer",
+                        Path= "Practitioner.qualification.issuer",
+                        Id = "Practitioner.qualification.issuer",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. Practitioner.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. Practitioner.active
-        public ElementDefinitionInfo Element_Active;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Active;
         // 3. Practitioner.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Name;
         // 4. Practitioner.telecom
-        public ElementDefinitionInfo Element_Telecom;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Telecom;
         // 5. Practitioner.address
-        public ElementDefinitionInfo Element_Address;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Address;
         // 6. Practitioner.gender
-        public ElementDefinitionInfo Element_Gender;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Gender;
         // 7. Practitioner.birthDate
-        public ElementDefinitionInfo Element_BirthDate;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_BirthDate;
         // 8. Practitioner.photo
-        public ElementDefinitionInfo Element_Photo;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Photo;
         // 9. Practitioner.qualification
-        public ElementDefinitionInfo Element_Qualification;                                                                                 // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Qualification;
         // 14. Practitioner.communication
-        public ElementDefinitionInfo Element_Communication;                                                                                 // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "Practitioner",                                                                                                      // MakerGen.cs:395
-                ElementId = "Practitioner"                                                                                                  // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Active.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Telecom.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Address.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Gender.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_BirthDate.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Photo.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Qualification.Write(sDef);                                                                                              // MakerGen.cs:223
-            Element_Communication.Write(sDef);                                                                                              // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_Practitioner()                                                                                                      // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Communication;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "Practitioner",
+                ElementId = "Practitioner"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Active.Write(sDef);
+            Element_Name.Write(sDef);
+            Element_Telecom.Write(sDef);
+            Element_Address.Write(sDef);
+            Element_Gender.Write(sDef);
+            Element_BirthDate.Write(sDef);
+            Element_Photo.Write(sDef);
+            Element_Qualification.Write(sDef);
+            Element_Communication.Write(sDef);
+        }
+        
+        public Resource_Practitioner()
+        {
+            {
                 // 1. Practitioner.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "Practitioner.identifier",                                                                                        // MakerGen.cs:239
-                    Id = "Practitioner.identifier",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "Practitioner.identifier",
+                    Id = "Practitioner.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. Practitioner.active
-                this.Element_Active = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Active",                                                                                                // MakerGen.cs:238
-                    Path= "Practitioner.active",                                                                                            // MakerGen.cs:239
-                    Id = "Practitioner.active",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Active = new ElementDefinitionInfo
+                {
+                    Name = "Element_Active",
+                    Path= "Practitioner.active",
+                    Id = "Practitioner.active",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. Practitioner.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
-                    Path= "Practitioner.name",                                                                                              // MakerGen.cs:239
-                    Id = "Practitioner.name",                                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_HumanName                                                                    // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Name = new ElementDefinitionInfo
+                {
+                    Name = "Element_Name",
+                    Path= "Practitioner.name",
+                    Id = "Practitioner.name",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_HumanName
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. Practitioner.telecom
-                this.Element_Telecom = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Telecom",                                                                                               // MakerGen.cs:238
-                    Path= "Practitioner.telecom",                                                                                           // MakerGen.cs:239
-                    Id = "Practitioner.telecom",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                                 // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Telecom = new ElementDefinitionInfo
+                {
+                    Name = "Element_Telecom",
+                    Path= "Practitioner.telecom",
+                    Id = "Practitioner.telecom",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactPoint
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. Practitioner.address
-                this.Element_Address = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Address",                                                                                               // MakerGen.cs:238
-                    Path= "Practitioner.address",                                                                                           // MakerGen.cs:239
-                    Id = "Practitioner.address",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Address                                                                      // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Address = new ElementDefinitionInfo
+                {
+                    Name = "Element_Address",
+                    Path= "Practitioner.address",
+                    Id = "Practitioner.address",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Address
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. Practitioner.gender
-                this.Element_Gender = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Gender",                                                                                                // MakerGen.cs:238
-                    Path= "Practitioner.gender",                                                                                            // MakerGen.cs:239
-                    Id = "Practitioner.gender",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Gender = new ElementDefinitionInfo
+                {
+                    Name = "Element_Gender",
+                    Path= "Practitioner.gender",
+                    Id = "Practitioner.gender",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. Practitioner.birthDate
-                this.Element_BirthDate = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_BirthDate",                                                                                             // MakerGen.cs:238
-                    Path= "Practitioner.birthDate",                                                                                         // MakerGen.cs:239
-                    Id = "Practitioner.birthDate",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_BirthDate = new ElementDefinitionInfo
+                {
+                    Name = "Element_BirthDate",
+                    Path= "Practitioner.birthDate",
+                    Id = "Practitioner.birthDate",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. Practitioner.photo
-                this.Element_Photo = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Photo",                                                                                                 // MakerGen.cs:238
-                    Path= "Practitioner.photo",                                                                                             // MakerGen.cs:239
-                    Id = "Practitioner.photo",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Photo = new ElementDefinitionInfo
+                {
+                    Name = "Element_Photo",
+                    Path= "Practitioner.photo",
+                    Id = "Practitioner.photo",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. Practitioner.qualification
-                this.Element_Qualification = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Qualification",                                                                                         // MakerGen.cs:238
-                    Path= "Practitioner.qualification",                                                                                     // MakerGen.cs:239
-                    Id = "Practitioner.qualification",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Qualification                                                                                              // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Qualification = new ElementDefinitionInfo
+                {
+                    Name = "Element_Qualification",
+                    Path= "Practitioner.qualification",
+                    Id = "Practitioner.qualification",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Qualification
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 14. Practitioner.communication
-                this.Element_Communication = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Communication",                                                                                         // MakerGen.cs:238
-                    Path= "Practitioner.communication",                                                                                     // MakerGen.cs:239
-                    Id = "Practitioner.communication",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "Practitioner";                                                                                                     // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Practitioner";                                                              // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Communication = new ElementDefinitionInfo
+                {
+                    Name = "Element_Communication",
+                    Path= "Practitioner.communication",
+                    Id = "Practitioner.communication",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "Practitioner";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Practitioner";
+        }
+    }
+}

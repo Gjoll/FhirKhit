@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "ClinicalImpression",
@@ -498,614 +498,614 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'ClinicalImpression'
     /// </summary>
     // 0. ClinicalImpression
-    public class Resource_ClinicalImpression : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                       // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_ClinicalImpression : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 13. ClinicalImpression.investigation
-        public class Type_Investigation : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Investigation : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 14. ClinicalImpression.investigation.code
-            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Code;
             // 15. ClinicalImpression.investigation.item
-            public ElementDefinitionInfo Element_Item;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ClinicalImpression.investigation",                                                                              // MakerGen.cs:395
-                    ElementId = "ClinicalImpression.investigation"                                                                          // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Item.Write(sDef);                                                                                                   // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Investigation()                                                                                                     // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Item;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ClinicalImpression.investigation",
+                    ElementId = "ClinicalImpression.investigation"
+                });
+                Element_Code.Write(sDef);
+                Element_Item.Write(sDef);
+            }
+            
+            public Type_Investigation()
+            {
+                {
                     // 14. ClinicalImpression.investigation.code
-                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Code",                                                                                              // MakerGen.cs:238
-                        Path= "ClinicalImpression.investigation.code",                                                                      // MakerGen.cs:239
-                        Id = "ClinicalImpression.investigation.code",                                                                       // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Code = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Code",
+                        Path= "ClinicalImpression.investigation.code",
+                        Id = "ClinicalImpression.investigation.code",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 15. ClinicalImpression.investigation.item
-                    this.Element_Item = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Item",                                                                                              // MakerGen.cs:238
-                        Path= "ClinicalImpression.investigation.item",                                                                      // MakerGen.cs:239
-                        Id = "ClinicalImpression.investigation.item",                                                                       // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",                                        // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",                                          // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                             // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/RiskAssessment",                                               // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/ImagingStudy",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Media"                                                         // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Item = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Item",
+                        Path= "ClinicalImpression.investigation.item",
+                        Id = "ClinicalImpression.investigation.item",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Observation",
+                                    "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+                                    "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
+                                    "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                                    "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
+                                    "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+                                    "http://hl7.org/fhir/StructureDefinition/Media"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 18. ClinicalImpression.finding
-        public class Type_Finding : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Finding : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 19. ClinicalImpression.finding.itemCodeableConcept
-            public ElementDefinitionInfo Element_ItemCodeableConcept;                                                                       // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ItemCodeableConcept;
             // 20. ClinicalImpression.finding.itemReference
-            public ElementDefinitionInfo Element_ItemReference;                                                                             // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ItemReference;
             // 21. ClinicalImpression.finding.basis
-            public ElementDefinitionInfo Element_Basis;                                                                                     // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ClinicalImpression.finding",                                                                                    // MakerGen.cs:395
-                    ElementId = "ClinicalImpression.finding"                                                                                // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_ItemCodeableConcept.Write(sDef);                                                                                    // MakerGen.cs:223
-                Element_ItemReference.Write(sDef);                                                                                          // MakerGen.cs:223
-                Element_Basis.Write(sDef);                                                                                                  // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Finding()                                                                                                           // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Basis;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ClinicalImpression.finding",
+                    ElementId = "ClinicalImpression.finding"
+                });
+                Element_ItemCodeableConcept.Write(sDef);
+                Element_ItemReference.Write(sDef);
+                Element_Basis.Write(sDef);
+            }
+            
+            public Type_Finding()
+            {
+                {
                     // 19. ClinicalImpression.finding.itemCodeableConcept
-                    this.Element_ItemCodeableConcept = new ElementDefinitionInfo                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ItemCodeableConcept",                                                                               // MakerGen.cs:238
-                        Path= "ClinicalImpression.finding.itemCodeableConcept",                                                             // MakerGen.cs:239
-                        Id = "ClinicalImpression.finding.itemCodeableConcept",                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ItemCodeableConcept = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ItemCodeableConcept",
+                        Path= "ClinicalImpression.finding.itemCodeableConcept",
+                        Id = "ClinicalImpression.finding.itemCodeableConcept",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 20. ClinicalImpression.finding.itemReference
-                    this.Element_ItemReference = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ItemReference",                                                                                     // MakerGen.cs:238
-                        Path= "ClinicalImpression.finding.itemReference",                                                                   // MakerGen.cs:239
-                        Id = "ClinicalImpression.finding.itemReference",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Condition",                                                    // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Observation",                                                  // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Media"                                                         // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ItemReference = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ItemReference",
+                        Path= "ClinicalImpression.finding.itemReference",
+                        Id = "ClinicalImpression.finding.itemReference",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Condition",
+                                    "http://hl7.org/fhir/StructureDefinition/Observation",
+                                    "http://hl7.org/fhir/StructureDefinition/Media"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 21. ClinicalImpression.finding.basis
-                    this.Element_Basis = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Basis",                                                                                             // MakerGen.cs:238
-                        Path= "ClinicalImpression.finding.basis",                                                                           // MakerGen.cs:239
-                        Id = "ClinicalImpression.finding.basis",                                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Basis = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Basis",
+                        Path= "ClinicalImpression.finding.basis",
+                        Id = "ClinicalImpression.finding.basis",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. ClinicalImpression.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. ClinicalImpression.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 3. ClinicalImpression.statusReason
-        public ElementDefinitionInfo Element_StatusReason;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_StatusReason;
         // 4. ClinicalImpression.code
-        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Code;
         // 5. ClinicalImpression.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Description;
         // 6. ClinicalImpression.subject
-        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Subject;
         // 7. ClinicalImpression.encounter
-        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Encounter;
         // 8. ClinicalImpression.effective[x]
-        public ElementDefinitionInfo Element_Effective;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Effective;
         // 9. ClinicalImpression.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Date;
         // 10. ClinicalImpression.assessor
-        public ElementDefinitionInfo Element_Assessor;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Assessor;
         // 11. ClinicalImpression.previous
-        public ElementDefinitionInfo Element_Previous;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Previous;
         // 12. ClinicalImpression.problem
-        public ElementDefinitionInfo Element_Problem;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Problem;
         // 13. ClinicalImpression.investigation
-        public ElementDefinitionInfo Element_Investigation;                                                                                 // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Investigation;
         // 16. ClinicalImpression.protocol
-        public ElementDefinitionInfo Element_Protocol;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Protocol;
         // 17. ClinicalImpression.summary
-        public ElementDefinitionInfo Element_Summary;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Summary;
         // 18. ClinicalImpression.finding
-        public ElementDefinitionInfo Element_Finding;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Finding;
         // 22. ClinicalImpression.prognosisCodeableConcept
-        public ElementDefinitionInfo Element_PrognosisCodeableConcept;                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_PrognosisCodeableConcept;
         // 23. ClinicalImpression.prognosisReference
-        public ElementDefinitionInfo Element_PrognosisReference;                                                                            // MakerGen.cs:219
+        public ElementDefinitionInfo Element_PrognosisReference;
         // 24. ClinicalImpression.supportingInfo
-        public ElementDefinitionInfo Element_SupportingInfo;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_SupportingInfo;
         // 25. ClinicalImpression.note
-        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "ClinicalImpression",                                                                                                // MakerGen.cs:395
-                ElementId = "ClinicalImpression"                                                                                            // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_StatusReason.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Effective.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Assessor.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Previous.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Problem.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Investigation.Write(sDef);                                                                                              // MakerGen.cs:223
-            Element_Protocol.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Summary.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Finding.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_PrognosisCodeableConcept.Write(sDef);                                                                                   // MakerGen.cs:223
-            Element_PrognosisReference.Write(sDef);                                                                                         // MakerGen.cs:223
-            Element_SupportingInfo.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_ClinicalImpression()                                                                                                // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Note;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "ClinicalImpression",
+                ElementId = "ClinicalImpression"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_StatusReason.Write(sDef);
+            Element_Code.Write(sDef);
+            Element_Description.Write(sDef);
+            Element_Subject.Write(sDef);
+            Element_Encounter.Write(sDef);
+            Element_Effective.Write(sDef);
+            Element_Date.Write(sDef);
+            Element_Assessor.Write(sDef);
+            Element_Previous.Write(sDef);
+            Element_Problem.Write(sDef);
+            Element_Investigation.Write(sDef);
+            Element_Protocol.Write(sDef);
+            Element_Summary.Write(sDef);
+            Element_Finding.Write(sDef);
+            Element_PrognosisCodeableConcept.Write(sDef);
+            Element_PrognosisReference.Write(sDef);
+            Element_SupportingInfo.Write(sDef);
+            Element_Note.Write(sDef);
+        }
+        
+        public Resource_ClinicalImpression()
+        {
+            {
                 // 1. ClinicalImpression.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "ClinicalImpression.identifier",                                                                                  // MakerGen.cs:239
-                    Id = "ClinicalImpression.identifier",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "ClinicalImpression.identifier",
+                    Id = "ClinicalImpression.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. ClinicalImpression.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "ClinicalImpression.status",                                                                                      // MakerGen.cs:239
-                    Id = "ClinicalImpression.status",                                                                                       // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "ClinicalImpression.status",
+                    Id = "ClinicalImpression.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. ClinicalImpression.statusReason
-                this.Element_StatusReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_StatusReason",                                                                                          // MakerGen.cs:238
-                    Path= "ClinicalImpression.statusReason",                                                                                // MakerGen.cs:239
-                    Id = "ClinicalImpression.statusReason",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_StatusReason = new ElementDefinitionInfo
+                {
+                    Name = "Element_StatusReason",
+                    Path= "ClinicalImpression.statusReason",
+                    Id = "ClinicalImpression.statusReason",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. ClinicalImpression.code
-                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Code",                                                                                                  // MakerGen.cs:238
-                    Path= "ClinicalImpression.code",                                                                                        // MakerGen.cs:239
-                    Id = "ClinicalImpression.code",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Code = new ElementDefinitionInfo
+                {
+                    Name = "Element_Code",
+                    Path= "ClinicalImpression.code",
+                    Id = "ClinicalImpression.code",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. ClinicalImpression.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
-                    Path= "ClinicalImpression.description",                                                                                 // MakerGen.cs:239
-                    Id = "ClinicalImpression.description",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Description = new ElementDefinitionInfo
+                {
+                    Name = "Element_Description",
+                    Path= "ClinicalImpression.description",
+                    Id = "ClinicalImpression.description",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. ClinicalImpression.subject
-                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Subject",                                                                                               // MakerGen.cs:238
-                    Path= "ClinicalImpression.subject",                                                                                     // MakerGen.cs:239
-                    Id = "ClinicalImpression.subject",                                                                                      // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Subject = new ElementDefinitionInfo
+                {
+                    Name = "Element_Subject",
+                    Path= "ClinicalImpression.subject",
+                    Id = "ClinicalImpression.subject",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient",
+                                "http://hl7.org/fhir/StructureDefinition/Group"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 7. ClinicalImpression.encounter
-                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:238
-                    Path= "ClinicalImpression.encounter",                                                                                   // MakerGen.cs:239
-                    Id = "ClinicalImpression.encounter",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Encounter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Encounter",
+                    Path= "ClinicalImpression.encounter",
+                    Id = "ClinicalImpression.encounter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 8. ClinicalImpression.effective[x]
-                this.Element_Effective = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Effective",                                                                                             // MakerGen.cs:238
-                    Path= "ClinicalImpression.effective[x]",                                                                                // MakerGen.cs:239
-                    Id = "ClinicalImpression.effective[x]",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Effective = new ElementDefinitionInfo
+                {
+                    Name = "Element_Effective",
+                    Path= "ClinicalImpression.effective[x]",
+                    Id = "ClinicalImpression.effective[x]",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. ClinicalImpression.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
-                    Path= "ClinicalImpression.date",                                                                                        // MakerGen.cs:239
-                    Id = "ClinicalImpression.date",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Date = new ElementDefinitionInfo
+                {
+                    Name = "Element_Date",
+                    Path= "ClinicalImpression.date",
+                    Id = "ClinicalImpression.date",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. ClinicalImpression.assessor
-                this.Element_Assessor = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Assessor",                                                                                              // MakerGen.cs:238
-                    Path= "ClinicalImpression.assessor",                                                                                    // MakerGen.cs:239
-                    Id = "ClinicalImpression.assessor",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Assessor = new ElementDefinitionInfo
+                {
+                    Name = "Element_Assessor",
+                    Path= "ClinicalImpression.assessor",
+                    Id = "ClinicalImpression.assessor",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. ClinicalImpression.previous
-                this.Element_Previous = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Previous",                                                                                              // MakerGen.cs:238
-                    Path= "ClinicalImpression.previous",                                                                                    // MakerGen.cs:239
-                    Id = "ClinicalImpression.previous",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"                                                // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Previous = new ElementDefinitionInfo
+                {
+                    Name = "Element_Previous",
+                    Path= "ClinicalImpression.previous",
+                    Id = "ClinicalImpression.previous",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 12. ClinicalImpression.problem
-                this.Element_Problem = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Problem",                                                                                               // MakerGen.cs:238
-                    Path= "ClinicalImpression.problem",                                                                                     // MakerGen.cs:239
-                    Id = "ClinicalImpression.problem",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"                                                // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Problem = new ElementDefinitionInfo
+                {
+                    Name = "Element_Problem",
+                    Path= "ClinicalImpression.problem",
+                    Id = "ClinicalImpression.problem",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Condition",
+                                "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 13. ClinicalImpression.investigation
-                this.Element_Investigation = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Investigation",                                                                                         // MakerGen.cs:238
-                    Path= "ClinicalImpression.investigation",                                                                               // MakerGen.cs:239
-                    Id = "ClinicalImpression.investigation",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Investigation                                                                                              // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Investigation = new ElementDefinitionInfo
+                {
+                    Name = "Element_Investigation",
+                    Path= "ClinicalImpression.investigation",
+                    Id = "ClinicalImpression.investigation",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Investigation
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 16. ClinicalImpression.protocol
-                this.Element_Protocol = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Protocol",                                                                                              // MakerGen.cs:238
-                    Path= "ClinicalImpression.protocol",                                                                                    // MakerGen.cs:239
-                    Id = "ClinicalImpression.protocol",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Protocol = new ElementDefinitionInfo
+                {
+                    Name = "Element_Protocol",
+                    Path= "ClinicalImpression.protocol",
+                    Id = "ClinicalImpression.protocol",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 17. ClinicalImpression.summary
-                this.Element_Summary = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Summary",                                                                                               // MakerGen.cs:238
-                    Path= "ClinicalImpression.summary",                                                                                     // MakerGen.cs:239
-                    Id = "ClinicalImpression.summary",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Summary = new ElementDefinitionInfo
+                {
+                    Name = "Element_Summary",
+                    Path= "ClinicalImpression.summary",
+                    Id = "ClinicalImpression.summary",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 18. ClinicalImpression.finding
-                this.Element_Finding = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Finding",                                                                                               // MakerGen.cs:238
-                    Path= "ClinicalImpression.finding",                                                                                     // MakerGen.cs:239
-                    Id = "ClinicalImpression.finding",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Finding                                                                                                    // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Finding = new ElementDefinitionInfo
+                {
+                    Name = "Element_Finding",
+                    Path= "ClinicalImpression.finding",
+                    Id = "ClinicalImpression.finding",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Finding
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 22. ClinicalImpression.prognosisCodeableConcept
-                this.Element_PrognosisCodeableConcept = new ElementDefinitionInfo                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_PrognosisCodeableConcept",                                                                              // MakerGen.cs:238
-                    Path= "ClinicalImpression.prognosisCodeableConcept",                                                                    // MakerGen.cs:239
-                    Id = "ClinicalImpression.prognosisCodeableConcept",                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_PrognosisCodeableConcept = new ElementDefinitionInfo
+                {
+                    Name = "Element_PrognosisCodeableConcept",
+                    Path= "ClinicalImpression.prognosisCodeableConcept",
+                    Id = "ClinicalImpression.prognosisCodeableConcept",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 23. ClinicalImpression.prognosisReference
-                this.Element_PrognosisReference = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_PrognosisReference",                                                                                    // MakerGen.cs:238
-                    Path= "ClinicalImpression.prognosisReference",                                                                          // MakerGen.cs:239
-                    Id = "ClinicalImpression.prognosisReference",                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/RiskAssessment"                                                    // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_PrognosisReference = new ElementDefinitionInfo
+                {
+                    Name = "Element_PrognosisReference",
+                    Path= "ClinicalImpression.prognosisReference",
+                    Id = "ClinicalImpression.prognosisReference",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/RiskAssessment"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 24. ClinicalImpression.supportingInfo
-                this.Element_SupportingInfo = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_SupportingInfo",                                                                                        // MakerGen.cs:238
-                    Path= "ClinicalImpression.supportingInfo",                                                                              // MakerGen.cs:239
-                    Id = "ClinicalImpression.supportingInfo",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_SupportingInfo = new ElementDefinitionInfo
+                {
+                    Name = "Element_SupportingInfo",
+                    Path= "ClinicalImpression.supportingInfo",
+                    Id = "ClinicalImpression.supportingInfo",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Resource"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 25. ClinicalImpression.note
-                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Note",                                                                                                  // MakerGen.cs:238
-                    Path= "ClinicalImpression.note",                                                                                        // MakerGen.cs:239
-                    Id = "ClinicalImpression.note",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "ClinicalImpression";                                                                                               // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";                                                        // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Note = new ElementDefinitionInfo
+                {
+                    Name = "Element_Note",
+                    Path= "ClinicalImpression.note",
+                    Id = "ClinicalImpression.note",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "ClinicalImpression";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ClinicalImpression";
+        }
+    }
+}

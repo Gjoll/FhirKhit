@@ -26,7 +26,16 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
             public TypeFlag TFlag = TypeFlag.Unknown;
 
-            public StructureDefinition SDef;
+            public StructureDefinition SDef { get; }
+            public ElementDefinitionNode ElementDefinitionNode { get; }
+
+            public SDefInfo Parent { get; set; }
+
+            public SDefInfo(StructureDefinition sDef)
+            {
+                this.SDef = sDef;
+                ElementDefinitionNode = ElementDefinitionNode.Create(sDef);
+            }
         };
 
         Bundle fhirSDefsBundle;
@@ -342,9 +351,35 @@ namespace FhirKhit.CIMPL.DirectFhir
             }
         }
 
-        void LoadFirEntryNames()
+        void LoadFhirElement(StructureDefinition sDef)
         {
+            const String fcn = "LoadFhirElement";
 
+            // This is to eliminate the derived types. For now, 
+            // we only want to do that base resource types.
+            if (sDef.Type != sDef.Name)
+            {
+                this.ConversionWarn(this.GetType().Name, fcn, $"Skipping derived class {sDef.Name}");
+                return;
+            }
+            SDefInfo sDefInfo = new SDefInfo(sDef);
+
+            switch (sDef.Url)
+            {
+                case "http://hl7.org/fhir/StructureDefinition/Element":
+                    sDefInfo.TFlag = SDefInfo.TypeFlag.Group;
+                    break;
+
+                case "http://hl7.org/fhir/StructureDefinition/Resource":
+                    sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
+                    break;
+
+                default:
+                    sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
+                    break;
+            }
+
+            this.items.Add(sDef.Url, sDefInfo);
         }
 
         void LoadFhirElements()
@@ -353,29 +388,7 @@ namespace FhirKhit.CIMPL.DirectFhir
 
             this.ConversionInfo(this.GetType().Name, fcn, "Loading Fhir structure definitions");
             foreach (StructureDefinition sDef in this.sDefs.FhirSDefs.GetResources())
-            {
-                SDefInfo sDefInfo = new SDefInfo
-                {
-                    SDef = sDef
-                };
-
-                switch (sDef.Url)
-                {
-                    case "http://hl7.org/fhir/StructureDefinition/Element":
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Group;
-                        break;
-
-                    case "http://hl7.org/fhir/StructureDefinition/Resource":
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Entry;
-                        break;
-
-                    default:
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
-                        break;
-                }
-
-                this.items.Add(sDef.Url, sDefInfo);
-            }
+                LoadFhirElement(sDef);
         }
 
         SDefInfo GetTypedSDef(String path)

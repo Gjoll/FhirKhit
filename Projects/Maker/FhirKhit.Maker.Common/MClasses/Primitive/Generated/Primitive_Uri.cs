@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:165
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:166
-using System.IO;                                                                                                                            // MakerGen.cs:167
-using System.Linq;                                                                                                                          // MakerGen.cs:168
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:169
-                                                                                                                                            // MakerGen.cs:170
-namespace FhirKhit.Maker.Common.Primitive                                                                                                   // MakerGen.cs:171
-{                                                                                                                                           // MakerGen.cs:172
-    #region Json                                                                                                                            // MakerGen.cs:173
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Primitive
+{
+    #region Json
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -75,11 +75,11 @@ namespace FhirKhit.Maker.Common.Primitive                                       
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:177
+    #endregion
     /// <summary>
     /// Fhir primitive 'uri'
     /// </summary>
-    public class Primitive_Uri : FhirKhit.Maker.Common.Primitive.PrimitiveBase                                                              // MakerGen.cs:181
-    {                                                                                                                                       // MakerGen.cs:182
-    }                                                                                                                                       // MakerGen.cs:183
-}                                                                                                                                           // MakerGen.cs:184
+    public class Primitive_Uri : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    {
+    }
+}

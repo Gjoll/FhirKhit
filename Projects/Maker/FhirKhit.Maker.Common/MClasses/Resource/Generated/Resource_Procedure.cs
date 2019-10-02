@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "Procedure",
@@ -745,823 +745,823 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'Procedure'
     /// </summary>
     // 0. Procedure
-    public class Resource_Procedure : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                                // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_Procedure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 15. Procedure.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 16. Procedure.performer.function
-            public ElementDefinitionInfo Element_Function;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Function;
             // 17. Procedure.performer.actor
-            public ElementDefinitionInfo Element_Actor;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Actor;
             // 18. Procedure.performer.onBehalfOf
-            public ElementDefinitionInfo Element_OnBehalfOf;                                                                                // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "Procedure.performer",                                                                                           // MakerGen.cs:395
-                    ElementId = "Procedure.performer"                                                                                       // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Function.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Actor.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_OnBehalfOf.Write(sDef);                                                                                             // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Performer()                                                                                                         // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_OnBehalfOf;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "Procedure.performer",
+                    ElementId = "Procedure.performer"
+                });
+                Element_Function.Write(sDef);
+                Element_Actor.Write(sDef);
+                Element_OnBehalfOf.Write(sDef);
+            }
+            
+            public Type_Performer()
+            {
+                {
                     // 16. Procedure.performer.function
-                    this.Element_Function = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Function",                                                                                          // MakerGen.cs:238
-                        Path= "Procedure.performer.function",                                                                               // MakerGen.cs:239
-                        Id = "Procedure.performer.function",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Function = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Function",
+                        Path= "Procedure.performer.function",
+                        Id = "Procedure.performer.function",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 17. Procedure.performer.actor
-                    this.Element_Actor = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Actor",                                                                                             // MakerGen.cs:238
-                        Path= "Procedure.performer.actor",                                                                                  // MakerGen.cs:239
-                        Id = "Procedure.performer.actor",                                                                                   // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                             // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Organization",                                                 // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Patient",                                                      // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                // MakerGen.cs:349
-                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Actor = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Actor",
+                        Path= "Procedure.performer.actor",
+                        Id = "Procedure.performer.actor",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                    "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                    "http://hl7.org/fhir/StructureDefinition/Organization",
+                                    "http://hl7.org/fhir/StructureDefinition/Patient",
+                                    "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+                                    "http://hl7.org/fhir/StructureDefinition/Device"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 18. Procedure.performer.onBehalfOf
-                    this.Element_OnBehalfOf = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_OnBehalfOf",                                                                                        // MakerGen.cs:238
-                        Path= "Procedure.performer.onBehalfOf",                                                                             // MakerGen.cs:239
-                        Id = "Procedure.performer.onBehalfOf",                                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_OnBehalfOf = new ElementDefinitionInfo
+                    {
+                        Name = "Element_OnBehalfOf",
+                        Path= "Procedure.performer.onBehalfOf",
+                        Id = "Procedure.performer.onBehalfOf",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 29. Procedure.focalDevice
-        public class Type_FocalDevice : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_FocalDevice : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 30. Procedure.focalDevice.action
-            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Action;
             // 31. Procedure.focalDevice.manipulated
-            public ElementDefinitionInfo Element_Manipulated;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "Procedure.focalDevice",                                                                                         // MakerGen.cs:395
-                    ElementId = "Procedure.focalDevice"                                                                                     // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:223
-                Element_Manipulated.Write(sDef);                                                                                            // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_FocalDevice()                                                                                                       // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Manipulated;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "Procedure.focalDevice",
+                    ElementId = "Procedure.focalDevice"
+                });
+                Element_Action.Write(sDef);
+                Element_Manipulated.Write(sDef);
+            }
+            
+            public Type_FocalDevice()
+            {
+                {
                     // 30. Procedure.focalDevice.action
-                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Action",                                                                                            // MakerGen.cs:238
-                        Path= "Procedure.focalDevice.action",                                                                               // MakerGen.cs:239
-                        Id = "Procedure.focalDevice.action",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Action = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Action",
+                        Path= "Procedure.focalDevice.action",
+                        Id = "Procedure.focalDevice.action",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 31. Procedure.focalDevice.manipulated
-                    this.Element_Manipulated = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Manipulated",                                                                                       // MakerGen.cs:238
-                        Path= "Procedure.focalDevice.manipulated",                                                                          // MakerGen.cs:239
-                        Id = "Procedure.focalDevice.manipulated",                                                                           // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Device"                                                        // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Manipulated = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Manipulated",
+                        Path= "Procedure.focalDevice.manipulated",
+                        Id = "Procedure.focalDevice.manipulated",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Device"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. Procedure.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. Procedure.instantiatesCanonical
-        public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_InstantiatesCanonical;
         // 3. Procedure.instantiatesUri
-        public ElementDefinitionInfo Element_InstantiatesUri;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_InstantiatesUri;
         // 4. Procedure.basedOn
-        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_BasedOn;
         // 5. Procedure.partOf
-        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_PartOf;
         // 6. Procedure.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 7. Procedure.statusReason
-        public ElementDefinitionInfo Element_StatusReason;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_StatusReason;
         // 8. Procedure.category
-        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Category;
         // 9. Procedure.code
-        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Code;
         // 10. Procedure.subject
-        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Subject;
         // 11. Procedure.encounter
-        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Encounter;
         // 12. Procedure.performed[x]
-        public ElementDefinitionInfo Element_Performed;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Performed;
         // 13. Procedure.recorder
-        public ElementDefinitionInfo Element_Recorder;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Recorder;
         // 14. Procedure.asserter
-        public ElementDefinitionInfo Element_Asserter;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Asserter;
         // 15. Procedure.performer
-        public ElementDefinitionInfo Element_Performer;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Performer;
         // 19. Procedure.location
-        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Location;
         // 20. Procedure.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReasonCode;
         // 21. Procedure.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReasonReference;
         // 22. Procedure.bodySite
-        public ElementDefinitionInfo Element_BodySite;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_BodySite;
         // 23. Procedure.outcome
-        public ElementDefinitionInfo Element_Outcome;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Outcome;
         // 24. Procedure.report
-        public ElementDefinitionInfo Element_Report;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Report;
         // 25. Procedure.complication
-        public ElementDefinitionInfo Element_Complication;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Complication;
         // 26. Procedure.complicationDetail
-        public ElementDefinitionInfo Element_ComplicationDetail;                                                                            // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ComplicationDetail;
         // 27. Procedure.followUp
-        public ElementDefinitionInfo Element_FollowUp;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_FollowUp;
         // 28. Procedure.note
-        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Note;
         // 29. Procedure.focalDevice
-        public ElementDefinitionInfo Element_FocalDevice;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_FocalDevice;
         // 32. Procedure.usedReference
-        public ElementDefinitionInfo Element_UsedReference;                                                                                 // MakerGen.cs:219
+        public ElementDefinitionInfo Element_UsedReference;
         // 33. Procedure.usedCode
-        public ElementDefinitionInfo Element_UsedCode;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "Procedure",                                                                                                         // MakerGen.cs:395
-                ElementId = "Procedure"                                                                                                     // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_InstantiatesCanonical.Write(sDef);                                                                                      // MakerGen.cs:223
-            Element_InstantiatesUri.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_StatusReason.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Performed.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Recorder.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Asserter.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Performer.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_BodySite.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Outcome.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Report.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Complication.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_ComplicationDetail.Write(sDef);                                                                                         // MakerGen.cs:223
-            Element_FollowUp.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_FocalDevice.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_UsedReference.Write(sDef);                                                                                              // MakerGen.cs:223
-            Element_UsedCode.Write(sDef);                                                                                                   // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_Procedure()                                                                                                         // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_UsedCode;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "Procedure",
+                ElementId = "Procedure"
+            });
+            Element_Identifier.Write(sDef);
+            Element_InstantiatesCanonical.Write(sDef);
+            Element_InstantiatesUri.Write(sDef);
+            Element_BasedOn.Write(sDef);
+            Element_PartOf.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_StatusReason.Write(sDef);
+            Element_Category.Write(sDef);
+            Element_Code.Write(sDef);
+            Element_Subject.Write(sDef);
+            Element_Encounter.Write(sDef);
+            Element_Performed.Write(sDef);
+            Element_Recorder.Write(sDef);
+            Element_Asserter.Write(sDef);
+            Element_Performer.Write(sDef);
+            Element_Location.Write(sDef);
+            Element_ReasonCode.Write(sDef);
+            Element_ReasonReference.Write(sDef);
+            Element_BodySite.Write(sDef);
+            Element_Outcome.Write(sDef);
+            Element_Report.Write(sDef);
+            Element_Complication.Write(sDef);
+            Element_ComplicationDetail.Write(sDef);
+            Element_FollowUp.Write(sDef);
+            Element_Note.Write(sDef);
+            Element_FocalDevice.Write(sDef);
+            Element_UsedReference.Write(sDef);
+            Element_UsedCode.Write(sDef);
+        }
+        
+        public Resource_Procedure()
+        {
+            {
                 // 1. Procedure.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "Procedure.identifier",                                                                                           // MakerGen.cs:239
-                    Id = "Procedure.identifier",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "Procedure.identifier",
+                    Id = "Procedure.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. Procedure.instantiatesCanonical
-                this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_InstantiatesCanonical",                                                                                 // MakerGen.cs:238
-                    Path= "Procedure.instantiatesCanonical",                                                                                // MakerGen.cs:239
-                    Id = "Procedure.instantiatesCanonical",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                                   // MakerGen.cs:306
-                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                               // MakerGen.cs:306
-                                "http://hl7.org/fhir/StructureDefinition/Measure",                                                          // MakerGen.cs:306
-                                "http://hl7.org/fhir/StructureDefinition/OperationDefinition",                                              // MakerGen.cs:306
-                                "http://hl7.org/fhir/StructureDefinition/Questionnaire"                                                     // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_InstantiatesCanonical = new ElementDefinitionInfo
+                {
+                    Name = "Element_InstantiatesCanonical",
+                    Path= "Procedure.instantiatesCanonical",
+                    Id = "Procedure.instantiatesCanonical",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/Measure",
+                                "http://hl7.org/fhir/StructureDefinition/OperationDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 3. Procedure.instantiatesUri
-                this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_InstantiatesUri",                                                                                       // MakerGen.cs:238
-                    Path= "Procedure.instantiatesUri",                                                                                      // MakerGen.cs:239
-                    Id = "Procedure.instantiatesUri",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_InstantiatesUri = new ElementDefinitionInfo
+                {
+                    Name = "Element_InstantiatesUri",
+                    Path= "Procedure.instantiatesUri",
+                    Id = "Procedure.instantiatesUri",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. Procedure.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:238
-                    Path= "Procedure.basedOn",                                                                                              // MakerGen.cs:239
-                    Id = "Procedure.basedOn",                                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                         // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"                                                    // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_BasedOn = new ElementDefinitionInfo
+                {
+                    Name = "Element_BasedOn",
+                    Path= "Procedure.basedOn",
+                    Id = "Procedure.basedOn",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan",
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 5. Procedure.partOf
-                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:238
-                    Path= "Procedure.partOf",                                                                                               // MakerGen.cs:239
-                    Id = "Procedure.partOf",                                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Procedure",                                                        // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_PartOf = new ElementDefinitionInfo
+                {
+                    Name = "Element_PartOf",
+                    Path= "Procedure.partOf",
+                    Id = "Procedure.partOf",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Procedure",
+                                "http://hl7.org/fhir/StructureDefinition/Observation",
+                                "http://hl7.org/fhir/StructureDefinition/MedicationAdministration"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. Procedure.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "Procedure.status",                                                                                               // MakerGen.cs:239
-                    Id = "Procedure.status",                                                                                                // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "Procedure.status",
+                    Id = "Procedure.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. Procedure.statusReason
-                this.Element_StatusReason = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_StatusReason",                                                                                          // MakerGen.cs:238
-                    Path= "Procedure.statusReason",                                                                                         // MakerGen.cs:239
-                    Id = "Procedure.statusReason",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_StatusReason = new ElementDefinitionInfo
+                {
+                    Name = "Element_StatusReason",
+                    Path= "Procedure.statusReason",
+                    Id = "Procedure.statusReason",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. Procedure.category
-                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Category",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.category",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.category",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Category = new ElementDefinitionInfo
+                {
+                    Name = "Element_Category",
+                    Path= "Procedure.category",
+                    Id = "Procedure.category",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. Procedure.code
-                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Code",                                                                                                  // MakerGen.cs:238
-                    Path= "Procedure.code",                                                                                                 // MakerGen.cs:239
-                    Id = "Procedure.code",                                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Code = new ElementDefinitionInfo
+                {
+                    Name = "Element_Code",
+                    Path= "Procedure.code",
+                    Id = "Procedure.code",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. Procedure.subject
-                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Subject",                                                                                               // MakerGen.cs:238
-                    Path= "Procedure.subject",                                                                                              // MakerGen.cs:239
-                    Id = "Procedure.subject",                                                                                               // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Subject = new ElementDefinitionInfo
+                {
+                    Name = "Element_Subject",
+                    Path= "Procedure.subject",
+                    Id = "Procedure.subject",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient",
+                                "http://hl7.org/fhir/StructureDefinition/Group"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. Procedure.encounter
-                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:238
-                    Path= "Procedure.encounter",                                                                                            // MakerGen.cs:239
-                    Id = "Procedure.encounter",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Encounter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Encounter",
+                    Path= "Procedure.encounter",
+                    Id = "Procedure.encounter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 12. Procedure.performed[x]
-                this.Element_Performed = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Performed",                                                                                             // MakerGen.cs:238
-                    Path= "Procedure.performed[x]",                                                                                         // MakerGen.cs:239
-                    Id = "Procedure.performed[x]",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        },                                                                                                                  // MakerGen.cs:360
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        },                                                                                                                  // MakerGen.cs:307
-                        new FhirKhit.Maker.Common.Complex.Type_Age                                                                          // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        },                                                                                                                  // MakerGen.cs:360
-                        new FhirKhit.Maker.Common.Complex.Type_Range                                                                        // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Performed = new ElementDefinitionInfo
+                {
+                    Name = "Element_Performed",
+                    Path= "Procedure.performed[x]",
+                    Id = "Procedure.performed[x]",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Age
+                        {
+                        },
+                        new FhirKhit.Maker.Common.Complex.Type_Range
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. Procedure.recorder
-                this.Element_Recorder = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Recorder",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.recorder",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.recorder",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Recorder = new ElementDefinitionInfo
+                {
+                    Name = "Element_Recorder",
+                    Path= "Procedure.recorder",
+                    Id = "Procedure.recorder",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient",
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 14. Procedure.asserter
-                this.Element_Asserter = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Asserter",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.asserter",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.asserter",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",                                                    // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Asserter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Asserter",
+                    Path= "Procedure.asserter",
+                    Id = "Procedure.asserter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient",
+                                "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 15. Procedure.performer
-                this.Element_Performer = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Performer",                                                                                             // MakerGen.cs:238
-                    Path= "Procedure.performer",                                                                                            // MakerGen.cs:239
-                    Id = "Procedure.performer",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Performer                                                                                                  // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Performer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Performer",
+                    Path= "Procedure.performer",
+                    Id = "Procedure.performer",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Performer
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 19. Procedure.location
-                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Location",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.location",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.location",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Location = new ElementDefinitionInfo
+                {
+                    Name = "Element_Location",
+                    Path= "Procedure.location",
+                    Id = "Procedure.location",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Location"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 20. Procedure.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:238
-                    Path= "Procedure.reasonCode",                                                                                           // MakerGen.cs:239
-                    Id = "Procedure.reasonCode",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReasonCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReasonCode",
+                    Path= "Procedure.reasonCode",
+                    Id = "Procedure.reasonCode",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 21. Procedure.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:238
-                    Path= "Procedure.reasonReference",                                                                                      // MakerGen.cs:239
-                    Id = "Procedure.reasonReference",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Procedure",                                                        // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                                 // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReasonReference = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReasonReference",
+                    Path= "Procedure.reasonReference",
+                    Id = "Procedure.reasonReference",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Condition",
+                                "http://hl7.org/fhir/StructureDefinition/Observation",
+                                "http://hl7.org/fhir/StructureDefinition/Procedure",
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 22. Procedure.bodySite
-                this.Element_BodySite = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_BodySite",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.bodySite",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.bodySite",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_BodySite = new ElementDefinitionInfo
+                {
+                    Name = "Element_BodySite",
+                    Path= "Procedure.bodySite",
+                    Id = "Procedure.bodySite",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 23. Procedure.outcome
-                this.Element_Outcome = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Outcome",                                                                                               // MakerGen.cs:238
-                    Path= "Procedure.outcome",                                                                                              // MakerGen.cs:239
-                    Id = "Procedure.outcome",                                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Outcome = new ElementDefinitionInfo
+                {
+                    Name = "Element_Outcome",
+                    Path= "Procedure.outcome",
+                    Id = "Procedure.outcome",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 24. Procedure.report
-                this.Element_Report = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Report",                                                                                                // MakerGen.cs:238
-                    Path= "Procedure.report",                                                                                               // MakerGen.cs:239
-                    Id = "Procedure.report",                                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",                                                // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Composition"                                                       // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Report = new ElementDefinitionInfo
+                {
+                    Name = "Element_Report",
+                    Path= "Procedure.report",
+                    Id = "Procedure.report",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+                                "http://hl7.org/fhir/StructureDefinition/Composition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 25. Procedure.complication
-                this.Element_Complication = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Complication",                                                                                          // MakerGen.cs:238
-                    Path= "Procedure.complication",                                                                                         // MakerGen.cs:239
-                    Id = "Procedure.complication",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Complication = new ElementDefinitionInfo
+                {
+                    Name = "Element_Complication",
+                    Path= "Procedure.complication",
+                    Id = "Procedure.complication",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 26. Procedure.complicationDetail
-                this.Element_ComplicationDetail = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ComplicationDetail",                                                                                    // MakerGen.cs:238
-                    Path= "Procedure.complicationDetail",                                                                                   // MakerGen.cs:239
-                    Id = "Procedure.complicationDetail",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Condition"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ComplicationDetail = new ElementDefinitionInfo
+                {
+                    Name = "Element_ComplicationDetail",
+                    Path= "Procedure.complicationDetail",
+                    Id = "Procedure.complicationDetail",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Condition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 27. Procedure.followUp
-                this.Element_FollowUp = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_FollowUp",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.followUp",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.followUp",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_FollowUp = new ElementDefinitionInfo
+                {
+                    Name = "Element_FollowUp",
+                    Path= "Procedure.followUp",
+                    Id = "Procedure.followUp",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 28. Procedure.note
-                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Note",                                                                                                  // MakerGen.cs:238
-                    Path= "Procedure.note",                                                                                                 // MakerGen.cs:239
-                    Id = "Procedure.note",                                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Note = new ElementDefinitionInfo
+                {
+                    Name = "Element_Note",
+                    Path= "Procedure.note",
+                    Id = "Procedure.note",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 29. Procedure.focalDevice
-                this.Element_FocalDevice = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_FocalDevice",                                                                                           // MakerGen.cs:238
-                    Path= "Procedure.focalDevice",                                                                                          // MakerGen.cs:239
-                    Id = "Procedure.focalDevice",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_FocalDevice                                                                                                // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_FocalDevice = new ElementDefinitionInfo
+                {
+                    Name = "Element_FocalDevice",
+                    Path= "Procedure.focalDevice",
+                    Id = "Procedure.focalDevice",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_FocalDevice
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 32. Procedure.usedReference
-                this.Element_UsedReference = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_UsedReference",                                                                                         // MakerGen.cs:238
-                    Path= "Procedure.usedReference",                                                                                        // MakerGen.cs:239
-                    Id = "Procedure.usedReference",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Medication",                                                       // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Substance"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_UsedReference = new ElementDefinitionInfo
+                {
+                    Name = "Element_UsedReference",
+                    Path= "Procedure.usedReference",
+                    Id = "Procedure.usedReference",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Device",
+                                "http://hl7.org/fhir/StructureDefinition/Medication",
+                                "http://hl7.org/fhir/StructureDefinition/Substance"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 33. Procedure.usedCode
-                this.Element_UsedCode = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_UsedCode",                                                                                              // MakerGen.cs:238
-                    Path= "Procedure.usedCode",                                                                                             // MakerGen.cs:239
-                    Id = "Procedure.usedCode",                                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "Procedure";                                                                                                        // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Procedure";                                                                 // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_UsedCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_UsedCode",
+                    Path= "Procedure.usedCode",
+                    Id = "Procedure.usedCode",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "Procedure";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Procedure";
+        }
+    }
+}

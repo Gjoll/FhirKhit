@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "TerminologyCapabilities",
@@ -814,1192 +814,1192 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'TerminologyCapabilities'
     /// </summary>
     // 0. TerminologyCapabilities
-    public class Resource_TerminologyCapabilities : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                  // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_TerminologyCapabilities : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 16. TerminologyCapabilities.software
-        public class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 17. TerminologyCapabilities.software.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Name;
             // 18. TerminologyCapabilities.software.version
-            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.software",                                                                              // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.software"                                                                          // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Software()                                                                                                          // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Version;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.software",
+                    ElementId = "TerminologyCapabilities.software"
+                });
+                Element_Name.Write(sDef);
+                Element_Version.Write(sDef);
+            }
+            
+            public Type_Software()
+            {
+                {
                     // 17. TerminologyCapabilities.software.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.software.name",                                                                      // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.software.name",                                                                       // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Name = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Name",
+                        Path= "TerminologyCapabilities.software.name",
+                        Id = "TerminologyCapabilities.software.name",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 18. TerminologyCapabilities.software.version
-                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Version",                                                                                           // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.software.version",                                                                   // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.software.version",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Version = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Version",
+                        Path= "TerminologyCapabilities.software.version",
+                        Id = "TerminologyCapabilities.software.version",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 19. TerminologyCapabilities.implementation
-        public class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 20. TerminologyCapabilities.implementation.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Description;
             // 21. TerminologyCapabilities.implementation.url
-            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.implementation",                                                                        // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.implementation"                                                                    // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Implementation()                                                                                                    // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Url;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.implementation",
+                    ElementId = "TerminologyCapabilities.implementation"
+                });
+                Element_Description.Write(sDef);
+                Element_Url.Write(sDef);
+            }
+            
+            public Type_Implementation()
+            {
+                {
                     // 20. TerminologyCapabilities.implementation.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.implementation.description",                                                         // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.implementation.description",                                                          // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Description = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Description",
+                        Path= "TerminologyCapabilities.implementation.description",
+                        Id = "TerminologyCapabilities.implementation.description",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 21. TerminologyCapabilities.implementation.url
-                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Url",                                                                                               // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.implementation.url",                                                                 // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.implementation.url",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Url                                                               // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Url = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Url",
+                        Path= "TerminologyCapabilities.implementation.url",
+                        Id = "TerminologyCapabilities.implementation.url",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Url
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 23. TerminologyCapabilities.codeSystem
-        public class Type_CodeSystem : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_CodeSystem : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 25. TerminologyCapabilities.codeSystem.version
-            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 30. TerminologyCapabilities.codeSystem.version.filter
-                public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
+                public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
+                {
                     // 31. TerminologyCapabilities.codeSystem.version.filter.code
-                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Code;
                     // 32. TerminologyCapabilities.codeSystem.version.filter.op
-                    public ElementDefinitionInfo Element_Op;                                                                                // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:394
-                            Path = "TerminologyCapabilities.codeSystem.version.filter",                                                     // MakerGen.cs:395
-                            ElementId = "TerminologyCapabilities.codeSystem.version.filter"                                                 // MakerGen.cs:396
-                        });                                                                                                                 // MakerGen.cs:397
-                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:223
-                        Element_Op.Write(sDef);                                                                                             // MakerGen.cs:223
-                    }                                                                                                                       // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                    public Type_Filter()                                                                                                    // MakerGen.cs:402
-                    {                                                                                                                       // MakerGen.cs:403
-                        {                                                                                                                   // MakerGen.cs:234
+                    public ElementDefinitionInfo Element_Op;
+                    
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                    {
+                        base.Write(sDef);
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                        {
+                            Path = "TerminologyCapabilities.codeSystem.version.filter",
+                            ElementId = "TerminologyCapabilities.codeSystem.version.filter"
+                        });
+                        Element_Code.Write(sDef);
+                        Element_Op.Write(sDef);
+                    }
+                    
+                    public Type_Filter()
+                    {
+                        {
                             // 31. TerminologyCapabilities.codeSystem.version.filter.code
-                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Code",                                                                                      // MakerGen.cs:238
-                                Path= "TerminologyCapabilities.codeSystem.version.filter.code",                                             // MakerGen.cs:239
-                                Id = "TerminologyCapabilities.codeSystem.version.filter.code",                                              // MakerGen.cs:240
-                                Min = 1,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Code = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Code",
+                                Path= "TerminologyCapabilities.codeSystem.version.filter.code",
+                                Id = "TerminologyCapabilities.codeSystem.version.filter.code",
+                                Min = 1,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 32. TerminologyCapabilities.codeSystem.version.filter.op
-                            this.Element_Op = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Op",                                                                                        // MakerGen.cs:238
-                                Path= "TerminologyCapabilities.codeSystem.version.filter.op",                                               // MakerGen.cs:239
-                                Id = "TerminologyCapabilities.codeSystem.version.filter.op",                                                // MakerGen.cs:240
-                                Min = 1,                                                                                                    // MakerGen.cs:241
-                                Max = -1,                                                                                                   // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:407
+                            this.Element_Op = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Op",
+                                Path= "TerminologyCapabilities.codeSystem.version.filter.op",
+                                Id = "TerminologyCapabilities.codeSystem.version.filter.op",
+                                Min = 1,
+                                Max = -1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                    }
+                }
                 // 26. TerminologyCapabilities.codeSystem.version.code
-                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Code;
                 // 27. TerminologyCapabilities.codeSystem.version.isDefault
-                public ElementDefinitionInfo Element_IsDefault;                                                                             // MakerGen.cs:219
+                public ElementDefinitionInfo Element_IsDefault;
                 // 28. TerminologyCapabilities.codeSystem.version.compositional
-                public ElementDefinitionInfo Element_Compositional;                                                                         // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Compositional;
                 // 29. TerminologyCapabilities.codeSystem.version.language
-                public ElementDefinitionInfo Element_Language;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Language;
                 // 30. TerminologyCapabilities.codeSystem.version.filter
-                public ElementDefinitionInfo Element_Filter;                                                                                // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Filter;
                 // 33. TerminologyCapabilities.codeSystem.version.property
-                public ElementDefinitionInfo Element_Property;                                                                              // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "TerminologyCapabilities.codeSystem.version",                                                                // MakerGen.cs:395
-                        ElementId = "TerminologyCapabilities.codeSystem.version"                                                            // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:223
-                    Element_IsDefault.Write(sDef);                                                                                          // MakerGen.cs:223
-                    Element_Compositional.Write(sDef);                                                                                      // MakerGen.cs:223
-                    Element_Language.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_Filter.Write(sDef);                                                                                             // MakerGen.cs:223
-                    Element_Property.Write(sDef);                                                                                           // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Version()                                                                                                       // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Property;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "TerminologyCapabilities.codeSystem.version",
+                        ElementId = "TerminologyCapabilities.codeSystem.version"
+                    });
+                    Element_Code.Write(sDef);
+                    Element_IsDefault.Write(sDef);
+                    Element_Compositional.Write(sDef);
+                    Element_Language.Write(sDef);
+                    Element_Filter.Write(sDef);
+                    Element_Property.Write(sDef);
+                }
+                
+                public Type_Version()
+                {
+                    {
                         // 26. TerminologyCapabilities.codeSystem.version.code
-                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Code",                                                                                          // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.codeSystem.version.code",                                                        // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.codeSystem.version.code",                                                         // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Code = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Code",
+                            Path= "TerminologyCapabilities.codeSystem.version.code",
+                            Id = "TerminologyCapabilities.codeSystem.version.code",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 27. TerminologyCapabilities.codeSystem.version.isDefault
-                        this.Element_IsDefault = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_IsDefault",                                                                                     // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.codeSystem.version.isDefault",                                                   // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.codeSystem.version.isDefault",                                                    // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_IsDefault = new ElementDefinitionInfo
+                        {
+                            Name = "Element_IsDefault",
+                            Path= "TerminologyCapabilities.codeSystem.version.isDefault",
+                            Id = "TerminologyCapabilities.codeSystem.version.isDefault",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 28. TerminologyCapabilities.codeSystem.version.compositional
-                        this.Element_Compositional = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Compositional",                                                                                 // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.codeSystem.version.compositional",                                               // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.codeSystem.version.compositional",                                                // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Compositional = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Compositional",
+                            Path= "TerminologyCapabilities.codeSystem.version.compositional",
+                            Id = "TerminologyCapabilities.codeSystem.version.compositional",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 29. TerminologyCapabilities.codeSystem.version.language
-                        this.Element_Language = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Language",                                                                                      // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.codeSystem.version.language",                                                    // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.codeSystem.version.language",                                                     // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = -1,                                                                                                       // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Language = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Language",
+                            Path= "TerminologyCapabilities.codeSystem.version.language",
+                            Id = "TerminologyCapabilities.codeSystem.version.language",
+                            Min = 0,
+                            Max = -1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 30. TerminologyCapabilities.codeSystem.version.filter
-                        this.Element_Filter = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Filter",                                                                                        // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.codeSystem.version.filter",                                                      // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.codeSystem.version.filter",                                                       // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = -1,                                                                                                       // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new Type_Filter                                                                                             // MakerGen.cs:262
-                                {                                                                                                           // MakerGen.cs:263
-                                }                                                                                                           // MakerGen.cs:264
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Filter = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Filter",
+                            Path= "TerminologyCapabilities.codeSystem.version.filter",
+                            Id = "TerminologyCapabilities.codeSystem.version.filter",
+                            Min = 0,
+                            Max = -1,
+                            Types = new BaseType[]
+                            {
+                                new Type_Filter
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 33. TerminologyCapabilities.codeSystem.version.property
-                        this.Element_Property = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Property",                                                                                      // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.codeSystem.version.property",                                                    // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.codeSystem.version.property",                                                     // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = -1,                                                                                                       // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Property = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Property",
+                            Path= "TerminologyCapabilities.codeSystem.version.property",
+                            Id = "TerminologyCapabilities.codeSystem.version.property",
+                            Min = 0,
+                            Max = -1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 24. TerminologyCapabilities.codeSystem.uri
-            public ElementDefinitionInfo Element_Uri;                                                                                       // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Uri;
             // 25. TerminologyCapabilities.codeSystem.version
-            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Version;
             // 34. TerminologyCapabilities.codeSystem.subsumption
-            public ElementDefinitionInfo Element_Subsumption;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.codeSystem",                                                                            // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.codeSystem"                                                                        // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Uri.Write(sDef);                                                                                                    // MakerGen.cs:223
-                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Subsumption.Write(sDef);                                                                                            // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_CodeSystem()                                                                                                        // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Subsumption;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.codeSystem",
+                    ElementId = "TerminologyCapabilities.codeSystem"
+                });
+                Element_Uri.Write(sDef);
+                Element_Version.Write(sDef);
+                Element_Subsumption.Write(sDef);
+            }
+            
+            public Type_CodeSystem()
+            {
+                {
                     // 24. TerminologyCapabilities.codeSystem.uri
-                    this.Element_Uri = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Uri",                                                                                               // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.codeSystem.uri",                                                                     // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.codeSystem.uri",                                                                      // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                         // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:306
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/CodeSystem"                                                    // MakerGen.cs:306
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Uri = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Uri",
+                        Path= "TerminologyCapabilities.codeSystem.uri",
+                        Id = "TerminologyCapabilities.codeSystem.uri",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/CodeSystem"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 25. TerminologyCapabilities.codeSystem.version
-                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Version",                                                                                           // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.codeSystem.version",                                                                 // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.codeSystem.version",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Version                                                                                                // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Version = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Version",
+                        Path= "TerminologyCapabilities.codeSystem.version",
+                        Id = "TerminologyCapabilities.codeSystem.version",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Version
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 34. TerminologyCapabilities.codeSystem.subsumption
-                    this.Element_Subsumption = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Subsumption",                                                                                       // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.codeSystem.subsumption",                                                             // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.codeSystem.subsumption",                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Subsumption = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Subsumption",
+                        Path= "TerminologyCapabilities.codeSystem.subsumption",
+                        Id = "TerminologyCapabilities.codeSystem.subsumption",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 35. TerminologyCapabilities.expansion
-        public class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 39. TerminologyCapabilities.expansion.parameter
-            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 40. TerminologyCapabilities.expansion.parameter.name
-                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Name;
                 // 41. TerminologyCapabilities.expansion.parameter.documentation
-                public ElementDefinitionInfo Element_Documentation;                                                                         // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "TerminologyCapabilities.expansion.parameter",                                                               // MakerGen.cs:395
-                        ElementId = "TerminologyCapabilities.expansion.parameter"                                                           // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:223
-                    Element_Documentation.Write(sDef);                                                                                      // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Parameter()                                                                                                     // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Documentation;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "TerminologyCapabilities.expansion.parameter",
+                        ElementId = "TerminologyCapabilities.expansion.parameter"
+                    });
+                    Element_Name.Write(sDef);
+                    Element_Documentation.Write(sDef);
+                }
+                
+                public Type_Parameter()
+                {
+                    {
                         // 40. TerminologyCapabilities.expansion.parameter.name
-                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Name",                                                                                          // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.expansion.parameter.name",                                                       // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.expansion.parameter.name",                                                        // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Name = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Name",
+                            Path= "TerminologyCapabilities.expansion.parameter.name",
+                            Id = "TerminologyCapabilities.expansion.parameter.name",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 41. TerminologyCapabilities.expansion.parameter.documentation
-                        this.Element_Documentation = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Documentation",                                                                                 // MakerGen.cs:238
-                            Path= "TerminologyCapabilities.expansion.parameter.documentation",                                              // MakerGen.cs:239
-                            Id = "TerminologyCapabilities.expansion.parameter.documentation",                                               // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Documentation = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Documentation",
+                            Path= "TerminologyCapabilities.expansion.parameter.documentation",
+                            Id = "TerminologyCapabilities.expansion.parameter.documentation",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 36. TerminologyCapabilities.expansion.hierarchical
-            public ElementDefinitionInfo Element_Hierarchical;                                                                              // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Hierarchical;
             // 37. TerminologyCapabilities.expansion.paging
-            public ElementDefinitionInfo Element_Paging;                                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Paging;
             // 38. TerminologyCapabilities.expansion.incomplete
-            public ElementDefinitionInfo Element_Incomplete;                                                                                // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Incomplete;
             // 39. TerminologyCapabilities.expansion.parameter
-            public ElementDefinitionInfo Element_Parameter;                                                                                 // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Parameter;
             // 42. TerminologyCapabilities.expansion.textFilter
-            public ElementDefinitionInfo Element_TextFilter;                                                                                // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.expansion",                                                                             // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.expansion"                                                                         // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Hierarchical.Write(sDef);                                                                                           // MakerGen.cs:223
-                Element_Paging.Write(sDef);                                                                                                 // MakerGen.cs:223
-                Element_Incomplete.Write(sDef);                                                                                             // MakerGen.cs:223
-                Element_Parameter.Write(sDef);                                                                                              // MakerGen.cs:223
-                Element_TextFilter.Write(sDef);                                                                                             // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Expansion()                                                                                                         // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_TextFilter;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.expansion",
+                    ElementId = "TerminologyCapabilities.expansion"
+                });
+                Element_Hierarchical.Write(sDef);
+                Element_Paging.Write(sDef);
+                Element_Incomplete.Write(sDef);
+                Element_Parameter.Write(sDef);
+                Element_TextFilter.Write(sDef);
+            }
+            
+            public Type_Expansion()
+            {
+                {
                     // 36. TerminologyCapabilities.expansion.hierarchical
-                    this.Element_Hierarchical = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Hierarchical",                                                                                      // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.expansion.hierarchical",                                                             // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.expansion.hierarchical",                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Hierarchical = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Hierarchical",
+                        Path= "TerminologyCapabilities.expansion.hierarchical",
+                        Id = "TerminologyCapabilities.expansion.hierarchical",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 37. TerminologyCapabilities.expansion.paging
-                    this.Element_Paging = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Paging",                                                                                            // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.expansion.paging",                                                                   // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.expansion.paging",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Paging = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Paging",
+                        Path= "TerminologyCapabilities.expansion.paging",
+                        Id = "TerminologyCapabilities.expansion.paging",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 38. TerminologyCapabilities.expansion.incomplete
-                    this.Element_Incomplete = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Incomplete",                                                                                        // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.expansion.incomplete",                                                               // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.expansion.incomplete",                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Incomplete = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Incomplete",
+                        Path= "TerminologyCapabilities.expansion.incomplete",
+                        Id = "TerminologyCapabilities.expansion.incomplete",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 39. TerminologyCapabilities.expansion.parameter
-                    this.Element_Parameter = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Parameter",                                                                                         // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.expansion.parameter",                                                                // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.expansion.parameter",                                                                 // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Parameter                                                                                              // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Parameter = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Parameter",
+                        Path= "TerminologyCapabilities.expansion.parameter",
+                        Id = "TerminologyCapabilities.expansion.parameter",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Parameter
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 42. TerminologyCapabilities.expansion.textFilter
-                    this.Element_TextFilter = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_TextFilter",                                                                                        // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.expansion.textFilter",                                                               // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.expansion.textFilter",                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_TextFilter = new ElementDefinitionInfo
+                    {
+                        Name = "Element_TextFilter",
+                        Path= "TerminologyCapabilities.expansion.textFilter",
+                        Id = "TerminologyCapabilities.expansion.textFilter",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 44. TerminologyCapabilities.validateCode
-        public class Type_ValidateCode : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_ValidateCode : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 45. TerminologyCapabilities.validateCode.translations
-            public ElementDefinitionInfo Element_Translations;                                                                              // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.validateCode",                                                                          // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.validateCode"                                                                      // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Translations.Write(sDef);                                                                                           // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_ValidateCode()                                                                                                      // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Translations;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.validateCode",
+                    ElementId = "TerminologyCapabilities.validateCode"
+                });
+                Element_Translations.Write(sDef);
+            }
+            
+            public Type_ValidateCode()
+            {
+                {
                     // 45. TerminologyCapabilities.validateCode.translations
-                    this.Element_Translations = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Translations",                                                                                      // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.validateCode.translations",                                                          // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.validateCode.translations",                                                           // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Translations = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Translations",
+                        Path= "TerminologyCapabilities.validateCode.translations",
+                        Id = "TerminologyCapabilities.validateCode.translations",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 46. TerminologyCapabilities.translation
-        public class Type_Translation : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Translation : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 47. TerminologyCapabilities.translation.needsMap
-            public ElementDefinitionInfo Element_NeedsMap;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.translation",                                                                           // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.translation"                                                                       // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_NeedsMap.Write(sDef);                                                                                               // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Translation()                                                                                                       // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_NeedsMap;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.translation",
+                    ElementId = "TerminologyCapabilities.translation"
+                });
+                Element_NeedsMap.Write(sDef);
+            }
+            
+            public Type_Translation()
+            {
+                {
                     // 47. TerminologyCapabilities.translation.needsMap
-                    this.Element_NeedsMap = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_NeedsMap",                                                                                          // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.translation.needsMap",                                                               // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.translation.needsMap",                                                                // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_NeedsMap = new ElementDefinitionInfo
+                    {
+                        Name = "Element_NeedsMap",
+                        Path= "TerminologyCapabilities.translation.needsMap",
+                        Id = "TerminologyCapabilities.translation.needsMap",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 48. TerminologyCapabilities.closure
-        public class Type_Closure : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Closure : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 49. TerminologyCapabilities.closure.translation
-            public ElementDefinitionInfo Element_Translation;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "TerminologyCapabilities.closure",                                                                               // MakerGen.cs:395
-                    ElementId = "TerminologyCapabilities.closure"                                                                           // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Translation.Write(sDef);                                                                                            // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Closure()                                                                                                           // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Translation;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "TerminologyCapabilities.closure",
+                    ElementId = "TerminologyCapabilities.closure"
+                });
+                Element_Translation.Write(sDef);
+            }
+            
+            public Type_Closure()
+            {
+                {
                     // 49. TerminologyCapabilities.closure.translation
-                    this.Element_Translation = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Translation",                                                                                       // MakerGen.cs:238
-                        Path= "TerminologyCapabilities.closure.translation",                                                                // MakerGen.cs:239
-                        Id = "TerminologyCapabilities.closure.translation",                                                                 // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Translation = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Translation",
+                        Path= "TerminologyCapabilities.closure.translation",
+                        Id = "TerminologyCapabilities.closure.translation",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. TerminologyCapabilities.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Url;
         // 2. TerminologyCapabilities.version
-        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Version;
         // 3. TerminologyCapabilities.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Name;
         // 4. TerminologyCapabilities.title
-        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Title;
         // 5. TerminologyCapabilities.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 6. TerminologyCapabilities.experimental
-        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Experimental;
         // 7. TerminologyCapabilities.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Date;
         // 8. TerminologyCapabilities.publisher
-        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Publisher;
         // 9. TerminologyCapabilities.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Contact;
         // 10. TerminologyCapabilities.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Description;
         // 11. TerminologyCapabilities.useContext
-        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_UseContext;
         // 12. TerminologyCapabilities.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Jurisdiction;
         // 13. TerminologyCapabilities.purpose
-        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Purpose;
         // 14. TerminologyCapabilities.copyright
-        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Copyright;
         // 15. TerminologyCapabilities.kind
-        public ElementDefinitionInfo Element_Kind;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Kind;
         // 16. TerminologyCapabilities.software
-        public ElementDefinitionInfo Element_Software;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Software;
         // 19. TerminologyCapabilities.implementation
-        public ElementDefinitionInfo Element_Implementation;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Implementation;
         // 22. TerminologyCapabilities.lockedDate
-        public ElementDefinitionInfo Element_LockedDate;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_LockedDate;
         // 23. TerminologyCapabilities.codeSystem
-        public ElementDefinitionInfo Element_CodeSystem;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_CodeSystem;
         // 35. TerminologyCapabilities.expansion
-        public ElementDefinitionInfo Element_Expansion;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Expansion;
         // 43. TerminologyCapabilities.codeSearch
-        public ElementDefinitionInfo Element_CodeSearch;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_CodeSearch;
         // 44. TerminologyCapabilities.validateCode
-        public ElementDefinitionInfo Element_ValidateCode;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ValidateCode;
         // 46. TerminologyCapabilities.translation
-        public ElementDefinitionInfo Element_Translation;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Translation;
         // 48. TerminologyCapabilities.closure
-        public ElementDefinitionInfo Element_Closure;                                                                                       // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "TerminologyCapabilities",                                                                                           // MakerGen.cs:395
-                ElementId = "TerminologyCapabilities"                                                                                       // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
-            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Kind.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Software.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Implementation.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_LockedDate.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_CodeSystem.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Expansion.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_CodeSearch.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_ValidateCode.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Translation.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Closure.Write(sDef);                                                                                                    // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_TerminologyCapabilities()                                                                                           // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Closure;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "TerminologyCapabilities",
+                ElementId = "TerminologyCapabilities"
+            });
+            Element_Url.Write(sDef);
+            Element_Version.Write(sDef);
+            Element_Name.Write(sDef);
+            Element_Title.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Experimental.Write(sDef);
+            Element_Date.Write(sDef);
+            Element_Publisher.Write(sDef);
+            Element_Contact.Write(sDef);
+            Element_Description.Write(sDef);
+            Element_UseContext.Write(sDef);
+            Element_Jurisdiction.Write(sDef);
+            Element_Purpose.Write(sDef);
+            Element_Copyright.Write(sDef);
+            Element_Kind.Write(sDef);
+            Element_Software.Write(sDef);
+            Element_Implementation.Write(sDef);
+            Element_LockedDate.Write(sDef);
+            Element_CodeSystem.Write(sDef);
+            Element_Expansion.Write(sDef);
+            Element_CodeSearch.Write(sDef);
+            Element_ValidateCode.Write(sDef);
+            Element_Translation.Write(sDef);
+            Element_Closure.Write(sDef);
+        }
+        
+        public Resource_TerminologyCapabilities()
+        {
+            {
                 // 1. TerminologyCapabilities.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.url",                                                                                    // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.url",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Url = new ElementDefinitionInfo
+                {
+                    Name = "Element_Url",
+                    Path= "TerminologyCapabilities.url",
+                    Id = "TerminologyCapabilities.url",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. TerminologyCapabilities.version
-                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.version",                                                                                // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.version",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Version = new ElementDefinitionInfo
+                {
+                    Name = "Element_Version",
+                    Path= "TerminologyCapabilities.version",
+                    Id = "TerminologyCapabilities.version",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. TerminologyCapabilities.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.name",                                                                                   // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.name",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Name = new ElementDefinitionInfo
+                {
+                    Name = "Element_Name",
+                    Path= "TerminologyCapabilities.name",
+                    Id = "TerminologyCapabilities.name",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. TerminologyCapabilities.title
-                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.title",                                                                                  // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.title",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Title = new ElementDefinitionInfo
+                {
+                    Name = "Element_Title",
+                    Path= "TerminologyCapabilities.title",
+                    Id = "TerminologyCapabilities.title",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. TerminologyCapabilities.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.status",                                                                                 // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.status",                                                                                  // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "TerminologyCapabilities.status",
+                    Id = "TerminologyCapabilities.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. TerminologyCapabilities.experimental
-                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.experimental",                                                                           // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.experimental",                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Experimental = new ElementDefinitionInfo
+                {
+                    Name = "Element_Experimental",
+                    Path= "TerminologyCapabilities.experimental",
+                    Id = "TerminologyCapabilities.experimental",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. TerminologyCapabilities.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.date",                                                                                   // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.date",                                                                                    // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Date = new ElementDefinitionInfo
+                {
+                    Name = "Element_Date",
+                    Path= "TerminologyCapabilities.date",
+                    Id = "TerminologyCapabilities.date",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. TerminologyCapabilities.publisher
-                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.publisher",                                                                              // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.publisher",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Publisher = new ElementDefinitionInfo
+                {
+                    Name = "Element_Publisher",
+                    Path= "TerminologyCapabilities.publisher",
+                    Id = "TerminologyCapabilities.publisher",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. TerminologyCapabilities.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.contact",                                                                                // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.contact",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Contact = new ElementDefinitionInfo
+                {
+                    Name = "Element_Contact",
+                    Path= "TerminologyCapabilities.contact",
+                    Id = "TerminologyCapabilities.contact",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. TerminologyCapabilities.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.description",                                                                            // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.description",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Description = new ElementDefinitionInfo
+                {
+                    Name = "Element_Description",
+                    Path= "TerminologyCapabilities.description",
+                    Id = "TerminologyCapabilities.description",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 11. TerminologyCapabilities.useContext
-                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.useContext",                                                                             // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.useContext",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_UseContext = new ElementDefinitionInfo
+                {
+                    Name = "Element_UseContext",
+                    Path= "TerminologyCapabilities.useContext",
+                    Id = "TerminologyCapabilities.useContext",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. TerminologyCapabilities.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.jurisdiction",                                                                           // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.jurisdiction",                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Jurisdiction = new ElementDefinitionInfo
+                {
+                    Name = "Element_Jurisdiction",
+                    Path= "TerminologyCapabilities.jurisdiction",
+                    Id = "TerminologyCapabilities.jurisdiction",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. TerminologyCapabilities.purpose
-                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.purpose",                                                                                // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.purpose",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Purpose = new ElementDefinitionInfo
+                {
+                    Name = "Element_Purpose",
+                    Path= "TerminologyCapabilities.purpose",
+                    Id = "TerminologyCapabilities.purpose",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 14. TerminologyCapabilities.copyright
-                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.copyright",                                                                              // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.copyright",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Copyright = new ElementDefinitionInfo
+                {
+                    Name = "Element_Copyright",
+                    Path= "TerminologyCapabilities.copyright",
+                    Id = "TerminologyCapabilities.copyright",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 15. TerminologyCapabilities.kind
-                this.Element_Kind = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Kind",                                                                                                  // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.kind",                                                                                   // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.kind",                                                                                    // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Kind = new ElementDefinitionInfo
+                {
+                    Name = "Element_Kind",
+                    Path= "TerminologyCapabilities.kind",
+                    Id = "TerminologyCapabilities.kind",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 16. TerminologyCapabilities.software
-                this.Element_Software = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Software",                                                                                              // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.software",                                                                               // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.software",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Software                                                                                                   // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Software = new ElementDefinitionInfo
+                {
+                    Name = "Element_Software",
+                    Path= "TerminologyCapabilities.software",
+                    Id = "TerminologyCapabilities.software",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Software
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 19. TerminologyCapabilities.implementation
-                this.Element_Implementation = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Implementation",                                                                                        // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.implementation",                                                                         // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.implementation",                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Implementation                                                                                             // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Implementation = new ElementDefinitionInfo
+                {
+                    Name = "Element_Implementation",
+                    Path= "TerminologyCapabilities.implementation",
+                    Id = "TerminologyCapabilities.implementation",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Implementation
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 22. TerminologyCapabilities.lockedDate
-                this.Element_LockedDate = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_LockedDate",                                                                                            // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.lockedDate",                                                                             // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.lockedDate",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_LockedDate = new ElementDefinitionInfo
+                {
+                    Name = "Element_LockedDate",
+                    Path= "TerminologyCapabilities.lockedDate",
+                    Id = "TerminologyCapabilities.lockedDate",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 23. TerminologyCapabilities.codeSystem
-                this.Element_CodeSystem = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_CodeSystem",                                                                                            // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.codeSystem",                                                                             // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.codeSystem",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_CodeSystem                                                                                                 // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_CodeSystem = new ElementDefinitionInfo
+                {
+                    Name = "Element_CodeSystem",
+                    Path= "TerminologyCapabilities.codeSystem",
+                    Id = "TerminologyCapabilities.codeSystem",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_CodeSystem
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 35. TerminologyCapabilities.expansion
-                this.Element_Expansion = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Expansion",                                                                                             // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.expansion",                                                                              // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.expansion",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Expansion                                                                                                  // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Expansion = new ElementDefinitionInfo
+                {
+                    Name = "Element_Expansion",
+                    Path= "TerminologyCapabilities.expansion",
+                    Id = "TerminologyCapabilities.expansion",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Expansion
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 43. TerminologyCapabilities.codeSearch
-                this.Element_CodeSearch = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_CodeSearch",                                                                                            // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.codeSearch",                                                                             // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.codeSearch",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_CodeSearch = new ElementDefinitionInfo
+                {
+                    Name = "Element_CodeSearch",
+                    Path= "TerminologyCapabilities.codeSearch",
+                    Id = "TerminologyCapabilities.codeSearch",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 44. TerminologyCapabilities.validateCode
-                this.Element_ValidateCode = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ValidateCode",                                                                                          // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.validateCode",                                                                           // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.validateCode",                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_ValidateCode                                                                                               // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ValidateCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_ValidateCode",
+                    Path= "TerminologyCapabilities.validateCode",
+                    Id = "TerminologyCapabilities.validateCode",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_ValidateCode
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 46. TerminologyCapabilities.translation
-                this.Element_Translation = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Translation",                                                                                           // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.translation",                                                                            // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.translation",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Translation                                                                                                // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Translation = new ElementDefinitionInfo
+                {
+                    Name = "Element_Translation",
+                    Path= "TerminologyCapabilities.translation",
+                    Id = "TerminologyCapabilities.translation",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Translation
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 48. TerminologyCapabilities.closure
-                this.Element_Closure = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Closure",                                                                                               // MakerGen.cs:238
-                    Path= "TerminologyCapabilities.closure",                                                                                // MakerGen.cs:239
-                    Id = "TerminologyCapabilities.closure",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Closure                                                                                                    // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "TerminologyCapabilities";                                                                                          // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/TerminologyCapabilities";                                                   // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Closure = new ElementDefinitionInfo
+                {
+                    Name = "Element_Closure",
+                    Path= "TerminologyCapabilities.closure",
+                    Id = "TerminologyCapabilities.closure",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Closure
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "TerminologyCapabilities";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/TerminologyCapabilities";
+        }
+    }
+}

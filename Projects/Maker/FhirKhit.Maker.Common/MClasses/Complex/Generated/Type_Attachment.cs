@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:498
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:499
-using System.IO;                                                                                                                            // MakerGen.cs:500
-using System.Linq;                                                                                                                          // MakerGen.cs:501
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:502
-                                                                                                                                            // MakerGen.cs:503
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:504
-{                                                                                                                                           // MakerGen.cs:505
-    #region Json                                                                                                                            // MakerGen.cs:506
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Complex
+{
+    #region Json
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -220,186 +220,186 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:510
+    #endregion
     /// <summary>
     /// Fhir complex 'Attachment'
     /// </summary>
     // 0. Attachment
-    public class Type_Attachment : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Type_Attachment : FhirKhit.Maker.Common.Complex.ComplexBase
+    {
         // 1. Attachment.contentType
-        public ElementDefinitionInfo Element_ContentType;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ContentType;
         // 2. Attachment.language
-        public ElementDefinitionInfo Element_Language;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Language;
         // 3. Attachment.data
-        public ElementDefinitionInfo Element_Data;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Data;
         // 4. Attachment.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Url;
         // 5. Attachment.size
-        public ElementDefinitionInfo Element_Size;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Size;
         // 6. Attachment.hash
-        public ElementDefinitionInfo Element_Hash;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Hash;
         // 7. Attachment.title
-        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Title;
         // 8. Attachment.creation
-        public ElementDefinitionInfo Element_Creation;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "Attachment",                                                                                                        // MakerGen.cs:395
-                ElementId = "Attachment"                                                                                                    // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_ContentType.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Language.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Data.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
-            Element_Size.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Hash.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Creation.Write(sDef);                                                                                                   // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Type_Attachment()                                                                                                            // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Creation;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "Attachment",
+                ElementId = "Attachment"
+            });
+            Element_ContentType.Write(sDef);
+            Element_Language.Write(sDef);
+            Element_Data.Write(sDef);
+            Element_Url.Write(sDef);
+            Element_Size.Write(sDef);
+            Element_Hash.Write(sDef);
+            Element_Title.Write(sDef);
+            Element_Creation.Write(sDef);
+        }
+        
+        public Type_Attachment()
+        {
+            {
                 // 1. Attachment.contentType
-                this.Element_ContentType = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ContentType",                                                                                           // MakerGen.cs:238
-                    Path= "Attachment.contentType",                                                                                         // MakerGen.cs:239
-                    Id = "Attachment.contentType",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ContentType = new ElementDefinitionInfo
+                {
+                    Name = "Element_ContentType",
+                    Path= "Attachment.contentType",
+                    Id = "Attachment.contentType",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. Attachment.language
-                this.Element_Language = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Language",                                                                                              // MakerGen.cs:238
-                    Path= "Attachment.language",                                                                                            // MakerGen.cs:239
-                    Id = "Attachment.language",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Language = new ElementDefinitionInfo
+                {
+                    Name = "Element_Language",
+                    Path= "Attachment.language",
+                    Id = "Attachment.language",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. Attachment.data
-                this.Element_Data = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Data",                                                                                                  // MakerGen.cs:238
-                    Path= "Attachment.data",                                                                                                // MakerGen.cs:239
-                    Id = "Attachment.data",                                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary                                                          // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Data = new ElementDefinitionInfo
+                {
+                    Name = "Element_Data",
+                    Path= "Attachment.data",
+                    Id = "Attachment.data",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. Attachment.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
-                    Path= "Attachment.url",                                                                                                 // MakerGen.cs:239
-                    Id = "Attachment.url",                                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Url                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Url = new ElementDefinitionInfo
+                {
+                    Name = "Element_Url",
+                    Path= "Attachment.url",
+                    Id = "Attachment.url",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Url
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. Attachment.size
-                this.Element_Size = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Size",                                                                                                  // MakerGen.cs:238
-                    Path= "Attachment.size",                                                                                                // MakerGen.cs:239
-                    Id = "Attachment.size",                                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                           // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Size = new ElementDefinitionInfo
+                {
+                    Name = "Element_Size",
+                    Path= "Attachment.size",
+                    Id = "Attachment.size",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. Attachment.hash
-                this.Element_Hash = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Hash",                                                                                                  // MakerGen.cs:238
-                    Path= "Attachment.hash",                                                                                                // MakerGen.cs:239
-                    Id = "Attachment.hash",                                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary                                                          // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Hash = new ElementDefinitionInfo
+                {
+                    Name = "Element_Hash",
+                    Path= "Attachment.hash",
+                    Id = "Attachment.hash",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Base64Binary
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. Attachment.title
-                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:238
-                    Path= "Attachment.title",                                                                                               // MakerGen.cs:239
-                    Id = "Attachment.title",                                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Title = new ElementDefinitionInfo
+                {
+                    Name = "Element_Title",
+                    Path= "Attachment.title",
+                    Id = "Attachment.title",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. Attachment.creation
-                this.Element_Creation = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Creation",                                                                                              // MakerGen.cs:238
-                    Path= "Attachment.creation",                                                                                            // MakerGen.cs:239
-                    Id = "Attachment.creation",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:515
+                this.Element_Creation = new ElementDefinitionInfo
+                {
+                    Name = "Element_Creation",
+                    Path= "Attachment.creation",
+                    Id = "Attachment.creation",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+        }
+    }
+}

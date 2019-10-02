@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "ExampleScenario",
@@ -820,1224 +820,1224 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'ExampleScenario'
     /// </summary>
     // 0. ExampleScenario
-    public class Resource_ExampleScenario : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                          // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_ExampleScenario : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 14. ExampleScenario.actor
-        public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 15. ExampleScenario.actor.actorId
-            public ElementDefinitionInfo Element_ActorId;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ActorId;
             // 16. ExampleScenario.actor.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Type;
             // 17. ExampleScenario.actor.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Name;
             // 18. ExampleScenario.actor.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ExampleScenario.actor",                                                                                         // MakerGen.cs:395
-                    ElementId = "ExampleScenario.actor"                                                                                     // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_ActorId.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Actor()                                                                                                             // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Description;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ExampleScenario.actor",
+                    ElementId = "ExampleScenario.actor"
+                });
+                Element_ActorId.Write(sDef);
+                Element_Type.Write(sDef);
+                Element_Name.Write(sDef);
+                Element_Description.Write(sDef);
+            }
+            
+            public Type_Actor()
+            {
+                {
                     // 15. ExampleScenario.actor.actorId
-                    this.Element_ActorId = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ActorId",                                                                                           // MakerGen.cs:238
-                        Path= "ExampleScenario.actor.actorId",                                                                              // MakerGen.cs:239
-                        Id = "ExampleScenario.actor.actorId",                                                                               // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ActorId = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ActorId",
+                        Path= "ExampleScenario.actor.actorId",
+                        Id = "ExampleScenario.actor.actorId",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 16. ExampleScenario.actor.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:238
-                        Path= "ExampleScenario.actor.type",                                                                                 // MakerGen.cs:239
-                        Id = "ExampleScenario.actor.type",                                                                                  // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Type = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Type",
+                        Path= "ExampleScenario.actor.type",
+                        Id = "ExampleScenario.actor.type",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 17. ExampleScenario.actor.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
-                        Path= "ExampleScenario.actor.name",                                                                                 // MakerGen.cs:239
-                        Id = "ExampleScenario.actor.name",                                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Name = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Name",
+                        Path= "ExampleScenario.actor.name",
+                        Id = "ExampleScenario.actor.name",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 18. ExampleScenario.actor.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
-                        Path= "ExampleScenario.actor.description",                                                                          // MakerGen.cs:239
-                        Id = "ExampleScenario.actor.description",                                                                           // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Description = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Description",
+                        Path= "ExampleScenario.actor.description",
+                        Id = "ExampleScenario.actor.description",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 19. ExampleScenario.instance
-        public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 24. ExampleScenario.instance.version
-            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 25. ExampleScenario.instance.version.versionId
-                public ElementDefinitionInfo Element_VersionId;                                                                             // MakerGen.cs:219
+                public ElementDefinitionInfo Element_VersionId;
                 // 26. ExampleScenario.instance.version.description
-                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "ExampleScenario.instance.version",                                                                          // MakerGen.cs:395
-                        ElementId = "ExampleScenario.instance.version"                                                                      // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_VersionId.Write(sDef);                                                                                          // MakerGen.cs:223
-                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Version()                                                                                                       // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Description;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "ExampleScenario.instance.version",
+                        ElementId = "ExampleScenario.instance.version"
+                    });
+                    Element_VersionId.Write(sDef);
+                    Element_Description.Write(sDef);
+                }
+                
+                public Type_Version()
+                {
+                    {
                         // 25. ExampleScenario.instance.version.versionId
-                        this.Element_VersionId = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_VersionId",                                                                                     // MakerGen.cs:238
-                            Path= "ExampleScenario.instance.version.versionId",                                                             // MakerGen.cs:239
-                            Id = "ExampleScenario.instance.version.versionId",                                                              // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_VersionId = new ElementDefinitionInfo
+                        {
+                            Name = "Element_VersionId",
+                            Path= "ExampleScenario.instance.version.versionId",
+                            Id = "ExampleScenario.instance.version.versionId",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 26. ExampleScenario.instance.version.description
-                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Description",                                                                                   // MakerGen.cs:238
-                            Path= "ExampleScenario.instance.version.description",                                                           // MakerGen.cs:239
-                            Id = "ExampleScenario.instance.version.description",                                                            // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                      // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Description = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Description",
+                            Path= "ExampleScenario.instance.version.description",
+                            Id = "ExampleScenario.instance.version.description",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 27. ExampleScenario.instance.containedInstance
-            public class Type_ContainedInstance : FhirKhit.Maker.Common.Complex.ComplexBase                                                 // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_ContainedInstance : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 28. ExampleScenario.instance.containedInstance.resourceId
-                public ElementDefinitionInfo Element_ResourceId;                                                                            // MakerGen.cs:219
+                public ElementDefinitionInfo Element_ResourceId;
                 // 29. ExampleScenario.instance.containedInstance.versionId
-                public ElementDefinitionInfo Element_VersionId;                                                                             // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "ExampleScenario.instance.containedInstance",                                                                // MakerGen.cs:395
-                        ElementId = "ExampleScenario.instance.containedInstance"                                                            // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_ResourceId.Write(sDef);                                                                                         // MakerGen.cs:223
-                    Element_VersionId.Write(sDef);                                                                                          // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_ContainedInstance()                                                                                             // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_VersionId;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "ExampleScenario.instance.containedInstance",
+                        ElementId = "ExampleScenario.instance.containedInstance"
+                    });
+                    Element_ResourceId.Write(sDef);
+                    Element_VersionId.Write(sDef);
+                }
+                
+                public Type_ContainedInstance()
+                {
+                    {
                         // 28. ExampleScenario.instance.containedInstance.resourceId
-                        this.Element_ResourceId = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_ResourceId",                                                                                    // MakerGen.cs:238
-                            Path= "ExampleScenario.instance.containedInstance.resourceId",                                                  // MakerGen.cs:239
-                            Id = "ExampleScenario.instance.containedInstance.resourceId",                                                   // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_ResourceId = new ElementDefinitionInfo
+                        {
+                            Name = "Element_ResourceId",
+                            Path= "ExampleScenario.instance.containedInstance.resourceId",
+                            Id = "ExampleScenario.instance.containedInstance.resourceId",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 29. ExampleScenario.instance.containedInstance.versionId
-                        this.Element_VersionId = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_VersionId",                                                                                     // MakerGen.cs:238
-                            Path= "ExampleScenario.instance.containedInstance.versionId",                                                   // MakerGen.cs:239
-                            Id = "ExampleScenario.instance.containedInstance.versionId",                                                    // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_VersionId = new ElementDefinitionInfo
+                        {
+                            Name = "Element_VersionId",
+                            Path= "ExampleScenario.instance.containedInstance.versionId",
+                            Id = "ExampleScenario.instance.containedInstance.versionId",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 20. ExampleScenario.instance.resourceId
-            public ElementDefinitionInfo Element_ResourceId;                                                                                // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ResourceId;
             // 21. ExampleScenario.instance.resourceType
-            public ElementDefinitionInfo Element_ResourceType;                                                                              // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ResourceType;
             // 22. ExampleScenario.instance.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Name;
             // 23. ExampleScenario.instance.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Description;
             // 24. ExampleScenario.instance.version
-            public ElementDefinitionInfo Element_Version;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Version;
             // 27. ExampleScenario.instance.containedInstance
-            public ElementDefinitionInfo Element_ContainedInstance;                                                                         // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ExampleScenario.instance",                                                                                      // MakerGen.cs:395
-                    ElementId = "ExampleScenario.instance"                                                                                  // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_ResourceId.Write(sDef);                                                                                             // MakerGen.cs:223
-                Element_ResourceType.Write(sDef);                                                                                           // MakerGen.cs:223
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_Version.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_ContainedInstance.Write(sDef);                                                                                      // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Instance()                                                                                                          // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_ContainedInstance;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ExampleScenario.instance",
+                    ElementId = "ExampleScenario.instance"
+                });
+                Element_ResourceId.Write(sDef);
+                Element_ResourceType.Write(sDef);
+                Element_Name.Write(sDef);
+                Element_Description.Write(sDef);
+                Element_Version.Write(sDef);
+                Element_ContainedInstance.Write(sDef);
+            }
+            
+            public Type_Instance()
+            {
+                {
                     // 20. ExampleScenario.instance.resourceId
-                    this.Element_ResourceId = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ResourceId",                                                                                        // MakerGen.cs:238
-                        Path= "ExampleScenario.instance.resourceId",                                                                        // MakerGen.cs:239
-                        Id = "ExampleScenario.instance.resourceId",                                                                         // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ResourceId = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ResourceId",
+                        Path= "ExampleScenario.instance.resourceId",
+                        Id = "ExampleScenario.instance.resourceId",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 21. ExampleScenario.instance.resourceType
-                    this.Element_ResourceType = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ResourceType",                                                                                      // MakerGen.cs:238
-                        Path= "ExampleScenario.instance.resourceType",                                                                      // MakerGen.cs:239
-                        Id = "ExampleScenario.instance.resourceType",                                                                       // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ResourceType = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ResourceType",
+                        Path= "ExampleScenario.instance.resourceType",
+                        Id = "ExampleScenario.instance.resourceType",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 22. ExampleScenario.instance.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
-                        Path= "ExampleScenario.instance.name",                                                                              // MakerGen.cs:239
-                        Id = "ExampleScenario.instance.name",                                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Name = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Name",
+                        Path= "ExampleScenario.instance.name",
+                        Id = "ExampleScenario.instance.name",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 23. ExampleScenario.instance.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
-                        Path= "ExampleScenario.instance.description",                                                                       // MakerGen.cs:239
-                        Id = "ExampleScenario.instance.description",                                                                        // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Description = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Description",
+                        Path= "ExampleScenario.instance.description",
+                        Id = "ExampleScenario.instance.description",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 24. ExampleScenario.instance.version
-                    this.Element_Version = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Version",                                                                                           // MakerGen.cs:238
-                        Path= "ExampleScenario.instance.version",                                                                           // MakerGen.cs:239
-                        Id = "ExampleScenario.instance.version",                                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Version                                                                                                // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Version = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Version",
+                        Path= "ExampleScenario.instance.version",
+                        Id = "ExampleScenario.instance.version",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Version
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 27. ExampleScenario.instance.containedInstance
-                    this.Element_ContainedInstance = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ContainedInstance",                                                                                 // MakerGen.cs:238
-                        Path= "ExampleScenario.instance.containedInstance",                                                                 // MakerGen.cs:239
-                        Id = "ExampleScenario.instance.containedInstance",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_ContainedInstance                                                                                      // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_ContainedInstance = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ContainedInstance",
+                        Path= "ExampleScenario.instance.containedInstance",
+                        Id = "ExampleScenario.instance.containedInstance",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_ContainedInstance
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 30. ExampleScenario.process
-        public class Type_Process : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Process : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 35. ExampleScenario.process.step
-            public class Type_Step : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Step : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 38. ExampleScenario.process.step.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
+                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
+                {
                     // 39. ExampleScenario.process.step.operation.number
-                    public ElementDefinitionInfo Element_Number;                                                                            // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Number;
                     // 40. ExampleScenario.process.step.operation.type
-                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Type;
                     // 41. ExampleScenario.process.step.operation.name
-                    public ElementDefinitionInfo Element_Name;                                                                              // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Name;
                     // 42. ExampleScenario.process.step.operation.initiator
-                    public ElementDefinitionInfo Element_Initiator;                                                                         // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Initiator;
                     // 43. ExampleScenario.process.step.operation.receiver
-                    public ElementDefinitionInfo Element_Receiver;                                                                          // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Receiver;
                     // 44. ExampleScenario.process.step.operation.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Description;
                     // 45. ExampleScenario.process.step.operation.initiatorActive
-                    public ElementDefinitionInfo Element_InitiatorActive;                                                                   // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_InitiatorActive;
                     // 46. ExampleScenario.process.step.operation.receiverActive
-                    public ElementDefinitionInfo Element_ReceiverActive;                                                                    // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_ReceiverActive;
                     // 47. ExampleScenario.process.step.operation.request
-                    public ElementDefinitionInfo Element_Request;                                                                           // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Request;
                     // 48. ExampleScenario.process.step.operation.response
-                    public ElementDefinitionInfo Element_Response;                                                                          // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:394
-                            Path = "ExampleScenario.process.step.operation",                                                                // MakerGen.cs:395
-                            ElementId = "ExampleScenario.process.step.operation"                                                            // MakerGen.cs:396
-                        });                                                                                                                 // MakerGen.cs:397
-                        Element_Number.Write(sDef);                                                                                         // MakerGen.cs:223
-                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:223
-                        Element_Name.Write(sDef);                                                                                           // MakerGen.cs:223
-                        Element_Initiator.Write(sDef);                                                                                      // MakerGen.cs:223
-                        Element_Receiver.Write(sDef);                                                                                       // MakerGen.cs:223
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:223
-                        Element_InitiatorActive.Write(sDef);                                                                                // MakerGen.cs:223
-                        Element_ReceiverActive.Write(sDef);                                                                                 // MakerGen.cs:223
-                        Element_Request.Write(sDef);                                                                                        // MakerGen.cs:223
-                        Element_Response.Write(sDef);                                                                                       // MakerGen.cs:223
-                    }                                                                                                                       // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                    public Type_Operation()                                                                                                 // MakerGen.cs:402
-                    {                                                                                                                       // MakerGen.cs:403
-                        {                                                                                                                   // MakerGen.cs:234
+                    public ElementDefinitionInfo Element_Response;
+                    
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                    {
+                        base.Write(sDef);
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                        {
+                            Path = "ExampleScenario.process.step.operation",
+                            ElementId = "ExampleScenario.process.step.operation"
+                        });
+                        Element_Number.Write(sDef);
+                        Element_Type.Write(sDef);
+                        Element_Name.Write(sDef);
+                        Element_Initiator.Write(sDef);
+                        Element_Receiver.Write(sDef);
+                        Element_Description.Write(sDef);
+                        Element_InitiatorActive.Write(sDef);
+                        Element_ReceiverActive.Write(sDef);
+                        Element_Request.Write(sDef);
+                        Element_Response.Write(sDef);
+                    }
+                    
+                    public Type_Operation()
+                    {
+                        {
                             // 39. ExampleScenario.process.step.operation.number
-                            this.Element_Number = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Number",                                                                                    // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.number",                                                      // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.number",                                                       // MakerGen.cs:240
-                                Min = 1,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Number = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Number",
+                                Path= "ExampleScenario.process.step.operation.number",
+                                Id = "ExampleScenario.process.step.operation.number",
+                                Min = 1,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 40. ExampleScenario.process.step.operation.type
-                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.type",                                                        // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.type",                                                         // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Type = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Type",
+                                Path= "ExampleScenario.process.step.operation.type",
+                                Id = "ExampleScenario.process.step.operation.type",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 41. ExampleScenario.process.step.operation.name
-                            this.Element_Name = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Name",                                                                                      // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.name",                                                        // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.name",                                                         // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Name = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Name",
+                                Path= "ExampleScenario.process.step.operation.name",
+                                Id = "ExampleScenario.process.step.operation.name",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 42. ExampleScenario.process.step.operation.initiator
-                            this.Element_Initiator = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Initiator",                                                                                 // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.initiator",                                                   // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.initiator",                                                    // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Initiator = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Initiator",
+                                Path= "ExampleScenario.process.step.operation.initiator",
+                                Id = "ExampleScenario.process.step.operation.initiator",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 43. ExampleScenario.process.step.operation.receiver
-                            this.Element_Receiver = new ElementDefinitionInfo                                                               // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Receiver",                                                                                  // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.receiver",                                                    // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.receiver",                                                     // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Receiver = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Receiver",
+                                Path= "ExampleScenario.process.step.operation.receiver",
+                                Id = "ExampleScenario.process.step.operation.receiver",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 44. ExampleScenario.process.step.operation.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Description",                                                                               // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.description",                                                 // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.description",                                                  // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                  // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Description = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Description",
+                                Path= "ExampleScenario.process.step.operation.description",
+                                Id = "ExampleScenario.process.step.operation.description",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 45. ExampleScenario.process.step.operation.initiatorActive
-                            this.Element_InitiatorActive = new ElementDefinitionInfo                                                        // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_InitiatorActive",                                                                           // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.initiatorActive",                                             // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.initiatorActive",                                              // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_InitiatorActive = new ElementDefinitionInfo
+                            {
+                                Name = "Element_InitiatorActive",
+                                Path= "ExampleScenario.process.step.operation.initiatorActive",
+                                Id = "ExampleScenario.process.step.operation.initiatorActive",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 46. ExampleScenario.process.step.operation.receiverActive
-                            this.Element_ReceiverActive = new ElementDefinitionInfo                                                         // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_ReceiverActive",                                                                            // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.receiverActive",                                              // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.receiverActive",                                               // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_ReceiverActive = new ElementDefinitionInfo
+                            {
+                                Name = "Element_ReceiverActive",
+                                Path= "ExampleScenario.process.step.operation.receiverActive",
+                                Id = "ExampleScenario.process.step.operation.receiverActive",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 47. ExampleScenario.process.step.operation.request
-                            this.Element_Request = new ElementDefinitionInfo                                                                // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Request",                                                                                   // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.request",                                                     // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.request",                                                      // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Request = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Request",
+                                Path= "ExampleScenario.process.step.operation.request",
+                                Id = "ExampleScenario.process.step.operation.request",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                }
+                            };
+                        }
+                        {
                             // 48. ExampleScenario.process.step.operation.response
-                            this.Element_Response = new ElementDefinitionInfo                                                               // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Response",                                                                                  // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.operation.response",                                                    // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.operation.response",                                                     // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:407
+                            this.Element_Response = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Response",
+                                Path= "ExampleScenario.process.step.operation.response",
+                                Id = "ExampleScenario.process.step.operation.response",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                }
+                            };
+                        }
+                    }
+                }
                 // 49. ExampleScenario.process.step.alternative
-                public class Type_Alternative : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
+                public class Type_Alternative : FhirKhit.Maker.Common.Complex.ComplexBase
+                {
                     // 50. ExampleScenario.process.step.alternative.title
-                    public ElementDefinitionInfo Element_Title;                                                                             // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Title;
                     // 51. ExampleScenario.process.step.alternative.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:219
+                    public ElementDefinitionInfo Element_Description;
                     // 52. ExampleScenario.process.step.alternative.step
-                    public ElementDefinitionInfo Element_Step;                                                                              // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
-                    {                                                                                                                       // MakerGen.cs:391
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
-                        {                                                                                                                   // MakerGen.cs:394
-                            Path = "ExampleScenario.process.step.alternative",                                                              // MakerGen.cs:395
-                            ElementId = "ExampleScenario.process.step.alternative"                                                          // MakerGen.cs:396
-                        });                                                                                                                 // MakerGen.cs:397
-                        Element_Title.Write(sDef);                                                                                          // MakerGen.cs:223
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:223
-                        Element_Step.Write(sDef);                                                                                           // MakerGen.cs:223
-                    }                                                                                                                       // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                    public Type_Alternative()                                                                                               // MakerGen.cs:402
-                    {                                                                                                                       // MakerGen.cs:403
-                        {                                                                                                                   // MakerGen.cs:234
+                    public ElementDefinitionInfo Element_Step;
+                    
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                    {
+                        base.Write(sDef);
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                        {
+                            Path = "ExampleScenario.process.step.alternative",
+                            ElementId = "ExampleScenario.process.step.alternative"
+                        });
+                        Element_Title.Write(sDef);
+                        Element_Description.Write(sDef);
+                        Element_Step.Write(sDef);
+                    }
+                    
+                    public Type_Alternative()
+                    {
+                        {
                             // 50. ExampleScenario.process.step.alternative.title
-                            this.Element_Title = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Title",                                                                                     // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.alternative.title",                                                     // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.alternative.title",                                                      // MakerGen.cs:240
-                                Min = 1,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Title = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Title",
+                                Path= "ExampleScenario.process.step.alternative.title",
+                                Id = "ExampleScenario.process.step.alternative.title",
+                                Min = 1,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 51. ExampleScenario.process.step.alternative.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Description",                                                                               // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.alternative.description",                                               // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.alternative.description",                                                // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = 1,                                                                                                    // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                  // MakerGen.cs:303
-                                    {                                                                                                       // MakerGen.cs:304
-                                    }                                                                                                       // MakerGen.cs:307
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                        {                                                                                                                   // MakerGen.cs:234
+                            this.Element_Description = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Description",
+                                Path= "ExampleScenario.process.step.alternative.description",
+                                Id = "ExampleScenario.process.step.alternative.description",
+                                Min = 0,
+                                Max = 1,
+                                Types = new BaseType[]
+                                {
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                                    {
+                                    }
+                                }
+                            };
+                        }
+                        {
                             // 52. ExampleScenario.process.step.alternative.step
-                            this.Element_Step = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                Name = "Element_Step",                                                                                      // MakerGen.cs:238
-                                Path= "ExampleScenario.process.step.alternative.step",                                                      // MakerGen.cs:239
-                                Id = "ExampleScenario.process.step.alternative.step",                                                       // MakerGen.cs:240
-                                Min = 0,                                                                                                    // MakerGen.cs:241
-                                Max = -1,                                                                                                   // MakerGen.cs:242
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
-                                {                                                                                                           // MakerGen.cs:244
-                                }                                                                                                           // MakerGen.cs:246
-                            };                                                                                                              // MakerGen.cs:247
-                        }                                                                                                                   // MakerGen.cs:248
-                    }                                                                                                                       // MakerGen.cs:405
-                }                                                                                                                           // MakerGen.cs:407
+                            this.Element_Step = new ElementDefinitionInfo
+                            {
+                                Name = "Element_Step",
+                                Path= "ExampleScenario.process.step.alternative.step",
+                                Id = "ExampleScenario.process.step.alternative.step",
+                                Min = 0,
+                                Max = -1,
+                                Types = new BaseType[]
+                                {
+                                }
+                            };
+                        }
+                    }
+                }
                 // 36. ExampleScenario.process.step.process
-                public ElementDefinitionInfo Element_Process;                                                                               // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Process;
                 // 37. ExampleScenario.process.step.pause
-                public ElementDefinitionInfo Element_Pause;                                                                                 // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Pause;
                 // 38. ExampleScenario.process.step.operation
-                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Operation;
                 // 49. ExampleScenario.process.step.alternative
-                public ElementDefinitionInfo Element_Alternative;                                                                           // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "ExampleScenario.process.step",                                                                              // MakerGen.cs:395
-                        ElementId = "ExampleScenario.process.step"                                                                          // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Process.Write(sDef);                                                                                            // MakerGen.cs:223
-                    Element_Pause.Write(sDef);                                                                                              // MakerGen.cs:223
-                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:223
-                    Element_Alternative.Write(sDef);                                                                                        // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Step()                                                                                                          // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Alternative;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "ExampleScenario.process.step",
+                        ElementId = "ExampleScenario.process.step"
+                    });
+                    Element_Process.Write(sDef);
+                    Element_Pause.Write(sDef);
+                    Element_Operation.Write(sDef);
+                    Element_Alternative.Write(sDef);
+                }
+                
+                public Type_Step()
+                {
+                    {
                         // 36. ExampleScenario.process.step.process
-                        this.Element_Process = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Process",                                                                                       // MakerGen.cs:238
-                            Path= "ExampleScenario.process.step.process",                                                                   // MakerGen.cs:239
-                            Id = "ExampleScenario.process.step.process",                                                                    // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = -1,                                                                                                       // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Process = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Process",
+                            Path= "ExampleScenario.process.step.process",
+                            Id = "ExampleScenario.process.step.process",
+                            Min = 0,
+                            Max = -1,
+                            Types = new BaseType[]
+                            {
+                            }
+                        };
+                    }
+                    {
                         // 37. ExampleScenario.process.step.pause
-                        this.Element_Pause = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Pause",                                                                                         // MakerGen.cs:238
-                            Path= "ExampleScenario.process.step.pause",                                                                     // MakerGen.cs:239
-                            Id = "ExampleScenario.process.step.pause",                                                                      // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Pause = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Pause",
+                            Path= "ExampleScenario.process.step.pause",
+                            Id = "ExampleScenario.process.step.pause",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 38. ExampleScenario.process.step.operation
-                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Operation",                                                                                     // MakerGen.cs:238
-                            Path= "ExampleScenario.process.step.operation",                                                                 // MakerGen.cs:239
-                            Id = "ExampleScenario.process.step.operation",                                                                  // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new Type_Operation                                                                                          // MakerGen.cs:262
-                                {                                                                                                           // MakerGen.cs:263
-                                }                                                                                                           // MakerGen.cs:264
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Operation = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Operation",
+                            Path= "ExampleScenario.process.step.operation",
+                            Id = "ExampleScenario.process.step.operation",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new Type_Operation
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 49. ExampleScenario.process.step.alternative
-                        this.Element_Alternative = new ElementDefinitionInfo                                                                // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Alternative",                                                                                   // MakerGen.cs:238
-                            Path= "ExampleScenario.process.step.alternative",                                                               // MakerGen.cs:239
-                            Id = "ExampleScenario.process.step.alternative",                                                                // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = -1,                                                                                                       // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new Type_Alternative                                                                                        // MakerGen.cs:262
-                                {                                                                                                           // MakerGen.cs:263
-                                }                                                                                                           // MakerGen.cs:264
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Alternative = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Alternative",
+                            Path= "ExampleScenario.process.step.alternative",
+                            Id = "ExampleScenario.process.step.alternative",
+                            Min = 0,
+                            Max = -1,
+                            Types = new BaseType[]
+                            {
+                                new Type_Alternative
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 31. ExampleScenario.process.title
-            public ElementDefinitionInfo Element_Title;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Title;
             // 32. ExampleScenario.process.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Description;
             // 33. ExampleScenario.process.preConditions
-            public ElementDefinitionInfo Element_PreConditions;                                                                             // MakerGen.cs:219
+            public ElementDefinitionInfo Element_PreConditions;
             // 34. ExampleScenario.process.postConditions
-            public ElementDefinitionInfo Element_PostConditions;                                                                            // MakerGen.cs:219
+            public ElementDefinitionInfo Element_PostConditions;
             // 35. ExampleScenario.process.step
-            public ElementDefinitionInfo Element_Step;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ExampleScenario.process",                                                                                       // MakerGen.cs:395
-                    ElementId = "ExampleScenario.process"                                                                                   // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Title.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_PreConditions.Write(sDef);                                                                                          // MakerGen.cs:223
-                Element_PostConditions.Write(sDef);                                                                                         // MakerGen.cs:223
-                Element_Step.Write(sDef);                                                                                                   // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Process()                                                                                                           // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Step;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ExampleScenario.process",
+                    ElementId = "ExampleScenario.process"
+                });
+                Element_Title.Write(sDef);
+                Element_Description.Write(sDef);
+                Element_PreConditions.Write(sDef);
+                Element_PostConditions.Write(sDef);
+                Element_Step.Write(sDef);
+            }
+            
+            public Type_Process()
+            {
+                {
                     // 31. ExampleScenario.process.title
-                    this.Element_Title = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Title",                                                                                             // MakerGen.cs:238
-                        Path= "ExampleScenario.process.title",                                                                              // MakerGen.cs:239
-                        Id = "ExampleScenario.process.title",                                                                               // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Title = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Title",
+                        Path= "ExampleScenario.process.title",
+                        Id = "ExampleScenario.process.title",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 32. ExampleScenario.process.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
-                        Path= "ExampleScenario.process.description",                                                                        // MakerGen.cs:239
-                        Id = "ExampleScenario.process.description",                                                                         // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Description = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Description",
+                        Path= "ExampleScenario.process.description",
+                        Id = "ExampleScenario.process.description",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 33. ExampleScenario.process.preConditions
-                    this.Element_PreConditions = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_PreConditions",                                                                                     // MakerGen.cs:238
-                        Path= "ExampleScenario.process.preConditions",                                                                      // MakerGen.cs:239
-                        Id = "ExampleScenario.process.preConditions",                                                                       // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_PreConditions = new ElementDefinitionInfo
+                    {
+                        Name = "Element_PreConditions",
+                        Path= "ExampleScenario.process.preConditions",
+                        Id = "ExampleScenario.process.preConditions",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 34. ExampleScenario.process.postConditions
-                    this.Element_PostConditions = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_PostConditions",                                                                                    // MakerGen.cs:238
-                        Path= "ExampleScenario.process.postConditions",                                                                     // MakerGen.cs:239
-                        Id = "ExampleScenario.process.postConditions",                                                                      // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_PostConditions = new ElementDefinitionInfo
+                    {
+                        Name = "Element_PostConditions",
+                        Path= "ExampleScenario.process.postConditions",
+                        Id = "ExampleScenario.process.postConditions",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 35. ExampleScenario.process.step
-                    this.Element_Step = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Step",                                                                                              // MakerGen.cs:238
-                        Path= "ExampleScenario.process.step",                                                                               // MakerGen.cs:239
-                        Id = "ExampleScenario.process.step",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Step                                                                                                   // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Step = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Step",
+                        Path= "ExampleScenario.process.step",
+                        Id = "ExampleScenario.process.step",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Step
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. ExampleScenario.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Url;
         // 2. ExampleScenario.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 3. ExampleScenario.version
-        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Version;
         // 4. ExampleScenario.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Name;
         // 5. ExampleScenario.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 6. ExampleScenario.experimental
-        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Experimental;
         // 7. ExampleScenario.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Date;
         // 8. ExampleScenario.publisher
-        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Publisher;
         // 9. ExampleScenario.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Contact;
         // 10. ExampleScenario.useContext
-        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_UseContext;
         // 11. ExampleScenario.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Jurisdiction;
         // 12. ExampleScenario.copyright
-        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Copyright;
         // 13. ExampleScenario.purpose
-        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Purpose;
         // 14. ExampleScenario.actor
-        public ElementDefinitionInfo Element_Actor;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Actor;
         // 19. ExampleScenario.instance
-        public ElementDefinitionInfo Element_Instance;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Instance;
         // 30. ExampleScenario.process
-        public ElementDefinitionInfo Element_Process;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Process;
         // 53. ExampleScenario.workflow
-        public ElementDefinitionInfo Element_Workflow;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "ExampleScenario",                                                                                                   // MakerGen.cs:395
-                ElementId = "ExampleScenario"                                                                                               // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Actor.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Instance.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Process.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Workflow.Write(sDef);                                                                                                   // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_ExampleScenario()                                                                                                   // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Workflow;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "ExampleScenario",
+                ElementId = "ExampleScenario"
+            });
+            Element_Url.Write(sDef);
+            Element_Identifier.Write(sDef);
+            Element_Version.Write(sDef);
+            Element_Name.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Experimental.Write(sDef);
+            Element_Date.Write(sDef);
+            Element_Publisher.Write(sDef);
+            Element_Contact.Write(sDef);
+            Element_UseContext.Write(sDef);
+            Element_Jurisdiction.Write(sDef);
+            Element_Copyright.Write(sDef);
+            Element_Purpose.Write(sDef);
+            Element_Actor.Write(sDef);
+            Element_Instance.Write(sDef);
+            Element_Process.Write(sDef);
+            Element_Workflow.Write(sDef);
+        }
+        
+        public Resource_ExampleScenario()
+        {
+            {
                 // 1. ExampleScenario.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
-                    Path= "ExampleScenario.url",                                                                                            // MakerGen.cs:239
-                    Id = "ExampleScenario.url",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Url = new ElementDefinitionInfo
+                {
+                    Name = "Element_Url",
+                    Path= "ExampleScenario.url",
+                    Id = "ExampleScenario.url",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. ExampleScenario.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "ExampleScenario.identifier",                                                                                     // MakerGen.cs:239
-                    Id = "ExampleScenario.identifier",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "ExampleScenario.identifier",
+                    Id = "ExampleScenario.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. ExampleScenario.version
-                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:238
-                    Path= "ExampleScenario.version",                                                                                        // MakerGen.cs:239
-                    Id = "ExampleScenario.version",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Version = new ElementDefinitionInfo
+                {
+                    Name = "Element_Version",
+                    Path= "ExampleScenario.version",
+                    Id = "ExampleScenario.version",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. ExampleScenario.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
-                    Path= "ExampleScenario.name",                                                                                           // MakerGen.cs:239
-                    Id = "ExampleScenario.name",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Name = new ElementDefinitionInfo
+                {
+                    Name = "Element_Name",
+                    Path= "ExampleScenario.name",
+                    Id = "ExampleScenario.name",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. ExampleScenario.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "ExampleScenario.status",                                                                                         // MakerGen.cs:239
-                    Id = "ExampleScenario.status",                                                                                          // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "ExampleScenario.status",
+                    Id = "ExampleScenario.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. ExampleScenario.experimental
-                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:238
-                    Path= "ExampleScenario.experimental",                                                                                   // MakerGen.cs:239
-                    Id = "ExampleScenario.experimental",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Experimental = new ElementDefinitionInfo
+                {
+                    Name = "Element_Experimental",
+                    Path= "ExampleScenario.experimental",
+                    Id = "ExampleScenario.experimental",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. ExampleScenario.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
-                    Path= "ExampleScenario.date",                                                                                           // MakerGen.cs:239
-                    Id = "ExampleScenario.date",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Date = new ElementDefinitionInfo
+                {
+                    Name = "Element_Date",
+                    Path= "ExampleScenario.date",
+                    Id = "ExampleScenario.date",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. ExampleScenario.publisher
-                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:238
-                    Path= "ExampleScenario.publisher",                                                                                      // MakerGen.cs:239
-                    Id = "ExampleScenario.publisher",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Publisher = new ElementDefinitionInfo
+                {
+                    Name = "Element_Publisher",
+                    Path= "ExampleScenario.publisher",
+                    Id = "ExampleScenario.publisher",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. ExampleScenario.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
-                    Path= "ExampleScenario.contact",                                                                                        // MakerGen.cs:239
-                    Id = "ExampleScenario.contact",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Contact = new ElementDefinitionInfo
+                {
+                    Name = "Element_Contact",
+                    Path= "ExampleScenario.contact",
+                    Id = "ExampleScenario.contact",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. ExampleScenario.useContext
-                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:238
-                    Path= "ExampleScenario.useContext",                                                                                     // MakerGen.cs:239
-                    Id = "ExampleScenario.useContext",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_UseContext = new ElementDefinitionInfo
+                {
+                    Name = "Element_UseContext",
+                    Path= "ExampleScenario.useContext",
+                    Id = "ExampleScenario.useContext",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 11. ExampleScenario.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
-                    Path= "ExampleScenario.jurisdiction",                                                                                   // MakerGen.cs:239
-                    Id = "ExampleScenario.jurisdiction",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Jurisdiction = new ElementDefinitionInfo
+                {
+                    Name = "Element_Jurisdiction",
+                    Path= "ExampleScenario.jurisdiction",
+                    Id = "ExampleScenario.jurisdiction",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. ExampleScenario.copyright
-                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:238
-                    Path= "ExampleScenario.copyright",                                                                                      // MakerGen.cs:239
-                    Id = "ExampleScenario.copyright",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Copyright = new ElementDefinitionInfo
+                {
+                    Name = "Element_Copyright",
+                    Path= "ExampleScenario.copyright",
+                    Id = "ExampleScenario.copyright",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. ExampleScenario.purpose
-                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:238
-                    Path= "ExampleScenario.purpose",                                                                                        // MakerGen.cs:239
-                    Id = "ExampleScenario.purpose",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Purpose = new ElementDefinitionInfo
+                {
+                    Name = "Element_Purpose",
+                    Path= "ExampleScenario.purpose",
+                    Id = "ExampleScenario.purpose",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 14. ExampleScenario.actor
-                this.Element_Actor = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Actor",                                                                                                 // MakerGen.cs:238
-                    Path= "ExampleScenario.actor",                                                                                          // MakerGen.cs:239
-                    Id = "ExampleScenario.actor",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Actor                                                                                                      // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Actor = new ElementDefinitionInfo
+                {
+                    Name = "Element_Actor",
+                    Path= "ExampleScenario.actor",
+                    Id = "ExampleScenario.actor",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Actor
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 19. ExampleScenario.instance
-                this.Element_Instance = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Instance",                                                                                              // MakerGen.cs:238
-                    Path= "ExampleScenario.instance",                                                                                       // MakerGen.cs:239
-                    Id = "ExampleScenario.instance",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Instance                                                                                                   // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Instance = new ElementDefinitionInfo
+                {
+                    Name = "Element_Instance",
+                    Path= "ExampleScenario.instance",
+                    Id = "ExampleScenario.instance",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Instance
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 30. ExampleScenario.process
-                this.Element_Process = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Process",                                                                                               // MakerGen.cs:238
-                    Path= "ExampleScenario.process",                                                                                        // MakerGen.cs:239
-                    Id = "ExampleScenario.process",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Process                                                                                                    // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Process = new ElementDefinitionInfo
+                {
+                    Name = "Element_Process",
+                    Path= "ExampleScenario.process",
+                    Id = "ExampleScenario.process",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Process
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 53. ExampleScenario.workflow
-                this.Element_Workflow = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Workflow",                                                                                              // MakerGen.cs:238
-                    Path= "ExampleScenario.workflow",                                                                                       // MakerGen.cs:239
-                    Id = "ExampleScenario.workflow",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ExampleScenario"                                                   // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "ExampleScenario";                                                                                                  // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ExampleScenario";                                                           // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Workflow = new ElementDefinitionInfo
+                {
+                    Name = "Element_Workflow",
+                    Path= "ExampleScenario.workflow",
+                    Id = "ExampleScenario.workflow",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/ExampleScenario"
+                            }
+                        }
+                    }
+                };
+            }
+            this.Name = "ExampleScenario";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ExampleScenario";
+        }
+    }
+}

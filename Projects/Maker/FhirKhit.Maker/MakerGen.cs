@@ -16,19 +16,6 @@ namespace FhirKhit.Maker
 {
     public class MakerGen : ConverterBase, IDisposable
     {
-        public class SDefInfo
-        {
-            public enum TypeFlag
-            {
-                Unknown,
-                Resource,
-                Element
-            }
-            public TypeFlag TFlag = TypeFlag.Unknown;
-
-            public StructureDefinition SDef;
-        };
-
         const String ComplexNameSpace = "FhirKhit.Maker.Common.Complex";
         const String ResourceNameSpace = "FhirKhit.Maker.Common.Resource";
         const String PrimitiveNameSpace = "FhirKhit.Maker.Common.Primitive";
@@ -74,11 +61,16 @@ namespace FhirKhit.Maker
             if (this.items.TryGetValue(path, out SDefInfo sDef) == false)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Item {path} not in dictionary");
 
-            // If TFlags unknown, use parents TFlag value.
-            if (sDef.TFlag == SDefInfo.TypeFlag.Unknown)
+            if (
+                (sDef.Parent == null) &&
+                (String.IsNullOrEmpty(sDef.SDef.BaseDefinition) == false)
+                )
             {
-                SDefInfo parentInfo = this.GetTypedSDef(sDef.SDef.BaseDefinition);
-                sDef.TFlag = parentInfo.TFlag;
+                sDef.Parent = this.GetTypedSDef(sDef.SDef.BaseDefinition);
+
+                // If TFlags unknown, use parents TFlag value.
+                if (sDef.TFlag == SDefInfo.TypeFlag.Unknown)
+                    sDef.TFlag = sDef.Parent.TFlag;
             }
 
             return sDef;
@@ -102,34 +94,49 @@ namespace FhirKhit.Maker
             return this.Errors.Any() ? -1 : 0;
         }
 
+        void LoadFhirElement(StructureDefinition sDef)
+        {
+            const String fcn = "LoadFhirElement";
+
+            /*
+             * Eliminate all but the top level resources to simplify things.
+             * Add them in later????
+             */
+            if (sDef.Type != sDef.Name)
+            {
+                this.ConversionWarn(this.GetType().Name, fcn, $"Skipping resource {sDef.Name}");
+                return;
+            }
+
+            SDefInfo sDefInfo = new SDefInfo
+            {
+                SDef = sDef
+            };
+
+            switch (sDef.Url)
+            {
+                case "http://hl7.org/fhir/StructureDefinition/Element":
+                    sDefInfo.TFlag = SDefInfo.TypeFlag.Element;
+                    break;
+
+                case "http://hl7.org/fhir/StructureDefinition/Resource":
+                    sDefInfo.TFlag = SDefInfo.TypeFlag.Resource;
+                    break;
+
+                default:
+                    sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
+                    break;
+            }
+            this.items.Add(sDef.Url, sDefInfo);
+        }
+
         void LoadFhirElements()
         {
             const String fcn = "LoadFhirElements";
 
             this.ConversionInfo(this.GetType().Name, fcn, "Loading Fhir structure definitions");
             foreach (StructureDefinition sDef in this.sDefs.FhirSDefs.GetResources())
-            {
-                SDefInfo sDefInfo = new SDefInfo
-                {
-                    SDef = sDef
-                };
-
-                switch (sDef.Url)
-                {
-                    case "http://hl7.org/fhir/StructureDefinition/Element":
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Element;
-                        break;
-
-                    case "http://hl7.org/fhir/StructureDefinition/Resource":
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Resource;
-                        break;
-
-                    default:
-                        sDefInfo.TFlag = SDefInfo.TypeFlag.Unknown;
-                        break;
-                }
-                this.items.Add(sDef.Url, sDefInfo);
-            }
+                LoadFhirElement(sDef);
         }
 
         void ClearSDef(StructureDefinition sDef)

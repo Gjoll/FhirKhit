@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "VisionPrescription",
@@ -444,557 +444,557 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'VisionPrescription'
     /// </summary>
     // 0. VisionPrescription
-    public class Resource_VisionPrescription : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                       // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_VisionPrescription : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 8. VisionPrescription.lensSpecification
-        public class Type_LensSpecification : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_LensSpecification : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 14. VisionPrescription.lensSpecification.prism
-            public class Type_Prism : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Prism : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 15. VisionPrescription.lensSpecification.prism.amount
-                public ElementDefinitionInfo Element_Amount;                                                                                // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Amount;
                 // 16. VisionPrescription.lensSpecification.prism.base
-                public ElementDefinitionInfo Element_Base;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "VisionPrescription.lensSpecification.prism",                                                                // MakerGen.cs:395
-                        ElementId = "VisionPrescription.lensSpecification.prism"                                                            // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Amount.Write(sDef);                                                                                             // MakerGen.cs:223
-                    Element_Base.Write(sDef);                                                                                               // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Prism()                                                                                                         // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Base;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "VisionPrescription.lensSpecification.prism",
+                        ElementId = "VisionPrescription.lensSpecification.prism"
+                    });
+                    Element_Amount.Write(sDef);
+                    Element_Base.Write(sDef);
+                }
+                
+                public Type_Prism()
+                {
+                    {
                         // 15. VisionPrescription.lensSpecification.prism.amount
-                        this.Element_Amount = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Amount",                                                                                        // MakerGen.cs:238
-                            Path= "VisionPrescription.lensSpecification.prism.amount",                                                      // MakerGen.cs:239
-                            Id = "VisionPrescription.lensSpecification.prism.amount",                                                       // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Amount = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Amount",
+                            Path= "VisionPrescription.lensSpecification.prism.amount",
+                            Id = "VisionPrescription.lensSpecification.prism.amount",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 16. VisionPrescription.lensSpecification.prism.base
-                        this.Element_Base = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Base",                                                                                          // MakerGen.cs:238
-                            Path= "VisionPrescription.lensSpecification.prism.base",                                                        // MakerGen.cs:239
-                            Id = "VisionPrescription.lensSpecification.prism.base",                                                         // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Base = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Base",
+                            Path= "VisionPrescription.lensSpecification.prism.base",
+                            Id = "VisionPrescription.lensSpecification.prism.base",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 9. VisionPrescription.lensSpecification.product
-            public ElementDefinitionInfo Element_Product;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Product;
             // 10. VisionPrescription.lensSpecification.eye
-            public ElementDefinitionInfo Element_Eye;                                                                                       // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Eye;
             // 11. VisionPrescription.lensSpecification.sphere
-            public ElementDefinitionInfo Element_Sphere;                                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Sphere;
             // 12. VisionPrescription.lensSpecification.cylinder
-            public ElementDefinitionInfo Element_Cylinder;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Cylinder;
             // 13. VisionPrescription.lensSpecification.axis
-            public ElementDefinitionInfo Element_Axis;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Axis;
             // 14. VisionPrescription.lensSpecification.prism
-            public ElementDefinitionInfo Element_Prism;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Prism;
             // 17. VisionPrescription.lensSpecification.add
-            public ElementDefinitionInfo Element_Add;                                                                                       // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Add;
             // 18. VisionPrescription.lensSpecification.power
-            public ElementDefinitionInfo Element_Power;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Power;
             // 19. VisionPrescription.lensSpecification.backCurve
-            public ElementDefinitionInfo Element_BackCurve;                                                                                 // MakerGen.cs:219
+            public ElementDefinitionInfo Element_BackCurve;
             // 20. VisionPrescription.lensSpecification.diameter
-            public ElementDefinitionInfo Element_Diameter;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Diameter;
             // 21. VisionPrescription.lensSpecification.duration
-            public ElementDefinitionInfo Element_Duration;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Duration;
             // 22. VisionPrescription.lensSpecification.color
-            public ElementDefinitionInfo Element_Color;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Color;
             // 23. VisionPrescription.lensSpecification.brand
-            public ElementDefinitionInfo Element_Brand;                                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Brand;
             // 24. VisionPrescription.lensSpecification.note
-            public ElementDefinitionInfo Element_Note;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "VisionPrescription.lensSpecification",                                                                          // MakerGen.cs:395
-                    ElementId = "VisionPrescription.lensSpecification"                                                                      // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Product.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Eye.Write(sDef);                                                                                                    // MakerGen.cs:223
-                Element_Sphere.Write(sDef);                                                                                                 // MakerGen.cs:223
-                Element_Cylinder.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Axis.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Prism.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_Add.Write(sDef);                                                                                                    // MakerGen.cs:223
-                Element_Power.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_BackCurve.Write(sDef);                                                                                              // MakerGen.cs:223
-                Element_Diameter.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Duration.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Color.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_Brand.Write(sDef);                                                                                                  // MakerGen.cs:223
-                Element_Note.Write(sDef);                                                                                                   // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_LensSpecification()                                                                                                 // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Note;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "VisionPrescription.lensSpecification",
+                    ElementId = "VisionPrescription.lensSpecification"
+                });
+                Element_Product.Write(sDef);
+                Element_Eye.Write(sDef);
+                Element_Sphere.Write(sDef);
+                Element_Cylinder.Write(sDef);
+                Element_Axis.Write(sDef);
+                Element_Prism.Write(sDef);
+                Element_Add.Write(sDef);
+                Element_Power.Write(sDef);
+                Element_BackCurve.Write(sDef);
+                Element_Diameter.Write(sDef);
+                Element_Duration.Write(sDef);
+                Element_Color.Write(sDef);
+                Element_Brand.Write(sDef);
+                Element_Note.Write(sDef);
+            }
+            
+            public Type_LensSpecification()
+            {
+                {
                     // 9. VisionPrescription.lensSpecification.product
-                    this.Element_Product = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Product",                                                                                           // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.product",                                                               // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.product",                                                                // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Product = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Product",
+                        Path= "VisionPrescription.lensSpecification.product",
+                        Id = "VisionPrescription.lensSpecification.product",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 10. VisionPrescription.lensSpecification.eye
-                    this.Element_Eye = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Eye",                                                                                               // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.eye",                                                                   // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.eye",                                                                    // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Eye = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Eye",
+                        Path= "VisionPrescription.lensSpecification.eye",
+                        Id = "VisionPrescription.lensSpecification.eye",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 11. VisionPrescription.lensSpecification.sphere
-                    this.Element_Sphere = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Sphere",                                                                                            // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.sphere",                                                                // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.sphere",                                                                 // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Sphere = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Sphere",
+                        Path= "VisionPrescription.lensSpecification.sphere",
+                        Id = "VisionPrescription.lensSpecification.sphere",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 12. VisionPrescription.lensSpecification.cylinder
-                    this.Element_Cylinder = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Cylinder",                                                                                          // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.cylinder",                                                              // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.cylinder",                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Cylinder = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Cylinder",
+                        Path= "VisionPrescription.lensSpecification.cylinder",
+                        Id = "VisionPrescription.lensSpecification.cylinder",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 13. VisionPrescription.lensSpecification.axis
-                    this.Element_Axis = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Axis",                                                                                              // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.axis",                                                                  // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.axis",                                                                   // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Axis = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Axis",
+                        Path= "VisionPrescription.lensSpecification.axis",
+                        Id = "VisionPrescription.lensSpecification.axis",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 14. VisionPrescription.lensSpecification.prism
-                    this.Element_Prism = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Prism",                                                                                             // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.prism",                                                                 // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.prism",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Prism                                                                                                  // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Prism = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Prism",
+                        Path= "VisionPrescription.lensSpecification.prism",
+                        Id = "VisionPrescription.lensSpecification.prism",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Prism
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 17. VisionPrescription.lensSpecification.add
-                    this.Element_Add = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Add",                                                                                               // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.add",                                                                   // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.add",                                                                    // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Add = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Add",
+                        Path= "VisionPrescription.lensSpecification.add",
+                        Id = "VisionPrescription.lensSpecification.add",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 18. VisionPrescription.lensSpecification.power
-                    this.Element_Power = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Power",                                                                                             // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.power",                                                                 // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.power",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Power = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Power",
+                        Path= "VisionPrescription.lensSpecification.power",
+                        Id = "VisionPrescription.lensSpecification.power",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 19. VisionPrescription.lensSpecification.backCurve
-                    this.Element_BackCurve = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_BackCurve",                                                                                         // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.backCurve",                                                             // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.backCurve",                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_BackCurve = new ElementDefinitionInfo
+                    {
+                        Name = "Element_BackCurve",
+                        Path= "VisionPrescription.lensSpecification.backCurve",
+                        Id = "VisionPrescription.lensSpecification.backCurve",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 20. VisionPrescription.lensSpecification.diameter
-                    this.Element_Diameter = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Diameter",                                                                                          // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.diameter",                                                              // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.diameter",                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Diameter = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Diameter",
+                        Path= "VisionPrescription.lensSpecification.diameter",
+                        Id = "VisionPrescription.lensSpecification.diameter",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 21. VisionPrescription.lensSpecification.duration
-                    this.Element_Duration = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Duration",                                                                                          // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.duration",                                                              // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.duration",                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Duration = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Duration",
+                        Path= "VisionPrescription.lensSpecification.duration",
+                        Id = "VisionPrescription.lensSpecification.duration",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 22. VisionPrescription.lensSpecification.color
-                    this.Element_Color = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Color",                                                                                             // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.color",                                                                 // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.color",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Color = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Color",
+                        Path= "VisionPrescription.lensSpecification.color",
+                        Id = "VisionPrescription.lensSpecification.color",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 23. VisionPrescription.lensSpecification.brand
-                    this.Element_Brand = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Brand",                                                                                             // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.brand",                                                                 // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.brand",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Brand = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Brand",
+                        Path= "VisionPrescription.lensSpecification.brand",
+                        Id = "VisionPrescription.lensSpecification.brand",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 24. VisionPrescription.lensSpecification.note
-                    this.Element_Note = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Note",                                                                                              // MakerGen.cs:238
-                        Path= "VisionPrescription.lensSpecification.note",                                                                  // MakerGen.cs:239
-                        Id = "VisionPrescription.lensSpecification.note",                                                                   // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Annotation                                                               // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Note = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Note",
+                        Path= "VisionPrescription.lensSpecification.note",
+                        Id = "VisionPrescription.lensSpecification.note",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Annotation
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. VisionPrescription.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. VisionPrescription.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 3. VisionPrescription.created
-        public ElementDefinitionInfo Element_Created;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Created;
         // 4. VisionPrescription.patient
-        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Patient;
         // 5. VisionPrescription.encounter
-        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Encounter;
         // 6. VisionPrescription.dateWritten
-        public ElementDefinitionInfo Element_DateWritten;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_DateWritten;
         // 7. VisionPrescription.prescriber
-        public ElementDefinitionInfo Element_Prescriber;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Prescriber;
         // 8. VisionPrescription.lensSpecification
-        public ElementDefinitionInfo Element_LensSpecification;                                                                             // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "VisionPrescription",                                                                                                // MakerGen.cs:395
-                ElementId = "VisionPrescription"                                                                                            // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Created.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_DateWritten.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Prescriber.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_LensSpecification.Write(sDef);                                                                                          // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_VisionPrescription()                                                                                                // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_LensSpecification;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "VisionPrescription",
+                ElementId = "VisionPrescription"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Created.Write(sDef);
+            Element_Patient.Write(sDef);
+            Element_Encounter.Write(sDef);
+            Element_DateWritten.Write(sDef);
+            Element_Prescriber.Write(sDef);
+            Element_LensSpecification.Write(sDef);
+        }
+        
+        public Resource_VisionPrescription()
+        {
+            {
                 // 1. VisionPrescription.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "VisionPrescription.identifier",                                                                                  // MakerGen.cs:239
-                    Id = "VisionPrescription.identifier",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "VisionPrescription.identifier",
+                    Id = "VisionPrescription.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. VisionPrescription.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "VisionPrescription.status",                                                                                      // MakerGen.cs:239
-                    Id = "VisionPrescription.status",                                                                                       // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "VisionPrescription.status",
+                    Id = "VisionPrescription.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. VisionPrescription.created
-                this.Element_Created = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Created",                                                                                               // MakerGen.cs:238
-                    Path= "VisionPrescription.created",                                                                                     // MakerGen.cs:239
-                    Id = "VisionPrescription.created",                                                                                      // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Created = new ElementDefinitionInfo
+                {
+                    Name = "Element_Created",
+                    Path= "VisionPrescription.created",
+                    Id = "VisionPrescription.created",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. VisionPrescription.patient
-                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Patient",                                                                                               // MakerGen.cs:238
-                    Path= "VisionPrescription.patient",                                                                                     // MakerGen.cs:239
-                    Id = "VisionPrescription.patient",                                                                                      // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Patient = new ElementDefinitionInfo
+                {
+                    Name = "Element_Patient",
+                    Path= "VisionPrescription.patient",
+                    Id = "VisionPrescription.patient",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 5. VisionPrescription.encounter
-                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:238
-                    Path= "VisionPrescription.encounter",                                                                                   // MakerGen.cs:239
-                    Id = "VisionPrescription.encounter",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Encounter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Encounter",
+                    Path= "VisionPrescription.encounter",
+                    Id = "VisionPrescription.encounter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. VisionPrescription.dateWritten
-                this.Element_DateWritten = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_DateWritten",                                                                                           // MakerGen.cs:238
-                    Path= "VisionPrescription.dateWritten",                                                                                 // MakerGen.cs:239
-                    Id = "VisionPrescription.dateWritten",                                                                                  // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_DateWritten = new ElementDefinitionInfo
+                {
+                    Name = "Element_DateWritten",
+                    Path= "VisionPrescription.dateWritten",
+                    Id = "VisionPrescription.dateWritten",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. VisionPrescription.prescriber
-                this.Element_Prescriber = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Prescriber",                                                                                            // MakerGen.cs:238
-                    Path= "VisionPrescription.prescriber",                                                                                  // MakerGen.cs:239
-                    Id = "VisionPrescription.prescriber",                                                                                   // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Prescriber = new ElementDefinitionInfo
+                {
+                    Name = "Element_Prescriber",
+                    Path= "VisionPrescription.prescriber",
+                    Id = "VisionPrescription.prescriber",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 8. VisionPrescription.lensSpecification
-                this.Element_LensSpecification = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_LensSpecification",                                                                                     // MakerGen.cs:238
-                    Path= "VisionPrescription.lensSpecification",                                                                           // MakerGen.cs:239
-                    Id = "VisionPrescription.lensSpecification",                                                                            // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_LensSpecification                                                                                          // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "VisionPrescription";                                                                                               // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/VisionPrescription";                                                        // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_LensSpecification = new ElementDefinitionInfo
+                {
+                    Name = "Element_LensSpecification",
+                    Path= "VisionPrescription.lensSpecification",
+                    Id = "VisionPrescription.lensSpecification",
+                    Min = 1,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_LensSpecification
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "VisionPrescription";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/VisionPrescription";
+        }
+    }
+}

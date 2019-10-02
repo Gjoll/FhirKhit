@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "NutritionOrder",
@@ -853,1041 +853,1041 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'NutritionOrder'
     /// </summary>
     // 0. NutritionOrder
-    public class Resource_NutritionOrder : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                           // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_NutritionOrder : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 14. NutritionOrder.oralDiet
-        public class Type_OralDiet : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_OralDiet : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 17. NutritionOrder.oralDiet.nutrient
-            public class Type_Nutrient : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Nutrient : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 18. NutritionOrder.oralDiet.nutrient.modifier
-                public ElementDefinitionInfo Element_Modifier;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Modifier;
                 // 19. NutritionOrder.oralDiet.nutrient.amount
-                public ElementDefinitionInfo Element_Amount;                                                                                // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "NutritionOrder.oralDiet.nutrient",                                                                          // MakerGen.cs:395
-                        ElementId = "NutritionOrder.oralDiet.nutrient"                                                                      // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Modifier.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_Amount.Write(sDef);                                                                                             // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Nutrient()                                                                                                      // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Amount;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "NutritionOrder.oralDiet.nutrient",
+                        ElementId = "NutritionOrder.oralDiet.nutrient"
+                    });
+                    Element_Modifier.Write(sDef);
+                    Element_Amount.Write(sDef);
+                }
+                
+                public Type_Nutrient()
+                {
+                    {
                         // 18. NutritionOrder.oralDiet.nutrient.modifier
-                        this.Element_Modifier = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Modifier",                                                                                      // MakerGen.cs:238
-                            Path= "NutritionOrder.oralDiet.nutrient.modifier",                                                              // MakerGen.cs:239
-                            Id = "NutritionOrder.oralDiet.nutrient.modifier",                                                               // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
-                                {                                                                                                           // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:322
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Modifier = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Modifier",
+                            Path= "NutritionOrder.oralDiet.nutrient.modifier",
+                            Id = "NutritionOrder.oralDiet.nutrient.modifier",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 19. NutritionOrder.oralDiet.nutrient.amount
-                        this.Element_Amount = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Amount",                                                                                        // MakerGen.cs:238
-                            Path= "NutritionOrder.oralDiet.nutrient.amount",                                                                // MakerGen.cs:239
-                            Id = "NutritionOrder.oralDiet.nutrient.amount",                                                                 // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:358
-                                {                                                                                                           // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:360
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Amount = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Amount",
+                            Path= "NutritionOrder.oralDiet.nutrient.amount",
+                            Id = "NutritionOrder.oralDiet.nutrient.amount",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 20. NutritionOrder.oralDiet.texture
-            public class Type_Texture : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Texture : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 21. NutritionOrder.oralDiet.texture.modifier
-                public ElementDefinitionInfo Element_Modifier;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Modifier;
                 // 22. NutritionOrder.oralDiet.texture.foodType
-                public ElementDefinitionInfo Element_FoodType;                                                                              // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "NutritionOrder.oralDiet.texture",                                                                           // MakerGen.cs:395
-                        ElementId = "NutritionOrder.oralDiet.texture"                                                                       // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Modifier.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_FoodType.Write(sDef);                                                                                           // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Texture()                                                                                                       // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_FoodType;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "NutritionOrder.oralDiet.texture",
+                        ElementId = "NutritionOrder.oralDiet.texture"
+                    });
+                    Element_Modifier.Write(sDef);
+                    Element_FoodType.Write(sDef);
+                }
+                
+                public Type_Texture()
+                {
+                    {
                         // 21. NutritionOrder.oralDiet.texture.modifier
-                        this.Element_Modifier = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Modifier",                                                                                      // MakerGen.cs:238
-                            Path= "NutritionOrder.oralDiet.texture.modifier",                                                               // MakerGen.cs:239
-                            Id = "NutritionOrder.oralDiet.texture.modifier",                                                                // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
-                                {                                                                                                           // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:322
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Modifier = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Modifier",
+                            Path= "NutritionOrder.oralDiet.texture.modifier",
+                            Id = "NutritionOrder.oralDiet.texture.modifier",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 22. NutritionOrder.oralDiet.texture.foodType
-                        this.Element_FoodType = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_FoodType",                                                                                      // MakerGen.cs:238
-                            Path= "NutritionOrder.oralDiet.texture.foodType",                                                               // MakerGen.cs:239
-                            Id = "NutritionOrder.oralDiet.texture.foodType",                                                                // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
-                                {                                                                                                           // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:322
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_FoodType = new ElementDefinitionInfo
+                        {
+                            Name = "Element_FoodType",
+                            Path= "NutritionOrder.oralDiet.texture.foodType",
+                            Id = "NutritionOrder.oralDiet.texture.foodType",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 15. NutritionOrder.oralDiet.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Type;
             // 16. NutritionOrder.oralDiet.schedule
-            public ElementDefinitionInfo Element_Schedule;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Schedule;
             // 17. NutritionOrder.oralDiet.nutrient
-            public ElementDefinitionInfo Element_Nutrient;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Nutrient;
             // 20. NutritionOrder.oralDiet.texture
-            public ElementDefinitionInfo Element_Texture;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Texture;
             // 23. NutritionOrder.oralDiet.fluidConsistencyType
-            public ElementDefinitionInfo Element_FluidConsistencyType;                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_FluidConsistencyType;
             // 24. NutritionOrder.oralDiet.instruction
-            public ElementDefinitionInfo Element_Instruction;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "NutritionOrder.oralDiet",                                                                                       // MakerGen.cs:395
-                    ElementId = "NutritionOrder.oralDiet"                                                                                   // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Schedule.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Nutrient.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Texture.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_FluidConsistencyType.Write(sDef);                                                                                   // MakerGen.cs:223
-                Element_Instruction.Write(sDef);                                                                                            // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_OralDiet()                                                                                                          // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Instruction;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "NutritionOrder.oralDiet",
+                    ElementId = "NutritionOrder.oralDiet"
+                });
+                Element_Type.Write(sDef);
+                Element_Schedule.Write(sDef);
+                Element_Nutrient.Write(sDef);
+                Element_Texture.Write(sDef);
+                Element_FluidConsistencyType.Write(sDef);
+                Element_Instruction.Write(sDef);
+            }
+            
+            public Type_OralDiet()
+            {
+                {
                     // 15. NutritionOrder.oralDiet.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:238
-                        Path= "NutritionOrder.oralDiet.type",                                                                               // MakerGen.cs:239
-                        Id = "NutritionOrder.oralDiet.type",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Type = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Type",
+                        Path= "NutritionOrder.oralDiet.type",
+                        Id = "NutritionOrder.oralDiet.type",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 16. NutritionOrder.oralDiet.schedule
-                    this.Element_Schedule = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Schedule",                                                                                          // MakerGen.cs:238
-                        Path= "NutritionOrder.oralDiet.schedule",                                                                           // MakerGen.cs:239
-                        Id = "NutritionOrder.oralDiet.schedule",                                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Timing                                                                   // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Schedule = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Schedule",
+                        Path= "NutritionOrder.oralDiet.schedule",
+                        Id = "NutritionOrder.oralDiet.schedule",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Timing
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 17. NutritionOrder.oralDiet.nutrient
-                    this.Element_Nutrient = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Nutrient",                                                                                          // MakerGen.cs:238
-                        Path= "NutritionOrder.oralDiet.nutrient",                                                                           // MakerGen.cs:239
-                        Id = "NutritionOrder.oralDiet.nutrient",                                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Nutrient                                                                                               // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Nutrient = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Nutrient",
+                        Path= "NutritionOrder.oralDiet.nutrient",
+                        Id = "NutritionOrder.oralDiet.nutrient",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Nutrient
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 20. NutritionOrder.oralDiet.texture
-                    this.Element_Texture = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Texture",                                                                                           // MakerGen.cs:238
-                        Path= "NutritionOrder.oralDiet.texture",                                                                            // MakerGen.cs:239
-                        Id = "NutritionOrder.oralDiet.texture",                                                                             // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Texture                                                                                                // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Texture = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Texture",
+                        Path= "NutritionOrder.oralDiet.texture",
+                        Id = "NutritionOrder.oralDiet.texture",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Texture
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 23. NutritionOrder.oralDiet.fluidConsistencyType
-                    this.Element_FluidConsistencyType = new ElementDefinitionInfo                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_FluidConsistencyType",                                                                              // MakerGen.cs:238
-                        Path= "NutritionOrder.oralDiet.fluidConsistencyType",                                                               // MakerGen.cs:239
-                        Id = "NutritionOrder.oralDiet.fluidConsistencyType",                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_FluidConsistencyType = new ElementDefinitionInfo
+                    {
+                        Name = "Element_FluidConsistencyType",
+                        Path= "NutritionOrder.oralDiet.fluidConsistencyType",
+                        Id = "NutritionOrder.oralDiet.fluidConsistencyType",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 24. NutritionOrder.oralDiet.instruction
-                    this.Element_Instruction = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Instruction",                                                                                       // MakerGen.cs:238
-                        Path= "NutritionOrder.oralDiet.instruction",                                                                        // MakerGen.cs:239
-                        Id = "NutritionOrder.oralDiet.instruction",                                                                         // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Instruction = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Instruction",
+                        Path= "NutritionOrder.oralDiet.instruction",
+                        Id = "NutritionOrder.oralDiet.instruction",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 25. NutritionOrder.supplement
-        public class Type_Supplement : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Supplement : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 26. NutritionOrder.supplement.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Type;
             // 27. NutritionOrder.supplement.productName
-            public ElementDefinitionInfo Element_ProductName;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_ProductName;
             // 28. NutritionOrder.supplement.schedule
-            public ElementDefinitionInfo Element_Schedule;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Schedule;
             // 29. NutritionOrder.supplement.quantity
-            public ElementDefinitionInfo Element_Quantity;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Quantity;
             // 30. NutritionOrder.supplement.instruction
-            public ElementDefinitionInfo Element_Instruction;                                                                               // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "NutritionOrder.supplement",                                                                                     // MakerGen.cs:395
-                    ElementId = "NutritionOrder.supplement"                                                                                 // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_ProductName.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_Schedule.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Quantity.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Instruction.Write(sDef);                                                                                            // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Supplement()                                                                                                        // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Instruction;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "NutritionOrder.supplement",
+                    ElementId = "NutritionOrder.supplement"
+                });
+                Element_Type.Write(sDef);
+                Element_ProductName.Write(sDef);
+                Element_Schedule.Write(sDef);
+                Element_Quantity.Write(sDef);
+                Element_Instruction.Write(sDef);
+            }
+            
+            public Type_Supplement()
+            {
+                {
                     // 26. NutritionOrder.supplement.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:238
-                        Path= "NutritionOrder.supplement.type",                                                                             // MakerGen.cs:239
-                        Id = "NutritionOrder.supplement.type",                                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Type = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Type",
+                        Path= "NutritionOrder.supplement.type",
+                        Id = "NutritionOrder.supplement.type",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 27. NutritionOrder.supplement.productName
-                    this.Element_ProductName = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_ProductName",                                                                                       // MakerGen.cs:238
-                        Path= "NutritionOrder.supplement.productName",                                                                      // MakerGen.cs:239
-                        Id = "NutritionOrder.supplement.productName",                                                                       // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_ProductName = new ElementDefinitionInfo
+                    {
+                        Name = "Element_ProductName",
+                        Path= "NutritionOrder.supplement.productName",
+                        Id = "NutritionOrder.supplement.productName",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 28. NutritionOrder.supplement.schedule
-                    this.Element_Schedule = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Schedule",                                                                                          // MakerGen.cs:238
-                        Path= "NutritionOrder.supplement.schedule",                                                                         // MakerGen.cs:239
-                        Id = "NutritionOrder.supplement.schedule",                                                                          // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Timing                                                                   // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Schedule = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Schedule",
+                        Path= "NutritionOrder.supplement.schedule",
+                        Id = "NutritionOrder.supplement.schedule",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Timing
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 29. NutritionOrder.supplement.quantity
-                    this.Element_Quantity = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Quantity",                                                                                          // MakerGen.cs:238
-                        Path= "NutritionOrder.supplement.quantity",                                                                         // MakerGen.cs:239
-                        Id = "NutritionOrder.supplement.quantity",                                                                          // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Quantity = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Quantity",
+                        Path= "NutritionOrder.supplement.quantity",
+                        Id = "NutritionOrder.supplement.quantity",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 30. NutritionOrder.supplement.instruction
-                    this.Element_Instruction = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Instruction",                                                                                       // MakerGen.cs:238
-                        Path= "NutritionOrder.supplement.instruction",                                                                      // MakerGen.cs:239
-                        Id = "NutritionOrder.supplement.instruction",                                                                       // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Instruction = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Instruction",
+                        Path= "NutritionOrder.supplement.instruction",
+                        Id = "NutritionOrder.supplement.instruction",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 31. NutritionOrder.enteralFormula
-        public class Type_EnteralFormula : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_EnteralFormula : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 38. NutritionOrder.enteralFormula.administration
-            public class Type_Administration : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Administration : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 39. NutritionOrder.enteralFormula.administration.schedule
-                public ElementDefinitionInfo Element_Schedule;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Schedule;
                 // 40. NutritionOrder.enteralFormula.administration.quantity
-                public ElementDefinitionInfo Element_Quantity;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Quantity;
                 // 41. NutritionOrder.enteralFormula.administration.rate[x]
-                public ElementDefinitionInfo Element_Rate;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "NutritionOrder.enteralFormula.administration",                                                              // MakerGen.cs:395
-                        ElementId = "NutritionOrder.enteralFormula.administration"                                                          // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Schedule.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_Quantity.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_Rate.Write(sDef);                                                                                               // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Administration()                                                                                                // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Rate;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "NutritionOrder.enteralFormula.administration",
+                        ElementId = "NutritionOrder.enteralFormula.administration"
+                    });
+                    Element_Schedule.Write(sDef);
+                    Element_Quantity.Write(sDef);
+                    Element_Rate.Write(sDef);
+                }
+                
+                public Type_Administration()
+                {
+                    {
                         // 39. NutritionOrder.enteralFormula.administration.schedule
-                        this.Element_Schedule = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Schedule",                                                                                      // MakerGen.cs:238
-                            Path= "NutritionOrder.enteralFormula.administration.schedule",                                                  // MakerGen.cs:239
-                            Id = "NutritionOrder.enteralFormula.administration.schedule",                                                   // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_Timing                                                               // MakerGen.cs:358
-                                {                                                                                                           // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:360
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Schedule = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Schedule",
+                            Path= "NutritionOrder.enteralFormula.administration.schedule",
+                            Id = "NutritionOrder.enteralFormula.administration.schedule",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_Timing
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 40. NutritionOrder.enteralFormula.administration.quantity
-                        this.Element_Quantity = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Quantity",                                                                                      // MakerGen.cs:238
-                            Path= "NutritionOrder.enteralFormula.administration.quantity",                                                  // MakerGen.cs:239
-                            Id = "NutritionOrder.enteralFormula.administration.quantity",                                                   // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:358
-                                {                                                                                                           // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:360
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Quantity = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Quantity",
+                            Path= "NutritionOrder.enteralFormula.administration.quantity",
+                            Id = "NutritionOrder.enteralFormula.administration.quantity",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 41. NutritionOrder.enteralFormula.administration.rate[x]
-                        this.Element_Rate = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Rate",                                                                                          // MakerGen.cs:238
-                            Path= "NutritionOrder.enteralFormula.administration.rate[x]",                                                   // MakerGen.cs:239
-                            Id = "NutritionOrder.enteralFormula.administration.rate[x]",                                                    // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_Quantity                                                             // MakerGen.cs:358
-                                {                                                                                                           // MakerGen.cs:359
-                                },                                                                                                          // MakerGen.cs:360
-                                new FhirKhit.Maker.Common.Complex.Type_Ratio                                                                // MakerGen.cs:358
-                                {                                                                                                           // MakerGen.cs:359
-                                }                                                                                                           // MakerGen.cs:360
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Rate = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Rate",
+                            Path= "NutritionOrder.enteralFormula.administration.rate[x]",
+                            Id = "NutritionOrder.enteralFormula.administration.rate[x]",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_Quantity
+                                {
+                                },
+                                new FhirKhit.Maker.Common.Complex.Type_Ratio
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 32. NutritionOrder.enteralFormula.baseFormulaType
-            public ElementDefinitionInfo Element_BaseFormulaType;                                                                           // MakerGen.cs:219
+            public ElementDefinitionInfo Element_BaseFormulaType;
             // 33. NutritionOrder.enteralFormula.baseFormulaProductName
-            public ElementDefinitionInfo Element_BaseFormulaProductName;                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_BaseFormulaProductName;
             // 34. NutritionOrder.enteralFormula.additiveType
-            public ElementDefinitionInfo Element_AdditiveType;                                                                              // MakerGen.cs:219
+            public ElementDefinitionInfo Element_AdditiveType;
             // 35. NutritionOrder.enteralFormula.additiveProductName
-            public ElementDefinitionInfo Element_AdditiveProductName;                                                                       // MakerGen.cs:219
+            public ElementDefinitionInfo Element_AdditiveProductName;
             // 36. NutritionOrder.enteralFormula.caloricDensity
-            public ElementDefinitionInfo Element_CaloricDensity;                                                                            // MakerGen.cs:219
+            public ElementDefinitionInfo Element_CaloricDensity;
             // 37. NutritionOrder.enteralFormula.routeofAdministration
-            public ElementDefinitionInfo Element_RouteofAdministration;                                                                     // MakerGen.cs:219
+            public ElementDefinitionInfo Element_RouteofAdministration;
             // 38. NutritionOrder.enteralFormula.administration
-            public ElementDefinitionInfo Element_Administration;                                                                            // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Administration;
             // 42. NutritionOrder.enteralFormula.maxVolumeToDeliver
-            public ElementDefinitionInfo Element_MaxVolumeToDeliver;                                                                        // MakerGen.cs:219
+            public ElementDefinitionInfo Element_MaxVolumeToDeliver;
             // 43. NutritionOrder.enteralFormula.administrationInstruction
-            public ElementDefinitionInfo Element_AdministrationInstruction;                                                                 // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "NutritionOrder.enteralFormula",                                                                                 // MakerGen.cs:395
-                    ElementId = "NutritionOrder.enteralFormula"                                                                             // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_BaseFormulaType.Write(sDef);                                                                                        // MakerGen.cs:223
-                Element_BaseFormulaProductName.Write(sDef);                                                                                 // MakerGen.cs:223
-                Element_AdditiveType.Write(sDef);                                                                                           // MakerGen.cs:223
-                Element_AdditiveProductName.Write(sDef);                                                                                    // MakerGen.cs:223
-                Element_CaloricDensity.Write(sDef);                                                                                         // MakerGen.cs:223
-                Element_RouteofAdministration.Write(sDef);                                                                                  // MakerGen.cs:223
-                Element_Administration.Write(sDef);                                                                                         // MakerGen.cs:223
-                Element_MaxVolumeToDeliver.Write(sDef);                                                                                     // MakerGen.cs:223
-                Element_AdministrationInstruction.Write(sDef);                                                                              // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_EnteralFormula()                                                                                                    // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_AdministrationInstruction;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "NutritionOrder.enteralFormula",
+                    ElementId = "NutritionOrder.enteralFormula"
+                });
+                Element_BaseFormulaType.Write(sDef);
+                Element_BaseFormulaProductName.Write(sDef);
+                Element_AdditiveType.Write(sDef);
+                Element_AdditiveProductName.Write(sDef);
+                Element_CaloricDensity.Write(sDef);
+                Element_RouteofAdministration.Write(sDef);
+                Element_Administration.Write(sDef);
+                Element_MaxVolumeToDeliver.Write(sDef);
+                Element_AdministrationInstruction.Write(sDef);
+            }
+            
+            public Type_EnteralFormula()
+            {
+                {
                     // 32. NutritionOrder.enteralFormula.baseFormulaType
-                    this.Element_BaseFormulaType = new ElementDefinitionInfo                                                                // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_BaseFormulaType",                                                                                   // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.baseFormulaType",                                                              // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.baseFormulaType",                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_BaseFormulaType = new ElementDefinitionInfo
+                    {
+                        Name = "Element_BaseFormulaType",
+                        Path= "NutritionOrder.enteralFormula.baseFormulaType",
+                        Id = "NutritionOrder.enteralFormula.baseFormulaType",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 33. NutritionOrder.enteralFormula.baseFormulaProductName
-                    this.Element_BaseFormulaProductName = new ElementDefinitionInfo                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_BaseFormulaProductName",                                                                            // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.baseFormulaProductName",                                                       // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.baseFormulaProductName",                                                        // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_BaseFormulaProductName = new ElementDefinitionInfo
+                    {
+                        Name = "Element_BaseFormulaProductName",
+                        Path= "NutritionOrder.enteralFormula.baseFormulaProductName",
+                        Id = "NutritionOrder.enteralFormula.baseFormulaProductName",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 34. NutritionOrder.enteralFormula.additiveType
-                    this.Element_AdditiveType = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_AdditiveType",                                                                                      // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.additiveType",                                                                 // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.additiveType",                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_AdditiveType = new ElementDefinitionInfo
+                    {
+                        Name = "Element_AdditiveType",
+                        Path= "NutritionOrder.enteralFormula.additiveType",
+                        Id = "NutritionOrder.enteralFormula.additiveType",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 35. NutritionOrder.enteralFormula.additiveProductName
-                    this.Element_AdditiveProductName = new ElementDefinitionInfo                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_AdditiveProductName",                                                                               // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.additiveProductName",                                                          // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.additiveProductName",                                                           // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_AdditiveProductName = new ElementDefinitionInfo
+                    {
+                        Name = "Element_AdditiveProductName",
+                        Path= "NutritionOrder.enteralFormula.additiveProductName",
+                        Id = "NutritionOrder.enteralFormula.additiveProductName",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 36. NutritionOrder.enteralFormula.caloricDensity
-                    this.Element_CaloricDensity = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_CaloricDensity",                                                                                    // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.caloricDensity",                                                               // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.caloricDensity",                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_CaloricDensity = new ElementDefinitionInfo
+                    {
+                        Name = "Element_CaloricDensity",
+                        Path= "NutritionOrder.enteralFormula.caloricDensity",
+                        Id = "NutritionOrder.enteralFormula.caloricDensity",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 37. NutritionOrder.enteralFormula.routeofAdministration
-                    this.Element_RouteofAdministration = new ElementDefinitionInfo                                                          // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_RouteofAdministration",                                                                             // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.routeofAdministration",                                                        // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.routeofAdministration",                                                         // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_RouteofAdministration = new ElementDefinitionInfo
+                    {
+                        Name = "Element_RouteofAdministration",
+                        Path= "NutritionOrder.enteralFormula.routeofAdministration",
+                        Id = "NutritionOrder.enteralFormula.routeofAdministration",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 38. NutritionOrder.enteralFormula.administration
-                    this.Element_Administration = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Administration",                                                                                    // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.administration",                                                               // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.administration",                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Administration                                                                                         // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Administration = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Administration",
+                        Path= "NutritionOrder.enteralFormula.administration",
+                        Id = "NutritionOrder.enteralFormula.administration",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Administration
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 42. NutritionOrder.enteralFormula.maxVolumeToDeliver
-                    this.Element_MaxVolumeToDeliver = new ElementDefinitionInfo                                                             // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_MaxVolumeToDeliver",                                                                                // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.maxVolumeToDeliver",                                                           // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.maxVolumeToDeliver",                                                            // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                 // MakerGen.cs:358
-                            {                                                                                                               // MakerGen.cs:359
-                            }                                                                                                               // MakerGen.cs:360
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_MaxVolumeToDeliver = new ElementDefinitionInfo
+                    {
+                        Name = "Element_MaxVolumeToDeliver",
+                        Path= "NutritionOrder.enteralFormula.maxVolumeToDeliver",
+                        Id = "NutritionOrder.enteralFormula.maxVolumeToDeliver",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Quantity
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 43. NutritionOrder.enteralFormula.administrationInstruction
-                    this.Element_AdministrationInstruction = new ElementDefinitionInfo                                                      // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_AdministrationInstruction",                                                                         // MakerGen.cs:238
-                        Path= "NutritionOrder.enteralFormula.administrationInstruction",                                                    // MakerGen.cs:239
-                        Id = "NutritionOrder.enteralFormula.administrationInstruction",                                                     // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_AdministrationInstruction = new ElementDefinitionInfo
+                    {
+                        Name = "Element_AdministrationInstruction",
+                        Path= "NutritionOrder.enteralFormula.administrationInstruction",
+                        Id = "NutritionOrder.enteralFormula.administrationInstruction",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. NutritionOrder.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. NutritionOrder.instantiatesCanonical
-        public ElementDefinitionInfo Element_InstantiatesCanonical;                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_InstantiatesCanonical;
         // 3. NutritionOrder.instantiatesUri
-        public ElementDefinitionInfo Element_InstantiatesUri;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_InstantiatesUri;
         // 4. NutritionOrder.instantiates
-        public ElementDefinitionInfo Element_Instantiates;                                                                                  // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Instantiates;
         // 5. NutritionOrder.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 6. NutritionOrder.intent
-        public ElementDefinitionInfo Element_Intent;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Intent;
         // 7. NutritionOrder.patient
-        public ElementDefinitionInfo Element_Patient;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Patient;
         // 8. NutritionOrder.encounter
-        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Encounter;
         // 9. NutritionOrder.dateTime
-        public ElementDefinitionInfo Element_DateTime;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_DateTime;
         // 10. NutritionOrder.orderer
-        public ElementDefinitionInfo Element_Orderer;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Orderer;
         // 11. NutritionOrder.allergyIntolerance
-        public ElementDefinitionInfo Element_AllergyIntolerance;                                                                            // MakerGen.cs:219
+        public ElementDefinitionInfo Element_AllergyIntolerance;
         // 12. NutritionOrder.foodPreferenceModifier
-        public ElementDefinitionInfo Element_FoodPreferenceModifier;                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_FoodPreferenceModifier;
         // 13. NutritionOrder.excludeFoodModifier
-        public ElementDefinitionInfo Element_ExcludeFoodModifier;                                                                           // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ExcludeFoodModifier;
         // 14. NutritionOrder.oralDiet
-        public ElementDefinitionInfo Element_OralDiet;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_OralDiet;
         // 25. NutritionOrder.supplement
-        public ElementDefinitionInfo Element_Supplement;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Supplement;
         // 31. NutritionOrder.enteralFormula
-        public ElementDefinitionInfo Element_EnteralFormula;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_EnteralFormula;
         // 44. NutritionOrder.note
-        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "NutritionOrder",                                                                                                    // MakerGen.cs:395
-                ElementId = "NutritionOrder"                                                                                                // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_InstantiatesCanonical.Write(sDef);                                                                                      // MakerGen.cs:223
-            Element_InstantiatesUri.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_Instantiates.Write(sDef);                                                                                               // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Intent.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Patient.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_DateTime.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Orderer.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_AllergyIntolerance.Write(sDef);                                                                                         // MakerGen.cs:223
-            Element_FoodPreferenceModifier.Write(sDef);                                                                                     // MakerGen.cs:223
-            Element_ExcludeFoodModifier.Write(sDef);                                                                                        // MakerGen.cs:223
-            Element_OralDiet.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Supplement.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_EnteralFormula.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_NutritionOrder()                                                                                                    // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Note;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "NutritionOrder",
+                ElementId = "NutritionOrder"
+            });
+            Element_Identifier.Write(sDef);
+            Element_InstantiatesCanonical.Write(sDef);
+            Element_InstantiatesUri.Write(sDef);
+            Element_Instantiates.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Intent.Write(sDef);
+            Element_Patient.Write(sDef);
+            Element_Encounter.Write(sDef);
+            Element_DateTime.Write(sDef);
+            Element_Orderer.Write(sDef);
+            Element_AllergyIntolerance.Write(sDef);
+            Element_FoodPreferenceModifier.Write(sDef);
+            Element_ExcludeFoodModifier.Write(sDef);
+            Element_OralDiet.Write(sDef);
+            Element_Supplement.Write(sDef);
+            Element_EnteralFormula.Write(sDef);
+            Element_Note.Write(sDef);
+        }
+        
+        public Resource_NutritionOrder()
+        {
+            {
                 // 1. NutritionOrder.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "NutritionOrder.identifier",                                                                                      // MakerGen.cs:239
-                    Id = "NutritionOrder.identifier",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "NutritionOrder.identifier",
+                    Id = "NutritionOrder.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. NutritionOrder.instantiatesCanonical
-                this.Element_InstantiatesCanonical = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_InstantiatesCanonical",                                                                                 // MakerGen.cs:238
-                    Path= "NutritionOrder.instantiatesCanonical",                                                                           // MakerGen.cs:239
-                    Id = "NutritionOrder.instantiatesCanonical",                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                               // MakerGen.cs:306
-                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition"                                                    // MakerGen.cs:306
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_InstantiatesCanonical = new ElementDefinitionInfo
+                {
+                    Name = "Element_InstantiatesCanonical",
+                    Path= "NutritionOrder.instantiatesCanonical",
+                    Id = "NutritionOrder.instantiatesCanonical",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 3. NutritionOrder.instantiatesUri
-                this.Element_InstantiatesUri = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_InstantiatesUri",                                                                                       // MakerGen.cs:238
-                    Path= "NutritionOrder.instantiatesUri",                                                                                 // MakerGen.cs:239
-                    Id = "NutritionOrder.instantiatesUri",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_InstantiatesUri = new ElementDefinitionInfo
+                {
+                    Name = "Element_InstantiatesUri",
+                    Path= "NutritionOrder.instantiatesUri",
+                    Id = "NutritionOrder.instantiatesUri",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. NutritionOrder.instantiates
-                this.Element_Instantiates = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Instantiates",                                                                                          // MakerGen.cs:238
-                    Path= "NutritionOrder.instantiates",                                                                                    // MakerGen.cs:239
-                    Id = "NutritionOrder.instantiates",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Instantiates = new ElementDefinitionInfo
+                {
+                    Name = "Element_Instantiates",
+                    Path= "NutritionOrder.instantiates",
+                    Id = "NutritionOrder.instantiates",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. NutritionOrder.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "NutritionOrder.status",                                                                                          // MakerGen.cs:239
-                    Id = "NutritionOrder.status",                                                                                           // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "NutritionOrder.status",
+                    Id = "NutritionOrder.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. NutritionOrder.intent
-                this.Element_Intent = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Intent",                                                                                                // MakerGen.cs:238
-                    Path= "NutritionOrder.intent",                                                                                          // MakerGen.cs:239
-                    Id = "NutritionOrder.intent",                                                                                           // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Intent = new ElementDefinitionInfo
+                {
+                    Name = "Element_Intent",
+                    Path= "NutritionOrder.intent",
+                    Id = "NutritionOrder.intent",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. NutritionOrder.patient
-                this.Element_Patient = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Patient",                                                                                               // MakerGen.cs:238
-                    Path= "NutritionOrder.patient",                                                                                         // MakerGen.cs:239
-                    Id = "NutritionOrder.patient",                                                                                          // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient"                                                           // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Patient = new ElementDefinitionInfo
+                {
+                    Name = "Element_Patient",
+                    Path= "NutritionOrder.patient",
+                    Id = "NutritionOrder.patient",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 8. NutritionOrder.encounter
-                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:238
-                    Path= "NutritionOrder.encounter",                                                                                       // MakerGen.cs:239
-                    Id = "NutritionOrder.encounter",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Encounter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Encounter",
+                    Path= "NutritionOrder.encounter",
+                    Id = "NutritionOrder.encounter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 9. NutritionOrder.dateTime
-                this.Element_DateTime = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_DateTime",                                                                                              // MakerGen.cs:238
-                    Path= "NutritionOrder.dateTime",                                                                                        // MakerGen.cs:239
-                    Id = "NutritionOrder.dateTime",                                                                                         // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_DateTime = new ElementDefinitionInfo
+                {
+                    Name = "Element_DateTime",
+                    Path= "NutritionOrder.dateTime",
+                    Id = "NutritionOrder.dateTime",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. NutritionOrder.orderer
-                this.Element_Orderer = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Orderer",                                                                                               // MakerGen.cs:238
-                    Path= "NutritionOrder.orderer",                                                                                         // MakerGen.cs:239
-                    Id = "NutritionOrder.orderer",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Orderer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Orderer",
+                    Path= "NutritionOrder.orderer",
+                    Id = "NutritionOrder.orderer",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. NutritionOrder.allergyIntolerance
-                this.Element_AllergyIntolerance = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_AllergyIntolerance",                                                                                    // MakerGen.cs:238
-                    Path= "NutritionOrder.allergyIntolerance",                                                                              // MakerGen.cs:239
-                    Id = "NutritionOrder.allergyIntolerance",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"                                                // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_AllergyIntolerance = new ElementDefinitionInfo
+                {
+                    Name = "Element_AllergyIntolerance",
+                    Path= "NutritionOrder.allergyIntolerance",
+                    Id = "NutritionOrder.allergyIntolerance",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 12. NutritionOrder.foodPreferenceModifier
-                this.Element_FoodPreferenceModifier = new ElementDefinitionInfo                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_FoodPreferenceModifier",                                                                                // MakerGen.cs:238
-                    Path= "NutritionOrder.foodPreferenceModifier",                                                                          // MakerGen.cs:239
-                    Id = "NutritionOrder.foodPreferenceModifier",                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_FoodPreferenceModifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_FoodPreferenceModifier",
+                    Path= "NutritionOrder.foodPreferenceModifier",
+                    Id = "NutritionOrder.foodPreferenceModifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. NutritionOrder.excludeFoodModifier
-                this.Element_ExcludeFoodModifier = new ElementDefinitionInfo                                                                // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ExcludeFoodModifier",                                                                                   // MakerGen.cs:238
-                    Path= "NutritionOrder.excludeFoodModifier",                                                                             // MakerGen.cs:239
-                    Id = "NutritionOrder.excludeFoodModifier",                                                                              // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ExcludeFoodModifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_ExcludeFoodModifier",
+                    Path= "NutritionOrder.excludeFoodModifier",
+                    Id = "NutritionOrder.excludeFoodModifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 14. NutritionOrder.oralDiet
-                this.Element_OralDiet = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_OralDiet",                                                                                              // MakerGen.cs:238
-                    Path= "NutritionOrder.oralDiet",                                                                                        // MakerGen.cs:239
-                    Id = "NutritionOrder.oralDiet",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_OralDiet                                                                                                   // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_OralDiet = new ElementDefinitionInfo
+                {
+                    Name = "Element_OralDiet",
+                    Path= "NutritionOrder.oralDiet",
+                    Id = "NutritionOrder.oralDiet",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_OralDiet
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 25. NutritionOrder.supplement
-                this.Element_Supplement = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Supplement",                                                                                            // MakerGen.cs:238
-                    Path= "NutritionOrder.supplement",                                                                                      // MakerGen.cs:239
-                    Id = "NutritionOrder.supplement",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Supplement                                                                                                 // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Supplement = new ElementDefinitionInfo
+                {
+                    Name = "Element_Supplement",
+                    Path= "NutritionOrder.supplement",
+                    Id = "NutritionOrder.supplement",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Supplement
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 31. NutritionOrder.enteralFormula
-                this.Element_EnteralFormula = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_EnteralFormula",                                                                                        // MakerGen.cs:238
-                    Path= "NutritionOrder.enteralFormula",                                                                                  // MakerGen.cs:239
-                    Id = "NutritionOrder.enteralFormula",                                                                                   // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_EnteralFormula                                                                                             // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_EnteralFormula = new ElementDefinitionInfo
+                {
+                    Name = "Element_EnteralFormula",
+                    Path= "NutritionOrder.enteralFormula",
+                    Id = "NutritionOrder.enteralFormula",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new Type_EnteralFormula
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 44. NutritionOrder.note
-                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Note",                                                                                                  // MakerGen.cs:238
-                    Path= "NutritionOrder.note",                                                                                            // MakerGen.cs:239
-                    Id = "NutritionOrder.note",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "NutritionOrder";                                                                                                   // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/NutritionOrder";                                                            // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Note = new ElementDefinitionInfo
+                {
+                    Name = "Element_Note",
+                    Path= "NutritionOrder.note",
+                    Id = "NutritionOrder.note",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "NutritionOrder";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/NutritionOrder";
+        }
+    }
+}

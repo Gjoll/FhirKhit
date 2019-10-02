@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "OperationOutcome",
@@ -178,186 +178,186 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'OperationOutcome'
     /// </summary>
     // 0. OperationOutcome
-    public class Resource_OperationOutcome : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                         // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_OperationOutcome : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 1. OperationOutcome.issue
-        public class Type_Issue : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Issue : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 2. OperationOutcome.issue.severity
-            public ElementDefinitionInfo Element_Severity;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Severity;
             // 3. OperationOutcome.issue.code
-            public ElementDefinitionInfo Element_Code;                                                                                      // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Code;
             // 4. OperationOutcome.issue.details
-            public ElementDefinitionInfo Element_Details;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Details;
             // 5. OperationOutcome.issue.diagnostics
-            public ElementDefinitionInfo Element_Diagnostics;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Diagnostics;
             // 6. OperationOutcome.issue.location
-            public ElementDefinitionInfo Element_Location;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Location;
             // 7. OperationOutcome.issue.expression
-            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "OperationOutcome.issue",                                                                                        // MakerGen.cs:395
-                    ElementId = "OperationOutcome.issue"                                                                                    // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Severity.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Code.Write(sDef);                                                                                                   // MakerGen.cs:223
-                Element_Details.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Diagnostics.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_Location.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Issue()                                                                                                             // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Expression;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "OperationOutcome.issue",
+                    ElementId = "OperationOutcome.issue"
+                });
+                Element_Severity.Write(sDef);
+                Element_Code.Write(sDef);
+                Element_Details.Write(sDef);
+                Element_Diagnostics.Write(sDef);
+                Element_Location.Write(sDef);
+                Element_Expression.Write(sDef);
+            }
+            
+            public Type_Issue()
+            {
+                {
                     // 2. OperationOutcome.issue.severity
-                    this.Element_Severity = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Severity",                                                                                          // MakerGen.cs:238
-                        Path= "OperationOutcome.issue.severity",                                                                            // MakerGen.cs:239
-                        Id = "OperationOutcome.issue.severity",                                                                             // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Severity = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Severity",
+                        Path= "OperationOutcome.issue.severity",
+                        Id = "OperationOutcome.issue.severity",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 3. OperationOutcome.issue.code
-                    this.Element_Code = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Code",                                                                                              // MakerGen.cs:238
-                        Path= "OperationOutcome.issue.code",                                                                                // MakerGen.cs:239
-                        Id = "OperationOutcome.issue.code",                                                                                 // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Code = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Code",
+                        Path= "OperationOutcome.issue.code",
+                        Id = "OperationOutcome.issue.code",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 4. OperationOutcome.issue.details
-                    this.Element_Details = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Details",                                                                                           // MakerGen.cs:238
-                        Path= "OperationOutcome.issue.details",                                                                             // MakerGen.cs:239
-                        Id = "OperationOutcome.issue.details",                                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Details = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Details",
+                        Path= "OperationOutcome.issue.details",
+                        Id = "OperationOutcome.issue.details",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 5. OperationOutcome.issue.diagnostics
-                    this.Element_Diagnostics = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Diagnostics",                                                                                       // MakerGen.cs:238
-                        Path= "OperationOutcome.issue.diagnostics",                                                                         // MakerGen.cs:239
-                        Id = "OperationOutcome.issue.diagnostics",                                                                          // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Diagnostics = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Diagnostics",
+                        Path= "OperationOutcome.issue.diagnostics",
+                        Id = "OperationOutcome.issue.diagnostics",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 6. OperationOutcome.issue.location
-                    this.Element_Location = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Location",                                                                                          // MakerGen.cs:238
-                        Path= "OperationOutcome.issue.location",                                                                            // MakerGen.cs:239
-                        Id = "OperationOutcome.issue.location",                                                                             // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Location = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Location",
+                        Path= "OperationOutcome.issue.location",
+                        Id = "OperationOutcome.issue.location",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 7. OperationOutcome.issue.expression
-                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Expression",                                                                                        // MakerGen.cs:238
-                        Path= "OperationOutcome.issue.expression",                                                                          // MakerGen.cs:239
-                        Id = "OperationOutcome.issue.expression",                                                                           // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Expression = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Expression",
+                        Path= "OperationOutcome.issue.expression",
+                        Id = "OperationOutcome.issue.expression",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. OperationOutcome.issue
-        public ElementDefinitionInfo Element_Issue;                                                                                         // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "OperationOutcome",                                                                                                  // MakerGen.cs:395
-                ElementId = "OperationOutcome"                                                                                              // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Issue.Write(sDef);                                                                                                      // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_OperationOutcome()                                                                                                  // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Issue;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "OperationOutcome",
+                ElementId = "OperationOutcome"
+            });
+            Element_Issue.Write(sDef);
+        }
+        
+        public Resource_OperationOutcome()
+        {
+            {
                 // 1. OperationOutcome.issue
-                this.Element_Issue = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Issue",                                                                                                 // MakerGen.cs:238
-                    Path= "OperationOutcome.issue",                                                                                         // MakerGen.cs:239
-                    Id = "OperationOutcome.issue",                                                                                          // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Issue                                                                                                      // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "OperationOutcome";                                                                                                 // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/OperationOutcome";                                                          // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Issue = new ElementDefinitionInfo
+                {
+                    Name = "Element_Issue",
+                    Path= "OperationOutcome.issue",
+                    Id = "OperationOutcome.issue",
+                    Min = 1,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Issue
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "OperationOutcome";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/OperationOutcome";
+        }
+    }
+}

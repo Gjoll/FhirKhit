@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "ImagingStudy",
@@ -834,908 +834,908 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'ImagingStudy'
     /// </summary>
     // 0. ImagingStudy
-    public class Resource_ImagingStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                             // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_ImagingStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 20. ImagingStudy.series
-        public class Type_Series : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_Series : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 31. ImagingStudy.series.performer
-            public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 32. ImagingStudy.series.performer.function
-                public ElementDefinitionInfo Element_Function;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Function;
                 // 33. ImagingStudy.series.performer.actor
-                public ElementDefinitionInfo Element_Actor;                                                                                 // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "ImagingStudy.series.performer",                                                                             // MakerGen.cs:395
-                        ElementId = "ImagingStudy.series.performer"                                                                         // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Function.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_Actor.Write(sDef);                                                                                              // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Performer()                                                                                                     // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Actor;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "ImagingStudy.series.performer",
+                        ElementId = "ImagingStudy.series.performer"
+                    });
+                    Element_Function.Write(sDef);
+                    Element_Actor.Write(sDef);
+                }
+                
+                public Type_Performer()
+                {
+                    {
                         // 32. ImagingStudy.series.performer.function
-                        this.Element_Function = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Function",                                                                                      // MakerGen.cs:238
-                            Path= "ImagingStudy.series.performer.function",                                                                 // MakerGen.cs:239
-                            Id = "ImagingStudy.series.performer.function",                                                                  // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
-                                {                                                                                                           // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:322
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Function = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Function",
+                            Path= "ImagingStudy.series.performer.function",
+                            Id = "ImagingStudy.series.performer.function",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 33. ImagingStudy.series.performer.actor
-                        this.Element_Actor = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Actor",                                                                                         // MakerGen.cs:238
-                            Path= "ImagingStudy.series.performer.actor",                                                                    // MakerGen.cs:239
-                            Id = "ImagingStudy.series.performer.actor",                                                                     // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_Reference                                                            // MakerGen.cs:346
-                                {                                                                                                           // MakerGen.cs:347
-                                    TargetProfile = new String[]                                                                            // MakerGen.cs:349
-                                    {                                                                                                       // CodeEditorExtensions.cs:28
-                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",                                             // MakerGen.cs:349
-                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                         // MakerGen.cs:349
-                                        "http://hl7.org/fhir/StructureDefinition/Organization",                                             // MakerGen.cs:349
-                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",                                                 // MakerGen.cs:349
-                                        "http://hl7.org/fhir/StructureDefinition/Patient",                                                  // MakerGen.cs:349
-                                        "http://hl7.org/fhir/StructureDefinition/Device",                                                   // MakerGen.cs:349
-                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson"                                             // MakerGen.cs:349
-                                    }                                                                                                       // CodeEditorExtensions.cs:34
-                                }                                                                                                           // MakerGen.cs:350
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Actor = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Actor",
+                            Path= "ImagingStudy.series.performer.actor",
+                            Id = "ImagingStudy.series.performer.actor",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_Reference
+                                {
+                                    TargetProfile = new String[]
+                                    {
+                                        "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                        "http://hl7.org/fhir/StructureDefinition/Organization",
+                                        "http://hl7.org/fhir/StructureDefinition/CareTeam",
+                                        "http://hl7.org/fhir/StructureDefinition/Patient",
+                                        "http://hl7.org/fhir/StructureDefinition/Device",
+                                        "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+                                    }
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 34. ImagingStudy.series.instance
-            public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
+            public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
+            {
                 // 35. ImagingStudy.series.instance.uid
-                public ElementDefinitionInfo Element_Uid;                                                                                   // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Uid;
                 // 36. ImagingStudy.series.instance.sopClass
-                public ElementDefinitionInfo Element_SopClass;                                                                              // MakerGen.cs:219
+                public ElementDefinitionInfo Element_SopClass;
                 // 37. ImagingStudy.series.instance.number
-                public ElementDefinitionInfo Element_Number;                                                                                // MakerGen.cs:219
+                public ElementDefinitionInfo Element_Number;
                 // 38. ImagingStudy.series.instance.title
-                public ElementDefinitionInfo Element_Title;                                                                                 // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
-                {                                                                                                                           // MakerGen.cs:391
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
-                    {                                                                                                                       // MakerGen.cs:394
-                        Path = "ImagingStudy.series.instance",                                                                              // MakerGen.cs:395
-                        ElementId = "ImagingStudy.series.instance"                                                                          // MakerGen.cs:396
-                    });                                                                                                                     // MakerGen.cs:397
-                    Element_Uid.Write(sDef);                                                                                                // MakerGen.cs:223
-                    Element_SopClass.Write(sDef);                                                                                           // MakerGen.cs:223
-                    Element_Number.Write(sDef);                                                                                             // MakerGen.cs:223
-                    Element_Title.Write(sDef);                                                                                              // MakerGen.cs:223
-                }                                                                                                                           // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-                public Type_Instance()                                                                                                      // MakerGen.cs:402
-                {                                                                                                                           // MakerGen.cs:403
-                    {                                                                                                                       // MakerGen.cs:234
+                public ElementDefinitionInfo Element_Title;
+                
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+                {
+                    base.Write(sDef);
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                    {
+                        Path = "ImagingStudy.series.instance",
+                        ElementId = "ImagingStudy.series.instance"
+                    });
+                    Element_Uid.Write(sDef);
+                    Element_SopClass.Write(sDef);
+                    Element_Number.Write(sDef);
+                    Element_Title.Write(sDef);
+                }
+                
+                public Type_Instance()
+                {
+                    {
                         // 35. ImagingStudy.series.instance.uid
-                        this.Element_Uid = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Uid",                                                                                           // MakerGen.cs:238
-                            Path= "ImagingStudy.series.instance.uid",                                                                       // MakerGen.cs:239
-                            Id = "ImagingStudy.series.instance.uid",                                                                        // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                            // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Uid = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Uid",
+                            Path= "ImagingStudy.series.instance.uid",
+                            Id = "ImagingStudy.series.instance.uid",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Id
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 36. ImagingStudy.series.instance.sopClass
-                        this.Element_SopClass = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_SopClass",                                                                                      // MakerGen.cs:238
-                            Path= "ImagingStudy.series.instance.sopClass",                                                                  // MakerGen.cs:239
-                            Id = "ImagingStudy.series.instance.sopClass",                                                                   // MakerGen.cs:240
-                            Min = 1,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Complex.Type_Coding                                                               // MakerGen.cs:318
-                                {                                                                                                           // MakerGen.cs:319
-                                }                                                                                                           // MakerGen.cs:322
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_SopClass = new ElementDefinitionInfo
+                        {
+                            Name = "Element_SopClass",
+                            Path= "ImagingStudy.series.instance.sopClass",
+                            Id = "ImagingStudy.series.instance.sopClass",
+                            Min = 1,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Complex.Type_Coding
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 37. ImagingStudy.series.instance.number
-                        this.Element_Number = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Number",                                                                                        // MakerGen.cs:238
-                            Path= "ImagingStudy.series.instance.number",                                                                    // MakerGen.cs:239
-                            Id = "ImagingStudy.series.instance.number",                                                                     // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                   // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                    {                                                                                                                       // MakerGen.cs:234
+                        this.Element_Number = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Number",
+                            Path= "ImagingStudy.series.instance.number",
+                            Id = "ImagingStudy.series.instance.number",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
+                                {
+                                }
+                            }
+                        };
+                    }
+                    {
                         // 38. ImagingStudy.series.instance.title
-                        this.Element_Title = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            Name = "Element_Title",                                                                                         // MakerGen.cs:238
-                            Path= "ImagingStudy.series.instance.title",                                                                     // MakerGen.cs:239
-                            Id = "ImagingStudy.series.instance.title",                                                                      // MakerGen.cs:240
-                            Min = 0,                                                                                                        // MakerGen.cs:241
-                            Max = 1,                                                                                                        // MakerGen.cs:242
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
-                            {                                                                                                               // MakerGen.cs:244
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
-                                {                                                                                                           // MakerGen.cs:304
-                                }                                                                                                           // MakerGen.cs:307
-                            }                                                                                                               // MakerGen.cs:246
-                        };                                                                                                                  // MakerGen.cs:247
-                    }                                                                                                                       // MakerGen.cs:248
-                }                                                                                                                           // MakerGen.cs:405
-            }                                                                                                                               // MakerGen.cs:407
+                        this.Element_Title = new ElementDefinitionInfo
+                        {
+                            Name = "Element_Title",
+                            Path= "ImagingStudy.series.instance.title",
+                            Id = "ImagingStudy.series.instance.title",
+                            Min = 0,
+                            Max = 1,
+                            Types = new BaseType[]
+                            {
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String
+                                {
+                                }
+                            }
+                        };
+                    }
+                }
+            }
             // 21. ImagingStudy.series.uid
-            public ElementDefinitionInfo Element_Uid;                                                                                       // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Uid;
             // 22. ImagingStudy.series.number
-            public ElementDefinitionInfo Element_Number;                                                                                    // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Number;
             // 23. ImagingStudy.series.modality
-            public ElementDefinitionInfo Element_Modality;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Modality;
             // 24. ImagingStudy.series.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Description;
             // 25. ImagingStudy.series.numberOfInstances
-            public ElementDefinitionInfo Element_NumberOfInstances;                                                                         // MakerGen.cs:219
+            public ElementDefinitionInfo Element_NumberOfInstances;
             // 26. ImagingStudy.series.endpoint
-            public ElementDefinitionInfo Element_Endpoint;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Endpoint;
             // 27. ImagingStudy.series.bodySite
-            public ElementDefinitionInfo Element_BodySite;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_BodySite;
             // 28. ImagingStudy.series.laterality
-            public ElementDefinitionInfo Element_Laterality;                                                                                // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Laterality;
             // 29. ImagingStudy.series.specimen
-            public ElementDefinitionInfo Element_Specimen;                                                                                  // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Specimen;
             // 30. ImagingStudy.series.started
-            public ElementDefinitionInfo Element_Started;                                                                                   // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Started;
             // 31. ImagingStudy.series.performer
-            public ElementDefinitionInfo Element_Performer;                                                                                 // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Performer;
             // 34. ImagingStudy.series.instance
-            public ElementDefinitionInfo Element_Instance;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "ImagingStudy.series",                                                                                           // MakerGen.cs:395
-                    ElementId = "ImagingStudy.series"                                                                                       // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Uid.Write(sDef);                                                                                                    // MakerGen.cs:223
-                Element_Number.Write(sDef);                                                                                                 // MakerGen.cs:223
-                Element_Modality.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
-                Element_NumberOfInstances.Write(sDef);                                                                                      // MakerGen.cs:223
-                Element_Endpoint.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_BodySite.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Laterality.Write(sDef);                                                                                             // MakerGen.cs:223
-                Element_Specimen.Write(sDef);                                                                                               // MakerGen.cs:223
-                Element_Started.Write(sDef);                                                                                                // MakerGen.cs:223
-                Element_Performer.Write(sDef);                                                                                              // MakerGen.cs:223
-                Element_Instance.Write(sDef);                                                                                               // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_Series()                                                                                                            // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Instance;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "ImagingStudy.series",
+                    ElementId = "ImagingStudy.series"
+                });
+                Element_Uid.Write(sDef);
+                Element_Number.Write(sDef);
+                Element_Modality.Write(sDef);
+                Element_Description.Write(sDef);
+                Element_NumberOfInstances.Write(sDef);
+                Element_Endpoint.Write(sDef);
+                Element_BodySite.Write(sDef);
+                Element_Laterality.Write(sDef);
+                Element_Specimen.Write(sDef);
+                Element_Started.Write(sDef);
+                Element_Performer.Write(sDef);
+                Element_Instance.Write(sDef);
+            }
+            
+            public Type_Series()
+            {
+                {
                     // 21. ImagingStudy.series.uid
-                    this.Element_Uid = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Uid",                                                                                               // MakerGen.cs:238
-                        Path= "ImagingStudy.series.uid",                                                                                    // MakerGen.cs:239
-                        Id = "ImagingStudy.series.uid",                                                                                     // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Uid = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Uid",
+                        Path= "ImagingStudy.series.uid",
+                        Id = "ImagingStudy.series.uid",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Id
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 22. ImagingStudy.series.number
-                    this.Element_Number = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Number",                                                                                            // MakerGen.cs:238
-                        Path= "ImagingStudy.series.number",                                                                                 // MakerGen.cs:239
-                        Id = "ImagingStudy.series.number",                                                                                  // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                       // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Number = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Number",
+                        Path= "ImagingStudy.series.number",
+                        Id = "ImagingStudy.series.number",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 23. ImagingStudy.series.modality
-                    this.Element_Modality = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Modality",                                                                                          // MakerGen.cs:238
-                        Path= "ImagingStudy.series.modality",                                                                               // MakerGen.cs:239
-                        Id = "ImagingStudy.series.modality",                                                                                // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Modality = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Modality",
+                        Path= "ImagingStudy.series.modality",
+                        Id = "ImagingStudy.series.modality",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Coding
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 24. ImagingStudy.series.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
-                        Path= "ImagingStudy.series.description",                                                                            // MakerGen.cs:239
-                        Id = "ImagingStudy.series.description",                                                                             // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Description = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Description",
+                        Path= "ImagingStudy.series.description",
+                        Id = "ImagingStudy.series.description",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 25. ImagingStudy.series.numberOfInstances
-                    this.Element_NumberOfInstances = new ElementDefinitionInfo                                                              // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_NumberOfInstances",                                                                                 // MakerGen.cs:238
-                        Path= "ImagingStudy.series.numberOfInstances",                                                                      // MakerGen.cs:239
-                        Id = "ImagingStudy.series.numberOfInstances",                                                                       // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                       // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_NumberOfInstances = new ElementDefinitionInfo
+                    {
+                        Name = "Element_NumberOfInstances",
+                        Path= "ImagingStudy.series.numberOfInstances",
+                        Id = "ImagingStudy.series.numberOfInstances",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 26. ImagingStudy.series.endpoint
-                    this.Element_Endpoint = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Endpoint",                                                                                          // MakerGen.cs:238
-                        Path= "ImagingStudy.series.endpoint",                                                                               // MakerGen.cs:239
-                        Id = "ImagingStudy.series.endpoint",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                      // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Endpoint = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Endpoint",
+                        Path= "ImagingStudy.series.endpoint",
+                        Id = "ImagingStudy.series.endpoint",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Endpoint"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 27. ImagingStudy.series.bodySite
-                    this.Element_BodySite = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_BodySite",                                                                                          // MakerGen.cs:238
-                        Path= "ImagingStudy.series.bodySite",                                                                               // MakerGen.cs:239
-                        Id = "ImagingStudy.series.bodySite",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_BodySite = new ElementDefinitionInfo
+                    {
+                        Name = "Element_BodySite",
+                        Path= "ImagingStudy.series.bodySite",
+                        Id = "ImagingStudy.series.bodySite",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Coding
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 28. ImagingStudy.series.laterality
-                    this.Element_Laterality = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Laterality",                                                                                        // MakerGen.cs:238
-                        Path= "ImagingStudy.series.laterality",                                                                             // MakerGen.cs:239
-                        Id = "ImagingStudy.series.laterality",                                                                              // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:318
-                            {                                                                                                               // MakerGen.cs:319
-                            }                                                                                                               // MakerGen.cs:322
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Laterality = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Laterality",
+                        Path= "ImagingStudy.series.laterality",
+                        Id = "ImagingStudy.series.laterality",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Coding
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 29. ImagingStudy.series.specimen
-                    this.Element_Specimen = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Specimen",                                                                                          // MakerGen.cs:238
-                        Path= "ImagingStudy.series.specimen",                                                                               // MakerGen.cs:239
-                        Id = "ImagingStudy.series.specimen",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Specimen"                                                      // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Specimen = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Specimen",
+                        Path= "ImagingStudy.series.specimen",
+                        Id = "ImagingStudy.series.specimen",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/Specimen"
+                                }
+                            }
+                        }
+                    };
+                }
+                {
                     // 30. ImagingStudy.series.started
-                    this.Element_Started = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Started",                                                                                           // MakerGen.cs:238
-                        Path= "ImagingStudy.series.started",                                                                                // MakerGen.cs:239
-                        Id = "ImagingStudy.series.started",                                                                                 // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Started = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Started",
+                        Path= "ImagingStudy.series.started",
+                        Id = "ImagingStudy.series.started",
+                        Min = 0,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 31. ImagingStudy.series.performer
-                    this.Element_Performer = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Performer",                                                                                         // MakerGen.cs:238
-                        Path= "ImagingStudy.series.performer",                                                                              // MakerGen.cs:239
-                        Id = "ImagingStudy.series.performer",                                                                               // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Performer                                                                                              // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Performer = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Performer",
+                        Path= "ImagingStudy.series.performer",
+                        Id = "ImagingStudy.series.performer",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Performer
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 34. ImagingStudy.series.instance
-                    this.Element_Instance = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Instance",                                                                                          // MakerGen.cs:238
-                        Path= "ImagingStudy.series.instance",                                                                               // MakerGen.cs:239
-                        Id = "ImagingStudy.series.instance",                                                                                // MakerGen.cs:240
-                        Min = 0,                                                                                                            // MakerGen.cs:241
-                        Max = -1,                                                                                                           // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new Type_Instance                                                                                               // MakerGen.cs:262
-                            {                                                                                                               // MakerGen.cs:263
-                            }                                                                                                               // MakerGen.cs:264
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Instance = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Instance",
+                        Path= "ImagingStudy.series.instance",
+                        Id = "ImagingStudy.series.instance",
+                        Min = 0,
+                        Max = -1,
+                        Types = new BaseType[]
+                        {
+                            new Type_Instance
+                            {
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. ImagingStudy.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. ImagingStudy.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 3. ImagingStudy.modality
-        public ElementDefinitionInfo Element_Modality;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Modality;
         // 4. ImagingStudy.subject
-        public ElementDefinitionInfo Element_Subject;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Subject;
         // 5. ImagingStudy.encounter
-        public ElementDefinitionInfo Element_Encounter;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Encounter;
         // 6. ImagingStudy.started
-        public ElementDefinitionInfo Element_Started;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Started;
         // 7. ImagingStudy.basedOn
-        public ElementDefinitionInfo Element_BasedOn;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_BasedOn;
         // 8. ImagingStudy.referrer
-        public ElementDefinitionInfo Element_Referrer;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Referrer;
         // 9. ImagingStudy.interpreter
-        public ElementDefinitionInfo Element_Interpreter;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Interpreter;
         // 10. ImagingStudy.endpoint
-        public ElementDefinitionInfo Element_Endpoint;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Endpoint;
         // 11. ImagingStudy.numberOfSeries
-        public ElementDefinitionInfo Element_NumberOfSeries;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_NumberOfSeries;
         // 12. ImagingStudy.numberOfInstances
-        public ElementDefinitionInfo Element_NumberOfInstances;                                                                             // MakerGen.cs:219
+        public ElementDefinitionInfo Element_NumberOfInstances;
         // 13. ImagingStudy.procedureReference
-        public ElementDefinitionInfo Element_ProcedureReference;                                                                            // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ProcedureReference;
         // 14. ImagingStudy.procedureCode
-        public ElementDefinitionInfo Element_ProcedureCode;                                                                                 // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ProcedureCode;
         // 15. ImagingStudy.location
-        public ElementDefinitionInfo Element_Location;                                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Location;
         // 16. ImagingStudy.reasonCode
-        public ElementDefinitionInfo Element_ReasonCode;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReasonCode;
         // 17. ImagingStudy.reasonReference
-        public ElementDefinitionInfo Element_ReasonReference;                                                                               // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReasonReference;
         // 18. ImagingStudy.note
-        public ElementDefinitionInfo Element_Note;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Note;
         // 19. ImagingStudy.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Description;
         // 20. ImagingStudy.series
-        public ElementDefinitionInfo Element_Series;                                                                                        // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "ImagingStudy",                                                                                                      // MakerGen.cs:395
-                ElementId = "ImagingStudy"                                                                                                  // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Modality.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Subject.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Encounter.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_Started.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_BasedOn.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Referrer.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_Interpreter.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Endpoint.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_NumberOfSeries.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_NumberOfInstances.Write(sDef);                                                                                          // MakerGen.cs:223
-            Element_ProcedureReference.Write(sDef);                                                                                         // MakerGen.cs:223
-            Element_ProcedureCode.Write(sDef);                                                                                              // MakerGen.cs:223
-            Element_Location.Write(sDef);                                                                                                   // MakerGen.cs:223
-            Element_ReasonCode.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_ReasonReference.Write(sDef);                                                                                            // MakerGen.cs:223
-            Element_Note.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_Series.Write(sDef);                                                                                                     // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_ImagingStudy()                                                                                                      // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Series;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "ImagingStudy",
+                ElementId = "ImagingStudy"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_Modality.Write(sDef);
+            Element_Subject.Write(sDef);
+            Element_Encounter.Write(sDef);
+            Element_Started.Write(sDef);
+            Element_BasedOn.Write(sDef);
+            Element_Referrer.Write(sDef);
+            Element_Interpreter.Write(sDef);
+            Element_Endpoint.Write(sDef);
+            Element_NumberOfSeries.Write(sDef);
+            Element_NumberOfInstances.Write(sDef);
+            Element_ProcedureReference.Write(sDef);
+            Element_ProcedureCode.Write(sDef);
+            Element_Location.Write(sDef);
+            Element_ReasonCode.Write(sDef);
+            Element_ReasonReference.Write(sDef);
+            Element_Note.Write(sDef);
+            Element_Description.Write(sDef);
+            Element_Series.Write(sDef);
+        }
+        
+        public Resource_ImagingStudy()
+        {
+            {
                 // 1. ImagingStudy.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "ImagingStudy.identifier",                                                                                        // MakerGen.cs:239
-                    Id = "ImagingStudy.identifier",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "ImagingStudy.identifier",
+                    Id = "ImagingStudy.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. ImagingStudy.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "ImagingStudy.status",                                                                                            // MakerGen.cs:239
-                    Id = "ImagingStudy.status",                                                                                             // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "ImagingStudy.status",
+                    Id = "ImagingStudy.status",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. ImagingStudy.modality
-                this.Element_Modality = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Modality",                                                                                              // MakerGen.cs:238
-                    Path= "ImagingStudy.modality",                                                                                          // MakerGen.cs:239
-                    Id = "ImagingStudy.modality",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                                       // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Modality = new ElementDefinitionInfo
+                {
+                    Name = "Element_Modality",
+                    Path= "ImagingStudy.modality",
+                    Id = "ImagingStudy.modality",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Coding
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. ImagingStudy.subject
-                this.Element_Subject = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Subject",                                                                                               // MakerGen.cs:238
-                    Path= "ImagingStudy.subject",                                                                                           // MakerGen.cs:239
-                    Id = "ImagingStudy.subject",                                                                                            // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Patient",                                                          // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Group"                                                             // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Subject = new ElementDefinitionInfo
+                {
+                    Name = "Element_Subject",
+                    Path= "ImagingStudy.subject",
+                    Id = "ImagingStudy.subject",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Patient",
+                                "http://hl7.org/fhir/StructureDefinition/Device",
+                                "http://hl7.org/fhir/StructureDefinition/Group"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 5. ImagingStudy.encounter
-                this.Element_Encounter = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Encounter",                                                                                             // MakerGen.cs:238
-                    Path= "ImagingStudy.encounter",                                                                                         // MakerGen.cs:239
-                    Id = "ImagingStudy.encounter",                                                                                          // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Encounter"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Encounter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Encounter",
+                    Path= "ImagingStudy.encounter",
+                    Id = "ImagingStudy.encounter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Encounter"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 6. ImagingStudy.started
-                this.Element_Started = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Started",                                                                                               // MakerGen.cs:238
-                    Path= "ImagingStudy.started",                                                                                           // MakerGen.cs:239
-                    Id = "ImagingStudy.started",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Started = new ElementDefinitionInfo
+                {
+                    Name = "Element_Started",
+                    Path= "ImagingStudy.started",
+                    Id = "ImagingStudy.started",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. ImagingStudy.basedOn
-                this.Element_BasedOn = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_BasedOn",                                                                                               // MakerGen.cs:238
-                    Path= "ImagingStudy.basedOn",                                                                                           // MakerGen.cs:239
-                    Id = "ImagingStudy.basedOn",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/CarePlan",                                                         // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",                                                   // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Appointment",                                                      // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/AppointmentResponse",                                              // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Task"                                                              // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_BasedOn = new ElementDefinitionInfo
+                {
+                    Name = "Element_BasedOn",
+                    Path= "ImagingStudy.basedOn",
+                    Id = "ImagingStudy.basedOn",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/CarePlan",
+                                "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+                                "http://hl7.org/fhir/StructureDefinition/Appointment",
+                                "http://hl7.org/fhir/StructureDefinition/AppointmentResponse",
+                                "http://hl7.org/fhir/StructureDefinition/Task"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 8. ImagingStudy.referrer
-                this.Element_Referrer = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Referrer",                                                                                              // MakerGen.cs:238
-                    Path= "ImagingStudy.referrer",                                                                                          // MakerGen.cs:239
-                    Id = "ImagingStudy.referrer",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Referrer = new ElementDefinitionInfo
+                {
+                    Name = "Element_Referrer",
+                    Path= "ImagingStudy.referrer",
+                    Id = "ImagingStudy.referrer",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 9. ImagingStudy.interpreter
-                this.Element_Interpreter = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Interpreter",                                                                                           // MakerGen.cs:238
-                    Path= "ImagingStudy.interpreter",                                                                                       // MakerGen.cs:239
-                    Id = "ImagingStudy.interpreter",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"                                                  // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Interpreter = new ElementDefinitionInfo
+                {
+                    Name = "Element_Interpreter",
+                    Path= "ImagingStudy.interpreter",
+                    Id = "ImagingStudy.interpreter",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 10. ImagingStudy.endpoint
-                this.Element_Endpoint = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Endpoint",                                                                                              // MakerGen.cs:238
-                    Path= "ImagingStudy.endpoint",                                                                                          // MakerGen.cs:239
-                    Id = "ImagingStudy.endpoint",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Endpoint = new ElementDefinitionInfo
+                {
+                    Name = "Element_Endpoint",
+                    Path= "ImagingStudy.endpoint",
+                    Id = "ImagingStudy.endpoint",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Endpoint"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 11. ImagingStudy.numberOfSeries
-                this.Element_NumberOfSeries = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_NumberOfSeries",                                                                                        // MakerGen.cs:238
-                    Path= "ImagingStudy.numberOfSeries",                                                                                    // MakerGen.cs:239
-                    Id = "ImagingStudy.numberOfSeries",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                           // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_NumberOfSeries = new ElementDefinitionInfo
+                {
+                    Name = "Element_NumberOfSeries",
+                    Path= "ImagingStudy.numberOfSeries",
+                    Id = "ImagingStudy.numberOfSeries",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. ImagingStudy.numberOfInstances
-                this.Element_NumberOfInstances = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_NumberOfInstances",                                                                                     // MakerGen.cs:238
-                    Path= "ImagingStudy.numberOfInstances",                                                                                 // MakerGen.cs:239
-                    Id = "ImagingStudy.numberOfInstances",                                                                                  // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                           // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_NumberOfInstances = new ElementDefinitionInfo
+                {
+                    Name = "Element_NumberOfInstances",
+                    Path= "ImagingStudy.numberOfInstances",
+                    Id = "ImagingStudy.numberOfInstances",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. ImagingStudy.procedureReference
-                this.Element_ProcedureReference = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ProcedureReference",                                                                                    // MakerGen.cs:238
-                    Path= "ImagingStudy.procedureReference",                                                                                // MakerGen.cs:239
-                    Id = "ImagingStudy.procedureReference",                                                                                 // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Procedure"                                                         // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ProcedureReference = new ElementDefinitionInfo
+                {
+                    Name = "Element_ProcedureReference",
+                    Path= "ImagingStudy.procedureReference",
+                    Id = "ImagingStudy.procedureReference",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Procedure"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 14. ImagingStudy.procedureCode
-                this.Element_ProcedureCode = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ProcedureCode",                                                                                         // MakerGen.cs:238
-                    Path= "ImagingStudy.procedureCode",                                                                                     // MakerGen.cs:239
-                    Id = "ImagingStudy.procedureCode",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ProcedureCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_ProcedureCode",
+                    Path= "ImagingStudy.procedureCode",
+                    Id = "ImagingStudy.procedureCode",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 15. ImagingStudy.location
-                this.Element_Location = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Location",                                                                                              // MakerGen.cs:238
-                    Path= "ImagingStudy.location",                                                                                          // MakerGen.cs:239
-                    Id = "ImagingStudy.location",                                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Location = new ElementDefinitionInfo
+                {
+                    Name = "Element_Location",
+                    Path= "ImagingStudy.location",
+                    Id = "ImagingStudy.location",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Location"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 16. ImagingStudy.reasonCode
-                this.Element_ReasonCode = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReasonCode",                                                                                            // MakerGen.cs:238
-                    Path= "ImagingStudy.reasonCode",                                                                                        // MakerGen.cs:239
-                    Id = "ImagingStudy.reasonCode",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReasonCode = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReasonCode",
+                    Path= "ImagingStudy.reasonCode",
+                    Id = "ImagingStudy.reasonCode",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 17. ImagingStudy.reasonReference
-                this.Element_ReasonReference = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReasonReference",                                                                                       // MakerGen.cs:238
-                    Path= "ImagingStudy.reasonReference",                                                                                   // MakerGen.cs:239
-                    Id = "ImagingStudy.reasonReference",                                                                                    // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Condition",                                                        // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Observation",                                                      // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Media",                                                            // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"                                                 // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReasonReference = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReasonReference",
+                    Path= "ImagingStudy.reasonReference",
+                    Id = "ImagingStudy.reasonReference",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Condition",
+                                "http://hl7.org/fhir/StructureDefinition/Observation",
+                                "http://hl7.org/fhir/StructureDefinition/Media",
+                                "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+                                "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 18. ImagingStudy.note
-                this.Element_Note = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Note",                                                                                                  // MakerGen.cs:238
-                    Path= "ImagingStudy.note",                                                                                              // MakerGen.cs:239
-                    Id = "ImagingStudy.note",                                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Annotation                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Note = new ElementDefinitionInfo
+                {
+                    Name = "Element_Note",
+                    Path= "ImagingStudy.note",
+                    Id = "ImagingStudy.note",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Annotation
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 19. ImagingStudy.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
-                    Path= "ImagingStudy.description",                                                                                       // MakerGen.cs:239
-                    Id = "ImagingStudy.description",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Description = new ElementDefinitionInfo
+                {
+                    Name = "Element_Description",
+                    Path= "ImagingStudy.description",
+                    Id = "ImagingStudy.description",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 20. ImagingStudy.series
-                this.Element_Series = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Series",                                                                                                // MakerGen.cs:238
-                    Path= "ImagingStudy.series",                                                                                            // MakerGen.cs:239
-                    Id = "ImagingStudy.series",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_Series                                                                                                     // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "ImagingStudy";                                                                                                     // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ImagingStudy";                                                              // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_Series = new ElementDefinitionInfo
+                {
+                    Name = "Element_Series",
+                    Path= "ImagingStudy.series",
+                    Id = "ImagingStudy.series",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_Series
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "ImagingStudy";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ImagingStudy";
+        }
+    }
+}

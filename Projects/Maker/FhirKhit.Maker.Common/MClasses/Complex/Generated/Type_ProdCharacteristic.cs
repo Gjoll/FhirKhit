@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:498
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:499
-using System.IO;                                                                                                                            // MakerGen.cs:500
-using System.Linq;                                                                                                                          // MakerGen.cs:501
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:502
-                                                                                                                                            // MakerGen.cs:503
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:504
-{                                                                                                                                           // MakerGen.cs:505
-    #region Json                                                                                                                            // MakerGen.cs:506
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Complex
+{
+    #region Json
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -191,246 +191,246 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:510
+    #endregion
     /// <summary>
     /// Fhir complex 'ProdCharacteristic'
     /// </summary>
     // 0. ProdCharacteristic
-    public class Type_ProdCharacteristic : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Type_ProdCharacteristic : FhirKhit.Maker.Common.Complex.ComplexBase
+    {
         // 1. ProdCharacteristic.height
-        public ElementDefinitionInfo Element_Height;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Height;
         // 2. ProdCharacteristic.width
-        public ElementDefinitionInfo Element_Width;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Width;
         // 3. ProdCharacteristic.depth
-        public ElementDefinitionInfo Element_Depth;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Depth;
         // 4. ProdCharacteristic.weight
-        public ElementDefinitionInfo Element_Weight;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Weight;
         // 5. ProdCharacteristic.nominalVolume
-        public ElementDefinitionInfo Element_NominalVolume;                                                                                 // MakerGen.cs:219
+        public ElementDefinitionInfo Element_NominalVolume;
         // 6. ProdCharacteristic.externalDiameter
-        public ElementDefinitionInfo Element_ExternalDiameter;                                                                              // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ExternalDiameter;
         // 7. ProdCharacteristic.shape
-        public ElementDefinitionInfo Element_Shape;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Shape;
         // 8. ProdCharacteristic.color
-        public ElementDefinitionInfo Element_Color;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Color;
         // 9. ProdCharacteristic.imprint
-        public ElementDefinitionInfo Element_Imprint;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Imprint;
         // 10. ProdCharacteristic.image
-        public ElementDefinitionInfo Element_Image;                                                                                         // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Image;
         // 11. ProdCharacteristic.scoring
-        public ElementDefinitionInfo Element_Scoring;                                                                                       // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "ProdCharacteristic",                                                                                                // MakerGen.cs:395
-                ElementId = "ProdCharacteristic"                                                                                            // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Height.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_Width.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Depth.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Weight.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_NominalVolume.Write(sDef);                                                                                              // MakerGen.cs:223
-            Element_ExternalDiameter.Write(sDef);                                                                                           // MakerGen.cs:223
-            Element_Shape.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Color.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Imprint.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_Image.Write(sDef);                                                                                                      // MakerGen.cs:223
-            Element_Scoring.Write(sDef);                                                                                                    // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Type_ProdCharacteristic()                                                                                                    // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_Scoring;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "ProdCharacteristic",
+                ElementId = "ProdCharacteristic"
+            });
+            Element_Height.Write(sDef);
+            Element_Width.Write(sDef);
+            Element_Depth.Write(sDef);
+            Element_Weight.Write(sDef);
+            Element_NominalVolume.Write(sDef);
+            Element_ExternalDiameter.Write(sDef);
+            Element_Shape.Write(sDef);
+            Element_Color.Write(sDef);
+            Element_Imprint.Write(sDef);
+            Element_Image.Write(sDef);
+            Element_Scoring.Write(sDef);
+        }
+        
+        public Type_ProdCharacteristic()
+        {
+            {
                 // 1. ProdCharacteristic.height
-                this.Element_Height = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Height",                                                                                                // MakerGen.cs:238
-                    Path= "ProdCharacteristic.height",                                                                                      // MakerGen.cs:239
-                    Id = "ProdCharacteristic.height",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Height = new ElementDefinitionInfo
+                {
+                    Name = "Element_Height",
+                    Path= "ProdCharacteristic.height",
+                    Id = "ProdCharacteristic.height",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. ProdCharacteristic.width
-                this.Element_Width = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Width",                                                                                                 // MakerGen.cs:238
-                    Path= "ProdCharacteristic.width",                                                                                       // MakerGen.cs:239
-                    Id = "ProdCharacteristic.width",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Width = new ElementDefinitionInfo
+                {
+                    Name = "Element_Width",
+                    Path= "ProdCharacteristic.width",
+                    Id = "ProdCharacteristic.width",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. ProdCharacteristic.depth
-                this.Element_Depth = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Depth",                                                                                                 // MakerGen.cs:238
-                    Path= "ProdCharacteristic.depth",                                                                                       // MakerGen.cs:239
-                    Id = "ProdCharacteristic.depth",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Depth = new ElementDefinitionInfo
+                {
+                    Name = "Element_Depth",
+                    Path= "ProdCharacteristic.depth",
+                    Id = "ProdCharacteristic.depth",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. ProdCharacteristic.weight
-                this.Element_Weight = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Weight",                                                                                                // MakerGen.cs:238
-                    Path= "ProdCharacteristic.weight",                                                                                      // MakerGen.cs:239
-                    Id = "ProdCharacteristic.weight",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Weight = new ElementDefinitionInfo
+                {
+                    Name = "Element_Weight",
+                    Path= "ProdCharacteristic.weight",
+                    Id = "ProdCharacteristic.weight",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 5. ProdCharacteristic.nominalVolume
-                this.Element_NominalVolume = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_NominalVolume",                                                                                         // MakerGen.cs:238
-                    Path= "ProdCharacteristic.nominalVolume",                                                                               // MakerGen.cs:239
-                    Id = "ProdCharacteristic.nominalVolume",                                                                                // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_NominalVolume = new ElementDefinitionInfo
+                {
+                    Name = "Element_NominalVolume",
+                    Path= "ProdCharacteristic.nominalVolume",
+                    Id = "ProdCharacteristic.nominalVolume",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. ProdCharacteristic.externalDiameter
-                this.Element_ExternalDiameter = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ExternalDiameter",                                                                                      // MakerGen.cs:238
-                    Path= "ProdCharacteristic.externalDiameter",                                                                            // MakerGen.cs:239
-                    Id = "ProdCharacteristic.externalDiameter",                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                                     // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ExternalDiameter = new ElementDefinitionInfo
+                {
+                    Name = "Element_ExternalDiameter",
+                    Path= "ProdCharacteristic.externalDiameter",
+                    Id = "ProdCharacteristic.externalDiameter",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Quantity
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. ProdCharacteristic.shape
-                this.Element_Shape = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Shape",                                                                                                 // MakerGen.cs:238
-                    Path= "ProdCharacteristic.shape",                                                                                       // MakerGen.cs:239
-                    Id = "ProdCharacteristic.shape",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Shape = new ElementDefinitionInfo
+                {
+                    Name = "Element_Shape",
+                    Path= "ProdCharacteristic.shape",
+                    Id = "ProdCharacteristic.shape",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. ProdCharacteristic.color
-                this.Element_Color = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Color",                                                                                                 // MakerGen.cs:238
-                    Path= "ProdCharacteristic.color",                                                                                       // MakerGen.cs:239
-                    Id = "ProdCharacteristic.color",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Color = new ElementDefinitionInfo
+                {
+                    Name = "Element_Color",
+                    Path= "ProdCharacteristic.color",
+                    Id = "ProdCharacteristic.color",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. ProdCharacteristic.imprint
-                this.Element_Imprint = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Imprint",                                                                                               // MakerGen.cs:238
-                    Path= "ProdCharacteristic.imprint",                                                                                     // MakerGen.cs:239
-                    Id = "ProdCharacteristic.imprint",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Imprint = new ElementDefinitionInfo
+                {
+                    Name = "Element_Imprint",
+                    Path= "ProdCharacteristic.imprint",
+                    Id = "ProdCharacteristic.imprint",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. ProdCharacteristic.image
-                this.Element_Image = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Image",                                                                                                 // MakerGen.cs:238
-                    Path= "ProdCharacteristic.image",                                                                                       // MakerGen.cs:239
-                    Id = "ProdCharacteristic.image",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Attachment                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Image = new ElementDefinitionInfo
+                {
+                    Name = "Element_Image",
+                    Path= "ProdCharacteristic.image",
+                    Id = "ProdCharacteristic.image",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Attachment
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 11. ProdCharacteristic.scoring
-                this.Element_Scoring = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Scoring",                                                                                               // MakerGen.cs:238
-                    Path= "ProdCharacteristic.scoring",                                                                                     // MakerGen.cs:239
-                    Id = "ProdCharacteristic.scoring",                                                                                      // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:515
+                this.Element_Scoring = new ElementDefinitionInfo
+                {
+                    Name = "Element_Scoring",
+                    Path= "ProdCharacteristic.scoring",
+                    Id = "ProdCharacteristic.scoring",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+        }
+    }
+}

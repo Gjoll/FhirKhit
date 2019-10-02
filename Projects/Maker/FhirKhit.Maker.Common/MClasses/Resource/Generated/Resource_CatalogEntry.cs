@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:435
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
-using System.IO;                                                                                                                            // MakerGen.cs:437
-using System.Linq;                                                                                                                          // MakerGen.cs:438
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
-                                                                                                                                            // MakerGen.cs:440
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
-{                                                                                                                                           // MakerGen.cs:442
-    #region Json                                                                                                                            // MakerGen.cs:443
-    #if NEVER                                                                                                                               // MakerGen.cs:444
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using Hl7.Fhir.Model;
+
+namespace FhirKhit.Maker.Common.Resource
+{
+    #region Json
+    #if NEVER
     {
       "resourceType": "StructureDefinition",
       "id": "CatalogEntry",
@@ -278,364 +278,364 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:447
+    #endregion
     /// <summary>
     /// Fhir resource 'CatalogEntry'
     /// </summary>
     // 0. CatalogEntry
-    public class Resource_CatalogEntry : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                             // MakerGen.cs:383
-    {                                                                                                                                       // MakerGen.cs:384
+    public class Resource_CatalogEntry : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    {
         // 13. CatalogEntry.relatedEntry
-        public class Type_RelatedEntry : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
+        public class Type_RelatedEntry : FhirKhit.Maker.Common.Complex.ComplexBase
+        {
             // 14. CatalogEntry.relatedEntry.relationtype
-            public ElementDefinitionInfo Element_Relationtype;                                                                              // MakerGen.cs:219
+            public ElementDefinitionInfo Element_Relationtype;
             // 15. CatalogEntry.relatedEntry.item
-            public ElementDefinitionInfo Element_Item;                                                                                      // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
-            {                                                                                                                               // MakerGen.cs:391
-                base.Write(sDef);                                                                                                           // MakerGen.cs:392
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
-                {                                                                                                                           // MakerGen.cs:394
-                    Path = "CatalogEntry.relatedEntry",                                                                                     // MakerGen.cs:395
-                    ElementId = "CatalogEntry.relatedEntry"                                                                                 // MakerGen.cs:396
-                });                                                                                                                         // MakerGen.cs:397
-                Element_Relationtype.Write(sDef);                                                                                           // MakerGen.cs:223
-                Element_Item.Write(sDef);                                                                                                   // MakerGen.cs:223
-            }                                                                                                                               // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-            public Type_RelatedEntry()                                                                                                      // MakerGen.cs:402
-            {                                                                                                                               // MakerGen.cs:403
-                {                                                                                                                           // MakerGen.cs:234
+            public ElementDefinitionInfo Element_Item;
+            
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+            {
+                base.Write(sDef);
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+                {
+                    Path = "CatalogEntry.relatedEntry",
+                    ElementId = "CatalogEntry.relatedEntry"
+                });
+                Element_Relationtype.Write(sDef);
+                Element_Item.Write(sDef);
+            }
+            
+            public Type_RelatedEntry()
+            {
+                {
                     // 14. CatalogEntry.relatedEntry.relationtype
-                    this.Element_Relationtype = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Relationtype",                                                                                      // MakerGen.cs:238
-                        Path= "CatalogEntry.relatedEntry.relationtype",                                                                     // MakerGen.cs:239
-                        Id = "CatalogEntry.relatedEntry.relationtype",                                                                      // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
-                            {                                                                                                               // MakerGen.cs:304
-                            }                                                                                                               // MakerGen.cs:307
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-                {                                                                                                                           // MakerGen.cs:234
+                    this.Element_Relationtype = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Relationtype",
+                        Path= "CatalogEntry.relatedEntry.relationtype",
+                        Id = "CatalogEntry.relatedEntry.relationtype",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                            {
+                            }
+                        }
+                    };
+                }
+                {
                     // 15. CatalogEntry.relatedEntry.item
-                    this.Element_Item = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        Name = "Element_Item",                                                                                              // MakerGen.cs:238
-                        Path= "CatalogEntry.relatedEntry.item",                                                                             // MakerGen.cs:239
-                        Id = "CatalogEntry.relatedEntry.item",                                                                              // MakerGen.cs:240
-                        Min = 1,                                                                                                            // MakerGen.cs:241
-                        Max = 1,                                                                                                            // MakerGen.cs:242
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
-                        {                                                                                                                   // MakerGen.cs:244
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
-                            {                                                                                                               // MakerGen.cs:347
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/CatalogEntry"                                                  // MakerGen.cs:349
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:350
-                        }                                                                                                                   // MakerGen.cs:246
-                    };                                                                                                                      // MakerGen.cs:247
-                }                                                                                                                           // MakerGen.cs:248
-            }                                                                                                                               // MakerGen.cs:405
-        }                                                                                                                                   // MakerGen.cs:407
+                    this.Element_Item = new ElementDefinitionInfo
+                    {
+                        Name = "Element_Item",
+                        Path= "CatalogEntry.relatedEntry.item",
+                        Id = "CatalogEntry.relatedEntry.item",
+                        Min = 1,
+                        Max = 1,
+                        Types = new BaseType[]
+                        {
+                            new FhirKhit.Maker.Common.Complex.Type_Reference
+                            {
+                                TargetProfile = new String[]
+                                {
+                                    "http://hl7.org/fhir/StructureDefinition/CatalogEntry"
+                                }
+                            }
+                        }
+                    };
+                }
+            }
+        }
         // 1. CatalogEntry.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Identifier;
         // 2. CatalogEntry.type
-        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Type;
         // 3. CatalogEntry.orderable
-        public ElementDefinitionInfo Element_Orderable;                                                                                     // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Orderable;
         // 4. CatalogEntry.referencedItem
-        public ElementDefinitionInfo Element_ReferencedItem;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ReferencedItem;
         // 5. CatalogEntry.additionalIdentifier
-        public ElementDefinitionInfo Element_AdditionalIdentifier;                                                                          // MakerGen.cs:219
+        public ElementDefinitionInfo Element_AdditionalIdentifier;
         // 6. CatalogEntry.classification
-        public ElementDefinitionInfo Element_Classification;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Classification;
         // 7. CatalogEntry.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        public ElementDefinitionInfo Element_Status;
         // 8. CatalogEntry.validityPeriod
-        public ElementDefinitionInfo Element_ValidityPeriod;                                                                                // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ValidityPeriod;
         // 9. CatalogEntry.validTo
-        public ElementDefinitionInfo Element_ValidTo;                                                                                       // MakerGen.cs:219
+        public ElementDefinitionInfo Element_ValidTo;
         // 10. CatalogEntry.lastUpdated
-        public ElementDefinitionInfo Element_LastUpdated;                                                                                   // MakerGen.cs:219
+        public ElementDefinitionInfo Element_LastUpdated;
         // 11. CatalogEntry.additionalCharacteristic
-        public ElementDefinitionInfo Element_AdditionalCharacteristic;                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_AdditionalCharacteristic;
         // 12. CatalogEntry.additionalClassification
-        public ElementDefinitionInfo Element_AdditionalClassification;                                                                      // MakerGen.cs:219
+        public ElementDefinitionInfo Element_AdditionalClassification;
         // 13. CatalogEntry.relatedEntry
-        public ElementDefinitionInfo Element_RelatedEntry;                                                                                  // MakerGen.cs:219
-                                                                                                                                            // MakerGen.cs:389
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
-        {                                                                                                                                   // MakerGen.cs:391
-            base.Write(sDef);                                                                                                               // MakerGen.cs:392
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
-            {                                                                                                                               // MakerGen.cs:394
-                Path = "CatalogEntry",                                                                                                      // MakerGen.cs:395
-                ElementId = "CatalogEntry"                                                                                                  // MakerGen.cs:396
-            });                                                                                                                             // MakerGen.cs:397
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
-            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:223
-            Element_Orderable.Write(sDef);                                                                                                  // MakerGen.cs:223
-            Element_ReferencedItem.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_AdditionalIdentifier.Write(sDef);                                                                                       // MakerGen.cs:223
-            Element_Classification.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
-            Element_ValidityPeriod.Write(sDef);                                                                                             // MakerGen.cs:223
-            Element_ValidTo.Write(sDef);                                                                                                    // MakerGen.cs:223
-            Element_LastUpdated.Write(sDef);                                                                                                // MakerGen.cs:223
-            Element_AdditionalCharacteristic.Write(sDef);                                                                                   // MakerGen.cs:223
-            Element_AdditionalClassification.Write(sDef);                                                                                   // MakerGen.cs:223
-            Element_RelatedEntry.Write(sDef);                                                                                               // MakerGen.cs:223
-        }                                                                                                                                   // MakerGen.cs:399
-                                                                                                                                            // MakerGen.cs:401
-        public Resource_CatalogEntry()                                                                                                      // MakerGen.cs:402
-        {                                                                                                                                   // MakerGen.cs:403
-            {                                                                                                                               // MakerGen.cs:234
+        public ElementDefinitionInfo Element_RelatedEntry;
+        
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)
+        {
+            base.Write(sDef);
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition
+            {
+                Path = "CatalogEntry",
+                ElementId = "CatalogEntry"
+            });
+            Element_Identifier.Write(sDef);
+            Element_Type.Write(sDef);
+            Element_Orderable.Write(sDef);
+            Element_ReferencedItem.Write(sDef);
+            Element_AdditionalIdentifier.Write(sDef);
+            Element_Classification.Write(sDef);
+            Element_Status.Write(sDef);
+            Element_ValidityPeriod.Write(sDef);
+            Element_ValidTo.Write(sDef);
+            Element_LastUpdated.Write(sDef);
+            Element_AdditionalCharacteristic.Write(sDef);
+            Element_AdditionalClassification.Write(sDef);
+            Element_RelatedEntry.Write(sDef);
+        }
+        
+        public Resource_CatalogEntry()
+        {
+            {
                 // 1. CatalogEntry.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
-                    Path= "CatalogEntry.identifier",                                                                                        // MakerGen.cs:239
-                    Id = "CatalogEntry.identifier",                                                                                         // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Identifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_Identifier",
+                    Path= "CatalogEntry.identifier",
+                    Id = "CatalogEntry.identifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 2. CatalogEntry.type
-                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Type",                                                                                                  // MakerGen.cs:238
-                    Path= "CatalogEntry.type",                                                                                              // MakerGen.cs:239
-                    Id = "CatalogEntry.type",                                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Type = new ElementDefinitionInfo
+                {
+                    Name = "Element_Type",
+                    Path= "CatalogEntry.type",
+                    Id = "CatalogEntry.type",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 3. CatalogEntry.orderable
-                this.Element_Orderable = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Orderable",                                                                                             // MakerGen.cs:238
-                    Path= "CatalogEntry.orderable",                                                                                         // MakerGen.cs:239
-                    Id = "CatalogEntry.orderable",                                                                                          // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Orderable = new ElementDefinitionInfo
+                {
+                    Name = "Element_Orderable",
+                    Path= "CatalogEntry.orderable",
+                    Id = "CatalogEntry.orderable",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 4. CatalogEntry.referencedItem
-                this.Element_ReferencedItem = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ReferencedItem",                                                                                        // MakerGen.cs:238
-                    Path= "CatalogEntry.referencedItem",                                                                                    // MakerGen.cs:239
-                    Id = "CatalogEntry.referencedItem",                                                                                     // MakerGen.cs:240
-                    Min = 1,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
-                        {                                                                                                                   // MakerGen.cs:347
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
-                            {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Medication",                                                       // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Device",                                                           // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Organization",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Practitioner",                                                     // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",                                                 // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/HealthcareService",                                                // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",                                               // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition",                                                   // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition",                                               // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/ObservationDefinition",                                            // MakerGen.cs:349
-                                "http://hl7.org/fhir/StructureDefinition/Binary"                                                            // MakerGen.cs:349
-                            }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:350
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ReferencedItem = new ElementDefinitionInfo
+                {
+                    Name = "Element_ReferencedItem",
+                    Path= "CatalogEntry.referencedItem",
+                    Id = "CatalogEntry.referencedItem",
+                    Min = 1,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Reference
+                        {
+                            TargetProfile = new String[]
+                            {
+                                "http://hl7.org/fhir/StructureDefinition/Medication",
+                                "http://hl7.org/fhir/StructureDefinition/Device",
+                                "http://hl7.org/fhir/StructureDefinition/Organization",
+                                "http://hl7.org/fhir/StructureDefinition/Practitioner",
+                                "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+                                "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+                                "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/SpecimenDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/ObservationDefinition",
+                                "http://hl7.org/fhir/StructureDefinition/Binary"
+                            }
+                        }
+                    }
+                };
+            }
+            {
                 // 5. CatalogEntry.additionalIdentifier
-                this.Element_AdditionalIdentifier = new ElementDefinitionInfo                                                               // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_AdditionalIdentifier",                                                                                  // MakerGen.cs:238
-                    Path= "CatalogEntry.additionalIdentifier",                                                                              // MakerGen.cs:239
-                    Id = "CatalogEntry.additionalIdentifier",                                                                               // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_AdditionalIdentifier = new ElementDefinitionInfo
+                {
+                    Name = "Element_AdditionalIdentifier",
+                    Path= "CatalogEntry.additionalIdentifier",
+                    Id = "CatalogEntry.additionalIdentifier",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 6. CatalogEntry.classification
-                this.Element_Classification = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Classification",                                                                                        // MakerGen.cs:238
-                    Path= "CatalogEntry.classification",                                                                                    // MakerGen.cs:239
-                    Id = "CatalogEntry.classification",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Classification = new ElementDefinitionInfo
+                {
+                    Name = "Element_Classification",
+                    Path= "CatalogEntry.classification",
+                    Id = "CatalogEntry.classification",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 7. CatalogEntry.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
-                    Path= "CatalogEntry.status",                                                                                            // MakerGen.cs:239
-                    Id = "CatalogEntry.status",                                                                                             // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_Status = new ElementDefinitionInfo
+                {
+                    Name = "Element_Status",
+                    Path= "CatalogEntry.status",
+                    Id = "CatalogEntry.status",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 8. CatalogEntry.validityPeriod
-                this.Element_ValidityPeriod = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ValidityPeriod",                                                                                        // MakerGen.cs:238
-                    Path= "CatalogEntry.validityPeriod",                                                                                    // MakerGen.cs:239
-                    Id = "CatalogEntry.validityPeriod",                                                                                     // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
-                        {                                                                                                                   // MakerGen.cs:359
-                        }                                                                                                                   // MakerGen.cs:360
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ValidityPeriod = new ElementDefinitionInfo
+                {
+                    Name = "Element_ValidityPeriod",
+                    Path= "CatalogEntry.validityPeriod",
+                    Id = "CatalogEntry.validityPeriod",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_Period
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 9. CatalogEntry.validTo
-                this.Element_ValidTo = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_ValidTo",                                                                                               // MakerGen.cs:238
-                    Path= "CatalogEntry.validTo",                                                                                           // MakerGen.cs:239
-                    Id = "CatalogEntry.validTo",                                                                                            // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_ValidTo = new ElementDefinitionInfo
+                {
+                    Name = "Element_ValidTo",
+                    Path= "CatalogEntry.validTo",
+                    Id = "CatalogEntry.validTo",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 10. CatalogEntry.lastUpdated
-                this.Element_LastUpdated = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_LastUpdated",                                                                                           // MakerGen.cs:238
-                    Path= "CatalogEntry.lastUpdated",                                                                                       // MakerGen.cs:239
-                    Id = "CatalogEntry.lastUpdated",                                                                                        // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = 1,                                                                                                                // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
-                        {                                                                                                                   // MakerGen.cs:304
-                        }                                                                                                                   // MakerGen.cs:307
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_LastUpdated = new ElementDefinitionInfo
+                {
+                    Name = "Element_LastUpdated",
+                    Path= "CatalogEntry.lastUpdated",
+                    Id = "CatalogEntry.lastUpdated",
+                    Min = 0,
+                    Max = 1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 11. CatalogEntry.additionalCharacteristic
-                this.Element_AdditionalCharacteristic = new ElementDefinitionInfo                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_AdditionalCharacteristic",                                                                              // MakerGen.cs:238
-                    Path= "CatalogEntry.additionalCharacteristic",                                                                          // MakerGen.cs:239
-                    Id = "CatalogEntry.additionalCharacteristic",                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_AdditionalCharacteristic = new ElementDefinitionInfo
+                {
+                    Name = "Element_AdditionalCharacteristic",
+                    Path= "CatalogEntry.additionalCharacteristic",
+                    Id = "CatalogEntry.additionalCharacteristic",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 12. CatalogEntry.additionalClassification
-                this.Element_AdditionalClassification = new ElementDefinitionInfo                                                           // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_AdditionalClassification",                                                                              // MakerGen.cs:238
-                    Path= "CatalogEntry.additionalClassification",                                                                          // MakerGen.cs:239
-                    Id = "CatalogEntry.additionalClassification",                                                                           // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
-                        {                                                                                                                   // MakerGen.cs:319
-                        }                                                                                                                   // MakerGen.cs:322
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            {                                                                                                                               // MakerGen.cs:234
+                this.Element_AdditionalClassification = new ElementDefinitionInfo
+                {
+                    Name = "Element_AdditionalClassification",
+                    Path= "CatalogEntry.additionalClassification",
+                    Id = "CatalogEntry.additionalClassification",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept
+                        {
+                        }
+                    }
+                };
+            }
+            {
                 // 13. CatalogEntry.relatedEntry
-                this.Element_RelatedEntry = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
-                {                                                                                                                           // MakerGen.cs:237
-                    Name = "Element_RelatedEntry",                                                                                          // MakerGen.cs:238
-                    Path= "CatalogEntry.relatedEntry",                                                                                      // MakerGen.cs:239
-                    Id = "CatalogEntry.relatedEntry",                                                                                       // MakerGen.cs:240
-                    Min = 0,                                                                                                                // MakerGen.cs:241
-                    Max = -1,                                                                                                               // MakerGen.cs:242
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
-                    {                                                                                                                       // MakerGen.cs:244
-                        new Type_RelatedEntry                                                                                               // MakerGen.cs:262
-                        {                                                                                                                   // MakerGen.cs:263
-                        }                                                                                                                   // MakerGen.cs:264
-                    }                                                                                                                       // MakerGen.cs:246
-                };                                                                                                                          // MakerGen.cs:247
-            }                                                                                                                               // MakerGen.cs:248
-            this.Name = "CatalogEntry";                                                                                                     // MakerGen.cs:471
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/CatalogEntry";                                                              // MakerGen.cs:472
-        }                                                                                                                                   // MakerGen.cs:405
-    }                                                                                                                                       // MakerGen.cs:407
-}                                                                                                                                           // MakerGen.cs:452
+                this.Element_RelatedEntry = new ElementDefinitionInfo
+                {
+                    Name = "Element_RelatedEntry",
+                    Path= "CatalogEntry.relatedEntry",
+                    Id = "CatalogEntry.relatedEntry",
+                    Min = 0,
+                    Max = -1,
+                    Types = new BaseType[]
+                    {
+                        new Type_RelatedEntry
+                        {
+                        }
+                    }
+                };
+            }
+            this.Name = "CatalogEntry";
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/CatalogEntry";
+        }
+    }
+}
