@@ -11,7 +11,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using ElementDefinitionNode = FhirKhit.SliceGen.R4.ElementDefinitionNode;
 
 namespace FhirKhit.SliceGen.CSApi
 {

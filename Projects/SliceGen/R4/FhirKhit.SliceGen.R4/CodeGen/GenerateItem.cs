@@ -1,5 +1,6 @@
 ﻿using FhirKhit.SliceGen.CodeGen;
 using FhirKhit.SliceGen.CSApi;
+using FhirKhit.Tools.R4;
 using Hl7.Fhir.Model;
 using Hl7.Fhir.Specification.Source;
 using System;

@@ -1,10 +1,15 @@
-﻿using FhirKhit.SliceGen.R4;
-using Hl7.Fhir.Model;
+﻿using Hl7.Fhir.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FhirKhit.SliceGen.SharedLib
+#if FHIR_R4
+namespace FhirKhit.Tools.R4
+#elif FHIR_R3
+namespace FhirKhit.Tools.R3
+#elif FHIR_R2
+namespace FhirKhit.Tools.R2
+#endif
 {
     public static class ElementNodeExtensions
     {

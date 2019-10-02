@@ -7,9 +7,7 @@ using System.IO;
 using Xunit;
 using System.Text;
 using Hl7.Fhir.Serialization;
-using FhirKhit.SliceGen.R4;
 using System.IO.Compression;
-
 
 #if FHIR_R2
 using FhirKhit.Tools.R2;
@@ -28,6 +26,7 @@ namespace FhirKhit.SliceGen.XUnitTestsA
     /// </summary>
     public class ElementNodeTests
     {
+#if FHIR_R4 || FHIR_R3
         StructureDefinition CreateBaseObservation()
         {
             StructureDefinition s = new StructureDefinition
@@ -240,5 +239,6 @@ namespace FhirKhit.SliceGen.XUnitTestsA
                 }
             }
         }
+#endif
     }
 }

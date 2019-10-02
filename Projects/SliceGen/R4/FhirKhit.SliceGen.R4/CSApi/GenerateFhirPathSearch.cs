@@ -1,6 +1,7 @@
 ﻿using FhirKhit.SliceGen.CodeGen;
 using FhirKhit.SliceGen.R4;
 using FhirKhit.Tools;
+using FhirKhit.Tools.R4;
 using System;
 using System.Collections.Generic;
 using System.Reflection;

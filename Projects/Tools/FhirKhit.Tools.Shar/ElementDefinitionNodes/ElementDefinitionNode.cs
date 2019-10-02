@@ -11,7 +11,14 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Text;
 
-namespace FhirKhit.SliceGen.R4
+#if FHIR_R4
+namespace FhirKhit.Tools.R4
+#elif FHIR_R3
+namespace FhirKhit.Tools.R3
+#elif FHIR_R2
+namespace FhirKhit.Tools.R2
+#endif
+
 {
     [DebuggerDisplay("{Path} ")]
     public partial class ElementDefinitionNode : ITypedElement
@@ -76,13 +83,14 @@ namespace FhirKhit.SliceGen.R4
                 String lcPathItem = pathItem.ToLower();
                 foreach (ElementDefinition.TypeRefComponent typeRef in loadItem.Type)
                 {
-                    if (lcPathItem.EndsWith(typeRef.Code.ToLower()))
+                    String typeRefCode = typeRef.Code.ToString();
+                    if (lcPathItem.EndsWith(typeRefCode.ToLower()))
                     {
                         // change things like effectiveDateTime to effective.
-                        if (pathItem.Length > typeRef.Code.Length)
-                            pathItem = pathItem.Substring(0, pathItem.Length - typeRef.Code.Length);
-                        if (ModelInfo.FhirTypeToCsType.TryGetValue(typeRef.Code, out actualType) == false)
-                            throw new Exception($"Unknown fhor type '{typeRef.Code}'");
+                        if (pathItem.Length > typeRefCode.Length)
+                            pathItem = pathItem.Substring(0, pathItem.Length - typeRefCode.Length);
+                        if (ModelInfo.FhirTypeToCsType.TryGetValue(typeRefCode, out actualType) == false)
+                            throw new Exception($"Unknown fhir type '{typeRefCode}'");
                         return;
                     }
                 }
@@ -131,6 +139,7 @@ namespace FhirKhit.SliceGen.R4
                     leafNode = new ElementDefinitionNode(nodeElement, loadItem, fhirType, String.Empty);
                     nodeElement.childNodeDictionary.Add(pathItem, leafNode);
                 }
+#if FHIR_R4 || FHIR_R3
                 else if (String.IsNullOrEmpty(loadItem.SliceName))
                 {
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
@@ -141,18 +150,22 @@ namespace FhirKhit.SliceGen.R4
                     leafNode = new ElementDefinitionNode(nodeElement, loadItem, fhirType, actualType, propertyName);
                     nodeElement.childNodeDictionary.Add(pathItem, leafNode);
                 }
+#endif
                 else
                 {
-                    //Debug.Assert(loadItem.SliceName != "breastrad-AbnormalityDensity");
                     NormalizePathItem(loadItem, ref pathItem, out Type actualType);
                     if (nodeElement.TryGetAnyChild(pathItem, out ElementDefinitionNode sliceNode) == false)
                         throw new Exception($"Error element node {pathItem} not found {loadItem.Path}");
+#if FHIR_R4 || FHIR_R3
                     if (sliceNode.TryGetSlice(loadItem.SliceName, out ElementDefinitionNode dummySlice) == true)
                         throw new Exception($"Error element node slice {nodeElement.Element.SliceName} already exists in {loadItem.Path}");
+#endif
                     if (GetFhirType(nodeElement.FhirItemType, pathItem, out Type fhirType, out String propertyName) == false)
                         throw new Exception($"Cant find '{pathItem}' in {nodeElement.FhirItemType.FriendlyName()}");
                     leafNode = new ElementDefinitionNode(nodeElement, loadItem, fhirType, actualType, propertyName);
+#if FHIR_R4 || FHIR_R3
                     sliceNode.slices.Add(loadItem.SliceName, leafNode);
+#endif
                 }
 
                 tree.Child = new TreeItem
@@ -253,8 +266,10 @@ namespace FhirKhit.SliceGen.R4
                 ElementDefinitionNode node = this;
                 while (node.Element != null)
                 {
+#if FHIR_R4 || FHIR_R3
                     if (node.Element.SliceName != null)
                         path.Insert(0, node.Element.SliceName);
+#endif
                     path.Insert(0, node.Name);
                     node = node.Parent;
                 }
@@ -400,9 +415,13 @@ namespace FhirKhit.SliceGen.R4
             {
                 if (node.childNodeDictionary.TryGetValue(name, out ElementDefinitionNode newNode) == false)
                 {
+#if FHIR_R2
+                    throw new NotImplementedException();
+#else
                     newNode = node.FindCommonChild(partialPath, name);
                     if (newNode == null)
                         return false;
+#endif
                 }
                 node = newNode;
                 path = $"{partialPath}.{name}";
@@ -427,8 +446,12 @@ namespace FhirKhit.SliceGen.R4
 
         public bool TryGetCommonChild(String name, out ElementDefinitionNode node)
         {
+#if FHIR_R2
+                    throw new NotImplementedException();
+#else
             node = this.FindCommonChild(this.Path, name);
             return (node != null);
+#endif
         }
 
         public bool TryGetSlice(String name, out ElementDefinitionNode node)
