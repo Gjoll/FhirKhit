@@ -906,10 +906,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'RiskEvidenceSynthesis'
     /// </summary>
     // 0. RiskEvidenceSynthesis
-    public class Resource_RiskEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_RiskEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 29. RiskEvidenceSynthesis.sampleSize
-        public class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 30. RiskEvidenceSynthesis.sampleSize.description
             public ElementDefinitionInfo Element_Description;
@@ -987,10 +987,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 33. RiskEvidenceSynthesis.riskEstimate
-        public class Type_RiskEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_RiskEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 40. RiskEvidenceSynthesis.riskEstimate.precisionEstimate
-            public class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 41. RiskEvidenceSynthesis.riskEstimate.precisionEstimate.type
                 public ElementDefinitionInfo Element_Type;
@@ -1243,10 +1243,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 45. RiskEvidenceSynthesis.certainty
-        public class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 48. RiskEvidenceSynthesis.certainty.certaintySubcomponent
-            public class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 49. RiskEvidenceSynthesis.certainty.certaintySubcomponent.type
                 public ElementDefinitionInfo Element_Type;

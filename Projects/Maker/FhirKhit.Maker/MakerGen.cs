@@ -185,7 +185,7 @@ namespace FhirKhit.Maker
                 .SummaryOpen()
                 .Summary($"Fhir primitive '{sDef.Name}'")
                 .SummaryClose()
-                .AppendCode($"public class {instanceName} : {PrimitiveBase}")
+                .AppendCode($"public partial class {instanceName} : {PrimitiveBase}")
                 .OpenBrace()
                 .CloseBrace()
                 .CloseBrace()
@@ -387,7 +387,7 @@ namespace FhirKhit.Maker
 
             block
                 .AppendComment($"{index}. {elements[index].Path}")
-                .AppendCode($"public class {className} : {parentMakerClassName}")
+                .AppendCode($"public partial class {className} : {parentMakerClassName}")
                 .OpenBrace()
 
                 .DefineBlock(out CodeBlockNested subClassBlock)

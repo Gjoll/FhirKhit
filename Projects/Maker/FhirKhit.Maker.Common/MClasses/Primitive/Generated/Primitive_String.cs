@@ -80,7 +80,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'string'
     /// </summary>
-    public class Primitive_String : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_String : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

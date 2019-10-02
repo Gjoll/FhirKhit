@@ -381,16 +381,16 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductIngredient'
     /// </summary>
     // 0. MedicinalProductIngredient
-    public class Resource_MedicinalProductIngredient : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductIngredient : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 5. MedicinalProductIngredient.specifiedSubstance
-        public class Type_SpecifiedSubstance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SpecifiedSubstance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. MedicinalProductIngredient.specifiedSubstance.strength
-            public class Type_Strength : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Strength : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 16. MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength
-                public class Type_ReferenceStrength : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_ReferenceStrength : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 17. MedicinalProductIngredient.specifiedSubstance.strength.referenceStrength.substance
                     public ElementDefinitionInfo Element_Substance;
@@ -758,7 +758,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 22. MedicinalProductIngredient.substance
-        public class Type_Substance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Substance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 23. MedicinalProductIngredient.substance.code
             public ElementDefinitionInfo Element_Code;

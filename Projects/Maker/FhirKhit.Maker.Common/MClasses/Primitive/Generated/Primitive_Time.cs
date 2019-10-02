@@ -78,7 +78,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'time'
     /// </summary>
-    public class Primitive_Time : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Time : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

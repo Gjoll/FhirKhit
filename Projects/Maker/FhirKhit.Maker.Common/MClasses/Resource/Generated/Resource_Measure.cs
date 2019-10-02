@@ -1022,13 +1022,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Measure'
     /// </summary>
     // 0. Measure
-    public class Resource_Measure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Measure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 40. Measure.group
-        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 43. Measure.group.population
-            public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 44. Measure.group.population.code
                 public ElementDefinitionInfo Element_Code;
@@ -1106,10 +1106,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 47. Measure.group.stratifier
-            public class Type_Stratifier : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Stratifier : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 51. Measure.group.stratifier.component
-                public class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 52. Measure.group.stratifier.component.code
                     public ElementDefinitionInfo Element_Code;
@@ -1377,7 +1377,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 55. Measure.supplementalData
-        public class Type_SupplementalData : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SupplementalData : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 56. Measure.supplementalData.code
             public ElementDefinitionInfo Element_Code;

@@ -212,10 +212,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductIndication'
     /// </summary>
     // 0. MedicinalProductIndication
-    public class Resource_MedicinalProductIndication : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductIndication : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. MedicinalProductIndication.otherTherapy
-        public class Type_OtherTherapy : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_OtherTherapy : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. MedicinalProductIndication.otherTherapy.therapyRelationshipType
             public ElementDefinitionInfo Element_TherapyRelationshipType;

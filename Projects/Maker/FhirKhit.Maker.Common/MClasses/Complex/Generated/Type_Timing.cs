@@ -370,10 +370,10 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Timing'
     /// </summary>
     // 0. Timing
-    public class Type_Timing : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Timing : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 2. Timing.repeat
-        public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 3. Timing.repeat.bounds[x]
             public ElementDefinitionInfo Element_Bounds;

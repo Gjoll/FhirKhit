@@ -566,10 +566,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicationAdministration'
     /// </summary>
     // 0. MedicationAdministration
-    public class Resource_MedicationAdministration : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicationAdministration : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. MedicationAdministration.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. MedicationAdministration.performer.function
             public ElementDefinitionInfo Element_Function;
@@ -635,7 +635,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. MedicationAdministration.dosage
-        public class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. MedicationAdministration.dosage.text
             public ElementDefinitionInfo Element_Text;

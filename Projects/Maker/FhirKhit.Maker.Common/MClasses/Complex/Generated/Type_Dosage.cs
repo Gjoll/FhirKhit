@@ -378,10 +378,10 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Dosage'
     /// </summary>
     // 0. Dosage
-    public class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 10. Dosage.doseAndRate
-        public class Type_DoseAndRate : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DoseAndRate : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. Dosage.doseAndRate.type
             public ElementDefinitionInfo Element_Type;

@@ -1126,10 +1126,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MolecularSequence'
     /// </summary>
     // 0. MolecularSequence
-    public class Resource_MolecularSequence : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MolecularSequence : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. MolecularSequence.referenceSeq
-        public class Type_ReferenceSeq : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ReferenceSeq : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. MolecularSequence.referenceSeq.chromosome
             public ElementDefinitionInfo Element_Chromosome;
@@ -1331,7 +1331,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 19. MolecularSequence.variant
-        public class Type_Variant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Variant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. MolecularSequence.variant.start
             public ElementDefinitionInfo Element_Start;
@@ -1473,10 +1473,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 27. MolecularSequence.quality
-        public class Type_Quality : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Quality : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 42. MolecularSequence.quality.roc
-            public class Type_Roc : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Roc : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 43. MolecularSequence.quality.roc.score
                 public ElementDefinitionInfo Element_Score;
@@ -1949,7 +1949,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 51. MolecularSequence.repository
-        public class Type_Repository : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Repository : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 52. MolecularSequence.repository.type
             public ElementDefinitionInfo Element_Type;
@@ -2087,10 +2087,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 59. MolecularSequence.structureVariant
-        public class Type_StructureVariant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_StructureVariant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 63. MolecularSequence.structureVariant.outer
-            public class Type_Outer : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Outer : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 64. MolecularSequence.structureVariant.outer.start
                 public ElementDefinitionInfo Element_Start;
@@ -2148,7 +2148,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 66. MolecularSequence.structureVariant.inner
-            public class Type_Inner : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Inner : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 67. MolecularSequence.structureVariant.inner.start
                 public ElementDefinitionInfo Element_Start;

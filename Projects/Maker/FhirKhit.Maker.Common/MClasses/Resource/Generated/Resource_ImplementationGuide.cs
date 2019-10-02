@@ -1025,10 +1025,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ImplementationGuide'
     /// </summary>
     // 0. ImplementationGuide
-    public class Resource_ImplementationGuide : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ImplementationGuide : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 17. ImplementationGuide.dependsOn
-        public class Type_DependsOn : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DependsOn : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 18. ImplementationGuide.dependsOn.uri
             public ElementDefinitionInfo Element_Uri;
@@ -1110,7 +1110,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 21. ImplementationGuide.global
-        public class Type_Global : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Global : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. ImplementationGuide.global.type
             public ElementDefinitionInfo Element_Type;
@@ -1172,10 +1172,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 24. ImplementationGuide.definition
-        public class Type_Definition : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Definition : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 25. ImplementationGuide.definition.grouping
-            public class Type_Grouping : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Grouping : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 26. ImplementationGuide.definition.grouping.name
                 public ElementDefinitionInfo Element_Name;
@@ -1233,7 +1233,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 28. ImplementationGuide.definition.resource
-            public class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 29. ImplementationGuide.definition.resource.reference
                 public ElementDefinitionInfo Element_Reference;
@@ -1382,7 +1382,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 35. ImplementationGuide.definition.page
-            public class Type_Page : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Page : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 36. ImplementationGuide.definition.page.name[x]
                 public ElementDefinitionInfo Element_Name;
@@ -1484,7 +1484,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 40. ImplementationGuide.definition.parameter
-            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 41. ImplementationGuide.definition.parameter.code
                 public ElementDefinitionInfo Element_Code;
@@ -1542,7 +1542,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 43. ImplementationGuide.definition.template
-            public class Type_Template : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Template : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 44. ImplementationGuide.definition.template.code
                 public ElementDefinitionInfo Element_Code;
@@ -1735,10 +1735,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 47. ImplementationGuide.manifest
-        public class Type_Manifest : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Manifest : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 49. ImplementationGuide.manifest.resource
-            public class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 50. ImplementationGuide.manifest.resource.reference
                 public ElementDefinitionInfo Element_Reference;
@@ -1827,7 +1827,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 53. ImplementationGuide.manifest.page
-            public class Type_Page : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Page : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 54. ImplementationGuide.manifest.page.name
                 public ElementDefinitionInfo Element_Name;

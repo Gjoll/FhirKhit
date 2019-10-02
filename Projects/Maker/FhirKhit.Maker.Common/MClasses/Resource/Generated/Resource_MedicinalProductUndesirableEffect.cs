@@ -116,7 +116,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductUndesirableEffect'
     /// </summary>
     // 0. MedicinalProductUndesirableEffect
-    public class Resource_MedicinalProductUndesirableEffect : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductUndesirableEffect : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. MedicinalProductUndesirableEffect.subject
         public ElementDefinitionInfo Element_Subject;

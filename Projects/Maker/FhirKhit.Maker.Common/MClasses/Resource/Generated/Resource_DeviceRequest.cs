@@ -558,10 +558,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DeviceRequest'
     /// </summary>
     // 0. DeviceRequest
-    public class Resource_DeviceRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DeviceRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 11. DeviceRequest.parameter
-        public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. DeviceRequest.parameter.code
             public ElementDefinitionInfo Element_Code;

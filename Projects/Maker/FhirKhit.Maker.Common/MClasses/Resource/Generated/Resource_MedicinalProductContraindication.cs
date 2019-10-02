@@ -184,10 +184,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductContraindication'
     /// </summary>
     // 0. MedicinalProductContraindication
-    public class Resource_MedicinalProductContraindication : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductContraindication : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 6. MedicinalProductContraindication.otherTherapy
-        public class Type_OtherTherapy : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_OtherTherapy : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 7. MedicinalProductContraindication.otherTherapy.therapyRelationshipType
             public ElementDefinitionInfo Element_TherapyRelationshipType;

@@ -138,7 +138,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Quantity'
     /// </summary>
     // 0. Quantity
-    public class Type_Quantity : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Quantity : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Quantity.value
         public ElementDefinitionInfo Element_Value;

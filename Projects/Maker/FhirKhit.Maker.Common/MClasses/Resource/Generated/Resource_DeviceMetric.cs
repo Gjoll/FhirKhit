@@ -311,10 +311,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DeviceMetric'
     /// </summary>
     // 0. DeviceMetric
-    public class Resource_DeviceMetric : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DeviceMetric : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. DeviceMetric.calibration
-        public class Type_Calibration : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Calibration : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. DeviceMetric.calibration.type
             public ElementDefinitionInfo Element_Type;

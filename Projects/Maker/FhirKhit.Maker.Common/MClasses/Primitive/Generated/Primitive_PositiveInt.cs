@@ -78,7 +78,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'positiveInt'
     /// </summary>
-    public class Primitive_PositiveInt : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_PositiveInt : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

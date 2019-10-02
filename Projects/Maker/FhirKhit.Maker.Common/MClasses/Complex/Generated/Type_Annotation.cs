@@ -95,7 +95,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Annotation'
     /// </summary>
     // 0. Annotation
-    public class Type_Annotation : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Annotation : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Annotation.author[x]
         public ElementDefinitionInfo Element_Author;

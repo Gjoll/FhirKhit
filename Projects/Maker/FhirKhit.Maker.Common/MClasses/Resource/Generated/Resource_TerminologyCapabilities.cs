@@ -819,10 +819,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'TerminologyCapabilities'
     /// </summary>
     // 0. TerminologyCapabilities
-    public class Resource_TerminologyCapabilities : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_TerminologyCapabilities : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 16. TerminologyCapabilities.software
-        public class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. TerminologyCapabilities.software.name
             public ElementDefinitionInfo Element_Name;
@@ -880,7 +880,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 19. TerminologyCapabilities.implementation
-        public class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. TerminologyCapabilities.implementation.description
             public ElementDefinitionInfo Element_Description;
@@ -938,13 +938,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. TerminologyCapabilities.codeSystem
-        public class Type_CodeSystem : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_CodeSystem : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 25. TerminologyCapabilities.codeSystem.version
-            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. TerminologyCapabilities.codeSystem.version.filter
-                public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 31. TerminologyCapabilities.codeSystem.version.filter.code
                     public ElementDefinitionInfo Element_Code;
@@ -1216,10 +1216,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 35. TerminologyCapabilities.expansion
-        public class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 39. TerminologyCapabilities.expansion.parameter
-            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 40. TerminologyCapabilities.expansion.parameter.name
                 public ElementDefinitionInfo Element_Name;
@@ -1392,7 +1392,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 44. TerminologyCapabilities.validateCode
-        public class Type_ValidateCode : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ValidateCode : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 45. TerminologyCapabilities.validateCode.translations
             public ElementDefinitionInfo Element_Translations;
@@ -1430,7 +1430,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 46. TerminologyCapabilities.translation
-        public class Type_Translation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Translation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 47. TerminologyCapabilities.translation.needsMap
             public ElementDefinitionInfo Element_NeedsMap;
@@ -1468,7 +1468,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 48. TerminologyCapabilities.closure
-        public class Type_Closure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Closure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 49. TerminologyCapabilities.closure.translation
             public ElementDefinitionInfo Element_Translation;

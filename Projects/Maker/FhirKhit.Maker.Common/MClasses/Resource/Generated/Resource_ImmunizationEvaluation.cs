@@ -279,7 +279,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ImmunizationEvaluation'
     /// </summary>
     // 0. ImmunizationEvaluation
-    public class Resource_ImmunizationEvaluation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ImmunizationEvaluation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. ImmunizationEvaluation.identifier
         public ElementDefinitionInfo Element_Identifier;

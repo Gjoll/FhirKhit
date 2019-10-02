@@ -366,10 +366,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Provenance'
     /// </summary>
     // 0. Provenance
-    public class Resource_Provenance : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Provenance : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. Provenance.agent
-        public class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. Provenance.agent.type
             public ElementDefinitionInfo Element_Type;
@@ -485,7 +485,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 13. Provenance.entity
-        public class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. Provenance.entity.role
             public ElementDefinitionInfo Element_Role;

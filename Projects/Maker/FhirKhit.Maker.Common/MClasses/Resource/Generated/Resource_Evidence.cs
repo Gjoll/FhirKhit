@@ -519,7 +519,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Evidence'
     /// </summary>
     // 0. Evidence
-    public class Resource_Evidence : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Evidence : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Evidence.url
         public ElementDefinitionInfo Element_Url;

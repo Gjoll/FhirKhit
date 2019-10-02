@@ -112,7 +112,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'MarketingStatus'
     /// </summary>
     // 0. MarketingStatus
-    public class Type_MarketingStatus : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_MarketingStatus : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. MarketingStatus.country
         public ElementDefinitionInfo Element_Country;

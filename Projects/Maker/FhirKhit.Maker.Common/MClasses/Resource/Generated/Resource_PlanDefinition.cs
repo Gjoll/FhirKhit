@@ -1431,13 +1431,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'PlanDefinition'
     /// </summary>
     // 0. PlanDefinition
-    public class Resource_PlanDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_PlanDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 30. PlanDefinition.goal
-        public class Type_Goal : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Goal : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 37. PlanDefinition.goal.target
-            public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 38. PlanDefinition.goal.target.measure
                 public ElementDefinitionInfo Element_Measure;
@@ -1676,10 +1676,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 41. PlanDefinition.action
-        public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 53. PlanDefinition.action.condition
-            public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 54. PlanDefinition.action.condition.kind
                 public ElementDefinitionInfo Element_Kind;
@@ -1737,7 +1737,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 58. PlanDefinition.action.relatedAction
-            public class Type_RelatedAction : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_RelatedAction : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 59. PlanDefinition.action.relatedAction.actionId
                 public ElementDefinitionInfo Element_ActionId;
@@ -1818,7 +1818,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 63. PlanDefinition.action.participant
-            public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 64. PlanDefinition.action.participant.type
                 public ElementDefinitionInfo Element_Type;
@@ -1876,7 +1876,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 74. PlanDefinition.action.dynamicValue
-            public class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 75. PlanDefinition.action.dynamicValue.path
                 public ElementDefinitionInfo Element_Path;

@@ -616,10 +616,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MessageDefinition'
     /// </summary>
     // 0. MessageDefinition
-    public class Resource_MessageDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MessageDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 21. MessageDefinition.focus
-        public class Type_Focus : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Focus : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. MessageDefinition.focus.code
             public ElementDefinitionInfo Element_Code;
@@ -721,7 +721,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 27. MessageDefinition.allowedResponse
-        public class Type_AllowedResponse : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_AllowedResponse : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. MessageDefinition.allowedResponse.message
             public ElementDefinitionInfo Element_Message;

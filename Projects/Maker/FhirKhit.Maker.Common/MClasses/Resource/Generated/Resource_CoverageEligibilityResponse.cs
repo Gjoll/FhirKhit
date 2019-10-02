@@ -774,16 +774,16 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CoverageEligibilityResponse'
     /// </summary>
     // 0. CoverageEligibilityResponse
-    public class Resource_CoverageEligibilityResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CoverageEligibilityResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. CoverageEligibilityResponse.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. CoverageEligibilityResponse.insurance.item
-            public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 27. CoverageEligibilityResponse.insurance.item.benefit
-                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 28. CoverageEligibilityResponse.insurance.item.benefit.type
                     public ElementDefinitionInfo Element_Type;
@@ -1272,7 +1272,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 36. CoverageEligibilityResponse.error
-        public class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Error : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 37. CoverageEligibilityResponse.error.code
             public ElementDefinitionInfo Element_Code;

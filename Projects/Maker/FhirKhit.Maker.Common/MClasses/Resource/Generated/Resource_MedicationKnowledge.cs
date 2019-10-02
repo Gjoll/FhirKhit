@@ -952,10 +952,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicationKnowledge'
     /// </summary>
     // 0. MedicationKnowledge
-    public class Resource_MedicationKnowledge : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicationKnowledge : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. MedicationKnowledge.relatedMedicationKnowledge
-        public class Type_RelatedMedicationKnowledge : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_RelatedMedicationKnowledge : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. MedicationKnowledge.relatedMedicationKnowledge.type
             public ElementDefinitionInfo Element_Type;
@@ -1017,7 +1017,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 12. MedicationKnowledge.monograph
-        public class Type_Monograph : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Monograph : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. MedicationKnowledge.monograph.type
             public ElementDefinitionInfo Element_Type;
@@ -1080,7 +1080,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 15. MedicationKnowledge.ingredient
-        public class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. MedicationKnowledge.ingredient.item[x]
             public ElementDefinitionInfo Element_Item;
@@ -1165,7 +1165,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 21. MedicationKnowledge.cost
-        public class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. MedicationKnowledge.cost.type
             public ElementDefinitionInfo Element_Type;
@@ -1243,7 +1243,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. MedicationKnowledge.monitoringProgram
-        public class Type_MonitoringProgram : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_MonitoringProgram : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. MedicationKnowledge.monitoringProgram.type
             public ElementDefinitionInfo Element_Type;
@@ -1301,10 +1301,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 28. MedicationKnowledge.administrationGuidelines
-        public class Type_AdministrationGuidelines : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_AdministrationGuidelines : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 29. MedicationKnowledge.administrationGuidelines.dosage
-            public class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Dosage : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. MedicationKnowledge.administrationGuidelines.dosage.type
                 public ElementDefinitionInfo Element_Type;
@@ -1362,7 +1362,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 33. MedicationKnowledge.administrationGuidelines.patientCharacteristics
-            public class Type_PatientCharacteristics : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_PatientCharacteristics : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 34. MedicationKnowledge.administrationGuidelines.patientCharacteristics.characteristic[x]
                 public ElementDefinitionInfo Element_Characteristic;
@@ -1505,7 +1505,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 36. MedicationKnowledge.medicineClassification
-        public class Type_MedicineClassification : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_MedicineClassification : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 37. MedicationKnowledge.medicineClassification.type
             public ElementDefinitionInfo Element_Type;
@@ -1563,7 +1563,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 39. MedicationKnowledge.packaging
-        public class Type_Packaging : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Packaging : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 40. MedicationKnowledge.packaging.type
             public ElementDefinitionInfo Element_Type;
@@ -1621,7 +1621,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 42. MedicationKnowledge.drugCharacteristic
-        public class Type_DrugCharacteristic : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DrugCharacteristic : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 43. MedicationKnowledge.drugCharacteristic.type
             public ElementDefinitionInfo Element_Type;
@@ -1688,10 +1688,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 46. MedicationKnowledge.regulatory
-        public class Type_Regulatory : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Regulatory : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 48. MedicationKnowledge.regulatory.substitution
-            public class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 49. MedicationKnowledge.regulatory.substitution.type
                 public ElementDefinitionInfo Element_Type;
@@ -1749,7 +1749,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 51. MedicationKnowledge.regulatory.schedule
-            public class Type_Schedule : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Schedule : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 52. MedicationKnowledge.regulatory.schedule.schedule
                 public ElementDefinitionInfo Element_Schedule;
@@ -1787,7 +1787,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 53. MedicationKnowledge.regulatory.maxDispense
-            public class Type_MaxDispense : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_MaxDispense : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 54. MedicationKnowledge.regulatory.maxDispense.quantity
                 public ElementDefinitionInfo Element_Quantity;
@@ -1944,7 +1944,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 56. MedicationKnowledge.kinetics
-        public class Type_Kinetics : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Kinetics : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 57. MedicationKnowledge.kinetics.areaUnderCurve
             public ElementDefinitionInfo Element_AreaUnderCurve;

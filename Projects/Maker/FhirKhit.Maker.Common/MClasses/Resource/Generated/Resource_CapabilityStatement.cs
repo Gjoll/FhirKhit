@@ -1518,10 +1518,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CapabilityStatement'
     /// </summary>
     // 0. CapabilityStatement
-    public class Resource_CapabilityStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CapabilityStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 18. CapabilityStatement.software
-        public class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Software : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. CapabilityStatement.software.name
             public ElementDefinitionInfo Element_Name;
@@ -1599,7 +1599,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 22. CapabilityStatement.implementation
-        public class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Implementation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 23. CapabilityStatement.implementation.description
             public ElementDefinitionInfo Element_Description;
@@ -1681,10 +1681,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 30. CapabilityStatement.rest
-        public class Type_Rest : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Rest : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 33. CapabilityStatement.rest.security
-            public class Type_Security : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Security : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 34. CapabilityStatement.rest.security.cors
                 public ElementDefinitionInfo Element_Cors;
@@ -1762,10 +1762,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 37. CapabilityStatement.rest.resource
-            public class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 42. CapabilityStatement.rest.resource.interaction
-                public class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 43. CapabilityStatement.rest.resource.interaction.code
                     public ElementDefinitionInfo Element_Code;
@@ -1823,7 +1823,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 55. CapabilityStatement.rest.resource.searchParam
-                public class Type_SearchParam : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_SearchParam : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 56. CapabilityStatement.rest.resource.searchParam.name
                     public ElementDefinitionInfo Element_Name;
@@ -1925,7 +1925,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 60. CapabilityStatement.rest.resource.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 61. CapabilityStatement.rest.resource.operation.name
                     public ElementDefinitionInfo Element_Name;
@@ -2370,7 +2370,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 64. CapabilityStatement.rest.interaction
-            public class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Interaction : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 65. CapabilityStatement.rest.interaction.code
                 public ElementDefinitionInfo Element_Code;
@@ -2601,10 +2601,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 70. CapabilityStatement.messaging
-        public class Type_Messaging : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Messaging : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 71. CapabilityStatement.messaging.endpoint
-            public class Type_Endpoint : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Endpoint : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 72. CapabilityStatement.messaging.endpoint.protocol
                 public ElementDefinitionInfo Element_Protocol;
@@ -2662,7 +2662,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 76. CapabilityStatement.messaging.supportedMessage
-            public class Type_SupportedMessage : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_SupportedMessage : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 77. CapabilityStatement.messaging.supportedMessage.mode
                 public ElementDefinitionInfo Element_Mode;
@@ -2819,7 +2819,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 79. CapabilityStatement.document
-        public class Type_Document : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Document : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 80. CapabilityStatement.document.mode
             public ElementDefinitionInfo Element_Mode;

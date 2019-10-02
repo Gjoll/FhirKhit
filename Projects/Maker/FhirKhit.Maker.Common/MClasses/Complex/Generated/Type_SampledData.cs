@@ -148,7 +148,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'SampledData'
     /// </summary>
     // 0. SampledData
-    public class Type_SampledData : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_SampledData : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. SampledData.origin
         public ElementDefinitionInfo Element_Origin;

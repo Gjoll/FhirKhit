@@ -246,10 +246,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Subscription'
     /// </summary>
     // 0. Subscription
-    public class Resource_Subscription : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Subscription : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. Subscription.channel
-        public class Type_Channel : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Channel : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. Subscription.channel.type
             public ElementDefinitionInfo Element_Type;

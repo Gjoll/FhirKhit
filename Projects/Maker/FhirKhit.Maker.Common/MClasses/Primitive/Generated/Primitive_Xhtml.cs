@@ -77,7 +77,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'xhtml'
     /// </summary>
-    public class Primitive_Xhtml : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Xhtml : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

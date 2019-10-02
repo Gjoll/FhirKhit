@@ -481,7 +481,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Media'
     /// </summary>
     // 0. Media
-    public class Resource_Media : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Media : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Media.identifier
         public ElementDefinitionInfo Element_Identifier;

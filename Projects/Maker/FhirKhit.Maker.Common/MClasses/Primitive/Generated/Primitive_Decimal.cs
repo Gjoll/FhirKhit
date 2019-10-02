@@ -79,7 +79,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'decimal'
     /// </summary>
-    public class Primitive_Decimal : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Decimal : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

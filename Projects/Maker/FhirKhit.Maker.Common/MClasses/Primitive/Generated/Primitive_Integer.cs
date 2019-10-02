@@ -81,7 +81,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'integer'
     /// </summary>
-    public class Primitive_Integer : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Integer : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

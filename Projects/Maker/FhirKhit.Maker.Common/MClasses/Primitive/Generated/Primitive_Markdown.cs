@@ -79,7 +79,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'markdown'
     /// </summary>
-    public class Primitive_Markdown : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Markdown : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

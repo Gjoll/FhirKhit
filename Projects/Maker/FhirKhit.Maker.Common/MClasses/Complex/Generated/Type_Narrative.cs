@@ -80,7 +80,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Narrative'
     /// </summary>
     // 0. Narrative
-    public class Type_Narrative : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Narrative : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Narrative.status
         public ElementDefinitionInfo Element_Status;

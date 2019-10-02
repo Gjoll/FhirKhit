@@ -297,10 +297,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Practitioner'
     /// </summary>
     // 0. Practitioner
-    public class Resource_Practitioner : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Practitioner : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. Practitioner.qualification
-        public class Type_Qualification : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Qualification : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. Practitioner.qualification.identifier
             public ElementDefinitionInfo Element_Identifier;

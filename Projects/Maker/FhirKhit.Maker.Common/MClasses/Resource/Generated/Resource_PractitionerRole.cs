@@ -372,10 +372,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'PractitionerRole'
     /// </summary>
     // 0. PractitionerRole
-    public class Resource_PractitionerRole : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_PractitionerRole : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 11. PractitionerRole.availableTime
-        public class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. PractitionerRole.availableTime.daysOfWeek
             public ElementDefinitionInfo Element_DaysOfWeek;
@@ -473,7 +473,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 16. PractitionerRole.notAvailable
-        public class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. PractitionerRole.notAvailable.description
             public ElementDefinitionInfo Element_Description;

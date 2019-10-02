@@ -117,7 +117,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Reference'
     /// </summary>
     // 0. Reference
-    public class Type_Reference : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Reference : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Reference.reference
         public ElementDefinitionInfo Element_Reference;

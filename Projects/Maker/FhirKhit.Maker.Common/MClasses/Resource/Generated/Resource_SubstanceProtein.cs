@@ -210,10 +210,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SubstanceProtein'
     /// </summary>
     // 0. SubstanceProtein
-    public class Resource_SubstanceProtein : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SubstanceProtein : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 4. SubstanceProtein.subunit
-        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 5. SubstanceProtein.subunit.subunit
             public ElementDefinitionInfo Element_Subunit;

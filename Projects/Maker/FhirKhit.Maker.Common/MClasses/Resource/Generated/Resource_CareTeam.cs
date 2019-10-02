@@ -364,10 +364,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CareTeam'
     /// </summary>
     // 0. CareTeam
-    public class Resource_CareTeam : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CareTeam : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. CareTeam.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. CareTeam.participant.role
             public ElementDefinitionInfo Element_Role;

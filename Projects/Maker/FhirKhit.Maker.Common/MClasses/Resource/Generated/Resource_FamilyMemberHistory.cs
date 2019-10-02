@@ -516,10 +516,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'FamilyMemberHistory'
     /// </summary>
     // 0. FamilyMemberHistory
-    public class Resource_FamilyMemberHistory : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_FamilyMemberHistory : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 18. FamilyMemberHistory.condition
-        public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. FamilyMemberHistory.condition.code
             public ElementDefinitionInfo Element_Code;

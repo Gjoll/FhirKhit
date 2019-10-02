@@ -299,10 +299,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DocumentManifest'
     /// </summary>
     // 0. DocumentManifest
-    public class Resource_DocumentManifest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DocumentManifest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. DocumentManifest.related
-        public class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. DocumentManifest.related.identifier
             public ElementDefinitionInfo Element_Identifier;

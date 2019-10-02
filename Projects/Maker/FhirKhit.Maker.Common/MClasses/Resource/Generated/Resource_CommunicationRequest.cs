@@ -529,10 +529,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CommunicationRequest'
     /// </summary>
     // 0. CommunicationRequest
-    public class Resource_CommunicationRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CommunicationRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 14. CommunicationRequest.payload
-        public class Type_Payload : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Payload : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. CommunicationRequest.payload.content[x]
             public ElementDefinitionInfo Element_Content;

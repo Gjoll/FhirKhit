@@ -619,10 +619,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'HealthcareService'
     /// </summary>
     // 0. HealthcareService
-    public class Resource_HealthcareService : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_HealthcareService : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. HealthcareService.eligibility
-        public class Type_Eligibility : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Eligibility : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. HealthcareService.eligibility.code
             public ElementDefinitionInfo Element_Code;
@@ -680,7 +680,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. HealthcareService.availableTime
-        public class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_AvailableTime : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 24. HealthcareService.availableTime.daysOfWeek
             public ElementDefinitionInfo Element_DaysOfWeek;
@@ -778,7 +778,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 28. HealthcareService.notAvailable
-        public class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_NotAvailable : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 29. HealthcareService.notAvailable.description
             public ElementDefinitionInfo Element_Description;

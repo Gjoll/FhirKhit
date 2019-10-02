@@ -537,10 +537,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ObservationDefinition'
     /// </summary>
     // 0. ObservationDefinition
-    public class Resource_ObservationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ObservationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. ObservationDefinition.quantitativeDetails
-        public class Type_QuantitativeDetails : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_QuantitativeDetails : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. ObservationDefinition.quantitativeDetails.customaryUnit
             public ElementDefinitionInfo Element_CustomaryUnit;
@@ -638,7 +638,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 13. ObservationDefinition.qualifiedInterval
-        public class Type_QualifiedInterval : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_QualifiedInterval : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. ObservationDefinition.qualifiedInterval.category
             public ElementDefinitionInfo Element_Category;

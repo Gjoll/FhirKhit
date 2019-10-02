@@ -196,7 +196,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'ProdCharacteristic'
     /// </summary>
     // 0. ProdCharacteristic
-    public class Type_ProdCharacteristic : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_ProdCharacteristic : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. ProdCharacteristic.height
         public ElementDefinitionInfo Element_Height;

@@ -256,10 +256,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Person'
     /// </summary>
     // 0. Person
-    public class Resource_Person : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Person : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. Person.link
-        public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. Person.link.target
             public ElementDefinitionInfo Element_Target;

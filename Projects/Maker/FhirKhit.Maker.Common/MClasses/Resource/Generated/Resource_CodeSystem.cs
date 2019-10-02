@@ -843,10 +843,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CodeSystem'
     /// </summary>
     // 0. CodeSystem
-    public class Resource_CodeSystem : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CodeSystem : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 24. CodeSystem.filter
-        public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 25. CodeSystem.filter.code
             public ElementDefinitionInfo Element_Code;
@@ -944,7 +944,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 29. CodeSystem.property
-        public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 30. CodeSystem.property.code
             public ElementDefinitionInfo Element_Code;
@@ -1042,10 +1042,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 34. CodeSystem.concept
-        public class Type_Concept : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Concept : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 38. CodeSystem.concept.designation
-            public class Type_Designation : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Designation : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 39. CodeSystem.concept.designation.language
                 public ElementDefinitionInfo Element_Language;
@@ -1123,7 +1123,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 42. CodeSystem.concept.property
-            public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 43. CodeSystem.concept.property.code
                 public ElementDefinitionInfo Element_Code;

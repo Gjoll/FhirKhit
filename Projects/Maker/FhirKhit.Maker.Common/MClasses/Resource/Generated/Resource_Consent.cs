@@ -714,10 +714,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Consent'
     /// </summary>
     // 0. Consent
-    public class Resource_Consent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Consent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. Consent.policy
-        public class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Policy : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. Consent.policy.authority
             public ElementDefinitionInfo Element_Authority;
@@ -775,7 +775,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 14. Consent.verification
-        public class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Verification : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. Consent.verification.verified
             public ElementDefinitionInfo Element_Verified;
@@ -858,10 +858,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 18. Consent.provision
-        public class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Provision : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. Consent.provision.actor
-            public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 22. Consent.provision.actor.role
                 public ElementDefinitionInfo Element_Role;
@@ -930,7 +930,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 30. Consent.provision.data
-            public class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Data : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 31. Consent.provision.data.meaning
                 public ElementDefinitionInfo Element_Meaning;

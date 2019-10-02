@@ -302,10 +302,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'RelatedPerson'
     /// </summary>
     // 0. RelatedPerson
-    public class Resource_RelatedPerson : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_RelatedPerson : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. RelatedPerson.communication
-        public class Type_Communication : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Communication : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. RelatedPerson.communication.language
             public ElementDefinitionInfo Element_Language;

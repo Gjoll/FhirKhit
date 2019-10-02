@@ -163,7 +163,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'EnrollmentRequest'
     /// </summary>
     // 0. EnrollmentRequest
-    public class Resource_EnrollmentRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_EnrollmentRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. EnrollmentRequest.identifier
         public ElementDefinitionInfo Element_Identifier;

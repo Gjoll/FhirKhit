@@ -44,7 +44,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Count'
     /// </summary>
     // 0. Count
-    public class Type_Count : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Count : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         
         public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)

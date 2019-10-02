@@ -342,10 +342,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductPharmaceutical'
     /// </summary>
     // 0. MedicinalProductPharmaceutical
-    public class Resource_MedicinalProductPharmaceutical : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductPharmaceutical : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 6. MedicinalProductPharmaceutical.characteristics
-        public class Type_Characteristics : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Characteristics : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 7. MedicinalProductPharmaceutical.characteristics.code
             public ElementDefinitionInfo Element_Code;
@@ -403,13 +403,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 9. MedicinalProductPharmaceutical.routeOfAdministration
-        public class Type_RouteOfAdministration : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_RouteOfAdministration : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies
-            public class Type_TargetSpecies : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_TargetSpecies : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 18. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod
-                public class Type_WithdrawalPeriod : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_WithdrawalPeriod : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 19. MedicinalProductPharmaceutical.routeOfAdministration.targetSpecies.withdrawalPeriod.tissue
                     public ElementDefinitionInfo Element_Tissue;

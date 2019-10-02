@@ -79,7 +79,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'base64Binary'
     /// </summary>
-    public class Primitive_Base64Binary : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Base64Binary : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

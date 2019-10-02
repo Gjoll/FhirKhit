@@ -806,13 +806,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'OperationDefinition'
     /// </summary>
     // 0. OperationDefinition
-    public class Resource_OperationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_OperationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 25. OperationDefinition.parameter
-        public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 34. OperationDefinition.parameter.binding
-            public class Type_Binding : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Binding : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 35. OperationDefinition.parameter.binding.strength
                 public ElementDefinitionInfo Element_Strength;
@@ -874,7 +874,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 37. OperationDefinition.parameter.referencedFrom
-            public class Type_ReferencedFrom : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_ReferencedFrom : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 38. OperationDefinition.parameter.referencedFrom.source
                 public ElementDefinitionInfo Element_Source;
@@ -1168,7 +1168,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 41. OperationDefinition.overload
-        public class Type_Overload : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Overload : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 42. OperationDefinition.overload.parameterName
             public ElementDefinitionInfo Element_ParameterName;

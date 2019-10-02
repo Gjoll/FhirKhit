@@ -530,7 +530,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'EventDefinition'
     /// </summary>
     // 0. EventDefinition
-    public class Resource_EventDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_EventDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. EventDefinition.url
         public ElementDefinitionInfo Element_Url;

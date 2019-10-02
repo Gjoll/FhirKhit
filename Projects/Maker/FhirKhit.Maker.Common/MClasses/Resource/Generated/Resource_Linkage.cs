@@ -138,10 +138,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Linkage'
     /// </summary>
     // 0. Linkage
-    public class Resource_Linkage : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Linkage : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 3. Linkage.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 4. Linkage.item.type
             public ElementDefinitionInfo Element_Type;

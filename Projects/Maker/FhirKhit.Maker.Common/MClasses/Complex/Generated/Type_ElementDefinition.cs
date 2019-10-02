@@ -1813,13 +1813,13 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'ElementDefinition'
     /// </summary>
     // 0. ElementDefinition
-    public class Type_ElementDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_ElementDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 7. ElementDefinition.slicing
-        public class Type_Slicing : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Slicing : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. ElementDefinition.slicing.discriminator
-            public class Type_Discriminator : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Discriminator : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 9. ElementDefinition.slicing.discriminator.type
                 public ElementDefinitionInfo Element_Type;
@@ -1972,7 +1972,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 21. ElementDefinition.base
-        public class Type_Base : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Base : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. ElementDefinition.base.path
             public ElementDefinitionInfo Element_Path;
@@ -2050,7 +2050,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 26. ElementDefinition.type
-        public class Type_Type : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Type : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 27. ElementDefinition.type.code
             public ElementDefinitionInfo Element_Code;
@@ -2178,7 +2178,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 37. ElementDefinition.example
-        public class Type_Example : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Example : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 38. ElementDefinition.example.label
             public ElementDefinitionInfo Element_Label;
@@ -2380,7 +2380,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 44. ElementDefinition.constraint
-        public class Type_Constraint : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Constraint : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 45. ElementDefinition.constraint.key
             public ElementDefinitionInfo Element_Key;
@@ -2542,7 +2542,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 56. ElementDefinition.binding
-        public class Type_Binding : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Binding : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 57. ElementDefinition.binding.strength
             public ElementDefinitionInfo Element_Strength;
@@ -2624,7 +2624,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 60. ElementDefinition.mapping
-        public class Type_Mapping : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Mapping : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 61. ElementDefinition.mapping.identity
             public ElementDefinitionInfo Element_Identity;

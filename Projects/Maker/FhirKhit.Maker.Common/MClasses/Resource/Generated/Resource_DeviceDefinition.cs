@@ -578,10 +578,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DeviceDefinition'
     /// </summary>
     // 0. DeviceDefinition
-    public class Resource_DeviceDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DeviceDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 2. DeviceDefinition.udiDeviceIdentifier
-        public class Type_UdiDeviceIdentifier : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_UdiDeviceIdentifier : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 3. DeviceDefinition.udiDeviceIdentifier.deviceIdentifier
             public ElementDefinitionInfo Element_DeviceIdentifier;
@@ -659,7 +659,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 7. DeviceDefinition.deviceName
-        public class Type_DeviceName : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DeviceName : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. DeviceDefinition.deviceName.name
             public ElementDefinitionInfo Element_Name;
@@ -717,7 +717,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 12. DeviceDefinition.specialization
-        public class Type_Specialization : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Specialization : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. DeviceDefinition.specialization.systemType
             public ElementDefinitionInfo Element_SystemType;
@@ -775,7 +775,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. DeviceDefinition.capability
-        public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. DeviceDefinition.capability.type
             public ElementDefinitionInfo Element_Type;
@@ -833,7 +833,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. DeviceDefinition.property
-        public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 24. DeviceDefinition.property.type
             public ElementDefinitionInfo Element_Type;
@@ -911,7 +911,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 34. DeviceDefinition.material
-        public class Type_Material : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Material : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 35. DeviceDefinition.material.substance
             public ElementDefinitionInfo Element_Substance;

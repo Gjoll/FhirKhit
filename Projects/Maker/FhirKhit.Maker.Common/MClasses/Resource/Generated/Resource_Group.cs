@@ -369,10 +369,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Group'
     /// </summary>
     // 0. Group
-    public class Resource_Group : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Group : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. Group.characteristic
-        public class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. Group.characteristic.code
             public ElementDefinitionInfo Element_Code;
@@ -482,7 +482,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 14. Group.member
-        public class Type_Member : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Member : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. Group.member.entity
             public ElementDefinitionInfo Element_Entity;

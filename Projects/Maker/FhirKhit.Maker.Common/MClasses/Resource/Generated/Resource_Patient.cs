@@ -576,10 +576,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Patient'
     /// </summary>
     // 0. Patient
-    public class Resource_Patient : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Patient : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. Patient.contact
-        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. Patient.contact.relationship
             public ElementDefinitionInfo Element_Relationship;
@@ -741,7 +741,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. Patient.communication
-        public class Type_Communication : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Communication : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. Patient.communication.language
             public ElementDefinitionInfo Element_Language;
@@ -799,7 +799,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. Patient.link
-        public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. Patient.link.other
             public ElementDefinitionInfo Element_Other;

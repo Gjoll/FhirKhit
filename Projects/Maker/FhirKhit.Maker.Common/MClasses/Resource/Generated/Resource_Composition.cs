@@ -713,10 +713,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Composition'
     /// </summary>
     // 0. Composition
-    public class Resource_Composition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Composition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 11. Composition.attester
-        public class Type_Attester : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Attester : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. Composition.attester.mode
             public ElementDefinitionInfo Element_Mode;
@@ -802,7 +802,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 16. Composition.relatesTo
-        public class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. Composition.relatesTo.code
             public ElementDefinitionInfo Element_Code;
@@ -867,7 +867,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 19. Composition.event
-        public class Type_Event : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Event : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. Composition.event.code
             public ElementDefinitionInfo Element_Code;
@@ -949,7 +949,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. Composition.section
-        public class Type_Section : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Section : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 24. Composition.section.title
             public ElementDefinitionInfo Element_Title;

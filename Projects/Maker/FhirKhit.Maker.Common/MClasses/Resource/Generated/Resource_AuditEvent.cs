@@ -809,13 +809,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'AuditEvent'
     /// </summary>
     // 0. AuditEvent
-    public class Resource_AuditEvent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_AuditEvent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. AuditEvent.agent
-        public class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Agent : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. AuditEvent.agent.network
-            public class Type_Network : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Network : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 20. AuditEvent.agent.network.address
                 public ElementDefinitionInfo Element_Address;
@@ -1121,7 +1121,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. AuditEvent.source
-        public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 24. AuditEvent.source.site
             public ElementDefinitionInfo Element_Site;
@@ -1208,10 +1208,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 27. AuditEvent.entity
-        public class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Entity : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 36. AuditEvent.entity.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 37. AuditEvent.entity.detail.type
                 public ElementDefinitionInfo Element_Type;

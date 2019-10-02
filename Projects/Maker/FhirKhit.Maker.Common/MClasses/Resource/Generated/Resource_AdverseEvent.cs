@@ -566,13 +566,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'AdverseEvent'
     /// </summary>
     // 0. AdverseEvent
-    public class Resource_AdverseEvent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_AdverseEvent : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 17. AdverseEvent.suspectEntity
-        public class Type_SuspectEntity : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SuspectEntity : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. AdverseEvent.suspectEntity.causality
-            public class Type_Causality : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Causality : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 20. AdverseEvent.suspectEntity.causality.assessment
                 public ElementDefinitionInfo Element_Assessment;

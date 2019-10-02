@@ -76,7 +76,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'CodeableConcept'
     /// </summary>
     // 0. CodeableConcept
-    public class Type_CodeableConcept : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_CodeableConcept : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. CodeableConcept.coding
         public ElementDefinitionInfo Element_Coding;

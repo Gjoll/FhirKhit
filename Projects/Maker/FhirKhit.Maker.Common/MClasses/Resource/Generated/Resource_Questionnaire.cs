@@ -981,13 +981,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Questionnaire'
     /// </summary>
     // 0. Questionnaire
-    public class Resource_Questionnaire : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Questionnaire : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 22. Questionnaire.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 29. Questionnaire.item.enableWhen
-            public class Type_EnableWhen : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_EnableWhen : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. Questionnaire.item.enableWhen.question
                 public ElementDefinitionInfo Element_Question;
@@ -1096,7 +1096,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 39. Questionnaire.item.answerOption
-            public class Type_AnswerOption : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_AnswerOption : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 40. Questionnaire.item.answerOption.value[x]
                 public ElementDefinitionInfo Element_Value;
@@ -1173,7 +1173,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 42. Questionnaire.item.initial
-            public class Type_Initial : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Initial : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 43. Questionnaire.item.initial.value[x]
                 public ElementDefinitionInfo Element_Value;

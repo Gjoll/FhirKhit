@@ -106,7 +106,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Binary'
     /// </summary>
     // 0. Binary
-    public class Resource_Binary : FhirKhit.Maker.Common.Resource.Resource_Resource
+    public partial class Resource_Binary : FhirKhit.Maker.Common.Resource.Resource_Resource
     {
         // 1. Binary.contentType
         public ElementDefinitionInfo Element_ContentType;

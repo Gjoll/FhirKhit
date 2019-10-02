@@ -80,7 +80,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Period'
     /// </summary>
     // 0. Period
-    public class Type_Period : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Period : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Period.start
         public ElementDefinitionInfo Element_Start;

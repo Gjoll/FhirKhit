@@ -389,10 +389,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'NamingSystem'
     /// </summary>
     // 0. NamingSystem
-    public class Resource_NamingSystem : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_NamingSystem : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 13. NamingSystem.uniqueId
-        public class Type_UniqueId : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_UniqueId : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. NamingSystem.uniqueId.type
             public ElementDefinitionInfo Element_Type;

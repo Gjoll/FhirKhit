@@ -449,13 +449,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'VisionPrescription'
     /// </summary>
     // 0. VisionPrescription
-    public class Resource_VisionPrescription : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_VisionPrescription : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. VisionPrescription.lensSpecification
-        public class Type_LensSpecification : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_LensSpecification : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. VisionPrescription.lensSpecification.prism
-            public class Type_Prism : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Prism : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 15. VisionPrescription.lensSpecification.prism.amount
                 public ElementDefinitionInfo Element_Amount;

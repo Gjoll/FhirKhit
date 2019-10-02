@@ -458,10 +458,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Invoice'
     /// </summary>
     // 0. Invoice
-    public class Resource_Invoice : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Invoice : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. Invoice.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. Invoice.participant.role
             public ElementDefinitionInfo Element_Role;
@@ -528,10 +528,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 13. Invoice.lineItem
-        public class Type_LineItem : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_LineItem : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. Invoice.lineItem.priceComponent
-            public class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 17. Invoice.lineItem.priceComponent.type
                 public ElementDefinitionInfo Element_Type;

@@ -111,7 +111,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'UsageContext'
     /// </summary>
     // 0. UsageContext
-    public class Type_UsageContext : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_UsageContext : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. UsageContext.code
         public ElementDefinitionInfo Element_Code;

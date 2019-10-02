@@ -172,7 +172,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'HumanName'
     /// </summary>
     // 0. HumanName
-    public class Type_HumanName : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_HumanName : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. HumanName.use
         public ElementDefinitionInfo Element_Use;

@@ -98,7 +98,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'ProductShelfLife'
     /// </summary>
     // 0. ProductShelfLife
-    public class Type_ProductShelfLife : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_ProductShelfLife : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. ProductShelfLife.identifier
         public ElementDefinitionInfo Element_Identifier;

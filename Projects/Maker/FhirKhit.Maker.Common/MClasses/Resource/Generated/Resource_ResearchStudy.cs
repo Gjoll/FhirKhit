@@ -587,10 +587,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ResearchStudy'
     /// </summary>
     // 0. ResearchStudy
-    public class Resource_ResearchStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ResearchStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 23. ResearchStudy.arm
-        public class Type_Arm : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Arm : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 24. ResearchStudy.arm.name
             public ElementDefinitionInfo Element_Name;
@@ -668,7 +668,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 27. ResearchStudy.objective
-        public class Type_Objective : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Objective : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. ResearchStudy.objective.name
             public ElementDefinitionInfo Element_Name;

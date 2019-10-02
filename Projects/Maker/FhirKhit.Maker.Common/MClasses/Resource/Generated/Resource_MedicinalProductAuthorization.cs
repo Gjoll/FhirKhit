@@ -401,10 +401,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductAuthorization'
     /// </summary>
     // 0. MedicinalProductAuthorization
-    public class Resource_MedicinalProductAuthorization : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductAuthorization : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 13. MedicinalProductAuthorization.jurisdictionalAuthorization
-        public class Type_JurisdictionalAuthorization : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_JurisdictionalAuthorization : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. MedicinalProductAuthorization.jurisdictionalAuthorization.identifier
             public ElementDefinitionInfo Element_Identifier;
@@ -522,7 +522,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 21. MedicinalProductAuthorization.procedure
-        public class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. MedicinalProductAuthorization.procedure.identifier
             public ElementDefinitionInfo Element_Identifier;

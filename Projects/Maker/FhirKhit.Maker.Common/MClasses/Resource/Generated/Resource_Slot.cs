@@ -250,7 +250,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Slot'
     /// </summary>
     // 0. Slot
-    public class Resource_Slot : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Slot : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Slot.identifier
         public ElementDefinitionInfo Element_Identifier;

@@ -65,7 +65,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'BackboneElement'
     /// </summary>
     // 0. BackboneElement
-    public class Type_BackboneElement : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_BackboneElement : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. BackboneElement.modifierExtension
         public ElementDefinitionInfo Element_ModifierExtension;

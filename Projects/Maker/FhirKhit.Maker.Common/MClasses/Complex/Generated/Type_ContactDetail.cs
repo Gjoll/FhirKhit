@@ -72,7 +72,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'ContactDetail'
     /// </summary>
     // 0. ContactDetail
-    public class Type_ContactDetail : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_ContactDetail : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. ContactDetail.name
         public ElementDefinitionInfo Element_Name;

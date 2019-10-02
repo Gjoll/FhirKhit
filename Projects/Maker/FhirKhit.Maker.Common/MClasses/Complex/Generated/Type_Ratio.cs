@@ -72,7 +72,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Ratio'
     /// </summary>
     // 0. Ratio
-    public class Type_Ratio : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Ratio : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Ratio.numerator
         public ElementDefinitionInfo Element_Numerator;

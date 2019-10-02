@@ -236,7 +236,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Extension'
     /// </summary>
     // 0. Extension
-    public class Type_Extension : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Extension : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Extension.url
         public ElementDefinitionInfo Element_Url;

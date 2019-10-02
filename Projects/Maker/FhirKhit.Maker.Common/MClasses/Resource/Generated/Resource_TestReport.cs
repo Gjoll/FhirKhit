@@ -510,10 +510,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'TestReport'
     /// </summary>
     // 0. TestReport
-    public class Resource_TestReport : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_TestReport : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. TestReport.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. TestReport.participant.type
             public ElementDefinitionInfo Element_Type;
@@ -591,13 +591,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 13. TestReport.setup
-        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. TestReport.setup.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 15. TestReport.setup.action.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 16. TestReport.setup.action.operation.result
                     public ElementDefinitionInfo Element_Result;
@@ -675,7 +675,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 19. TestReport.setup.action.assert
-                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 20. TestReport.setup.action.assert.result
                     public ElementDefinitionInfo Element_Result;
@@ -843,10 +843,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. TestReport.test
-        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. TestReport.test.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 27. TestReport.test.action.operation
                 public ElementDefinitionInfo Element_Operation;
@@ -973,10 +973,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 29. TestReport.teardown
-        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 30. TestReport.teardown.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 31. TestReport.teardown.action.operation
                 public ElementDefinitionInfo Element_Operation;

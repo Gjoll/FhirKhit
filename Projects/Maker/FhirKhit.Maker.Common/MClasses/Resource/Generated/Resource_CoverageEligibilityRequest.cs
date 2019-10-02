@@ -617,10 +617,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CoverageEligibilityRequest'
     /// </summary>
     // 0. CoverageEligibilityRequest
-    public class Resource_CoverageEligibilityRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CoverageEligibilityRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. CoverageEligibilityRequest.supportingInfo
-        public class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. CoverageEligibilityRequest.supportingInfo.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -702,7 +702,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 16. CoverageEligibilityRequest.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. CoverageEligibilityRequest.insurance.focal
             public ElementDefinitionInfo Element_Focal;
@@ -784,10 +784,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. CoverageEligibilityRequest.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 29. CoverageEligibilityRequest.item.diagnosis
-            public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. CoverageEligibilityRequest.item.diagnosis.diagnosis[x]
                 public ElementDefinitionInfo Element_Diagnosis;

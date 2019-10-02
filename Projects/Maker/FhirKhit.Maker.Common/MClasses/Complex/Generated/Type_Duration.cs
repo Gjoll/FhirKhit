@@ -57,7 +57,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Duration'
     /// </summary>
     // 0. Duration
-    public class Type_Duration : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Duration : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         
         public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)

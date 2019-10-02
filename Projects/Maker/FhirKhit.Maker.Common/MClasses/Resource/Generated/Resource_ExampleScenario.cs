@@ -825,10 +825,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ExampleScenario'
     /// </summary>
     // 0. ExampleScenario
-    public class Resource_ExampleScenario : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ExampleScenario : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 14. ExampleScenario.actor
-        public class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Actor : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. ExampleScenario.actor.actorId
             public ElementDefinitionInfo Element_ActorId;
@@ -926,10 +926,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 19. ExampleScenario.instance
-        public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 24. ExampleScenario.instance.version
-            public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 25. ExampleScenario.instance.version.versionId
                 public ElementDefinitionInfo Element_VersionId;
@@ -987,7 +987,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 27. ExampleScenario.instance.containedInstance
-            public class Type_ContainedInstance : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_ContainedInstance : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 28. ExampleScenario.instance.containedInstance.resourceId
                 public ElementDefinitionInfo Element_ResourceId;
@@ -1180,13 +1180,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 30. ExampleScenario.process
-        public class Type_Process : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Process : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 35. ExampleScenario.process.step
-            public class Type_Step : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Step : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 38. ExampleScenario.process.step.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 39. ExampleScenario.process.step.operation.number
                     public ElementDefinitionInfo Element_Number;
@@ -1398,7 +1398,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 49. ExampleScenario.process.step.alternative
-                public class Type_Alternative : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Alternative : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 50. ExampleScenario.process.step.alternative.title
                     public ElementDefinitionInfo Element_Title;

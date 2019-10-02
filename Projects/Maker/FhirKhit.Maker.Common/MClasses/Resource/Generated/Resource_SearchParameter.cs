@@ -585,10 +585,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SearchParameter'
     /// </summary>
     // 0. SearchParameter
-    public class Resource_SearchParameter : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SearchParameter : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 26. SearchParameter.component
-        public class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 27. SearchParameter.component.definition
             public ElementDefinitionInfo Element_Definition;

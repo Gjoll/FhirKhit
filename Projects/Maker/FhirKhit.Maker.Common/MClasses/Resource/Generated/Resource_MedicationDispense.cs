@@ -604,10 +604,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicationDispense'
     /// </summary>
     // 0. MedicationDispense
-    public class Resource_MedicationDispense : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicationDispense : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. MedicationDispense.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. MedicationDispense.performer.function
             public ElementDefinitionInfo Element_Function;
@@ -674,7 +674,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 24. MedicationDispense.substitution
-        public class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 25. MedicationDispense.substitution.wasSubstituted
             public ElementDefinitionInfo Element_WasSubstituted;

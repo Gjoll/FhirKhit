@@ -80,7 +80,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Range'
     /// </summary>
     // 0. Range
-    public class Type_Range : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Range : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Range.low
         public ElementDefinitionInfo Element_Low;

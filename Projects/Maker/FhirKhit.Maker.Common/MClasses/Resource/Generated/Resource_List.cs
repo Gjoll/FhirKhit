@@ -406,10 +406,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'List'
     /// </summary>
     // 0. List
-    public class Resource_List : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_List : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. List.entry
-        public class Type_Entry : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Entry : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. List.entry.flag
             public ElementDefinitionInfo Element_Flag;

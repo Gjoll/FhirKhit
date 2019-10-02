@@ -563,10 +563,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'AllergyIntolerance'
     /// </summary>
     // 0. AllergyIntolerance
-    public class Resource_AllergyIntolerance : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_AllergyIntolerance : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 16. AllergyIntolerance.reaction
-        public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. AllergyIntolerance.reaction.substance
             public ElementDefinitionInfo Element_Substance;

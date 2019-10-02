@@ -183,10 +183,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'OperationOutcome'
     /// </summary>
     // 0. OperationOutcome
-    public class Resource_OperationOutcome : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_OperationOutcome : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. OperationOutcome.issue
-        public class Type_Issue : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Issue : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 2. OperationOutcome.issue.severity
             public ElementDefinitionInfo Element_Severity;

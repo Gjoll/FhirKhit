@@ -354,10 +354,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CompartmentDefinition'
     /// </summary>
     // 0. CompartmentDefinition
-    public class Resource_CompartmentDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CompartmentDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 14. CompartmentDefinition.resource
-        public class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Resource : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. CompartmentDefinition.resource.code
             public ElementDefinitionInfo Element_Code;

@@ -57,7 +57,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Distance'
     /// </summary>
     // 0. Distance
-    public class Type_Distance : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Distance : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         
         public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)

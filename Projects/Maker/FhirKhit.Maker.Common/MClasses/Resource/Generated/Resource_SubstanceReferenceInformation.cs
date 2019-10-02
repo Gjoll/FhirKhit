@@ -382,10 +382,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SubstanceReferenceInformation'
     /// </summary>
     // 0. SubstanceReferenceInformation
-    public class Resource_SubstanceReferenceInformation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SubstanceReferenceInformation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 2. SubstanceReferenceInformation.gene
-        public class Type_Gene : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Gene : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 3. SubstanceReferenceInformation.gene.geneSequenceOrigin
             public ElementDefinitionInfo Element_GeneSequenceOrigin;
@@ -467,7 +467,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 6. SubstanceReferenceInformation.geneElement
-        public class Type_GeneElement : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_GeneElement : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 7. SubstanceReferenceInformation.geneElement.type
             public ElementDefinitionInfo Element_Type;
@@ -549,7 +549,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 10. SubstanceReferenceInformation.classification
-        public class Type_Classification : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Classification : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. SubstanceReferenceInformation.classification.domain
             public ElementDefinitionInfo Element_Domain;
@@ -651,7 +651,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 15. SubstanceReferenceInformation.target
-        public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. SubstanceReferenceInformation.target.target
             public ElementDefinitionInfo Element_Target;

@@ -1011,10 +1011,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'EffectEvidenceSynthesis'
     /// </summary>
     // 0. EffectEvidenceSynthesis
-    public class Resource_EffectEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_EffectEvidenceSynthesis : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 30. EffectEvidenceSynthesis.sampleSize
-        public class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SampleSize : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 31. EffectEvidenceSynthesis.sampleSize.description
             public ElementDefinitionInfo Element_Description;
@@ -1092,7 +1092,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 34. EffectEvidenceSynthesis.resultsByExposure
-        public class Type_ResultsByExposure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ResultsByExposure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 35. EffectEvidenceSynthesis.resultsByExposure.description
             public ElementDefinitionInfo Element_Description;
@@ -1194,10 +1194,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 39. EffectEvidenceSynthesis.effectEstimate
-        public class Type_EffectEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_EffectEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 45. EffectEvidenceSynthesis.effectEstimate.precisionEstimate
-            public class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_PrecisionEstimate : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 46. EffectEvidenceSynthesis.effectEstimate.precisionEstimate.type
                 public ElementDefinitionInfo Element_Type;
@@ -1430,10 +1430,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 50. EffectEvidenceSynthesis.certainty
-        public class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Certainty : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 53. EffectEvidenceSynthesis.certainty.certaintySubcomponent
-            public class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_CertaintySubcomponent : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 54. EffectEvidenceSynthesis.certainty.certaintySubcomponent.type
                 public ElementDefinitionInfo Element_Type;

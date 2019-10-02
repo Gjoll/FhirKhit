@@ -3638,10 +3638,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ExplanationOfBenefit'
     /// </summary>
     // 0. ExplanationOfBenefit
-    public class Resource_ExplanationOfBenefit : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ExplanationOfBenefit : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. ExplanationOfBenefit.related
-        public class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. ExplanationOfBenefit.related.claim
             public ElementDefinitionInfo Element_Claim;
@@ -3723,7 +3723,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 21. ExplanationOfBenefit.payee
-        public class Type_Payee : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Payee : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. ExplanationOfBenefit.payee.type
             public ElementDefinitionInfo Element_Type;
@@ -3789,7 +3789,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 32. ExplanationOfBenefit.careTeam
-        public class Type_CareTeam : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_CareTeam : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 33. ExplanationOfBenefit.careTeam.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -3913,7 +3913,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 38. ExplanationOfBenefit.supportingInfo
-        public class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 39. ExplanationOfBenefit.supportingInfo.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -4070,7 +4070,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 45. ExplanationOfBenefit.diagnosis
-        public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 46. ExplanationOfBenefit.diagnosis.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -4195,7 +4195,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 51. ExplanationOfBenefit.procedure
-        public class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 52. ExplanationOfBenefit.procedure.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -4324,7 +4324,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 58. ExplanationOfBenefit.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 59. ExplanationOfBenefit.insurance.focal
             public ElementDefinitionInfo Element_Focal;
@@ -4406,7 +4406,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 62. ExplanationOfBenefit.accident
-        public class Type_Accident : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Accident : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 63. ExplanationOfBenefit.accident.date
             public ElementDefinitionInfo Element_Date;
@@ -4491,10 +4491,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 66. ExplanationOfBenefit.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 88. ExplanationOfBenefit.item.adjudication
-            public class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Adjudication : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 89. ExplanationOfBenefit.item.adjudication.category
                 public ElementDefinitionInfo Element_Category;
@@ -4592,10 +4592,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 93. ExplanationOfBenefit.item.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 107. ExplanationOfBenefit.item.detail.subDetail
-                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 108. ExplanationOfBenefit.item.detail.subDetail.sequence
                     public ElementDefinitionInfo Element_Sequence;
@@ -5666,13 +5666,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 121. ExplanationOfBenefit.addItem
-        public class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_AddItem : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 139. ExplanationOfBenefit.addItem.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 148. ExplanationOfBenefit.addItem.detail.subDetail
-                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 149. ExplanationOfBenefit.addItem.detail.subDetail.productOrService
                     public ElementDefinitionInfo Element_ProductOrService;
@@ -6430,7 +6430,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 158. ExplanationOfBenefit.total
-        public class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Total : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 159. ExplanationOfBenefit.total.category
             public ElementDefinitionInfo Element_Category;
@@ -6488,7 +6488,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 161. ExplanationOfBenefit.payment
-        public class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Payment : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 162. ExplanationOfBenefit.payment.type
             public ElementDefinitionInfo Element_Type;
@@ -6626,7 +6626,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 170. ExplanationOfBenefit.processNote
-        public class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 171. ExplanationOfBenefit.processNote.number
             public ElementDefinitionInfo Element_Number;
@@ -6724,10 +6724,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 176. ExplanationOfBenefit.benefitBalance
-        public class Type_BenefitBalance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_BenefitBalance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 184. ExplanationOfBenefit.benefitBalance.financial
-            public class Type_Financial : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Financial : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 185. ExplanationOfBenefit.benefitBalance.financial.type
                 public ElementDefinitionInfo Element_Type;

@@ -580,7 +580,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Library'
     /// </summary>
     // 0. Library
-    public class Resource_Library : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Library : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Library.url
         public ElementDefinitionInfo Element_Url;

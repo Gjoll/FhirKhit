@@ -648,10 +648,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'EvidenceVariable'
     /// </summary>
     // 0. EvidenceVariable
-    public class Resource_EvidenceVariable : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_EvidenceVariable : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 27. EvidenceVariable.characteristic
-        public class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. EvidenceVariable.characteristic.description
             public ElementDefinitionInfo Element_Description;

@@ -546,10 +546,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SubstanceSourceMaterial'
     /// </summary>
     // 0. SubstanceSourceMaterial
-    public class Resource_SubstanceSourceMaterial : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SubstanceSourceMaterial : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 11. SubstanceSourceMaterial.fractionDescription
-        public class Type_FractionDescription : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_FractionDescription : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. SubstanceSourceMaterial.fractionDescription.fraction
             public ElementDefinitionInfo Element_Fraction;
@@ -607,10 +607,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 14. SubstanceSourceMaterial.organism
-        public class Type_Organism : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Organism : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. SubstanceSourceMaterial.organism.author
-            public class Type_Author : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Author : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 21. SubstanceSourceMaterial.organism.author.authorType
                 public ElementDefinitionInfo Element_AuthorType;
@@ -668,7 +668,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 23. SubstanceSourceMaterial.organism.hybrid
-            public class Type_Hybrid : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Hybrid : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 24. SubstanceSourceMaterial.organism.hybrid.maternalOrganismId
                 public ElementDefinitionInfo Element_MaternalOrganismId;
@@ -786,7 +786,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 29. SubstanceSourceMaterial.organism.organismGeneral
-            public class Type_OrganismGeneral : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_OrganismGeneral : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. SubstanceSourceMaterial.organism.organismGeneral.kingdom
                 public ElementDefinitionInfo Element_Kingdom;
@@ -1059,7 +1059,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 34. SubstanceSourceMaterial.partDescription
-        public class Type_PartDescription : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_PartDescription : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 35. SubstanceSourceMaterial.partDescription.part
             public ElementDefinitionInfo Element_Part;

@@ -159,7 +159,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'RelatedArtifact'
     /// </summary>
     // 0. RelatedArtifact
-    public class Type_RelatedArtifact : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_RelatedArtifact : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. RelatedArtifact.type
         public ElementDefinitionInfo Element_Type;

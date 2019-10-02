@@ -426,13 +426,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'QuestionnaireResponse'
     /// </summary>
     // 0. QuestionnaireResponse
-    public class Resource_QuestionnaireResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_QuestionnaireResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 11. QuestionnaireResponse.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. QuestionnaireResponse.item.answer
-            public class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 16. QuestionnaireResponse.item.answer.value[x]
                 public ElementDefinitionInfo Element_Value;

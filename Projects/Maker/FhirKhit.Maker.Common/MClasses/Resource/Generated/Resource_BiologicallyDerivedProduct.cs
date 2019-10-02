@@ -437,10 +437,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'BiologicallyDerivedProduct'
     /// </summary>
     // 0. BiologicallyDerivedProduct
-    public class Resource_BiologicallyDerivedProduct : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_BiologicallyDerivedProduct : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. BiologicallyDerivedProduct.collection
-        public class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. BiologicallyDerivedProduct.collection.collector
             public ElementDefinitionInfo Element_Collector;
@@ -531,7 +531,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 12. BiologicallyDerivedProduct.processing
-        public class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. BiologicallyDerivedProduct.processing.description
             public ElementDefinitionInfo Element_Description;
@@ -636,7 +636,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 17. BiologicallyDerivedProduct.manipulation
-        public class Type_Manipulation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Manipulation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 18. BiologicallyDerivedProduct.manipulation.description
             public ElementDefinitionInfo Element_Description;
@@ -697,7 +697,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. BiologicallyDerivedProduct.storage
-        public class Type_Storage : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Storage : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. BiologicallyDerivedProduct.storage.description
             public ElementDefinitionInfo Element_Description;

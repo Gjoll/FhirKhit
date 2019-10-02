@@ -203,7 +203,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Signature'
     /// </summary>
     // 0. Signature
-    public class Type_Signature : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Signature : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Signature.type
         public ElementDefinitionInfo Element_Type;

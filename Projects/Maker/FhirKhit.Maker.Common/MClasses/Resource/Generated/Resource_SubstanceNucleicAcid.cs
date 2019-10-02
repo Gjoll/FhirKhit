@@ -322,13 +322,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SubstanceNucleicAcid'
     /// </summary>
     // 0. SubstanceNucleicAcid
-    public class Resource_SubstanceNucleicAcid : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SubstanceNucleicAcid : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 5. SubstanceNucleicAcid.subunit
-        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. SubstanceNucleicAcid.subunit.linkage
-            public class Type_Linkage : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Linkage : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
                 public ElementDefinitionInfo Element_Connectivity;
@@ -426,7 +426,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 17. SubstanceNucleicAcid.subunit.sugar
-            public class Type_Sugar : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Sugar : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 18. SubstanceNucleicAcid.subunit.sugar.identifier
                 public ElementDefinitionInfo Element_Identifier;

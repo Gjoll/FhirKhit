@@ -750,10 +750,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Procedure'
     /// </summary>
     // 0. Procedure
-    public class Resource_Procedure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Procedure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. Procedure.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. Procedure.performer.function
             public ElementDefinitionInfo Element_Function;
@@ -844,7 +844,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 29. Procedure.focalDevice
-        public class Type_FocalDevice : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_FocalDevice : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 30. Procedure.focalDevice.action
             public ElementDefinitionInfo Element_Action;

@@ -586,10 +586,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ChargeItemDefinition'
     /// </summary>
     // 0. ChargeItemDefinition
-    public class Resource_ChargeItemDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ChargeItemDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 22. ChargeItemDefinition.applicability
-        public class Type_Applicability : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Applicability : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 23. ChargeItemDefinition.applicability.description
             public ElementDefinitionInfo Element_Description;
@@ -667,10 +667,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 26. ChargeItemDefinition.propertyGroup
-        public class Type_PropertyGroup : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_PropertyGroup : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. ChargeItemDefinition.propertyGroup.priceComponent
-            public class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 29. ChargeItemDefinition.propertyGroup.priceComponent.type
                 public ElementDefinitionInfo Element_Type;

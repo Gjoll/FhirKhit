@@ -375,10 +375,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DetectedIssue'
     /// </summary>
     // 0. DetectedIssue
-    public class Resource_DetectedIssue : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DetectedIssue : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. DetectedIssue.evidence
-        public class Type_Evidence : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Evidence : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. DetectedIssue.evidence.code
             public ElementDefinitionInfo Element_Code;
@@ -440,7 +440,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 14. DetectedIssue.mitigation
-        public class Type_Mitigation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Mitigation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. DetectedIssue.mitigation.action
             public ElementDefinitionInfo Element_Action;

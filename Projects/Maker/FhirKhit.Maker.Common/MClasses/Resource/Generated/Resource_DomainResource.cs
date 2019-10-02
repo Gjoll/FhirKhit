@@ -140,7 +140,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DomainResource'
     /// </summary>
     // 0. DomainResource
-    public class Resource_DomainResource : FhirKhit.Maker.Common.Resource.Resource_Resource
+    public partial class Resource_DomainResource : FhirKhit.Maker.Common.Resource.Resource_Resource
     {
         // 1. DomainResource.text
         public ElementDefinitionInfo Element_Text;

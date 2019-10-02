@@ -119,7 +119,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Resource'
     /// </summary>
     // 0. Resource
-    public class Resource_Resource : FhirKhit.Maker.Common.Resource.ResourceBase
+    public partial class Resource_Resource : FhirKhit.Maker.Common.Resource.ResourceBase
     {
         // 1. Resource.id
         public ElementDefinitionInfo Element_Id;

@@ -191,7 +191,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'AppointmentResponse'
     /// </summary>
     // 0. AppointmentResponse
-    public class Resource_AppointmentResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_AppointmentResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. AppointmentResponse.identifier
         public ElementDefinitionInfo Element_Identifier;

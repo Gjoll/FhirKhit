@@ -326,10 +326,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Account'
     /// </summary>
     // 0. Account
-    public class Resource_Account : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Account : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. Account.coverage
-        public class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. Account.coverage.coverage
             public ElementDefinitionInfo Element_Coverage;
@@ -391,7 +391,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 12. Account.guarantor
-        public class Type_Guarantor : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Guarantor : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. Account.guarantor.party
             public ElementDefinitionInfo Element_Party;

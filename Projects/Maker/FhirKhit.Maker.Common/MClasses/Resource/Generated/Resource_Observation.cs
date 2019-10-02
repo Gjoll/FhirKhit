@@ -871,10 +871,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Observation'
     /// </summary>
     // 0. Observation
-    public class Resource_Observation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Observation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 21. Observation.referenceRange
-        public class Type_ReferenceRange : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ReferenceRange : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. Observation.referenceRange.low
             public ElementDefinitionInfo Element_Low;
@@ -1012,7 +1012,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 30. Observation.component
-        public class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 31. Observation.component.code
             public ElementDefinitionInfo Element_Code;

@@ -599,10 +599,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Specimen'
     /// </summary>
     // 0. Specimen
-    public class Resource_Specimen : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Specimen : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. Specimen.collection
-        public class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Collection : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. Specimen.collection.collector
             public ElementDefinitionInfo Element_Collector;
@@ -771,7 +771,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 17. Specimen.processing
-        public class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Processing : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 18. Specimen.processing.description
             public ElementDefinitionInfo Element_Description;
@@ -876,7 +876,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 22. Specimen.container
-        public class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 23. Specimen.container.identifier
             public ElementDefinitionInfo Element_Identifier;

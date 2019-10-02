@@ -147,7 +147,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Basic'
     /// </summary>
     // 0. Basic
-    public class Resource_Basic : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Basic : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Basic.identifier
         public ElementDefinitionInfo Element_Identifier;

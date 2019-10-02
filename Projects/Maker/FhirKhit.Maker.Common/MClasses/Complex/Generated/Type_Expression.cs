@@ -128,7 +128,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Expression'
     /// </summary>
     // 0. Expression
-    public class Type_Expression : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Expression : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Expression.description
         public ElementDefinitionInfo Element_Description;

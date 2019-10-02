@@ -1074,10 +1074,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Task'
     /// </summary>
     // 0. Task
-    public class Resource_Task : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Task : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 29. Task.restriction
-        public class Type_Restriction : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Restriction : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 30. Task.restriction.repetitions
             public ElementDefinitionInfo Element_Repetitions;
@@ -1164,7 +1164,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 33. Task.input
-        public class Type_Input : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Input : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 34. Task.input.type
             public ElementDefinitionInfo Element_Type;
@@ -1366,7 +1366,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 36. Task.output
-        public class Type_Output : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Output : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 37. Task.output.type
             public ElementDefinitionInfo Element_Type;

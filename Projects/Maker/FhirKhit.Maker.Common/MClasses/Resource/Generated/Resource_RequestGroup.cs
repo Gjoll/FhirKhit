@@ -816,13 +816,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'RequestGroup'
     /// </summary>
     // 0. RequestGroup
-    public class Resource_RequestGroup : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_RequestGroup : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 18. RequestGroup.action
-        public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. RequestGroup.action.condition
-            public class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Condition : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 27. RequestGroup.action.condition.kind
                 public ElementDefinitionInfo Element_Kind;
@@ -880,7 +880,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 29. RequestGroup.action.relatedAction
-            public class Type_RelatedAction : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_RelatedAction : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. RequestGroup.action.relatedAction.actionId
                 public ElementDefinitionInfo Element_ActionId;

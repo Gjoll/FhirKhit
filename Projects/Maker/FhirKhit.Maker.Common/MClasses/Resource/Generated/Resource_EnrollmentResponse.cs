@@ -187,7 +187,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'EnrollmentResponse'
     /// </summary>
     // 0. EnrollmentResponse
-    public class Resource_EnrollmentResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_EnrollmentResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. EnrollmentResponse.identifier
         public ElementDefinitionInfo Element_Identifier;

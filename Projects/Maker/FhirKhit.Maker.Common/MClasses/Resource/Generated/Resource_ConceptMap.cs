@@ -726,19 +726,19 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ConceptMap'
     /// </summary>
     // 0. ConceptMap
-    public class Resource_ConceptMap : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ConceptMap : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 18. ConceptMap.group
-        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 23. ConceptMap.group.element
-            public class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 26. ConceptMap.group.element.target
-                public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 31. ConceptMap.group.element.target.dependsOn
-                    public class Type_DependsOn : FhirKhit.Maker.Common.Complex.ComplexBase
+                    public partial class Type_DependsOn : FhirKhit.Maker.Common.Complex.ComplexBase
                     {
                         // 32. ConceptMap.group.element.target.dependsOn.property
                         public ElementDefinitionInfo Element_Property;
@@ -1047,7 +1047,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 37. ConceptMap.group.unmapped
-            public class Type_Unmapped : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Unmapped : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 38. ConceptMap.group.unmapped.mode
                 public ElementDefinitionInfo Element_Mode;

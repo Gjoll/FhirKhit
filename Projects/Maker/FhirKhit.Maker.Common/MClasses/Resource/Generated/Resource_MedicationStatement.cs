@@ -386,7 +386,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicationStatement'
     /// </summary>
     // 0. MedicationStatement
-    public class Resource_MedicationStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicationStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. MedicationStatement.identifier
         public ElementDefinitionInfo Element_Identifier;

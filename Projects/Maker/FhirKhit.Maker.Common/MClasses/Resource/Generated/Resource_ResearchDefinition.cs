@@ -627,7 +627,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ResearchDefinition'
     /// </summary>
     // 0. ResearchDefinition
-    public class Resource_ResearchDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ResearchDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. ResearchDefinition.url
         public ElementDefinitionInfo Element_Url;

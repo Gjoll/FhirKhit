@@ -161,7 +161,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Meta'
     /// </summary>
     // 0. Meta
-    public class Type_Meta : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Meta : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Meta.versionId
         public ElementDefinitionInfo Element_VersionId;

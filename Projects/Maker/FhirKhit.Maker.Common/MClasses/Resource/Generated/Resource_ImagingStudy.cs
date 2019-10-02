@@ -839,13 +839,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ImagingStudy'
     /// </summary>
     // 0. ImagingStudy
-    public class Resource_ImagingStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ImagingStudy : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 20. ImagingStudy.series
-        public class Type_Series : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Series : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 31. ImagingStudy.series.performer
-            public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 32. ImagingStudy.series.performer.function
                 public ElementDefinitionInfo Element_Function;
@@ -913,7 +913,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 34. ImagingStudy.series.instance
-            public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 35. ImagingStudy.series.instance.uid
                 public ElementDefinitionInfo Element_Uid;

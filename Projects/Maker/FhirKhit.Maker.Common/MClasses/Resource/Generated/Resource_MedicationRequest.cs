@@ -856,13 +856,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicationRequest'
     /// </summary>
     // 0. MedicationRequest
-    public class Resource_MedicationRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicationRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 28. MedicationRequest.dispenseRequest
-        public class Type_DispenseRequest : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DispenseRequest : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 29. MedicationRequest.dispenseRequest.initialFill
-            public class Type_InitialFill : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_InitialFill : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 30. MedicationRequest.dispenseRequest.initialFill.quantity
                 public ElementDefinitionInfo Element_Quantity;
@@ -1079,7 +1079,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 38. MedicationRequest.substitution
-        public class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Substitution : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 39. MedicationRequest.substitution.allowed[x]
             public ElementDefinitionInfo Element_Allowed;

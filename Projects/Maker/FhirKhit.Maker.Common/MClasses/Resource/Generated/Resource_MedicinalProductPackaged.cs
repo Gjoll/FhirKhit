@@ -378,10 +378,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductPackaged'
     /// </summary>
     // 0. MedicinalProductPackaged
-    public class Resource_MedicinalProductPackaged : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductPackaged : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. MedicinalProductPackaged.batchIdentifier
-        public class Type_BatchIdentifier : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_BatchIdentifier : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. MedicinalProductPackaged.batchIdentifier.outerPackaging
             public ElementDefinitionInfo Element_OuterPackaging;
@@ -439,7 +439,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 11. MedicinalProductPackaged.packageItem
-        public class Type_PackageItem : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_PackageItem : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. MedicinalProductPackaged.packageItem.identifier
             public ElementDefinitionInfo Element_Identifier;

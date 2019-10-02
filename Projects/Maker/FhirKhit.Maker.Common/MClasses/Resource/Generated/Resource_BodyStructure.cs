@@ -198,7 +198,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'BodyStructure'
     /// </summary>
     // 0. BodyStructure
-    public class Resource_BodyStructure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_BodyStructure : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. BodyStructure.identifier
         public ElementDefinitionInfo Element_Identifier;

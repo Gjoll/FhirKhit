@@ -255,7 +255,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'OrganizationAffiliation'
     /// </summary>
     // 0. OrganizationAffiliation
-    public class Resource_OrganizationAffiliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_OrganizationAffiliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. OrganizationAffiliation.identifier
         public ElementDefinitionInfo Element_Identifier;

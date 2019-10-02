@@ -259,7 +259,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'PaymentNotice'
     /// </summary>
     // 0. PaymentNotice
-    public class Resource_PaymentNotice : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_PaymentNotice : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. PaymentNotice.identifier
         public ElementDefinitionInfo Element_Identifier;

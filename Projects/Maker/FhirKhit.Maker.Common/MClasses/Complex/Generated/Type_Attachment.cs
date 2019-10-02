@@ -225,7 +225,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Attachment'
     /// </summary>
     // 0. Attachment
-    public class Type_Attachment : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Attachment : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Attachment.contentType
         public ElementDefinitionInfo Element_ContentType;

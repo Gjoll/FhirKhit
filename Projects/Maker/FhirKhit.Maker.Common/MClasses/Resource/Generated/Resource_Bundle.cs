@@ -490,10 +490,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Bundle'
     /// </summary>
     // 0. Bundle
-    public class Resource_Bundle : FhirKhit.Maker.Common.Resource.Resource_Resource
+    public partial class Resource_Bundle : FhirKhit.Maker.Common.Resource.Resource_Resource
     {
         // 5. Bundle.link
-        public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 6. Bundle.link.relation
             public ElementDefinitionInfo Element_Relation;
@@ -551,10 +551,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 8. Bundle.entry
-        public class Type_Entry : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Entry : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. Bundle.entry.search
-            public class Type_Search : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Search : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 13. Bundle.entry.search.mode
                 public ElementDefinitionInfo Element_Mode;
@@ -612,7 +612,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 15. Bundle.entry.request
-            public class Type_Request : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Request : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 16. Bundle.entry.request.method
                 public ElementDefinitionInfo Element_Method;
@@ -750,7 +750,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 22. Bundle.entry.response
-            public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 23. Bundle.entry.response.status
                 public ElementDefinitionInfo Element_Status;

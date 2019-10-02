@@ -289,7 +289,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'GuidanceResponse'
     /// </summary>
     // 0. GuidanceResponse
-    public class Resource_GuidanceResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_GuidanceResponse : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. GuidanceResponse.requestIdentifier
         public ElementDefinitionInfo Element_RequestIdentifier;

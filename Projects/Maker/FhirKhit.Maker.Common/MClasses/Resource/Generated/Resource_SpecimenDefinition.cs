@@ -565,16 +565,16 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SpecimenDefinition'
     /// </summary>
     // 0. SpecimenDefinition
-    public class Resource_SpecimenDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SpecimenDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 6. SpecimenDefinition.typeTested
-        public class Type_TypeTested : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_TypeTested : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. SpecimenDefinition.typeTested.container
-            public class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Container : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 17. SpecimenDefinition.typeTested.container.additive
-                public class Type_Additive : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Additive : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 18. SpecimenDefinition.typeTested.container.additive.additive[x]
                     public ElementDefinitionInfo Element_Additive;
@@ -797,7 +797,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 23. SpecimenDefinition.typeTested.handling
-            public class Type_Handling : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Handling : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 24. SpecimenDefinition.typeTested.handling.temperatureQualifier
                 public ElementDefinitionInfo Element_TemperatureQualifier;

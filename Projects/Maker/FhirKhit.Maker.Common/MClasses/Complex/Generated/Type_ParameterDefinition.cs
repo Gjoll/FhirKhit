@@ -169,7 +169,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'ParameterDefinition'
     /// </summary>
     // 0. ParameterDefinition
-    public class Type_ParameterDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_ParameterDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. ParameterDefinition.name
         public ElementDefinitionInfo Element_Name;

@@ -528,13 +528,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MeasureReport'
     /// </summary>
     // 0. MeasureReport
-    public class Resource_MeasureReport : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MeasureReport : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. MeasureReport.group
-        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. MeasureReport.group.population
-            public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 13. MeasureReport.group.population.code
                 public ElementDefinitionInfo Element_Code;
@@ -616,13 +616,13 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 17. MeasureReport.group.stratifier
-            public class Type_Stratifier : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Stratifier : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 19. MeasureReport.group.stratifier.stratum
-                public class Type_Stratum : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Stratum : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 21. MeasureReport.group.stratifier.stratum.component
-                    public class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
+                    public partial class Type_Component : FhirKhit.Maker.Common.Complex.ComplexBase
                     {
                         // 22. MeasureReport.group.stratifier.stratum.component.code
                         public ElementDefinitionInfo Element_Code;
@@ -680,7 +680,7 @@ namespace FhirKhit.Maker.Common.Resource
                         }
                     }
                     // 24. MeasureReport.group.stratifier.stratum.population
-                    public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
+                    public partial class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
                     {
                         // 25. MeasureReport.group.stratifier.stratum.population.code
                         public ElementDefinitionInfo Element_Code;

@@ -353,10 +353,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'EpisodeOfCare'
     /// </summary>
     // 0. EpisodeOfCare
-    public class Resource_EpisodeOfCare : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_EpisodeOfCare : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 3. EpisodeOfCare.statusHistory
-        public class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 4. EpisodeOfCare.statusHistory.status
             public ElementDefinitionInfo Element_Status;
@@ -414,7 +414,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 7. EpisodeOfCare.diagnosis
-        public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. EpisodeOfCare.diagnosis.condition
             public ElementDefinitionInfo Element_Condition;

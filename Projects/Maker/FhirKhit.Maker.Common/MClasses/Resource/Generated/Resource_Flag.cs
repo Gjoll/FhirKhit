@@ -220,7 +220,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Flag'
     /// </summary>
     // 0. Flag
-    public class Resource_Flag : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Flag : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Flag.identifier
         public ElementDefinitionInfo Element_Identifier;

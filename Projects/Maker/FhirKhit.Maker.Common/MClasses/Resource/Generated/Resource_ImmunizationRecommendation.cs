@@ -388,13 +388,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ImmunizationRecommendation'
     /// </summary>
     // 0. ImmunizationRecommendation
-    public class Resource_ImmunizationRecommendation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ImmunizationRecommendation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 5. ImmunizationRecommendation.recommendation
-        public class Type_Recommendation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Recommendation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. ImmunizationRecommendation.recommendation.dateCriterion
-            public class Type_DateCriterion : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_DateCriterion : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 12. ImmunizationRecommendation.recommendation.dateCriterion.code
                 public ElementDefinitionInfo Element_Code;

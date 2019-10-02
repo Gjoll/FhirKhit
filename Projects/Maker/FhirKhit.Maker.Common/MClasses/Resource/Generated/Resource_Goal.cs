@@ -482,10 +482,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Goal'
     /// </summary>
     // 0. Goal
-    public class Resource_Goal : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Goal : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. Goal.target
-        public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. Goal.target.measure
             public ElementDefinitionInfo Element_Measure;

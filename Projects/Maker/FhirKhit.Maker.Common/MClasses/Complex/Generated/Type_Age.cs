@@ -57,7 +57,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Age'
     /// </summary>
     // 0. Age
-    public class Type_Age : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Age : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         
         public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)

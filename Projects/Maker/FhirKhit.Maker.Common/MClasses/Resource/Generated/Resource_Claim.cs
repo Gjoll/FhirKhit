@@ -2179,10 +2179,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Claim'
     /// </summary>
     // 0. Claim
-    public class Resource_Claim : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Claim : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 14. Claim.related
-        public class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Related : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 15. Claim.related.claim
             public ElementDefinitionInfo Element_Claim;
@@ -2264,7 +2264,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. Claim.payee
-        public class Type_Payee : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Payee : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. Claim.payee.type
             public ElementDefinitionInfo Element_Type;
@@ -2330,7 +2330,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. Claim.careTeam
-        public class Type_CareTeam : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_CareTeam : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. Claim.careTeam.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -2454,7 +2454,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 31. Claim.supportingInfo
-        public class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SupportingInfo : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 32. Claim.supportingInfo.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -2611,7 +2611,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 38. Claim.diagnosis
-        public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 39. Claim.diagnosis.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -2736,7 +2736,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 44. Claim.procedure
-        public class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Procedure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 45. Claim.procedure.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -2865,7 +2865,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 50. Claim.insurance
-        public class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Insurance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 51. Claim.insurance.sequence
             public ElementDefinitionInfo Element_Sequence;
@@ -3031,7 +3031,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 58. Claim.accident
-        public class Type_Accident : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Accident : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 59. Claim.accident.date
             public ElementDefinitionInfo Element_Date;
@@ -3116,13 +3116,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 62. Claim.item
-        public class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Item : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 83. Claim.item.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 95. Claim.item.detail.subDetail
-                public class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_SubDetail : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 96. Claim.item.detail.subDetail.sequence
                     public ElementDefinitionInfo Element_Sequence;

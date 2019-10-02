@@ -588,16 +588,16 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'GraphDefinition'
     /// </summary>
     // 0. GraphDefinition
-    public class Resource_GraphDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_GraphDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. GraphDefinition.link
-        public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. GraphDefinition.link.target
-            public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 25. GraphDefinition.link.target.compartment
-                public class Type_Compartment : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Compartment : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 26. GraphDefinition.link.target.compartment.use
                     public ElementDefinitionInfo Element_Use;

@@ -441,10 +441,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'RiskAssessment'
     /// </summary>
     // 0. RiskAssessment
-    public class Resource_RiskAssessment : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_RiskAssessment : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. RiskAssessment.prediction
-        public class Type_Prediction : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Prediction : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. RiskAssessment.prediction.outcome
             public ElementDefinitionInfo Element_Outcome;

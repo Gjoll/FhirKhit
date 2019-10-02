@@ -406,13 +406,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SubstancePolymer'
     /// </summary>
     // 0. SubstancePolymer
-    public class Resource_SubstancePolymer : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SubstancePolymer : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 5. SubstancePolymer.monomerSet
-        public class Type_MonomerSet : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_MonomerSet : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 7. SubstancePolymer.monomerSet.startingMaterial
-            public class Type_StartingMaterial : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_StartingMaterial : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 8. SubstancePolymer.monomerSet.startingMaterial.material
                 public ElementDefinitionInfo Element_Material;
@@ -565,13 +565,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 12. SubstancePolymer.repeat
-        public class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Repeat : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. SubstancePolymer.repeat.repeatUnit
-            public class Type_RepeatUnit : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_RepeatUnit : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 20. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation
-                public class Type_DegreeOfPolymerisation : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_DegreeOfPolymerisation : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 21. SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree
                     public ElementDefinitionInfo Element_Degree;
@@ -629,7 +629,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 23. SubstancePolymer.repeat.repeatUnit.structuralRepresentation
-                public class Type_StructuralRepresentation : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_StructuralRepresentation : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 24. SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type
                     public ElementDefinitionInfo Element_Type;

@@ -146,7 +146,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductManufactured'
     /// </summary>
     // 0. MedicinalProductManufactured
-    public class Resource_MedicinalProductManufactured : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductManufactured : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. MedicinalProductManufactured.manufacturedDoseForm
         public ElementDefinitionInfo Element_ManufacturedDoseForm;

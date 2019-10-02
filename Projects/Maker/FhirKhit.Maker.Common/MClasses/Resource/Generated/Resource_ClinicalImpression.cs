@@ -503,10 +503,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ClinicalImpression'
     /// </summary>
     // 0. ClinicalImpression
-    public class Resource_ClinicalImpression : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ClinicalImpression : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 13. ClinicalImpression.investigation
-        public class Type_Investigation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Investigation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. ClinicalImpression.investigation.code
             public ElementDefinitionInfo Element_Code;
@@ -574,7 +574,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 18. ClinicalImpression.finding
-        public class Type_Finding : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Finding : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. ClinicalImpression.finding.itemCodeableConcept
             public ElementDefinitionInfo Element_ItemCodeableConcept;

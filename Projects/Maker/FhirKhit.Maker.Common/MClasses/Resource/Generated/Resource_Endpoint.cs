@@ -253,7 +253,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Endpoint'
     /// </summary>
     // 0. Endpoint
-    public class Resource_Endpoint : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Endpoint : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Endpoint.identifier
         public ElementDefinitionInfo Element_Identifier;

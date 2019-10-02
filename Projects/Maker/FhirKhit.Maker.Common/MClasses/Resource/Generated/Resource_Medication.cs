@@ -268,10 +268,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Medication'
     /// </summary>
     // 0. Medication
-    public class Resource_Medication : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Medication : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. Medication.ingredient
-        public class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. Medication.ingredient.item[x]
             public ElementDefinitionInfo Element_Item;
@@ -357,7 +357,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 11. Medication.batch
-        public class Type_Batch : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Batch : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 12. Medication.batch.lotNumber
             public ElementDefinitionInfo Element_LotNumber;

@@ -299,10 +299,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Organization'
     /// </summary>
     // 0. Organization
-    public class Resource_Organization : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Organization : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 9. Organization.contact
-        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 10. Organization.contact.purpose
             public ElementDefinitionInfo Element_Purpose;

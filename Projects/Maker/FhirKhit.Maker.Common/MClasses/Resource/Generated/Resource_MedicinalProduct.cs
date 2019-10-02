@@ -650,13 +650,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProduct'
     /// </summary>
     // 0. MedicinalProduct
-    public class Resource_MedicinalProduct : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProduct : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 17. MedicinalProduct.name
-        public class Type_Name : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Name : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. MedicinalProduct.name.namePart
-            public class Type_NamePart : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_NamePart : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 20. MedicinalProduct.name.namePart.part
                 public ElementDefinitionInfo Element_Part;
@@ -714,7 +714,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 22. MedicinalProduct.name.countryLanguage
-            public class Type_CountryLanguage : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_CountryLanguage : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 23. MedicinalProduct.name.countryLanguage.country
                 public ElementDefinitionInfo Element_Country;
@@ -867,7 +867,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 27. MedicinalProduct.manufacturingBusinessOperation
-        public class Type_ManufacturingBusinessOperation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ManufacturingBusinessOperation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. MedicinalProduct.manufacturingBusinessOperation.operationType
             public ElementDefinitionInfo Element_OperationType;
@@ -1013,7 +1013,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 34. MedicinalProduct.specialDesignation
-        public class Type_SpecialDesignation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SpecialDesignation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 35. MedicinalProduct.specialDesignation.identifier
             public ElementDefinitionInfo Element_Identifier;

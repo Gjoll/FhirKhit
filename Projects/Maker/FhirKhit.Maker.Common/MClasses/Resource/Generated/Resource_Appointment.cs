@@ -548,10 +548,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Appointment'
     /// </summary>
     // 0. Appointment
-    public class Resource_Appointment : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Appointment : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 21. Appointment.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 22. Appointment.participant.type
             public ElementDefinitionInfo Element_Type;

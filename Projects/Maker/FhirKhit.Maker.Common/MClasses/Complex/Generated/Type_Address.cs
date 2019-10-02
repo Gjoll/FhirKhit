@@ -281,7 +281,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Address'
     /// </summary>
     // 0. Address
-    public class Type_Address : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Address : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Address.use
         public ElementDefinitionInfo Element_Use;

@@ -705,10 +705,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Device'
     /// </summary>
     // 0. Device
-    public class Resource_Device : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Device : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 3. Device.udiCarrier
-        public class Type_UdiCarrier : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_UdiCarrier : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 4. Device.udiCarrier.deviceIdentifier
             public ElementDefinitionInfo Element_DeviceIdentifier;
@@ -846,7 +846,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 18. Device.deviceName
-        public class Type_DeviceName : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DeviceName : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. Device.deviceName.name
             public ElementDefinitionInfo Element_Name;
@@ -904,7 +904,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 24. Device.specialization
-        public class Type_Specialization : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Specialization : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 25. Device.specialization.systemType
             public ElementDefinitionInfo Element_SystemType;
@@ -962,7 +962,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 27. Device.version
-        public class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Version : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. Device.version.type
             public ElementDefinitionInfo Element_Type;
@@ -1040,7 +1040,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 31. Device.property
-        public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 32. Device.property.type
             public ElementDefinitionInfo Element_Type;

@@ -473,10 +473,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MessageHeader'
     /// </summary>
     // 0. MessageHeader
-    public class Resource_MessageHeader : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MessageHeader : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 2. MessageHeader.destination
-        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 3. MessageHeader.destination.name
             public ElementDefinitionInfo Element_Name;
@@ -584,7 +584,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 10. MessageHeader.source
-        public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. MessageHeader.source.name
             public ElementDefinitionInfo Element_Name;
@@ -702,7 +702,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 18. MessageHeader.response
-        public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. MessageHeader.response.identifier
             public ElementDefinitionInfo Element_Identifier;

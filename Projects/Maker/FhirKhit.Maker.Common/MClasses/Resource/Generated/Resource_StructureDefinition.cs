@@ -716,10 +716,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'StructureDefinition'
     /// </summary>
     // 0. StructureDefinition
-    public class Resource_StructureDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_StructureDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 18. StructureDefinition.mapping
-        public class Type_Mapping : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Mapping : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. StructureDefinition.mapping.identity
             public ElementDefinitionInfo Element_Identity;
@@ -817,7 +817,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. StructureDefinition.context
-        public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. StructureDefinition.context.type
             public ElementDefinitionInfo Element_Type;
@@ -875,7 +875,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 32. StructureDefinition.snapshot
-        public class Type_Snapshot : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Snapshot : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 33. StructureDefinition.snapshot.element
             public ElementDefinitionInfo Element_Element;
@@ -913,7 +913,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 34. StructureDefinition.differential
-        public class Type_Differential : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Differential : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 35. StructureDefinition.differential.element
             public ElementDefinitionInfo Element_Element;

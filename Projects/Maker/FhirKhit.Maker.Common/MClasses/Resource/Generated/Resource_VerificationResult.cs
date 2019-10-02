@@ -615,10 +615,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'VerificationResult'
     /// </summary>
     // 0. VerificationResult
-    public class Resource_VerificationResult : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_VerificationResult : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. VerificationResult.primarySource
-        public class Type_PrimarySource : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_PrimarySource : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. VerificationResult.primarySource.who
             public ElementDefinitionInfo Element_Who;
@@ -782,7 +782,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. VerificationResult.attestation
-        public class Type_Attestation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Attestation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. VerificationResult.attestation.who
             public ElementDefinitionInfo Element_Who;
@@ -972,7 +972,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 29. VerificationResult.validator
-        public class Type_Validator : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Validator : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 30. VerificationResult.validator.organization
             public ElementDefinitionInfo Element_Organization;

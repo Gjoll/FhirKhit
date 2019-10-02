@@ -538,10 +538,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Condition'
     /// </summary>
     // 0. Condition
-    public class Resource_Condition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Condition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. Condition.stage
-        public class Type_Stage : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Stage : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. Condition.stage.summary
             public ElementDefinitionInfo Element_Summary;
@@ -625,7 +625,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 19. Condition.evidence
-        public class Type_Evidence : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Evidence : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. Condition.evidence.code
             public ElementDefinitionInfo Element_Code;

@@ -462,10 +462,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Location'
     /// </summary>
     // 0. Location
-    public class Resource_Location : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Location : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. Location.position
-        public class Type_Position : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Position : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. Location.position.longitude
             public ElementDefinitionInfo Element_Longitude;
@@ -543,7 +543,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 18. Location.hoursOfOperation
-        public class Type_HoursOfOperation : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_HoursOfOperation : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. Location.hoursOfOperation.daysOfWeek
             public ElementDefinitionInfo Element_DaysOfWeek;

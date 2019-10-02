@@ -178,7 +178,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Identifier'
     /// </summary>
     // 0. Identifier
-    public class Type_Identifier : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Identifier : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Identifier.use
         public ElementDefinitionInfo Element_Use;

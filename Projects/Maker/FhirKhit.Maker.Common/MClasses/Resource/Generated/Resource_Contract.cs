@@ -2331,10 +2331,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Contract'
     /// </summary>
     // 0. Contract
-    public class Resource_Contract : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Contract : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 25. Contract.contentDefinition
-        public class Type_ContentDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ContentDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. Contract.contentDefinition.type
             public ElementDefinitionInfo Element_Type;
@@ -2478,10 +2478,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 32. Contract.term
-        public class Type_Term : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Term : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 40. Contract.term.securityLabel
-            public class Type_SecurityLabel : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_SecurityLabel : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 41. Contract.term.securityLabel.number
                 public ElementDefinitionInfo Element_Number;
@@ -2579,10 +2579,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 45. Contract.term.offer
-            public class Type_Offer : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Offer : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 47. Contract.term.offer.party
-                public class Type_Party : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Party : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 48. Contract.term.offer.party.reference
                     public ElementDefinitionInfo Element_Reference;
@@ -2650,7 +2650,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 54. Contract.term.offer.answer
-                public class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Answer : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 55. Contract.term.offer.answer.value[x]
                     public ElementDefinitionInfo Element_Value;
@@ -2944,10 +2944,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 59. Contract.term.asset
-            public class Type_Asset : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Asset : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 65. Contract.term.asset.context
-                public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 66. Contract.term.asset.context.reference
                     public ElementDefinitionInfo Element_Reference;
@@ -3029,7 +3029,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 77. Contract.term.asset.valuedItem
-                public class Type_ValuedItem : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_ValuedItem : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 78. Contract.term.asset.valuedItem.entity[x]
                     public ElementDefinitionInfo Element_Entity;
@@ -3666,10 +3666,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 92. Contract.term.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 95. Contract.term.action.subject
-                public class Type_Subject : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Subject : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 96. Contract.term.action.subject.reference
                     public ElementDefinitionInfo Element_Reference;
@@ -4473,7 +4473,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 119. Contract.signer
-        public class Type_Signer : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Signer : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 120. Contract.signer.type
             public ElementDefinitionInfo Element_Type;
@@ -4559,7 +4559,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 123. Contract.friendly
-        public class Type_Friendly : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Friendly : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 124. Contract.friendly.content[x]
             public ElementDefinitionInfo Element_Content;
@@ -4606,7 +4606,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 125. Contract.legal
-        public class Type_Legal : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Legal : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 126. Contract.legal.content[x]
             public ElementDefinitionInfo Element_Content;
@@ -4653,7 +4653,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 127. Contract.rule
-        public class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 128. Contract.rule.content[x]
             public ElementDefinitionInfo Element_Content;

@@ -201,7 +201,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Schedule'
     /// </summary>
     // 0. Schedule
-    public class Resource_Schedule : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Schedule : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. Schedule.identifier
         public ElementDefinitionInfo Element_Identifier;

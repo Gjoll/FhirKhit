@@ -121,7 +121,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Coding'
     /// </summary>
     // 0. Coding
-    public class Type_Coding : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Coding : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Coding.system
         public ElementDefinitionInfo Element_System;

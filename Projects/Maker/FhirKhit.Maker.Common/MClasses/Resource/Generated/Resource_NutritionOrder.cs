@@ -858,13 +858,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'NutritionOrder'
     /// </summary>
     // 0. NutritionOrder
-    public class Resource_NutritionOrder : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_NutritionOrder : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 14. NutritionOrder.oralDiet
-        public class Type_OralDiet : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_OralDiet : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. NutritionOrder.oralDiet.nutrient
-            public class Type_Nutrient : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Nutrient : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 18. NutritionOrder.oralDiet.nutrient.modifier
                 public ElementDefinitionInfo Element_Modifier;
@@ -922,7 +922,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 20. NutritionOrder.oralDiet.texture
-            public class Type_Texture : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Texture : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 21. NutritionOrder.oralDiet.texture.modifier
                 public ElementDefinitionInfo Element_Modifier;
@@ -1115,7 +1115,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. NutritionOrder.supplement
-        public class Type_Supplement : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Supplement : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. NutritionOrder.supplement.type
             public ElementDefinitionInfo Element_Type;
@@ -1233,10 +1233,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 31. NutritionOrder.enteralFormula
-        public class Type_EnteralFormula : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_EnteralFormula : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 38. NutritionOrder.enteralFormula.administration
-            public class Type_Administration : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Administration : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 39. NutritionOrder.enteralFormula.administration.schedule
                 public ElementDefinitionInfo Element_Schedule;

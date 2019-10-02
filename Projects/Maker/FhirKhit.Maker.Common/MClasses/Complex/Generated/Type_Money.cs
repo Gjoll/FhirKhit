@@ -88,7 +88,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Money'
     /// </summary>
     // 0. Money
-    public class Type_Money : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Money : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Money.value
         public ElementDefinitionInfo Element_Value;

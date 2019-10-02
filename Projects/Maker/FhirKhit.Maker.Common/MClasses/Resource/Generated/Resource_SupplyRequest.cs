@@ -414,10 +414,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SupplyRequest'
     /// </summary>
     // 0. SupplyRequest
-    public class Resource_SupplyRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SupplyRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. SupplyRequest.parameter
-        public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. SupplyRequest.parameter.code
             public ElementDefinitionInfo Element_Code;

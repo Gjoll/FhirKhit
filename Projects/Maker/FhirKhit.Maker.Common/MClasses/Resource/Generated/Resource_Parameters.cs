@@ -261,10 +261,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Parameters'
     /// </summary>
     // 0. Parameters
-    public class Resource_Parameters : FhirKhit.Maker.Common.Resource.Resource_Resource
+    public partial class Resource_Parameters : FhirKhit.Maker.Common.Resource.Resource_Resource
     {
         // 1. Parameters.parameter
-        public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 2. Parameters.parameter.name
             public ElementDefinitionInfo Element_Name;

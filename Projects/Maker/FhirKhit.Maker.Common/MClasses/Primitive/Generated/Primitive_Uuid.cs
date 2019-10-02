@@ -79,7 +79,7 @@ namespace FhirKhit.Maker.Common.Primitive
     /// <summary>
     /// Fhir primitive 'uuid'
     /// </summary>
-    public class Primitive_Uuid : FhirKhit.Maker.Common.Primitive.PrimitiveBase
+    public partial class Primitive_Uuid : FhirKhit.Maker.Common.Primitive.PrimitiveBase
     {
     }
 }

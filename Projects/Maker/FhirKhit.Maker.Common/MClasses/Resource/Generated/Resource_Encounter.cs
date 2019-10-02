@@ -953,10 +953,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Encounter'
     /// </summary>
     // 0. Encounter
-    public class Resource_Encounter : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Encounter : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 3. Encounter.statusHistory
-        public class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_StatusHistory : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 4. Encounter.statusHistory.status
             public ElementDefinitionInfo Element_Status;
@@ -1014,7 +1014,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 7. Encounter.classHistory
-        public class Type_ClassHistory : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ClassHistory : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. Encounter.classHistory.class
             public ElementDefinitionInfo Element_Class;
@@ -1072,7 +1072,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 16. Encounter.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. Encounter.participant.type
             public ElementDefinitionInfo Element_Type;
@@ -1156,7 +1156,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. Encounter.diagnosis
-        public class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Diagnosis : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. Encounter.diagnosis.condition
             public ElementDefinitionInfo Element_Condition;
@@ -1239,7 +1239,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 30. Encounter.hospitalization
-        public class Type_Hospitalization : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Hospitalization : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 31. Encounter.hospitalization.preAdmissionIdentifier
             public ElementDefinitionInfo Element_PreAdmissionIdentifier;
@@ -1447,7 +1447,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 40. Encounter.location
-        public class Type_Location : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Location : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 41. Encounter.location.location
             public ElementDefinitionInfo Element_Location;

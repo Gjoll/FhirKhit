@@ -101,7 +101,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Population'
     /// </summary>
     // 0. Population
-    public class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Population : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Population.age[x]
         public ElementDefinitionInfo Element_Age;

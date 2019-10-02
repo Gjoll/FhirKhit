@@ -102,7 +102,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'Element'
     /// </summary>
     // 0. Element
-    public class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_Element : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. Element.id
         public ElementDefinitionInfo Element_Id;

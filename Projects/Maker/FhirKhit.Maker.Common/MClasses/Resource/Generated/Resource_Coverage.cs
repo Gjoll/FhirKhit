@@ -525,10 +525,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Coverage'
     /// </summary>
     // 0. Coverage
-    public class Resource_Coverage : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Coverage : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. Coverage.class
-        public class Type_Class : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Class : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. Coverage.class.type
             public ElementDefinitionInfo Element_Type;
@@ -606,10 +606,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 18. Coverage.costToBeneficiary
-        public class Type_CostToBeneficiary : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_CostToBeneficiary : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. Coverage.costToBeneficiary.exception
-            public class Type_Exception : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Exception : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 22. Coverage.costToBeneficiary.exception.type
                 public ElementDefinitionInfo Element_Type;

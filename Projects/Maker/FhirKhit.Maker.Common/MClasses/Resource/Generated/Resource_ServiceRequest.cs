@@ -782,7 +782,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ServiceRequest'
     /// </summary>
     // 0. ServiceRequest
-    public class Resource_ServiceRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ServiceRequest : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. ServiceRequest.identifier
         public ElementDefinitionInfo Element_Identifier;

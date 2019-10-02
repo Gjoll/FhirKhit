@@ -506,10 +506,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DiagnosticReport'
     /// </summary>
     // 0. DiagnosticReport
-    public class Resource_DiagnosticReport : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DiagnosticReport : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 15. DiagnosticReport.media
-        public class Type_Media : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Media : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. DiagnosticReport.media.comment
             public ElementDefinitionInfo Element_Comment;

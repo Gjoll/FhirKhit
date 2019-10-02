@@ -968,13 +968,13 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CarePlan'
     /// </summary>
     // 0. CarePlan
-    public class Resource_CarePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CarePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 22. CarePlan.activity
-        public class Type_Activity : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Activity : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 27. CarePlan.activity.detail
-            public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 28. CarePlan.activity.detail.kind
                 public ElementDefinitionInfo Element_Kind;

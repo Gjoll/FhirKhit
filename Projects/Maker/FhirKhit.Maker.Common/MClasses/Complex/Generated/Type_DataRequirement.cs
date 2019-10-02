@@ -343,10 +343,10 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'DataRequirement'
     /// </summary>
     // 0. DataRequirement
-    public class Type_DataRequirement : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_DataRequirement : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 5. DataRequirement.codeFilter
-        public class Type_CodeFilter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_CodeFilter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 6. DataRequirement.codeFilter.path
             public ElementDefinitionInfo Element_Path;
@@ -448,7 +448,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 10. DataRequirement.dateFilter
-        public class Type_DateFilter : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DateFilter : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. DataRequirement.dateFilter.path
             public ElementDefinitionInfo Element_Path;
@@ -532,7 +532,7 @@ namespace FhirKhit.Maker.Common.Complex
             }
         }
         // 15. DataRequirement.sort
-        public class Type_Sort : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Sort : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 16. DataRequirement.sort.path
             public ElementDefinitionInfo Element_Path;

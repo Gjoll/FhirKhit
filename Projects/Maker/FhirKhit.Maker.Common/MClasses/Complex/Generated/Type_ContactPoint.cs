@@ -145,7 +145,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'ContactPoint'
     /// </summary>
     // 0. ContactPoint
-    public class Type_ContactPoint : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_ContactPoint : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. ContactPoint.system
         public ElementDefinitionInfo Element_System;

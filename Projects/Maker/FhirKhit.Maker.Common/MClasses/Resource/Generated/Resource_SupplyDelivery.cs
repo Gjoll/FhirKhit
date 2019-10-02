@@ -295,10 +295,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SupplyDelivery'
     /// </summary>
     // 0. SupplyDelivery
-    public class Resource_SupplyDelivery : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SupplyDelivery : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 7. SupplyDelivery.suppliedItem
-        public class Type_SuppliedItem : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_SuppliedItem : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 8. SupplyDelivery.suppliedItem.quantity
             public ElementDefinitionInfo Element_Quantity;

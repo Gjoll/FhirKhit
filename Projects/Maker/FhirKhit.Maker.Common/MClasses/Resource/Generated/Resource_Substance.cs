@@ -269,10 +269,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Substance'
     /// </summary>
     // 0. Substance
-    public class Resource_Substance : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Substance : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 6. Substance.instance
-        public class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Instance : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 7. Substance.instance.identifier
             public ElementDefinitionInfo Element_Identifier;
@@ -350,7 +350,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 10. Substance.ingredient
-        public class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Ingredient : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. Substance.ingredient.quantity
             public ElementDefinitionInfo Element_Quantity;

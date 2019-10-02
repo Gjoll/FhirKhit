@@ -291,7 +291,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DeviceUseStatement'
     /// </summary>
     // 0. DeviceUseStatement
-    public class Resource_DeviceUseStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DeviceUseStatement : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. DeviceUseStatement.identifier
         public ElementDefinitionInfo Element_Identifier;

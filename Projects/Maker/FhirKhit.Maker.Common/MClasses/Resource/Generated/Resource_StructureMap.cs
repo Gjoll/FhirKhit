@@ -1198,10 +1198,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'StructureMap'
     /// </summary>
     // 0. StructureMap
-    public class Resource_StructureMap : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_StructureMap : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 16. StructureMap.structure
-        public class Type_Structure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Structure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. StructureMap.structure.url
             public ElementDefinitionInfo Element_Url;
@@ -1303,10 +1303,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 22. StructureMap.group
-        public class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Group : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 27. StructureMap.group.input
-            public class Type_Input : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Input : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 28. StructureMap.group.input.name
                 public ElementDefinitionInfo Element_Name;
@@ -1404,10 +1404,10 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 32. StructureMap.group.rule
-            public class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Rule : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 34. StructureMap.group.rule.source
-                public class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Source : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 35. StructureMap.group.rule.source.context
                     public ElementDefinitionInfo Element_Context;
@@ -1789,10 +1789,10 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 46. StructureMap.group.rule.target
-                public class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Target : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 54. StructureMap.group.rule.target.parameter
-                    public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+                    public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
                     {
                         // 55. StructureMap.group.rule.target.parameter.value[x]
                         public ElementDefinitionInfo Element_Value;
@@ -2017,7 +2017,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 57. StructureMap.group.rule.dependent
-                public class Type_Dependent : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Dependent : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 58. StructureMap.group.rule.dependent.name
                     public ElementDefinitionInfo Element_Name;

@@ -849,10 +849,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ResearchElementDefinition'
     /// </summary>
     // 0. ResearchElementDefinition
-    public class Resource_ResearchElementDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ResearchElementDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 33. ResearchElementDefinition.characteristic
-        public class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Characteristic : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 34. ResearchElementDefinition.characteristic.definition[x]
             public ElementDefinitionInfo Element_Definition;

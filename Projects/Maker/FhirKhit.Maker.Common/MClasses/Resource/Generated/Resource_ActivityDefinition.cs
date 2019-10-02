@@ -976,10 +976,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ActivityDefinition'
     /// </summary>
     // 0. ActivityDefinition
-    public class Resource_ActivityDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ActivityDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 37. ActivityDefinition.participant
-        public class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Participant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 38. ActivityDefinition.participant.type
             public ElementDefinitionInfo Element_Type;
@@ -1037,7 +1037,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 48. ActivityDefinition.dynamicValue
-        public class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_DynamicValue : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 49. ActivityDefinition.dynamicValue.path
             public ElementDefinitionInfo Element_Path;

@@ -786,10 +786,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'Immunization'
     /// </summary>
     // 0. Immunization
-    public class Resource_Immunization : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_Immunization : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 18. Immunization.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 19. Immunization.performer.function
             public ElementDefinitionInfo Element_Function;
@@ -853,7 +853,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 26. Immunization.education
-        public class Type_Education : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Education : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 27. Immunization.education.documentType
             public ElementDefinitionInfo Element_DocumentType;
@@ -951,7 +951,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 33. Immunization.reaction
-        public class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Reaction : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 34. Immunization.reaction.date
             public ElementDefinitionInfo Element_Date;
@@ -1033,7 +1033,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 37. Immunization.protocolApplied
-        public class Type_ProtocolApplied : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ProtocolApplied : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 38. Immunization.protocolApplied.series
             public ElementDefinitionInfo Element_Series;

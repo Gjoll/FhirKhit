@@ -531,10 +531,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'PaymentReconciliation'
     /// </summary>
     // 0. PaymentReconciliation
-    public class Resource_PaymentReconciliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_PaymentReconciliation : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 13. PaymentReconciliation.detail
-        public class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Detail : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. PaymentReconciliation.detail.identifier
             public ElementDefinitionInfo Element_Identifier;
@@ -776,7 +776,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 25. PaymentReconciliation.processNote
-        public class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ProcessNote : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 26. PaymentReconciliation.processNote.type
             public ElementDefinitionInfo Element_Type;

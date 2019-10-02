@@ -140,7 +140,7 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'TriggerDefinition'
     /// </summary>
     // 0. TriggerDefinition
-    public class Type_TriggerDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_TriggerDefinition : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 1. TriggerDefinition.type
         public ElementDefinitionInfo Element_Type;

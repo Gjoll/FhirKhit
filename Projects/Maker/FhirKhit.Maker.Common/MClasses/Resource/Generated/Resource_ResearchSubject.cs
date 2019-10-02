@@ -180,7 +180,7 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ResearchSubject'
     /// </summary>
     // 0. ResearchSubject
-    public class Resource_ResearchSubject : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ResearchSubject : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 1. ResearchSubject.identifier
         public ElementDefinitionInfo Element_Identifier;

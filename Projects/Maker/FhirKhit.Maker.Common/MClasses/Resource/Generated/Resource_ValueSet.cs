@@ -924,19 +924,19 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ValueSet'
     /// </summary>
     // 0. ValueSet
-    public class Resource_ValueSet : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ValueSet : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 17. ValueSet.compose
-        public class Type_Compose : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Compose : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. ValueSet.compose.include
-            public class Type_Include : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Include : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 23. ValueSet.compose.include.concept
-                public class Type_Concept : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Concept : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 26. ValueSet.compose.include.concept.designation
-                    public class Type_Designation : FhirKhit.Maker.Common.Complex.ComplexBase
+                    public partial class Type_Designation : FhirKhit.Maker.Common.Complex.ComplexBase
                     {
                         // 27. ValueSet.compose.include.concept.designation.language
                         public ElementDefinitionInfo Element_Language;
@@ -1089,7 +1089,7 @@ namespace FhirKhit.Maker.Common.Resource
                     }
                 }
                 // 30. ValueSet.compose.include.filter
-                public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 31. ValueSet.compose.include.filter.property
                     public ElementDefinitionInfo Element_Property;
@@ -1378,10 +1378,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 36. ValueSet.expansion
-        public class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 41. ValueSet.expansion.parameter
-            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 42. ValueSet.expansion.parameter.name
                 public ElementDefinitionInfo Element_Name;
@@ -1457,7 +1457,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 44. ValueSet.expansion.contains
-            public class Type_Contains : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Contains : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 45. ValueSet.expansion.contains.system
                 public ElementDefinitionInfo Element_System;

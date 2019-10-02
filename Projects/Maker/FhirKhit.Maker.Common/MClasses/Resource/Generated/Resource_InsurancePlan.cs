@@ -723,10 +723,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'InsurancePlan'
     /// </summary>
     // 0. InsurancePlan
-    public class Resource_InsurancePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_InsurancePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. InsurancePlan.contact
-        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. InsurancePlan.contact.purpose
             public ElementDefinitionInfo Element_Purpose;
@@ -824,13 +824,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 17. InsurancePlan.coverage
-        public class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 20. InsurancePlan.coverage.benefit
-            public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 23. InsurancePlan.coverage.benefit.limit
-                public class Type_Limit : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Limit : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 24. InsurancePlan.coverage.benefit.limit.value
                     public ElementDefinitionInfo Element_Value;
@@ -1042,10 +1042,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 26. InsurancePlan.plan
-        public class Type_Plan : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Plan : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 31. InsurancePlan.plan.generalCost
-            public class Type_GeneralCost : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_GeneralCost : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 32. InsurancePlan.plan.generalCost.type
                 public ElementDefinitionInfo Element_Type;
@@ -1143,13 +1143,13 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 36. InsurancePlan.plan.specificCost
-            public class Type_SpecificCost : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_SpecificCost : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 38. InsurancePlan.plan.specificCost.benefit
-                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 40. InsurancePlan.plan.specificCost.benefit.cost
-                    public class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase
+                    public partial class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase
                     {
                         // 41. InsurancePlan.plan.specificCost.benefit.cost.type
                         public ElementDefinitionInfo Element_Type;

@@ -605,10 +605,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'ChargeItem'
     /// </summary>
     // 0. ChargeItem
-    public class Resource_ChargeItem : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_ChargeItem : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 10. ChargeItem.performer
-        public class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Performer : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 11. ChargeItem.performer.function
             public ElementDefinitionInfo Element_Function;

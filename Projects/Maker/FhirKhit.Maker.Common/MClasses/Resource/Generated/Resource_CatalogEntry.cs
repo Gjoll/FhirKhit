@@ -283,10 +283,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'CatalogEntry'
     /// </summary>
     // 0. CatalogEntry
-    public class Resource_CatalogEntry : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_CatalogEntry : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 13. CatalogEntry.relatedEntry
-        public class Type_RelatedEntry : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_RelatedEntry : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 14. CatalogEntry.relatedEntry.relationtype
             public ElementDefinitionInfo Element_Relationtype;

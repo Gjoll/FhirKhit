@@ -1148,10 +1148,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'SubstanceSpecification'
     /// </summary>
     // 0. SubstanceSpecification
-    public class Resource_SubstanceSpecification : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_SubstanceSpecification : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 8. SubstanceSpecification.moiety
-        public class Type_Moiety : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Moiety : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 9. SubstanceSpecification.moiety.role
             public ElementDefinitionInfo Element_Role;
@@ -1312,7 +1312,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 16. SubstanceSpecification.property
-        public class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Property : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 17. SubstanceSpecification.property.category
             public ElementDefinitionInfo Element_Category;
@@ -1441,13 +1441,13 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 23. SubstanceSpecification.structure
-        public class Type_Structure : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Structure : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 28. SubstanceSpecification.structure.isotope
-            public class Type_Isotope : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Isotope : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 33. SubstanceSpecification.structure.isotope.molecularWeight
-                public class Type_MolecularWeight : FhirKhit.Maker.Common.Complex.ComplexBase
+                public partial class Type_MolecularWeight : FhirKhit.Maker.Common.Complex.ComplexBase
                 {
                     // 34. SubstanceSpecification.structure.isotope.molecularWeight.method
                     public ElementDefinitionInfo Element_Method;
@@ -1640,7 +1640,7 @@ namespace FhirKhit.Maker.Common.Resource
                 }
             }
             // 39. SubstanceSpecification.structure.representation
-            public class Type_Representation : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Representation : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 40. SubstanceSpecification.structure.representation.type
                 public ElementDefinitionInfo Element_Type;
@@ -1894,7 +1894,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 43. SubstanceSpecification.code
-        public class Type_Code : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Code : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 44. SubstanceSpecification.code.code
             public ElementDefinitionInfo Element_Code;
@@ -2016,10 +2016,10 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 49. SubstanceSpecification.name
-        public class Type_Name : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Name : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 59. SubstanceSpecification.name.official
-            public class Type_Official : FhirKhit.Maker.Common.Complex.ComplexBase
+            public partial class Type_Official : FhirKhit.Maker.Common.Complex.ComplexBase
             {
                 // 60. SubstanceSpecification.name.official.authority
                 public ElementDefinitionInfo Element_Authority;
@@ -2330,7 +2330,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 65. SubstanceSpecification.relationship
-        public class Type_Relationship : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Relationship : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 66. SubstanceSpecification.relationship.substance[x]
             public ElementDefinitionInfo Element_Substance;

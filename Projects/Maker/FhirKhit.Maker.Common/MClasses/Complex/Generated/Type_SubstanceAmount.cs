@@ -132,10 +132,10 @@ namespace FhirKhit.Maker.Common.Complex
     /// Fhir complex 'SubstanceAmount'
     /// </summary>
     // 0. SubstanceAmount
-    public class Type_SubstanceAmount : FhirKhit.Maker.Common.Complex.ComplexBase
+    public partial class Type_SubstanceAmount : FhirKhit.Maker.Common.Complex.ComplexBase
     {
         // 4. SubstanceAmount.referenceRange
-        public class Type_ReferenceRange : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_ReferenceRange : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 5. SubstanceAmount.referenceRange.lowLimit
             public ElementDefinitionInfo Element_LowLimit;

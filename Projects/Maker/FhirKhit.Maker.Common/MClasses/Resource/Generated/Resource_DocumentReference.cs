@@ -596,10 +596,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'DocumentReference'
     /// </summary>
     // 0. DocumentReference
-    public class Resource_DocumentReference : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_DocumentReference : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 12. DocumentReference.relatesTo
-        public class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_RelatesTo : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 13. DocumentReference.relatesTo.code
             public ElementDefinitionInfo Element_Code;
@@ -661,7 +661,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 17. DocumentReference.content
-        public class Type_Content : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Content : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 18. DocumentReference.content.attachment
             public ElementDefinitionInfo Element_Attachment;
@@ -719,7 +719,7 @@ namespace FhirKhit.Maker.Common.Resource
             }
         }
         // 20. DocumentReference.context
-        public class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Context : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 21. DocumentReference.context.encounter
             public ElementDefinitionInfo Element_Encounter;

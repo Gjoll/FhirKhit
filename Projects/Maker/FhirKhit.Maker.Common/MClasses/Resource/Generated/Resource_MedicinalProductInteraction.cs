@@ -168,10 +168,10 @@ namespace FhirKhit.Maker.Common.Resource
     /// Fhir resource 'MedicinalProductInteraction'
     /// </summary>
     // 0. MedicinalProductInteraction
-    public class Resource_MedicinalProductInteraction : FhirKhit.Maker.Common.Resource.Resource_DomainResource
+    public partial class Resource_MedicinalProductInteraction : FhirKhit.Maker.Common.Resource.Resource_DomainResource
     {
         // 3. MedicinalProductInteraction.interactant
-        public class Type_Interactant : FhirKhit.Maker.Common.Complex.ComplexBase
+        public partial class Type_Interactant : FhirKhit.Maker.Common.Complex.ComplexBase
         {
             // 4. MedicinalProductInteraction.interactant.item[x]
             public ElementDefinitionInfo Element_Item;
