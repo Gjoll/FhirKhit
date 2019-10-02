@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "Bundle",
@@ -485,675 +485,675 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'Bundle'
     /// </summary>
     // 0. Bundle
-    public class Resource_Bundle : FhirKhit.Maker.Common.Resource.ResourceBase                                                              // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_Bundle : FhirKhit.Maker.Common.Resource.Resource_Resource                                                         // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 5. Bundle.link
-        public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 6. Bundle.link.relation
-            public ElementDefinitionInfo Element_Relation;                                                                                  // MakerGen.cs:212
-            // 7. Bundle.link.url
-            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "Bundle.link",                                                                                                   // MakerGen.cs:388
-                    ElementId = "Bundle.link"                                                                                               // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Relation.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Link()                                                                                                              // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 6. Bundle.link.relation
-                    this.Element_Relation = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Relation",                                                                                          // MakerGen.cs:231
-                        Path= "Bundle.link.relation",                                                                                       // MakerGen.cs:232
-                        Id = "Bundle.link.relation",                                                                                        // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 7. Bundle.link.url
-                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Url",                                                                                               // MakerGen.cs:231
-                        Path= "Bundle.link.url",                                                                                            // MakerGen.cs:232
-                        Id = "Bundle.link.url",                                                                                             // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 8. Bundle.entry
-        public class Type_Entry : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 12. Bundle.entry.search
-            public class Type_Search : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 13. Bundle.entry.search.mode
-                public ElementDefinitionInfo Element_Mode;                                                                                  // MakerGen.cs:212
-                // 14. Bundle.entry.search.score
-                public ElementDefinitionInfo Element_Score;                                                                                 // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "Bundle.entry.search",                                                                                       // MakerGen.cs:388
-                        ElementId = "Bundle.entry.search"                                                                                   // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Mode.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Score.Write(sDef);                                                                                              // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Search()                                                                                                        // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 13. Bundle.entry.search.mode
-                        this.Element_Mode = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Mode",                                                                                          // MakerGen.cs:231
-                            Path= "Bundle.entry.search.mode",                                                                               // MakerGen.cs:232
-                            Id = "Bundle.entry.search.mode",                                                                                // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 14. Bundle.entry.search.score
-                        this.Element_Score = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Score",                                                                                         // MakerGen.cs:231
-                            Path= "Bundle.entry.search.score",                                                                              // MakerGen.cs:232
-                            Id = "Bundle.entry.search.score",                                                                               // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 15. Bundle.entry.request
-            public class Type_Request : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 16. Bundle.entry.request.method
-                public ElementDefinitionInfo Element_Method;                                                                                // MakerGen.cs:212
-                // 17. Bundle.entry.request.url
-                public ElementDefinitionInfo Element_Url;                                                                                   // MakerGen.cs:212
-                // 18. Bundle.entry.request.ifNoneMatch
-                public ElementDefinitionInfo Element_IfNoneMatch;                                                                           // MakerGen.cs:212
-                // 19. Bundle.entry.request.ifModifiedSince
-                public ElementDefinitionInfo Element_IfModifiedSince;                                                                       // MakerGen.cs:212
-                // 20. Bundle.entry.request.ifMatch
-                public ElementDefinitionInfo Element_IfMatch;                                                                               // MakerGen.cs:212
-                // 21. Bundle.entry.request.ifNoneExist
-                public ElementDefinitionInfo Element_IfNoneExist;                                                                           // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "Bundle.entry.request",                                                                                      // MakerGen.cs:388
-                        ElementId = "Bundle.entry.request"                                                                                  // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Method.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_Url.Write(sDef);                                                                                                // MakerGen.cs:216
-                    Element_IfNoneMatch.Write(sDef);                                                                                        // MakerGen.cs:216
-                    Element_IfModifiedSince.Write(sDef);                                                                                    // MakerGen.cs:216
-                    Element_IfMatch.Write(sDef);                                                                                            // MakerGen.cs:216
-                    Element_IfNoneExist.Write(sDef);                                                                                        // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Request()                                                                                                       // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 16. Bundle.entry.request.method
-                        this.Element_Method = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Method",                                                                                        // MakerGen.cs:231
-                            Path= "Bundle.entry.request.method",                                                                            // MakerGen.cs:232
-                            Id = "Bundle.entry.request.method",                                                                             // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 17. Bundle.entry.request.url
-                        this.Element_Url = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Url",                                                                                           // MakerGen.cs:231
-                            Path= "Bundle.entry.request.url",                                                                               // MakerGen.cs:232
-                            Id = "Bundle.entry.request.url",                                                                                // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 18. Bundle.entry.request.ifNoneMatch
-                        this.Element_IfNoneMatch = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_IfNoneMatch",                                                                                   // MakerGen.cs:231
-                            Path= "Bundle.entry.request.ifNoneMatch",                                                                       // MakerGen.cs:232
-                            Id = "Bundle.entry.request.ifNoneMatch",                                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 19. Bundle.entry.request.ifModifiedSince
-                        this.Element_IfModifiedSince = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_IfModifiedSince",                                                                               // MakerGen.cs:231
-                            Path= "Bundle.entry.request.ifModifiedSince",                                                                   // MakerGen.cs:232
-                            Id = "Bundle.entry.request.ifModifiedSince",                                                                    // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 20. Bundle.entry.request.ifMatch
-                        this.Element_IfMatch = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_IfMatch",                                                                                       // MakerGen.cs:231
-                            Path= "Bundle.entry.request.ifMatch",                                                                           // MakerGen.cs:232
-                            Id = "Bundle.entry.request.ifMatch",                                                                            // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 21. Bundle.entry.request.ifNoneExist
-                        this.Element_IfNoneExist = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_IfNoneExist",                                                                                   // MakerGen.cs:231
-                            Path= "Bundle.entry.request.ifNoneExist",                                                                       // MakerGen.cs:232
-                            Id = "Bundle.entry.request.ifNoneExist",                                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 22. Bundle.entry.response
-            public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 23. Bundle.entry.response.status
-                public ElementDefinitionInfo Element_Status;                                                                                // MakerGen.cs:212
-                // 24. Bundle.entry.response.location
-                public ElementDefinitionInfo Element_Location;                                                                              // MakerGen.cs:212
-                // 25. Bundle.entry.response.etag
-                public ElementDefinitionInfo Element_Etag;                                                                                  // MakerGen.cs:212
-                // 26. Bundle.entry.response.lastModified
-                public ElementDefinitionInfo Element_LastModified;                                                                          // MakerGen.cs:212
-                // 27. Bundle.entry.response.outcome
-                public ElementDefinitionInfo Element_Outcome;                                                                               // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "Bundle.entry.response",                                                                                     // MakerGen.cs:388
-                        ElementId = "Bundle.entry.response"                                                                                 // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Status.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_Location.Write(sDef);                                                                                           // MakerGen.cs:216
-                    Element_Etag.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_LastModified.Write(sDef);                                                                                       // MakerGen.cs:216
-                    Element_Outcome.Write(sDef);                                                                                            // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Response()                                                                                                      // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 23. Bundle.entry.response.status
-                        this.Element_Status = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Status",                                                                                        // MakerGen.cs:231
-                            Path= "Bundle.entry.response.status",                                                                           // MakerGen.cs:232
-                            Id = "Bundle.entry.response.status",                                                                            // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 24. Bundle.entry.response.location
-                        this.Element_Location = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Location",                                                                                      // MakerGen.cs:231
-                            Path= "Bundle.entry.response.location",                                                                         // MakerGen.cs:232
-                            Id = "Bundle.entry.response.location",                                                                          // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 25. Bundle.entry.response.etag
-                        this.Element_Etag = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Etag",                                                                                          // MakerGen.cs:231
-                            Path= "Bundle.entry.response.etag",                                                                             // MakerGen.cs:232
-                            Id = "Bundle.entry.response.etag",                                                                              // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 26. Bundle.entry.response.lastModified
-                        this.Element_LastModified = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_LastModified",                                                                                  // MakerGen.cs:231
-                            Path= "Bundle.entry.response.lastModified",                                                                     // MakerGen.cs:232
-                            Id = "Bundle.entry.response.lastModified",                                                                      // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 27. Bundle.entry.response.outcome
-                        this.Element_Outcome = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Outcome",                                                                                       // MakerGen.cs:231
-                            Path= "Bundle.entry.response.outcome",                                                                          // MakerGen.cs:232
-                            Id = "Bundle.entry.response.outcome",                                                                           // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Resource.Resource_Resource                                                        // MakerGen.cs:325
-                                {                                                                                                           // MakerGen.cs:326
-                                }                                                                                                           // MakerGen.cs:329
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 9. Bundle.entry.link
-            public ElementDefinitionInfo Element_Link;                                                                                      // MakerGen.cs:212
-            // 10. Bundle.entry.fullUrl
-            public ElementDefinitionInfo Element_FullUrl;                                                                                   // MakerGen.cs:212
-            // 11. Bundle.entry.resource
-            public ElementDefinitionInfo Element_Resource;                                                                                  // MakerGen.cs:212
-            // 12. Bundle.entry.search
-            public ElementDefinitionInfo Element_Search;                                                                                    // MakerGen.cs:212
-            // 15. Bundle.entry.request
-            public ElementDefinitionInfo Element_Request;                                                                                   // MakerGen.cs:212
-            // 22. Bundle.entry.response
-            public ElementDefinitionInfo Element_Response;                                                                                  // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "Bundle.entry",                                                                                                  // MakerGen.cs:388
-                    ElementId = "Bundle.entry"                                                                                              // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Link.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_FullUrl.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Resource.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Search.Write(sDef);                                                                                                 // MakerGen.cs:216
-                Element_Request.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Response.Write(sDef);                                                                                               // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Entry()                                                                                                             // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 9. Bundle.entry.link
-                    this.Element_Link = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Link",                                                                                              // MakerGen.cs:231
-                        Path= "Bundle.entry.link",                                                                                          // MakerGen.cs:232
-                        Id = "Bundle.entry.link",                                                                                           // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 10. Bundle.entry.fullUrl
-                    this.Element_FullUrl = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_FullUrl",                                                                                           // MakerGen.cs:231
-                        Path= "Bundle.entry.fullUrl",                                                                                       // MakerGen.cs:232
-                        Id = "Bundle.entry.fullUrl",                                                                                        // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 11. Bundle.entry.resource
-                    this.Element_Resource = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Resource",                                                                                          // MakerGen.cs:231
-                        Path= "Bundle.entry.resource",                                                                                      // MakerGen.cs:232
-                        Id = "Bundle.entry.resource",                                                                                       // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Resource.Resource_Resource                                                            // MakerGen.cs:325
-                            {                                                                                                               // MakerGen.cs:326
-                            }                                                                                                               // MakerGen.cs:329
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 12. Bundle.entry.search
-                    this.Element_Search = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Search",                                                                                            // MakerGen.cs:231
-                        Path= "Bundle.entry.search",                                                                                        // MakerGen.cs:232
-                        Id = "Bundle.entry.search",                                                                                         // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Search                                                                                                 // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 15. Bundle.entry.request
-                    this.Element_Request = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Request",                                                                                           // MakerGen.cs:231
-                        Path= "Bundle.entry.request",                                                                                       // MakerGen.cs:232
-                        Id = "Bundle.entry.request",                                                                                        // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Request                                                                                                // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 22. Bundle.entry.response
-                    this.Element_Response = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Response",                                                                                          // MakerGen.cs:231
-                        Path= "Bundle.entry.response",                                                                                      // MakerGen.cs:232
-                        Id = "Bundle.entry.response",                                                                                       // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Response                                                                                               // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. Bundle.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
-        // 2. Bundle.type
-        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:212
-        // 3. Bundle.timestamp
-        public ElementDefinitionInfo Element_Timestamp;                                                                                     // MakerGen.cs:212
-        // 4. Bundle.total
-        public ElementDefinitionInfo Element_Total;                                                                                         // MakerGen.cs:212
-        // 5. Bundle.link
-        public ElementDefinitionInfo Element_Link;                                                                                          // MakerGen.cs:212
-        // 8. Bundle.entry
-        public ElementDefinitionInfo Element_Entry;                                                                                         // MakerGen.cs:212
-        // 28. Bundle.signature
-        public ElementDefinitionInfo Element_Signature;                                                                                     // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "Bundle",                                                                                                            // MakerGen.cs:388
-                ElementId = "Bundle"                                                                                                        // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Timestamp.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Total.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_Link.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Entry.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_Signature.Write(sDef);                                                                                                  // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_Bundle()                                                                                                            // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 6. Bundle.link.relation
+            public ElementDefinitionInfo Element_Relation;                                                                                  // MakerGen.cs:219
+            // 7. Bundle.link.url
+            public ElementDefinitionInfo Element_Url;                                                                                       // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "Bundle.link",                                                                                                   // MakerGen.cs:395
+                    ElementId = "Bundle.link"                                                                                               // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Relation.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Url.Write(sDef);                                                                                                    // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Link()                                                                                                              // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 6. Bundle.link.relation
+                    this.Element_Relation = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Relation",                                                                                          // MakerGen.cs:238
+                        Path= "Bundle.link.relation",                                                                                       // MakerGen.cs:239
+                        Id = "Bundle.link.relation",                                                                                        // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 7. Bundle.link.url
+                    this.Element_Url = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Url",                                                                                               // MakerGen.cs:238
+                        Path= "Bundle.link.url",                                                                                            // MakerGen.cs:239
+                        Id = "Bundle.link.url",                                                                                             // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 8. Bundle.entry
+        public class Type_Entry : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 12. Bundle.entry.search
+            public class Type_Search : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 13. Bundle.entry.search.mode
+                public ElementDefinitionInfo Element_Mode;                                                                                  // MakerGen.cs:219
+                // 14. Bundle.entry.search.score
+                public ElementDefinitionInfo Element_Score;                                                                                 // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "Bundle.entry.search",                                                                                       // MakerGen.cs:395
+                        ElementId = "Bundle.entry.search"                                                                                   // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Mode.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Score.Write(sDef);                                                                                              // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Search()                                                                                                        // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 13. Bundle.entry.search.mode
+                        this.Element_Mode = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Mode",                                                                                          // MakerGen.cs:238
+                            Path= "Bundle.entry.search.mode",                                                                               // MakerGen.cs:239
+                            Id = "Bundle.entry.search.mode",                                                                                // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 14. Bundle.entry.search.score
+                        this.Element_Score = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Score",                                                                                         // MakerGen.cs:238
+                            Path= "Bundle.entry.search.score",                                                                              // MakerGen.cs:239
+                            Id = "Bundle.entry.search.score",                                                                               // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 15. Bundle.entry.request
+            public class Type_Request : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 16. Bundle.entry.request.method
+                public ElementDefinitionInfo Element_Method;                                                                                // MakerGen.cs:219
+                // 17. Bundle.entry.request.url
+                public ElementDefinitionInfo Element_Url;                                                                                   // MakerGen.cs:219
+                // 18. Bundle.entry.request.ifNoneMatch
+                public ElementDefinitionInfo Element_IfNoneMatch;                                                                           // MakerGen.cs:219
+                // 19. Bundle.entry.request.ifModifiedSince
+                public ElementDefinitionInfo Element_IfModifiedSince;                                                                       // MakerGen.cs:219
+                // 20. Bundle.entry.request.ifMatch
+                public ElementDefinitionInfo Element_IfMatch;                                                                               // MakerGen.cs:219
+                // 21. Bundle.entry.request.ifNoneExist
+                public ElementDefinitionInfo Element_IfNoneExist;                                                                           // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "Bundle.entry.request",                                                                                      // MakerGen.cs:395
+                        ElementId = "Bundle.entry.request"                                                                                  // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Method.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_Url.Write(sDef);                                                                                                // MakerGen.cs:223
+                    Element_IfNoneMatch.Write(sDef);                                                                                        // MakerGen.cs:223
+                    Element_IfModifiedSince.Write(sDef);                                                                                    // MakerGen.cs:223
+                    Element_IfMatch.Write(sDef);                                                                                            // MakerGen.cs:223
+                    Element_IfNoneExist.Write(sDef);                                                                                        // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Request()                                                                                                       // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 16. Bundle.entry.request.method
+                        this.Element_Method = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Method",                                                                                        // MakerGen.cs:238
+                            Path= "Bundle.entry.request.method",                                                                            // MakerGen.cs:239
+                            Id = "Bundle.entry.request.method",                                                                             // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 17. Bundle.entry.request.url
+                        this.Element_Url = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Url",                                                                                           // MakerGen.cs:238
+                            Path= "Bundle.entry.request.url",                                                                               // MakerGen.cs:239
+                            Id = "Bundle.entry.request.url",                                                                                // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 18. Bundle.entry.request.ifNoneMatch
+                        this.Element_IfNoneMatch = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_IfNoneMatch",                                                                                   // MakerGen.cs:238
+                            Path= "Bundle.entry.request.ifNoneMatch",                                                                       // MakerGen.cs:239
+                            Id = "Bundle.entry.request.ifNoneMatch",                                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 19. Bundle.entry.request.ifModifiedSince
+                        this.Element_IfModifiedSince = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_IfModifiedSince",                                                                               // MakerGen.cs:238
+                            Path= "Bundle.entry.request.ifModifiedSince",                                                                   // MakerGen.cs:239
+                            Id = "Bundle.entry.request.ifModifiedSince",                                                                    // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 20. Bundle.entry.request.ifMatch
+                        this.Element_IfMatch = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_IfMatch",                                                                                       // MakerGen.cs:238
+                            Path= "Bundle.entry.request.ifMatch",                                                                           // MakerGen.cs:239
+                            Id = "Bundle.entry.request.ifMatch",                                                                            // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 21. Bundle.entry.request.ifNoneExist
+                        this.Element_IfNoneExist = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_IfNoneExist",                                                                                   // MakerGen.cs:238
+                            Path= "Bundle.entry.request.ifNoneExist",                                                                       // MakerGen.cs:239
+                            Id = "Bundle.entry.request.ifNoneExist",                                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 22. Bundle.entry.response
+            public class Type_Response : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 23. Bundle.entry.response.status
+                public ElementDefinitionInfo Element_Status;                                                                                // MakerGen.cs:219
+                // 24. Bundle.entry.response.location
+                public ElementDefinitionInfo Element_Location;                                                                              // MakerGen.cs:219
+                // 25. Bundle.entry.response.etag
+                public ElementDefinitionInfo Element_Etag;                                                                                  // MakerGen.cs:219
+                // 26. Bundle.entry.response.lastModified
+                public ElementDefinitionInfo Element_LastModified;                                                                          // MakerGen.cs:219
+                // 27. Bundle.entry.response.outcome
+                public ElementDefinitionInfo Element_Outcome;                                                                               // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "Bundle.entry.response",                                                                                     // MakerGen.cs:395
+                        ElementId = "Bundle.entry.response"                                                                                 // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Status.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_Location.Write(sDef);                                                                                           // MakerGen.cs:223
+                    Element_Etag.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_LastModified.Write(sDef);                                                                                       // MakerGen.cs:223
+                    Element_Outcome.Write(sDef);                                                                                            // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Response()                                                                                                      // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 23. Bundle.entry.response.status
+                        this.Element_Status = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Status",                                                                                        // MakerGen.cs:238
+                            Path= "Bundle.entry.response.status",                                                                           // MakerGen.cs:239
+                            Id = "Bundle.entry.response.status",                                                                            // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 24. Bundle.entry.response.location
+                        this.Element_Location = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Location",                                                                                      // MakerGen.cs:238
+                            Path= "Bundle.entry.response.location",                                                                         // MakerGen.cs:239
+                            Id = "Bundle.entry.response.location",                                                                          // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 25. Bundle.entry.response.etag
+                        this.Element_Etag = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Etag",                                                                                          // MakerGen.cs:238
+                            Path= "Bundle.entry.response.etag",                                                                             // MakerGen.cs:239
+                            Id = "Bundle.entry.response.etag",                                                                              // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 26. Bundle.entry.response.lastModified
+                        this.Element_LastModified = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_LastModified",                                                                                  // MakerGen.cs:238
+                            Path= "Bundle.entry.response.lastModified",                                                                     // MakerGen.cs:239
+                            Id = "Bundle.entry.response.lastModified",                                                                      // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 27. Bundle.entry.response.outcome
+                        this.Element_Outcome = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Outcome",                                                                                       // MakerGen.cs:238
+                            Path= "Bundle.entry.response.outcome",                                                                          // MakerGen.cs:239
+                            Id = "Bundle.entry.response.outcome",                                                                           // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Resource.Resource_Resource                                                        // MakerGen.cs:332
+                                {                                                                                                           // MakerGen.cs:333
+                                }                                                                                                           // MakerGen.cs:336
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 9. Bundle.entry.link
+            public ElementDefinitionInfo Element_Link;                                                                                      // MakerGen.cs:219
+            // 10. Bundle.entry.fullUrl
+            public ElementDefinitionInfo Element_FullUrl;                                                                                   // MakerGen.cs:219
+            // 11. Bundle.entry.resource
+            public ElementDefinitionInfo Element_Resource;                                                                                  // MakerGen.cs:219
+            // 12. Bundle.entry.search
+            public ElementDefinitionInfo Element_Search;                                                                                    // MakerGen.cs:219
+            // 15. Bundle.entry.request
+            public ElementDefinitionInfo Element_Request;                                                                                   // MakerGen.cs:219
+            // 22. Bundle.entry.response
+            public ElementDefinitionInfo Element_Response;                                                                                  // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "Bundle.entry",                                                                                                  // MakerGen.cs:395
+                    ElementId = "Bundle.entry"                                                                                              // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Link.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_FullUrl.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Resource.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Search.Write(sDef);                                                                                                 // MakerGen.cs:223
+                Element_Request.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Response.Write(sDef);                                                                                               // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Entry()                                                                                                             // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 9. Bundle.entry.link
+                    this.Element_Link = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Link",                                                                                              // MakerGen.cs:238
+                        Path= "Bundle.entry.link",                                                                                          // MakerGen.cs:239
+                        Id = "Bundle.entry.link",                                                                                           // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 10. Bundle.entry.fullUrl
+                    this.Element_FullUrl = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_FullUrl",                                                                                           // MakerGen.cs:238
+                        Path= "Bundle.entry.fullUrl",                                                                                       // MakerGen.cs:239
+                        Id = "Bundle.entry.fullUrl",                                                                                        // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 11. Bundle.entry.resource
+                    this.Element_Resource = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Resource",                                                                                          // MakerGen.cs:238
+                        Path= "Bundle.entry.resource",                                                                                      // MakerGen.cs:239
+                        Id = "Bundle.entry.resource",                                                                                       // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Resource.Resource_Resource                                                            // MakerGen.cs:332
+                            {                                                                                                               // MakerGen.cs:333
+                            }                                                                                                               // MakerGen.cs:336
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 12. Bundle.entry.search
+                    this.Element_Search = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Search",                                                                                            // MakerGen.cs:238
+                        Path= "Bundle.entry.search",                                                                                        // MakerGen.cs:239
+                        Id = "Bundle.entry.search",                                                                                         // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Search                                                                                                 // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 15. Bundle.entry.request
+                    this.Element_Request = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Request",                                                                                           // MakerGen.cs:238
+                        Path= "Bundle.entry.request",                                                                                       // MakerGen.cs:239
+                        Id = "Bundle.entry.request",                                                                                        // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Request                                                                                                // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 22. Bundle.entry.response
+                    this.Element_Response = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Response",                                                                                          // MakerGen.cs:238
+                        Path= "Bundle.entry.response",                                                                                      // MakerGen.cs:239
+                        Id = "Bundle.entry.response",                                                                                       // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Response                                                                                               // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. Bundle.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        // 2. Bundle.type
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:219
+        // 3. Bundle.timestamp
+        public ElementDefinitionInfo Element_Timestamp;                                                                                     // MakerGen.cs:219
+        // 4. Bundle.total
+        public ElementDefinitionInfo Element_Total;                                                                                         // MakerGen.cs:219
+        // 5. Bundle.link
+        public ElementDefinitionInfo Element_Link;                                                                                          // MakerGen.cs:219
+        // 8. Bundle.entry
+        public ElementDefinitionInfo Element_Entry;                                                                                         // MakerGen.cs:219
+        // 28. Bundle.signature
+        public ElementDefinitionInfo Element_Signature;                                                                                     // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "Bundle",                                                                                                            // MakerGen.cs:395
+                ElementId = "Bundle"                                                                                                        // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Timestamp.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Total.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_Link.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Entry.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_Signature.Write(sDef);                                                                                                  // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_Bundle()                                                                                                            // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. Bundle.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
-                    Path= "Bundle.identifier",                                                                                              // MakerGen.cs:232
-                    Id = "Bundle.identifier",                                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
+                    Path= "Bundle.identifier",                                                                                              // MakerGen.cs:239
+                    Id = "Bundle.identifier",                                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. Bundle.type
-                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Type",                                                                                                  // MakerGen.cs:231
-                    Path= "Bundle.type",                                                                                                    // MakerGen.cs:232
-                    Id = "Bundle.type",                                                                                                     // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:238
+                    Path= "Bundle.type",                                                                                                    // MakerGen.cs:239
+                    Id = "Bundle.type",                                                                                                     // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. Bundle.timestamp
-                this.Element_Timestamp = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Timestamp",                                                                                             // MakerGen.cs:231
-                    Path= "Bundle.timestamp",                                                                                               // MakerGen.cs:232
-                    Id = "Bundle.timestamp",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Timestamp = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Timestamp",                                                                                             // MakerGen.cs:238
+                    Path= "Bundle.timestamp",                                                                                               // MakerGen.cs:239
+                    Id = "Bundle.timestamp",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Instant                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. Bundle.total
-                this.Element_Total = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Total",                                                                                                 // MakerGen.cs:231
-                    Path= "Bundle.total",                                                                                                   // MakerGen.cs:232
-                    Id = "Bundle.total",                                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                           // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Total = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Total",                                                                                                 // MakerGen.cs:238
+                    Path= "Bundle.total",                                                                                                   // MakerGen.cs:239
+                    Id = "Bundle.total",                                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_UnsignedInt                                                           // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. Bundle.link
-                this.Element_Link = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Link",                                                                                                  // MakerGen.cs:231
-                    Path= "Bundle.link",                                                                                                    // MakerGen.cs:232
-                    Id = "Bundle.link",                                                                                                     // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Link                                                                                                       // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Link = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Link",                                                                                                  // MakerGen.cs:238
+                    Path= "Bundle.link",                                                                                                    // MakerGen.cs:239
+                    Id = "Bundle.link",                                                                                                     // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Link                                                                                                       // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 8. Bundle.entry
-                this.Element_Entry = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Entry",                                                                                                 // MakerGen.cs:231
-                    Path= "Bundle.entry",                                                                                                   // MakerGen.cs:232
-                    Id = "Bundle.entry",                                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Entry                                                                                                      // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Entry = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Entry",                                                                                                 // MakerGen.cs:238
+                    Path= "Bundle.entry",                                                                                                   // MakerGen.cs:239
+                    Id = "Bundle.entry",                                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Entry                                                                                                      // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 28. Bundle.signature
-                this.Element_Signature = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Signature",                                                                                             // MakerGen.cs:231
-                    Path= "Bundle.signature",                                                                                               // MakerGen.cs:232
-                    Id = "Bundle.signature",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Signature                                                                    // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "Bundle";                                                                                                           // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/Bundle";                                                                    // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_Signature = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Signature",                                                                                             // MakerGen.cs:238
+                    Path= "Bundle.signature",                                                                                               // MakerGen.cs:239
+                    Id = "Bundle.signature",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Signature                                                                    // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "Bundle";                                                                                                           // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/Bundle";                                                                    // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

@@ -1,12 +1,12 @@
-using System;                                                                                                                               // MakerGen.cs:482
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:483
-using System.IO;                                                                                                                            // MakerGen.cs:484
-using System.Linq;                                                                                                                          // MakerGen.cs:485
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:486
-                                                                                                                                            // MakerGen.cs:487
-namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:488
-{                                                                                                                                           // MakerGen.cs:489
-    #region Json                                                                                                                            // MakerGen.cs:490
+using System;                                                                                                                               // MakerGen.cs:498
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:499
+using System.IO;                                                                                                                            // MakerGen.cs:500
+using System.Linq;                                                                                                                          // MakerGen.cs:501
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:502
+                                                                                                                                            // MakerGen.cs:503
+namespace FhirKhit.Maker.Common.Complex                                                                                                     // MakerGen.cs:504
+{                                                                                                                                           // MakerGen.cs:505
+    #region Json                                                                                                                            // MakerGen.cs:506
     #if NEVER
     {
       "resourceType": "StructureDefinition",
@@ -107,126 +107,126 @@ namespace FhirKhit.Maker.Common.Complex                                         
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:494
+    #endregion                                                                                                                              // MakerGen.cs:510
     /// <summary>
     /// Fhir complex 'MarketingStatus'
     /// </summary>
     // 0. MarketingStatus
-    public class Type_MarketingStatus : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Type_MarketingStatus : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 1. MarketingStatus.country
-        public ElementDefinitionInfo Element_Country;                                                                                       // MakerGen.cs:212
+        public ElementDefinitionInfo Element_Country;                                                                                       // MakerGen.cs:219
         // 2. MarketingStatus.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
         // 3. MarketingStatus.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
         // 4. MarketingStatus.dateRange
-        public ElementDefinitionInfo Element_DateRange;                                                                                     // MakerGen.cs:212
+        public ElementDefinitionInfo Element_DateRange;                                                                                     // MakerGen.cs:219
         // 5. MarketingStatus.restoreDate
-        public ElementDefinitionInfo Element_RestoreDate;                                                                                   // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
-        {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "MarketingStatus",                                                                                                   // MakerGen.cs:388
-                ElementId = "MarketingStatus"                                                                                               // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Country.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_DateRange.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_RestoreDate.Write(sDef);                                                                                                // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Type_MarketingStatus()                                                                                                       // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+        public ElementDefinitionInfo Element_RestoreDate;                                                                                   // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "MarketingStatus",                                                                                                   // MakerGen.cs:395
+                ElementId = "MarketingStatus"                                                                                               // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Country.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_DateRange.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_RestoreDate.Write(sDef);                                                                                                // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Type_MarketingStatus()                                                                                                       // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. MarketingStatus.country
-                this.Element_Country = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Country",                                                                                               // MakerGen.cs:231
-                    Path= "MarketingStatus.country",                                                                                        // MakerGen.cs:232
-                    Id = "MarketingStatus.country",                                                                                         // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Country = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Country",                                                                                               // MakerGen.cs:238
+                    Path= "MarketingStatus.country",                                                                                        // MakerGen.cs:239
+                    Id = "MarketingStatus.country",                                                                                         // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. MarketingStatus.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
-                    Path= "MarketingStatus.jurisdiction",                                                                                   // MakerGen.cs:232
-                    Id = "MarketingStatus.jurisdiction",                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
+                    Path= "MarketingStatus.jurisdiction",                                                                                   // MakerGen.cs:239
+                    Id = "MarketingStatus.jurisdiction",                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. MarketingStatus.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
-                    Path= "MarketingStatus.status",                                                                                         // MakerGen.cs:232
-                    Id = "MarketingStatus.status",                                                                                          // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
+                    Path= "MarketingStatus.status",                                                                                         // MakerGen.cs:239
+                    Id = "MarketingStatus.status",                                                                                          // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. MarketingStatus.dateRange
-                this.Element_DateRange = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_DateRange",                                                                                             // MakerGen.cs:231
-                    Path= "MarketingStatus.dateRange",                                                                                      // MakerGen.cs:232
-                    Id = "MarketingStatus.dateRange",                                                                                       // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_DateRange = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_DateRange",                                                                                             // MakerGen.cs:238
+                    Path= "MarketingStatus.dateRange",                                                                                      // MakerGen.cs:239
+                    Id = "MarketingStatus.dateRange",                                                                                       // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. MarketingStatus.restoreDate
-                this.Element_RestoreDate = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_RestoreDate",                                                                                           // MakerGen.cs:231
-                    Path= "MarketingStatus.restoreDate",                                                                                    // MakerGen.cs:232
-                    Id = "MarketingStatus.restoreDate",                                                                                     // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:499
+                this.Element_RestoreDate = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_RestoreDate",                                                                                           // MakerGen.cs:238
+                    Path= "MarketingStatus.restoreDate",                                                                                    // MakerGen.cs:239
+                    Id = "MarketingStatus.restoreDate",                                                                                     // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:515

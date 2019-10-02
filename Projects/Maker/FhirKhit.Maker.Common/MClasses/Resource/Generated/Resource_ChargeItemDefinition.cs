@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "ChargeItemDefinition",
@@ -581,733 +581,733 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'ChargeItemDefinition'
     /// </summary>
     // 0. ChargeItemDefinition
-    public class Resource_ChargeItemDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                                // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_ChargeItemDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                     // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 22. ChargeItemDefinition.applicability
-        public class Type_Applicability : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 23. ChargeItemDefinition.applicability.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:212
-            // 24. ChargeItemDefinition.applicability.language
-            public ElementDefinitionInfo Element_Language;                                                                                  // MakerGen.cs:212
-            // 25. ChargeItemDefinition.applicability.expression
-            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "ChargeItemDefinition.applicability",                                                                            // MakerGen.cs:388
-                    ElementId = "ChargeItemDefinition.applicability"                                                                        // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:216
-                Element_Language.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Applicability()                                                                                                     // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 23. ChargeItemDefinition.applicability.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:231
-                        Path= "ChargeItemDefinition.applicability.description",                                                             // MakerGen.cs:232
-                        Id = "ChargeItemDefinition.applicability.description",                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 24. ChargeItemDefinition.applicability.language
-                    this.Element_Language = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Language",                                                                                          // MakerGen.cs:231
-                        Path= "ChargeItemDefinition.applicability.language",                                                                // MakerGen.cs:232
-                        Id = "ChargeItemDefinition.applicability.language",                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 25. ChargeItemDefinition.applicability.expression
-                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Expression",                                                                                        // MakerGen.cs:231
-                        Path= "ChargeItemDefinition.applicability.expression",                                                              // MakerGen.cs:232
-                        Id = "ChargeItemDefinition.applicability.expression",                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 26. ChargeItemDefinition.propertyGroup
-        public class Type_PropertyGroup : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 28. ChargeItemDefinition.propertyGroup.priceComponent
-            public class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 29. ChargeItemDefinition.propertyGroup.priceComponent.type
-                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:212
-                // 30. ChargeItemDefinition.propertyGroup.priceComponent.code
-                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:212
-                // 31. ChargeItemDefinition.propertyGroup.priceComponent.factor
-                public ElementDefinitionInfo Element_Factor;                                                                                // MakerGen.cs:212
-                // 32. ChargeItemDefinition.propertyGroup.priceComponent.amount
-                public ElementDefinitionInfo Element_Amount;                                                                                // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "ChargeItemDefinition.propertyGroup.priceComponent",                                                         // MakerGen.cs:388
-                        ElementId = "ChargeItemDefinition.propertyGroup.priceComponent"                                                     // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Factor.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_Amount.Write(sDef);                                                                                             // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_PriceComponent()                                                                                                // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 29. ChargeItemDefinition.propertyGroup.priceComponent.type
-                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Type",                                                                                          // MakerGen.cs:231
-                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.type",                                                 // MakerGen.cs:232
-                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.type",                                                  // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 30. ChargeItemDefinition.propertyGroup.priceComponent.code
-                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Code",                                                                                          // MakerGen.cs:231
-                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.code",                                                 // MakerGen.cs:232
-                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.code",                                                  // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
-                                {                                                                                                           // MakerGen.cs:312
-                                }                                                                                                           // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 31. ChargeItemDefinition.propertyGroup.priceComponent.factor
-                        this.Element_Factor = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Factor",                                                                                        // MakerGen.cs:231
-                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.factor",                                               // MakerGen.cs:232
-                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.factor",                                                // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 32. ChargeItemDefinition.propertyGroup.priceComponent.amount
-                        this.Element_Amount = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Amount",                                                                                        // MakerGen.cs:231
-                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.amount",                                               // MakerGen.cs:232
-                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.amount",                                                // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:351
-                                {                                                                                                           // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:353
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 27. ChargeItemDefinition.propertyGroup.applicability
-            public ElementDefinitionInfo Element_Applicability;                                                                             // MakerGen.cs:212
-            // 28. ChargeItemDefinition.propertyGroup.priceComponent
-            public ElementDefinitionInfo Element_PriceComponent;                                                                            // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "ChargeItemDefinition.propertyGroup",                                                                            // MakerGen.cs:388
-                    ElementId = "ChargeItemDefinition.propertyGroup"                                                                        // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Applicability.Write(sDef);                                                                                          // MakerGen.cs:216
-                Element_PriceComponent.Write(sDef);                                                                                         // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_PropertyGroup()                                                                                                     // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 27. ChargeItemDefinition.propertyGroup.applicability
-                    this.Element_Applicability = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Applicability",                                                                                     // MakerGen.cs:231
-                        Path= "ChargeItemDefinition.propertyGroup.applicability",                                                           // MakerGen.cs:232
-                        Id = "ChargeItemDefinition.propertyGroup.applicability",                                                            // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 28. ChargeItemDefinition.propertyGroup.priceComponent
-                    this.Element_PriceComponent = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_PriceComponent",                                                                                    // MakerGen.cs:231
-                        Path= "ChargeItemDefinition.propertyGroup.priceComponent",                                                          // MakerGen.cs:232
-                        Id = "ChargeItemDefinition.propertyGroup.priceComponent",                                                           // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_PriceComponent                                                                                         // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. ChargeItemDefinition.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:212
-        // 2. ChargeItemDefinition.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
-        // 3. ChargeItemDefinition.version
-        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:212
-        // 4. ChargeItemDefinition.title
-        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:212
-        // 5. ChargeItemDefinition.derivedFromUri
-        public ElementDefinitionInfo Element_DerivedFromUri;                                                                                // MakerGen.cs:212
-        // 6. ChargeItemDefinition.partOf
-        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:212
-        // 7. ChargeItemDefinition.replaces
-        public ElementDefinitionInfo Element_Replaces;                                                                                      // MakerGen.cs:212
-        // 8. ChargeItemDefinition.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
-        // 9. ChargeItemDefinition.experimental
-        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:212
-        // 10. ChargeItemDefinition.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
-        // 11. ChargeItemDefinition.publisher
-        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:212
-        // 12. ChargeItemDefinition.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
-        // 13. ChargeItemDefinition.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:212
-        // 14. ChargeItemDefinition.useContext
-        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:212
-        // 15. ChargeItemDefinition.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
-        // 16. ChargeItemDefinition.copyright
-        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:212
-        // 17. ChargeItemDefinition.approvalDate
-        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:212
-        // 18. ChargeItemDefinition.lastReviewDate
-        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:212
-        // 19. ChargeItemDefinition.effectivePeriod
-        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:212
-        // 20. ChargeItemDefinition.code
-        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:212
-        // 21. ChargeItemDefinition.instance
-        public ElementDefinitionInfo Element_Instance;                                                                                      // MakerGen.cs:212
-        // 22. ChargeItemDefinition.applicability
-        public ElementDefinitionInfo Element_Applicability;                                                                                 // MakerGen.cs:212
-        // 26. ChargeItemDefinition.propertyGroup
-        public ElementDefinitionInfo Element_PropertyGroup;                                                                                 // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Applicability : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "ChargeItemDefinition",                                                                                              // MakerGen.cs:388
-                ElementId = "ChargeItemDefinition"                                                                                          // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:216
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_DerivedFromUri.Write(sDef);                                                                                             // MakerGen.cs:216
-            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_Replaces.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:216
-            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:216
-            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:216
-            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Instance.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Applicability.Write(sDef);                                                                                              // MakerGen.cs:216
-            Element_PropertyGroup.Write(sDef);                                                                                              // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_ChargeItemDefinition()                                                                                              // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 23. ChargeItemDefinition.applicability.description
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            // 24. ChargeItemDefinition.applicability.language
+            public ElementDefinitionInfo Element_Language;                                                                                  // MakerGen.cs:219
+            // 25. ChargeItemDefinition.applicability.expression
+            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "ChargeItemDefinition.applicability",                                                                            // MakerGen.cs:395
+                    ElementId = "ChargeItemDefinition.applicability"                                                                        // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
+                Element_Language.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Applicability()                                                                                                     // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 23. ChargeItemDefinition.applicability.description
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
+                        Path= "ChargeItemDefinition.applicability.description",                                                             // MakerGen.cs:239
+                        Id = "ChargeItemDefinition.applicability.description",                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 24. ChargeItemDefinition.applicability.language
+                    this.Element_Language = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Language",                                                                                          // MakerGen.cs:238
+                        Path= "ChargeItemDefinition.applicability.language",                                                                // MakerGen.cs:239
+                        Id = "ChargeItemDefinition.applicability.language",                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 25. ChargeItemDefinition.applicability.expression
+                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Expression",                                                                                        // MakerGen.cs:238
+                        Path= "ChargeItemDefinition.applicability.expression",                                                              // MakerGen.cs:239
+                        Id = "ChargeItemDefinition.applicability.expression",                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 26. ChargeItemDefinition.propertyGroup
+        public class Type_PropertyGroup : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 28. ChargeItemDefinition.propertyGroup.priceComponent
+            public class Type_PriceComponent : FhirKhit.Maker.Common.Complex.ComplexBase                                                    // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 29. ChargeItemDefinition.propertyGroup.priceComponent.type
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:219
+                // 30. ChargeItemDefinition.propertyGroup.priceComponent.code
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:219
+                // 31. ChargeItemDefinition.propertyGroup.priceComponent.factor
+                public ElementDefinitionInfo Element_Factor;                                                                                // MakerGen.cs:219
+                // 32. ChargeItemDefinition.propertyGroup.priceComponent.amount
+                public ElementDefinitionInfo Element_Amount;                                                                                // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "ChargeItemDefinition.propertyGroup.priceComponent",                                                         // MakerGen.cs:395
+                        ElementId = "ChargeItemDefinition.propertyGroup.priceComponent"                                                     // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Factor.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_Amount.Write(sDef);                                                                                             // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_PriceComponent()                                                                                                // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 29. ChargeItemDefinition.propertyGroup.priceComponent.type
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:238
+                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.type",                                                 // MakerGen.cs:239
+                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.type",                                                  // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 30. ChargeItemDefinition.propertyGroup.priceComponent.code
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:238
+                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.code",                                                 // MakerGen.cs:239
+                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.code",                                                  // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:322
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 31. ChargeItemDefinition.propertyGroup.priceComponent.factor
+                        this.Element_Factor = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Factor",                                                                                        // MakerGen.cs:238
+                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.factor",                                               // MakerGen.cs:239
+                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.factor",                                                // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 32. ChargeItemDefinition.propertyGroup.priceComponent.amount
+                        this.Element_Amount = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Amount",                                                                                        // MakerGen.cs:238
+                            Path= "ChargeItemDefinition.propertyGroup.priceComponent.amount",                                               // MakerGen.cs:239
+                            Id = "ChargeItemDefinition.propertyGroup.priceComponent.amount",                                                // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:358
+                                {                                                                                                           // MakerGen.cs:359
+                                }                                                                                                           // MakerGen.cs:360
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 27. ChargeItemDefinition.propertyGroup.applicability
+            public ElementDefinitionInfo Element_Applicability;                                                                             // MakerGen.cs:219
+            // 28. ChargeItemDefinition.propertyGroup.priceComponent
+            public ElementDefinitionInfo Element_PriceComponent;                                                                            // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "ChargeItemDefinition.propertyGroup",                                                                            // MakerGen.cs:395
+                    ElementId = "ChargeItemDefinition.propertyGroup"                                                                        // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Applicability.Write(sDef);                                                                                          // MakerGen.cs:223
+                Element_PriceComponent.Write(sDef);                                                                                         // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_PropertyGroup()                                                                                                     // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 27. ChargeItemDefinition.propertyGroup.applicability
+                    this.Element_Applicability = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Applicability",                                                                                     // MakerGen.cs:238
+                        Path= "ChargeItemDefinition.propertyGroup.applicability",                                                           // MakerGen.cs:239
+                        Id = "ChargeItemDefinition.propertyGroup.applicability",                                                            // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 28. ChargeItemDefinition.propertyGroup.priceComponent
+                    this.Element_PriceComponent = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_PriceComponent",                                                                                    // MakerGen.cs:238
+                        Path= "ChargeItemDefinition.propertyGroup.priceComponent",                                                          // MakerGen.cs:239
+                        Id = "ChargeItemDefinition.propertyGroup.priceComponent",                                                           // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_PriceComponent                                                                                         // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. ChargeItemDefinition.url
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        // 2. ChargeItemDefinition.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        // 3. ChargeItemDefinition.version
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:219
+        // 4. ChargeItemDefinition.title
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:219
+        // 5. ChargeItemDefinition.derivedFromUri
+        public ElementDefinitionInfo Element_DerivedFromUri;                                                                                // MakerGen.cs:219
+        // 6. ChargeItemDefinition.partOf
+        public ElementDefinitionInfo Element_PartOf;                                                                                        // MakerGen.cs:219
+        // 7. ChargeItemDefinition.replaces
+        public ElementDefinitionInfo Element_Replaces;                                                                                      // MakerGen.cs:219
+        // 8. ChargeItemDefinition.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        // 9. ChargeItemDefinition.experimental
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:219
+        // 10. ChargeItemDefinition.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        // 11. ChargeItemDefinition.publisher
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:219
+        // 12. ChargeItemDefinition.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        // 13. ChargeItemDefinition.description
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        // 14. ChargeItemDefinition.useContext
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:219
+        // 15. ChargeItemDefinition.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
+        // 16. ChargeItemDefinition.copyright
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:219
+        // 17. ChargeItemDefinition.approvalDate
+        public ElementDefinitionInfo Element_ApprovalDate;                                                                                  // MakerGen.cs:219
+        // 18. ChargeItemDefinition.lastReviewDate
+        public ElementDefinitionInfo Element_LastReviewDate;                                                                                // MakerGen.cs:219
+        // 19. ChargeItemDefinition.effectivePeriod
+        public ElementDefinitionInfo Element_EffectivePeriod;                                                                               // MakerGen.cs:219
+        // 20. ChargeItemDefinition.code
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:219
+        // 21. ChargeItemDefinition.instance
+        public ElementDefinitionInfo Element_Instance;                                                                                      // MakerGen.cs:219
+        // 22. ChargeItemDefinition.applicability
+        public ElementDefinitionInfo Element_Applicability;                                                                                 // MakerGen.cs:219
+        // 26. ChargeItemDefinition.propertyGroup
+        public ElementDefinitionInfo Element_PropertyGroup;                                                                                 // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "ChargeItemDefinition",                                                                                              // MakerGen.cs:395
+                ElementId = "ChargeItemDefinition"                                                                                          // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_DerivedFromUri.Write(sDef);                                                                                             // MakerGen.cs:223
+            Element_PartOf.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_Replaces.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_ApprovalDate.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_LastReviewDate.Write(sDef);                                                                                             // MakerGen.cs:223
+            Element_EffectivePeriod.Write(sDef);                                                                                            // MakerGen.cs:223
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Instance.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Applicability.Write(sDef);                                                                                              // MakerGen.cs:223
+            Element_PropertyGroup.Write(sDef);                                                                                              // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_ChargeItemDefinition()                                                                                              // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. ChargeItemDefinition.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.url",                                                                                       // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.url",                                                                                        // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.url",                                                                                       // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.url",                                                                                        // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. ChargeItemDefinition.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.identifier",                                                                                // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.identifier",                                                                                 // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.identifier",                                                                                // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.identifier",                                                                                 // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. ChargeItemDefinition.version
-                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.version",                                                                                   // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.version",                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.version",                                                                                   // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.version",                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. ChargeItemDefinition.title
-                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.title",                                                                                     // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.title",                                                                                      // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.title",                                                                                     // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.title",                                                                                      // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. ChargeItemDefinition.derivedFromUri
-                this.Element_DerivedFromUri = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_DerivedFromUri",                                                                                        // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.derivedFromUri",                                                                            // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.derivedFromUri",                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_DerivedFromUri = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_DerivedFromUri",                                                                                        // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.derivedFromUri",                                                                            // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.derivedFromUri",                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 6. ChargeItemDefinition.partOf
-                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.partOf",                                                                                    // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.partOf",                                                                                     // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                this.Element_PartOf = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_PartOf",                                                                                                // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.partOf",                                                                                    // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.partOf",                                                                                     // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"                                              // MakerGen.cs:299
+                                "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"                                              // MakerGen.cs:306
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 7. ChargeItemDefinition.replaces
-                this.Element_Replaces = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Replaces",                                                                                              // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.replaces",                                                                                  // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.replaces",                                                                                   // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:299
+                this.Element_Replaces = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Replaces",                                                                                              // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.replaces",                                                                                  // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.replaces",                                                                                   // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                             // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:306
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"                                              // MakerGen.cs:299
+                                "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition"                                              // MakerGen.cs:306
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 8. ChargeItemDefinition.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.status",                                                                                    // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.status",                                                                                     // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.status",                                                                                    // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.status",                                                                                     // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 9. ChargeItemDefinition.experimental
-                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.experimental",                                                                              // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.experimental",                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.experimental",                                                                              // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.experimental",                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 10. ChargeItemDefinition.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.date",                                                                                      // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.date",                                                                                       // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.date",                                                                                      // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.date",                                                                                       // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 11. ChargeItemDefinition.publisher
-                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.publisher",                                                                                 // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.publisher",                                                                                  // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.publisher",                                                                                 // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.publisher",                                                                                  // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 12. ChargeItemDefinition.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.contact",                                                                                   // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.contact",                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.contact",                                                                                   // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.contact",                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 13. ChargeItemDefinition.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.description",                                                                               // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.description",                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.description",                                                                               // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.description",                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 14. ChargeItemDefinition.useContext
-                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.useContext",                                                                                // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.useContext",                                                                                 // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.useContext",                                                                                // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.useContext",                                                                                 // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 15. ChargeItemDefinition.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.jurisdiction",                                                                              // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.jurisdiction",                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.jurisdiction",                                                                              // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.jurisdiction",                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 16. ChargeItemDefinition.copyright
-                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.copyright",                                                                                 // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.copyright",                                                                                  // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.copyright",                                                                                 // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.copyright",                                                                                  // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 17. ChargeItemDefinition.approvalDate
-                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.approvalDate",                                                                              // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.approvalDate",                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_ApprovalDate = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_ApprovalDate",                                                                                          // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.approvalDate",                                                                              // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.approvalDate",                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 18. ChargeItemDefinition.lastReviewDate
-                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.lastReviewDate",                                                                            // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.lastReviewDate",                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_LastReviewDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_LastReviewDate",                                                                                        // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.lastReviewDate",                                                                            // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.lastReviewDate",                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 19. ChargeItemDefinition.effectivePeriod
-                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.effectivePeriod",                                                                           // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.effectivePeriod",                                                                            // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_EffectivePeriod = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_EffectivePeriod",                                                                                       // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.effectivePeriod",                                                                           // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.effectivePeriod",                                                                            // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 20. ChargeItemDefinition.code
-                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Code",                                                                                                  // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.code",                                                                                      // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.code",                                                                                       // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.code",                                                                                      // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.code",                                                                                       // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 21. ChargeItemDefinition.instance
-                this.Element_Instance = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Instance",                                                                                              // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.instance",                                                                                  // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.instance",                                                                                   // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_Instance = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Instance",                                                                                              // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.instance",                                                                                  // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.instance",                                                                                   // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Medication",                                                       // MakerGen.cs:342
-                                "http://hl7.org/fhir/StructureDefinition/Substance",                                                        // MakerGen.cs:342
-                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Medication",                                                       // MakerGen.cs:349
+                                "http://hl7.org/fhir/StructureDefinition/Substance",                                                        // MakerGen.cs:349
+                                "http://hl7.org/fhir/StructureDefinition/Device"                                                            // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 22. ChargeItemDefinition.applicability
-                this.Element_Applicability = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Applicability",                                                                                         // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.applicability",                                                                             // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.applicability",                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Applicability                                                                                              // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Applicability = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Applicability",                                                                                         // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.applicability",                                                                             // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.applicability",                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Applicability                                                                                              // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 26. ChargeItemDefinition.propertyGroup
-                this.Element_PropertyGroup = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_PropertyGroup",                                                                                         // MakerGen.cs:231
-                    Path= "ChargeItemDefinition.propertyGroup",                                                                             // MakerGen.cs:232
-                    Id = "ChargeItemDefinition.propertyGroup",                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_PropertyGroup                                                                                              // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "ChargeItemDefinition";                                                                                             // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition";                                                      // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_PropertyGroup = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_PropertyGroup",                                                                                         // MakerGen.cs:238
+                    Path= "ChargeItemDefinition.propertyGroup",                                                                             // MakerGen.cs:239
+                    Id = "ChargeItemDefinition.propertyGroup",                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_PropertyGroup                                                                                              // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "ChargeItemDefinition";                                                                                             // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ChargeItemDefinition";                                                      // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

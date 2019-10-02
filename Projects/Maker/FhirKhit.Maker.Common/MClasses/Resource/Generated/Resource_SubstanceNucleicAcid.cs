@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "SubstanceNucleicAcid",
@@ -317,482 +317,482 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'SubstanceNucleicAcid'
     /// </summary>
     // 0. SubstanceNucleicAcid
-    public class Resource_SubstanceNucleicAcid : FhirKhit.Maker.Common.Resource.ResourceBase                                                // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_SubstanceNucleicAcid : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                     // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 5. SubstanceNucleicAcid.subunit
-        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 12. SubstanceNucleicAcid.subunit.linkage
-            public class Type_Linkage : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
-                public ElementDefinitionInfo Element_Connectivity;                                                                          // MakerGen.cs:212
-                // 14. SubstanceNucleicAcid.subunit.linkage.identifier
-                public ElementDefinitionInfo Element_Identifier;                                                                            // MakerGen.cs:212
-                // 15. SubstanceNucleicAcid.subunit.linkage.name
-                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:212
-                // 16. SubstanceNucleicAcid.subunit.linkage.residueSite
-                public ElementDefinitionInfo Element_ResidueSite;                                                                           // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "SubstanceNucleicAcid.subunit.linkage",                                                                      // MakerGen.cs:388
-                        ElementId = "SubstanceNucleicAcid.subunit.linkage"                                                                  // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Connectivity.Write(sDef);                                                                                       // MakerGen.cs:216
-                    Element_Identifier.Write(sDef);                                                                                         // MakerGen.cs:216
-                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_ResidueSite.Write(sDef);                                                                                        // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Linkage()                                                                                                       // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
-                        this.Element_Connectivity = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Connectivity",                                                                                  // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.linkage.connectivity",                                                      // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.linkage.connectivity",                                                       // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 14. SubstanceNucleicAcid.subunit.linkage.identifier
-                        this.Element_Identifier = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Identifier",                                                                                    // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.linkage.identifier",                                                        // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.linkage.identifier",                                                         // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_Identifier                                                           // MakerGen.cs:351
-                                {                                                                                                           // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:353
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 15. SubstanceNucleicAcid.subunit.linkage.name
-                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Name",                                                                                          // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.linkage.name",                                                              // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.linkage.name",                                                               // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 16. SubstanceNucleicAcid.subunit.linkage.residueSite
-                        this.Element_ResidueSite = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_ResidueSite",                                                                                   // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.linkage.residueSite",                                                       // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.linkage.residueSite",                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 17. SubstanceNucleicAcid.subunit.sugar
-            public class Type_Sugar : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 18. SubstanceNucleicAcid.subunit.sugar.identifier
-                public ElementDefinitionInfo Element_Identifier;                                                                            // MakerGen.cs:212
-                // 19. SubstanceNucleicAcid.subunit.sugar.name
-                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:212
-                // 20. SubstanceNucleicAcid.subunit.sugar.residueSite
-                public ElementDefinitionInfo Element_ResidueSite;                                                                           // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "SubstanceNucleicAcid.subunit.sugar",                                                                        // MakerGen.cs:388
-                        ElementId = "SubstanceNucleicAcid.subunit.sugar"                                                                    // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Identifier.Write(sDef);                                                                                         // MakerGen.cs:216
-                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_ResidueSite.Write(sDef);                                                                                        // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Sugar()                                                                                                         // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 18. SubstanceNucleicAcid.subunit.sugar.identifier
-                        this.Element_Identifier = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Identifier",                                                                                    // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.sugar.identifier",                                                          // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.sugar.identifier",                                                           // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_Identifier                                                           // MakerGen.cs:351
-                                {                                                                                                           // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:353
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 19. SubstanceNucleicAcid.subunit.sugar.name
-                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Name",                                                                                          // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.sugar.name",                                                                // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.sugar.name",                                                                 // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 20. SubstanceNucleicAcid.subunit.sugar.residueSite
-                        this.Element_ResidueSite = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_ResidueSite",                                                                                   // MakerGen.cs:231
-                            Path= "SubstanceNucleicAcid.subunit.sugar.residueSite",                                                         // MakerGen.cs:232
-                            Id = "SubstanceNucleicAcid.subunit.sugar.residueSite",                                                          // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 6. SubstanceNucleicAcid.subunit.subunit
-            public ElementDefinitionInfo Element_Subunit;                                                                                   // MakerGen.cs:212
-            // 7. SubstanceNucleicAcid.subunit.sequence
-            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:212
-            // 8. SubstanceNucleicAcid.subunit.length
-            public ElementDefinitionInfo Element_Length;                                                                                    // MakerGen.cs:212
-            // 9. SubstanceNucleicAcid.subunit.sequenceAttachment
-            public ElementDefinitionInfo Element_SequenceAttachment;                                                                        // MakerGen.cs:212
-            // 10. SubstanceNucleicAcid.subunit.fivePrime
-            public ElementDefinitionInfo Element_FivePrime;                                                                                 // MakerGen.cs:212
-            // 11. SubstanceNucleicAcid.subunit.threePrime
-            public ElementDefinitionInfo Element_ThreePrime;                                                                                // MakerGen.cs:212
-            // 12. SubstanceNucleicAcid.subunit.linkage
-            public ElementDefinitionInfo Element_Linkage;                                                                                   // MakerGen.cs:212
-            // 17. SubstanceNucleicAcid.subunit.sugar
-            public ElementDefinitionInfo Element_Sugar;                                                                                     // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "SubstanceNucleicAcid.subunit",                                                                                  // MakerGen.cs:388
-                    ElementId = "SubstanceNucleicAcid.subunit"                                                                              // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Subunit.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Length.Write(sDef);                                                                                                 // MakerGen.cs:216
-                Element_SequenceAttachment.Write(sDef);                                                                                     // MakerGen.cs:216
-                Element_FivePrime.Write(sDef);                                                                                              // MakerGen.cs:216
-                Element_ThreePrime.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_Linkage.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Sugar.Write(sDef);                                                                                                  // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Subunit()                                                                                                           // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 6. SubstanceNucleicAcid.subunit.subunit
-                    this.Element_Subunit = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Subunit",                                                                                           // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.subunit",                                                                       // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.subunit",                                                                        // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 7. SubstanceNucleicAcid.subunit.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.sequence",                                                                      // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.sequence",                                                                       // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 8. SubstanceNucleicAcid.subunit.length
-                    this.Element_Length = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Length",                                                                                            // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.length",                                                                        // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.length",                                                                         // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 9. SubstanceNucleicAcid.subunit.sequenceAttachment
-                    this.Element_SequenceAttachment = new ElementDefinitionInfo                                                             // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_SequenceAttachment",                                                                                // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.sequenceAttachment",                                                            // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.sequenceAttachment",                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 10. SubstanceNucleicAcid.subunit.fivePrime
-                    this.Element_FivePrime = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_FivePrime",                                                                                         // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.fivePrime",                                                                     // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.fivePrime",                                                                      // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 11. SubstanceNucleicAcid.subunit.threePrime
-                    this.Element_ThreePrime = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_ThreePrime",                                                                                        // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.threePrime",                                                                    // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.threePrime",                                                                     // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 12. SubstanceNucleicAcid.subunit.linkage
-                    this.Element_Linkage = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Linkage",                                                                                           // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.linkage",                                                                       // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.linkage",                                                                        // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Linkage                                                                                                // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 17. SubstanceNucleicAcid.subunit.sugar
-                    this.Element_Sugar = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Sugar",                                                                                             // MakerGen.cs:231
-                        Path= "SubstanceNucleicAcid.subunit.sugar",                                                                         // MakerGen.cs:232
-                        Id = "SubstanceNucleicAcid.subunit.sugar",                                                                          // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Sugar                                                                                                  // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. SubstanceNucleicAcid.sequenceType
-        public ElementDefinitionInfo Element_SequenceType;                                                                                  // MakerGen.cs:212
-        // 2. SubstanceNucleicAcid.numberOfSubunits
-        public ElementDefinitionInfo Element_NumberOfSubunits;                                                                              // MakerGen.cs:212
-        // 3. SubstanceNucleicAcid.areaOfHybridisation
-        public ElementDefinitionInfo Element_AreaOfHybridisation;                                                                           // MakerGen.cs:212
-        // 4. SubstanceNucleicAcid.oligoNucleotideType
-        public ElementDefinitionInfo Element_OligoNucleotideType;                                                                           // MakerGen.cs:212
-        // 5. SubstanceNucleicAcid.subunit
-        public ElementDefinitionInfo Element_Subunit;                                                                                       // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "SubstanceNucleicAcid",                                                                                              // MakerGen.cs:388
-                ElementId = "SubstanceNucleicAcid"                                                                                          // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_SequenceType.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_NumberOfSubunits.Write(sDef);                                                                                           // MakerGen.cs:216
-            Element_AreaOfHybridisation.Write(sDef);                                                                                        // MakerGen.cs:216
-            Element_OligoNucleotideType.Write(sDef);                                                                                        // MakerGen.cs:216
-            Element_Subunit.Write(sDef);                                                                                                    // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_SubstanceNucleicAcid()                                                                                              // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 12. SubstanceNucleicAcid.subunit.linkage
+            public class Type_Linkage : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
+                public ElementDefinitionInfo Element_Connectivity;                                                                          // MakerGen.cs:219
+                // 14. SubstanceNucleicAcid.subunit.linkage.identifier
+                public ElementDefinitionInfo Element_Identifier;                                                                            // MakerGen.cs:219
+                // 15. SubstanceNucleicAcid.subunit.linkage.name
+                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:219
+                // 16. SubstanceNucleicAcid.subunit.linkage.residueSite
+                public ElementDefinitionInfo Element_ResidueSite;                                                                           // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "SubstanceNucleicAcid.subunit.linkage",                                                                      // MakerGen.cs:395
+                        ElementId = "SubstanceNucleicAcid.subunit.linkage"                                                                  // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Connectivity.Write(sDef);                                                                                       // MakerGen.cs:223
+                    Element_Identifier.Write(sDef);                                                                                         // MakerGen.cs:223
+                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_ResidueSite.Write(sDef);                                                                                        // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Linkage()                                                                                                       // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 13. SubstanceNucleicAcid.subunit.linkage.connectivity
+                        this.Element_Connectivity = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Connectivity",                                                                                  // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.linkage.connectivity",                                                      // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.linkage.connectivity",                                                       // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 14. SubstanceNucleicAcid.subunit.linkage.identifier
+                        this.Element_Identifier = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Identifier",                                                                                    // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.linkage.identifier",                                                        // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.linkage.identifier",                                                         // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_Identifier                                                           // MakerGen.cs:358
+                                {                                                                                                           // MakerGen.cs:359
+                                }                                                                                                           // MakerGen.cs:360
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 15. SubstanceNucleicAcid.subunit.linkage.name
+                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Name",                                                                                          // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.linkage.name",                                                              // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.linkage.name",                                                               // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 16. SubstanceNucleicAcid.subunit.linkage.residueSite
+                        this.Element_ResidueSite = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_ResidueSite",                                                                                   // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.linkage.residueSite",                                                       // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.linkage.residueSite",                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 17. SubstanceNucleicAcid.subunit.sugar
+            public class Type_Sugar : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 18. SubstanceNucleicAcid.subunit.sugar.identifier
+                public ElementDefinitionInfo Element_Identifier;                                                                            // MakerGen.cs:219
+                // 19. SubstanceNucleicAcid.subunit.sugar.name
+                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:219
+                // 20. SubstanceNucleicAcid.subunit.sugar.residueSite
+                public ElementDefinitionInfo Element_ResidueSite;                                                                           // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "SubstanceNucleicAcid.subunit.sugar",                                                                        // MakerGen.cs:395
+                        ElementId = "SubstanceNucleicAcid.subunit.sugar"                                                                    // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Identifier.Write(sDef);                                                                                         // MakerGen.cs:223
+                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_ResidueSite.Write(sDef);                                                                                        // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Sugar()                                                                                                         // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 18. SubstanceNucleicAcid.subunit.sugar.identifier
+                        this.Element_Identifier = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Identifier",                                                                                    // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.sugar.identifier",                                                          // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.sugar.identifier",                                                           // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_Identifier                                                           // MakerGen.cs:358
+                                {                                                                                                           // MakerGen.cs:359
+                                }                                                                                                           // MakerGen.cs:360
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 19. SubstanceNucleicAcid.subunit.sugar.name
+                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Name",                                                                                          // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.sugar.name",                                                                // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.sugar.name",                                                                 // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 20. SubstanceNucleicAcid.subunit.sugar.residueSite
+                        this.Element_ResidueSite = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_ResidueSite",                                                                                   // MakerGen.cs:238
+                            Path= "SubstanceNucleicAcid.subunit.sugar.residueSite",                                                         // MakerGen.cs:239
+                            Id = "SubstanceNucleicAcid.subunit.sugar.residueSite",                                                          // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 6. SubstanceNucleicAcid.subunit.subunit
+            public ElementDefinitionInfo Element_Subunit;                                                                                   // MakerGen.cs:219
+            // 7. SubstanceNucleicAcid.subunit.sequence
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:219
+            // 8. SubstanceNucleicAcid.subunit.length
+            public ElementDefinitionInfo Element_Length;                                                                                    // MakerGen.cs:219
+            // 9. SubstanceNucleicAcid.subunit.sequenceAttachment
+            public ElementDefinitionInfo Element_SequenceAttachment;                                                                        // MakerGen.cs:219
+            // 10. SubstanceNucleicAcid.subunit.fivePrime
+            public ElementDefinitionInfo Element_FivePrime;                                                                                 // MakerGen.cs:219
+            // 11. SubstanceNucleicAcid.subunit.threePrime
+            public ElementDefinitionInfo Element_ThreePrime;                                                                                // MakerGen.cs:219
+            // 12. SubstanceNucleicAcid.subunit.linkage
+            public ElementDefinitionInfo Element_Linkage;                                                                                   // MakerGen.cs:219
+            // 17. SubstanceNucleicAcid.subunit.sugar
+            public ElementDefinitionInfo Element_Sugar;                                                                                     // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "SubstanceNucleicAcid.subunit",                                                                                  // MakerGen.cs:395
+                    ElementId = "SubstanceNucleicAcid.subunit"                                                                              // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Subunit.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Length.Write(sDef);                                                                                                 // MakerGen.cs:223
+                Element_SequenceAttachment.Write(sDef);                                                                                     // MakerGen.cs:223
+                Element_FivePrime.Write(sDef);                                                                                              // MakerGen.cs:223
+                Element_ThreePrime.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_Linkage.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Sugar.Write(sDef);                                                                                                  // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Subunit()                                                                                                           // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 6. SubstanceNucleicAcid.subunit.subunit
+                    this.Element_Subunit = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Subunit",                                                                                           // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.subunit",                                                                       // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.subunit",                                                                        // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 7. SubstanceNucleicAcid.subunit.sequence
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.sequence",                                                                      // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.sequence",                                                                       // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 8. SubstanceNucleicAcid.subunit.length
+                    this.Element_Length = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Length",                                                                                            // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.length",                                                                        // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.length",                                                                         // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 9. SubstanceNucleicAcid.subunit.sequenceAttachment
+                    this.Element_SequenceAttachment = new ElementDefinitionInfo                                                             // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_SequenceAttachment",                                                                                // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.sequenceAttachment",                                                            // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.sequenceAttachment",                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 10. SubstanceNucleicAcid.subunit.fivePrime
+                    this.Element_FivePrime = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_FivePrime",                                                                                         // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.fivePrime",                                                                     // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.fivePrime",                                                                      // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 11. SubstanceNucleicAcid.subunit.threePrime
+                    this.Element_ThreePrime = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_ThreePrime",                                                                                        // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.threePrime",                                                                    // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.threePrime",                                                                     // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 12. SubstanceNucleicAcid.subunit.linkage
+                    this.Element_Linkage = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Linkage",                                                                                           // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.linkage",                                                                       // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.linkage",                                                                        // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Linkage                                                                                                // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 17. SubstanceNucleicAcid.subunit.sugar
+                    this.Element_Sugar = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Sugar",                                                                                             // MakerGen.cs:238
+                        Path= "SubstanceNucleicAcid.subunit.sugar",                                                                         // MakerGen.cs:239
+                        Id = "SubstanceNucleicAcid.subunit.sugar",                                                                          // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Sugar                                                                                                  // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. SubstanceNucleicAcid.sequenceType
+        public ElementDefinitionInfo Element_SequenceType;                                                                                  // MakerGen.cs:219
+        // 2. SubstanceNucleicAcid.numberOfSubunits
+        public ElementDefinitionInfo Element_NumberOfSubunits;                                                                              // MakerGen.cs:219
+        // 3. SubstanceNucleicAcid.areaOfHybridisation
+        public ElementDefinitionInfo Element_AreaOfHybridisation;                                                                           // MakerGen.cs:219
+        // 4. SubstanceNucleicAcid.oligoNucleotideType
+        public ElementDefinitionInfo Element_OligoNucleotideType;                                                                           // MakerGen.cs:219
+        // 5. SubstanceNucleicAcid.subunit
+        public ElementDefinitionInfo Element_Subunit;                                                                                       // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "SubstanceNucleicAcid",                                                                                              // MakerGen.cs:395
+                ElementId = "SubstanceNucleicAcid"                                                                                          // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_SequenceType.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_NumberOfSubunits.Write(sDef);                                                                                           // MakerGen.cs:223
+            Element_AreaOfHybridisation.Write(sDef);                                                                                        // MakerGen.cs:223
+            Element_OligoNucleotideType.Write(sDef);                                                                                        // MakerGen.cs:223
+            Element_Subunit.Write(sDef);                                                                                                    // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_SubstanceNucleicAcid()                                                                                              // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. SubstanceNucleicAcid.sequenceType
-                this.Element_SequenceType = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_SequenceType",                                                                                          // MakerGen.cs:231
-                    Path= "SubstanceNucleicAcid.sequenceType",                                                                              // MakerGen.cs:232
-                    Id = "SubstanceNucleicAcid.sequenceType",                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_SequenceType = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_SequenceType",                                                                                          // MakerGen.cs:238
+                    Path= "SubstanceNucleicAcid.sequenceType",                                                                              // MakerGen.cs:239
+                    Id = "SubstanceNucleicAcid.sequenceType",                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. SubstanceNucleicAcid.numberOfSubunits
-                this.Element_NumberOfSubunits = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_NumberOfSubunits",                                                                                      // MakerGen.cs:231
-                    Path= "SubstanceNucleicAcid.numberOfSubunits",                                                                          // MakerGen.cs:232
-                    Id = "SubstanceNucleicAcid.numberOfSubunits",                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_NumberOfSubunits = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_NumberOfSubunits",                                                                                      // MakerGen.cs:238
+                    Path= "SubstanceNucleicAcid.numberOfSubunits",                                                                          // MakerGen.cs:239
+                    Id = "SubstanceNucleicAcid.numberOfSubunits",                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. SubstanceNucleicAcid.areaOfHybridisation
-                this.Element_AreaOfHybridisation = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_AreaOfHybridisation",                                                                                   // MakerGen.cs:231
-                    Path= "SubstanceNucleicAcid.areaOfHybridisation",                                                                       // MakerGen.cs:232
-                    Id = "SubstanceNucleicAcid.areaOfHybridisation",                                                                        // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_AreaOfHybridisation = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_AreaOfHybridisation",                                                                                   // MakerGen.cs:238
+                    Path= "SubstanceNucleicAcid.areaOfHybridisation",                                                                       // MakerGen.cs:239
+                    Id = "SubstanceNucleicAcid.areaOfHybridisation",                                                                        // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. SubstanceNucleicAcid.oligoNucleotideType
-                this.Element_OligoNucleotideType = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_OligoNucleotideType",                                                                                   // MakerGen.cs:231
-                    Path= "SubstanceNucleicAcid.oligoNucleotideType",                                                                       // MakerGen.cs:232
-                    Id = "SubstanceNucleicAcid.oligoNucleotideType",                                                                        // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_OligoNucleotideType = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_OligoNucleotideType",                                                                                   // MakerGen.cs:238
+                    Path= "SubstanceNucleicAcid.oligoNucleotideType",                                                                       // MakerGen.cs:239
+                    Id = "SubstanceNucleicAcid.oligoNucleotideType",                                                                        // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. SubstanceNucleicAcid.subunit
-                this.Element_Subunit = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Subunit",                                                                                               // MakerGen.cs:231
-                    Path= "SubstanceNucleicAcid.subunit",                                                                                   // MakerGen.cs:232
-                    Id = "SubstanceNucleicAcid.subunit",                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Subunit                                                                                                    // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "SubstanceNucleicAcid";                                                                                             // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstanceNucleicAcid";                                                      // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_Subunit = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Subunit",                                                                                               // MakerGen.cs:238
+                    Path= "SubstanceNucleicAcid.subunit",                                                                                   // MakerGen.cs:239
+                    Id = "SubstanceNucleicAcid.subunit",                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Subunit                                                                                                    // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "SubstanceNucleicAcid";                                                                                             // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstanceNucleicAcid";                                                      // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

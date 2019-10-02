@@ -14,12 +14,12 @@ namespace FhirKhit.Tools
         readonly HashSet<String> existingFiles = new HashSet<String>();
         readonly String outputDir;
 
-        public FileCleaner(String outputDir)
+        public FileCleaner(String outputDir, String fileFilter = "*.*")
         {
             this.outputDir = outputDir;
             if (Directory.Exists(outputDir) == true)
             {
-                foreach (String existingFile in Directory.GetFiles(outputDir, "*.xml"))
+                foreach (String existingFile in Directory.GetFiles(outputDir, fileFilter))
                     this.existingFiles.Add(existingFile);
             }
         }

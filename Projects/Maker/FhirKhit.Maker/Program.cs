@@ -6,8 +6,6 @@ namespace FhirKhit.Maker
 {
     class Program
     {
-        static MakerGen dfg;
-
         static Int32 Main(string[] args)
         {
             try
@@ -16,13 +14,15 @@ namespace FhirKhit.Maker
 
                 String outputDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses");
 
-                dfg = new MakerGen(outputDir);
-                dfg.StatusErrors += Dfg_StatusErrors;
-                dfg.StatusInfo += Dfg_StatusInfo;
-                dfg.StatusWarnings += Dfg_StatusWarnings;
+                using (MakerGen dfg = new MakerGen(outputDir))
+                {
+                    dfg.StatusErrors += Dfg_StatusErrors;
+                    dfg.StatusInfo += Dfg_StatusInfo;
+                    dfg.StatusWarnings += Dfg_StatusWarnings;
 
-                Int32 retVal = dfg.GenerateBaseClasses(outputDir);
-                return retVal;
+                    Int32 retVal = dfg.GenerateBaseClasses(outputDir);
+                    return retVal;
+                }
             }
             catch (Exception err)
             {

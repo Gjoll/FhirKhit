@@ -33,6 +33,10 @@ namespace FhirKhit.Maker
         const String ResourceNameSpace = "FhirKhit.Maker.Common.Resource";
         const String PrimitiveNameSpace = "FhirKhit.Maker.Common.Primitive";
 
+        FileCleaner complexDir;
+        FileCleaner primitiveDir;
+        FileCleaner resourceDir;
+
         String ComplexBase = $"{ComplexNameSpace}.ComplexBase";
         String PrimitiveBase = $"{PrimitiveNameSpace}.PrimitiveBase";
         String ResourceBase = $"{ResourceNameSpace}.ResourceBase";
@@ -179,8 +183,11 @@ namespace FhirKhit.Maker
                 .CloseBrace()
                 .CloseBrace()
                 ;
-
-            instanceEditor.Save(Path.Combine(PrimitiveGenPath, $"{instanceName}.cs"));
+            {
+                String path = Path.Combine(PrimitiveGenPath, $"{instanceName}.cs");
+                instanceEditor.Save(path);
+                this.primitiveDir.Mark(path);
+            }
         }
 
         void DefineClassFields(
@@ -445,13 +452,19 @@ namespace FhirKhit.Maker
                 .CloseBrace()
                 ;
 
+            String baseClass = ResourceBase;
+            if (String.IsNullOrEmpty(sDef.BaseDefinition) == false)
+            {
+                String name = this.ResourceName(sDef.BaseDefinition.LastUriPart());
+                baseClass = $"{ResourceNameSpace}.{name}";
+            }
             Int32 i = 0;
             DefineClass(classBlock,
                 sDef.Differential.Element.ToArray(),
                 ref i,
                 sDef.Differential.Element[0].Path,
                 instanceName,
-                ResourceBase,
+                baseClass,
                 out CodeBlockNested constructorBlock);
 
             constructorBlock
@@ -461,8 +474,11 @@ namespace FhirKhit.Maker
 
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
-
-            instanceEditor.Save(Path.Combine(this.ResourceGenPath, $"{instanceName}.cs"));
+            {
+                String path = Path.Combine(ResourceGenPath, $"{instanceName}.cs");
+                instanceEditor.Save(path);
+                this.resourceDir.Mark(path);
+            }
         }
 
         void ProcessFhirComplex(SDefInfo sDefInfo)
@@ -511,7 +527,11 @@ namespace FhirKhit.Maker
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
 
-            instanceEditor.Save(Path.Combine(this.ComplexGenPath, $"{instanceName}.cs"));
+            {
+                String path = Path.Combine(ComplexGenPath, $"{instanceName}.cs");
+                instanceEditor.Save(path);
+                this.complexDir.Mark(path);
+            }
         }
 
         void ProcessFhirElements()
@@ -553,12 +573,6 @@ namespace FhirKhit.Maker
             }
         }
 
-        void InitDir(String dir)
-        {
-            DirHelper.CreateDirPath(dir);
-            DirHelper.CleanDir(dir);
-        }
-
         public Int32 GenerateBaseClasses(String outputDir)
         {
             const String fcn = "GenerateBaseClasses";
@@ -567,9 +581,9 @@ namespace FhirKhit.Maker
             {
                 this.ConversionInfo(this.GetType().Name, fcn, "Starting generation of Fhir MAKER classes");
                 this.outputDir = outputDir;
-                InitDir(this.ComplexGenPath);
-                InitDir(this.PrimitiveGenPath);
-                InitDir(this.ResourceGenPath);
+                this.complexDir = new FileCleaner(this.ComplexGenPath);
+                this.primitiveDir = new FileCleaner(this.PrimitiveGenPath);
+                this.resourceDir = new FileCleaner(this.ResourceGenPath);
 
                 //this.sDefs.StoreFhirElements();
 
@@ -592,6 +606,9 @@ namespace FhirKhit.Maker
 
         public void Dispose()
         {
+            this.complexDir.Dispose();
+            this.primitiveDir.Dispose();
+            this.resourceDir.Dispose();
         }
 
     }

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "TestScript",
@@ -1679,2339 +1679,2339 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'TestScript'
     /// </summary>
     // 0. TestScript
-    public class Resource_TestScript : FhirKhit.Maker.Common.Resource.ResourceBase                                                          // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_TestScript : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                               // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 16. TestScript.origin
-        public class Type_Origin : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 17. TestScript.origin.index
-            public ElementDefinitionInfo Element_Index;                                                                                     // MakerGen.cs:212
-            // 18. TestScript.origin.profile
-            public ElementDefinitionInfo Element_Profile;                                                                                   // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.origin",                                                                                             // MakerGen.cs:388
-                    ElementId = "TestScript.origin"                                                                                         // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Index.Write(sDef);                                                                                                  // MakerGen.cs:216
-                Element_Profile.Write(sDef);                                                                                                // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Origin()                                                                                                            // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 17. TestScript.origin.index
-                    this.Element_Index = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Index",                                                                                             // MakerGen.cs:231
-                        Path= "TestScript.origin.index",                                                                                    // MakerGen.cs:232
-                        Id = "TestScript.origin.index",                                                                                     // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 18. TestScript.origin.profile
-                    this.Element_Profile = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Profile",                                                                                           // MakerGen.cs:231
-                        Path= "TestScript.origin.profile",                                                                                  // MakerGen.cs:232
-                        Id = "TestScript.origin.profile",                                                                                   // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 19. TestScript.destination
-        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 20. TestScript.destination.index
-            public ElementDefinitionInfo Element_Index;                                                                                     // MakerGen.cs:212
-            // 21. TestScript.destination.profile
-            public ElementDefinitionInfo Element_Profile;                                                                                   // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.destination",                                                                                        // MakerGen.cs:388
-                    ElementId = "TestScript.destination"                                                                                    // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Index.Write(sDef);                                                                                                  // MakerGen.cs:216
-                Element_Profile.Write(sDef);                                                                                                // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Destination()                                                                                                       // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 20. TestScript.destination.index
-                    this.Element_Index = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Index",                                                                                             // MakerGen.cs:231
-                        Path= "TestScript.destination.index",                                                                               // MakerGen.cs:232
-                        Id = "TestScript.destination.index",                                                                                // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 21. TestScript.destination.profile
-                    this.Element_Profile = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Profile",                                                                                           // MakerGen.cs:231
-                        Path= "TestScript.destination.profile",                                                                             // MakerGen.cs:232
-                        Id = "TestScript.destination.profile",                                                                              // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 22. TestScript.metadata
-        public class Type_Metadata : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 23. TestScript.metadata.link
-            public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 24. TestScript.metadata.link.url
-                public ElementDefinitionInfo Element_Url;                                                                                   // MakerGen.cs:212
-                // 25. TestScript.metadata.link.description
-                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "TestScript.metadata.link",                                                                                  // MakerGen.cs:388
-                        ElementId = "TestScript.metadata.link"                                                                              // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Url.Write(sDef);                                                                                                // MakerGen.cs:216
-                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Link()                                                                                                          // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 24. TestScript.metadata.link.url
-                        this.Element_Url = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Url",                                                                                           // MakerGen.cs:231
-                            Path= "TestScript.metadata.link.url",                                                                           // MakerGen.cs:232
-                            Id = "TestScript.metadata.link.url",                                                                            // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 25. TestScript.metadata.link.description
-                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Description",                                                                                   // MakerGen.cs:231
-                            Path= "TestScript.metadata.link.description",                                                                   // MakerGen.cs:232
-                            Id = "TestScript.metadata.link.description",                                                                    // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 26. TestScript.metadata.capability
-            public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 27. TestScript.metadata.capability.required
-                public ElementDefinitionInfo Element_Required;                                                                              // MakerGen.cs:212
-                // 28. TestScript.metadata.capability.validated
-                public ElementDefinitionInfo Element_Validated;                                                                             // MakerGen.cs:212
-                // 29. TestScript.metadata.capability.description
-                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:212
-                // 30. TestScript.metadata.capability.origin
-                public ElementDefinitionInfo Element_Origin;                                                                                // MakerGen.cs:212
-                // 31. TestScript.metadata.capability.destination
-                public ElementDefinitionInfo Element_Destination;                                                                           // MakerGen.cs:212
-                // 32. TestScript.metadata.capability.link
-                public ElementDefinitionInfo Element_Link;                                                                                  // MakerGen.cs:212
-                // 33. TestScript.metadata.capability.capabilities
-                public ElementDefinitionInfo Element_Capabilities;                                                                          // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "TestScript.metadata.capability",                                                                            // MakerGen.cs:388
-                        ElementId = "TestScript.metadata.capability"                                                                        // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Required.Write(sDef);                                                                                           // MakerGen.cs:216
-                    Element_Validated.Write(sDef);                                                                                          // MakerGen.cs:216
-                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:216
-                    Element_Origin.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_Destination.Write(sDef);                                                                                        // MakerGen.cs:216
-                    Element_Link.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Capabilities.Write(sDef);                                                                                       // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Capability()                                                                                                    // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 27. TestScript.metadata.capability.required
-                        this.Element_Required = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Required",                                                                                      // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.required",                                                                // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.required",                                                                 // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 28. TestScript.metadata.capability.validated
-                        this.Element_Validated = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Validated",                                                                                     // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.validated",                                                               // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.validated",                                                                // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 29. TestScript.metadata.capability.description
-                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Description",                                                                                   // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.description",                                                             // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.description",                                                              // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 30. TestScript.metadata.capability.origin
-                        this.Element_Origin = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Origin",                                                                                        // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.origin",                                                                  // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.origin",                                                                   // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 31. TestScript.metadata.capability.destination
-                        this.Element_Destination = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Destination",                                                                                   // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.destination",                                                             // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.destination",                                                              // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 32. TestScript.metadata.capability.link
-                        this.Element_Link = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Link",                                                                                          // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.link",                                                                    // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.link",                                                                     // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 33. TestScript.metadata.capability.capabilities
-                        this.Element_Capabilities = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Capabilities",                                                                                  // MakerGen.cs:231
-                            Path= "TestScript.metadata.capability.capabilities",                                                            // MakerGen.cs:232
-                            Id = "TestScript.metadata.capability.capabilities",                                                             // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                    TargetProfile = new String[]                                                                            // MakerGen.cs:299
-                                    {                                                                                                       // CodeEditorExtensions.cs:28
-                                        "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"                                       // MakerGen.cs:299
-                                    }                                                                                                       // CodeEditorExtensions.cs:34
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 23. TestScript.metadata.link
-            public ElementDefinitionInfo Element_Link;                                                                                      // MakerGen.cs:212
-            // 26. TestScript.metadata.capability
-            public ElementDefinitionInfo Element_Capability;                                                                                // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.metadata",                                                                                           // MakerGen.cs:388
-                    ElementId = "TestScript.metadata"                                                                                       // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Link.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_Capability.Write(sDef);                                                                                             // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Metadata()                                                                                                          // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 23. TestScript.metadata.link
-                    this.Element_Link = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Link",                                                                                              // MakerGen.cs:231
-                        Path= "TestScript.metadata.link",                                                                                   // MakerGen.cs:232
-                        Id = "TestScript.metadata.link",                                                                                    // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Link                                                                                                   // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 26. TestScript.metadata.capability
-                    this.Element_Capability = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Capability",                                                                                        // MakerGen.cs:231
-                        Path= "TestScript.metadata.capability",                                                                             // MakerGen.cs:232
-                        Id = "TestScript.metadata.capability",                                                                              // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Capability                                                                                             // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 34. TestScript.fixture
-        public class Type_Fixture : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 35. TestScript.fixture.autocreate
-            public ElementDefinitionInfo Element_Autocreate;                                                                                // MakerGen.cs:212
-            // 36. TestScript.fixture.autodelete
-            public ElementDefinitionInfo Element_Autodelete;                                                                                // MakerGen.cs:212
-            // 37. TestScript.fixture.resource
-            public ElementDefinitionInfo Element_Resource;                                                                                  // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.fixture",                                                                                            // MakerGen.cs:388
-                    ElementId = "TestScript.fixture"                                                                                        // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Autocreate.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_Autodelete.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_Resource.Write(sDef);                                                                                               // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Fixture()                                                                                                           // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 35. TestScript.fixture.autocreate
-                    this.Element_Autocreate = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Autocreate",                                                                                        // MakerGen.cs:231
-                        Path= "TestScript.fixture.autocreate",                                                                              // MakerGen.cs:232
-                        Id = "TestScript.fixture.autocreate",                                                                               // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 36. TestScript.fixture.autodelete
-                    this.Element_Autodelete = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Autodelete",                                                                                        // MakerGen.cs:231
-                        Path= "TestScript.fixture.autodelete",                                                                              // MakerGen.cs:232
-                        Id = "TestScript.fixture.autodelete",                                                                               // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 37. TestScript.fixture.resource
-                    this.Element_Resource = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Resource",                                                                                          // MakerGen.cs:231
-                        Path= "TestScript.fixture.resource",                                                                                // MakerGen.cs:232
-                        Id = "TestScript.fixture.resource",                                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
-                            {                                                                                                               // MakerGen.cs:340
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:342
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:343
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 39. TestScript.variable
-        public class Type_Variable : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 40. TestScript.variable.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:212
-            // 41. TestScript.variable.defaultValue
-            public ElementDefinitionInfo Element_DefaultValue;                                                                              // MakerGen.cs:212
-            // 42. TestScript.variable.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:212
-            // 43. TestScript.variable.expression
-            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:212
-            // 44. TestScript.variable.headerField
-            public ElementDefinitionInfo Element_HeaderField;                                                                               // MakerGen.cs:212
-            // 45. TestScript.variable.hint
-            public ElementDefinitionInfo Element_Hint;                                                                                      // MakerGen.cs:212
-            // 46. TestScript.variable.path
-            public ElementDefinitionInfo Element_Path;                                                                                      // MakerGen.cs:212
-            // 47. TestScript.variable.sourceId
-            public ElementDefinitionInfo Element_SourceId;                                                                                  // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.variable",                                                                                           // MakerGen.cs:388
-                    ElementId = "TestScript.variable"                                                                                       // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_DefaultValue.Write(sDef);                                                                                           // MakerGen.cs:216
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:216
-                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_HeaderField.Write(sDef);                                                                                            // MakerGen.cs:216
-                Element_Hint.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_Path.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_SourceId.Write(sDef);                                                                                               // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Variable()                                                                                                          // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 40. TestScript.variable.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:231
-                        Path= "TestScript.variable.name",                                                                                   // MakerGen.cs:232
-                        Id = "TestScript.variable.name",                                                                                    // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 41. TestScript.variable.defaultValue
-                    this.Element_DefaultValue = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_DefaultValue",                                                                                      // MakerGen.cs:231
-                        Path= "TestScript.variable.defaultValue",                                                                           // MakerGen.cs:232
-                        Id = "TestScript.variable.defaultValue",                                                                            // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 42. TestScript.variable.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:231
-                        Path= "TestScript.variable.description",                                                                            // MakerGen.cs:232
-                        Id = "TestScript.variable.description",                                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 43. TestScript.variable.expression
-                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Expression",                                                                                        // MakerGen.cs:231
-                        Path= "TestScript.variable.expression",                                                                             // MakerGen.cs:232
-                        Id = "TestScript.variable.expression",                                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 44. TestScript.variable.headerField
-                    this.Element_HeaderField = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_HeaderField",                                                                                       // MakerGen.cs:231
-                        Path= "TestScript.variable.headerField",                                                                            // MakerGen.cs:232
-                        Id = "TestScript.variable.headerField",                                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 45. TestScript.variable.hint
-                    this.Element_Hint = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Hint",                                                                                              // MakerGen.cs:231
-                        Path= "TestScript.variable.hint",                                                                                   // MakerGen.cs:232
-                        Id = "TestScript.variable.hint",                                                                                    // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 46. TestScript.variable.path
-                    this.Element_Path = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Path",                                                                                              // MakerGen.cs:231
-                        Path= "TestScript.variable.path",                                                                                   // MakerGen.cs:232
-                        Id = "TestScript.variable.path",                                                                                    // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 47. TestScript.variable.sourceId
-                    this.Element_SourceId = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_SourceId",                                                                                          // MakerGen.cs:231
-                        Path= "TestScript.variable.sourceId",                                                                               // MakerGen.cs:232
-                        Id = "TestScript.variable.sourceId",                                                                                // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 48. TestScript.setup
-        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 49. TestScript.setup.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 50. TestScript.setup.action.operation
-                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:376
-                {                                                                                                                           // MakerGen.cs:377
-                    // 62. TestScript.setup.action.operation.requestHeader
-                    public class Type_RequestHeader : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        // 63. TestScript.setup.action.operation.requestHeader.field
-                        public ElementDefinitionInfo Element_Field;                                                                         // MakerGen.cs:212
-                        // 64. TestScript.setup.action.operation.requestHeader.value
-                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:383
-                        {                                                                                                                   // MakerGen.cs:384
-                            base.Write(sDef);                                                                                               // MakerGen.cs:385
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:386
-                            {                                                                                                               // MakerGen.cs:387
-                                Path = "TestScript.setup.action.operation.requestHeader",                                                   // MakerGen.cs:388
-                                ElementId = "TestScript.setup.action.operation.requestHeader"                                               // MakerGen.cs:389
-                            });                                                                                                             // MakerGen.cs:390
-                            Element_Field.Write(sDef);                                                                                      // MakerGen.cs:216
-                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:216
-                        }                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                        public Type_RequestHeader()                                                                                         // MakerGen.cs:395
-                        {                                                                                                                   // MakerGen.cs:396
-                            {                                                                                                               // MakerGen.cs:227
-                                // 63. TestScript.setup.action.operation.requestHeader.field
-                                this.Element_Field = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Field",                                                                                 // MakerGen.cs:231
-                                    Path= "TestScript.setup.action.operation.requestHeader.field",                                          // MakerGen.cs:232
-                                    Id = "TestScript.setup.action.operation.requestHeader.field",                                           // MakerGen.cs:233
-                                    Min = 1,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:296
-                                        {                                                                                                   // MakerGen.cs:297
-                                        }                                                                                                   // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                            {                                                                                                               // MakerGen.cs:227
-                                // 64. TestScript.setup.action.operation.requestHeader.value
-                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Value",                                                                                 // MakerGen.cs:231
-                                    Path= "TestScript.setup.action.operation.requestHeader.value",                                          // MakerGen.cs:232
-                                    Id = "TestScript.setup.action.operation.requestHeader.value",                                           // MakerGen.cs:233
-                                    Min = 1,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:296
-                                        {                                                                                                   // MakerGen.cs:297
-                                        }                                                                                                   // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                        }                                                                                                                   // MakerGen.cs:398
-                    }                                                                                                                       // MakerGen.cs:400
-                    // 51. TestScript.setup.action.operation.type
-                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:212
-                    // 52. TestScript.setup.action.operation.resource
-                    public ElementDefinitionInfo Element_Resource;                                                                          // MakerGen.cs:212
-                    // 53. TestScript.setup.action.operation.label
-                    public ElementDefinitionInfo Element_Label;                                                                             // MakerGen.cs:212
-                    // 54. TestScript.setup.action.operation.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:212
-                    // 55. TestScript.setup.action.operation.accept
-                    public ElementDefinitionInfo Element_Accept;                                                                            // MakerGen.cs:212
-                    // 56. TestScript.setup.action.operation.contentType
-                    public ElementDefinitionInfo Element_ContentType;                                                                       // MakerGen.cs:212
-                    // 57. TestScript.setup.action.operation.destination
-                    public ElementDefinitionInfo Element_Destination;                                                                       // MakerGen.cs:212
-                    // 58. TestScript.setup.action.operation.encodeRequestUrl
-                    public ElementDefinitionInfo Element_EncodeRequestUrl;                                                                  // MakerGen.cs:212
-                    // 59. TestScript.setup.action.operation.method
-                    public ElementDefinitionInfo Element_Method;                                                                            // MakerGen.cs:212
-                    // 60. TestScript.setup.action.operation.origin
-                    public ElementDefinitionInfo Element_Origin;                                                                            // MakerGen.cs:212
-                    // 61. TestScript.setup.action.operation.params
-                    public ElementDefinitionInfo Element_Params;                                                                            // MakerGen.cs:212
-                    // 62. TestScript.setup.action.operation.requestHeader
-                    public ElementDefinitionInfo Element_RequestHeader;                                                                     // MakerGen.cs:212
-                    // 65. TestScript.setup.action.operation.requestId
-                    public ElementDefinitionInfo Element_RequestId;                                                                         // MakerGen.cs:212
-                    // 66. TestScript.setup.action.operation.responseId
-                    public ElementDefinitionInfo Element_ResponseId;                                                                        // MakerGen.cs:212
-                    // 67. TestScript.setup.action.operation.sourceId
-                    public ElementDefinitionInfo Element_SourceId;                                                                          // MakerGen.cs:212
-                    // 68. TestScript.setup.action.operation.targetId
-                    public ElementDefinitionInfo Element_TargetId;                                                                          // MakerGen.cs:212
-                    // 69. TestScript.setup.action.operation.url
-                    public ElementDefinitionInfo Element_Url;                                                                               // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
-                            Path = "TestScript.setup.action.operation",                                                                     // MakerGen.cs:388
-                            ElementId = "TestScript.setup.action.operation"                                                                 // MakerGen.cs:389
-                        });                                                                                                                 // MakerGen.cs:390
-                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:216
-                        Element_Resource.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_Label.Write(sDef);                                                                                          // MakerGen.cs:216
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:216
-                        Element_Accept.Write(sDef);                                                                                         // MakerGen.cs:216
-                        Element_ContentType.Write(sDef);                                                                                    // MakerGen.cs:216
-                        Element_Destination.Write(sDef);                                                                                    // MakerGen.cs:216
-                        Element_EncodeRequestUrl.Write(sDef);                                                                               // MakerGen.cs:216
-                        Element_Method.Write(sDef);                                                                                         // MakerGen.cs:216
-                        Element_Origin.Write(sDef);                                                                                         // MakerGen.cs:216
-                        Element_Params.Write(sDef);                                                                                         // MakerGen.cs:216
-                        Element_RequestHeader.Write(sDef);                                                                                  // MakerGen.cs:216
-                        Element_RequestId.Write(sDef);                                                                                      // MakerGen.cs:216
-                        Element_ResponseId.Write(sDef);                                                                                     // MakerGen.cs:216
-                        Element_SourceId.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_TargetId.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_Url.Write(sDef);                                                                                            // MakerGen.cs:216
-                    }                                                                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                    public Type_Operation()                                                                                                 // MakerGen.cs:395
-                    {                                                                                                                       // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 51. TestScript.setup.action.operation.type
-                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.type",                                                             // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.type",                                                              // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Complex.Type_Coding                                                           // MakerGen.cs:311
-                                    {                                                                                                       // MakerGen.cs:312
-                                    }                                                                                                       // MakerGen.cs:315
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 52. TestScript.setup.action.operation.resource
-                            this.Element_Resource = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Resource",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.resource",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.resource",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 53. TestScript.setup.action.operation.label
-                            this.Element_Label = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Label",                                                                                     // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.label",                                                            // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.label",                                                             // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 54. TestScript.setup.action.operation.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Description",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.description",                                                      // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.description",                                                       // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 55. TestScript.setup.action.operation.accept
-                            this.Element_Accept = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Accept",                                                                                    // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.accept",                                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.accept",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 56. TestScript.setup.action.operation.contentType
-                            this.Element_ContentType = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_ContentType",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.contentType",                                                      // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.contentType",                                                       // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 57. TestScript.setup.action.operation.destination
-                            this.Element_Destination = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Destination",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.destination",                                                      // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.destination",                                                       // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                   // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 58. TestScript.setup.action.operation.encodeRequestUrl
-                            this.Element_EncodeRequestUrl = new ElementDefinitionInfo                                                       // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_EncodeRequestUrl",                                                                          // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.encodeRequestUrl",                                                 // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.encodeRequestUrl",                                                  // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 59. TestScript.setup.action.operation.method
-                            this.Element_Method = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Method",                                                                                    // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.method",                                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.method",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 60. TestScript.setup.action.operation.origin
-                            this.Element_Origin = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Origin",                                                                                    // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.origin",                                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.origin",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                   // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 61. TestScript.setup.action.operation.params
-                            this.Element_Params = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Params",                                                                                    // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.params",                                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.params",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 62. TestScript.setup.action.operation.requestHeader
-                            this.Element_RequestHeader = new ElementDefinitionInfo                                                          // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_RequestHeader",                                                                             // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.requestHeader",                                                    // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.requestHeader",                                                     // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = -1,                                                                                                   // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new Type_RequestHeader                                                                                  // MakerGen.cs:255
-                                    {                                                                                                       // MakerGen.cs:256
-                                    }                                                                                                       // MakerGen.cs:257
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 65. TestScript.setup.action.operation.requestId
-                            this.Element_RequestId = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_RequestId",                                                                                 // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.requestId",                                                        // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.requestId",                                                         // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 66. TestScript.setup.action.operation.responseId
-                            this.Element_ResponseId = new ElementDefinitionInfo                                                             // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_ResponseId",                                                                                // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.responseId",                                                       // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.responseId",                                                        // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 67. TestScript.setup.action.operation.sourceId
-                            this.Element_SourceId = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_SourceId",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.sourceId",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.sourceId",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 68. TestScript.setup.action.operation.targetId
-                            this.Element_TargetId = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_TargetId",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.targetId",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.targetId",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 69. TestScript.setup.action.operation.url
-                            this.Element_Url = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Url",                                                                                       // MakerGen.cs:231
-                                Path= "TestScript.setup.action.operation.url",                                                              // MakerGen.cs:232
-                                Id = "TestScript.setup.action.operation.url",                                                               // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                    }                                                                                                                       // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:400
-                // 70. TestScript.setup.action.assert
-                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
-                {                                                                                                                           // MakerGen.cs:377
-                    // 71. TestScript.setup.action.assert.label
-                    public ElementDefinitionInfo Element_Label;                                                                             // MakerGen.cs:212
-                    // 72. TestScript.setup.action.assert.description
-                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:212
-                    // 73. TestScript.setup.action.assert.direction
-                    public ElementDefinitionInfo Element_Direction;                                                                         // MakerGen.cs:212
-                    // 74. TestScript.setup.action.assert.compareToSourceId
-                    public ElementDefinitionInfo Element_CompareToSourceId;                                                                 // MakerGen.cs:212
-                    // 75. TestScript.setup.action.assert.compareToSourceExpression
-                    public ElementDefinitionInfo Element_CompareToSourceExpression;                                                         // MakerGen.cs:212
-                    // 76. TestScript.setup.action.assert.compareToSourcePath
-                    public ElementDefinitionInfo Element_CompareToSourcePath;                                                               // MakerGen.cs:212
-                    // 77. TestScript.setup.action.assert.contentType
-                    public ElementDefinitionInfo Element_ContentType;                                                                       // MakerGen.cs:212
-                    // 78. TestScript.setup.action.assert.expression
-                    public ElementDefinitionInfo Element_Expression;                                                                        // MakerGen.cs:212
-                    // 79. TestScript.setup.action.assert.headerField
-                    public ElementDefinitionInfo Element_HeaderField;                                                                       // MakerGen.cs:212
-                    // 80. TestScript.setup.action.assert.minimumId
-                    public ElementDefinitionInfo Element_MinimumId;                                                                         // MakerGen.cs:212
-                    // 81. TestScript.setup.action.assert.navigationLinks
-                    public ElementDefinitionInfo Element_NavigationLinks;                                                                   // MakerGen.cs:212
-                    // 82. TestScript.setup.action.assert.operator
-                    public ElementDefinitionInfo Element_Operator;                                                                          // MakerGen.cs:212
-                    // 83. TestScript.setup.action.assert.path
-                    public ElementDefinitionInfo Element_Path;                                                                              // MakerGen.cs:212
-                    // 84. TestScript.setup.action.assert.requestMethod
-                    public ElementDefinitionInfo Element_RequestMethod;                                                                     // MakerGen.cs:212
-                    // 85. TestScript.setup.action.assert.requestURL
-                    public ElementDefinitionInfo Element_RequestURL;                                                                        // MakerGen.cs:212
-                    // 86. TestScript.setup.action.assert.resource
-                    public ElementDefinitionInfo Element_Resource;                                                                          // MakerGen.cs:212
-                    // 87. TestScript.setup.action.assert.response
-                    public ElementDefinitionInfo Element_Response;                                                                          // MakerGen.cs:212
-                    // 88. TestScript.setup.action.assert.responseCode
-                    public ElementDefinitionInfo Element_ResponseCode;                                                                      // MakerGen.cs:212
-                    // 89. TestScript.setup.action.assert.sourceId
-                    public ElementDefinitionInfo Element_SourceId;                                                                          // MakerGen.cs:212
-                    // 90. TestScript.setup.action.assert.validateProfileId
-                    public ElementDefinitionInfo Element_ValidateProfileId;                                                                 // MakerGen.cs:212
-                    // 91. TestScript.setup.action.assert.value
-                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:212
-                    // 92. TestScript.setup.action.assert.warningOnly
-                    public ElementDefinitionInfo Element_WarningOnly;                                                                       // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
-                            Path = "TestScript.setup.action.assert",                                                                        // MakerGen.cs:388
-                            ElementId = "TestScript.setup.action.assert"                                                                    // MakerGen.cs:389
-                        });                                                                                                                 // MakerGen.cs:390
-                        Element_Label.Write(sDef);                                                                                          // MakerGen.cs:216
-                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:216
-                        Element_Direction.Write(sDef);                                                                                      // MakerGen.cs:216
-                        Element_CompareToSourceId.Write(sDef);                                                                              // MakerGen.cs:216
-                        Element_CompareToSourceExpression.Write(sDef);                                                                      // MakerGen.cs:216
-                        Element_CompareToSourcePath.Write(sDef);                                                                            // MakerGen.cs:216
-                        Element_ContentType.Write(sDef);                                                                                    // MakerGen.cs:216
-                        Element_Expression.Write(sDef);                                                                                     // MakerGen.cs:216
-                        Element_HeaderField.Write(sDef);                                                                                    // MakerGen.cs:216
-                        Element_MinimumId.Write(sDef);                                                                                      // MakerGen.cs:216
-                        Element_NavigationLinks.Write(sDef);                                                                                // MakerGen.cs:216
-                        Element_Operator.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_Path.Write(sDef);                                                                                           // MakerGen.cs:216
-                        Element_RequestMethod.Write(sDef);                                                                                  // MakerGen.cs:216
-                        Element_RequestURL.Write(sDef);                                                                                     // MakerGen.cs:216
-                        Element_Resource.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_Response.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_ResponseCode.Write(sDef);                                                                                   // MakerGen.cs:216
-                        Element_SourceId.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_ValidateProfileId.Write(sDef);                                                                              // MakerGen.cs:216
-                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:216
-                        Element_WarningOnly.Write(sDef);                                                                                    // MakerGen.cs:216
-                    }                                                                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                    public Type_Assert()                                                                                                    // MakerGen.cs:395
-                    {                                                                                                                       // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 71. TestScript.setup.action.assert.label
-                            this.Element_Label = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Label",                                                                                     // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.label",                                                               // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.label",                                                                // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 72. TestScript.setup.action.assert.description
-                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Description",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.description",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.description",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 73. TestScript.setup.action.assert.direction
-                            this.Element_Direction = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Direction",                                                                                 // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.direction",                                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.direction",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 74. TestScript.setup.action.assert.compareToSourceId
-                            this.Element_CompareToSourceId = new ElementDefinitionInfo                                                      // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_CompareToSourceId",                                                                         // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.compareToSourceId",                                                   // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.compareToSourceId",                                                    // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 75. TestScript.setup.action.assert.compareToSourceExpression
-                            this.Element_CompareToSourceExpression = new ElementDefinitionInfo                                              // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_CompareToSourceExpression",                                                                 // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.compareToSourceExpression",                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.compareToSourceExpression",                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 76. TestScript.setup.action.assert.compareToSourcePath
-                            this.Element_CompareToSourcePath = new ElementDefinitionInfo                                                    // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_CompareToSourcePath",                                                                       // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.compareToSourcePath",                                                 // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.compareToSourcePath",                                                  // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 77. TestScript.setup.action.assert.contentType
-                            this.Element_ContentType = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_ContentType",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.contentType",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.contentType",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 78. TestScript.setup.action.assert.expression
-                            this.Element_Expression = new ElementDefinitionInfo                                                             // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Expression",                                                                                // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.expression",                                                          // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.expression",                                                           // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 79. TestScript.setup.action.assert.headerField
-                            this.Element_HeaderField = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_HeaderField",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.headerField",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.headerField",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 80. TestScript.setup.action.assert.minimumId
-                            this.Element_MinimumId = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_MinimumId",                                                                                 // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.minimumId",                                                           // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.minimumId",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 81. TestScript.setup.action.assert.navigationLinks
-                            this.Element_NavigationLinks = new ElementDefinitionInfo                                                        // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_NavigationLinks",                                                                           // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.navigationLinks",                                                     // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.navigationLinks",                                                      // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 82. TestScript.setup.action.assert.operator
-                            this.Element_Operator = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Operator",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.operator",                                                            // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.operator",                                                             // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 83. TestScript.setup.action.assert.path
-                            this.Element_Path = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Path",                                                                                      // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.path",                                                                // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.path",                                                                 // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 84. TestScript.setup.action.assert.requestMethod
-                            this.Element_RequestMethod = new ElementDefinitionInfo                                                          // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_RequestMethod",                                                                             // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.requestMethod",                                                       // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.requestMethod",                                                        // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 85. TestScript.setup.action.assert.requestURL
-                            this.Element_RequestURL = new ElementDefinitionInfo                                                             // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_RequestURL",                                                                                // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.requestURL",                                                          // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.requestURL",                                                           // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 86. TestScript.setup.action.assert.resource
-                            this.Element_Resource = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Resource",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.resource",                                                            // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.resource",                                                             // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 87. TestScript.setup.action.assert.response
-                            this.Element_Response = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Response",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.response",                                                            // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.response",                                                             // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 88. TestScript.setup.action.assert.responseCode
-                            this.Element_ResponseCode = new ElementDefinitionInfo                                                           // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_ResponseCode",                                                                              // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.responseCode",                                                        // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.responseCode",                                                         // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 89. TestScript.setup.action.assert.sourceId
-                            this.Element_SourceId = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_SourceId",                                                                                  // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.sourceId",                                                            // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.sourceId",                                                             // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 90. TestScript.setup.action.assert.validateProfileId
-                            this.Element_ValidateProfileId = new ElementDefinitionInfo                                                      // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_ValidateProfileId",                                                                         // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.validateProfileId",                                                   // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.validateProfileId",                                                    // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 91. TestScript.setup.action.assert.value
-                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Value",                                                                                     // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.value",                                                               // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.value",                                                                // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 92. TestScript.setup.action.assert.warningOnly
-                            this.Element_WarningOnly = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_WarningOnly",                                                                               // MakerGen.cs:231
-                                Path= "TestScript.setup.action.assert.warningOnly",                                                         // MakerGen.cs:232
-                                Id = "TestScript.setup.action.assert.warningOnly",                                                          // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                    }                                                                                                                       // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:400
-                // 50. TestScript.setup.action.operation
-                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:212
-                // 70. TestScript.setup.action.assert
-                public ElementDefinitionInfo Element_Assert;                                                                                // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "TestScript.setup.action",                                                                                   // MakerGen.cs:388
-                        ElementId = "TestScript.setup.action"                                                                               // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:216
-                    Element_Assert.Write(sDef);                                                                                             // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Action()                                                                                                        // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 50. TestScript.setup.action.operation
-                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Operation",                                                                                     // MakerGen.cs:231
-                            Path= "TestScript.setup.action.operation",                                                                      // MakerGen.cs:232
-                            Id = "TestScript.setup.action.operation",                                                                       // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new Type_Operation                                                                                          // MakerGen.cs:255
-                                {                                                                                                           // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:257
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 70. TestScript.setup.action.assert
-                        this.Element_Assert = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Assert",                                                                                        // MakerGen.cs:231
-                            Path= "TestScript.setup.action.assert",                                                                         // MakerGen.cs:232
-                            Id = "TestScript.setup.action.assert",                                                                          // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new Type_Assert                                                                                             // MakerGen.cs:255
-                                {                                                                                                           // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:257
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 49. TestScript.setup.action
-            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.setup",                                                                                              // MakerGen.cs:388
-                    ElementId = "TestScript.setup"                                                                                          // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Setup()                                                                                                             // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 49. TestScript.setup.action
-                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Action",                                                                                            // MakerGen.cs:231
-                        Path= "TestScript.setup.action",                                                                                    // MakerGen.cs:232
-                        Id = "TestScript.setup.action",                                                                                     // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Action                                                                                                 // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 93. TestScript.test
-        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 96. TestScript.test.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 97. TestScript.test.action.operation
-                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:212
-                // 98. TestScript.test.action.assert
-                public ElementDefinitionInfo Element_Assert;                                                                                // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "TestScript.test.action",                                                                                    // MakerGen.cs:388
-                        ElementId = "TestScript.test.action"                                                                                // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:216
-                    Element_Assert.Write(sDef);                                                                                             // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Action()                                                                                                        // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 97. TestScript.test.action.operation
-                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Operation",                                                                                     // MakerGen.cs:231
-                            Path= "TestScript.test.action.operation",                                                                       // MakerGen.cs:232
-                            Id = "TestScript.test.action.operation",                                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 98. TestScript.test.action.assert
-                        this.Element_Assert = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Assert",                                                                                        // MakerGen.cs:231
-                            Path= "TestScript.test.action.assert",                                                                          // MakerGen.cs:232
-                            Id = "TestScript.test.action.assert",                                                                           // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 94. TestScript.test.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:212
-            // 95. TestScript.test.description
-            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:212
-            // 96. TestScript.test.action
-            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.test",                                                                                               // MakerGen.cs:388
-                    ElementId = "TestScript.test"                                                                                           // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:216
-                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Test()                                                                                                              // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 94. TestScript.test.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:231
-                        Path= "TestScript.test.name",                                                                                       // MakerGen.cs:232
-                        Id = "TestScript.test.name",                                                                                        // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 95. TestScript.test.description
-                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Description",                                                                                       // MakerGen.cs:231
-                        Path= "TestScript.test.description",                                                                                // MakerGen.cs:232
-                        Id = "TestScript.test.description",                                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 96. TestScript.test.action
-                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Action",                                                                                            // MakerGen.cs:231
-                        Path= "TestScript.test.action",                                                                                     // MakerGen.cs:232
-                        Id = "TestScript.test.action",                                                                                      // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Action                                                                                                 // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 99. TestScript.teardown
-        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 100. TestScript.teardown.action
-            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 101. TestScript.teardown.action.operation
-                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "TestScript.teardown.action",                                                                                // MakerGen.cs:388
-                        ElementId = "TestScript.teardown.action"                                                                            // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Action()                                                                                                        // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 101. TestScript.teardown.action.operation
-                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Operation",                                                                                     // MakerGen.cs:231
-                            Path= "TestScript.teardown.action.operation",                                                                   // MakerGen.cs:232
-                            Id = "TestScript.teardown.action.operation",                                                                    // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 100. TestScript.teardown.action
-            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "TestScript.teardown",                                                                                           // MakerGen.cs:388
-                    ElementId = "TestScript.teardown"                                                                                       // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Teardown()                                                                                                          // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 100. TestScript.teardown.action
-                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Action",                                                                                            // MakerGen.cs:231
-                        Path= "TestScript.teardown.action",                                                                                 // MakerGen.cs:232
-                        Id = "TestScript.teardown.action",                                                                                  // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Action                                                                                                 // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. TestScript.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:212
-        // 2. TestScript.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
-        // 3. TestScript.version
-        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:212
-        // 4. TestScript.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:212
-        // 5. TestScript.title
-        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:212
-        // 6. TestScript.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
-        // 7. TestScript.experimental
-        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:212
-        // 8. TestScript.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
-        // 9. TestScript.publisher
-        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:212
-        // 10. TestScript.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
-        // 11. TestScript.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:212
-        // 12. TestScript.useContext
-        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:212
-        // 13. TestScript.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
-        // 14. TestScript.purpose
-        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:212
-        // 15. TestScript.copyright
-        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:212
-        // 16. TestScript.origin
-        public ElementDefinitionInfo Element_Origin;                                                                                        // MakerGen.cs:212
-        // 19. TestScript.destination
-        public ElementDefinitionInfo Element_Destination;                                                                                   // MakerGen.cs:212
-        // 22. TestScript.metadata
-        public ElementDefinitionInfo Element_Metadata;                                                                                      // MakerGen.cs:212
-        // 34. TestScript.fixture
-        public ElementDefinitionInfo Element_Fixture;                                                                                       // MakerGen.cs:212
-        // 38. TestScript.profile
-        public ElementDefinitionInfo Element_Profile;                                                                                       // MakerGen.cs:212
-        // 39. TestScript.variable
-        public ElementDefinitionInfo Element_Variable;                                                                                      // MakerGen.cs:212
-        // 48. TestScript.setup
-        public ElementDefinitionInfo Element_Setup;                                                                                         // MakerGen.cs:212
-        // 93. TestScript.test
-        public ElementDefinitionInfo Element_Test;                                                                                          // MakerGen.cs:212
-        // 99. TestScript.teardown
-        public ElementDefinitionInfo Element_Teardown;                                                                                      // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Origin : FhirKhit.Maker.Common.Complex.ComplexBase                                                                // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "TestScript",                                                                                                        // MakerGen.cs:388
-                ElementId = "TestScript"                                                                                                    // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:216
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:216
-            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Origin.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_Destination.Write(sDef);                                                                                                // MakerGen.cs:216
-            Element_Metadata.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Fixture.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Profile.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Variable.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Setup.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_Test.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Teardown.Write(sDef);                                                                                                   // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_TestScript()                                                                                                        // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 17. TestScript.origin.index
+            public ElementDefinitionInfo Element_Index;                                                                                     // MakerGen.cs:219
+            // 18. TestScript.origin.profile
+            public ElementDefinitionInfo Element_Profile;                                                                                   // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.origin",                                                                                             // MakerGen.cs:395
+                    ElementId = "TestScript.origin"                                                                                         // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Index.Write(sDef);                                                                                                  // MakerGen.cs:223
+                Element_Profile.Write(sDef);                                                                                                // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Origin()                                                                                                            // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 17. TestScript.origin.index
+                    this.Element_Index = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Index",                                                                                             // MakerGen.cs:238
+                        Path= "TestScript.origin.index",                                                                                    // MakerGen.cs:239
+                        Id = "TestScript.origin.index",                                                                                     // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 18. TestScript.origin.profile
+                    this.Element_Profile = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Profile",                                                                                           // MakerGen.cs:238
+                        Path= "TestScript.origin.profile",                                                                                  // MakerGen.cs:239
+                        Id = "TestScript.origin.profile",                                                                                   // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 19. TestScript.destination
+        public class Type_Destination : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 20. TestScript.destination.index
+            public ElementDefinitionInfo Element_Index;                                                                                     // MakerGen.cs:219
+            // 21. TestScript.destination.profile
+            public ElementDefinitionInfo Element_Profile;                                                                                   // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.destination",                                                                                        // MakerGen.cs:395
+                    ElementId = "TestScript.destination"                                                                                    // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Index.Write(sDef);                                                                                                  // MakerGen.cs:223
+                Element_Profile.Write(sDef);                                                                                                // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Destination()                                                                                                       // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 20. TestScript.destination.index
+                    this.Element_Index = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Index",                                                                                             // MakerGen.cs:238
+                        Path= "TestScript.destination.index",                                                                               // MakerGen.cs:239
+                        Id = "TestScript.destination.index",                                                                                // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 21. TestScript.destination.profile
+                    this.Element_Profile = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Profile",                                                                                           // MakerGen.cs:238
+                        Path= "TestScript.destination.profile",                                                                             // MakerGen.cs:239
+                        Id = "TestScript.destination.profile",                                                                              // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Coding                                                                   // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 22. TestScript.metadata
+        public class Type_Metadata : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 23. TestScript.metadata.link
+            public class Type_Link : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 24. TestScript.metadata.link.url
+                public ElementDefinitionInfo Element_Url;                                                                                   // MakerGen.cs:219
+                // 25. TestScript.metadata.link.description
+                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "TestScript.metadata.link",                                                                                  // MakerGen.cs:395
+                        ElementId = "TestScript.metadata.link"                                                                              // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Url.Write(sDef);                                                                                                // MakerGen.cs:223
+                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Link()                                                                                                          // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 24. TestScript.metadata.link.url
+                        this.Element_Url = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Url",                                                                                           // MakerGen.cs:238
+                            Path= "TestScript.metadata.link.url",                                                                           // MakerGen.cs:239
+                            Id = "TestScript.metadata.link.url",                                                                            // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 25. TestScript.metadata.link.description
+                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Description",                                                                                   // MakerGen.cs:238
+                            Path= "TestScript.metadata.link.description",                                                                   // MakerGen.cs:239
+                            Id = "TestScript.metadata.link.description",                                                                    // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 26. TestScript.metadata.capability
+            public class Type_Capability : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 27. TestScript.metadata.capability.required
+                public ElementDefinitionInfo Element_Required;                                                                              // MakerGen.cs:219
+                // 28. TestScript.metadata.capability.validated
+                public ElementDefinitionInfo Element_Validated;                                                                             // MakerGen.cs:219
+                // 29. TestScript.metadata.capability.description
+                public ElementDefinitionInfo Element_Description;                                                                           // MakerGen.cs:219
+                // 30. TestScript.metadata.capability.origin
+                public ElementDefinitionInfo Element_Origin;                                                                                // MakerGen.cs:219
+                // 31. TestScript.metadata.capability.destination
+                public ElementDefinitionInfo Element_Destination;                                                                           // MakerGen.cs:219
+                // 32. TestScript.metadata.capability.link
+                public ElementDefinitionInfo Element_Link;                                                                                  // MakerGen.cs:219
+                // 33. TestScript.metadata.capability.capabilities
+                public ElementDefinitionInfo Element_Capabilities;                                                                          // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "TestScript.metadata.capability",                                                                            // MakerGen.cs:395
+                        ElementId = "TestScript.metadata.capability"                                                                        // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Required.Write(sDef);                                                                                           // MakerGen.cs:223
+                    Element_Validated.Write(sDef);                                                                                          // MakerGen.cs:223
+                    Element_Description.Write(sDef);                                                                                        // MakerGen.cs:223
+                    Element_Origin.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_Destination.Write(sDef);                                                                                        // MakerGen.cs:223
+                    Element_Link.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Capabilities.Write(sDef);                                                                                       // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Capability()                                                                                                    // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 27. TestScript.metadata.capability.required
+                        this.Element_Required = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Required",                                                                                      // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.required",                                                                // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.required",                                                                 // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 28. TestScript.metadata.capability.validated
+                        this.Element_Validated = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Validated",                                                                                     // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.validated",                                                               // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.validated",                                                                // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 29. TestScript.metadata.capability.description
+                        this.Element_Description = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Description",                                                                                   // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.description",                                                             // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.description",                                                              // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 30. TestScript.metadata.capability.origin
+                        this.Element_Origin = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Origin",                                                                                        // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.origin",                                                                  // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.origin",                                                                   // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 31. TestScript.metadata.capability.destination
+                        this.Element_Destination = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Destination",                                                                                   // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.destination",                                                             // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.destination",                                                              // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 32. TestScript.metadata.capability.link
+                        this.Element_Link = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Link",                                                                                          // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.link",                                                                    // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.link",                                                                     // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 33. TestScript.metadata.capability.capabilities
+                        this.Element_Capabilities = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Capabilities",                                                                                  // MakerGen.cs:238
+                            Path= "TestScript.metadata.capability.capabilities",                                                            // MakerGen.cs:239
+                            Id = "TestScript.metadata.capability.capabilities",                                                             // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:306
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/CapabilityStatement"                                       // MakerGen.cs:306
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 23. TestScript.metadata.link
+            public ElementDefinitionInfo Element_Link;                                                                                      // MakerGen.cs:219
+            // 26. TestScript.metadata.capability
+            public ElementDefinitionInfo Element_Capability;                                                                                // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.metadata",                                                                                           // MakerGen.cs:395
+                    ElementId = "TestScript.metadata"                                                                                       // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Link.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_Capability.Write(sDef);                                                                                             // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Metadata()                                                                                                          // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 23. TestScript.metadata.link
+                    this.Element_Link = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Link",                                                                                              // MakerGen.cs:238
+                        Path= "TestScript.metadata.link",                                                                                   // MakerGen.cs:239
+                        Id = "TestScript.metadata.link",                                                                                    // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Link                                                                                                   // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 26. TestScript.metadata.capability
+                    this.Element_Capability = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Capability",                                                                                        // MakerGen.cs:238
+                        Path= "TestScript.metadata.capability",                                                                             // MakerGen.cs:239
+                        Id = "TestScript.metadata.capability",                                                                              // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Capability                                                                                             // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 34. TestScript.fixture
+        public class Type_Fixture : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 35. TestScript.fixture.autocreate
+            public ElementDefinitionInfo Element_Autocreate;                                                                                // MakerGen.cs:219
+            // 36. TestScript.fixture.autodelete
+            public ElementDefinitionInfo Element_Autodelete;                                                                                // MakerGen.cs:219
+            // 37. TestScript.fixture.resource
+            public ElementDefinitionInfo Element_Resource;                                                                                  // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.fixture",                                                                                            // MakerGen.cs:395
+                    ElementId = "TestScript.fixture"                                                                                        // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Autocreate.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_Autodelete.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_Resource.Write(sDef);                                                                                               // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Fixture()                                                                                                           // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 35. TestScript.fixture.autocreate
+                    this.Element_Autocreate = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Autocreate",                                                                                        // MakerGen.cs:238
+                        Path= "TestScript.fixture.autocreate",                                                                              // MakerGen.cs:239
+                        Id = "TestScript.fixture.autocreate",                                                                               // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 36. TestScript.fixture.autodelete
+                    this.Element_Autodelete = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Autodelete",                                                                                        // MakerGen.cs:238
+                        Path= "TestScript.fixture.autodelete",                                                                              // MakerGen.cs:239
+                        Id = "TestScript.fixture.autodelete",                                                                               // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 37. TestScript.fixture.resource
+                    this.Element_Resource = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Resource",                                                                                          // MakerGen.cs:238
+                        Path= "TestScript.fixture.resource",                                                                                // MakerGen.cs:239
+                        Id = "TestScript.fixture.resource",                                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Resource"                                                      // MakerGen.cs:349
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 39. TestScript.variable
+        public class Type_Variable : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 40. TestScript.variable.name
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            // 41. TestScript.variable.defaultValue
+            public ElementDefinitionInfo Element_DefaultValue;                                                                              // MakerGen.cs:219
+            // 42. TestScript.variable.description
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            // 43. TestScript.variable.expression
+            public ElementDefinitionInfo Element_Expression;                                                                                // MakerGen.cs:219
+            // 44. TestScript.variable.headerField
+            public ElementDefinitionInfo Element_HeaderField;                                                                               // MakerGen.cs:219
+            // 45. TestScript.variable.hint
+            public ElementDefinitionInfo Element_Hint;                                                                                      // MakerGen.cs:219
+            // 46. TestScript.variable.path
+            public ElementDefinitionInfo Element_Path;                                                                                      // MakerGen.cs:219
+            // 47. TestScript.variable.sourceId
+            public ElementDefinitionInfo Element_SourceId;                                                                                  // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.variable",                                                                                           // MakerGen.cs:395
+                    ElementId = "TestScript.variable"                                                                                       // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_DefaultValue.Write(sDef);                                                                                           // MakerGen.cs:223
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
+                Element_Expression.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_HeaderField.Write(sDef);                                                                                            // MakerGen.cs:223
+                Element_Hint.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_Path.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_SourceId.Write(sDef);                                                                                               // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Variable()                                                                                                          // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 40. TestScript.variable.name
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
+                        Path= "TestScript.variable.name",                                                                                   // MakerGen.cs:239
+                        Id = "TestScript.variable.name",                                                                                    // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 41. TestScript.variable.defaultValue
+                    this.Element_DefaultValue = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_DefaultValue",                                                                                      // MakerGen.cs:238
+                        Path= "TestScript.variable.defaultValue",                                                                           // MakerGen.cs:239
+                        Id = "TestScript.variable.defaultValue",                                                                            // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 42. TestScript.variable.description
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
+                        Path= "TestScript.variable.description",                                                                            // MakerGen.cs:239
+                        Id = "TestScript.variable.description",                                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 43. TestScript.variable.expression
+                    this.Element_Expression = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Expression",                                                                                        // MakerGen.cs:238
+                        Path= "TestScript.variable.expression",                                                                             // MakerGen.cs:239
+                        Id = "TestScript.variable.expression",                                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 44. TestScript.variable.headerField
+                    this.Element_HeaderField = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_HeaderField",                                                                                       // MakerGen.cs:238
+                        Path= "TestScript.variable.headerField",                                                                            // MakerGen.cs:239
+                        Id = "TestScript.variable.headerField",                                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 45. TestScript.variable.hint
+                    this.Element_Hint = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Hint",                                                                                              // MakerGen.cs:238
+                        Path= "TestScript.variable.hint",                                                                                   // MakerGen.cs:239
+                        Id = "TestScript.variable.hint",                                                                                    // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 46. TestScript.variable.path
+                    this.Element_Path = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Path",                                                                                              // MakerGen.cs:238
+                        Path= "TestScript.variable.path",                                                                                   // MakerGen.cs:239
+                        Id = "TestScript.variable.path",                                                                                    // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 47. TestScript.variable.sourceId
+                    this.Element_SourceId = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_SourceId",                                                                                          // MakerGen.cs:238
+                        Path= "TestScript.variable.sourceId",                                                                               // MakerGen.cs:239
+                        Id = "TestScript.variable.sourceId",                                                                                // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                                // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 48. TestScript.setup
+        public class Type_Setup : FhirKhit.Maker.Common.Complex.ComplexBase                                                                 // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 49. TestScript.setup.action
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 50. TestScript.setup.action.operation
+                public class Type_Operation : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    // 62. TestScript.setup.action.operation.requestHeader
+                    public class Type_RequestHeader : FhirKhit.Maker.Common.Complex.ComplexBase                                             // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        // 63. TestScript.setup.action.operation.requestHeader.field
+                        public ElementDefinitionInfo Element_Field;                                                                         // MakerGen.cs:219
+                        // 64. TestScript.setup.action.operation.requestHeader.value
+                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:390
+                        {                                                                                                                   // MakerGen.cs:391
+                            base.Write(sDef);                                                                                               // MakerGen.cs:392
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:393
+                            {                                                                                                               // MakerGen.cs:394
+                                Path = "TestScript.setup.action.operation.requestHeader",                                                   // MakerGen.cs:395
+                                ElementId = "TestScript.setup.action.operation.requestHeader"                                               // MakerGen.cs:396
+                            });                                                                                                             // MakerGen.cs:397
+                            Element_Field.Write(sDef);                                                                                      // MakerGen.cs:223
+                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:223
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                        public Type_RequestHeader()                                                                                         // MakerGen.cs:402
+                        {                                                                                                                   // MakerGen.cs:403
+                            {                                                                                                               // MakerGen.cs:234
+                                // 63. TestScript.setup.action.operation.requestHeader.field
+                                this.Element_Field = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Field",                                                                                 // MakerGen.cs:238
+                                    Path= "TestScript.setup.action.operation.requestHeader.field",                                          // MakerGen.cs:239
+                                    Id = "TestScript.setup.action.operation.requestHeader.field",                                           // MakerGen.cs:240
+                                    Min = 1,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:303
+                                        {                                                                                                   // MakerGen.cs:304
+                                        }                                                                                                   // MakerGen.cs:307
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                            {                                                                                                               // MakerGen.cs:234
+                                // 64. TestScript.setup.action.operation.requestHeader.value
+                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Value",                                                                                 // MakerGen.cs:238
+                                    Path= "TestScript.setup.action.operation.requestHeader.value",                                          // MakerGen.cs:239
+                                    Id = "TestScript.setup.action.operation.requestHeader.value",                                           // MakerGen.cs:240
+                                    Min = 1,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:303
+                                        {                                                                                                   // MakerGen.cs:304
+                                        }                                                                                                   // MakerGen.cs:307
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                        }                                                                                                                   // MakerGen.cs:405
+                    }                                                                                                                       // MakerGen.cs:407
+                    // 51. TestScript.setup.action.operation.type
+                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:219
+                    // 52. TestScript.setup.action.operation.resource
+                    public ElementDefinitionInfo Element_Resource;                                                                          // MakerGen.cs:219
+                    // 53. TestScript.setup.action.operation.label
+                    public ElementDefinitionInfo Element_Label;                                                                             // MakerGen.cs:219
+                    // 54. TestScript.setup.action.operation.description
+                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:219
+                    // 55. TestScript.setup.action.operation.accept
+                    public ElementDefinitionInfo Element_Accept;                                                                            // MakerGen.cs:219
+                    // 56. TestScript.setup.action.operation.contentType
+                    public ElementDefinitionInfo Element_ContentType;                                                                       // MakerGen.cs:219
+                    // 57. TestScript.setup.action.operation.destination
+                    public ElementDefinitionInfo Element_Destination;                                                                       // MakerGen.cs:219
+                    // 58. TestScript.setup.action.operation.encodeRequestUrl
+                    public ElementDefinitionInfo Element_EncodeRequestUrl;                                                                  // MakerGen.cs:219
+                    // 59. TestScript.setup.action.operation.method
+                    public ElementDefinitionInfo Element_Method;                                                                            // MakerGen.cs:219
+                    // 60. TestScript.setup.action.operation.origin
+                    public ElementDefinitionInfo Element_Origin;                                                                            // MakerGen.cs:219
+                    // 61. TestScript.setup.action.operation.params
+                    public ElementDefinitionInfo Element_Params;                                                                            // MakerGen.cs:219
+                    // 62. TestScript.setup.action.operation.requestHeader
+                    public ElementDefinitionInfo Element_RequestHeader;                                                                     // MakerGen.cs:219
+                    // 65. TestScript.setup.action.operation.requestId
+                    public ElementDefinitionInfo Element_RequestId;                                                                         // MakerGen.cs:219
+                    // 66. TestScript.setup.action.operation.responseId
+                    public ElementDefinitionInfo Element_ResponseId;                                                                        // MakerGen.cs:219
+                    // 67. TestScript.setup.action.operation.sourceId
+                    public ElementDefinitionInfo Element_SourceId;                                                                          // MakerGen.cs:219
+                    // 68. TestScript.setup.action.operation.targetId
+                    public ElementDefinitionInfo Element_TargetId;                                                                          // MakerGen.cs:219
+                    // 69. TestScript.setup.action.operation.url
+                    public ElementDefinitionInfo Element_Url;                                                                               // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
+                    {                                                                                                                       // MakerGen.cs:391
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
+                            Path = "TestScript.setup.action.operation",                                                                     // MakerGen.cs:395
+                            ElementId = "TestScript.setup.action.operation"                                                                 // MakerGen.cs:396
+                        });                                                                                                                 // MakerGen.cs:397
+                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:223
+                        Element_Resource.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_Label.Write(sDef);                                                                                          // MakerGen.cs:223
+                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:223
+                        Element_Accept.Write(sDef);                                                                                         // MakerGen.cs:223
+                        Element_ContentType.Write(sDef);                                                                                    // MakerGen.cs:223
+                        Element_Destination.Write(sDef);                                                                                    // MakerGen.cs:223
+                        Element_EncodeRequestUrl.Write(sDef);                                                                               // MakerGen.cs:223
+                        Element_Method.Write(sDef);                                                                                         // MakerGen.cs:223
+                        Element_Origin.Write(sDef);                                                                                         // MakerGen.cs:223
+                        Element_Params.Write(sDef);                                                                                         // MakerGen.cs:223
+                        Element_RequestHeader.Write(sDef);                                                                                  // MakerGen.cs:223
+                        Element_RequestId.Write(sDef);                                                                                      // MakerGen.cs:223
+                        Element_ResponseId.Write(sDef);                                                                                     // MakerGen.cs:223
+                        Element_SourceId.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_TargetId.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_Url.Write(sDef);                                                                                            // MakerGen.cs:223
+                    }                                                                                                                       // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                    public Type_Operation()                                                                                                 // MakerGen.cs:402
+                    {                                                                                                                       // MakerGen.cs:403
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 51. TestScript.setup.action.operation.type
+                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Type",                                                                                      // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.type",                                                             // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.type",                                                              // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Complex.Type_Coding                                                           // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:322
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 52. TestScript.setup.action.operation.resource
+                            this.Element_Resource = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Resource",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.resource",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.resource",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 53. TestScript.setup.action.operation.label
+                            this.Element_Label = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Label",                                                                                     // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.label",                                                            // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.label",                                                             // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 54. TestScript.setup.action.operation.description
+                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Description",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.description",                                                      // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.description",                                                       // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 55. TestScript.setup.action.operation.accept
+                            this.Element_Accept = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Accept",                                                                                    // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.accept",                                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.accept",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 56. TestScript.setup.action.operation.contentType
+                            this.Element_ContentType = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_ContentType",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.contentType",                                                      // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.contentType",                                                       // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 57. TestScript.setup.action.operation.destination
+                            this.Element_Destination = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Destination",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.destination",                                                      // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.destination",                                                       // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                   // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 58. TestScript.setup.action.operation.encodeRequestUrl
+                            this.Element_EncodeRequestUrl = new ElementDefinitionInfo                                                       // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_EncodeRequestUrl",                                                                          // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.encodeRequestUrl",                                                 // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.encodeRequestUrl",                                                  // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 59. TestScript.setup.action.operation.method
+                            this.Element_Method = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Method",                                                                                    // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.method",                                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.method",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 60. TestScript.setup.action.operation.origin
+                            this.Element_Origin = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Origin",                                                                                    // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.origin",                                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.origin",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                   // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 61. TestScript.setup.action.operation.params
+                            this.Element_Params = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Params",                                                                                    // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.params",                                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.params",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 62. TestScript.setup.action.operation.requestHeader
+                            this.Element_RequestHeader = new ElementDefinitionInfo                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_RequestHeader",                                                                             // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.requestHeader",                                                    // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.requestHeader",                                                     // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = -1,                                                                                                   // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new Type_RequestHeader                                                                                  // MakerGen.cs:262
+                                    {                                                                                                       // MakerGen.cs:263
+                                    }                                                                                                       // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 65. TestScript.setup.action.operation.requestId
+                            this.Element_RequestId = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_RequestId",                                                                                 // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.requestId",                                                        // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.requestId",                                                         // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 66. TestScript.setup.action.operation.responseId
+                            this.Element_ResponseId = new ElementDefinitionInfo                                                             // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_ResponseId",                                                                                // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.responseId",                                                       // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.responseId",                                                        // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 67. TestScript.setup.action.operation.sourceId
+                            this.Element_SourceId = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_SourceId",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.sourceId",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.sourceId",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 68. TestScript.setup.action.operation.targetId
+                            this.Element_TargetId = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_TargetId",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.targetId",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.targetId",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 69. TestScript.setup.action.operation.url
+                            this.Element_Url = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Url",                                                                                       // MakerGen.cs:238
+                                Path= "TestScript.setup.action.operation.url",                                                              // MakerGen.cs:239
+                                Id = "TestScript.setup.action.operation.url",                                                               // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:407
+                // 70. TestScript.setup.action.assert
+                public class Type_Assert : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    // 71. TestScript.setup.action.assert.label
+                    public ElementDefinitionInfo Element_Label;                                                                             // MakerGen.cs:219
+                    // 72. TestScript.setup.action.assert.description
+                    public ElementDefinitionInfo Element_Description;                                                                       // MakerGen.cs:219
+                    // 73. TestScript.setup.action.assert.direction
+                    public ElementDefinitionInfo Element_Direction;                                                                         // MakerGen.cs:219
+                    // 74. TestScript.setup.action.assert.compareToSourceId
+                    public ElementDefinitionInfo Element_CompareToSourceId;                                                                 // MakerGen.cs:219
+                    // 75. TestScript.setup.action.assert.compareToSourceExpression
+                    public ElementDefinitionInfo Element_CompareToSourceExpression;                                                         // MakerGen.cs:219
+                    // 76. TestScript.setup.action.assert.compareToSourcePath
+                    public ElementDefinitionInfo Element_CompareToSourcePath;                                                               // MakerGen.cs:219
+                    // 77. TestScript.setup.action.assert.contentType
+                    public ElementDefinitionInfo Element_ContentType;                                                                       // MakerGen.cs:219
+                    // 78. TestScript.setup.action.assert.expression
+                    public ElementDefinitionInfo Element_Expression;                                                                        // MakerGen.cs:219
+                    // 79. TestScript.setup.action.assert.headerField
+                    public ElementDefinitionInfo Element_HeaderField;                                                                       // MakerGen.cs:219
+                    // 80. TestScript.setup.action.assert.minimumId
+                    public ElementDefinitionInfo Element_MinimumId;                                                                         // MakerGen.cs:219
+                    // 81. TestScript.setup.action.assert.navigationLinks
+                    public ElementDefinitionInfo Element_NavigationLinks;                                                                   // MakerGen.cs:219
+                    // 82. TestScript.setup.action.assert.operator
+                    public ElementDefinitionInfo Element_Operator;                                                                          // MakerGen.cs:219
+                    // 83. TestScript.setup.action.assert.path
+                    public ElementDefinitionInfo Element_Path;                                                                              // MakerGen.cs:219
+                    // 84. TestScript.setup.action.assert.requestMethod
+                    public ElementDefinitionInfo Element_RequestMethod;                                                                     // MakerGen.cs:219
+                    // 85. TestScript.setup.action.assert.requestURL
+                    public ElementDefinitionInfo Element_RequestURL;                                                                        // MakerGen.cs:219
+                    // 86. TestScript.setup.action.assert.resource
+                    public ElementDefinitionInfo Element_Resource;                                                                          // MakerGen.cs:219
+                    // 87. TestScript.setup.action.assert.response
+                    public ElementDefinitionInfo Element_Response;                                                                          // MakerGen.cs:219
+                    // 88. TestScript.setup.action.assert.responseCode
+                    public ElementDefinitionInfo Element_ResponseCode;                                                                      // MakerGen.cs:219
+                    // 89. TestScript.setup.action.assert.sourceId
+                    public ElementDefinitionInfo Element_SourceId;                                                                          // MakerGen.cs:219
+                    // 90. TestScript.setup.action.assert.validateProfileId
+                    public ElementDefinitionInfo Element_ValidateProfileId;                                                                 // MakerGen.cs:219
+                    // 91. TestScript.setup.action.assert.value
+                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:219
+                    // 92. TestScript.setup.action.assert.warningOnly
+                    public ElementDefinitionInfo Element_WarningOnly;                                                                       // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
+                    {                                                                                                                       // MakerGen.cs:391
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
+                            Path = "TestScript.setup.action.assert",                                                                        // MakerGen.cs:395
+                            ElementId = "TestScript.setup.action.assert"                                                                    // MakerGen.cs:396
+                        });                                                                                                                 // MakerGen.cs:397
+                        Element_Label.Write(sDef);                                                                                          // MakerGen.cs:223
+                        Element_Description.Write(sDef);                                                                                    // MakerGen.cs:223
+                        Element_Direction.Write(sDef);                                                                                      // MakerGen.cs:223
+                        Element_CompareToSourceId.Write(sDef);                                                                              // MakerGen.cs:223
+                        Element_CompareToSourceExpression.Write(sDef);                                                                      // MakerGen.cs:223
+                        Element_CompareToSourcePath.Write(sDef);                                                                            // MakerGen.cs:223
+                        Element_ContentType.Write(sDef);                                                                                    // MakerGen.cs:223
+                        Element_Expression.Write(sDef);                                                                                     // MakerGen.cs:223
+                        Element_HeaderField.Write(sDef);                                                                                    // MakerGen.cs:223
+                        Element_MinimumId.Write(sDef);                                                                                      // MakerGen.cs:223
+                        Element_NavigationLinks.Write(sDef);                                                                                // MakerGen.cs:223
+                        Element_Operator.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_Path.Write(sDef);                                                                                           // MakerGen.cs:223
+                        Element_RequestMethod.Write(sDef);                                                                                  // MakerGen.cs:223
+                        Element_RequestURL.Write(sDef);                                                                                     // MakerGen.cs:223
+                        Element_Resource.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_Response.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_ResponseCode.Write(sDef);                                                                                   // MakerGen.cs:223
+                        Element_SourceId.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_ValidateProfileId.Write(sDef);                                                                              // MakerGen.cs:223
+                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:223
+                        Element_WarningOnly.Write(sDef);                                                                                    // MakerGen.cs:223
+                    }                                                                                                                       // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                    public Type_Assert()                                                                                                    // MakerGen.cs:402
+                    {                                                                                                                       // MakerGen.cs:403
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 71. TestScript.setup.action.assert.label
+                            this.Element_Label = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Label",                                                                                     // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.label",                                                               // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.label",                                                                // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 72. TestScript.setup.action.assert.description
+                            this.Element_Description = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Description",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.description",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.description",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 73. TestScript.setup.action.assert.direction
+                            this.Element_Direction = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Direction",                                                                                 // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.direction",                                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.direction",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 74. TestScript.setup.action.assert.compareToSourceId
+                            this.Element_CompareToSourceId = new ElementDefinitionInfo                                                      // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_CompareToSourceId",                                                                         // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.compareToSourceId",                                                   // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.compareToSourceId",                                                    // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 75. TestScript.setup.action.assert.compareToSourceExpression
+                            this.Element_CompareToSourceExpression = new ElementDefinitionInfo                                              // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_CompareToSourceExpression",                                                                 // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.compareToSourceExpression",                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.compareToSourceExpression",                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 76. TestScript.setup.action.assert.compareToSourcePath
+                            this.Element_CompareToSourcePath = new ElementDefinitionInfo                                                    // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_CompareToSourcePath",                                                                       // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.compareToSourcePath",                                                 // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.compareToSourcePath",                                                  // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 77. TestScript.setup.action.assert.contentType
+                            this.Element_ContentType = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_ContentType",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.contentType",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.contentType",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 78. TestScript.setup.action.assert.expression
+                            this.Element_Expression = new ElementDefinitionInfo                                                             // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Expression",                                                                                // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.expression",                                                          // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.expression",                                                           // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 79. TestScript.setup.action.assert.headerField
+                            this.Element_HeaderField = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_HeaderField",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.headerField",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.headerField",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 80. TestScript.setup.action.assert.minimumId
+                            this.Element_MinimumId = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_MinimumId",                                                                                 // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.minimumId",                                                           // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.minimumId",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 81. TestScript.setup.action.assert.navigationLinks
+                            this.Element_NavigationLinks = new ElementDefinitionInfo                                                        // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_NavigationLinks",                                                                           // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.navigationLinks",                                                     // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.navigationLinks",                                                      // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 82. TestScript.setup.action.assert.operator
+                            this.Element_Operator = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Operator",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.operator",                                                            // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.operator",                                                             // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 83. TestScript.setup.action.assert.path
+                            this.Element_Path = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Path",                                                                                      // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.path",                                                                // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.path",                                                                 // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 84. TestScript.setup.action.assert.requestMethod
+                            this.Element_RequestMethod = new ElementDefinitionInfo                                                          // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_RequestMethod",                                                                             // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.requestMethod",                                                       // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.requestMethod",                                                        // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 85. TestScript.setup.action.assert.requestURL
+                            this.Element_RequestURL = new ElementDefinitionInfo                                                             // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_RequestURL",                                                                                // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.requestURL",                                                          // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.requestURL",                                                           // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 86. TestScript.setup.action.assert.resource
+                            this.Element_Resource = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Resource",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.resource",                                                            // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.resource",                                                             // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 87. TestScript.setup.action.assert.response
+                            this.Element_Response = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Response",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.response",                                                            // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.response",                                                             // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 88. TestScript.setup.action.assert.responseCode
+                            this.Element_ResponseCode = new ElementDefinitionInfo                                                           // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_ResponseCode",                                                                              // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.responseCode",                                                        // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.responseCode",                                                         // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 89. TestScript.setup.action.assert.sourceId
+                            this.Element_SourceId = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_SourceId",                                                                                  // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.sourceId",                                                            // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.sourceId",                                                             // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 90. TestScript.setup.action.assert.validateProfileId
+                            this.Element_ValidateProfileId = new ElementDefinitionInfo                                                      // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_ValidateProfileId",                                                                         // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.validateProfileId",                                                   // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.validateProfileId",                                                    // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Id                                                        // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 91. TestScript.setup.action.assert.value
+                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Value",                                                                                     // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.value",                                                               // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.value",                                                                // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 92. TestScript.setup.action.assert.warningOnly
+                            this.Element_WarningOnly = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_WarningOnly",                                                                               // MakerGen.cs:238
+                                Path= "TestScript.setup.action.assert.warningOnly",                                                         // MakerGen.cs:239
+                                Id = "TestScript.setup.action.assert.warningOnly",                                                          // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                   // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:407
+                // 50. TestScript.setup.action.operation
+                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:219
+                // 70. TestScript.setup.action.assert
+                public ElementDefinitionInfo Element_Assert;                                                                                // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "TestScript.setup.action",                                                                                   // MakerGen.cs:395
+                        ElementId = "TestScript.setup.action"                                                                               // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:223
+                    Element_Assert.Write(sDef);                                                                                             // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Action()                                                                                                        // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 50. TestScript.setup.action.operation
+                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Operation",                                                                                     // MakerGen.cs:238
+                            Path= "TestScript.setup.action.operation",                                                                      // MakerGen.cs:239
+                            Id = "TestScript.setup.action.operation",                                                                       // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new Type_Operation                                                                                          // MakerGen.cs:262
+                                {                                                                                                           // MakerGen.cs:263
+                                }                                                                                                           // MakerGen.cs:264
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 70. TestScript.setup.action.assert
+                        this.Element_Assert = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Assert",                                                                                        // MakerGen.cs:238
+                            Path= "TestScript.setup.action.assert",                                                                         // MakerGen.cs:239
+                            Id = "TestScript.setup.action.assert",                                                                          // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new Type_Assert                                                                                             // MakerGen.cs:262
+                                {                                                                                                           // MakerGen.cs:263
+                                }                                                                                                           // MakerGen.cs:264
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 49. TestScript.setup.action
+            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.setup",                                                                                              // MakerGen.cs:395
+                    ElementId = "TestScript.setup"                                                                                          // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Setup()                                                                                                             // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 49. TestScript.setup.action
+                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Action",                                                                                            // MakerGen.cs:238
+                        Path= "TestScript.setup.action",                                                                                    // MakerGen.cs:239
+                        Id = "TestScript.setup.action",                                                                                     // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Action                                                                                                 // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 93. TestScript.test
+        public class Type_Test : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 96. TestScript.test.action
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 97. TestScript.test.action.operation
+                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:219
+                // 98. TestScript.test.action.assert
+                public ElementDefinitionInfo Element_Assert;                                                                                // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "TestScript.test.action",                                                                                    // MakerGen.cs:395
+                        ElementId = "TestScript.test.action"                                                                                // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:223
+                    Element_Assert.Write(sDef);                                                                                             // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Action()                                                                                                        // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 97. TestScript.test.action.operation
+                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Operation",                                                                                     // MakerGen.cs:238
+                            Path= "TestScript.test.action.operation",                                                                       // MakerGen.cs:239
+                            Id = "TestScript.test.action.operation",                                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 98. TestScript.test.action.assert
+                        this.Element_Assert = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Assert",                                                                                        // MakerGen.cs:238
+                            Path= "TestScript.test.action.assert",                                                                          // MakerGen.cs:239
+                            Id = "TestScript.test.action.assert",                                                                           // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 94. TestScript.test.name
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            // 95. TestScript.test.description
+            public ElementDefinitionInfo Element_Description;                                                                               // MakerGen.cs:219
+            // 96. TestScript.test.action
+            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.test",                                                                                               // MakerGen.cs:395
+                    ElementId = "TestScript.test"                                                                                           // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_Description.Write(sDef);                                                                                            // MakerGen.cs:223
+                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Test()                                                                                                              // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 94. TestScript.test.name
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
+                        Path= "TestScript.test.name",                                                                                       // MakerGen.cs:239
+                        Id = "TestScript.test.name",                                                                                        // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 95. TestScript.test.description
+                    this.Element_Description = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Description",                                                                                       // MakerGen.cs:238
+                        Path= "TestScript.test.description",                                                                                // MakerGen.cs:239
+                        Id = "TestScript.test.description",                                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 96. TestScript.test.action
+                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Action",                                                                                            // MakerGen.cs:238
+                        Path= "TestScript.test.action",                                                                                     // MakerGen.cs:239
+                        Id = "TestScript.test.action",                                                                                      // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Action                                                                                                 // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 99. TestScript.teardown
+        public class Type_Teardown : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 100. TestScript.teardown.action
+            public class Type_Action : FhirKhit.Maker.Common.Complex.ComplexBase                                                            // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 101. TestScript.teardown.action.operation
+                public ElementDefinitionInfo Element_Operation;                                                                             // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "TestScript.teardown.action",                                                                                // MakerGen.cs:395
+                        ElementId = "TestScript.teardown.action"                                                                            // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Operation.Write(sDef);                                                                                          // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Action()                                                                                                        // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 101. TestScript.teardown.action.operation
+                        this.Element_Operation = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Operation",                                                                                     // MakerGen.cs:238
+                            Path= "TestScript.teardown.action.operation",                                                                   // MakerGen.cs:239
+                            Id = "TestScript.teardown.action.operation",                                                                    // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 100. TestScript.teardown.action
+            public ElementDefinitionInfo Element_Action;                                                                                    // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "TestScript.teardown",                                                                                           // MakerGen.cs:395
+                    ElementId = "TestScript.teardown"                                                                                       // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Action.Write(sDef);                                                                                                 // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Teardown()                                                                                                          // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 100. TestScript.teardown.action
+                    this.Element_Action = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Action",                                                                                            // MakerGen.cs:238
+                        Path= "TestScript.teardown.action",                                                                                 // MakerGen.cs:239
+                        Id = "TestScript.teardown.action",                                                                                  // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Action                                                                                                 // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. TestScript.url
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        // 2. TestScript.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        // 3. TestScript.version
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:219
+        // 4. TestScript.name
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        // 5. TestScript.title
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:219
+        // 6. TestScript.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        // 7. TestScript.experimental
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:219
+        // 8. TestScript.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        // 9. TestScript.publisher
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:219
+        // 10. TestScript.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        // 11. TestScript.description
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        // 12. TestScript.useContext
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:219
+        // 13. TestScript.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
+        // 14. TestScript.purpose
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:219
+        // 15. TestScript.copyright
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:219
+        // 16. TestScript.origin
+        public ElementDefinitionInfo Element_Origin;                                                                                        // MakerGen.cs:219
+        // 19. TestScript.destination
+        public ElementDefinitionInfo Element_Destination;                                                                                   // MakerGen.cs:219
+        // 22. TestScript.metadata
+        public ElementDefinitionInfo Element_Metadata;                                                                                      // MakerGen.cs:219
+        // 34. TestScript.fixture
+        public ElementDefinitionInfo Element_Fixture;                                                                                       // MakerGen.cs:219
+        // 38. TestScript.profile
+        public ElementDefinitionInfo Element_Profile;                                                                                       // MakerGen.cs:219
+        // 39. TestScript.variable
+        public ElementDefinitionInfo Element_Variable;                                                                                      // MakerGen.cs:219
+        // 48. TestScript.setup
+        public ElementDefinitionInfo Element_Setup;                                                                                         // MakerGen.cs:219
+        // 93. TestScript.test
+        public ElementDefinitionInfo Element_Test;                                                                                          // MakerGen.cs:219
+        // 99. TestScript.teardown
+        public ElementDefinitionInfo Element_Teardown;                                                                                      // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "TestScript",                                                                                                        // MakerGen.cs:395
+                ElementId = "TestScript"                                                                                                    // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Origin.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_Destination.Write(sDef);                                                                                                // MakerGen.cs:223
+            Element_Metadata.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Fixture.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Profile.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Variable.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Setup.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_Test.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Teardown.Write(sDef);                                                                                                   // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_TestScript()                                                                                                        // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. TestScript.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:231
-                    Path= "TestScript.url",                                                                                                 // MakerGen.cs:232
-                    Id = "TestScript.url",                                                                                                  // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
+                    Path= "TestScript.url",                                                                                                 // MakerGen.cs:239
+                    Id = "TestScript.url",                                                                                                  // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. TestScript.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
-                    Path= "TestScript.identifier",                                                                                          // MakerGen.cs:232
-                    Id = "TestScript.identifier",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
+                    Path= "TestScript.identifier",                                                                                          // MakerGen.cs:239
+                    Id = "TestScript.identifier",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. TestScript.version
-                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:231
-                    Path= "TestScript.version",                                                                                             // MakerGen.cs:232
-                    Id = "TestScript.version",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:238
+                    Path= "TestScript.version",                                                                                             // MakerGen.cs:239
+                    Id = "TestScript.version",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. TestScript.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:231
-                    Path= "TestScript.name",                                                                                                // MakerGen.cs:232
-                    Id = "TestScript.name",                                                                                                 // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
+                    Path= "TestScript.name",                                                                                                // MakerGen.cs:239
+                    Id = "TestScript.name",                                                                                                 // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. TestScript.title
-                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:231
-                    Path= "TestScript.title",                                                                                               // MakerGen.cs:232
-                    Id = "TestScript.title",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:238
+                    Path= "TestScript.title",                                                                                               // MakerGen.cs:239
+                    Id = "TestScript.title",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 6. TestScript.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
-                    Path= "TestScript.status",                                                                                              // MakerGen.cs:232
-                    Id = "TestScript.status",                                                                                               // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
+                    Path= "TestScript.status",                                                                                              // MakerGen.cs:239
+                    Id = "TestScript.status",                                                                                               // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 7. TestScript.experimental
-                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:231
-                    Path= "TestScript.experimental",                                                                                        // MakerGen.cs:232
-                    Id = "TestScript.experimental",                                                                                         // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:238
+                    Path= "TestScript.experimental",                                                                                        // MakerGen.cs:239
+                    Id = "TestScript.experimental",                                                                                         // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 8. TestScript.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
-                    Path= "TestScript.date",                                                                                                // MakerGen.cs:232
-                    Id = "TestScript.date",                                                                                                 // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
+                    Path= "TestScript.date",                                                                                                // MakerGen.cs:239
+                    Id = "TestScript.date",                                                                                                 // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 9. TestScript.publisher
-                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:231
-                    Path= "TestScript.publisher",                                                                                           // MakerGen.cs:232
-                    Id = "TestScript.publisher",                                                                                            // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:238
+                    Path= "TestScript.publisher",                                                                                           // MakerGen.cs:239
+                    Id = "TestScript.publisher",                                                                                            // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 10. TestScript.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
-                    Path= "TestScript.contact",                                                                                             // MakerGen.cs:232
-                    Id = "TestScript.contact",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
+                    Path= "TestScript.contact",                                                                                             // MakerGen.cs:239
+                    Id = "TestScript.contact",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 11. TestScript.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:231
-                    Path= "TestScript.description",                                                                                         // MakerGen.cs:232
-                    Id = "TestScript.description",                                                                                          // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
+                    Path= "TestScript.description",                                                                                         // MakerGen.cs:239
+                    Id = "TestScript.description",                                                                                          // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 12. TestScript.useContext
-                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:231
-                    Path= "TestScript.useContext",                                                                                          // MakerGen.cs:232
-                    Id = "TestScript.useContext",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:238
+                    Path= "TestScript.useContext",                                                                                          // MakerGen.cs:239
+                    Id = "TestScript.useContext",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 13. TestScript.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
-                    Path= "TestScript.jurisdiction",                                                                                        // MakerGen.cs:232
-                    Id = "TestScript.jurisdiction",                                                                                         // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
+                    Path= "TestScript.jurisdiction",                                                                                        // MakerGen.cs:239
+                    Id = "TestScript.jurisdiction",                                                                                         // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 14. TestScript.purpose
-                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:231
-                    Path= "TestScript.purpose",                                                                                             // MakerGen.cs:232
-                    Id = "TestScript.purpose",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:238
+                    Path= "TestScript.purpose",                                                                                             // MakerGen.cs:239
+                    Id = "TestScript.purpose",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 15. TestScript.copyright
-                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:231
-                    Path= "TestScript.copyright",                                                                                           // MakerGen.cs:232
-                    Id = "TestScript.copyright",                                                                                            // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:238
+                    Path= "TestScript.copyright",                                                                                           // MakerGen.cs:239
+                    Id = "TestScript.copyright",                                                                                            // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 16. TestScript.origin
-                this.Element_Origin = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Origin",                                                                                                // MakerGen.cs:231
-                    Path= "TestScript.origin",                                                                                              // MakerGen.cs:232
-                    Id = "TestScript.origin",                                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Origin                                                                                                     // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Origin = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Origin",                                                                                                // MakerGen.cs:238
+                    Path= "TestScript.origin",                                                                                              // MakerGen.cs:239
+                    Id = "TestScript.origin",                                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Origin                                                                                                     // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 19. TestScript.destination
-                this.Element_Destination = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Destination",                                                                                           // MakerGen.cs:231
-                    Path= "TestScript.destination",                                                                                         // MakerGen.cs:232
-                    Id = "TestScript.destination",                                                                                          // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Destination                                                                                                // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Destination = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Destination",                                                                                           // MakerGen.cs:238
+                    Path= "TestScript.destination",                                                                                         // MakerGen.cs:239
+                    Id = "TestScript.destination",                                                                                          // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Destination                                                                                                // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 22. TestScript.metadata
-                this.Element_Metadata = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Metadata",                                                                                              // MakerGen.cs:231
-                    Path= "TestScript.metadata",                                                                                            // MakerGen.cs:232
-                    Id = "TestScript.metadata",                                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Metadata                                                                                                   // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Metadata = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Metadata",                                                                                              // MakerGen.cs:238
+                    Path= "TestScript.metadata",                                                                                            // MakerGen.cs:239
+                    Id = "TestScript.metadata",                                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Metadata                                                                                                   // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 34. TestScript.fixture
-                this.Element_Fixture = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Fixture",                                                                                               // MakerGen.cs:231
-                    Path= "TestScript.fixture",                                                                                             // MakerGen.cs:232
-                    Id = "TestScript.fixture",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Fixture                                                                                                    // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Fixture = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Fixture",                                                                                               // MakerGen.cs:238
+                    Path= "TestScript.fixture",                                                                                             // MakerGen.cs:239
+                    Id = "TestScript.fixture",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Fixture                                                                                                    // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 38. TestScript.profile
-                this.Element_Profile = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Profile",                                                                                               // MakerGen.cs:231
-                    Path= "TestScript.profile",                                                                                             // MakerGen.cs:232
-                    Id = "TestScript.profile",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_Profile = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Profile",                                                                                               // MakerGen.cs:238
+                    Path= "TestScript.profile",                                                                                             // MakerGen.cs:239
+                    Id = "TestScript.profile",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Resource"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 39. TestScript.variable
-                this.Element_Variable = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Variable",                                                                                              // MakerGen.cs:231
-                    Path= "TestScript.variable",                                                                                            // MakerGen.cs:232
-                    Id = "TestScript.variable",                                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Variable                                                                                                   // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Variable = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Variable",                                                                                              // MakerGen.cs:238
+                    Path= "TestScript.variable",                                                                                            // MakerGen.cs:239
+                    Id = "TestScript.variable",                                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Variable                                                                                                   // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 48. TestScript.setup
-                this.Element_Setup = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Setup",                                                                                                 // MakerGen.cs:231
-                    Path= "TestScript.setup",                                                                                               // MakerGen.cs:232
-                    Id = "TestScript.setup",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Setup                                                                                                      // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Setup = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Setup",                                                                                                 // MakerGen.cs:238
+                    Path= "TestScript.setup",                                                                                               // MakerGen.cs:239
+                    Id = "TestScript.setup",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Setup                                                                                                      // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 93. TestScript.test
-                this.Element_Test = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Test",                                                                                                  // MakerGen.cs:231
-                    Path= "TestScript.test",                                                                                                // MakerGen.cs:232
-                    Id = "TestScript.test",                                                                                                 // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Test                                                                                                       // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Test = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Test",                                                                                                  // MakerGen.cs:238
+                    Path= "TestScript.test",                                                                                                // MakerGen.cs:239
+                    Id = "TestScript.test",                                                                                                 // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Test                                                                                                       // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 99. TestScript.teardown
-                this.Element_Teardown = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Teardown",                                                                                              // MakerGen.cs:231
-                    Path= "TestScript.teardown",                                                                                            // MakerGen.cs:232
-                    Id = "TestScript.teardown",                                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Teardown                                                                                                   // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "TestScript";                                                                                                       // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/TestScript";                                                                // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_Teardown = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Teardown",                                                                                              // MakerGen.cs:238
+                    Path= "TestScript.teardown",                                                                                            // MakerGen.cs:239
+                    Id = "TestScript.teardown",                                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Teardown                                                                                                   // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "TestScript";                                                                                                       // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/TestScript";                                                                // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

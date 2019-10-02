@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "ValueSet",
@@ -919,1225 +919,1225 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'ValueSet'
     /// </summary>
     // 0. ValueSet
-    public class Resource_ValueSet : FhirKhit.Maker.Common.Resource.ResourceBase                                                            // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_ValueSet : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                                 // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 17. ValueSet.compose
-        public class Type_Compose : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 20. ValueSet.compose.include
-            public class Type_Include : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 23. ValueSet.compose.include.concept
-                public class Type_Concept : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:376
-                {                                                                                                                           // MakerGen.cs:377
-                    // 26. ValueSet.compose.include.concept.designation
-                    public class Type_Designation : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        // 27. ValueSet.compose.include.concept.designation.language
-                        public ElementDefinitionInfo Element_Language;                                                                      // MakerGen.cs:212
-                        // 28. ValueSet.compose.include.concept.designation.use
-                        public ElementDefinitionInfo Element_Use;                                                                           // MakerGen.cs:212
-                        // 29. ValueSet.compose.include.concept.designation.value
-                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:383
-                        {                                                                                                                   // MakerGen.cs:384
-                            base.Write(sDef);                                                                                               // MakerGen.cs:385
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:386
-                            {                                                                                                               // MakerGen.cs:387
-                                Path = "ValueSet.compose.include.concept.designation",                                                      // MakerGen.cs:388
-                                ElementId = "ValueSet.compose.include.concept.designation"                                                  // MakerGen.cs:389
-                            });                                                                                                             // MakerGen.cs:390
-                            Element_Language.Write(sDef);                                                                                   // MakerGen.cs:216
-                            Element_Use.Write(sDef);                                                                                        // MakerGen.cs:216
-                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:216
-                        }                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                        public Type_Designation()                                                                                           // MakerGen.cs:395
-                        {                                                                                                                   // MakerGen.cs:396
-                            {                                                                                                               // MakerGen.cs:227
-                                // 27. ValueSet.compose.include.concept.designation.language
-                                this.Element_Language = new ElementDefinitionInfo                                                           // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Language",                                                                              // MakerGen.cs:231
-                                    Path= "ValueSet.compose.include.concept.designation.language",                                          // MakerGen.cs:232
-                                    Id = "ValueSet.compose.include.concept.designation.language",                                           // MakerGen.cs:233
-                                    Min = 0,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                  // MakerGen.cs:296
-                                        {                                                                                                   // MakerGen.cs:297
-                                        }                                                                                                   // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                            {                                                                                                               // MakerGen.cs:227
-                                // 28. ValueSet.compose.include.concept.designation.use
-                                this.Element_Use = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Use",                                                                                   // MakerGen.cs:231
-                                    Path= "ValueSet.compose.include.concept.designation.use",                                               // MakerGen.cs:232
-                                    Id = "ValueSet.compose.include.concept.designation.use",                                                // MakerGen.cs:233
-                                    Min = 0,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                       // MakerGen.cs:311
-                                        {                                                                                                   // MakerGen.cs:312
-                                        }                                                                                                   // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                            {                                                                                                               // MakerGen.cs:227
-                                // 29. ValueSet.compose.include.concept.designation.value
-                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Value",                                                                                 // MakerGen.cs:231
-                                    Path= "ValueSet.compose.include.concept.designation.value",                                             // MakerGen.cs:232
-                                    Id = "ValueSet.compose.include.concept.designation.value",                                              // MakerGen.cs:233
-                                    Min = 1,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:296
-                                        {                                                                                                   // MakerGen.cs:297
-                                        }                                                                                                   // MakerGen.cs:300
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                        }                                                                                                                   // MakerGen.cs:398
-                    }                                                                                                                       // MakerGen.cs:400
-                    // 24. ValueSet.compose.include.concept.code
-                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:212
-                    // 25. ValueSet.compose.include.concept.display
-                    public ElementDefinitionInfo Element_Display;                                                                           // MakerGen.cs:212
-                    // 26. ValueSet.compose.include.concept.designation
-                    public ElementDefinitionInfo Element_Designation;                                                                       // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
-                            Path = "ValueSet.compose.include.concept",                                                                      // MakerGen.cs:388
-                            ElementId = "ValueSet.compose.include.concept"                                                                  // MakerGen.cs:389
-                        });                                                                                                                 // MakerGen.cs:390
-                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:216
-                        Element_Display.Write(sDef);                                                                                        // MakerGen.cs:216
-                        Element_Designation.Write(sDef);                                                                                    // MakerGen.cs:216
-                    }                                                                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                    public Type_Concept()                                                                                                   // MakerGen.cs:395
-                    {                                                                                                                       // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 24. ValueSet.compose.include.concept.code
-                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Code",                                                                                      // MakerGen.cs:231
-                                Path= "ValueSet.compose.include.concept.code",                                                              // MakerGen.cs:232
-                                Id = "ValueSet.compose.include.concept.code",                                                               // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 25. ValueSet.compose.include.concept.display
-                            this.Element_Display = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Display",                                                                                   // MakerGen.cs:231
-                                Path= "ValueSet.compose.include.concept.display",                                                           // MakerGen.cs:232
-                                Id = "ValueSet.compose.include.concept.display",                                                            // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 26. ValueSet.compose.include.concept.designation
-                            this.Element_Designation = new ElementDefinitionInfo                                                            // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Designation",                                                                               // MakerGen.cs:231
-                                Path= "ValueSet.compose.include.concept.designation",                                                       // MakerGen.cs:232
-                                Id = "ValueSet.compose.include.concept.designation",                                                        // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = -1,                                                                                                   // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new Type_Designation                                                                                    // MakerGen.cs:255
-                                    {                                                                                                       // MakerGen.cs:256
-                                    }                                                                                                       // MakerGen.cs:257
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                    }                                                                                                                       // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:400
-                // 30. ValueSet.compose.include.filter
-                public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:376
-                {                                                                                                                           // MakerGen.cs:377
-                    // 31. ValueSet.compose.include.filter.property
-                    public ElementDefinitionInfo Element_Property;                                                                          // MakerGen.cs:212
-                    // 32. ValueSet.compose.include.filter.op
-                    public ElementDefinitionInfo Element_Op;                                                                                // MakerGen.cs:212
-                    // 33. ValueSet.compose.include.filter.value
-                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
-                            Path = "ValueSet.compose.include.filter",                                                                       // MakerGen.cs:388
-                            ElementId = "ValueSet.compose.include.filter"                                                                   // MakerGen.cs:389
-                        });                                                                                                                 // MakerGen.cs:390
-                        Element_Property.Write(sDef);                                                                                       // MakerGen.cs:216
-                        Element_Op.Write(sDef);                                                                                             // MakerGen.cs:216
-                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:216
-                    }                                                                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                    public Type_Filter()                                                                                                    // MakerGen.cs:395
-                    {                                                                                                                       // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 31. ValueSet.compose.include.filter.property
-                            this.Element_Property = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Property",                                                                                  // MakerGen.cs:231
-                                Path= "ValueSet.compose.include.filter.property",                                                           // MakerGen.cs:232
-                                Id = "ValueSet.compose.include.filter.property",                                                            // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 32. ValueSet.compose.include.filter.op
-                            this.Element_Op = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Op",                                                                                        // MakerGen.cs:231
-                                Path= "ValueSet.compose.include.filter.op",                                                                 // MakerGen.cs:232
-                                Id = "ValueSet.compose.include.filter.op",                                                                  // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 33. ValueSet.compose.include.filter.value
-                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Value",                                                                                     // MakerGen.cs:231
-                                Path= "ValueSet.compose.include.filter.value",                                                              // MakerGen.cs:232
-                                Id = "ValueSet.compose.include.filter.value",                                                               // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:296
-                                    {                                                                                                       // MakerGen.cs:297
-                                    }                                                                                                       // MakerGen.cs:300
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                    }                                                                                                                       // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:400
-                // 21. ValueSet.compose.include.system
-                public ElementDefinitionInfo Element_System;                                                                                // MakerGen.cs:212
-                // 22. ValueSet.compose.include.version
-                public ElementDefinitionInfo Element_Version;                                                                               // MakerGen.cs:212
-                // 23. ValueSet.compose.include.concept
-                public ElementDefinitionInfo Element_Concept;                                                                               // MakerGen.cs:212
-                // 30. ValueSet.compose.include.filter
-                public ElementDefinitionInfo Element_Filter;                                                                                // MakerGen.cs:212
-                // 34. ValueSet.compose.include.valueSet
-                public ElementDefinitionInfo Element_ValueSet;                                                                              // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "ValueSet.compose.include",                                                                                  // MakerGen.cs:388
-                        ElementId = "ValueSet.compose.include"                                                                              // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_System.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_Version.Write(sDef);                                                                                            // MakerGen.cs:216
-                    Element_Concept.Write(sDef);                                                                                            // MakerGen.cs:216
-                    Element_Filter.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_ValueSet.Write(sDef);                                                                                           // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Include()                                                                                                       // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 21. ValueSet.compose.include.system
-                        this.Element_System = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_System",                                                                                        // MakerGen.cs:231
-                            Path= "ValueSet.compose.include.system",                                                                        // MakerGen.cs:232
-                            Id = "ValueSet.compose.include.system",                                                                         // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 22. ValueSet.compose.include.version
-                        this.Element_Version = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Version",                                                                                       // MakerGen.cs:231
-                            Path= "ValueSet.compose.include.version",                                                                       // MakerGen.cs:232
-                            Id = "ValueSet.compose.include.version",                                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 23. ValueSet.compose.include.concept
-                        this.Element_Concept = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Concept",                                                                                       // MakerGen.cs:231
-                            Path= "ValueSet.compose.include.concept",                                                                       // MakerGen.cs:232
-                            Id = "ValueSet.compose.include.concept",                                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new Type_Concept                                                                                            // MakerGen.cs:255
-                                {                                                                                                           // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:257
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 30. ValueSet.compose.include.filter
-                        this.Element_Filter = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Filter",                                                                                        // MakerGen.cs:231
-                            Path= "ValueSet.compose.include.filter",                                                                        // MakerGen.cs:232
-                            Id = "ValueSet.compose.include.filter",                                                                         // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new Type_Filter                                                                                             // MakerGen.cs:255
-                                {                                                                                                           // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:257
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 34. ValueSet.compose.include.valueSet
-                        this.Element_ValueSet = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_ValueSet",                                                                                      // MakerGen.cs:231
-                            Path= "ValueSet.compose.include.valueSet",                                                                      // MakerGen.cs:232
-                            Id = "ValueSet.compose.include.valueSet",                                                                       // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                    TargetProfile = new String[]                                                                            // MakerGen.cs:299
-                                    {                                                                                                       // CodeEditorExtensions.cs:28
-                                        "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                  // MakerGen.cs:299
-                                    }                                                                                                       // CodeEditorExtensions.cs:34
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 18. ValueSet.compose.lockedDate
-            public ElementDefinitionInfo Element_LockedDate;                                                                                // MakerGen.cs:212
-            // 19. ValueSet.compose.inactive
-            public ElementDefinitionInfo Element_Inactive;                                                                                  // MakerGen.cs:212
-            // 20. ValueSet.compose.include
-            public ElementDefinitionInfo Element_Include;                                                                                   // MakerGen.cs:212
-            // 35. ValueSet.compose.exclude
-            public ElementDefinitionInfo Element_Exclude;                                                                                   // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "ValueSet.compose",                                                                                              // MakerGen.cs:388
-                    ElementId = "ValueSet.compose"                                                                                          // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_LockedDate.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_Inactive.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Include.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Exclude.Write(sDef);                                                                                                // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Compose()                                                                                                           // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 18. ValueSet.compose.lockedDate
-                    this.Element_LockedDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_LockedDate",                                                                                        // MakerGen.cs:231
-                        Path= "ValueSet.compose.lockedDate",                                                                                // MakerGen.cs:232
-                        Id = "ValueSet.compose.lockedDate",                                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 19. ValueSet.compose.inactive
-                    this.Element_Inactive = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Inactive",                                                                                          // MakerGen.cs:231
-                        Path= "ValueSet.compose.inactive",                                                                                  // MakerGen.cs:232
-                        Id = "ValueSet.compose.inactive",                                                                                   // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 20. ValueSet.compose.include
-                    this.Element_Include = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Include",                                                                                           // MakerGen.cs:231
-                        Path= "ValueSet.compose.include",                                                                                   // MakerGen.cs:232
-                        Id = "ValueSet.compose.include",                                                                                    // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Include                                                                                                // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 35. ValueSet.compose.exclude
-                    this.Element_Exclude = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Exclude",                                                                                           // MakerGen.cs:231
-                        Path= "ValueSet.compose.exclude",                                                                                   // MakerGen.cs:232
-                        Id = "ValueSet.compose.exclude",                                                                                    // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 36. ValueSet.expansion
-        public class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 41. ValueSet.expansion.parameter
-            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 42. ValueSet.expansion.parameter.name
-                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:212
-                // 43. ValueSet.expansion.parameter.value[x]
-                public ElementDefinitionInfo Element_Value;                                                                                 // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "ValueSet.expansion.parameter",                                                                              // MakerGen.cs:388
-                        ElementId = "ValueSet.expansion.parameter"                                                                          // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Value.Write(sDef);                                                                                              // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Parameter()                                                                                                     // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 42. ValueSet.expansion.parameter.name
-                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Name",                                                                                          // MakerGen.cs:231
-                            Path= "ValueSet.expansion.parameter.name",                                                                      // MakerGen.cs:232
-                            Id = "ValueSet.expansion.parameter.name",                                                                       // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 43. ValueSet.expansion.parameter.value[x]
-                        this.Element_Value = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Value",                                                                                         // MakerGen.cs:231
-                            Path= "ValueSet.expansion.parameter.value[x]",                                                                  // MakerGen.cs:232
-                            Id = "ValueSet.expansion.parameter.value[x]",                                                                   // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                },                                                                                                          // MakerGen.cs:300
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                },                                                                                                          // MakerGen.cs:300
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                },                                                                                                          // MakerGen.cs:300
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                },                                                                                                          // MakerGen.cs:300
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                },                                                                                                          // MakerGen.cs:300
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                },                                                                                                          // MakerGen.cs:300
-                                new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                      // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 44. ValueSet.expansion.contains
-            public class Type_Contains : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 45. ValueSet.expansion.contains.system
-                public ElementDefinitionInfo Element_System;                                                                                // MakerGen.cs:212
-                // 46. ValueSet.expansion.contains.abstract
-                public ElementDefinitionInfo Element_Abstract;                                                                              // MakerGen.cs:212
-                // 47. ValueSet.expansion.contains.inactive
-                public ElementDefinitionInfo Element_Inactive;                                                                              // MakerGen.cs:212
-                // 48. ValueSet.expansion.contains.version
-                public ElementDefinitionInfo Element_Version;                                                                               // MakerGen.cs:212
-                // 49. ValueSet.expansion.contains.code
-                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:212
-                // 50. ValueSet.expansion.contains.display
-                public ElementDefinitionInfo Element_Display;                                                                               // MakerGen.cs:212
-                // 51. ValueSet.expansion.contains.designation
-                public ElementDefinitionInfo Element_Designation;                                                                           // MakerGen.cs:212
-                // 52. ValueSet.expansion.contains.contains
-                public ElementDefinitionInfo Element_Contains;                                                                              // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "ValueSet.expansion.contains",                                                                               // MakerGen.cs:388
-                        ElementId = "ValueSet.expansion.contains"                                                                           // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_System.Write(sDef);                                                                                             // MakerGen.cs:216
-                    Element_Abstract.Write(sDef);                                                                                           // MakerGen.cs:216
-                    Element_Inactive.Write(sDef);                                                                                           // MakerGen.cs:216
-                    Element_Version.Write(sDef);                                                                                            // MakerGen.cs:216
-                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Display.Write(sDef);                                                                                            // MakerGen.cs:216
-                    Element_Designation.Write(sDef);                                                                                        // MakerGen.cs:216
-                    Element_Contains.Write(sDef);                                                                                           // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Contains()                                                                                                      // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 45. ValueSet.expansion.contains.system
-                        this.Element_System = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_System",                                                                                        // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.system",                                                                     // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.system",                                                                      // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 46. ValueSet.expansion.contains.abstract
-                        this.Element_Abstract = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Abstract",                                                                                      // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.abstract",                                                                   // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.abstract",                                                                    // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 47. ValueSet.expansion.contains.inactive
-                        this.Element_Inactive = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Inactive",                                                                                      // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.inactive",                                                                   // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.inactive",                                                                    // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 48. ValueSet.expansion.contains.version
-                        this.Element_Version = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Version",                                                                                       // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.version",                                                                    // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.version",                                                                     // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 49. ValueSet.expansion.contains.code
-                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Code",                                                                                          // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.code",                                                                       // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.code",                                                                        // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 50. ValueSet.expansion.contains.display
-                        this.Element_Display = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Display",                                                                                       // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.display",                                                                    // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.display",                                                                     // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 51. ValueSet.expansion.contains.designation
-                        this.Element_Designation = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Designation",                                                                                   // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.designation",                                                                // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.designation",                                                                 // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 52. ValueSet.expansion.contains.contains
-                        this.Element_Contains = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Contains",                                                                                      // MakerGen.cs:231
-                            Path= "ValueSet.expansion.contains.contains",                                                                   // MakerGen.cs:232
-                            Id = "ValueSet.expansion.contains.contains",                                                                    // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 37. ValueSet.expansion.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:212
-            // 38. ValueSet.expansion.timestamp
-            public ElementDefinitionInfo Element_Timestamp;                                                                                 // MakerGen.cs:212
-            // 39. ValueSet.expansion.total
-            public ElementDefinitionInfo Element_Total;                                                                                     // MakerGen.cs:212
-            // 40. ValueSet.expansion.offset
-            public ElementDefinitionInfo Element_Offset;                                                                                    // MakerGen.cs:212
-            // 41. ValueSet.expansion.parameter
-            public ElementDefinitionInfo Element_Parameter;                                                                                 // MakerGen.cs:212
-            // 44. ValueSet.expansion.contains
-            public ElementDefinitionInfo Element_Contains;                                                                                  // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "ValueSet.expansion",                                                                                            // MakerGen.cs:388
-                    ElementId = "ValueSet.expansion"                                                                                        // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_Timestamp.Write(sDef);                                                                                              // MakerGen.cs:216
-                Element_Total.Write(sDef);                                                                                                  // MakerGen.cs:216
-                Element_Offset.Write(sDef);                                                                                                 // MakerGen.cs:216
-                Element_Parameter.Write(sDef);                                                                                              // MakerGen.cs:216
-                Element_Contains.Write(sDef);                                                                                               // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Expansion()                                                                                                         // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 37. ValueSet.expansion.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:231
-                        Path= "ValueSet.expansion.identifier",                                                                              // MakerGen.cs:232
-                        Id = "ValueSet.expansion.identifier",                                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 38. ValueSet.expansion.timestamp
-                    this.Element_Timestamp = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Timestamp",                                                                                         // MakerGen.cs:231
-                        Path= "ValueSet.expansion.timestamp",                                                                               // MakerGen.cs:232
-                        Id = "ValueSet.expansion.timestamp",                                                                                // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 39. ValueSet.expansion.total
-                    this.Element_Total = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Total",                                                                                             // MakerGen.cs:231
-                        Path= "ValueSet.expansion.total",                                                                                   // MakerGen.cs:232
-                        Id = "ValueSet.expansion.total",                                                                                    // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 40. ValueSet.expansion.offset
-                    this.Element_Offset = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Offset",                                                                                            // MakerGen.cs:231
-                        Path= "ValueSet.expansion.offset",                                                                                  // MakerGen.cs:232
-                        Id = "ValueSet.expansion.offset",                                                                                   // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 41. ValueSet.expansion.parameter
-                    this.Element_Parameter = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Parameter",                                                                                         // MakerGen.cs:231
-                        Path= "ValueSet.expansion.parameter",                                                                               // MakerGen.cs:232
-                        Id = "ValueSet.expansion.parameter",                                                                                // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Parameter                                                                                              // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 44. ValueSet.expansion.contains
-                    this.Element_Contains = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Contains",                                                                                          // MakerGen.cs:231
-                        Path= "ValueSet.expansion.contains",                                                                                // MakerGen.cs:232
-                        Id = "ValueSet.expansion.contains",                                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Contains                                                                                               // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. ValueSet.url
-        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:212
-        // 2. ValueSet.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
-        // 3. ValueSet.version
-        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:212
-        // 4. ValueSet.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:212
-        // 5. ValueSet.title
-        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:212
-        // 6. ValueSet.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
-        // 7. ValueSet.experimental
-        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:212
-        // 8. ValueSet.date
-        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:212
-        // 9. ValueSet.publisher
-        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:212
-        // 10. ValueSet.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
-        // 11. ValueSet.description
-        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:212
-        // 12. ValueSet.useContext
-        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:212
-        // 13. ValueSet.jurisdiction
-        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:212
-        // 14. ValueSet.immutable
-        public ElementDefinitionInfo Element_Immutable;                                                                                     // MakerGen.cs:212
-        // 15. ValueSet.purpose
-        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:212
-        // 16. ValueSet.copyright
-        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:212
-        // 17. ValueSet.compose
-        public ElementDefinitionInfo Element_Compose;                                                                                       // MakerGen.cs:212
-        // 36. ValueSet.expansion
-        public ElementDefinitionInfo Element_Expansion;                                                                                     // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Compose : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "ValueSet",                                                                                                          // MakerGen.cs:388
-                ElementId = "ValueSet"                                                                                                      // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:216
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:216
-            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Immutable.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:216
-            Element_Compose.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Expansion.Write(sDef);                                                                                                  // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_ValueSet()                                                                                                          // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 20. ValueSet.compose.include
+            public class Type_Include : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 23. ValueSet.compose.include.concept
+                public class Type_Concept : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    // 26. ValueSet.compose.include.concept.designation
+                    public class Type_Designation : FhirKhit.Maker.Common.Complex.ComplexBase                                               // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        // 27. ValueSet.compose.include.concept.designation.language
+                        public ElementDefinitionInfo Element_Language;                                                                      // MakerGen.cs:219
+                        // 28. ValueSet.compose.include.concept.designation.use
+                        public ElementDefinitionInfo Element_Use;                                                                           // MakerGen.cs:219
+                        // 29. ValueSet.compose.include.concept.designation.value
+                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:390
+                        {                                                                                                                   // MakerGen.cs:391
+                            base.Write(sDef);                                                                                               // MakerGen.cs:392
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:393
+                            {                                                                                                               // MakerGen.cs:394
+                                Path = "ValueSet.compose.include.concept.designation",                                                      // MakerGen.cs:395
+                                ElementId = "ValueSet.compose.include.concept.designation"                                                  // MakerGen.cs:396
+                            });                                                                                                             // MakerGen.cs:397
+                            Element_Language.Write(sDef);                                                                                   // MakerGen.cs:223
+                            Element_Use.Write(sDef);                                                                                        // MakerGen.cs:223
+                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:223
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                        public Type_Designation()                                                                                           // MakerGen.cs:402
+                        {                                                                                                                   // MakerGen.cs:403
+                            {                                                                                                               // MakerGen.cs:234
+                                // 27. ValueSet.compose.include.concept.designation.language
+                                this.Element_Language = new ElementDefinitionInfo                                                           // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Language",                                                                              // MakerGen.cs:238
+                                    Path= "ValueSet.compose.include.concept.designation.language",                                          // MakerGen.cs:239
+                                    Id = "ValueSet.compose.include.concept.designation.language",                                           // MakerGen.cs:240
+                                    Min = 0,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                  // MakerGen.cs:303
+                                        {                                                                                                   // MakerGen.cs:304
+                                        }                                                                                                   // MakerGen.cs:307
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                            {                                                                                                               // MakerGen.cs:234
+                                // 28. ValueSet.compose.include.concept.designation.use
+                                this.Element_Use = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Use",                                                                                   // MakerGen.cs:238
+                                    Path= "ValueSet.compose.include.concept.designation.use",                                               // MakerGen.cs:239
+                                    Id = "ValueSet.compose.include.concept.designation.use",                                                // MakerGen.cs:240
+                                    Min = 0,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Complex.Type_Coding                                                       // MakerGen.cs:318
+                                        {                                                                                                   // MakerGen.cs:319
+                                        }                                                                                                   // MakerGen.cs:322
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                            {                                                                                                               // MakerGen.cs:234
+                                // 29. ValueSet.compose.include.concept.designation.value
+                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Value",                                                                                 // MakerGen.cs:238
+                                    Path= "ValueSet.compose.include.concept.designation.value",                                             // MakerGen.cs:239
+                                    Id = "ValueSet.compose.include.concept.designation.value",                                              // MakerGen.cs:240
+                                    Min = 1,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                // MakerGen.cs:303
+                                        {                                                                                                   // MakerGen.cs:304
+                                        }                                                                                                   // MakerGen.cs:307
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                        }                                                                                                                   // MakerGen.cs:405
+                    }                                                                                                                       // MakerGen.cs:407
+                    // 24. ValueSet.compose.include.concept.code
+                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:219
+                    // 25. ValueSet.compose.include.concept.display
+                    public ElementDefinitionInfo Element_Display;                                                                           // MakerGen.cs:219
+                    // 26. ValueSet.compose.include.concept.designation
+                    public ElementDefinitionInfo Element_Designation;                                                                       // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
+                    {                                                                                                                       // MakerGen.cs:391
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
+                            Path = "ValueSet.compose.include.concept",                                                                      // MakerGen.cs:395
+                            ElementId = "ValueSet.compose.include.concept"                                                                  // MakerGen.cs:396
+                        });                                                                                                                 // MakerGen.cs:397
+                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:223
+                        Element_Display.Write(sDef);                                                                                        // MakerGen.cs:223
+                        Element_Designation.Write(sDef);                                                                                    // MakerGen.cs:223
+                    }                                                                                                                       // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                    public Type_Concept()                                                                                                   // MakerGen.cs:402
+                    {                                                                                                                       // MakerGen.cs:403
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 24. ValueSet.compose.include.concept.code
+                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Code",                                                                                      // MakerGen.cs:238
+                                Path= "ValueSet.compose.include.concept.code",                                                              // MakerGen.cs:239
+                                Id = "ValueSet.compose.include.concept.code",                                                               // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 25. ValueSet.compose.include.concept.display
+                            this.Element_Display = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Display",                                                                                   // MakerGen.cs:238
+                                Path= "ValueSet.compose.include.concept.display",                                                           // MakerGen.cs:239
+                                Id = "ValueSet.compose.include.concept.display",                                                            // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 26. ValueSet.compose.include.concept.designation
+                            this.Element_Designation = new ElementDefinitionInfo                                                            // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Designation",                                                                               // MakerGen.cs:238
+                                Path= "ValueSet.compose.include.concept.designation",                                                       // MakerGen.cs:239
+                                Id = "ValueSet.compose.include.concept.designation",                                                        // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = -1,                                                                                                   // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new Type_Designation                                                                                    // MakerGen.cs:262
+                                    {                                                                                                       // MakerGen.cs:263
+                                    }                                                                                                       // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:407
+                // 30. ValueSet.compose.include.filter
+                public class Type_Filter : FhirKhit.Maker.Common.Complex.ComplexBase                                                        // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    // 31. ValueSet.compose.include.filter.property
+                    public ElementDefinitionInfo Element_Property;                                                                          // MakerGen.cs:219
+                    // 32. ValueSet.compose.include.filter.op
+                    public ElementDefinitionInfo Element_Op;                                                                                // MakerGen.cs:219
+                    // 33. ValueSet.compose.include.filter.value
+                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
+                    {                                                                                                                       // MakerGen.cs:391
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
+                            Path = "ValueSet.compose.include.filter",                                                                       // MakerGen.cs:395
+                            ElementId = "ValueSet.compose.include.filter"                                                                   // MakerGen.cs:396
+                        });                                                                                                                 // MakerGen.cs:397
+                        Element_Property.Write(sDef);                                                                                       // MakerGen.cs:223
+                        Element_Op.Write(sDef);                                                                                             // MakerGen.cs:223
+                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:223
+                    }                                                                                                                       // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                    public Type_Filter()                                                                                                    // MakerGen.cs:402
+                    {                                                                                                                       // MakerGen.cs:403
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 31. ValueSet.compose.include.filter.property
+                            this.Element_Property = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Property",                                                                                  // MakerGen.cs:238
+                                Path= "ValueSet.compose.include.filter.property",                                                           // MakerGen.cs:239
+                                Id = "ValueSet.compose.include.filter.property",                                                            // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 32. ValueSet.compose.include.filter.op
+                            this.Element_Op = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Op",                                                                                        // MakerGen.cs:238
+                                Path= "ValueSet.compose.include.filter.op",                                                                 // MakerGen.cs:239
+                                Id = "ValueSet.compose.include.filter.op",                                                                  // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                      // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 33. ValueSet.compose.include.filter.value
+                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Value",                                                                                     // MakerGen.cs:238
+                                Path= "ValueSet.compose.include.filter.value",                                                              // MakerGen.cs:239
+                                Id = "ValueSet.compose.include.filter.value",                                                               // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Primitive.Primitive_String                                                    // MakerGen.cs:303
+                                    {                                                                                                       // MakerGen.cs:304
+                                    }                                                                                                       // MakerGen.cs:307
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:407
+                // 21. ValueSet.compose.include.system
+                public ElementDefinitionInfo Element_System;                                                                                // MakerGen.cs:219
+                // 22. ValueSet.compose.include.version
+                public ElementDefinitionInfo Element_Version;                                                                               // MakerGen.cs:219
+                // 23. ValueSet.compose.include.concept
+                public ElementDefinitionInfo Element_Concept;                                                                               // MakerGen.cs:219
+                // 30. ValueSet.compose.include.filter
+                public ElementDefinitionInfo Element_Filter;                                                                                // MakerGen.cs:219
+                // 34. ValueSet.compose.include.valueSet
+                public ElementDefinitionInfo Element_ValueSet;                                                                              // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "ValueSet.compose.include",                                                                                  // MakerGen.cs:395
+                        ElementId = "ValueSet.compose.include"                                                                              // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_System.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_Version.Write(sDef);                                                                                            // MakerGen.cs:223
+                    Element_Concept.Write(sDef);                                                                                            // MakerGen.cs:223
+                    Element_Filter.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_ValueSet.Write(sDef);                                                                                           // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Include()                                                                                                       // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 21. ValueSet.compose.include.system
+                        this.Element_System = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_System",                                                                                        // MakerGen.cs:238
+                            Path= "ValueSet.compose.include.system",                                                                        // MakerGen.cs:239
+                            Id = "ValueSet.compose.include.system",                                                                         // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 22. ValueSet.compose.include.version
+                        this.Element_Version = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Version",                                                                                       // MakerGen.cs:238
+                            Path= "ValueSet.compose.include.version",                                                                       // MakerGen.cs:239
+                            Id = "ValueSet.compose.include.version",                                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 23. ValueSet.compose.include.concept
+                        this.Element_Concept = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Concept",                                                                                       // MakerGen.cs:238
+                            Path= "ValueSet.compose.include.concept",                                                                       // MakerGen.cs:239
+                            Id = "ValueSet.compose.include.concept",                                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new Type_Concept                                                                                            // MakerGen.cs:262
+                                {                                                                                                           // MakerGen.cs:263
+                                }                                                                                                           // MakerGen.cs:264
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 30. ValueSet.compose.include.filter
+                        this.Element_Filter = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Filter",                                                                                        // MakerGen.cs:238
+                            Path= "ValueSet.compose.include.filter",                                                                        // MakerGen.cs:239
+                            Id = "ValueSet.compose.include.filter",                                                                         // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new Type_Filter                                                                                             // MakerGen.cs:262
+                                {                                                                                                           // MakerGen.cs:263
+                                }                                                                                                           // MakerGen.cs:264
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 34. ValueSet.compose.include.valueSet
+                        this.Element_ValueSet = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_ValueSet",                                                                                      // MakerGen.cs:238
+                            Path= "ValueSet.compose.include.valueSet",                                                                      // MakerGen.cs:239
+                            Id = "ValueSet.compose.include.valueSet",                                                                       // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Canonical                                                     // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                    TargetProfile = new String[]                                                                            // MakerGen.cs:306
+                                    {                                                                                                       // CodeEditorExtensions.cs:28
+                                        "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                  // MakerGen.cs:306
+                                    }                                                                                                       // CodeEditorExtensions.cs:34
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 18. ValueSet.compose.lockedDate
+            public ElementDefinitionInfo Element_LockedDate;                                                                                // MakerGen.cs:219
+            // 19. ValueSet.compose.inactive
+            public ElementDefinitionInfo Element_Inactive;                                                                                  // MakerGen.cs:219
+            // 20. ValueSet.compose.include
+            public ElementDefinitionInfo Element_Include;                                                                                   // MakerGen.cs:219
+            // 35. ValueSet.compose.exclude
+            public ElementDefinitionInfo Element_Exclude;                                                                                   // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "ValueSet.compose",                                                                                              // MakerGen.cs:395
+                    ElementId = "ValueSet.compose"                                                                                          // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_LockedDate.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_Inactive.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Include.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Exclude.Write(sDef);                                                                                                // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Compose()                                                                                                           // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 18. ValueSet.compose.lockedDate
+                    this.Element_LockedDate = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_LockedDate",                                                                                        // MakerGen.cs:238
+                        Path= "ValueSet.compose.lockedDate",                                                                                // MakerGen.cs:239
+                        Id = "ValueSet.compose.lockedDate",                                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Date                                                              // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 19. ValueSet.compose.inactive
+                    this.Element_Inactive = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Inactive",                                                                                          // MakerGen.cs:238
+                        Path= "ValueSet.compose.inactive",                                                                                  // MakerGen.cs:239
+                        Id = "ValueSet.compose.inactive",                                                                                   // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 20. ValueSet.compose.include
+                    this.Element_Include = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Include",                                                                                           // MakerGen.cs:238
+                        Path= "ValueSet.compose.include",                                                                                   // MakerGen.cs:239
+                        Id = "ValueSet.compose.include",                                                                                    // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Include                                                                                                // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 35. ValueSet.compose.exclude
+                    this.Element_Exclude = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Exclude",                                                                                           // MakerGen.cs:238
+                        Path= "ValueSet.compose.exclude",                                                                                   // MakerGen.cs:239
+                        Id = "ValueSet.compose.exclude",                                                                                    // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 36. ValueSet.expansion
+        public class Type_Expansion : FhirKhit.Maker.Common.Complex.ComplexBase                                                             // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 41. ValueSet.expansion.parameter
+            public class Type_Parameter : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 42. ValueSet.expansion.parameter.name
+                public ElementDefinitionInfo Element_Name;                                                                                  // MakerGen.cs:219
+                // 43. ValueSet.expansion.parameter.value[x]
+                public ElementDefinitionInfo Element_Value;                                                                                 // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "ValueSet.expansion.parameter",                                                                              // MakerGen.cs:395
+                        ElementId = "ValueSet.expansion.parameter"                                                                          // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Name.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Value.Write(sDef);                                                                                              // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Parameter()                                                                                                     // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 42. ValueSet.expansion.parameter.name
+                        this.Element_Name = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Name",                                                                                          // MakerGen.cs:238
+                            Path= "ValueSet.expansion.parameter.name",                                                                      // MakerGen.cs:239
+                            Id = "ValueSet.expansion.parameter.name",                                                                       // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 43. ValueSet.expansion.parameter.value[x]
+                        this.Element_Value = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Value",                                                                                         // MakerGen.cs:238
+                            Path= "ValueSet.expansion.parameter.value[x]",                                                                  // MakerGen.cs:239
+                            Id = "ValueSet.expansion.parameter.value[x]",                                                                   // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                },                                                                                                          // MakerGen.cs:307
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                },                                                                                                          // MakerGen.cs:307
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                },                                                                                                          // MakerGen.cs:307
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                },                                                                                                          // MakerGen.cs:307
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                },                                                                                                          // MakerGen.cs:307
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                },                                                                                                          // MakerGen.cs:307
+                                new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                      // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 44. ValueSet.expansion.contains
+            public class Type_Contains : FhirKhit.Maker.Common.Complex.ComplexBase                                                          // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 45. ValueSet.expansion.contains.system
+                public ElementDefinitionInfo Element_System;                                                                                // MakerGen.cs:219
+                // 46. ValueSet.expansion.contains.abstract
+                public ElementDefinitionInfo Element_Abstract;                                                                              // MakerGen.cs:219
+                // 47. ValueSet.expansion.contains.inactive
+                public ElementDefinitionInfo Element_Inactive;                                                                              // MakerGen.cs:219
+                // 48. ValueSet.expansion.contains.version
+                public ElementDefinitionInfo Element_Version;                                                                               // MakerGen.cs:219
+                // 49. ValueSet.expansion.contains.code
+                public ElementDefinitionInfo Element_Code;                                                                                  // MakerGen.cs:219
+                // 50. ValueSet.expansion.contains.display
+                public ElementDefinitionInfo Element_Display;                                                                               // MakerGen.cs:219
+                // 51. ValueSet.expansion.contains.designation
+                public ElementDefinitionInfo Element_Designation;                                                                           // MakerGen.cs:219
+                // 52. ValueSet.expansion.contains.contains
+                public ElementDefinitionInfo Element_Contains;                                                                              // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "ValueSet.expansion.contains",                                                                               // MakerGen.cs:395
+                        ElementId = "ValueSet.expansion.contains"                                                                           // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_System.Write(sDef);                                                                                             // MakerGen.cs:223
+                    Element_Abstract.Write(sDef);                                                                                           // MakerGen.cs:223
+                    Element_Inactive.Write(sDef);                                                                                           // MakerGen.cs:223
+                    Element_Version.Write(sDef);                                                                                            // MakerGen.cs:223
+                    Element_Code.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Display.Write(sDef);                                                                                            // MakerGen.cs:223
+                    Element_Designation.Write(sDef);                                                                                        // MakerGen.cs:223
+                    Element_Contains.Write(sDef);                                                                                           // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Contains()                                                                                                      // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 45. ValueSet.expansion.contains.system
+                        this.Element_System = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_System",                                                                                        // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.system",                                                                     // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.system",                                                                      // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                           // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 46. ValueSet.expansion.contains.abstract
+                        this.Element_Abstract = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Abstract",                                                                                      // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.abstract",                                                                   // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.abstract",                                                                    // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 47. ValueSet.expansion.contains.inactive
+                        this.Element_Inactive = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Inactive",                                                                                      // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.inactive",                                                                   // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.inactive",                                                                    // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                       // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 48. ValueSet.expansion.contains.version
+                        this.Element_Version = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Version",                                                                                       // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.version",                                                                    // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.version",                                                                     // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 49. ValueSet.expansion.contains.code
+                        this.Element_Code = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Code",                                                                                          // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.code",                                                                       // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.code",                                                                        // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                          // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 50. ValueSet.expansion.contains.display
+                        this.Element_Display = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Display",                                                                                       // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.display",                                                                    // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.display",                                                                     // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 51. ValueSet.expansion.contains.designation
+                        this.Element_Designation = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Designation",                                                                                   // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.designation",                                                                // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.designation",                                                                 // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 52. ValueSet.expansion.contains.contains
+                        this.Element_Contains = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Contains",                                                                                      // MakerGen.cs:238
+                            Path= "ValueSet.expansion.contains.contains",                                                                   // MakerGen.cs:239
+                            Id = "ValueSet.expansion.contains.contains",                                                                    // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 37. ValueSet.expansion.identifier
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:219
+            // 38. ValueSet.expansion.timestamp
+            public ElementDefinitionInfo Element_Timestamp;                                                                                 // MakerGen.cs:219
+            // 39. ValueSet.expansion.total
+            public ElementDefinitionInfo Element_Total;                                                                                     // MakerGen.cs:219
+            // 40. ValueSet.expansion.offset
+            public ElementDefinitionInfo Element_Offset;                                                                                    // MakerGen.cs:219
+            // 41. ValueSet.expansion.parameter
+            public ElementDefinitionInfo Element_Parameter;                                                                                 // MakerGen.cs:219
+            // 44. ValueSet.expansion.contains
+            public ElementDefinitionInfo Element_Contains;                                                                                  // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "ValueSet.expansion",                                                                                            // MakerGen.cs:395
+                    ElementId = "ValueSet.expansion"                                                                                        // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_Timestamp.Write(sDef);                                                                                              // MakerGen.cs:223
+                Element_Total.Write(sDef);                                                                                                  // MakerGen.cs:223
+                Element_Offset.Write(sDef);                                                                                                 // MakerGen.cs:223
+                Element_Parameter.Write(sDef);                                                                                              // MakerGen.cs:223
+                Element_Contains.Write(sDef);                                                                                               // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Expansion()                                                                                                         // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 37. ValueSet.expansion.identifier
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:238
+                        Path= "ValueSet.expansion.identifier",                                                                              // MakerGen.cs:239
+                        Id = "ValueSet.expansion.identifier",                                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                               // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 38. ValueSet.expansion.timestamp
+                    this.Element_Timestamp = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Timestamp",                                                                                         // MakerGen.cs:238
+                        Path= "ValueSet.expansion.timestamp",                                                                               // MakerGen.cs:239
+                        Id = "ValueSet.expansion.timestamp",                                                                                // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                          // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 39. ValueSet.expansion.total
+                    this.Element_Total = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Total",                                                                                             // MakerGen.cs:238
+                        Path= "ValueSet.expansion.total",                                                                                   // MakerGen.cs:239
+                        Id = "ValueSet.expansion.total",                                                                                    // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 40. ValueSet.expansion.offset
+                    this.Element_Offset = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Offset",                                                                                            // MakerGen.cs:238
+                        Path= "ValueSet.expansion.offset",                                                                                  // MakerGen.cs:239
+                        Id = "ValueSet.expansion.offset",                                                                                   // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 41. ValueSet.expansion.parameter
+                    this.Element_Parameter = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Parameter",                                                                                         // MakerGen.cs:238
+                        Path= "ValueSet.expansion.parameter",                                                                               // MakerGen.cs:239
+                        Id = "ValueSet.expansion.parameter",                                                                                // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Parameter                                                                                              // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 44. ValueSet.expansion.contains
+                    this.Element_Contains = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Contains",                                                                                          // MakerGen.cs:238
+                        Path= "ValueSet.expansion.contains",                                                                                // MakerGen.cs:239
+                        Id = "ValueSet.expansion.contains",                                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Contains                                                                                               // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. ValueSet.url
+        public ElementDefinitionInfo Element_Url;                                                                                           // MakerGen.cs:219
+        // 2. ValueSet.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        // 3. ValueSet.version
+        public ElementDefinitionInfo Element_Version;                                                                                       // MakerGen.cs:219
+        // 4. ValueSet.name
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        // 5. ValueSet.title
+        public ElementDefinitionInfo Element_Title;                                                                                         // MakerGen.cs:219
+        // 6. ValueSet.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        // 7. ValueSet.experimental
+        public ElementDefinitionInfo Element_Experimental;                                                                                  // MakerGen.cs:219
+        // 8. ValueSet.date
+        public ElementDefinitionInfo Element_Date;                                                                                          // MakerGen.cs:219
+        // 9. ValueSet.publisher
+        public ElementDefinitionInfo Element_Publisher;                                                                                     // MakerGen.cs:219
+        // 10. ValueSet.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        // 11. ValueSet.description
+        public ElementDefinitionInfo Element_Description;                                                                                   // MakerGen.cs:219
+        // 12. ValueSet.useContext
+        public ElementDefinitionInfo Element_UseContext;                                                                                    // MakerGen.cs:219
+        // 13. ValueSet.jurisdiction
+        public ElementDefinitionInfo Element_Jurisdiction;                                                                                  // MakerGen.cs:219
+        // 14. ValueSet.immutable
+        public ElementDefinitionInfo Element_Immutable;                                                                                     // MakerGen.cs:219
+        // 15. ValueSet.purpose
+        public ElementDefinitionInfo Element_Purpose;                                                                                       // MakerGen.cs:219
+        // 16. ValueSet.copyright
+        public ElementDefinitionInfo Element_Copyright;                                                                                     // MakerGen.cs:219
+        // 17. ValueSet.compose
+        public ElementDefinitionInfo Element_Compose;                                                                                       // MakerGen.cs:219
+        // 36. ValueSet.expansion
+        public ElementDefinitionInfo Element_Expansion;                                                                                     // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "ValueSet",                                                                                                          // MakerGen.cs:395
+                ElementId = "ValueSet"                                                                                                      // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Url.Write(sDef);                                                                                                        // MakerGen.cs:223
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Version.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Title.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_Experimental.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Date.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Publisher.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Description.Write(sDef);                                                                                                // MakerGen.cs:223
+            Element_UseContext.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Jurisdiction.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Immutable.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Purpose.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Copyright.Write(sDef);                                                                                                  // MakerGen.cs:223
+            Element_Compose.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Expansion.Write(sDef);                                                                                                  // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_ValueSet()                                                                                                          // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. ValueSet.url
-                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Url",                                                                                                   // MakerGen.cs:231
-                    Path= "ValueSet.url",                                                                                                   // MakerGen.cs:232
-                    Id = "ValueSet.url",                                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Url = new ElementDefinitionInfo                                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Url",                                                                                                   // MakerGen.cs:238
+                    Path= "ValueSet.url",                                                                                                   // MakerGen.cs:239
+                    Id = "ValueSet.url",                                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Uri                                                                   // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. ValueSet.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
-                    Path= "ValueSet.identifier",                                                                                            // MakerGen.cs:232
-                    Id = "ValueSet.identifier",                                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
+                    Path= "ValueSet.identifier",                                                                                            // MakerGen.cs:239
+                    Id = "ValueSet.identifier",                                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. ValueSet.version
-                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Version",                                                                                               // MakerGen.cs:231
-                    Path= "ValueSet.version",                                                                                               // MakerGen.cs:232
-                    Id = "ValueSet.version",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Version = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Version",                                                                                               // MakerGen.cs:238
+                    Path= "ValueSet.version",                                                                                               // MakerGen.cs:239
+                    Id = "ValueSet.version",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. ValueSet.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:231
-                    Path= "ValueSet.name",                                                                                                  // MakerGen.cs:232
-                    Id = "ValueSet.name",                                                                                                   // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
+                    Path= "ValueSet.name",                                                                                                  // MakerGen.cs:239
+                    Id = "ValueSet.name",                                                                                                   // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. ValueSet.title
-                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Title",                                                                                                 // MakerGen.cs:231
-                    Path= "ValueSet.title",                                                                                                 // MakerGen.cs:232
-                    Id = "ValueSet.title",                                                                                                  // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Title = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Title",                                                                                                 // MakerGen.cs:238
+                    Path= "ValueSet.title",                                                                                                 // MakerGen.cs:239
+                    Id = "ValueSet.title",                                                                                                  // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 6. ValueSet.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
-                    Path= "ValueSet.status",                                                                                                // MakerGen.cs:232
-                    Id = "ValueSet.status",                                                                                                 // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
+                    Path= "ValueSet.status",                                                                                                // MakerGen.cs:239
+                    Id = "ValueSet.status",                                                                                                 // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 7. ValueSet.experimental
-                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:231
-                    Path= "ValueSet.experimental",                                                                                          // MakerGen.cs:232
-                    Id = "ValueSet.experimental",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Experimental = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Experimental",                                                                                          // MakerGen.cs:238
+                    Path= "ValueSet.experimental",                                                                                          // MakerGen.cs:239
+                    Id = "ValueSet.experimental",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 8. ValueSet.date
-                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Date",                                                                                                  // MakerGen.cs:231
-                    Path= "ValueSet.date",                                                                                                  // MakerGen.cs:232
-                    Id = "ValueSet.date",                                                                                                   // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Date = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Date",                                                                                                  // MakerGen.cs:238
+                    Path= "ValueSet.date",                                                                                                  // MakerGen.cs:239
+                    Id = "ValueSet.date",                                                                                                   // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_DateTime                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 9. ValueSet.publisher
-                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:231
-                    Path= "ValueSet.publisher",                                                                                             // MakerGen.cs:232
-                    Id = "ValueSet.publisher",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Publisher = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Publisher",                                                                                             // MakerGen.cs:238
+                    Path= "ValueSet.publisher",                                                                                             // MakerGen.cs:239
+                    Id = "ValueSet.publisher",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 10. ValueSet.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
-                    Path= "ValueSet.contact",                                                                                               // MakerGen.cs:232
-                    Id = "ValueSet.contact",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
+                    Path= "ValueSet.contact",                                                                                               // MakerGen.cs:239
+                    Id = "ValueSet.contact",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_ContactDetail                                                                // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 11. ValueSet.description
-                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Description",                                                                                           // MakerGen.cs:231
-                    Path= "ValueSet.description",                                                                                           // MakerGen.cs:232
-                    Id = "ValueSet.description",                                                                                            // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Description = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Description",                                                                                           // MakerGen.cs:238
+                    Path= "ValueSet.description",                                                                                           // MakerGen.cs:239
+                    Id = "ValueSet.description",                                                                                            // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 12. ValueSet.useContext
-                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:231
-                    Path= "ValueSet.useContext",                                                                                            // MakerGen.cs:232
-                    Id = "ValueSet.useContext",                                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_UseContext = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_UseContext",                                                                                            // MakerGen.cs:238
+                    Path= "ValueSet.useContext",                                                                                            // MakerGen.cs:239
+                    Id = "ValueSet.useContext",                                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_UsageContext                                                                 // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 13. ValueSet.jurisdiction
-                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:231
-                    Path= "ValueSet.jurisdiction",                                                                                          // MakerGen.cs:232
-                    Id = "ValueSet.jurisdiction",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Jurisdiction = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Jurisdiction",                                                                                          // MakerGen.cs:238
+                    Path= "ValueSet.jurisdiction",                                                                                          // MakerGen.cs:239
+                    Id = "ValueSet.jurisdiction",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 14. ValueSet.immutable
-                this.Element_Immutable = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Immutable",                                                                                             // MakerGen.cs:231
-                    Path= "ValueSet.immutable",                                                                                             // MakerGen.cs:232
-                    Id = "ValueSet.immutable",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Immutable = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Immutable",                                                                                             // MakerGen.cs:238
+                    Path= "ValueSet.immutable",                                                                                             // MakerGen.cs:239
+                    Id = "ValueSet.immutable",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 15. ValueSet.purpose
-                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:231
-                    Path= "ValueSet.purpose",                                                                                               // MakerGen.cs:232
-                    Id = "ValueSet.purpose",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Purpose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Purpose",                                                                                               // MakerGen.cs:238
+                    Path= "ValueSet.purpose",                                                                                               // MakerGen.cs:239
+                    Id = "ValueSet.purpose",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 16. ValueSet.copyright
-                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:231
-                    Path= "ValueSet.copyright",                                                                                             // MakerGen.cs:232
-                    Id = "ValueSet.copyright",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Copyright = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Copyright",                                                                                             // MakerGen.cs:238
+                    Path= "ValueSet.copyright",                                                                                             // MakerGen.cs:239
+                    Id = "ValueSet.copyright",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Markdown                                                              // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 17. ValueSet.compose
-                this.Element_Compose = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Compose",                                                                                               // MakerGen.cs:231
-                    Path= "ValueSet.compose",                                                                                               // MakerGen.cs:232
-                    Id = "ValueSet.compose",                                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Compose                                                                                                    // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Compose = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Compose",                                                                                               // MakerGen.cs:238
+                    Path= "ValueSet.compose",                                                                                               // MakerGen.cs:239
+                    Id = "ValueSet.compose",                                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Compose                                                                                                    // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 36. ValueSet.expansion
-                this.Element_Expansion = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Expansion",                                                                                             // MakerGen.cs:231
-                    Path= "ValueSet.expansion",                                                                                             // MakerGen.cs:232
-                    Id = "ValueSet.expansion",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Expansion                                                                                                  // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "ValueSet";                                                                                                         // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ValueSet";                                                                  // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_Expansion = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Expansion",                                                                                             // MakerGen.cs:238
+                    Path= "ValueSet.expansion",                                                                                             // MakerGen.cs:239
+                    Id = "ValueSet.expansion",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Expansion                                                                                                  // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "ValueSet";                                                                                                         // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ValueSet";                                                                  // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

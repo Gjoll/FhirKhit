@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "SubstanceProtein",
@@ -205,286 +205,286 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'SubstanceProtein'
     /// </summary>
     // 0. SubstanceProtein
-    public class Resource_SubstanceProtein : FhirKhit.Maker.Common.Resource.ResourceBase                                                    // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_SubstanceProtein : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                         // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 4. SubstanceProtein.subunit
-        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 5. SubstanceProtein.subunit.subunit
-            public ElementDefinitionInfo Element_Subunit;                                                                                   // MakerGen.cs:212
-            // 6. SubstanceProtein.subunit.sequence
-            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:212
-            // 7. SubstanceProtein.subunit.length
-            public ElementDefinitionInfo Element_Length;                                                                                    // MakerGen.cs:212
-            // 8. SubstanceProtein.subunit.sequenceAttachment
-            public ElementDefinitionInfo Element_SequenceAttachment;                                                                        // MakerGen.cs:212
-            // 9. SubstanceProtein.subunit.nTerminalModificationId
-            public ElementDefinitionInfo Element_NTerminalModificationId;                                                                   // MakerGen.cs:212
-            // 10. SubstanceProtein.subunit.nTerminalModification
-            public ElementDefinitionInfo Element_NTerminalModification;                                                                     // MakerGen.cs:212
-            // 11. SubstanceProtein.subunit.cTerminalModificationId
-            public ElementDefinitionInfo Element_CTerminalModificationId;                                                                   // MakerGen.cs:212
-            // 12. SubstanceProtein.subunit.cTerminalModification
-            public ElementDefinitionInfo Element_CTerminalModification;                                                                     // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "SubstanceProtein.subunit",                                                                                      // MakerGen.cs:388
-                    ElementId = "SubstanceProtein.subunit"                                                                                  // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Subunit.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Length.Write(sDef);                                                                                                 // MakerGen.cs:216
-                Element_SequenceAttachment.Write(sDef);                                                                                     // MakerGen.cs:216
-                Element_NTerminalModificationId.Write(sDef);                                                                                // MakerGen.cs:216
-                Element_NTerminalModification.Write(sDef);                                                                                  // MakerGen.cs:216
-                Element_CTerminalModificationId.Write(sDef);                                                                                // MakerGen.cs:216
-                Element_CTerminalModification.Write(sDef);                                                                                  // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Subunit()                                                                                                           // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 5. SubstanceProtein.subunit.subunit
-                    this.Element_Subunit = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Subunit",                                                                                           // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.subunit",                                                                           // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.subunit",                                                                            // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 6. SubstanceProtein.subunit.sequence
-                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.sequence",                                                                          // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.sequence",                                                                           // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 7. SubstanceProtein.subunit.length
-                    this.Element_Length = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Length",                                                                                            // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.length",                                                                            // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.length",                                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 8. SubstanceProtein.subunit.sequenceAttachment
-                    this.Element_SequenceAttachment = new ElementDefinitionInfo                                                             // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_SequenceAttachment",                                                                                // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.sequenceAttachment",                                                                // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.sequenceAttachment",                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 9. SubstanceProtein.subunit.nTerminalModificationId
-                    this.Element_NTerminalModificationId = new ElementDefinitionInfo                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_NTerminalModificationId",                                                                           // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.nTerminalModificationId",                                                           // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.nTerminalModificationId",                                                            // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 10. SubstanceProtein.subunit.nTerminalModification
-                    this.Element_NTerminalModification = new ElementDefinitionInfo                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_NTerminalModification",                                                                             // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.nTerminalModification",                                                             // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.nTerminalModification",                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 11. SubstanceProtein.subunit.cTerminalModificationId
-                    this.Element_CTerminalModificationId = new ElementDefinitionInfo                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_CTerminalModificationId",                                                                           // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.cTerminalModificationId",                                                           // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.cTerminalModificationId",                                                            // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 12. SubstanceProtein.subunit.cTerminalModification
-                    this.Element_CTerminalModification = new ElementDefinitionInfo                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_CTerminalModification",                                                                             // MakerGen.cs:231
-                        Path= "SubstanceProtein.subunit.cTerminalModification",                                                             // MakerGen.cs:232
-                        Id = "SubstanceProtein.subunit.cTerminalModification",                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. SubstanceProtein.sequenceType
-        public ElementDefinitionInfo Element_SequenceType;                                                                                  // MakerGen.cs:212
-        // 2. SubstanceProtein.numberOfSubunits
-        public ElementDefinitionInfo Element_NumberOfSubunits;                                                                              // MakerGen.cs:212
-        // 3. SubstanceProtein.disulfideLinkage
-        public ElementDefinitionInfo Element_DisulfideLinkage;                                                                              // MakerGen.cs:212
-        // 4. SubstanceProtein.subunit
-        public ElementDefinitionInfo Element_Subunit;                                                                                       // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Subunit : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "SubstanceProtein",                                                                                                  // MakerGen.cs:388
-                ElementId = "SubstanceProtein"                                                                                              // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_SequenceType.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_NumberOfSubunits.Write(sDef);                                                                                           // MakerGen.cs:216
-            Element_DisulfideLinkage.Write(sDef);                                                                                           // MakerGen.cs:216
-            Element_Subunit.Write(sDef);                                                                                                    // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_SubstanceProtein()                                                                                                  // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 5. SubstanceProtein.subunit.subunit
+            public ElementDefinitionInfo Element_Subunit;                                                                                   // MakerGen.cs:219
+            // 6. SubstanceProtein.subunit.sequence
+            public ElementDefinitionInfo Element_Sequence;                                                                                  // MakerGen.cs:219
+            // 7. SubstanceProtein.subunit.length
+            public ElementDefinitionInfo Element_Length;                                                                                    // MakerGen.cs:219
+            // 8. SubstanceProtein.subunit.sequenceAttachment
+            public ElementDefinitionInfo Element_SequenceAttachment;                                                                        // MakerGen.cs:219
+            // 9. SubstanceProtein.subunit.nTerminalModificationId
+            public ElementDefinitionInfo Element_NTerminalModificationId;                                                                   // MakerGen.cs:219
+            // 10. SubstanceProtein.subunit.nTerminalModification
+            public ElementDefinitionInfo Element_NTerminalModification;                                                                     // MakerGen.cs:219
+            // 11. SubstanceProtein.subunit.cTerminalModificationId
+            public ElementDefinitionInfo Element_CTerminalModificationId;                                                                   // MakerGen.cs:219
+            // 12. SubstanceProtein.subunit.cTerminalModification
+            public ElementDefinitionInfo Element_CTerminalModification;                                                                     // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "SubstanceProtein.subunit",                                                                                      // MakerGen.cs:395
+                    ElementId = "SubstanceProtein.subunit"                                                                                  // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Subunit.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Sequence.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Length.Write(sDef);                                                                                                 // MakerGen.cs:223
+                Element_SequenceAttachment.Write(sDef);                                                                                     // MakerGen.cs:223
+                Element_NTerminalModificationId.Write(sDef);                                                                                // MakerGen.cs:223
+                Element_NTerminalModification.Write(sDef);                                                                                  // MakerGen.cs:223
+                Element_CTerminalModificationId.Write(sDef);                                                                                // MakerGen.cs:223
+                Element_CTerminalModification.Write(sDef);                                                                                  // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Subunit()                                                                                                           // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 5. SubstanceProtein.subunit.subunit
+                    this.Element_Subunit = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Subunit",                                                                                           // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.subunit",                                                                           // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.subunit",                                                                            // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 6. SubstanceProtein.subunit.sequence
+                    this.Element_Sequence = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Sequence",                                                                                          // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.sequence",                                                                          // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.sequence",                                                                           // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 7. SubstanceProtein.subunit.length
+                    this.Element_Length = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Length",                                                                                            // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.length",                                                                            // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.length",                                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 8. SubstanceProtein.subunit.sequenceAttachment
+                    this.Element_SequenceAttachment = new ElementDefinitionInfo                                                             // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_SequenceAttachment",                                                                                // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.sequenceAttachment",                                                                // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.sequenceAttachment",                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Attachment                                                               // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 9. SubstanceProtein.subunit.nTerminalModificationId
+                    this.Element_NTerminalModificationId = new ElementDefinitionInfo                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_NTerminalModificationId",                                                                           // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.nTerminalModificationId",                                                           // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.nTerminalModificationId",                                                            // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 10. SubstanceProtein.subunit.nTerminalModification
+                    this.Element_NTerminalModification = new ElementDefinitionInfo                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_NTerminalModification",                                                                             // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.nTerminalModification",                                                             // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.nTerminalModification",                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 11. SubstanceProtein.subunit.cTerminalModificationId
+                    this.Element_CTerminalModificationId = new ElementDefinitionInfo                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_CTerminalModificationId",                                                                           // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.cTerminalModificationId",                                                           // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.cTerminalModificationId",                                                            // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 12. SubstanceProtein.subunit.cTerminalModification
+                    this.Element_CTerminalModification = new ElementDefinitionInfo                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_CTerminalModification",                                                                             // MakerGen.cs:238
+                        Path= "SubstanceProtein.subunit.cTerminalModification",                                                             // MakerGen.cs:239
+                        Id = "SubstanceProtein.subunit.cTerminalModification",                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. SubstanceProtein.sequenceType
+        public ElementDefinitionInfo Element_SequenceType;                                                                                  // MakerGen.cs:219
+        // 2. SubstanceProtein.numberOfSubunits
+        public ElementDefinitionInfo Element_NumberOfSubunits;                                                                              // MakerGen.cs:219
+        // 3. SubstanceProtein.disulfideLinkage
+        public ElementDefinitionInfo Element_DisulfideLinkage;                                                                              // MakerGen.cs:219
+        // 4. SubstanceProtein.subunit
+        public ElementDefinitionInfo Element_Subunit;                                                                                       // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "SubstanceProtein",                                                                                                  // MakerGen.cs:395
+                ElementId = "SubstanceProtein"                                                                                              // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_SequenceType.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_NumberOfSubunits.Write(sDef);                                                                                           // MakerGen.cs:223
+            Element_DisulfideLinkage.Write(sDef);                                                                                           // MakerGen.cs:223
+            Element_Subunit.Write(sDef);                                                                                                    // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_SubstanceProtein()                                                                                                  // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. SubstanceProtein.sequenceType
-                this.Element_SequenceType = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_SequenceType",                                                                                          // MakerGen.cs:231
-                    Path= "SubstanceProtein.sequenceType",                                                                                  // MakerGen.cs:232
-                    Id = "SubstanceProtein.sequenceType",                                                                                   // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_SequenceType = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_SequenceType",                                                                                          // MakerGen.cs:238
+                    Path= "SubstanceProtein.sequenceType",                                                                                  // MakerGen.cs:239
+                    Id = "SubstanceProtein.sequenceType",                                                                                   // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. SubstanceProtein.numberOfSubunits
-                this.Element_NumberOfSubunits = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_NumberOfSubunits",                                                                                      // MakerGen.cs:231
-                    Path= "SubstanceProtein.numberOfSubunits",                                                                              // MakerGen.cs:232
-                    Id = "SubstanceProtein.numberOfSubunits",                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_NumberOfSubunits = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_NumberOfSubunits",                                                                                      // MakerGen.cs:238
+                    Path= "SubstanceProtein.numberOfSubunits",                                                                              // MakerGen.cs:239
+                    Id = "SubstanceProtein.numberOfSubunits",                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. SubstanceProtein.disulfideLinkage
-                this.Element_DisulfideLinkage = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_DisulfideLinkage",                                                                                      // MakerGen.cs:231
-                    Path= "SubstanceProtein.disulfideLinkage",                                                                              // MakerGen.cs:232
-                    Id = "SubstanceProtein.disulfideLinkage",                                                                               // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_DisulfideLinkage = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_DisulfideLinkage",                                                                                      // MakerGen.cs:238
+                    Path= "SubstanceProtein.disulfideLinkage",                                                                              // MakerGen.cs:239
+                    Id = "SubstanceProtein.disulfideLinkage",                                                                               // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. SubstanceProtein.subunit
-                this.Element_Subunit = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Subunit",                                                                                               // MakerGen.cs:231
-                    Path= "SubstanceProtein.subunit",                                                                                       // MakerGen.cs:232
-                    Id = "SubstanceProtein.subunit",                                                                                        // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Subunit                                                                                                    // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "SubstanceProtein";                                                                                                 // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstanceProtein";                                                          // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_Subunit = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Subunit",                                                                                               // MakerGen.cs:238
+                    Path= "SubstanceProtein.subunit",                                                                                       // MakerGen.cs:239
+                    Id = "SubstanceProtein.subunit",                                                                                        // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Subunit                                                                                                    // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "SubstanceProtein";                                                                                                 // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/SubstanceProtein";                                                          // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

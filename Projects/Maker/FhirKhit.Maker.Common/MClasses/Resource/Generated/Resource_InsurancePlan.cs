@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "InsurancePlan",
@@ -718,1102 +718,1102 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'InsurancePlan'
     /// </summary>
     // 0. InsurancePlan
-    public class Resource_InsurancePlan : FhirKhit.Maker.Common.Resource.ResourceBase                                                       // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_InsurancePlan : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                            // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 10. InsurancePlan.contact
-        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 11. InsurancePlan.contact.purpose
-            public ElementDefinitionInfo Element_Purpose;                                                                                   // MakerGen.cs:212
-            // 12. InsurancePlan.contact.name
-            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:212
-            // 13. InsurancePlan.contact.telecom
-            public ElementDefinitionInfo Element_Telecom;                                                                                   // MakerGen.cs:212
-            // 14. InsurancePlan.contact.address
-            public ElementDefinitionInfo Element_Address;                                                                                   // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "InsurancePlan.contact",                                                                                         // MakerGen.cs:388
-                    ElementId = "InsurancePlan.contact"                                                                                     // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Purpose.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_Telecom.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Address.Write(sDef);                                                                                                // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Contact()                                                                                                           // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 11. InsurancePlan.contact.purpose
-                    this.Element_Purpose = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Purpose",                                                                                           // MakerGen.cs:231
-                        Path= "InsurancePlan.contact.purpose",                                                                              // MakerGen.cs:232
-                        Id = "InsurancePlan.contact.purpose",                                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 12. InsurancePlan.contact.name
-                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Name",                                                                                              // MakerGen.cs:231
-                        Path= "InsurancePlan.contact.name",                                                                                 // MakerGen.cs:232
-                        Id = "InsurancePlan.contact.name",                                                                                  // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_HumanName                                                                // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 13. InsurancePlan.contact.telecom
-                    this.Element_Telecom = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Telecom",                                                                                           // MakerGen.cs:231
-                        Path= "InsurancePlan.contact.telecom",                                                                              // MakerGen.cs:232
-                        Id = "InsurancePlan.contact.telecom",                                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                             // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 14. InsurancePlan.contact.address
-                    this.Element_Address = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Address",                                                                                           // MakerGen.cs:231
-                        Path= "InsurancePlan.contact.address",                                                                              // MakerGen.cs:232
-                        Id = "InsurancePlan.contact.address",                                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Address                                                                  // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 17. InsurancePlan.coverage
-        public class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 20. InsurancePlan.coverage.benefit
-            public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 23. InsurancePlan.coverage.benefit.limit
-                public class Type_Limit : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:376
-                {                                                                                                                           // MakerGen.cs:377
-                    // 24. InsurancePlan.coverage.benefit.limit.value
-                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:212
-                    // 25. InsurancePlan.coverage.benefit.limit.code
-                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
-                            Path = "InsurancePlan.coverage.benefit.limit",                                                                  // MakerGen.cs:388
-                            ElementId = "InsurancePlan.coverage.benefit.limit"                                                              // MakerGen.cs:389
-                        });                                                                                                                 // MakerGen.cs:390
-                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:216
-                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:216
-                    }                                                                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                    public Type_Limit()                                                                                                     // MakerGen.cs:395
-                    {                                                                                                                       // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 24. InsurancePlan.coverage.benefit.limit.value
-                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Value",                                                                                     // MakerGen.cs:231
-                                Path= "InsurancePlan.coverage.benefit.limit.value",                                                         // MakerGen.cs:232
-                                Id = "InsurancePlan.coverage.benefit.limit.value",                                                          // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:351
-                                    {                                                                                                       // MakerGen.cs:352
-                                    }                                                                                                       // MakerGen.cs:353
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 25. InsurancePlan.coverage.benefit.limit.code
-                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Code",                                                                                      // MakerGen.cs:231
-                                Path= "InsurancePlan.coverage.benefit.limit.code",                                                          // MakerGen.cs:232
-                                Id = "InsurancePlan.coverage.benefit.limit.code",                                                           // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:311
-                                    {                                                                                                       // MakerGen.cs:312
-                                    }                                                                                                       // MakerGen.cs:315
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                    }                                                                                                                       // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:400
-                // 21. InsurancePlan.coverage.benefit.type
-                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:212
-                // 22. InsurancePlan.coverage.benefit.requirement
-                public ElementDefinitionInfo Element_Requirement;                                                                           // MakerGen.cs:212
-                // 23. InsurancePlan.coverage.benefit.limit
-                public ElementDefinitionInfo Element_Limit;                                                                                 // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "InsurancePlan.coverage.benefit",                                                                            // MakerGen.cs:388
-                        ElementId = "InsurancePlan.coverage.benefit"                                                                        // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Requirement.Write(sDef);                                                                                        // MakerGen.cs:216
-                    Element_Limit.Write(sDef);                                                                                              // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_Benefit()                                                                                                       // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 21. InsurancePlan.coverage.benefit.type
-                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Type",                                                                                          // MakerGen.cs:231
-                            Path= "InsurancePlan.coverage.benefit.type",                                                                    // MakerGen.cs:232
-                            Id = "InsurancePlan.coverage.benefit.type",                                                                     // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
-                                {                                                                                                           // MakerGen.cs:312
-                                }                                                                                                           // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 22. InsurancePlan.coverage.benefit.requirement
-                        this.Element_Requirement = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Requirement",                                                                                   // MakerGen.cs:231
-                            Path= "InsurancePlan.coverage.benefit.requirement",                                                             // MakerGen.cs:232
-                            Id = "InsurancePlan.coverage.benefit.requirement",                                                              // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 23. InsurancePlan.coverage.benefit.limit
-                        this.Element_Limit = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Limit",                                                                                         // MakerGen.cs:231
-                            Path= "InsurancePlan.coverage.benefit.limit",                                                                   // MakerGen.cs:232
-                            Id = "InsurancePlan.coverage.benefit.limit",                                                                    // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new Type_Limit                                                                                              // MakerGen.cs:255
-                                {                                                                                                           // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:257
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 18. InsurancePlan.coverage.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:212
-            // 19. InsurancePlan.coverage.network
-            public ElementDefinitionInfo Element_Network;                                                                                   // MakerGen.cs:212
-            // 20. InsurancePlan.coverage.benefit
-            public ElementDefinitionInfo Element_Benefit;                                                                                   // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "InsurancePlan.coverage",                                                                                        // MakerGen.cs:388
-                    ElementId = "InsurancePlan.coverage"                                                                                    // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_Network.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_Benefit.Write(sDef);                                                                                                // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Coverage()                                                                                                          // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 18. InsurancePlan.coverage.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:231
-                        Path= "InsurancePlan.coverage.type",                                                                                // MakerGen.cs:232
-                        Id = "InsurancePlan.coverage.type",                                                                                 // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 19. InsurancePlan.coverage.network
-                    this.Element_Network = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Network",                                                                                           // MakerGen.cs:231
-                        Path= "InsurancePlan.coverage.network",                                                                             // MakerGen.cs:232
-                        Id = "InsurancePlan.coverage.network",                                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
-                            {                                                                                                               // MakerGen.cs:340
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:342
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:343
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 20. InsurancePlan.coverage.benefit
-                    this.Element_Benefit = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Benefit",                                                                                           // MakerGen.cs:231
-                        Path= "InsurancePlan.coverage.benefit",                                                                             // MakerGen.cs:232
-                        Id = "InsurancePlan.coverage.benefit",                                                                              // MakerGen.cs:233
-                        Min = 1,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_Benefit                                                                                                // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 26. InsurancePlan.plan
-        public class Type_Plan : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 31. InsurancePlan.plan.generalCost
-            public class Type_GeneralCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 32. InsurancePlan.plan.generalCost.type
-                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:212
-                // 33. InsurancePlan.plan.generalCost.groupSize
-                public ElementDefinitionInfo Element_GroupSize;                                                                             // MakerGen.cs:212
-                // 34. InsurancePlan.plan.generalCost.cost
-                public ElementDefinitionInfo Element_Cost;                                                                                  // MakerGen.cs:212
-                // 35. InsurancePlan.plan.generalCost.comment
-                public ElementDefinitionInfo Element_Comment;                                                                               // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "InsurancePlan.plan.generalCost",                                                                            // MakerGen.cs:388
-                        ElementId = "InsurancePlan.plan.generalCost"                                                                        // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_GroupSize.Write(sDef);                                                                                          // MakerGen.cs:216
-                    Element_Cost.Write(sDef);                                                                                               // MakerGen.cs:216
-                    Element_Comment.Write(sDef);                                                                                            // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_GeneralCost()                                                                                                   // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 32. InsurancePlan.plan.generalCost.type
-                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Type",                                                                                          // MakerGen.cs:231
-                            Path= "InsurancePlan.plan.generalCost.type",                                                                    // MakerGen.cs:232
-                            Id = "InsurancePlan.plan.generalCost.type",                                                                     // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
-                                {                                                                                                           // MakerGen.cs:312
-                                }                                                                                                           // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 33. InsurancePlan.plan.generalCost.groupSize
-                        this.Element_GroupSize = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_GroupSize",                                                                                     // MakerGen.cs:231
-                            Path= "InsurancePlan.plan.generalCost.groupSize",                                                               // MakerGen.cs:232
-                            Id = "InsurancePlan.plan.generalCost.groupSize",                                                                // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 34. InsurancePlan.plan.generalCost.cost
-                        this.Element_Cost = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Cost",                                                                                          // MakerGen.cs:231
-                            Path= "InsurancePlan.plan.generalCost.cost",                                                                    // MakerGen.cs:232
-                            Id = "InsurancePlan.plan.generalCost.cost",                                                                     // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:351
-                                {                                                                                                           // MakerGen.cs:352
-                                }                                                                                                           // MakerGen.cs:353
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 35. InsurancePlan.plan.generalCost.comment
-                        this.Element_Comment = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Comment",                                                                                       // MakerGen.cs:231
-                            Path= "InsurancePlan.plan.generalCost.comment",                                                                 // MakerGen.cs:232
-                            Id = "InsurancePlan.plan.generalCost.comment",                                                                  // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:296
-                                {                                                                                                           // MakerGen.cs:297
-                                }                                                                                                           // MakerGen.cs:300
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 36. InsurancePlan.plan.specificCost
-            public class Type_SpecificCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:376
-            {                                                                                                                               // MakerGen.cs:377
-                // 38. InsurancePlan.plan.specificCost.benefit
-                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:376
-                {                                                                                                                           // MakerGen.cs:377
-                    // 40. InsurancePlan.plan.specificCost.benefit.cost
-                    public class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:376
-                    {                                                                                                                       // MakerGen.cs:377
-                        // 41. InsurancePlan.plan.specificCost.benefit.cost.type
-                        public ElementDefinitionInfo Element_Type;                                                                          // MakerGen.cs:212
-                        // 42. InsurancePlan.plan.specificCost.benefit.cost.applicability
-                        public ElementDefinitionInfo Element_Applicability;                                                                 // MakerGen.cs:212
-                        // 43. InsurancePlan.plan.specificCost.benefit.cost.qualifiers
-                        public ElementDefinitionInfo Element_Qualifiers;                                                                    // MakerGen.cs:212
-                        // 44. InsurancePlan.plan.specificCost.benefit.cost.value
-                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:383
-                        {                                                                                                                   // MakerGen.cs:384
-                            base.Write(sDef);                                                                                               // MakerGen.cs:385
-                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:386
-                            {                                                                                                               // MakerGen.cs:387
-                                Path = "InsurancePlan.plan.specificCost.benefit.cost",                                                      // MakerGen.cs:388
-                                ElementId = "InsurancePlan.plan.specificCost.benefit.cost"                                                  // MakerGen.cs:389
-                            });                                                                                                             // MakerGen.cs:390
-                            Element_Type.Write(sDef);                                                                                       // MakerGen.cs:216
-                            Element_Applicability.Write(sDef);                                                                              // MakerGen.cs:216
-                            Element_Qualifiers.Write(sDef);                                                                                 // MakerGen.cs:216
-                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:216
-                        }                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                        public Type_Cost()                                                                                                  // MakerGen.cs:395
-                        {                                                                                                                   // MakerGen.cs:396
-                            {                                                                                                               // MakerGen.cs:227
-                                // 41. InsurancePlan.plan.specificCost.benefit.cost.type
-                                this.Element_Type = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Type",                                                                                  // MakerGen.cs:231
-                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.type",                                              // MakerGen.cs:232
-                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.type",                                               // MakerGen.cs:233
-                                    Min = 1,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:311
-                                        {                                                                                                   // MakerGen.cs:312
-                                        }                                                                                                   // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                            {                                                                                                               // MakerGen.cs:227
-                                // 42. InsurancePlan.plan.specificCost.benefit.cost.applicability
-                                this.Element_Applicability = new ElementDefinitionInfo                                                      // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Applicability",                                                                         // MakerGen.cs:231
-                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.applicability",                                     // MakerGen.cs:232
-                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.applicability",                                      // MakerGen.cs:233
-                                    Min = 0,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:311
-                                        {                                                                                                   // MakerGen.cs:312
-                                        }                                                                                                   // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                            {                                                                                                               // MakerGen.cs:227
-                                // 43. InsurancePlan.plan.specificCost.benefit.cost.qualifiers
-                                this.Element_Qualifiers = new ElementDefinitionInfo                                                         // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Qualifiers",                                                                            // MakerGen.cs:231
-                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.qualifiers",                                        // MakerGen.cs:232
-                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.qualifiers",                                         // MakerGen.cs:233
-                                    Min = 0,                                                                                                // MakerGen.cs:234
-                                    Max = -1,                                                                                               // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:311
-                                        {                                                                                                   // MakerGen.cs:312
-                                        }                                                                                                   // MakerGen.cs:315
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                            {                                                                                                               // MakerGen.cs:227
-                                // 44. InsurancePlan.plan.specificCost.benefit.cost.value
-                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                                {                                                                                                           // MakerGen.cs:230
-                                    Name = "Element_Value",                                                                                 // MakerGen.cs:231
-                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.value",                                             // MakerGen.cs:232
-                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.value",                                              // MakerGen.cs:233
-                                    Min = 0,                                                                                                // MakerGen.cs:234
-                                    Max = 1,                                                                                                // MakerGen.cs:235
-                                    Types = new BaseType[]                                                                                  // MakerGen.cs:236
-                                    {                                                                                                       // MakerGen.cs:237
-                                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                     // MakerGen.cs:351
-                                        {                                                                                                   // MakerGen.cs:352
-                                        }                                                                                                   // MakerGen.cs:353
-                                    }                                                                                                       // MakerGen.cs:239
-                                };                                                                                                          // MakerGen.cs:240
-                            }                                                                                                               // MakerGen.cs:241
-                        }                                                                                                                   // MakerGen.cs:398
-                    }                                                                                                                       // MakerGen.cs:400
-                    // 39. InsurancePlan.plan.specificCost.benefit.type
-                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:212
-                    // 40. InsurancePlan.plan.specificCost.benefit.cost
-                    public ElementDefinitionInfo Element_Cost;                                                                              // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:383
-                    {                                                                                                                       // MakerGen.cs:384
-                        base.Write(sDef);                                                                                                   // MakerGen.cs:385
-                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:386
-                        {                                                                                                                   // MakerGen.cs:387
-                            Path = "InsurancePlan.plan.specificCost.benefit",                                                               // MakerGen.cs:388
-                            ElementId = "InsurancePlan.plan.specificCost.benefit"                                                           // MakerGen.cs:389
-                        });                                                                                                                 // MakerGen.cs:390
-                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:216
-                        Element_Cost.Write(sDef);                                                                                           // MakerGen.cs:216
-                    }                                                                                                                       // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                    public Type_Benefit()                                                                                                   // MakerGen.cs:395
-                    {                                                                                                                       // MakerGen.cs:396
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 39. InsurancePlan.plan.specificCost.benefit.type
-                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Type",                                                                                      // MakerGen.cs:231
-                                Path= "InsurancePlan.plan.specificCost.benefit.type",                                                       // MakerGen.cs:232
-                                Id = "InsurancePlan.plan.specificCost.benefit.type",                                                        // MakerGen.cs:233
-                                Min = 1,                                                                                                    // MakerGen.cs:234
-                                Max = 1,                                                                                                    // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:311
-                                    {                                                                                                       // MakerGen.cs:312
-                                    }                                                                                                       // MakerGen.cs:315
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                        {                                                                                                                   // MakerGen.cs:227
-                            // 40. InsurancePlan.plan.specificCost.benefit.cost
-                            this.Element_Cost = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                            {                                                                                                               // MakerGen.cs:230
-                                Name = "Element_Cost",                                                                                      // MakerGen.cs:231
-                                Path= "InsurancePlan.plan.specificCost.benefit.cost",                                                       // MakerGen.cs:232
-                                Id = "InsurancePlan.plan.specificCost.benefit.cost",                                                        // MakerGen.cs:233
-                                Min = 0,                                                                                                    // MakerGen.cs:234
-                                Max = -1,                                                                                                   // MakerGen.cs:235
-                                Types = new BaseType[]                                                                                      // MakerGen.cs:236
-                                {                                                                                                           // MakerGen.cs:237
-                                    new Type_Cost                                                                                           // MakerGen.cs:255
-                                    {                                                                                                       // MakerGen.cs:256
-                                    }                                                                                                       // MakerGen.cs:257
-                                }                                                                                                           // MakerGen.cs:239
-                            };                                                                                                              // MakerGen.cs:240
-                        }                                                                                                                   // MakerGen.cs:241
-                    }                                                                                                                       // MakerGen.cs:398
-                }                                                                                                                           // MakerGen.cs:400
-                // 37. InsurancePlan.plan.specificCost.category
-                public ElementDefinitionInfo Element_Category;                                                                              // MakerGen.cs:212
-                // 38. InsurancePlan.plan.specificCost.benefit
-                public ElementDefinitionInfo Element_Benefit;                                                                               // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:383
-                {                                                                                                                           // MakerGen.cs:384
-                    base.Write(sDef);                                                                                                       // MakerGen.cs:385
-                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:386
-                    {                                                                                                                       // MakerGen.cs:387
-                        Path = "InsurancePlan.plan.specificCost",                                                                           // MakerGen.cs:388
-                        ElementId = "InsurancePlan.plan.specificCost"                                                                       // MakerGen.cs:389
-                    });                                                                                                                     // MakerGen.cs:390
-                    Element_Category.Write(sDef);                                                                                           // MakerGen.cs:216
-                    Element_Benefit.Write(sDef);                                                                                            // MakerGen.cs:216
-                }                                                                                                                           // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-                public Type_SpecificCost()                                                                                                  // MakerGen.cs:395
-                {                                                                                                                           // MakerGen.cs:396
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 37. InsurancePlan.plan.specificCost.category
-                        this.Element_Category = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Category",                                                                                      // MakerGen.cs:231
-                            Path= "InsurancePlan.plan.specificCost.category",                                                               // MakerGen.cs:232
-                            Id = "InsurancePlan.plan.specificCost.category",                                                                // MakerGen.cs:233
-                            Min = 1,                                                                                                        // MakerGen.cs:234
-                            Max = 1,                                                                                                        // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:311
-                                {                                                                                                           // MakerGen.cs:312
-                                }                                                                                                           // MakerGen.cs:315
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                    {                                                                                                                       // MakerGen.cs:227
-                        // 38. InsurancePlan.plan.specificCost.benefit
-                        this.Element_Benefit = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                        {                                                                                                                   // MakerGen.cs:230
-                            Name = "Element_Benefit",                                                                                       // MakerGen.cs:231
-                            Path= "InsurancePlan.plan.specificCost.benefit",                                                                // MakerGen.cs:232
-                            Id = "InsurancePlan.plan.specificCost.benefit",                                                                 // MakerGen.cs:233
-                            Min = 0,                                                                                                        // MakerGen.cs:234
-                            Max = -1,                                                                                                       // MakerGen.cs:235
-                            Types = new BaseType[]                                                                                          // MakerGen.cs:236
-                            {                                                                                                               // MakerGen.cs:237
-                                new Type_Benefit                                                                                            // MakerGen.cs:255
-                                {                                                                                                           // MakerGen.cs:256
-                                }                                                                                                           // MakerGen.cs:257
-                            }                                                                                                               // MakerGen.cs:239
-                        };                                                                                                                  // MakerGen.cs:240
-                    }                                                                                                                       // MakerGen.cs:241
-                }                                                                                                                           // MakerGen.cs:398
-            }                                                                                                                               // MakerGen.cs:400
-            // 27. InsurancePlan.plan.identifier
-            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:212
-            // 28. InsurancePlan.plan.type
-            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:212
-            // 29. InsurancePlan.plan.coverageArea
-            public ElementDefinitionInfo Element_CoverageArea;                                                                              // MakerGen.cs:212
-            // 30. InsurancePlan.plan.network
-            public ElementDefinitionInfo Element_Network;                                                                                   // MakerGen.cs:212
-            // 31. InsurancePlan.plan.generalCost
-            public ElementDefinitionInfo Element_GeneralCost;                                                                               // MakerGen.cs:212
-            // 36. InsurancePlan.plan.specificCost
-            public ElementDefinitionInfo Element_SpecificCost;                                                                              // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "InsurancePlan.plan",                                                                                            // MakerGen.cs:388
-                    ElementId = "InsurancePlan.plan"                                                                                        // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:216
-                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_CoverageArea.Write(sDef);                                                                                           // MakerGen.cs:216
-                Element_Network.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_GeneralCost.Write(sDef);                                                                                            // MakerGen.cs:216
-                Element_SpecificCost.Write(sDef);                                                                                           // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_Plan()                                                                                                              // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 27. InsurancePlan.plan.identifier
-                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:231
-                        Path= "InsurancePlan.plan.identifier",                                                                              // MakerGen.cs:232
-                        Id = "InsurancePlan.plan.identifier",                                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 28. InsurancePlan.plan.type
-                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Type",                                                                                              // MakerGen.cs:231
-                        Path= "InsurancePlan.plan.type",                                                                                    // MakerGen.cs:232
-                        Id = "InsurancePlan.plan.type",                                                                                     // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 29. InsurancePlan.plan.coverageArea
-                    this.Element_CoverageArea = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_CoverageArea",                                                                                      // MakerGen.cs:231
-                        Path= "InsurancePlan.plan.coverageArea",                                                                            // MakerGen.cs:232
-                        Id = "InsurancePlan.plan.coverageArea",                                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
-                            {                                                                                                               // MakerGen.cs:340
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:342
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:343
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 30. InsurancePlan.plan.network
-                    this.Element_Network = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Network",                                                                                           // MakerGen.cs:231
-                        Path= "InsurancePlan.plan.network",                                                                                 // MakerGen.cs:232
-                        Id = "InsurancePlan.plan.network",                                                                                  // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:339
-                            {                                                                                                               // MakerGen.cs:340
-                                TargetProfile = new String[]                                                                                // MakerGen.cs:342
-                                {                                                                                                           // CodeEditorExtensions.cs:28
-                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:342
-                                }                                                                                                           // CodeEditorExtensions.cs:34
-                            }                                                                                                               // MakerGen.cs:343
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 31. InsurancePlan.plan.generalCost
-                    this.Element_GeneralCost = new ElementDefinitionInfo                                                                    // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_GeneralCost",                                                                                       // MakerGen.cs:231
-                        Path= "InsurancePlan.plan.generalCost",                                                                             // MakerGen.cs:232
-                        Id = "InsurancePlan.plan.generalCost",                                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_GeneralCost                                                                                            // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 36. InsurancePlan.plan.specificCost
-                    this.Element_SpecificCost = new ElementDefinitionInfo                                                                   // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_SpecificCost",                                                                                      // MakerGen.cs:231
-                        Path= "InsurancePlan.plan.specificCost",                                                                            // MakerGen.cs:232
-                        Id = "InsurancePlan.plan.specificCost",                                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new Type_SpecificCost                                                                                           // MakerGen.cs:255
-                            {                                                                                                               // MakerGen.cs:256
-                            }                                                                                                               // MakerGen.cs:257
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. InsurancePlan.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
-        // 2. InsurancePlan.status
-        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:212
-        // 3. InsurancePlan.type
-        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:212
-        // 4. InsurancePlan.name
-        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:212
-        // 5. InsurancePlan.alias
-        public ElementDefinitionInfo Element_Alias;                                                                                         // MakerGen.cs:212
-        // 6. InsurancePlan.period
-        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:212
-        // 7. InsurancePlan.ownedBy
-        public ElementDefinitionInfo Element_OwnedBy;                                                                                       // MakerGen.cs:212
-        // 8. InsurancePlan.administeredBy
-        public ElementDefinitionInfo Element_AdministeredBy;                                                                                // MakerGen.cs:212
-        // 9. InsurancePlan.coverageArea
-        public ElementDefinitionInfo Element_CoverageArea;                                                                                  // MakerGen.cs:212
-        // 10. InsurancePlan.contact
-        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:212
-        // 15. InsurancePlan.endpoint
-        public ElementDefinitionInfo Element_Endpoint;                                                                                      // MakerGen.cs:212
-        // 16. InsurancePlan.network
-        public ElementDefinitionInfo Element_Network;                                                                                       // MakerGen.cs:212
-        // 17. InsurancePlan.coverage
-        public ElementDefinitionInfo Element_Coverage;                                                                                      // MakerGen.cs:212
-        // 26. InsurancePlan.plan
-        public ElementDefinitionInfo Element_Plan;                                                                                          // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_Contact : FhirKhit.Maker.Common.Complex.ComplexBase                                                               // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "InsurancePlan",                                                                                                     // MakerGen.cs:388
-                ElementId = "InsurancePlan"                                                                                                 // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Alias.Write(sDef);                                                                                                      // MakerGen.cs:216
-            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_OwnedBy.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_AdministeredBy.Write(sDef);                                                                                             // MakerGen.cs:216
-            Element_CoverageArea.Write(sDef);                                                                                               // MakerGen.cs:216
-            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Endpoint.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Network.Write(sDef);                                                                                                    // MakerGen.cs:216
-            Element_Coverage.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Plan.Write(sDef);                                                                                                       // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_InsurancePlan()                                                                                                     // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 11. InsurancePlan.contact.purpose
+            public ElementDefinitionInfo Element_Purpose;                                                                                   // MakerGen.cs:219
+            // 12. InsurancePlan.contact.name
+            public ElementDefinitionInfo Element_Name;                                                                                      // MakerGen.cs:219
+            // 13. InsurancePlan.contact.telecom
+            public ElementDefinitionInfo Element_Telecom;                                                                                   // MakerGen.cs:219
+            // 14. InsurancePlan.contact.address
+            public ElementDefinitionInfo Element_Address;                                                                                   // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "InsurancePlan.contact",                                                                                         // MakerGen.cs:395
+                    ElementId = "InsurancePlan.contact"                                                                                     // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Purpose.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Name.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_Telecom.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Address.Write(sDef);                                                                                                // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Contact()                                                                                                           // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 11. InsurancePlan.contact.purpose
+                    this.Element_Purpose = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Purpose",                                                                                           // MakerGen.cs:238
+                        Path= "InsurancePlan.contact.purpose",                                                                              // MakerGen.cs:239
+                        Id = "InsurancePlan.contact.purpose",                                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 12. InsurancePlan.contact.name
+                    this.Element_Name = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Name",                                                                                              // MakerGen.cs:238
+                        Path= "InsurancePlan.contact.name",                                                                                 // MakerGen.cs:239
+                        Id = "InsurancePlan.contact.name",                                                                                  // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_HumanName                                                                // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 13. InsurancePlan.contact.telecom
+                    this.Element_Telecom = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Telecom",                                                                                           // MakerGen.cs:238
+                        Path= "InsurancePlan.contact.telecom",                                                                              // MakerGen.cs:239
+                        Id = "InsurancePlan.contact.telecom",                                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_ContactPoint                                                             // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 14. InsurancePlan.contact.address
+                    this.Element_Address = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Address",                                                                                           // MakerGen.cs:238
+                        Path= "InsurancePlan.contact.address",                                                                              // MakerGen.cs:239
+                        Id = "InsurancePlan.contact.address",                                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Address                                                                  // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 17. InsurancePlan.coverage
+        public class Type_Coverage : FhirKhit.Maker.Common.Complex.ComplexBase                                                              // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 20. InsurancePlan.coverage.benefit
+            public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                           // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 23. InsurancePlan.coverage.benefit.limit
+                public class Type_Limit : FhirKhit.Maker.Common.Complex.ComplexBase                                                         // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    // 24. InsurancePlan.coverage.benefit.limit.value
+                    public ElementDefinitionInfo Element_Value;                                                                             // MakerGen.cs:219
+                    // 25. InsurancePlan.coverage.benefit.limit.code
+                    public ElementDefinitionInfo Element_Code;                                                                              // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
+                    {                                                                                                                       // MakerGen.cs:391
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
+                            Path = "InsurancePlan.coverage.benefit.limit",                                                                  // MakerGen.cs:395
+                            ElementId = "InsurancePlan.coverage.benefit.limit"                                                              // MakerGen.cs:396
+                        });                                                                                                                 // MakerGen.cs:397
+                        Element_Value.Write(sDef);                                                                                          // MakerGen.cs:223
+                        Element_Code.Write(sDef);                                                                                           // MakerGen.cs:223
+                    }                                                                                                                       // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                    public Type_Limit()                                                                                                     // MakerGen.cs:402
+                    {                                                                                                                       // MakerGen.cs:403
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 24. InsurancePlan.coverage.benefit.limit.value
+                            this.Element_Value = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Value",                                                                                     // MakerGen.cs:238
+                                Path= "InsurancePlan.coverage.benefit.limit.value",                                                         // MakerGen.cs:239
+                                Id = "InsurancePlan.coverage.benefit.limit.value",                                                          // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Complex.Type_Quantity                                                         // MakerGen.cs:358
+                                    {                                                                                                       // MakerGen.cs:359
+                                    }                                                                                                       // MakerGen.cs:360
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 25. InsurancePlan.coverage.benefit.limit.code
+                            this.Element_Code = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Code",                                                                                      // MakerGen.cs:238
+                                Path= "InsurancePlan.coverage.benefit.limit.code",                                                          // MakerGen.cs:239
+                                Id = "InsurancePlan.coverage.benefit.limit.code",                                                           // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:322
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:407
+                // 21. InsurancePlan.coverage.benefit.type
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:219
+                // 22. InsurancePlan.coverage.benefit.requirement
+                public ElementDefinitionInfo Element_Requirement;                                                                           // MakerGen.cs:219
+                // 23. InsurancePlan.coverage.benefit.limit
+                public ElementDefinitionInfo Element_Limit;                                                                                 // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "InsurancePlan.coverage.benefit",                                                                            // MakerGen.cs:395
+                        ElementId = "InsurancePlan.coverage.benefit"                                                                        // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Requirement.Write(sDef);                                                                                        // MakerGen.cs:223
+                    Element_Limit.Write(sDef);                                                                                              // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_Benefit()                                                                                                       // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 21. InsurancePlan.coverage.benefit.type
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:238
+                            Path= "InsurancePlan.coverage.benefit.type",                                                                    // MakerGen.cs:239
+                            Id = "InsurancePlan.coverage.benefit.type",                                                                     // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:322
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 22. InsurancePlan.coverage.benefit.requirement
+                        this.Element_Requirement = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Requirement",                                                                                   // MakerGen.cs:238
+                            Path= "InsurancePlan.coverage.benefit.requirement",                                                             // MakerGen.cs:239
+                            Id = "InsurancePlan.coverage.benefit.requirement",                                                              // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 23. InsurancePlan.coverage.benefit.limit
+                        this.Element_Limit = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Limit",                                                                                         // MakerGen.cs:238
+                            Path= "InsurancePlan.coverage.benefit.limit",                                                                   // MakerGen.cs:239
+                            Id = "InsurancePlan.coverage.benefit.limit",                                                                    // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new Type_Limit                                                                                              // MakerGen.cs:262
+                                {                                                                                                           // MakerGen.cs:263
+                                }                                                                                                           // MakerGen.cs:264
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 18. InsurancePlan.coverage.type
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:219
+            // 19. InsurancePlan.coverage.network
+            public ElementDefinitionInfo Element_Network;                                                                                   // MakerGen.cs:219
+            // 20. InsurancePlan.coverage.benefit
+            public ElementDefinitionInfo Element_Benefit;                                                                                   // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "InsurancePlan.coverage",                                                                                        // MakerGen.cs:395
+                    ElementId = "InsurancePlan.coverage"                                                                                    // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_Network.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_Benefit.Write(sDef);                                                                                                // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Coverage()                                                                                                          // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 18. InsurancePlan.coverage.type
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:238
+                        Path= "InsurancePlan.coverage.type",                                                                                // MakerGen.cs:239
+                        Id = "InsurancePlan.coverage.type",                                                                                 // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 19. InsurancePlan.coverage.network
+                    this.Element_Network = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Network",                                                                                           // MakerGen.cs:238
+                        Path= "InsurancePlan.coverage.network",                                                                             // MakerGen.cs:239
+                        Id = "InsurancePlan.coverage.network",                                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 20. InsurancePlan.coverage.benefit
+                    this.Element_Benefit = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Benefit",                                                                                           // MakerGen.cs:238
+                        Path= "InsurancePlan.coverage.benefit",                                                                             // MakerGen.cs:239
+                        Id = "InsurancePlan.coverage.benefit",                                                                              // MakerGen.cs:240
+                        Min = 1,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_Benefit                                                                                                // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 26. InsurancePlan.plan
+        public class Type_Plan : FhirKhit.Maker.Common.Complex.ComplexBase                                                                  // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 31. InsurancePlan.plan.generalCost
+            public class Type_GeneralCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 32. InsurancePlan.plan.generalCost.type
+                public ElementDefinitionInfo Element_Type;                                                                                  // MakerGen.cs:219
+                // 33. InsurancePlan.plan.generalCost.groupSize
+                public ElementDefinitionInfo Element_GroupSize;                                                                             // MakerGen.cs:219
+                // 34. InsurancePlan.plan.generalCost.cost
+                public ElementDefinitionInfo Element_Cost;                                                                                  // MakerGen.cs:219
+                // 35. InsurancePlan.plan.generalCost.comment
+                public ElementDefinitionInfo Element_Comment;                                                                               // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "InsurancePlan.plan.generalCost",                                                                            // MakerGen.cs:395
+                        ElementId = "InsurancePlan.plan.generalCost"                                                                        // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Type.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_GroupSize.Write(sDef);                                                                                          // MakerGen.cs:223
+                    Element_Cost.Write(sDef);                                                                                               // MakerGen.cs:223
+                    Element_Comment.Write(sDef);                                                                                            // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_GeneralCost()                                                                                                   // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 32. InsurancePlan.plan.generalCost.type
+                        this.Element_Type = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Type",                                                                                          // MakerGen.cs:238
+                            Path= "InsurancePlan.plan.generalCost.type",                                                                    // MakerGen.cs:239
+                            Id = "InsurancePlan.plan.generalCost.type",                                                                     // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:322
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 33. InsurancePlan.plan.generalCost.groupSize
+                        this.Element_GroupSize = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_GroupSize",                                                                                     // MakerGen.cs:238
+                            Path= "InsurancePlan.plan.generalCost.groupSize",                                                               // MakerGen.cs:239
+                            Id = "InsurancePlan.plan.generalCost.groupSize",                                                                // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_PositiveInt                                                   // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 34. InsurancePlan.plan.generalCost.cost
+                        this.Element_Cost = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Cost",                                                                                          // MakerGen.cs:238
+                            Path= "InsurancePlan.plan.generalCost.cost",                                                                    // MakerGen.cs:239
+                            Id = "InsurancePlan.plan.generalCost.cost",                                                                     // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_Money                                                                // MakerGen.cs:358
+                                {                                                                                                           // MakerGen.cs:359
+                                }                                                                                                           // MakerGen.cs:360
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 35. InsurancePlan.plan.generalCost.comment
+                        this.Element_Comment = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Comment",                                                                                       // MakerGen.cs:238
+                            Path= "InsurancePlan.plan.generalCost.comment",                                                                 // MakerGen.cs:239
+                            Id = "InsurancePlan.plan.generalCost.comment",                                                                  // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Primitive.Primitive_String                                                        // MakerGen.cs:303
+                                {                                                                                                           // MakerGen.cs:304
+                                }                                                                                                           // MakerGen.cs:307
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 36. InsurancePlan.plan.specificCost
+            public class Type_SpecificCost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:383
+            {                                                                                                                               // MakerGen.cs:384
+                // 38. InsurancePlan.plan.specificCost.benefit
+                public class Type_Benefit : FhirKhit.Maker.Common.Complex.ComplexBase                                                       // MakerGen.cs:383
+                {                                                                                                                           // MakerGen.cs:384
+                    // 40. InsurancePlan.plan.specificCost.benefit.cost
+                    public class Type_Cost : FhirKhit.Maker.Common.Complex.ComplexBase                                                      // MakerGen.cs:383
+                    {                                                                                                                       // MakerGen.cs:384
+                        // 41. InsurancePlan.plan.specificCost.benefit.cost.type
+                        public ElementDefinitionInfo Element_Type;                                                                          // MakerGen.cs:219
+                        // 42. InsurancePlan.plan.specificCost.benefit.cost.applicability
+                        public ElementDefinitionInfo Element_Applicability;                                                                 // MakerGen.cs:219
+                        // 43. InsurancePlan.plan.specificCost.benefit.cost.qualifiers
+                        public ElementDefinitionInfo Element_Qualifiers;                                                                    // MakerGen.cs:219
+                        // 44. InsurancePlan.plan.specificCost.benefit.cost.value
+                        public ElementDefinitionInfo Element_Value;                                                                         // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                 // MakerGen.cs:390
+                        {                                                                                                                   // MakerGen.cs:391
+                            base.Write(sDef);                                                                                               // MakerGen.cs:392
+                            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                              // MakerGen.cs:393
+                            {                                                                                                               // MakerGen.cs:394
+                                Path = "InsurancePlan.plan.specificCost.benefit.cost",                                                      // MakerGen.cs:395
+                                ElementId = "InsurancePlan.plan.specificCost.benefit.cost"                                                  // MakerGen.cs:396
+                            });                                                                                                             // MakerGen.cs:397
+                            Element_Type.Write(sDef);                                                                                       // MakerGen.cs:223
+                            Element_Applicability.Write(sDef);                                                                              // MakerGen.cs:223
+                            Element_Qualifiers.Write(sDef);                                                                                 // MakerGen.cs:223
+                            Element_Value.Write(sDef);                                                                                      // MakerGen.cs:223
+                        }                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                        public Type_Cost()                                                                                                  // MakerGen.cs:402
+                        {                                                                                                                   // MakerGen.cs:403
+                            {                                                                                                               // MakerGen.cs:234
+                                // 41. InsurancePlan.plan.specificCost.benefit.cost.type
+                                this.Element_Type = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Type",                                                                                  // MakerGen.cs:238
+                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.type",                                              // MakerGen.cs:239
+                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.type",                                               // MakerGen.cs:240
+                                    Min = 1,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:318
+                                        {                                                                                                   // MakerGen.cs:319
+                                        }                                                                                                   // MakerGen.cs:322
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                            {                                                                                                               // MakerGen.cs:234
+                                // 42. InsurancePlan.plan.specificCost.benefit.cost.applicability
+                                this.Element_Applicability = new ElementDefinitionInfo                                                      // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Applicability",                                                                         // MakerGen.cs:238
+                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.applicability",                                     // MakerGen.cs:239
+                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.applicability",                                      // MakerGen.cs:240
+                                    Min = 0,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:318
+                                        {                                                                                                   // MakerGen.cs:319
+                                        }                                                                                                   // MakerGen.cs:322
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                            {                                                                                                               // MakerGen.cs:234
+                                // 43. InsurancePlan.plan.specificCost.benefit.cost.qualifiers
+                                this.Element_Qualifiers = new ElementDefinitionInfo                                                         // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Qualifiers",                                                                            // MakerGen.cs:238
+                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.qualifiers",                                        // MakerGen.cs:239
+                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.qualifiers",                                         // MakerGen.cs:240
+                                    Min = 0,                                                                                                // MakerGen.cs:241
+                                    Max = -1,                                                                                               // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                              // MakerGen.cs:318
+                                        {                                                                                                   // MakerGen.cs:319
+                                        }                                                                                                   // MakerGen.cs:322
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                            {                                                                                                               // MakerGen.cs:234
+                                // 44. InsurancePlan.plan.specificCost.benefit.cost.value
+                                this.Element_Value = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                                {                                                                                                           // MakerGen.cs:237
+                                    Name = "Element_Value",                                                                                 // MakerGen.cs:238
+                                    Path= "InsurancePlan.plan.specificCost.benefit.cost.value",                                             // MakerGen.cs:239
+                                    Id = "InsurancePlan.plan.specificCost.benefit.cost.value",                                              // MakerGen.cs:240
+                                    Min = 0,                                                                                                // MakerGen.cs:241
+                                    Max = 1,                                                                                                // MakerGen.cs:242
+                                    Types = new BaseType[]                                                                                  // MakerGen.cs:243
+                                    {                                                                                                       // MakerGen.cs:244
+                                        new FhirKhit.Maker.Common.Complex.Type_Quantity                                                     // MakerGen.cs:358
+                                        {                                                                                                   // MakerGen.cs:359
+                                        }                                                                                                   // MakerGen.cs:360
+                                    }                                                                                                       // MakerGen.cs:246
+                                };                                                                                                          // MakerGen.cs:247
+                            }                                                                                                               // MakerGen.cs:248
+                        }                                                                                                                   // MakerGen.cs:405
+                    }                                                                                                                       // MakerGen.cs:407
+                    // 39. InsurancePlan.plan.specificCost.benefit.type
+                    public ElementDefinitionInfo Element_Type;                                                                              // MakerGen.cs:219
+                    // 40. InsurancePlan.plan.specificCost.benefit.cost
+                    public ElementDefinitionInfo Element_Cost;                                                                              // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                    public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                     // MakerGen.cs:390
+                    {                                                                                                                       // MakerGen.cs:391
+                        base.Write(sDef);                                                                                                   // MakerGen.cs:392
+                        sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                  // MakerGen.cs:393
+                        {                                                                                                                   // MakerGen.cs:394
+                            Path = "InsurancePlan.plan.specificCost.benefit",                                                               // MakerGen.cs:395
+                            ElementId = "InsurancePlan.plan.specificCost.benefit"                                                           // MakerGen.cs:396
+                        });                                                                                                                 // MakerGen.cs:397
+                        Element_Type.Write(sDef);                                                                                           // MakerGen.cs:223
+                        Element_Cost.Write(sDef);                                                                                           // MakerGen.cs:223
+                    }                                                                                                                       // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                    public Type_Benefit()                                                                                                   // MakerGen.cs:402
+                    {                                                                                                                       // MakerGen.cs:403
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 39. InsurancePlan.plan.specificCost.benefit.type
+                            this.Element_Type = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Type",                                                                                      // MakerGen.cs:238
+                                Path= "InsurancePlan.plan.specificCost.benefit.type",                                                       // MakerGen.cs:239
+                                Id = "InsurancePlan.plan.specificCost.benefit.type",                                                        // MakerGen.cs:240
+                                Min = 1,                                                                                                    // MakerGen.cs:241
+                                Max = 1,                                                                                                    // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                  // MakerGen.cs:318
+                                    {                                                                                                       // MakerGen.cs:319
+                                    }                                                                                                       // MakerGen.cs:322
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                        {                                                                                                                   // MakerGen.cs:234
+                            // 40. InsurancePlan.plan.specificCost.benefit.cost
+                            this.Element_Cost = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                            {                                                                                                               // MakerGen.cs:237
+                                Name = "Element_Cost",                                                                                      // MakerGen.cs:238
+                                Path= "InsurancePlan.plan.specificCost.benefit.cost",                                                       // MakerGen.cs:239
+                                Id = "InsurancePlan.plan.specificCost.benefit.cost",                                                        // MakerGen.cs:240
+                                Min = 0,                                                                                                    // MakerGen.cs:241
+                                Max = -1,                                                                                                   // MakerGen.cs:242
+                                Types = new BaseType[]                                                                                      // MakerGen.cs:243
+                                {                                                                                                           // MakerGen.cs:244
+                                    new Type_Cost                                                                                           // MakerGen.cs:262
+                                    {                                                                                                       // MakerGen.cs:263
+                                    }                                                                                                       // MakerGen.cs:264
+                                }                                                                                                           // MakerGen.cs:246
+                            };                                                                                                              // MakerGen.cs:247
+                        }                                                                                                                   // MakerGen.cs:248
+                    }                                                                                                                       // MakerGen.cs:405
+                }                                                                                                                           // MakerGen.cs:407
+                // 37. InsurancePlan.plan.specificCost.category
+                public ElementDefinitionInfo Element_Category;                                                                              // MakerGen.cs:219
+                // 38. InsurancePlan.plan.specificCost.benefit
+                public ElementDefinitionInfo Element_Benefit;                                                                               // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+                public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                         // MakerGen.cs:390
+                {                                                                                                                           // MakerGen.cs:391
+                    base.Write(sDef);                                                                                                       // MakerGen.cs:392
+                    sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                      // MakerGen.cs:393
+                    {                                                                                                                       // MakerGen.cs:394
+                        Path = "InsurancePlan.plan.specificCost",                                                                           // MakerGen.cs:395
+                        ElementId = "InsurancePlan.plan.specificCost"                                                                       // MakerGen.cs:396
+                    });                                                                                                                     // MakerGen.cs:397
+                    Element_Category.Write(sDef);                                                                                           // MakerGen.cs:223
+                    Element_Benefit.Write(sDef);                                                                                            // MakerGen.cs:223
+                }                                                                                                                           // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+                public Type_SpecificCost()                                                                                                  // MakerGen.cs:402
+                {                                                                                                                           // MakerGen.cs:403
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 37. InsurancePlan.plan.specificCost.category
+                        this.Element_Category = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Category",                                                                                      // MakerGen.cs:238
+                            Path= "InsurancePlan.plan.specificCost.category",                                                               // MakerGen.cs:239
+                            Id = "InsurancePlan.plan.specificCost.category",                                                                // MakerGen.cs:240
+                            Min = 1,                                                                                                        // MakerGen.cs:241
+                            Max = 1,                                                                                                        // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                      // MakerGen.cs:318
+                                {                                                                                                           // MakerGen.cs:319
+                                }                                                                                                           // MakerGen.cs:322
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                    {                                                                                                                       // MakerGen.cs:234
+                        // 38. InsurancePlan.plan.specificCost.benefit
+                        this.Element_Benefit = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                        {                                                                                                                   // MakerGen.cs:237
+                            Name = "Element_Benefit",                                                                                       // MakerGen.cs:238
+                            Path= "InsurancePlan.plan.specificCost.benefit",                                                                // MakerGen.cs:239
+                            Id = "InsurancePlan.plan.specificCost.benefit",                                                                 // MakerGen.cs:240
+                            Min = 0,                                                                                                        // MakerGen.cs:241
+                            Max = -1,                                                                                                       // MakerGen.cs:242
+                            Types = new BaseType[]                                                                                          // MakerGen.cs:243
+                            {                                                                                                               // MakerGen.cs:244
+                                new Type_Benefit                                                                                            // MakerGen.cs:262
+                                {                                                                                                           // MakerGen.cs:263
+                                }                                                                                                           // MakerGen.cs:264
+                            }                                                                                                               // MakerGen.cs:246
+                        };                                                                                                                  // MakerGen.cs:247
+                    }                                                                                                                       // MakerGen.cs:248
+                }                                                                                                                           // MakerGen.cs:405
+            }                                                                                                                               // MakerGen.cs:407
+            // 27. InsurancePlan.plan.identifier
+            public ElementDefinitionInfo Element_Identifier;                                                                                // MakerGen.cs:219
+            // 28. InsurancePlan.plan.type
+            public ElementDefinitionInfo Element_Type;                                                                                      // MakerGen.cs:219
+            // 29. InsurancePlan.plan.coverageArea
+            public ElementDefinitionInfo Element_CoverageArea;                                                                              // MakerGen.cs:219
+            // 30. InsurancePlan.plan.network
+            public ElementDefinitionInfo Element_Network;                                                                                   // MakerGen.cs:219
+            // 31. InsurancePlan.plan.generalCost
+            public ElementDefinitionInfo Element_GeneralCost;                                                                               // MakerGen.cs:219
+            // 36. InsurancePlan.plan.specificCost
+            public ElementDefinitionInfo Element_SpecificCost;                                                                              // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "InsurancePlan.plan",                                                                                            // MakerGen.cs:395
+                    ElementId = "InsurancePlan.plan"                                                                                        // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Identifier.Write(sDef);                                                                                             // MakerGen.cs:223
+                Element_Type.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_CoverageArea.Write(sDef);                                                                                           // MakerGen.cs:223
+                Element_Network.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_GeneralCost.Write(sDef);                                                                                            // MakerGen.cs:223
+                Element_SpecificCost.Write(sDef);                                                                                           // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_Plan()                                                                                                              // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 27. InsurancePlan.plan.identifier
+                    this.Element_Identifier = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Identifier",                                                                                        // MakerGen.cs:238
+                        Path= "InsurancePlan.plan.identifier",                                                                              // MakerGen.cs:239
+                        Id = "InsurancePlan.plan.identifier",                                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Identifier                                                               // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 28. InsurancePlan.plan.type
+                    this.Element_Type = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Type",                                                                                              // MakerGen.cs:238
+                        Path= "InsurancePlan.plan.type",                                                                                    // MakerGen.cs:239
+                        Id = "InsurancePlan.plan.type",                                                                                     // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 29. InsurancePlan.plan.coverageArea
+                    this.Element_CoverageArea = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_CoverageArea",                                                                                      // MakerGen.cs:238
+                        Path= "InsurancePlan.plan.coverageArea",                                                                            // MakerGen.cs:239
+                        Id = "InsurancePlan.plan.coverageArea",                                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Location"                                                      // MakerGen.cs:349
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 30. InsurancePlan.plan.network
+                    this.Element_Network = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Network",                                                                                           // MakerGen.cs:238
+                        Path= "InsurancePlan.plan.network",                                                                                 // MakerGen.cs:239
+                        Id = "InsurancePlan.plan.network",                                                                                  // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Reference                                                                // MakerGen.cs:346
+                            {                                                                                                               // MakerGen.cs:347
+                                TargetProfile = new String[]                                                                                // MakerGen.cs:349
+                                {                                                                                                           // CodeEditorExtensions.cs:28
+                                    "http://hl7.org/fhir/StructureDefinition/Organization"                                                  // MakerGen.cs:349
+                                }                                                                                                           // CodeEditorExtensions.cs:34
+                            }                                                                                                               // MakerGen.cs:350
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 31. InsurancePlan.plan.generalCost
+                    this.Element_GeneralCost = new ElementDefinitionInfo                                                                    // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_GeneralCost",                                                                                       // MakerGen.cs:238
+                        Path= "InsurancePlan.plan.generalCost",                                                                             // MakerGen.cs:239
+                        Id = "InsurancePlan.plan.generalCost",                                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_GeneralCost                                                                                            // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 36. InsurancePlan.plan.specificCost
+                    this.Element_SpecificCost = new ElementDefinitionInfo                                                                   // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_SpecificCost",                                                                                      // MakerGen.cs:238
+                        Path= "InsurancePlan.plan.specificCost",                                                                            // MakerGen.cs:239
+                        Id = "InsurancePlan.plan.specificCost",                                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new Type_SpecificCost                                                                                           // MakerGen.cs:262
+                            {                                                                                                               // MakerGen.cs:263
+                            }                                                                                                               // MakerGen.cs:264
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. InsurancePlan.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        // 2. InsurancePlan.status
+        public ElementDefinitionInfo Element_Status;                                                                                        // MakerGen.cs:219
+        // 3. InsurancePlan.type
+        public ElementDefinitionInfo Element_Type;                                                                                          // MakerGen.cs:219
+        // 4. InsurancePlan.name
+        public ElementDefinitionInfo Element_Name;                                                                                          // MakerGen.cs:219
+        // 5. InsurancePlan.alias
+        public ElementDefinitionInfo Element_Alias;                                                                                         // MakerGen.cs:219
+        // 6. InsurancePlan.period
+        public ElementDefinitionInfo Element_Period;                                                                                        // MakerGen.cs:219
+        // 7. InsurancePlan.ownedBy
+        public ElementDefinitionInfo Element_OwnedBy;                                                                                       // MakerGen.cs:219
+        // 8. InsurancePlan.administeredBy
+        public ElementDefinitionInfo Element_AdministeredBy;                                                                                // MakerGen.cs:219
+        // 9. InsurancePlan.coverageArea
+        public ElementDefinitionInfo Element_CoverageArea;                                                                                  // MakerGen.cs:219
+        // 10. InsurancePlan.contact
+        public ElementDefinitionInfo Element_Contact;                                                                                       // MakerGen.cs:219
+        // 15. InsurancePlan.endpoint
+        public ElementDefinitionInfo Element_Endpoint;                                                                                      // MakerGen.cs:219
+        // 16. InsurancePlan.network
+        public ElementDefinitionInfo Element_Network;                                                                                       // MakerGen.cs:219
+        // 17. InsurancePlan.coverage
+        public ElementDefinitionInfo Element_Coverage;                                                                                      // MakerGen.cs:219
+        // 26. InsurancePlan.plan
+        public ElementDefinitionInfo Element_Plan;                                                                                          // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "InsurancePlan",                                                                                                     // MakerGen.cs:395
+                ElementId = "InsurancePlan"                                                                                                 // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_Status.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_Type.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Name.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Alias.Write(sDef);                                                                                                      // MakerGen.cs:223
+            Element_Period.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_OwnedBy.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_AdministeredBy.Write(sDef);                                                                                             // MakerGen.cs:223
+            Element_CoverageArea.Write(sDef);                                                                                               // MakerGen.cs:223
+            Element_Contact.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Endpoint.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Network.Write(sDef);                                                                                                    // MakerGen.cs:223
+            Element_Coverage.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Plan.Write(sDef);                                                                                                       // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_InsurancePlan()                                                                                                     // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. InsurancePlan.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
-                    Path= "InsurancePlan.identifier",                                                                                       // MakerGen.cs:232
-                    Id = "InsurancePlan.identifier",                                                                                        // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
+                    Path= "InsurancePlan.identifier",                                                                                       // MakerGen.cs:239
+                    Id = "InsurancePlan.identifier",                                                                                        // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. InsurancePlan.status
-                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Status",                                                                                                // MakerGen.cs:231
-                    Path= "InsurancePlan.status",                                                                                           // MakerGen.cs:232
-                    Id = "InsurancePlan.status",                                                                                            // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Status = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Status",                                                                                                // MakerGen.cs:238
+                    Path= "InsurancePlan.status",                                                                                           // MakerGen.cs:239
+                    Id = "InsurancePlan.status",                                                                                            // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. InsurancePlan.type
-                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Type",                                                                                                  // MakerGen.cs:231
-                    Path= "InsurancePlan.type",                                                                                             // MakerGen.cs:232
-                    Id = "InsurancePlan.type",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Type = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Type",                                                                                                  // MakerGen.cs:238
+                    Path= "InsurancePlan.type",                                                                                             // MakerGen.cs:239
+                    Id = "InsurancePlan.type",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. InsurancePlan.name
-                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Name",                                                                                                  // MakerGen.cs:231
-                    Path= "InsurancePlan.name",                                                                                             // MakerGen.cs:232
-                    Id = "InsurancePlan.name",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Name = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Name",                                                                                                  // MakerGen.cs:238
+                    Path= "InsurancePlan.name",                                                                                             // MakerGen.cs:239
+                    Id = "InsurancePlan.name",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. InsurancePlan.alias
-                this.Element_Alias = new ElementDefinitionInfo                                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Alias",                                                                                                 // MakerGen.cs:231
-                    Path= "InsurancePlan.alias",                                                                                            // MakerGen.cs:232
-                    Id = "InsurancePlan.alias",                                                                                             // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Alias = new ElementDefinitionInfo                                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Alias",                                                                                                 // MakerGen.cs:238
+                    Path= "InsurancePlan.alias",                                                                                            // MakerGen.cs:239
+                    Id = "InsurancePlan.alias",                                                                                             // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 6. InsurancePlan.period
-                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Period",                                                                                                // MakerGen.cs:231
-                    Path= "InsurancePlan.period",                                                                                           // MakerGen.cs:232
-                    Id = "InsurancePlan.period",                                                                                            // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Period = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Period",                                                                                                // MakerGen.cs:238
+                    Path= "InsurancePlan.period",                                                                                           // MakerGen.cs:239
+                    Id = "InsurancePlan.period",                                                                                            // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Period                                                                       // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 7. InsurancePlan.ownedBy
-                this.Element_OwnedBy = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_OwnedBy",                                                                                               // MakerGen.cs:231
-                    Path= "InsurancePlan.ownedBy",                                                                                          // MakerGen.cs:232
-                    Id = "InsurancePlan.ownedBy",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_OwnedBy = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_OwnedBy",                                                                                               // MakerGen.cs:238
+                    Path= "InsurancePlan.ownedBy",                                                                                          // MakerGen.cs:239
+                    Id = "InsurancePlan.ownedBy",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 8. InsurancePlan.administeredBy
-                this.Element_AdministeredBy = new ElementDefinitionInfo                                                                     // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_AdministeredBy",                                                                                        // MakerGen.cs:231
-                    Path= "InsurancePlan.administeredBy",                                                                                   // MakerGen.cs:232
-                    Id = "InsurancePlan.administeredBy",                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_AdministeredBy = new ElementDefinitionInfo                                                                     // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_AdministeredBy",                                                                                        // MakerGen.cs:238
+                    Path= "InsurancePlan.administeredBy",                                                                                   // MakerGen.cs:239
+                    Id = "InsurancePlan.administeredBy",                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 9. InsurancePlan.coverageArea
-                this.Element_CoverageArea = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_CoverageArea",                                                                                          // MakerGen.cs:231
-                    Path= "InsurancePlan.coverageArea",                                                                                     // MakerGen.cs:232
-                    Id = "InsurancePlan.coverageArea",                                                                                      // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_CoverageArea = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_CoverageArea",                                                                                          // MakerGen.cs:238
+                    Path= "InsurancePlan.coverageArea",                                                                                     // MakerGen.cs:239
+                    Id = "InsurancePlan.coverageArea",                                                                                      // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Location"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 10. InsurancePlan.contact
-                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Contact",                                                                                               // MakerGen.cs:231
-                    Path= "InsurancePlan.contact",                                                                                          // MakerGen.cs:232
-                    Id = "InsurancePlan.contact",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Contact                                                                                                    // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Contact = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Contact",                                                                                               // MakerGen.cs:238
+                    Path= "InsurancePlan.contact",                                                                                          // MakerGen.cs:239
+                    Id = "InsurancePlan.contact",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Contact                                                                                                    // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 15. InsurancePlan.endpoint
-                this.Element_Endpoint = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Endpoint",                                                                                              // MakerGen.cs:231
-                    Path= "InsurancePlan.endpoint",                                                                                         // MakerGen.cs:232
-                    Id = "InsurancePlan.endpoint",                                                                                          // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_Endpoint = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Endpoint",                                                                                              // MakerGen.cs:238
+                    Path= "InsurancePlan.endpoint",                                                                                         // MakerGen.cs:239
+                    Id = "InsurancePlan.endpoint",                                                                                          // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Endpoint"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 16. InsurancePlan.network
-                this.Element_Network = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Network",                                                                                               // MakerGen.cs:231
-                    Path= "InsurancePlan.network",                                                                                          // MakerGen.cs:232
-                    Id = "InsurancePlan.network",                                                                                           // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_Network = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Network",                                                                                               // MakerGen.cs:238
+                    Path= "InsurancePlan.network",                                                                                          // MakerGen.cs:239
+                    Id = "InsurancePlan.network",                                                                                           // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/Organization"                                                      // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 17. InsurancePlan.coverage
-                this.Element_Coverage = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Coverage",                                                                                              // MakerGen.cs:231
-                    Path= "InsurancePlan.coverage",                                                                                         // MakerGen.cs:232
-                    Id = "InsurancePlan.coverage",                                                                                          // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Coverage                                                                                                   // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Coverage = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Coverage",                                                                                              // MakerGen.cs:238
+                    Path= "InsurancePlan.coverage",                                                                                         // MakerGen.cs:239
+                    Id = "InsurancePlan.coverage",                                                                                          // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Coverage                                                                                                   // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 26. InsurancePlan.plan
-                this.Element_Plan = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Plan",                                                                                                  // MakerGen.cs:231
-                    Path= "InsurancePlan.plan",                                                                                             // MakerGen.cs:232
-                    Id = "InsurancePlan.plan",                                                                                              // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_Plan                                                                                                       // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "InsurancePlan";                                                                                                    // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/InsurancePlan";                                                             // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                this.Element_Plan = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Plan",                                                                                                  // MakerGen.cs:238
+                    Path= "InsurancePlan.plan",                                                                                             // MakerGen.cs:239
+                    Id = "InsurancePlan.plan",                                                                                              // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_Plan                                                                                                       // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "InsurancePlan";                                                                                                    // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/InsurancePlan";                                                             // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452

@@ -1,13 +1,13 @@
-using System;                                                                                                                               // MakerGen.cs:428
-using System.Diagnostics;                                                                                                                   // MakerGen.cs:429
-using System.IO;                                                                                                                            // MakerGen.cs:430
-using System.Linq;                                                                                                                          // MakerGen.cs:431
-using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:432
-                                                                                                                                            // MakerGen.cs:433
-namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:434
-{                                                                                                                                           // MakerGen.cs:435
-    #region Json                                                                                                                            // MakerGen.cs:436
-    #if NEVER                                                                                                                               // MakerGen.cs:437
+using System;                                                                                                                               // MakerGen.cs:435
+using System.Diagnostics;                                                                                                                   // MakerGen.cs:436
+using System.IO;                                                                                                                            // MakerGen.cs:437
+using System.Linq;                                                                                                                          // MakerGen.cs:438
+using Hl7.Fhir.Model;                                                                                                                       // MakerGen.cs:439
+                                                                                                                                            // MakerGen.cs:440
+namespace FhirKhit.Maker.Common.Resource                                                                                                    // MakerGen.cs:441
+{                                                                                                                                           // MakerGen.cs:442
+    #region Json                                                                                                                            // MakerGen.cs:443
+    #if NEVER                                                                                                                               // MakerGen.cs:444
     {
       "resourceType": "StructureDefinition",
       "id": "ObservationDefinition",
@@ -532,580 +532,580 @@ namespace FhirKhit.Maker.Common.Resource                                        
       }
     }
     #endif
-    #endregion                                                                                                                              // MakerGen.cs:440
+    #endregion                                                                                                                              // MakerGen.cs:447
     /// <summary>
     /// Fhir resource 'ObservationDefinition'
     /// </summary>
     // 0. ObservationDefinition
-    public class Resource_ObservationDefinition : FhirKhit.Maker.Common.Resource.ResourceBase                                               // MakerGen.cs:376
-    {                                                                                                                                       // MakerGen.cs:377
+    public class Resource_ObservationDefinition : FhirKhit.Maker.Common.Resource.Resource_DomainResource                                    // MakerGen.cs:383
+    {                                                                                                                                       // MakerGen.cs:384
         // 8. ObservationDefinition.quantitativeDetails
-        public class Type_QuantitativeDetails : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 9. ObservationDefinition.quantitativeDetails.customaryUnit
-            public ElementDefinitionInfo Element_CustomaryUnit;                                                                             // MakerGen.cs:212
-            // 10. ObservationDefinition.quantitativeDetails.unit
-            public ElementDefinitionInfo Element_Unit;                                                                                      // MakerGen.cs:212
-            // 11. ObservationDefinition.quantitativeDetails.conversionFactor
-            public ElementDefinitionInfo Element_ConversionFactor;                                                                          // MakerGen.cs:212
-            // 12. ObservationDefinition.quantitativeDetails.decimalPrecision
-            public ElementDefinitionInfo Element_DecimalPrecision;                                                                          // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "ObservationDefinition.quantitativeDetails",                                                                     // MakerGen.cs:388
-                    ElementId = "ObservationDefinition.quantitativeDetails"                                                                 // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_CustomaryUnit.Write(sDef);                                                                                          // MakerGen.cs:216
-                Element_Unit.Write(sDef);                                                                                                   // MakerGen.cs:216
-                Element_ConversionFactor.Write(sDef);                                                                                       // MakerGen.cs:216
-                Element_DecimalPrecision.Write(sDef);                                                                                       // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_QuantitativeDetails()                                                                                               // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 9. ObservationDefinition.quantitativeDetails.customaryUnit
-                    this.Element_CustomaryUnit = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_CustomaryUnit",                                                                                     // MakerGen.cs:231
-                        Path= "ObservationDefinition.quantitativeDetails.customaryUnit",                                                    // MakerGen.cs:232
-                        Id = "ObservationDefinition.quantitativeDetails.customaryUnit",                                                     // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 10. ObservationDefinition.quantitativeDetails.unit
-                    this.Element_Unit = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Unit",                                                                                              // MakerGen.cs:231
-                        Path= "ObservationDefinition.quantitativeDetails.unit",                                                             // MakerGen.cs:232
-                        Id = "ObservationDefinition.quantitativeDetails.unit",                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 11. ObservationDefinition.quantitativeDetails.conversionFactor
-                    this.Element_ConversionFactor = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_ConversionFactor",                                                                                  // MakerGen.cs:231
-                        Path= "ObservationDefinition.quantitativeDetails.conversionFactor",                                                 // MakerGen.cs:232
-                        Id = "ObservationDefinition.quantitativeDetails.conversionFactor",                                                  // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 12. ObservationDefinition.quantitativeDetails.decimalPrecision
-                    this.Element_DecimalPrecision = new ElementDefinitionInfo                                                               // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_DecimalPrecision",                                                                                  // MakerGen.cs:231
-                        Path= "ObservationDefinition.quantitativeDetails.decimalPrecision",                                                 // MakerGen.cs:232
-                        Id = "ObservationDefinition.quantitativeDetails.decimalPrecision",                                                  // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 13. ObservationDefinition.qualifiedInterval
-        public class Type_QualifiedInterval : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:376
-        {                                                                                                                                   // MakerGen.cs:377
-            // 14. ObservationDefinition.qualifiedInterval.category
-            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:212
-            // 15. ObservationDefinition.qualifiedInterval.range
-            public ElementDefinitionInfo Element_Range;                                                                                     // MakerGen.cs:212
-            // 16. ObservationDefinition.qualifiedInterval.context
-            public ElementDefinitionInfo Element_Context;                                                                                   // MakerGen.cs:212
-            // 17. ObservationDefinition.qualifiedInterval.appliesTo
-            public ElementDefinitionInfo Element_AppliesTo;                                                                                 // MakerGen.cs:212
-            // 18. ObservationDefinition.qualifiedInterval.gender
-            public ElementDefinitionInfo Element_Gender;                                                                                    // MakerGen.cs:212
-            // 19. ObservationDefinition.qualifiedInterval.age
-            public ElementDefinitionInfo Element_Age;                                                                                       // MakerGen.cs:212
-            // 20. ObservationDefinition.qualifiedInterval.gestationalAge
-            public ElementDefinitionInfo Element_GestationalAge;                                                                            // MakerGen.cs:212
-            // 21. ObservationDefinition.qualifiedInterval.condition
-            public ElementDefinitionInfo Element_Condition;                                                                                 // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:383
-            {                                                                                                                               // MakerGen.cs:384
-                base.Write(sDef);                                                                                                           // MakerGen.cs:385
-                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:386
-                {                                                                                                                           // MakerGen.cs:387
-                    Path = "ObservationDefinition.qualifiedInterval",                                                                       // MakerGen.cs:388
-                    ElementId = "ObservationDefinition.qualifiedInterval"                                                                   // MakerGen.cs:389
-                });                                                                                                                         // MakerGen.cs:390
-                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:216
-                Element_Range.Write(sDef);                                                                                                  // MakerGen.cs:216
-                Element_Context.Write(sDef);                                                                                                // MakerGen.cs:216
-                Element_AppliesTo.Write(sDef);                                                                                              // MakerGen.cs:216
-                Element_Gender.Write(sDef);                                                                                                 // MakerGen.cs:216
-                Element_Age.Write(sDef);                                                                                                    // MakerGen.cs:216
-                Element_GestationalAge.Write(sDef);                                                                                         // MakerGen.cs:216
-                Element_Condition.Write(sDef);                                                                                              // MakerGen.cs:216
-            }                                                                                                                               // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-            public Type_QualifiedInterval()                                                                                                 // MakerGen.cs:395
-            {                                                                                                                               // MakerGen.cs:396
-                {                                                                                                                           // MakerGen.cs:227
-                    // 14. ObservationDefinition.qualifiedInterval.category
-                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Category",                                                                                          // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.category",                                                           // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.category",                                                            // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 15. ObservationDefinition.qualifiedInterval.range
-                    this.Element_Range = new ElementDefinitionInfo                                                                          // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Range",                                                                                             // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.range",                                                              // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.range",                                                               // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 16. ObservationDefinition.qualifiedInterval.context
-                    this.Element_Context = new ElementDefinitionInfo                                                                        // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Context",                                                                                           // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.context",                                                            // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.context",                                                             // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 17. ObservationDefinition.qualifiedInterval.appliesTo
-                    this.Element_AppliesTo = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_AppliesTo",                                                                                         // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.appliesTo",                                                          // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.appliesTo",                                                           // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = -1,                                                                                                           // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:311
-                            {                                                                                                               // MakerGen.cs:312
-                            }                                                                                                               // MakerGen.cs:315
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 18. ObservationDefinition.qualifiedInterval.gender
-                    this.Element_Gender = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Gender",                                                                                            // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.gender",                                                             // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.gender",                                                              // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 19. ObservationDefinition.qualifiedInterval.age
-                    this.Element_Age = new ElementDefinitionInfo                                                                            // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Age",                                                                                               // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.age",                                                                // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.age",                                                                 // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 20. ObservationDefinition.qualifiedInterval.gestationalAge
-                    this.Element_GestationalAge = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_GestationalAge",                                                                                    // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.gestationalAge",                                                     // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.gestationalAge",                                                      // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:351
-                            {                                                                                                               // MakerGen.cs:352
-                            }                                                                                                               // MakerGen.cs:353
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-                {                                                                                                                           // MakerGen.cs:227
-                    // 21. ObservationDefinition.qualifiedInterval.condition
-                    this.Element_Condition = new ElementDefinitionInfo                                                                      // MakerGen.cs:229
-                    {                                                                                                                       // MakerGen.cs:230
-                        Name = "Element_Condition",                                                                                         // MakerGen.cs:231
-                        Path= "ObservationDefinition.qualifiedInterval.condition",                                                          // MakerGen.cs:232
-                        Id = "ObservationDefinition.qualifiedInterval.condition",                                                           // MakerGen.cs:233
-                        Min = 0,                                                                                                            // MakerGen.cs:234
-                        Max = 1,                                                                                                            // MakerGen.cs:235
-                        Types = new BaseType[]                                                                                              // MakerGen.cs:236
-                        {                                                                                                                   // MakerGen.cs:237
-                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:296
-                            {                                                                                                               // MakerGen.cs:297
-                            }                                                                                                               // MakerGen.cs:300
-                        }                                                                                                                   // MakerGen.cs:239
-                    };                                                                                                                      // MakerGen.cs:240
-                }                                                                                                                           // MakerGen.cs:241
-            }                                                                                                                               // MakerGen.cs:398
-        }                                                                                                                                   // MakerGen.cs:400
-        // 1. ObservationDefinition.category
-        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:212
-        // 2. ObservationDefinition.code
-        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:212
-        // 3. ObservationDefinition.identifier
-        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:212
-        // 4. ObservationDefinition.permittedDataType
-        public ElementDefinitionInfo Element_PermittedDataType;                                                                             // MakerGen.cs:212
-        // 5. ObservationDefinition.multipleResultsAllowed
-        public ElementDefinitionInfo Element_MultipleResultsAllowed;                                                                        // MakerGen.cs:212
-        // 6. ObservationDefinition.method
-        public ElementDefinitionInfo Element_Method;                                                                                        // MakerGen.cs:212
-        // 7. ObservationDefinition.preferredReportName
-        public ElementDefinitionInfo Element_PreferredReportName;                                                                           // MakerGen.cs:212
-        // 8. ObservationDefinition.quantitativeDetails
-        public ElementDefinitionInfo Element_QuantitativeDetails;                                                                           // MakerGen.cs:212
-        // 13. ObservationDefinition.qualifiedInterval
-        public ElementDefinitionInfo Element_QualifiedInterval;                                                                             // MakerGen.cs:212
-        // 22. ObservationDefinition.validCodedValueSet
-        public ElementDefinitionInfo Element_ValidCodedValueSet;                                                                            // MakerGen.cs:212
-        // 23. ObservationDefinition.normalCodedValueSet
-        public ElementDefinitionInfo Element_NormalCodedValueSet;                                                                           // MakerGen.cs:212
-        // 24. ObservationDefinition.abnormalCodedValueSet
-        public ElementDefinitionInfo Element_AbnormalCodedValueSet;                                                                         // MakerGen.cs:212
-        // 25. ObservationDefinition.criticalCodedValueSet
-        public ElementDefinitionInfo Element_CriticalCodedValueSet;                                                                         // MakerGen.cs:212
-                                                                                                                                            // MakerGen.cs:382
-        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:383
+        public class Type_QuantitativeDetails : FhirKhit.Maker.Common.Complex.ComplexBase                                                   // MakerGen.cs:383
         {                                                                                                                                   // MakerGen.cs:384
-            base.Write(sDef);                                                                                                               // MakerGen.cs:385
-            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:386
-            {                                                                                                                               // MakerGen.cs:387
-                Path = "ObservationDefinition",                                                                                             // MakerGen.cs:388
-                ElementId = "ObservationDefinition"                                                                                         // MakerGen.cs:389
-            });                                                                                                                             // MakerGen.cs:390
-            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:216
-            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:216
-            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:216
-            Element_PermittedDataType.Write(sDef);                                                                                          // MakerGen.cs:216
-            Element_MultipleResultsAllowed.Write(sDef);                                                                                     // MakerGen.cs:216
-            Element_Method.Write(sDef);                                                                                                     // MakerGen.cs:216
-            Element_PreferredReportName.Write(sDef);                                                                                        // MakerGen.cs:216
-            Element_QuantitativeDetails.Write(sDef);                                                                                        // MakerGen.cs:216
-            Element_QualifiedInterval.Write(sDef);                                                                                          // MakerGen.cs:216
-            Element_ValidCodedValueSet.Write(sDef);                                                                                         // MakerGen.cs:216
-            Element_NormalCodedValueSet.Write(sDef);                                                                                        // MakerGen.cs:216
-            Element_AbnormalCodedValueSet.Write(sDef);                                                                                      // MakerGen.cs:216
-            Element_CriticalCodedValueSet.Write(sDef);                                                                                      // MakerGen.cs:216
-        }                                                                                                                                   // MakerGen.cs:392
-                                                                                                                                            // MakerGen.cs:394
-        public Resource_ObservationDefinition()                                                                                             // MakerGen.cs:395
-        {                                                                                                                                   // MakerGen.cs:396
-            {                                                                                                                               // MakerGen.cs:227
+            // 9. ObservationDefinition.quantitativeDetails.customaryUnit
+            public ElementDefinitionInfo Element_CustomaryUnit;                                                                             // MakerGen.cs:219
+            // 10. ObservationDefinition.quantitativeDetails.unit
+            public ElementDefinitionInfo Element_Unit;                                                                                      // MakerGen.cs:219
+            // 11. ObservationDefinition.quantitativeDetails.conversionFactor
+            public ElementDefinitionInfo Element_ConversionFactor;                                                                          // MakerGen.cs:219
+            // 12. ObservationDefinition.quantitativeDetails.decimalPrecision
+            public ElementDefinitionInfo Element_DecimalPrecision;                                                                          // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "ObservationDefinition.quantitativeDetails",                                                                     // MakerGen.cs:395
+                    ElementId = "ObservationDefinition.quantitativeDetails"                                                                 // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_CustomaryUnit.Write(sDef);                                                                                          // MakerGen.cs:223
+                Element_Unit.Write(sDef);                                                                                                   // MakerGen.cs:223
+                Element_ConversionFactor.Write(sDef);                                                                                       // MakerGen.cs:223
+                Element_DecimalPrecision.Write(sDef);                                                                                       // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_QuantitativeDetails()                                                                                               // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 9. ObservationDefinition.quantitativeDetails.customaryUnit
+                    this.Element_CustomaryUnit = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_CustomaryUnit",                                                                                     // MakerGen.cs:238
+                        Path= "ObservationDefinition.quantitativeDetails.customaryUnit",                                                    // MakerGen.cs:239
+                        Id = "ObservationDefinition.quantitativeDetails.customaryUnit",                                                     // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 10. ObservationDefinition.quantitativeDetails.unit
+                    this.Element_Unit = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Unit",                                                                                              // MakerGen.cs:238
+                        Path= "ObservationDefinition.quantitativeDetails.unit",                                                             // MakerGen.cs:239
+                        Id = "ObservationDefinition.quantitativeDetails.unit",                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 11. ObservationDefinition.quantitativeDetails.conversionFactor
+                    this.Element_ConversionFactor = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_ConversionFactor",                                                                                  // MakerGen.cs:238
+                        Path= "ObservationDefinition.quantitativeDetails.conversionFactor",                                                 // MakerGen.cs:239
+                        Id = "ObservationDefinition.quantitativeDetails.conversionFactor",                                                  // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Decimal                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 12. ObservationDefinition.quantitativeDetails.decimalPrecision
+                    this.Element_DecimalPrecision = new ElementDefinitionInfo                                                               // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_DecimalPrecision",                                                                                  // MakerGen.cs:238
+                        Path= "ObservationDefinition.quantitativeDetails.decimalPrecision",                                                 // MakerGen.cs:239
+                        Id = "ObservationDefinition.quantitativeDetails.decimalPrecision",                                                  // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Integer                                                           // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 13. ObservationDefinition.qualifiedInterval
+        public class Type_QualifiedInterval : FhirKhit.Maker.Common.Complex.ComplexBase                                                     // MakerGen.cs:383
+        {                                                                                                                                   // MakerGen.cs:384
+            // 14. ObservationDefinition.qualifiedInterval.category
+            public ElementDefinitionInfo Element_Category;                                                                                  // MakerGen.cs:219
+            // 15. ObservationDefinition.qualifiedInterval.range
+            public ElementDefinitionInfo Element_Range;                                                                                     // MakerGen.cs:219
+            // 16. ObservationDefinition.qualifiedInterval.context
+            public ElementDefinitionInfo Element_Context;                                                                                   // MakerGen.cs:219
+            // 17. ObservationDefinition.qualifiedInterval.appliesTo
+            public ElementDefinitionInfo Element_AppliesTo;                                                                                 // MakerGen.cs:219
+            // 18. ObservationDefinition.qualifiedInterval.gender
+            public ElementDefinitionInfo Element_Gender;                                                                                    // MakerGen.cs:219
+            // 19. ObservationDefinition.qualifiedInterval.age
+            public ElementDefinitionInfo Element_Age;                                                                                       // MakerGen.cs:219
+            // 20. ObservationDefinition.qualifiedInterval.gestationalAge
+            public ElementDefinitionInfo Element_GestationalAge;                                                                            // MakerGen.cs:219
+            // 21. ObservationDefinition.qualifiedInterval.condition
+            public ElementDefinitionInfo Element_Condition;                                                                                 // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+            public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                             // MakerGen.cs:390
+            {                                                                                                                               // MakerGen.cs:391
+                base.Write(sDef);                                                                                                           // MakerGen.cs:392
+                sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                          // MakerGen.cs:393
+                {                                                                                                                           // MakerGen.cs:394
+                    Path = "ObservationDefinition.qualifiedInterval",                                                                       // MakerGen.cs:395
+                    ElementId = "ObservationDefinition.qualifiedInterval"                                                                   // MakerGen.cs:396
+                });                                                                                                                         // MakerGen.cs:397
+                Element_Category.Write(sDef);                                                                                               // MakerGen.cs:223
+                Element_Range.Write(sDef);                                                                                                  // MakerGen.cs:223
+                Element_Context.Write(sDef);                                                                                                // MakerGen.cs:223
+                Element_AppliesTo.Write(sDef);                                                                                              // MakerGen.cs:223
+                Element_Gender.Write(sDef);                                                                                                 // MakerGen.cs:223
+                Element_Age.Write(sDef);                                                                                                    // MakerGen.cs:223
+                Element_GestationalAge.Write(sDef);                                                                                         // MakerGen.cs:223
+                Element_Condition.Write(sDef);                                                                                              // MakerGen.cs:223
+            }                                                                                                                               // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+            public Type_QualifiedInterval()                                                                                                 // MakerGen.cs:402
+            {                                                                                                                               // MakerGen.cs:403
+                {                                                                                                                           // MakerGen.cs:234
+                    // 14. ObservationDefinition.qualifiedInterval.category
+                    this.Element_Category = new ElementDefinitionInfo                                                                       // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Category",                                                                                          // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.category",                                                           // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.category",                                                            // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 15. ObservationDefinition.qualifiedInterval.range
+                    this.Element_Range = new ElementDefinitionInfo                                                                          // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Range",                                                                                             // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.range",                                                              // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.range",                                                               // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 16. ObservationDefinition.qualifiedInterval.context
+                    this.Element_Context = new ElementDefinitionInfo                                                                        // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Context",                                                                                           // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.context",                                                            // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.context",                                                             // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 17. ObservationDefinition.qualifiedInterval.appliesTo
+                    this.Element_AppliesTo = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_AppliesTo",                                                                                         // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.appliesTo",                                                          // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.appliesTo",                                                           // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = -1,                                                                                                           // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                          // MakerGen.cs:318
+                            {                                                                                                               // MakerGen.cs:319
+                            }                                                                                                               // MakerGen.cs:322
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 18. ObservationDefinition.qualifiedInterval.gender
+                    this.Element_Gender = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Gender",                                                                                            // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.gender",                                                             // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.gender",                                                              // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                              // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 19. ObservationDefinition.qualifiedInterval.age
+                    this.Element_Age = new ElementDefinitionInfo                                                                            // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Age",                                                                                               // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.age",                                                                // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.age",                                                                 // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 20. ObservationDefinition.qualifiedInterval.gestationalAge
+                    this.Element_GestationalAge = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_GestationalAge",                                                                                    // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.gestationalAge",                                                     // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.gestationalAge",                                                      // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Complex.Type_Range                                                                    // MakerGen.cs:358
+                            {                                                                                                               // MakerGen.cs:359
+                            }                                                                                                               // MakerGen.cs:360
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+                {                                                                                                                           // MakerGen.cs:234
+                    // 21. ObservationDefinition.qualifiedInterval.condition
+                    this.Element_Condition = new ElementDefinitionInfo                                                                      // MakerGen.cs:236
+                    {                                                                                                                       // MakerGen.cs:237
+                        Name = "Element_Condition",                                                                                         // MakerGen.cs:238
+                        Path= "ObservationDefinition.qualifiedInterval.condition",                                                          // MakerGen.cs:239
+                        Id = "ObservationDefinition.qualifiedInterval.condition",                                                           // MakerGen.cs:240
+                        Min = 0,                                                                                                            // MakerGen.cs:241
+                        Max = 1,                                                                                                            // MakerGen.cs:242
+                        Types = new BaseType[]                                                                                              // MakerGen.cs:243
+                        {                                                                                                                   // MakerGen.cs:244
+                            new FhirKhit.Maker.Common.Primitive.Primitive_String                                                            // MakerGen.cs:303
+                            {                                                                                                               // MakerGen.cs:304
+                            }                                                                                                               // MakerGen.cs:307
+                        }                                                                                                                   // MakerGen.cs:246
+                    };                                                                                                                      // MakerGen.cs:247
+                }                                                                                                                           // MakerGen.cs:248
+            }                                                                                                                               // MakerGen.cs:405
+        }                                                                                                                                   // MakerGen.cs:407
+        // 1. ObservationDefinition.category
+        public ElementDefinitionInfo Element_Category;                                                                                      // MakerGen.cs:219
+        // 2. ObservationDefinition.code
+        public ElementDefinitionInfo Element_Code;                                                                                          // MakerGen.cs:219
+        // 3. ObservationDefinition.identifier
+        public ElementDefinitionInfo Element_Identifier;                                                                                    // MakerGen.cs:219
+        // 4. ObservationDefinition.permittedDataType
+        public ElementDefinitionInfo Element_PermittedDataType;                                                                             // MakerGen.cs:219
+        // 5. ObservationDefinition.multipleResultsAllowed
+        public ElementDefinitionInfo Element_MultipleResultsAllowed;                                                                        // MakerGen.cs:219
+        // 6. ObservationDefinition.method
+        public ElementDefinitionInfo Element_Method;                                                                                        // MakerGen.cs:219
+        // 7. ObservationDefinition.preferredReportName
+        public ElementDefinitionInfo Element_PreferredReportName;                                                                           // MakerGen.cs:219
+        // 8. ObservationDefinition.quantitativeDetails
+        public ElementDefinitionInfo Element_QuantitativeDetails;                                                                           // MakerGen.cs:219
+        // 13. ObservationDefinition.qualifiedInterval
+        public ElementDefinitionInfo Element_QualifiedInterval;                                                                             // MakerGen.cs:219
+        // 22. ObservationDefinition.validCodedValueSet
+        public ElementDefinitionInfo Element_ValidCodedValueSet;                                                                            // MakerGen.cs:219
+        // 23. ObservationDefinition.normalCodedValueSet
+        public ElementDefinitionInfo Element_NormalCodedValueSet;                                                                           // MakerGen.cs:219
+        // 24. ObservationDefinition.abnormalCodedValueSet
+        public ElementDefinitionInfo Element_AbnormalCodedValueSet;                                                                         // MakerGen.cs:219
+        // 25. ObservationDefinition.criticalCodedValueSet
+        public ElementDefinitionInfo Element_CriticalCodedValueSet;                                                                         // MakerGen.cs:219
+                                                                                                                                            // MakerGen.cs:389
+        public override void Write(Hl7.Fhir.Model.StructureDefinition sDef)                                                                 // MakerGen.cs:390
+        {                                                                                                                                   // MakerGen.cs:391
+            base.Write(sDef);                                                                                                               // MakerGen.cs:392
+            sDef.Differential.Element.Add(new Hl7.Fhir.Model.ElementDefinition                                                              // MakerGen.cs:393
+            {                                                                                                                               // MakerGen.cs:394
+                Path = "ObservationDefinition",                                                                                             // MakerGen.cs:395
+                ElementId = "ObservationDefinition"                                                                                         // MakerGen.cs:396
+            });                                                                                                                             // MakerGen.cs:397
+            Element_Category.Write(sDef);                                                                                                   // MakerGen.cs:223
+            Element_Code.Write(sDef);                                                                                                       // MakerGen.cs:223
+            Element_Identifier.Write(sDef);                                                                                                 // MakerGen.cs:223
+            Element_PermittedDataType.Write(sDef);                                                                                          // MakerGen.cs:223
+            Element_MultipleResultsAllowed.Write(sDef);                                                                                     // MakerGen.cs:223
+            Element_Method.Write(sDef);                                                                                                     // MakerGen.cs:223
+            Element_PreferredReportName.Write(sDef);                                                                                        // MakerGen.cs:223
+            Element_QuantitativeDetails.Write(sDef);                                                                                        // MakerGen.cs:223
+            Element_QualifiedInterval.Write(sDef);                                                                                          // MakerGen.cs:223
+            Element_ValidCodedValueSet.Write(sDef);                                                                                         // MakerGen.cs:223
+            Element_NormalCodedValueSet.Write(sDef);                                                                                        // MakerGen.cs:223
+            Element_AbnormalCodedValueSet.Write(sDef);                                                                                      // MakerGen.cs:223
+            Element_CriticalCodedValueSet.Write(sDef);                                                                                      // MakerGen.cs:223
+        }                                                                                                                                   // MakerGen.cs:399
+                                                                                                                                            // MakerGen.cs:401
+        public Resource_ObservationDefinition()                                                                                             // MakerGen.cs:402
+        {                                                                                                                                   // MakerGen.cs:403
+            {                                                                                                                               // MakerGen.cs:234
                 // 1. ObservationDefinition.category
-                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Category",                                                                                              // MakerGen.cs:231
-                    Path= "ObservationDefinition.category",                                                                                 // MakerGen.cs:232
-                    Id = "ObservationDefinition.category",                                                                                  // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Category = new ElementDefinitionInfo                                                                           // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Category",                                                                                              // MakerGen.cs:238
+                    Path= "ObservationDefinition.category",                                                                                 // MakerGen.cs:239
+                    Id = "ObservationDefinition.category",                                                                                  // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 2. ObservationDefinition.code
-                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Code",                                                                                                  // MakerGen.cs:231
-                    Path= "ObservationDefinition.code",                                                                                     // MakerGen.cs:232
-                    Id = "ObservationDefinition.code",                                                                                      // MakerGen.cs:233
-                    Min = 1,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Code = new ElementDefinitionInfo                                                                               // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Code",                                                                                                  // MakerGen.cs:238
+                    Path= "ObservationDefinition.code",                                                                                     // MakerGen.cs:239
+                    Id = "ObservationDefinition.code",                                                                                      // MakerGen.cs:240
+                    Min = 1,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 3. ObservationDefinition.identifier
-                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:231
-                    Path= "ObservationDefinition.identifier",                                                                               // MakerGen.cs:232
-                    Id = "ObservationDefinition.identifier",                                                                                // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:351
-                        {                                                                                                                   // MakerGen.cs:352
-                        }                                                                                                                   // MakerGen.cs:353
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Identifier = new ElementDefinitionInfo                                                                         // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Identifier",                                                                                            // MakerGen.cs:238
+                    Path= "ObservationDefinition.identifier",                                                                               // MakerGen.cs:239
+                    Id = "ObservationDefinition.identifier",                                                                                // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Identifier                                                                   // MakerGen.cs:358
+                        {                                                                                                                   // MakerGen.cs:359
+                        }                                                                                                                   // MakerGen.cs:360
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 4. ObservationDefinition.permittedDataType
-                this.Element_PermittedDataType = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_PermittedDataType",                                                                                     // MakerGen.cs:231
-                    Path= "ObservationDefinition.permittedDataType",                                                                        // MakerGen.cs:232
-                    Id = "ObservationDefinition.permittedDataType",                                                                         // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_PermittedDataType = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_PermittedDataType",                                                                                     // MakerGen.cs:238
+                    Path= "ObservationDefinition.permittedDataType",                                                                        // MakerGen.cs:239
+                    Id = "ObservationDefinition.permittedDataType",                                                                         // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Code                                                                  // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 5. ObservationDefinition.multipleResultsAllowed
-                this.Element_MultipleResultsAllowed = new ElementDefinitionInfo                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_MultipleResultsAllowed",                                                                                // MakerGen.cs:231
-                    Path= "ObservationDefinition.multipleResultsAllowed",                                                                   // MakerGen.cs:232
-                    Id = "ObservationDefinition.multipleResultsAllowed",                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_MultipleResultsAllowed = new ElementDefinitionInfo                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_MultipleResultsAllowed",                                                                                // MakerGen.cs:238
+                    Path= "ObservationDefinition.multipleResultsAllowed",                                                                   // MakerGen.cs:239
+                    Id = "ObservationDefinition.multipleResultsAllowed",                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_Boolean                                                               // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 6. ObservationDefinition.method
-                this.Element_Method = new ElementDefinitionInfo                                                                             // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_Method",                                                                                                // MakerGen.cs:231
-                    Path= "ObservationDefinition.method",                                                                                   // MakerGen.cs:232
-                    Id = "ObservationDefinition.method",                                                                                    // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:311
-                        {                                                                                                                   // MakerGen.cs:312
-                        }                                                                                                                   // MakerGen.cs:315
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_Method = new ElementDefinitionInfo                                                                             // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_Method",                                                                                                // MakerGen.cs:238
+                    Path= "ObservationDefinition.method",                                                                                   // MakerGen.cs:239
+                    Id = "ObservationDefinition.method",                                                                                    // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_CodeableConcept                                                              // MakerGen.cs:318
+                        {                                                                                                                   // MakerGen.cs:319
+                        }                                                                                                                   // MakerGen.cs:322
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 7. ObservationDefinition.preferredReportName
-                this.Element_PreferredReportName = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_PreferredReportName",                                                                                   // MakerGen.cs:231
-                    Path= "ObservationDefinition.preferredReportName",                                                                      // MakerGen.cs:232
-                    Id = "ObservationDefinition.preferredReportName",                                                                       // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:296
-                        {                                                                                                                   // MakerGen.cs:297
-                        }                                                                                                                   // MakerGen.cs:300
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_PreferredReportName = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_PreferredReportName",                                                                                   // MakerGen.cs:238
+                    Path= "ObservationDefinition.preferredReportName",                                                                      // MakerGen.cs:239
+                    Id = "ObservationDefinition.preferredReportName",                                                                       // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Primitive.Primitive_String                                                                // MakerGen.cs:303
+                        {                                                                                                                   // MakerGen.cs:304
+                        }                                                                                                                   // MakerGen.cs:307
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 8. ObservationDefinition.quantitativeDetails
-                this.Element_QuantitativeDetails = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_QuantitativeDetails",                                                                                   // MakerGen.cs:231
-                    Path= "ObservationDefinition.quantitativeDetails",                                                                      // MakerGen.cs:232
-                    Id = "ObservationDefinition.quantitativeDetails",                                                                       // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_QuantitativeDetails                                                                                        // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_QuantitativeDetails = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_QuantitativeDetails",                                                                                   // MakerGen.cs:238
+                    Path= "ObservationDefinition.quantitativeDetails",                                                                      // MakerGen.cs:239
+                    Id = "ObservationDefinition.quantitativeDetails",                                                                       // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_QuantitativeDetails                                                                                        // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 13. ObservationDefinition.qualifiedInterval
-                this.Element_QualifiedInterval = new ElementDefinitionInfo                                                                  // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_QualifiedInterval",                                                                                     // MakerGen.cs:231
-                    Path= "ObservationDefinition.qualifiedInterval",                                                                        // MakerGen.cs:232
-                    Id = "ObservationDefinition.qualifiedInterval",                                                                         // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = -1,                                                                                                               // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new Type_QualifiedInterval                                                                                          // MakerGen.cs:255
-                        {                                                                                                                   // MakerGen.cs:256
-                        }                                                                                                                   // MakerGen.cs:257
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                this.Element_QualifiedInterval = new ElementDefinitionInfo                                                                  // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_QualifiedInterval",                                                                                     // MakerGen.cs:238
+                    Path= "ObservationDefinition.qualifiedInterval",                                                                        // MakerGen.cs:239
+                    Id = "ObservationDefinition.qualifiedInterval",                                                                         // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = -1,                                                                                                               // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new Type_QualifiedInterval                                                                                          // MakerGen.cs:262
+                        {                                                                                                                   // MakerGen.cs:263
+                        }                                                                                                                   // MakerGen.cs:264
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 22. ObservationDefinition.validCodedValueSet
-                this.Element_ValidCodedValueSet = new ElementDefinitionInfo                                                                 // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_ValidCodedValueSet",                                                                                    // MakerGen.cs:231
-                    Path= "ObservationDefinition.validCodedValueSet",                                                                       // MakerGen.cs:232
-                    Id = "ObservationDefinition.validCodedValueSet",                                                                        // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_ValidCodedValueSet = new ElementDefinitionInfo                                                                 // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_ValidCodedValueSet",                                                                                    // MakerGen.cs:238
+                    Path= "ObservationDefinition.validCodedValueSet",                                                                       // MakerGen.cs:239
+                    Id = "ObservationDefinition.validCodedValueSet",                                                                        // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 23. ObservationDefinition.normalCodedValueSet
-                this.Element_NormalCodedValueSet = new ElementDefinitionInfo                                                                // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_NormalCodedValueSet",                                                                                   // MakerGen.cs:231
-                    Path= "ObservationDefinition.normalCodedValueSet",                                                                      // MakerGen.cs:232
-                    Id = "ObservationDefinition.normalCodedValueSet",                                                                       // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_NormalCodedValueSet = new ElementDefinitionInfo                                                                // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_NormalCodedValueSet",                                                                                   // MakerGen.cs:238
+                    Path= "ObservationDefinition.normalCodedValueSet",                                                                      // MakerGen.cs:239
+                    Id = "ObservationDefinition.normalCodedValueSet",                                                                       // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 24. ObservationDefinition.abnormalCodedValueSet
-                this.Element_AbnormalCodedValueSet = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_AbnormalCodedValueSet",                                                                                 // MakerGen.cs:231
-                    Path= "ObservationDefinition.abnormalCodedValueSet",                                                                    // MakerGen.cs:232
-                    Id = "ObservationDefinition.abnormalCodedValueSet",                                                                     // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_AbnormalCodedValueSet = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_AbnormalCodedValueSet",                                                                                 // MakerGen.cs:238
+                    Path= "ObservationDefinition.abnormalCodedValueSet",                                                                    // MakerGen.cs:239
+                    Id = "ObservationDefinition.abnormalCodedValueSet",                                                                     // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            {                                                                                                                               // MakerGen.cs:227
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            {                                                                                                                               // MakerGen.cs:234
                 // 25. ObservationDefinition.criticalCodedValueSet
-                this.Element_CriticalCodedValueSet = new ElementDefinitionInfo                                                              // MakerGen.cs:229
-                {                                                                                                                           // MakerGen.cs:230
-                    Name = "Element_CriticalCodedValueSet",                                                                                 // MakerGen.cs:231
-                    Path= "ObservationDefinition.criticalCodedValueSet",                                                                    // MakerGen.cs:232
-                    Id = "ObservationDefinition.criticalCodedValueSet",                                                                     // MakerGen.cs:233
-                    Min = 0,                                                                                                                // MakerGen.cs:234
-                    Max = 1,                                                                                                                // MakerGen.cs:235
-                    Types = new BaseType[]                                                                                                  // MakerGen.cs:236
-                    {                                                                                                                       // MakerGen.cs:237
-                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:339
-                        {                                                                                                                   // MakerGen.cs:340
-                            TargetProfile = new String[]                                                                                    // MakerGen.cs:342
+                this.Element_CriticalCodedValueSet = new ElementDefinitionInfo                                                              // MakerGen.cs:236
+                {                                                                                                                           // MakerGen.cs:237
+                    Name = "Element_CriticalCodedValueSet",                                                                                 // MakerGen.cs:238
+                    Path= "ObservationDefinition.criticalCodedValueSet",                                                                    // MakerGen.cs:239
+                    Id = "ObservationDefinition.criticalCodedValueSet",                                                                     // MakerGen.cs:240
+                    Min = 0,                                                                                                                // MakerGen.cs:241
+                    Max = 1,                                                                                                                // MakerGen.cs:242
+                    Types = new BaseType[]                                                                                                  // MakerGen.cs:243
+                    {                                                                                                                       // MakerGen.cs:244
+                        new FhirKhit.Maker.Common.Complex.Type_Reference                                                                    // MakerGen.cs:346
+                        {                                                                                                                   // MakerGen.cs:347
+                            TargetProfile = new String[]                                                                                    // MakerGen.cs:349
                             {                                                                                                               // CodeEditorExtensions.cs:28
-                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:342
+                                "http://hl7.org/fhir/StructureDefinition/ValueSet"                                                          // MakerGen.cs:349
                             }                                                                                                               // CodeEditorExtensions.cs:34
-                        }                                                                                                                   // MakerGen.cs:343
-                    }                                                                                                                       // MakerGen.cs:239
-                };                                                                                                                          // MakerGen.cs:240
-            }                                                                                                                               // MakerGen.cs:241
-            this.Name = "ObservationDefinition";                                                                                            // MakerGen.cs:458
-            this.Uri = "http://hl7.org/fhir/StructureDefinition/ObservationDefinition";                                                     // MakerGen.cs:459
-        }                                                                                                                                   // MakerGen.cs:398
-    }                                                                                                                                       // MakerGen.cs:400
-}                                                                                                                                           // MakerGen.cs:445
+                        }                                                                                                                   // MakerGen.cs:350
+                    }                                                                                                                       // MakerGen.cs:246
+                };                                                                                                                          // MakerGen.cs:247
+            }                                                                                                                               // MakerGen.cs:248
+            this.Name = "ObservationDefinition";                                                                                            // MakerGen.cs:471
+            this.Uri = "http://hl7.org/fhir/StructureDefinition/ObservationDefinition";                                                     // MakerGen.cs:472
+        }                                                                                                                                   // MakerGen.cs:405
+    }                                                                                                                                       // MakerGen.cs:407
+}                                                                                                                                           // MakerGen.cs:452
