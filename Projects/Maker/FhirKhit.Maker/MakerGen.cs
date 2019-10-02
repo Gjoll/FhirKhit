@@ -159,7 +159,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = PrimitiveName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = PrimitiveName(sDef.Name);
 
             instanceBlock
                 .AppendCode("using System;")
@@ -430,7 +430,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = ResourceName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = ResourceName(sDef.Name);
             instanceBlock
                 .AppendCode("using System;")
                 .AppendCode("using System.Diagnostics;")
@@ -493,7 +493,7 @@ namespace FhirKhit.Maker
             CodeEditor instanceEditor = new CodeEditor();
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = TypeName(sDef.Differential.Element[0].Path.LastPathPart());
+            String instanceName = TypeName(sDef.Name);
             instanceBlock
                 .AppendCode("using System;")
                 .AppendCode("using System.Diagnostics;")

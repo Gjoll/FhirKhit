@@ -10,7 +10,7 @@ namespace FhirKhit.Maker
         {
             try
             {
-                CodeEditor.DebugFlag = true;
+                CodeEditor.DebugFlag = false;
 
                 String outputDir = Path.Combine(DirHelper.FindParentDir("Maker"), "FhirKhit.Maker.Common", "MClasses");
 
