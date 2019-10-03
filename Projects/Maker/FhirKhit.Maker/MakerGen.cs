@@ -20,9 +20,7 @@ namespace FhirKhit.Maker
         const String ResourceNameSpace = "FhirKhit.Maker.Common.Resource";
         const String PrimitiveNameSpace = "FhirKhit.Maker.Common.Primitive";
 
-        FileCleaner complexDir;
-        FileCleaner primitiveDir;
-        FileCleaner resourceDir;
+        MakerProject project = new MakerProject();
 
         String ComplexBase = $"{ComplexNameSpace}.ComplexBase";
         String PrimitiveBase = $"{PrimitiveNameSpace}.PrimitiveBase";
@@ -162,11 +160,9 @@ namespace FhirKhit.Maker
             ClearSDef(sDef);
 
             this.ConversionInfo(this.GetType().Name, fcn, $"Processing Primitive {sDef.Name} {sDefInfo.TFlag}");
-
-            CodeEditor instanceEditor = new CodeEditor();
-            CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
-
             String instanceName = PrimitiveName(sDef.Name);
+            CodeEditor instanceEditor = this.project.CreateEditor(Path.Combine(PrimitiveGenPath, $"{instanceName}.cs"));
+            CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
             instanceBlock
                 .AppendCode("using System;")
@@ -190,11 +186,6 @@ namespace FhirKhit.Maker
                 .CloseBrace()
                 .CloseBrace()
                 ;
-            {
-                String path = Path.Combine(PrimitiveGenPath, $"{instanceName}.cs");
-                instanceEditor.Save(path);
-                this.primitiveDir.Mark(path);
-            }
         }
 
         void DefineClassFields(
@@ -434,10 +425,9 @@ namespace FhirKhit.Maker
 
             this.ConversionInfo(this.GetType().Name, fcn, $"Processing Resource {sDef.Name} {sDefInfo.TFlag}");
 
-            CodeEditor instanceEditor = new CodeEditor();
-            CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
-
             String instanceName = ResourceName(sDef.Name);
+            CodeEditor instanceEditor = this.project.CreateEditor(Path.Combine(ResourceGenPath, $"{instanceName}.cs"));
+            CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
             instanceBlock
                 .AppendCode("using System;")
                 .AppendCode("using System.Diagnostics;")
@@ -481,11 +471,6 @@ namespace FhirKhit.Maker
 
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
-            {
-                String path = Path.Combine(ResourceGenPath, $"{instanceName}.cs");
-                instanceEditor.Save(path);
-                this.resourceDir.Mark(path);
-            }
         }
 
         void ProcessFhirComplex(SDefInfo sDefInfo)
@@ -497,10 +482,10 @@ namespace FhirKhit.Maker
 
             this.ConversionInfo(this.GetType().Name, fcn, $"Processing Complex {sDef.Name} {sDefInfo.TFlag}");
 
-            CodeEditor instanceEditor = new CodeEditor();
+            String instanceName = TypeName(sDef.Name);
+            CodeEditor instanceEditor = this.project.CreateEditor(Path.Combine(ComplexGenPath, $"{instanceName}.cs"));
             CodeBlockNested instanceBlock = instanceEditor.Blocks.AppendBlock();
 
-            String instanceName = TypeName(sDef.Name);
             instanceBlock
                 .AppendCode("using System;")
                 .AppendCode("using System.Diagnostics;")
@@ -533,12 +518,6 @@ namespace FhirKhit.Maker
 
             if (i != sDef.Differential.Element.Count)
                 throw new ConvertErrorException(this.GetType().Name, fcn, $"Internal error. Invalid element index");
-
-            {
-                String path = Path.Combine(ComplexGenPath, $"{instanceName}.cs");
-                instanceEditor.Save(path);
-                this.complexDir.Mark(path);
-            }
         }
 
         void ProcessFhirElements()
@@ -588,14 +567,18 @@ namespace FhirKhit.Maker
             {
                 this.ConversionInfo(this.GetType().Name, fcn, "Starting generation of Fhir MAKER classes");
                 this.outputDir = outputDir;
-                this.complexDir = new FileCleaner(this.ComplexGenPath);
-                this.primitiveDir = new FileCleaner(this.PrimitiveGenPath);
-                this.resourceDir = new FileCleaner(this.ResourceGenPath);
+                this.project.CreateFileCleaner(this.ComplexGenPath);
+                this.project.CreateFileCleaner(this.PrimitiveGenPath);
+                this.project.CreateFileCleaner(this.ResourceGenPath);
 
                 //this.sDefs.StoreFhirElements();
 
                 this.LoadFhirElements();
                 this.ProcessFhirElements();
+
+                this.ConversionInfo(this.GetType().Name, fcn, "Saving modified files");
+                this.project.Save();
+
                 this.ConversionInfo(this.GetType().Name, fcn, "Completed generation of Fhir MAKER classes");
             }
             catch (ConvertErrorException err)
@@ -613,9 +596,6 @@ namespace FhirKhit.Maker
 
         public void Dispose()
         {
-            this.complexDir.Dispose();
-            this.primitiveDir.Dispose();
-            this.resourceDir.Dispose();
         }
 
     }

@@ -12,11 +12,18 @@ namespace FhirKhit.Tools
     public sealed class FileCleaner : IDisposable
     {
         readonly HashSet<String> existingFiles = new HashSet<String>();
-        readonly String outputDir;
+
+        public FileCleaner()
+        {
+        }
 
         public FileCleaner(String outputDir, String fileFilter = "*.*")
         {
-            this.outputDir = outputDir;
+            this.Add(outputDir, fileFilter);
+        }
+
+        public void Add(String outputDir, String fileFilter = "*.*")
+        {
             if (Directory.Exists(outputDir) == true)
             {
                 foreach (String existingFile in Directory.GetFiles(outputDir, fileFilter))
@@ -24,7 +31,7 @@ namespace FhirKhit.Tools
             }
         }
 
-        public void Mark(String fileName) => this.existingFiles.Remove(fileName);
+        public void Mark(String filePath) => this.existingFiles.Remove(filePath);
 
         public void Dispose()
         {
